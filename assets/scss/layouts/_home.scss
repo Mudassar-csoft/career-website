@@ -1,0 +1,159 @@
+.hero-section {
+    background: url('../images/banner01.png') no-repeat top center;
+    background-size: cover;
+    padding: 4rem 0;
+    h1 {
+        font-size: 40px;
+        line-height: 42px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0 0 20px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 25px;
+        color: #fff;
+        margin: 0 0 30px;
+    }
+    .form-block {
+        margin: 0 0 4rem;
+        .form-control,select {
+            border-radius: 0;
+            border: 1px solid #E0E0E0;
+            font-size: 14px;
+            line-height: 16px;
+            background: #f6f6f6;
+            border-radius: 10px 10px;
+            padding: 15px 17px;
+            color: #606060;
+            font-weight: 400;
+            &:focus {
+                box-shadow: none;
+            }
+            &::placeholder {
+                transition: 0.4s ease;
+                text-indent: 0;
+                color:#606060;
+            }
+            &:hover::placeholder,
+            &:focus::placeholder {
+                text-indent: 15px;
+            }
+        }
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin: 0 0 10px;
+            label {
+                color: #fff;
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
+                padding: 3px 0 0 10px;
+            }
+            input {
+                width: 20px;
+                height: 20px;
+                &:focus {
+                    box-shadow: none;
+                }
+                &:checked {
+                    background-color: #00C487;
+                    border-color: #00C487;
+                }
+            }
+        }
+        .apply-btn {
+            background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+            padding: 12px 24px;
+            font-size: 18px;
+            line-height: 20px;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 50px 50px;
+            transition: all .3s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+    .counter-box {
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        background: url(../images/banner02.png) no-repeat;
+        background-size: cover;
+        padding: 42px 0;
+    }
+    .counter-item {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        &:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background: #C4C4C4;
+        }
+        .icon {
+            img {
+                margin: 0 0 15px;
+            }
+        }
+        h2 {
+            font-size: 38px;
+            line-height: 40px;
+            font-weight: 700;
+            font-family: $f-second;
+            margin: 0 0 15px;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 500;
+            margin: 0;
+            color: #fff;
+        }
+    }
+}
+.news-area {
+    padding: 4rem 0;
+    background: #0782620D;
+    .about-bar {
+        h2 {
+            font-size: 34px;
+            line-height: 36px;
+            color: #000000;
+            font-weight: 700;
+            margin: 0 0 40px;
+            span {
+                color: #00A1B3;
+            }
+        }
+        .img-hold {
+            margin: 0 0 20px;
+        }
+        h3 {
+            font-size: 22px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 400;
+            margin: 0 0 10px;
+        }
+        p {
+            font-weight: 300;
+            font-weight: 14px;
+            line-height: 22px;
+            margin: 0 0 20px;
+            color: #000;
+        }
+    }
+}
