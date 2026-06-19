@@ -230,7 +230,62 @@
 						<div class="row">
 							<div class="col-lg-8">
 								<div class="row">
-									<div class="col-lg-6"></div>
+									<div class="col-lg-6">
+										<div class="news-bar">
+											<h2>News</h2>
+											<div class="news-slider">
+												<div>
+													<div class="box s-blue">
+														<p>
+															Career Institute Signs Franchise MOU for
+															Kohinoor FSD  Branch<a href="#">Read more...</a>
+														</p>
+														<div class="d-bar">
+															<img src="assets/images/icon05.svg" alt=""> 
+															<span>09-12-2024</span>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="box s-black">
+														<p>
+															Career Institute Signs Franchise MOU for
+															Kohinoor FSD  Branch<a href="#">Read more...</a>
+														</p>
+														<div class="d-bar">
+															<img src="assets/images/icon05.svg" alt=""> 
+															<span>09-12-2024</span>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="box s-green">
+														<p>
+															Career Institute Signs Franchise MOU for
+															Kohinoor FSD  Branch<a href="#">Read more...</a>
+														</p>
+														<div class="d-bar">
+															<img src="assets/images/icon05.svg" alt=""> 
+															<span>09-12-2024</span>
+														</div>
+													</div>
+												</div>
+												<div>
+													<div class="box s-black">
+														<p>
+															Career Institute Signs Franchise MOU for
+															Kohinoor FSD  Branch<a href="#">Read more...</a>
+														</p>
+														<div class="d-bar">
+															<img src="assets/images/icon05.svg" alt=""> 
+															<span>09-12-2024</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a href="#" class="btn r-btn">Read More</a>
+										</div>
+									</div>
 									<div class="col-lg-6">
 										<div class="event-bar">
 											<h2>Events</h2>
@@ -306,6 +361,98 @@
 						</div>
 					</div>
 				</section>
+				<section class="vision-bar">
+					<div class="container">
+						<div class="g-box">
+							<div class="row">
+								<div class="col-lg-12">
+									<h2>Guiding Vision from Our Directors</h2>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6 border-end">
+									<div class="t-detail">
+										<div class="img-hold">
+											<img src="assets/images/img02.png" alt="">
+										</div>
+										<span>Adeel Javaid - Founder & CEO</span>
+										<p>
+											<b>Our mission</b> is to educate and empower enterprise<br>
+											leaders. We firmly believe that the leaders nurtured<br>
+											by our institute play a crucial role in effecting<br>
+											positive change within their organizations and<br>
+											on a global scale.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="t-detail">
+										<div class="img-hold">
+											<img src="assets/images/img02.png" alt="">
+										</div>
+										<span>Adeel Javaid - Founder & CEO</span>
+										<p>
+											<b>Our mission</b> is to educate and empower enterprise<br>
+											leaders. We firmly believe that the leaders nurtured<br>
+											by our institute play a crucial role in effecting<br>
+											positive change within their organizations and<br>
+											on a global scale.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="feature-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<h2>Featured Courses</h2>
+								<p>
+									Elevate Your Skills and Land Your Dream Job - Whether you prefer the convenience of learning from home or the<br>
+									advantages of direct sessions on campus with our expert instructors, we've got you covered!
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="feature-slider">
+									<div>
+										<div class="box">
+											<div class="img-hold">
+												<img src="assets/images/img03.png" alt="">
+											</div>
+											<div class="text-hold">
+												<h3>Digital Marketing</h3>
+												<ul>
+													<li>
+														Category: 
+														<span>Ecommerce</span>
+													</li>
+													<li>
+														Duration: 
+														<span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
+													</li>
+													<li>
+														Mode: 
+														<span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
+														<span><img src="assets/images/icon10.svg" alt="">Online</span> 
+														<span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
+													</li>
+												</ul>
+												<div class="btn-area">
+													<a href="#" class="btn an-btn">Apply Now</a>
+													<a href="#" class="btn md-btn">More Details</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 		</div>
 	</body>	
@@ -335,6 +482,34 @@
 				}
 			}
 			count();
+		});
+	</script>
+	<script>
+		$('.news-slider').slick({
+			vertical: true,
+			verticalSwiping: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 0,
+			speed: 3000,
+			cssEase: 'linear',
+			arrows: false,
+			pauseOnHover: true,
+			infinite: true
+		});
+	</script>
+	<script>
+		$('.feature-slider').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 0,
+			speed: 3000,
+			cssEase: 'linear',
+			arrows: false,
+			pauseOnHover: true,
+			infinite: true,
 		});
 	</script>
 </html>

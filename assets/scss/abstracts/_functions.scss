@@ -17,3 +17,61 @@
 		@content;
 	}
 }
+
+
+// button mixins 
+
+@mixin event-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background: 
+        linear-gradient(white, white) padding-box,
+        linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+@mixin apply-btn {
+	background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+	padding: 12px 24px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 50px 50px;
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+@mixin an-btn {
+	background: linear-gradient(90deg, #FF5C00 0%, #D0910D 100%);
+	padding: 12px 24px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 50px 50px;
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
