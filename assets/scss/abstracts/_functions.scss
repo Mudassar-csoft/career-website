@@ -22,7 +22,7 @@
 // button mixins 
 
 @mixin event-btn {
-    padding: 12px 24px;
+    padding: 10px 24px;
     font-size: 18px;
     line-height: 20px;
     color: #000;
@@ -42,10 +42,9 @@
         box-shadow: none;
     }
 }
-
 @mixin apply-btn {
 	background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
-	padding: 12px 24px;
+	padding: 10px 24px;
 	font-size: 18px;
 	line-height: 20px;
 	color: #fff;
@@ -61,10 +60,27 @@
 }
 @mixin an-btn {
 	background: linear-gradient(90deg, #FF5C00 0%, #D0910D 100%);
-	padding: 12px 24px;
+	padding: 10px 20px;
 	font-size: 14px;
 	line-height: 16px;
 	color: #fff;
+	font-weight: 700;
+	border-radius: 50px 50px;
+	transition: all .3s ease-in-out;
+	margin: 0 7px 0 0;
+	&:hover {
+		transform: scale(1.05);
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+@mixin md-btn {
+	background: #E9E9E9;
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000;
 	font-weight: 700;
 	border-radius: 50px 50px;
 	transition: all .3s ease-in-out;
