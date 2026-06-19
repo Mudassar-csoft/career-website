@@ -464,3 +464,27 @@
         }
     }
 }
+.video-block{ 
+    background: radial-gradient(52.57% 119.57% at 86.39% 75.79%, rgba(1, 161, 180, 0.15) 0%, rgba(241, 247, 247, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    padding: 3rem 0;
+    text-align: center;
+    .ep-btn {
+        @include apply-btn;
+    }
+    h2 {
+        font-size: 34px;
+        line-height: 36px;
+        color: #000;
+        font-weight: 700;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+        color: #000;
+        font-weight: 300;
+        margin: 0 0 20px;
+    }
+}
