@@ -91,3 +91,23 @@
 		box-shadow: none;
 	}
 }
+@mixin rm-btn {
+	padding: 14px 24px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background: 
+        linear-gradient(#F0F7F5, #F0F7F5) padding-box,
+        linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+

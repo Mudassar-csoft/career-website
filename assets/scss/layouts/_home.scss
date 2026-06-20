@@ -675,3 +675,46 @@
         }
     }
 }
+.blog-area {
+    padding: 3rem 0;
+    h2 {
+        font-size: 38px;
+        line-height: 40px;
+        color: #000;
+        font-weight: 600;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+    .block {
+        .img-hold {
+            border-radius: 10px 10px;
+            margin: 0 0 10px;
+            img {
+                border-radius: 10px 10px;
+                width: 100%;
+            }
+        }
+        .t-bar {
+            h3 {
+                font-size: 17px;
+                line-height: 19px;
+                color: #000;
+                font-weight: 700;
+                margin: 0 0 15px;
+            }
+            p {
+                font-size: 12px;
+                line-height: 14px;
+                color: #000;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+    }
+    .btn-box {
+        text-align: center;
+        .rm-btn {
+            @include rm-btn;
+        }
+    }
+}
