@@ -111,3 +111,49 @@
     }
 }
 
+@mixin inputbar {
+	border-radius: 0;
+	border: 1px solid #E0E0E0;
+	font-size: 14px;
+	line-height: 16px;
+	background: #f6f6f6;
+	border-radius: 10px 10px;
+	padding: 15px 17px;
+	color: #606060;
+	font-weight: 400;
+	&:focus {
+		box-shadow: none;
+	}
+	&::placeholder {
+		transition: 0.4s ease;
+		text-indent: 0;
+		color:#606060;
+	}
+	&:hover::placeholder,
+	&:focus::placeholder {
+		text-indent: 15px;
+	}
+}
+@mixin checkbar {
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px;
+	label {
+		color: #fff;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 400;
+		padding: 3px 0 0 10px;
+	}
+	input {
+		width: 20px;
+		height: 20px;
+		&:focus {
+			box-shadow: none;
+		}
+		&:checked {
+			background-color: #00C487;
+			border-color: #00C487;
+		}
+	}
+}

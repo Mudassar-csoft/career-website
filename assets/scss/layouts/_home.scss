@@ -18,50 +18,10 @@
     .form-block {
         margin: 0 0 4rem;
         .form-control,select {
-            border-radius: 0;
-            border: 1px solid #E0E0E0;
-            font-size: 14px;
-            line-height: 16px;
-            background: #f6f6f6;
-            border-radius: 10px 10px;
-            padding: 15px 17px;
-            color: #606060;
-            font-weight: 400;
-            &:focus {
-                box-shadow: none;
-            }
-            &::placeholder {
-                transition: 0.4s ease;
-                text-indent: 0;
-                color:#606060;
-            }
-            &:hover::placeholder,
-            &:focus::placeholder {
-                text-indent: 15px;
-            }
+            @include inputbar;
         }
         .form-check {
-            display: flex;
-            align-items: center;
-            margin: 0 0 10px;
-            label {
-                color: #fff;
-                font-size: 14px;
-                line-height: 16px;
-                font-weight: 400;
-                padding: 3px 0 0 10px;
-            }
-            input {
-                width: 20px;
-                height: 20px;
-                &:focus {
-                    box-shadow: none;
-                }
-                &:checked {
-                    background-color: #00C487;
-                    border-color: #00C487;
-                }
-            }
+            @include checkbar;
         }
         .apply-btn {
             @include apply-btn;
@@ -715,6 +675,213 @@
         text-align: center;
         .rm-btn {
             @include rm-btn;
+        }
+    }
+}
+.partner-area {
+    padding: 5rem 0;
+    background: url(../images/banner03.png) no-repeat top center;
+    background-size: cover;
+    h2 {
+        text-align: center;
+        font-size: 44px;
+        line-height: 46px;
+        color: #fff;
+        margin: 0 0 30px;
+        font-weight: 600;
+    }
+    .form-block {
+        .form-control,textarea {
+            @include inputbar;
+        }
+        .apply-btn {
+            @include apply-btn;
+        }
+    }
+}
+.gallery-bar {
+    padding: 4rem 0;
+    h2 {
+        text-align: center;
+        font-size: 38px;
+        line-height: 40px;
+        color: #000;
+        margin: 0 0 40px;
+        font-weight: 600;
+    }
+    .gallery-tabs {
+        display: flex;
+        list-style: none;
+        background: linear-gradient(107.44deg, #00A0B4 -20.56%, #03C38A 110.73%);
+        padding: 10px 10px;
+        border-radius: 50px 50px;
+        margin: 0 0 50px;
+        li {
+            cursor: pointer;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 30px;
+            font-size: 20px;
+            line-height: 22px;
+            font-weight: 500;
+            &.active {
+                background: #FFFFFF4D;
+                font-weight: 700;
+            }
+        }
+    }
+    .gallery-panel {
+        display:none;
+        grid-template-columns:repeat(4,1fr);
+        gap:15px;
+        margin: 0 0 50px;
+        &.active {
+            display:grid;
+        }
+        .gallery-item {
+            position:relative;
+            border-radius: 10px 10px;
+            img{
+                width:100%;
+                height:auto;
+                object-fit:cover;
+            }
+            .detial {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                content: "";
+                z-index: 1;
+                background: #00000033;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border-radius: 10px 10px;
+                justify-content: center;
+                display: none;
+                h3 {
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #fff;
+                    font-weight: 600;
+                    margin: 0 0 5px;
+                }
+                .view-btn {
+                    cursor:pointer;
+                    color: #fff;
+                    display: block;
+                }
+            }
+            &:hover > .detial {
+                display: flex;
+            }
+        }
+        .popupSlider img {
+            width:100%;
+        }
+    }
+    .btn-area {
+        text-align: center;
+        .more-btn {
+            @include apply-btn;
+        }
+    }
+}
+.soical-area {
+    padding: 3rem 0;
+    h2 {
+        text-align: center;
+        font-size: 38px;
+        line-height: 40px;
+        color: #000;
+        margin: 0 0 40px;
+        font-weight: 600;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        li {
+            width: 13%;
+            a {
+                box-shadow: 2px 4px 13px 2px #0000001A;
+                padding: 25px 25px;
+                text-align: center;
+                display: block;
+                border-radius: 10px 10px;
+                transition: transform 0.3s ease;
+                &:hover {
+                    transform: translateY(-7px);
+                }
+            }
+        }
+    }
+}
+.faq-area {
+    padding: 4rem 0;
+    background: #F4FBFF;
+    h6 {
+        text-align: center;
+        font-size: 38px;
+        line-height: 40px;
+        color: #000;
+        margin: 0 0 50px;
+        font-weight: 600;
+        span {
+            color: #009DB8;
+        }
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 24px;
+        color: #03C587;
+        font-weight: 600;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+    .accordion {
+        .accordion-item {
+            border: 0;
+            border-bottom: 1px solid #D1D1D1;
+            background-color: transparent;
+            .accordion-header {
+                border: 0;
+                button {
+                    font-size: 18px;
+                    line-height: 20px;
+                    color: #000;
+                    font-weight: 700;
+                    background-color: transparent;
+                    padding: 20px 0;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &::after {
+                        background-image:url(../images/icon15.png);
+                    }
+                    &.collapsed {
+                        &::after {
+                            background-image:url(../images/icon16.png);
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+            .accordion-body {
+                padding: 0px 0 20px;
+                p {
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #575757;
+                }
+            }
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: none;
+            box-shadow: none;
         }
     }
 }
