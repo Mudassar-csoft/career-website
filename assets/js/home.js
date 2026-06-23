@@ -96,3 +96,12 @@ $(document).ready(function() {
         modal.show();
     });
 });
+
+
+// circle round js code
+
+
+const outerOrbit = document.querySelector('.orbit-outer');
+const innerOrbit = document.querySelector('.orbit-inner');
+outerOrbit.style.animationDuration = "40s";
+innerOrbit.style.animationDuration = "30s";
