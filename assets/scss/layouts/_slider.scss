@@ -1,0 +1,213 @@
+// news slider start here
+
+.news-slider {
+    margin: 0 0 20px;
+    .slick-slide {
+        margin: 0 0 12px;
+        .box {
+            box-shadow: 0px 0px 8px 2px #00000012;
+            padding: 17px 15px;
+            background: #fff;
+            border-radius: 10px 10px;
+            p {
+                font-size: 18px;
+                line-height: 22px;
+                color: #000;
+                font-weight: 400;
+                text-transform: capitalize;
+                margin: 0 0 15px;
+                a {
+                    color: #000;
+                    font-size: 12px;
+                    line-height: 14px;
+                    font-weight: 400;
+                    margin: 0 0 0 5px;
+                }
+            }
+            .d-bar {
+                display: flex;
+                align-items: center;
+                img {
+                    margin: 0 18px 0 0;
+                }
+                span {
+                    color: #009DB8;
+                    font-size: 18px;
+                    line-height: 20px;
+                    font-weight: 300;
+                }
+            }
+            &.s-blue {
+                border-left: 4px solid #009DB8;
+            }
+            &.s-black {
+                border-left: 4px solid #01324D;
+            }
+            &.s-green {
+                border-left: 4px solid #00C487;
+            }
+        }
+    }
+}
+
+// feature slider start here
+
+.feature-slider {
+    .slick-slide {
+        margin: 0 7px 0 0;
+        .box {
+            box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.07);
+            border-radius: 10px 10px;
+            margin: 5px 5px;
+            .img-hold {
+                border-radius: 10px 10px 0 0;
+                position: relative;
+                img {
+                    width: 100%;
+                    border-radius: 10px 10px 0 0;
+                }
+                .offer-bar {
+                    position: absolute;
+                    top: 0;
+                    left: auto;
+                    right: 0;
+                    bottom: auto;
+                    content: "";
+                    background: linear-gradient(180deg, rgba(252, 95, 1, 0.7) 0%, rgba(210, 143, 13, 0.7) 100%);
+                    border-radius: 0 10px 0 10px;
+                    padding: 10px 15px;
+                    text-align: center;
+                    h3 {
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #fff;
+                        font-weight: 700;
+                        margin: 0;
+                    }
+                    span {
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #fff;
+                        font-weight: 600;
+                        display: block;
+                    }
+                }
+            }
+            .text-hold {
+                padding: 15px 15px;
+                background: #fff;
+                border-radius: 10px 10px;
+                h3 {
+                    font-size: 22px;
+                    line-height: 24px;
+                    color: #000;
+                    font-weight: 600;
+                    margin: 0 0 12px;
+                }
+                ul {
+                    margin: 0 0 12px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-weight: 700;
+                        color: #535353;
+                        margin: 0 0 8px;
+                        span {
+                            font-size: 12px;
+                            line-height: 14px;
+                            font-weight: 400;
+                            margin: 0 0 0 7px;
+                            display: flex;
+                            align-items: center;
+                            img {
+                                margin: 0 5px 0 0;
+                            }
+                        }
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+                .btn-area {
+                    display: flex;
+                    align-items: center;
+                    .an-btn {
+                        @include an-btn;
+                    }
+                    .md-btn {
+                        @include md-btn;
+                    }
+                }
+            }
+        }
+    }
+    .slick-prev, .slick-next {
+        &:before {
+            display: none;
+        }
+    }
+    .slick-prev {
+        left: 50px;
+        background: #FFFFFFB2 url(../images/icon13.png) no-repeat center center;
+        width: 50px;
+        height: 50px;
+        border-radius: 100% 100%;
+        z-index: 9;
+    }
+    .slick-next {
+        right: 50px;
+        background: #FFFFFFB2 url(../images/icon14.png) no-repeat center center;
+        width: 50px;
+        height: 50px;
+        border-radius: 100% 100%;
+        z-index: 9;
+    }
+}
+
+// logo slider start here
+
+.logo-slider {
+    .slick-slide {
+        margin: 0 10px 0 0;
+        .img-hold {
+            background: #01A1B426;
+            padding: 15px 30px;
+            border-radius: 15px 15px;
+            display: flex;
+            justify-content: center;
+            height: 70px;
+            img {
+                width: auto;
+            }
+        }
+    }
+    .slick-prev, .slick-next {
+        &:before {
+            display: none;
+        }
+    }
+    .slick-prev {
+        left: 50px;
+        background: url(../images/icon13.png) no-repeat center center;
+        z-index: 9;
+        &:hover {
+            background: url(../images/icon13.png) no-repeat center center;
+        }
+        &:focus {
+            background: url(../images/icon13.png) no-repeat center center;
+        }
+    }
+    .slick-next {
+        right: 50px;
+        background: url(../images/icon14.png) no-repeat center center;
+        z-index: 9;
+        &:hover {
+            background: url(../images/icon14.png) no-repeat center center;
+        }
+        &:focus {
+            background: url(../images/icon14.png) no-repeat center center;
+        }
+    }
+}

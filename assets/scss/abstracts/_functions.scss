@@ -157,3 +157,19 @@
 		}
 	}
 }
+@mixin join-btn {
+	background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+	padding: 15px 24px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 15px 15px;
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
