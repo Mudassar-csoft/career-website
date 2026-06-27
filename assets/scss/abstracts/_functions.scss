@@ -173,3 +173,46 @@
 		box-shadow: none;
 	}
 }
+@mixin ciput {
+	border: 2px solid transparent;
+	backdrop-filter: blur(23.760000228881836px);
+	background: #FFFFFF33 url(../images/icon18.png) no-repeat center right 25px;
+	border-radius: 50px 50px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #fff;
+	padding: 20px 20px;
+	option {
+		color: #000;
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+@mixin sc-iput {
+	border: 2px solid transparent;
+	backdrop-filter: blur(23.760000228881836px);
+	background: #FFFFFF33;
+	border-radius: 50px 50px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #fff;
+	padding: 20px 20px;
+	&:focus {
+		box-shadow: none;
+	}
+	&::placeholder {
+		color: #fff;
+	}
+}
+@mixin addon-btn {
+	background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+	border-radius: 0 50px 50px 0;
+	padding: 15px 25px;
+	border: 0;
+	&:focus {
+		box-shadow: none;
+	}
+}
