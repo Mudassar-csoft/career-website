@@ -1088,3 +1088,232 @@
     }
   }
 }
+.se-area {
+  padding: 0 0 5rem;
+  .form-block {
+    padding: 4rem 1.5rem;
+    background: url(../images/banner06.png) no-repeat center center;
+    background-size: 100%;
+    h2 {
+      color: #fff;
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      margin: 0 0 35px;
+      text-align: center;
+    }
+    input,select,textarea {
+      @include inputbar;
+      color: #8B8989;
+      background: rgba(255, 255, 255, 0.9);
+    }
+    select {
+      background: rgba(255, 255, 255, 0.9) url(../images/icon20.png) no-repeat center right 15px;
+    }
+    .sr-btn {
+      @include apply-btn;
+      margin: 25px 0 0;
+      padding: 20px 30px;
+    }
+  }
+}
+
+// Vue page start here
+
+.vue-page {
+  .top-banner {
+    padding: 5rem 0 0;
+    background: url(../images/banner05.png) no-repeat center center;
+    background-size: 100%;
+    z-index: 1;
+    position: relative;
+    .sm-box {
+      @include sm-box;
+    }
+  }
+  .bus-area {
+    padding: 5rem 0;
+    position: relative;
+    z-index: 1;
+    &:before {
+      position: absolute;
+      top: -30rem;
+      left: 0;
+      right: auto;
+      bottom: 0;
+      content: "";
+      z-index: -1;
+      background: url(../images/banner08.png) no-repeat;
+      background-size: 100%;
+      width: 1100px;
+      height: 1500px;
+    }
+    .border-end {
+      border-right: 2px solid #03C587 !important;
+    }
+    h2 {
+      color: #03C587;
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      text-align: right;
+      padding: 0 15px 0 0;
+    }
+    p {
+      color: #000;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 300;
+      padding: 0 0 0 15px;
+    }
+    .g-box {
+      background: #03C587;
+      border-radius: 20px 20px;
+      padding: 35px 35px;
+      text-align: center;
+      h3 {
+        font-size: 38px;
+        line-height: 40px;
+        font-weight: 600;
+        color: #fff;
+        margin: 0 0 10px;
+      }
+      p {
+        padding: 0;
+        font-size: 24px;
+        line-height: 26px;
+        color: #fff;
+        font-weight: 400;
+      }
+    }
+    h4 {
+      color: #03C587;
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      padding: 0 0 0 15px;
+    }
+    span {
+      color: #000;
+      font-size: 20px;
+      line-height: 25px;
+      font-weight: 300;
+      padding: 0 15px 0 0;
+      display: block;
+    }
+  }
+  .gb-area {
+    padding: 0 0 4rem;
+    .gb-box {
+      padding: 50px 50px;
+      background: #01718C;
+      border-radius: 50px 50px;
+      .img-hold {
+        text-align: right;
+      }
+      .t-bar {
+        h3 {
+          color: #fff;
+          font-size: 38px;
+          line-height: 42px;
+          font-weight: 400;
+          margin: 0 0 15px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 25px;
+          color: #fff;
+          font-weight: 300;
+          margin: 0 0 20px;
+        }
+        .en-btn {
+          @include apply-btn;
+        }
+      }
+    }
+  }
+}
+
+// PSI Exam page start here
+
+.PSI-page {
+  .top-banner {
+    padding: 5rem 0 0;
+    background: url(../images/banner07.png) no-repeat center center;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+    .sm-box {
+      @include sm-box;
+    }
+  }
+  .dis-area {
+    padding: 5rem 0;
+    position: relative;
+    z-index: 1;
+    &:before {
+      position: absolute;
+      top: -30rem;
+      left: 0;
+      right: auto;
+      bottom: 0;
+      content: "";
+      z-index: -1;
+      background: url(../images/banner08.png) no-repeat;
+      background-size: 100%;
+      width: 1100px;
+      height: 1500px;
+    }
+    .img-hold {
+      text-align: right;
+      transition: all .3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    h2 {
+      color: #000;
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      margin: 0 0 15px;
+    }
+    p {
+      color: #000;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 300;
+    }
+  }
+  .s-block {
+    background: #F4FDFF;
+    padding: 4rem 0 6rem;
+    z-index: 1;
+    position: relative;
+    .box {
+      background: #fff;
+      padding: 40px 25px;
+      border-radius: 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      box-shadow: 0px 0px 10px 0px #0000001A;
+      height: 100%;
+      transition: transform .3s ease;
+      &:hover {
+        transform: translateY(-7px);
+      }
+      .img-hold {
+        margin: 0 0 25px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 32px;
+        color: #000;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+  }
+}
