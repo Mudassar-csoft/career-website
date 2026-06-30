@@ -1432,90 +1432,50 @@
     }
   }
 }
-
-
-
-
-
 .workspace-slider {
     margin: 50px 0;
-
     .slick-track {
-        display: flex;
-        align-items: flex-end;
+      display: flex;
+      align-items: flex-end;
     }
-
     .workspace-item {
-        position: relative;
-        width: 220px !important;
-        height: 320px;
-        margin: 0 10px;
-        border-radius: 25px;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        h5 {
-            position: absolute;
-            left: 20px;
-            bottom: 20px;
-            color: #fff;
-            font-size: 24px;
-            font-weight: 700;
-            margin: 0;
-            z-index: 2;
-        }
-
-        &:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to top,
-                rgba(0,0,0,.8),
-                transparent
-            );
-            z-index: 1;
-        }
-
-        &.small {
-            width: 160px !important;
-        }
-
-        &.large {
-            width: 300px !important;
-        }
+      position: relative;
+      width: 220px !important;
+      height: 320px;
+      margin: 0 10px;
+      border-radius: 25px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      h5 {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0;
+        z-index: 2;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,rgba(0,0,0,.8), transparent);
+        z-index: 1;
+      }
+      &.small {
+        width: 160px !important;
+      }
+      &.large {
+        width: 300px !important;
+      }
     }
-
     .workspace-item:nth-child(even) {
-        margin-top: 30px;
-    }
-}
-
-@media(max-width:768px) {
-
-    .workspace-slider {
-
-        .workspace-item {
-            width: 180px !important;
-            height: 260px;
-
-            &.small {
-                width: 140px !important;
-            }
-
-            &.large {
-                width: 220px !important;
-            }
-
-            h5 {
-                font-size: 18px;
-            }
-        }
+      margin-top: 30px;
     }
 }
