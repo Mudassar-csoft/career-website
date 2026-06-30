@@ -1317,3 +1317,58 @@
     }
   }
 }
+.kry-page {
+  .top-banner {
+    padding: 5rem 0 0;
+    background: url(../images/banner07.png) no-repeat center center;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+    .sm-box {
+      @include sm-box;
+      padding: 25px 25px;
+    }
+    .tb-text {
+      display: flex;
+      justify-content: flex-end;
+      h3 {
+        font-size: 38px;
+        line-height: 42px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+  }
+  .feature-box {
+    padding: 5rem 0;
+    h2 {
+      text-align: center;
+      font-size: 38px;
+      line-height: 42px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 50px;
+    }
+    .box {
+      box-shadow: 0px 0px 10px 0px #0000001A;
+      background: linear-gradient(107.69deg, #009DB8 1.33%, #03C587 100%);
+      padding: 50px 50px;
+      border-radius: 10px 10px;
+      text-align: center;
+      transition: transform .3s ease;
+      &:hover {
+        transform: translateY(-7px);
+      }
+      img {
+        margin: 0 0 15px;
+      }
+      h3 {
+        font-size: 24px;
+        line-height: 26px;
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+}

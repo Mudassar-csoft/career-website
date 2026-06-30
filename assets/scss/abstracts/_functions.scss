@@ -227,4 +227,24 @@
 		color: #fff;
 		font-weight: 700;
 	}
+	ul {
+		margin: 10px 0 0;
+		li {
+			font-size: 18px;
+			line-height: 20px;
+			color: #fff;
+			font-weight: 300;
+			margin: 0 0 5px;
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	p {
+		margin: 0 0 10px;
+		font-size: 24px;
+		line-height: 26px;
+		color: #fff;
+		font-weight: 400;
+	}
 }
