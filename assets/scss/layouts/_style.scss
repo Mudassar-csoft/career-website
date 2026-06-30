@@ -1372,3 +1372,150 @@
     }
   }
 }
+.cws-page {
+  .top-banner {
+    padding: 10rem 0;
+    background: url(../images/banner09.png) no-repeat center center;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+    p {
+      font-size: 24px;
+      line-height: 26px;
+      color: #fff;
+      font-weight: 400;
+      margin: 0 0 10px;
+    }
+    h1 {
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      margin: 0 0 30px;
+    }
+    .btn-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .aq-btn {
+        @include apply-btn;
+        padding: 14px 25px
+      }
+      .wa-btn {
+        @include rm-btn;
+      }
+    }
+  }
+  .two-block {
+    padding: 5rem 0;
+    h2 {
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #2F2F2F;
+      margin: 0 0 15px;
+      font-weight: 400;
+    }
+    .img-hold {
+      text-align: right;
+      img {
+        transition: all .3s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.workspace-slider {
+    margin: 50px 0;
+
+    .slick-track {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .workspace-item {
+        position: relative;
+        width: 220px !important;
+        height: 320px;
+        margin: 0 10px;
+        border-radius: 25px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h5 {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            z-index: 2;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0,0,0,.8),
+                transparent
+            );
+            z-index: 1;
+        }
+
+        &.small {
+            width: 160px !important;
+        }
+
+        &.large {
+            width: 300px !important;
+        }
+    }
+
+    .workspace-item:nth-child(even) {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .workspace-slider {
+
+        .workspace-item {
+            width: 180px !important;
+            height: 260px;
+
+            &.small {
+                width: 140px !important;
+            }
+
+            &.large {
+                width: 220px !important;
+            }
+
+            h5 {
+                font-size: 18px;
+            }
+        }
+    }
+}
