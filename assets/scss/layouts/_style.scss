@@ -1655,3 +1655,41 @@
     }
   }
 }
+
+.sa-page {
+  .top-banner {
+    padding: 7rem 0 0;
+    background: url(../images/banner11.png) no-repeat center center;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+    .sm-box {
+      @include sm-box;
+      padding: 25px 25px;
+    }
+    .tb-text {
+      display: flex;
+      justify-content: flex-end;
+      h3 {
+        font-size: 38px;
+        line-height: 42px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// couruse page start here 
+
+.cur-area {
+  padding: 4rem 0;
+  h2 {
+    font-size: 38px;
+    line-height: 40px;
+    margin: 0 0 40px;
+    text-align: center;
+    font-weight: 700;
+  }
+}
