@@ -1692,4 +1692,46 @@
     text-align: center;
     font-weight: 700;
   }
+  .feature-slider {
+    .slick-slide {
+      .box {
+        .text-hold {
+          h5 {
+            font-size: 14px;
+            line-height: 16px;
+            color: #535353;
+            font-weight: 600;
+            margin: 0 0 10px;
+          }
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            color: #535353;
+            font-weight: 400;
+            margin: 0 0 15px;
+          }
+          .btn-area {
+            .en-btn {
+              @include apply-btn;
+            }
+          }
+        }
+        .img-hold {
+          .offer-bar {
+            background: linear-gradient(180deg, rgba(1, 161, 180, 0.7) 0%, rgba(3, 195, 138, 0.7) 100%);
+          }
+        }
+      }
+    }
+    .slick-prev {
+      left: -6rem;
+      background: url(../images/icon42.png) no-repeat center center;
+      background-size: 100%;
+    }
+    .slick-next {
+      right: -6rem;
+      background: url(../images/icon43.png) no-repeat center center;
+      background-size: 100%;
+    }
+  }
 }
