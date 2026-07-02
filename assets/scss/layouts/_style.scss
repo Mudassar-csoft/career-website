@@ -1457,64 +1457,6 @@
     font-size: 22px;
     line-height: 24px;
   }
-  .workspace-slider {
-    margin: 50px 0;
-    .slick-list {
-      overflow: inherit;
-      .slick-track {
-        display: flex;
-        .workspace-item {
-          position: relative;
-          width: 280px !important;
-          height: 320px;
-          margin: 0 5px;
-          border-radius: 20px 20px;
-          overflow: hidden;
-          top: 35px;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
-          h5 {
-            position: absolute;
-            left: 15px;
-            bottom: 15px;
-            color: #fff;
-            font-size: 20px;
-            line-height: 22px;
-            font-weight: 600;
-            margin: 0;
-            z-index: 2;
-          }
-          &:before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: #00000033;
-            z-index: 1;
-          }
-          &.small {
-            width: 160px !important;
-            top: -10px;
-          }
-          &.large {
-            width: 300px !important;
-            top: 30px;
-          }
-          &.mid {
-            width: 280px !important;
-            top: 8px;
-          }
-          &.end {
-            width: 210px !important;
-            top: 7px;
-          }
-        }
-      }
-    }
-  }
 }
 .fea-box {
   padding: 0 0 5rem;
@@ -1683,55 +1625,163 @@
 
 // couruse page start here 
 
-.cur-area {
-  padding: 4rem 0;
-  h2 {
-    font-size: 38px;
-    line-height: 40px;
-    margin: 0 0 40px;
-    text-align: center;
-    font-weight: 700;
-  }
-  .feature-slider {
-    .slick-slide {
-      .box {
-        .text-hold {
-          h5 {
-            font-size: 14px;
-            line-height: 16px;
-            color: #535353;
-            font-weight: 600;
-            margin: 0 0 10px;
+.sa-page {
+  .cur-area {
+    padding: 4rem 0;
+    h2 {
+      font-size: 38px;
+      line-height: 40px;
+      margin: 0 0 40px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .feature-slider {
+      .slick-slide {
+        .box {
+          .text-hold {
+            h5 {
+              font-size: 14px;
+              line-height: 16px;
+              color: #535353;
+              font-weight: 600;
+              margin: 0 0 10px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 18px;
+              color: #535353;
+              font-weight: 400;
+              margin: 0 0 15px;
+            }
+            .btn-area {
+              .en-btn {
+                @include apply-btn;
+              }
+            }
           }
-          p {
-            font-size: 12px;
-            line-height: 18px;
-            color: #535353;
-            font-weight: 400;
-            margin: 0 0 15px;
-          }
-          .btn-area {
-            .en-btn {
-              @include apply-btn;
+          .img-hold {
+            .offer-bar {
+              background: linear-gradient(180deg, rgba(1, 161, 180, 0.7) 0%, rgba(3, 195, 138, 0.7) 100%);
             }
           }
         }
-        .img-hold {
-          .offer-bar {
-            background: linear-gradient(180deg, rgba(1, 161, 180, 0.7) 0%, rgba(3, 195, 138, 0.7) 100%);
-          }
+      }
+      .slick-prev {
+        left: -6rem;
+        background: url(../images/icon42.png) no-repeat center center;
+        background-size: 100%;
+      }
+      .slick-next {
+        right: -6rem;
+        background: url(../images/icon43.png) no-repeat center center;
+        background-size: 100%;
+      }
+    }
+  }
+  .blog-area {
+    padding: 5rem 0;
+    background: #01A1B403;
+  }
+  .abrod-info {
+    padding: 4rem 0;
+    .t-bar {
+      h2 {
+        font-size: 36px;
+        line-height: 38px;
+        color: #000;
+        font-weight: 700;
+        margin: 0 0 15px;
+        letter-spacing: 0.3px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        color: #2F2F2F;
+        font-weight: 400;
+        margin: 0 0 15px;
+      }
+    }
+    .img-hold {
+      text-align: right;
+      img {
+        transition: all .3s ease-in-out;
+        &:hover {
+          transform: scale(1.05);
         }
       }
     }
-    .slick-prev {
-      left: -6rem;
-      background: url(../images/icon42.png) no-repeat center center;
+    .form-block {
+      padding: 4rem 2rem;
+      background: url(../images/banner12.png) no-repeat center center;  
       background-size: 100%;
+      h2 {
+        font-size: 38px;
+        line-height: 40px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0 0 40px;
+        text-align: center;
+      }
+      input {
+        @include inputbar;
+        background: #FFFFFFE5;
+      }
+      .sr-btn {
+        @include apply-btn;
+        padding: 15px 20px;
+        margin: 25px 0 0;
+      }
     }
-    .slick-next {
-      right: -6rem;
-      background: url(../images/icon43.png) no-repeat center center;
-      background-size: 100%;
+  }
+  .ser-area {
+    padding: 3rem 0 4rem;
+    h2 {
+      text-align: center;
+      font-size: 38px;
+      line-height: 40px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 30px;
+    }
+    .box {
+      background: linear-gradient(107.69deg, #009DB8 1.33%, #03C587 100%);
+      box-shadow: 0px 0px 10px 0px #0000001A;
+      padding: 30px 30px;
+      text-align: center;
+      border-radius: 10px 10px;
+      transition: transform .3s ease;
+      &:hover {
+        transform: translateY(-7px);
+      }
+      .img-hold {
+        margin: 0 0 15px;
+      }
+      h3 {
+        font-size: 24px;
+        line-height: 28px;
+        color: #fff;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+  .ab-detail {
+    padding: 4rem 0 0;
+    h2 {
+      font-size: 38px;
+      line-height: 40px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 20px;
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      color: #2F2F2F;
+      font-weight: 400;
+      margin: 0 0 50px;
+      text-align: center;
     }
   }
 }
