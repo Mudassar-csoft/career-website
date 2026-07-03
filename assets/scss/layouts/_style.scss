@@ -1815,3 +1815,195 @@
     padding: 5rem 0 0;
   }
 }
+
+// job placement page start here
+
+.job-page {
+  .top-banner {
+    padding: 8rem 0;
+    background: url(../images/banner14.png) no-repeat center center;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+    h2 {
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 400;
+      margin: 0 0 15px;
+    }
+    h1 {
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      margin: 0 0 30px;
+    }
+    .btn-bar {
+      .sr-btn {
+        @include apply-btn;
+        padding: 12px 30px;
+        margin: 0 7px 0 0
+      }
+      .pj-btn {
+        @include rm-btn;
+        padding: 12px 30px;
+      }
+    }
+  }
+  .cata-area {
+    padding: 4rem 0 2rem;
+    h2 {
+      font-size: 38px;
+      line-height: 40px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 30px;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        width: 24.4%;
+        box-shadow: 0px 0px 10px 0px #0000001A;
+        border-radius: 10px 10px;
+        background: linear-gradient(107.69deg, #009DB8 1.33%, #03C587 100%);
+        padding: 40px 20px;
+        text-align: center;
+        margin: 0 0 15px;
+        transition: transform .3s ease;
+        &:hover {
+          transform: translateY(-7px);
+        }
+        .img-hold {
+          height: 50px;
+          margin: 0 0 15px;
+          img {
+            height: 100%;
+          }
+        }
+        p {
+          font-size: 22px;
+          line-height: 26px;
+          font-weight: 500;
+          color: #fff;
+          margin: 0;
+        }
+      }
+    }
+    .btn-bar {
+      text-align: center;
+      margin: 30px 0 0;
+      .va-btn {
+        @include rm-btn;
+        padding: 12px 30px;
+        background: 
+        linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
+      }
+    }
+  }
+  .f-job {
+    padding: 5rem 0 2rem;
+    h2 {
+      font-size: 38px;
+      line-height: 40px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin: 0 10px 0 0;
+      }
+    }
+    .career-section {
+      .career-filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .show-box {
+        min-width: 100px;
+        height: 50px;
+        background: #EEEEEE;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+      }
+      .filter-box {
+        flex: 1;
+        padding: 0 0 0 7rem;
+      }
+      .form-control {
+        @include inputbar;
+        padding: 17px 17px;
+        border: 1px solid #D0D0D0;
+        background: #fff;
+      }
+      .search-btn {
+        @include apply-btn;
+        border-radius: 10px 10px;
+        padding: 14px 25px;
+      }
+      .career-table {
+        border: 1px solid #E6E6E6;
+        margin: 0;
+        thead {
+          background: #E0E0E033;
+          th {
+              padding: 20px 20px;
+              border: 0;
+              font-size: 14px;
+              line-height: 16px;
+              font-weight: 600;
+              color: #000;
+              white-space: nowrap;
+          }
+        }
+        tbody {
+          td {
+            padding: 18px 18px;
+            vertical-align: middle;
+            border-color: #E6E6E6;
+            color: #000;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+          }
+          tr {
+            transition: .3s;
+            &:hover {
+                background: #fafafa;
+            }
+          }
+        }
+      }
+      .job-badge {
+        background: #E6FFF5;
+        color: #25c67c;
+        padding: 8px 18px;
+        border-radius: 10px 10px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 500;
+      }
+      .apply-btn {
+        @include apply-btn;
+        font-size: 12px;
+        line-height: 14px;
+        border-radius: 5px 5px;
+        font-weight: 400;
+      }
+    }
+  }
+}
