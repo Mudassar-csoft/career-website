@@ -253,4 +253,40 @@
 		color: #fff;
 		font-weight: 300;
 	}
+	.breadcrumb {
+		margin: 7px 0 0;
+		justify-content: center;
+		li {
+			padding: 0 20px 0 0;
+			position: relative;
+			a {
+				font-size: 16px;
+				line-height: 18px;
+				color: #fff;
+				font-weight: 500;
+			}
+			&.active {
+				color: #fff;
+			}
+			&:before {
+				display: none;
+			}
+			&::after {
+				content: "";
+				background: #fff;
+				width: 7px;
+				height: 7px;
+				border-radius: 50% 50%;
+				position: absolute;
+				top: 8px;
+				right: 5px;
+			}
+			&:last-child {
+				padding: 0;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
 }

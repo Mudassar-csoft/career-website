@@ -1785,3 +1785,33 @@
     }
   }
 }
+
+// contact us page start here
+
+.contact-page {
+  .top-banner {
+    padding: 15rem 0 0;
+    background: url(../images/banner13.png) no-repeat center center;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+    .sm-box {
+      @include sm-box;
+      padding: 40px 50px;
+    }
+    .tb-text {
+      display: flex;
+      justify-content: flex-end;
+      h3 {
+        font-size: 38px;
+        line-height: 42px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+  }
+  .info-bar {
+    padding: 5rem 0 0;
+  }
+}
