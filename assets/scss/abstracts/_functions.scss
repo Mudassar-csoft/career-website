@@ -290,3 +290,33 @@
 		}
 	}
 }
+
+@mixin select-file {
+	.custom-file-upload {
+		max-width: 500px;
+		.input-group-text {
+			background: #d9d9d9;
+			border: none;
+			height: 48px;
+			min-width: 110px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 700;
+			color: #000;
+			border-radius: 5px 5px;
+		}
+		.file-text {
+			height: 48px;
+			display: flex;
+			align-items: center;
+			background: #fff;
+			border-left: 0;
+			color: #000;
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 400;
+			box-shadow: none;
+			border: 0;
+		}
+	}
+}
