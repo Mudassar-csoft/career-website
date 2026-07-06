@@ -2288,3 +2288,66 @@
     }
   }
 }
+
+// Admission popup start here
+
+#admission-modal {
+  .modal-dialog {
+    max-width: 1100px;
+    .modal-content {
+      .modal-header {
+        padding: 0;
+        border: 0;
+        .btn-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          z-index: 9;
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+        }
+      }
+      .modal-body {
+        .form-block {
+          .img-hold {
+            text-align: center;
+            margin: 0 0 25px;
+          }
+          h2 {
+            font-size: 25px;
+            line-height: 27px;
+            color: #000;
+            font-weight: 600;
+            margin: 0 0 40px;
+            text-align: center;
+          }
+          .form-label {
+            font-size: 16px;
+            line-height: 18px;
+            color: #353535;
+            font-weight: 500;
+          }
+          input,select,textarea {
+            border: 1px solid #D0D0D0;
+            border-radius: 5px 5px;
+            background: #fff;
+            padding: 12px 12px;
+            font-size: 16px;
+            line-height: 18px;
+            color: #353535;
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+          }
+          .sm-btn {
+            @include apply-btn;
+            padding: 15px 20px;
+          }
+        }
+      }
+    }
+  }
+}
