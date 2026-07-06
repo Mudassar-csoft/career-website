@@ -2002,7 +2002,7 @@
 // ambassador page start here
 
 .ambassador-page {
-   .top-banner {
+  .top-banner {
     padding: 8rem 0;
     background: url(../images/banner15.png) no-repeat center bottom;
     background-size: 100%;
@@ -2177,5 +2177,139 @@
   }
   .info-bar {
     padding: 3rem 0;
+  }
+}
+
+// How to pay page start here
+
+.pay-page {
+  .top-banner {
+    padding: 10rem 0;
+    background: url(../images/banner16.png) no-repeat center bottom;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+    h1 {
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      margin: 0 0 15px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+  .tabs-area {
+    background: radial-gradient(100.9% 275.8% at 14.51% 43.51%, #03C38A 0%, #009DB8 100%);
+    padding: 70px 0;
+    .nav-tabs {
+      border-bottom: 0;
+      align-items: flex-end;
+      li {
+        width: 33.33%;
+        button {
+          background: #F9FAFB;
+          padding: 20px 3rem;
+          border-radius: 0;
+          width: 100%;
+          border: 0;
+          &.active {
+            padding: 30px 3rem;
+            border-radius: 10px 10px 0 0 !important;
+            box-shadow: 3px 0px 5px 0px #0000001A;
+            background: #fff;
+          }
+        }
+        &:first-child {
+          button {
+            border-radius: 10px 0 0 0;
+          }
+        }
+        &:last-child {
+          button {
+            border-radius: 0 10px 0 0;
+          }
+        }
+      }
+    }
+    .tab-content {
+      background: #fff;
+      padding: 2rem 7rem;
+      border-radius: 0 0 10px 10px;
+      .bank-info {
+        .info-label {
+          display: block;
+          font-size: 20px;
+          line-height: 22px;
+          color: #000;
+          margin: 0 0 10px;
+          font-weight: 400;
+        }
+        .info-box {
+          background: #EEEEEE;
+          padding: 12px 14px;
+          border-radius: 4px;
+          font-size: 20px;
+          line-height: 22px;
+          font-weight: 600;
+          color: #000;
+          display: flex;
+          align-items: center;
+          height: 60px;
+        }
+        .copy-box {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .btn-copy {
+            border: none;
+            background: linear-gradient(180deg, #009DB8 0%, #03C587 100%);
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            line-height: 16px;
+            &:hover {
+              background: #05917f;
+            }
+            svg {
+              width: 14px;
+              height: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .box {
+    background: #FFFFFF33;
+    padding: 15px 15px;
+    border: 1px solid #ffff;
+    border-radius: 10px 10px;
+    p {
+      font-size: 14px;
+      line-height: 22px;
+      color: #fff;
+      margin: 0;
+      font-weight: 400;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 20px;
+      color: #fff;
+      font-weight: 600;
+      margin: 0 0 7px;
+      display: flex;
+      align-items: center;
+      img {
+        margin: 0 7px 0 0;
+      }
+    }
   }
 }
