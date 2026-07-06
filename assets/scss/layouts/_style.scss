@@ -1109,15 +1109,16 @@
   }
 }
 
+
 // Vue page start here
 
 .vue-page {
   .top-banner {
+    @include top-banner;
     padding: 5rem 0 0;
     background: url(../images/banner05.png) no-repeat center center;
     background-size: 100%;
-    z-index: 1;
-    position: relative;
+    text-align: left;
     .sm-box {
       @include sm-box;
     }
@@ -1229,11 +1230,11 @@
 
 .PSI-page {
   .top-banner {
+    @include top-banner;
     padding: 5rem 0 0;
     background: url(../images/banner07.png) no-repeat center center;
     background-size: 100%;
-    position: relative;
-    z-index: 1;
+    text-align: left;
     .sm-box {
       @include sm-box;
     }
@@ -1363,39 +1364,16 @@
     }
   }
 }
+
+// Study Abroad page start here 
+
 .cws-page {
   .top-banner {
+    @include top-banner;
     padding: 10rem 0;
     background: url(../images/banner09.png) no-repeat center center;
     background-size: 100%;
-    text-align: center;
     color: #fff;
-    p {
-      font-size: 24px;
-      line-height: 26px;
-      color: #fff;
-      font-weight: 400;
-      margin: 0 0 10px;
-    }
-    h1 {
-      font-size: 38px;
-      line-height: 42px;
-      font-weight: 700;
-      margin: 0 0 30px;
-    }
-    .btn-block {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      .aq-btn {
-        @include apply-btn;
-        padding: 14px 25px
-      }
-      .wa-btn {
-        @include rm-btn;
-      }
-    }
   }
   .two-block {
     padding: 5rem 0;
@@ -1589,36 +1567,22 @@
   }
 }
 
+// Study Abroad page start here 
+
 .sa-page {
   .top-banner {
+    @include top-banner;
     padding: 7rem 0 0;
     background: url(../images/banner11.png) no-repeat center center;
     background-size: 100%;
-    position: relative;
-    z-index: 1;
+    text-align: left;
     .sm-box {
       @include sm-box;
       padding: 25px 25px;
     }
-    .tb-text {
-      display: flex;
-      justify-content: flex-end;
-      h3 {
-        font-size: 38px;
-        line-height: 42px;
-        color: #fff;
-        font-weight: 700;
-        margin: 0;
-      }
-    }
   }
-}
-
-// couruse page start here 
-
-.sa-page {
   .cur-area {
-    padding: 4rem 0;
+    padding: 4rem 0 0;
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -1781,25 +1745,14 @@
 
 .contact-page {
   .top-banner {
+    @include top-banner;
     padding: 15rem 0 0;
     background: url(../images/banner13.png) no-repeat center center;
     background-size: 100%;
-    position: relative;
-    z-index: 1;
+    text-align: left;
     .sm-box {
       @include sm-box;
       padding: 40px 50px;
-    }
-    .tb-text {
-      display: flex;
-      justify-content: flex-end;
-      h3 {
-        font-size: 38px;
-        line-height: 42px;
-        color: #fff;
-        font-weight: 700;
-        margin: 0;
-      }
     }
   }
   .info-bar {
@@ -1811,34 +1764,10 @@
 
 .job-page {
   .top-banner {
+    @include top-banner;
     padding: 8rem 0;
     background: url(../images/banner14.png) no-repeat center center;
     background-size: 100%;
-    text-align: center;
-    color: #fff;
-    h2 {
-      font-size: 24px;
-      line-height: 26px;
-      font-weight: 400;
-      margin: 0 0 15px;
-    }
-    h1 {
-      font-size: 38px;
-      line-height: 42px;
-      font-weight: 700;
-      margin: 0 0 30px;
-    }
-    .btn-bar {
-      .sr-btn {
-        @include apply-btn;
-        padding: 12px 30px;
-        margin: 0 7px 0 0
-      }
-      .pj-btn {
-        @include rm-btn;
-        padding: 12px 30px;
-      }
-    }
   }
   .cata-area {
     padding: 4rem 0 2rem;
@@ -2003,29 +1932,10 @@
 
 .ambassador-page {
   .top-banner {
+    @include top-banner;
     padding: 8rem 0;
     background: url(../images/banner15.png) no-repeat center bottom;
     background-size: 100%;
-    text-align: center;
-    color: #fff;
-    h2 {
-      font-size: 24px;
-      line-height: 26px;
-      font-weight: 400;
-      margin: 0 0 10px;
-    }
-    h1 {
-      font-size: 38px;
-      line-height: 42px;
-      font-weight: 700;
-      margin: 0 0 15px;
-    }
-    p {
-      font-size: 24px;
-      line-height: 28px;
-      font-weight: 400;
-      margin: 0;
-    }
   }
   .efl-area {
     padding: 5rem 0;
@@ -2184,23 +2094,10 @@
 
 .pay-page {
   .top-banner {
+    @include top-banner;
     padding: 10rem 0;
-    background: url(../images/banner16.png) no-repeat center bottom;
+    background: url(../images/banner16.png) no-repeat center top;
     background-size: 100%;
-    text-align: center;
-    color: #fff;
-    h1 {
-      font-size: 38px;
-      line-height: 42px;
-      font-weight: 700;
-      margin: 0 0 15px;
-    }
-    p {
-      font-size: 24px;
-      line-height: 28px;
-      font-weight: 400;
-      margin: 0;
-    }
   }
   .tabs-area {
     background: radial-gradient(100.9% 275.8% at 14.51% 43.51%, #03C38A 0%, #009DB8 100%);
@@ -2309,6 +2206,84 @@
       align-items: center;
       img {
         margin: 0 7px 0 0;
+      }
+    }
+  }
+}
+
+// verification page start here
+
+.veri-page {
+  .top-banner {
+    @include top-banner;
+    background: url(../images/banner17.png) no-repeat center bottom;
+    background-size: cover;
+    padding: 10rem 0;
+  }
+  .tabs-area {
+    padding: 4rem 0;
+    .nav {
+      justify-content: center;
+      border-bottom: 1px solid #E3E3E3;
+      padding: 0 0 1rem;
+      li {
+        margin: 0 25px;
+        button {
+          font-size: 22px;
+          line-height: 24px;
+          color: #000;
+          font-weight: 600;
+          padding: 15px 15px;
+          position: relative;
+          &.active {
+            background: none;
+            &::before {
+              position: absolute;
+              top: auto;
+              left: 0;
+              right: 0;
+              bottom: -1rem;
+              content: "";
+              width: 100%;
+              height: 2px;
+              background: #03C587;
+            }
+          }
+        }
+      }
+    }
+    .tab-content {
+      padding: 3rem 0;
+      .text-info {
+        h2 {
+          text-align: center;
+          font-size: 40px;
+          line-height: 42px;
+          color: #03C587;
+          margin: 0 0 40px;
+          font-weight: 700;
+        }
+        .form-block {
+          input {
+            height: 80px;
+            background: #EEEEEE;
+            border-radius: 10px 10px;
+            padding: 15px 15px;
+            font-size: 16px;
+            line-height: 18px;
+            color: #000;
+            font-weight: 500;
+            &:focus {
+              box-shadow: none;
+              outline: none;
+              border: 0;
+            }
+          }
+          .sm-btn {
+            @include apply-btn;
+            padding: 15px 20px;
+          }
+        }
       }
     }
   }
