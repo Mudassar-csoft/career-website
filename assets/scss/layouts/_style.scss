@@ -2351,3 +2351,41 @@
     }
   }
 }
+
+// About us page start here
+
+.about-page {
+  .hero-section {
+    background: linear-gradient(107.15deg, #012E4B 0%, #066C5C 100%);
+    background-size: 100%;
+    .ab-text {
+      span {
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #fff;
+        padding: 7px 20px;
+        border: 1px solid #fff;
+        display: inline-block;
+        border-radius: 10px 10px;
+        margin: 0 0 15px;
+      }
+      h1 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 700;
+        color: #fff;
+        margin: 0 0 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        color: #fff;
+      }
+    }
+    .img-hold {
+      text-align: right;
+    }
+  }
+}
