@@ -2389,4 +2389,92 @@
       text-align: right;
     }
   }
+  .ser-area {
+    padding: 5rem 0;
+    h2 {
+      text-align: center;
+      font-size: 44px;
+      line-height: 47px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 50px;
+    }
+    .block {
+      border: 1px solid #C2C2C2;
+      border-radius: 10px 10px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        &:first-child {
+          border-bottom: 1px solid #C2C2C2;
+          li {
+            &:first-child {
+              .box {
+                border-radius: 10px 0 0 0;
+              }
+            }
+            &:last-child {
+              .box {
+                border-radius: 0 10px 0 0;
+              }
+            }
+          }
+        }
+        li {
+          width: 25%;
+          border-right: 1px solid #C2C2C2;
+          &:last-child {
+            border-right: 0;
+            .box {
+              border-radius: 0 0 10px 0;
+            }
+          }
+          &:first-child {
+            .box {
+              border-radius: 0 0 0 10px;
+            }
+          }
+          .box {
+            padding: 25px 25px;
+            height: 100%;
+            &:hover {
+              background: linear-gradient(90deg, #009DB8 0%, #00C487 100%);
+              .t-bar {
+                h3 {
+                  color: #fff;
+                }
+                p {
+                  color: #fff;
+                }
+              }
+            }
+            .img-hold {
+              text-align: center;
+              margin: 0 0 15px;
+              min-height: 100px;
+              img {
+                height: 100%;
+              }
+            }
+            .t-bar {
+              text-align: center;
+              h3 {
+                font-size: 16px;
+                line-height: 20px;
+                color: #000;
+                font-weight: 700;
+                margin: 0 0 10px;
+              }
+              p {
+                font-size: 12px;
+                line-height: 16px;
+                color: #656565;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
