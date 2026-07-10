@@ -16,6 +16,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 	</head>
 	<body class="about-page">
 		<div id="wrapper">
@@ -322,134 +323,168 @@
 				<section class="news-area">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-8">
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="news-bar">
-											<h2>News</h2>
-											<div class="news-slider">
-												<div>
-													<div class="box s-blue">
-														<p>
-															Career Institute Signs Franchise MOU for
-															Kohinoor FSD  Branch<a href="#">Read more...</a>
-														</p>
-														<div class="d-bar">
-															<img src="assets/images/icon05.svg" alt=""> 
-															<span>09-12-2024</span>
-														</div>
-													</div>
-												</div>
-												<div>
-													<div class="box s-black">
-														<p>
-															Career Institute Signs Franchise MOU for
-															Kohinoor FSD  Branch<a href="#">Read more...</a>
-														</p>
-														<div class="d-bar">
-															<img src="assets/images/icon05.svg" alt=""> 
-															<span>09-12-2024</span>
-														</div>
-													</div>
-												</div>
-												<div>
-													<div class="box s-green">
-														<p>
-															Career Institute Signs Franchise MOU for
-															Kohinoor FSD  Branch<a href="#">Read more...</a>
-														</p>
-														<div class="d-bar">
-															<img src="assets/images/icon05.svg" alt=""> 
-															<span>09-12-2024</span>
-														</div>
-													</div>
-												</div>
-												<div>
-													<div class="box s-black">
-														<p>
-															Career Institute Signs Franchise MOU for
-															Kohinoor FSD  Branch<a href="#">Read more...</a>
-														</p>
-														<div class="d-bar">
-															<img src="assets/images/icon05.svg" alt=""> 
-															<span>09-12-2024</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<a href="#" class="btn r-btn">Read More</a>
+							<div class="col-lg-6">
+								<div class="tabs-bar">
+									<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+										<li class="nav-item" role="presentation">
+											<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Mission</button>
+										</li>
+										<li class="nav-item" role="presentation">
+											<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Purpose</button>
+										</li>
+									</ul>
+									<div class="tab-content" id="pills-tabContent">
+										<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+											<h2>
+												Mission
+											</h2>
+											<p>
+												At Career Institute, our mission is to empower individuals with
+												the knowledge and skills needed to excel in the dynamic world
+												of Information Technology. We are dedicated to fostering
+												personal and professional growth by providing top-notch
+												IT education and career development services. Our aim is
+												to produce industry-ready professionals who can lead and
+												innovate in their chosen fields.
+											</p>
 										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="event-bar">
-											<h2>Events</h2>
-											<ul>
-												<li>
-													<div class="d-info">
-														<h3>
-															27 <span>Apr</span>
-														</h3>
-													</div>
-													<div class="t-bar">
-														<p>
-															Inauguration Career Institute
-															Lahore Wapda Town Branch
-														</p>
-														<span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-													</div>
-												</li>
-												<li>
-													<div class="d-info">
-														<h3>
-															27 <span>Apr</span>
-														</h3>
-													</div>
-													<div class="t-bar">
-														<p>
-															Inauguration Career Institute
-															Lahore Wapda Town Branch
-														</p>
-														<span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-													</div>
-												</li>
-												<li>
-													<div class="d-info">
-														<h3>
-															27 <span>Apr</span>
-														</h3>
-													</div>
-													<div class="t-bar">
-														<p>
-															Inauguration Career Institute
-															Lahore Wapda Town Branch
-														</p>
-														<span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-													</div>
-												</li>
-											</ul>
-											<a href="#" class="btn event-btn">All Events</a>
-										</div>
+										<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-4">
-								<div class="about-bar">
-									<h2><span>Why</span> Choose Us</h2>
-									<div class="img-hold">
-										<img src="assets/images/img01.png" alt="">
+							<div class="col-lg-6">
+								<div class="news-bar">
+									<h2>Latest News <a href="#">View All News</a></h2>
+									<div class="news-slider">
+										<div>
+											<div class="box s-blue">
+												<p>
+													Career Institute Signs Franchise MOU for
+													Kohinoor FSD  Branch<a href="#">Read more...</a>
+												</p>
+												<div class="d-bar">
+													<img src="assets/images/icon05.svg" alt=""> 
+													<span>09-12-2024</span>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="box s-black">
+												<p>
+													Career Institute Signs Franchise MOU for
+													Kohinoor FSD  Branch<a href="#">Read more...</a>
+												</p>
+												<div class="d-bar">
+													<img src="assets/images/icon05.svg" alt=""> 
+													<span>09-12-2024</span>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="box s-green">
+												<p>
+													Career Institute Signs Franchise MOU for
+													Kohinoor FSD  Branch<a href="#">Read more...</a>
+												</p>
+												<div class="d-bar">
+													<img src="assets/images/icon05.svg" alt=""> 
+													<span>09-12-2024</span>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="box s-black">
+												<p>
+													Career Institute Signs Franchise MOU for
+													Kohinoor FSD  Branch<a href="#">Read more...</a>
+												</p>
+												<div class="d-bar">
+													<img src="assets/images/icon05.svg" alt=""> 
+													<span>09-12-2024</span>
+												</div>
+											</div>
+										</div>
 									</div>
-									<h3>About Career Institute</h3>
+									<a href="#" class="btn r-btn">Read More</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="chose-area">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<h2><span>Why</span> Choose Us</h2>
+							</div>
+						</div>
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<div class="t-bar">
+									<h3>
+										About Career Institute
+									</h3>
 									<p>
-										Since 2010, Career Institute, a global tech training
-										leader, has impacted 150,000+ students worldwide.
-										Our commitment to industry trends is seen in our
-										current curriculum and certified trainers. Beyond
-										training, we offer coworking spaces to tech startups,
-										fostering professional excellence. Elevate your skills
-										and business at Career Institute – where innovation
+										Since 2010, Career Institute, a global tech training leader,
+										has impacted 150,000+ students worldwide. Our
+										commitment to industry trends is seen in our current
+										curriculum and certified trainers. Beyond training, we
+										offer coworking spaces to tech startups, fostering
+										professional excellence. Elevate your skills and
+										business at Career Institute – where innovation
 										meets education
 									</p>
-									<a href="#" class="btn r-btn">Read More</a>
+									<a href="#" class="btn rm-btn">Read More</a>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="img-hold">
+									<img src="assets/images/img40.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="logo-bar">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<h2>Our Affiliation</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="logo-slider">
+									<div>
+										<div class="img-hold">
+											<img src="assets/images/img09.png" alt="">
+										</div>
+									</div>
+									<div>
+										<div class="img-hold">
+											<img src="assets/images/img10.png" alt="">
+										</div>
+									</div>
+									<div>
+										<div class="img-hold">
+											<img src="assets/images/img11.png" alt="">
+										</div>
+									</div>
+									<div>
+										<div class="img-hold">
+											<img src="assets/images/img12.png" alt="">
+										</div>
+									</div>
+									<div>
+										<div class="img-hold">
+											<img src="assets/images/img10.png" alt="">
+										</div>
+									</div>
+									<div>
+										<div class="img-hold">
+											<img src="assets/images/img11.png" alt="">
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -492,240 +527,6 @@
 											positive change within their organizations and<br>
 											on a global scale.
 										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="feature-block">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<h2>Featured Courses</h2>
-								<p>
-									Elevate Your Skills and Land Your Dream Job - Whether you prefer the convenience of learning from home or the<br>
-									advantages of direct sessions on campus with our expert instructors, we've got you covered!
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="feature-slider">
-									<div>
-										<div class="box">
-											<div class="img-hold">
-												<img src="assets/images/img03.png" alt="">
-												<div class="offer-bar">
-													<h3>30%</h3>
-													<span>Discount</span>
-												</div>
-											</div>
-											<div class="text-hold">
-												<h3>Digital Marketing</h3>
-												<ul>
-													<li>
-														Category: 
-														<span>Ecommerce</span>
-													</li>
-													<li>
-														Duration: 
-														<span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-													</li>
-													<li>
-														Mode: 
-														<span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-														<span><img src="assets/images/icon10.svg" alt="">Online</span> 
-														<span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-													</li>
-												</ul>
-												<div class="btn-area">
-													<a href="#" class="btn an-btn">Apply Now</a>
-													<a href="#" class="btn md-btn">More Details</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="box">
-											<div class="img-hold">
-												<img src="assets/images/img03.png" alt="">
-												<div class="offer-bar">
-													<h3>30%</h3>
-													<span>Discount</span>
-												</div>
-											</div>
-											<div class="text-hold">
-												<h3>Digital Marketing</h3>
-												<ul>
-													<li>
-														Category: 
-														<span>Ecommerce</span>
-													</li>
-													<li>
-														Duration: 
-														<span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-													</li>
-													<li>
-														Mode: 
-														<span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-														<span><img src="assets/images/icon10.svg" alt="">Online</span> 
-														<span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-													</li>
-												</ul>
-												<div class="btn-area">
-													<a href="#" class="btn an-btn">Apply Now</a>
-													<a href="#" class="btn md-btn">More Details</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="box">
-											<div class="img-hold">
-												<img src="assets/images/img03.png" alt="">
-												<div class="offer-bar">
-													<h3>30%</h3>
-													<span>Discount</span>
-												</div>
-											</div>
-											<div class="text-hold">
-												<h3>Digital Marketing</h3>
-												<ul>
-													<li>
-														Category: 
-														<span>Ecommerce</span>
-													</li>
-													<li>
-														Duration: 
-														<span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-													</li>
-													<li>
-														Mode: 
-														<span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-														<span><img src="assets/images/icon10.svg" alt="">Online</span> 
-														<span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-													</li>
-												</ul>
-												<div class="btn-area">
-													<a href="#" class="btn an-btn">Apply Now</a>
-													<a href="#" class="btn md-btn">More Details</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="box">
-											<div class="img-hold">
-												<img src="assets/images/img03.png" alt="">
-												<div class="offer-bar">
-													<h3>30%</h3>
-													<span>Discount</span>
-												</div>
-											</div>
-											<div class="text-hold">
-												<h3>Digital Marketing</h3>
-												<ul>
-													<li>
-														Category: 
-														<span>Ecommerce</span>
-													</li>
-													<li>
-														Duration: 
-														<span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-													</li>
-													<li>
-														Mode: 
-														<span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-														<span><img src="assets/images/icon10.svg" alt="">Online</span> 
-														<span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-													</li>
-												</ul>
-												<div class="btn-area">
-													<a href="#" class="btn an-btn">Apply Now</a>
-													<a href="#" class="btn md-btn">More Details</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div>
-										<div class="box">
-											<div class="img-hold">
-												<img src="assets/images/img03.png" alt="">
-												<div class="offer-bar">
-													<h3>30%</h3>
-													<span>Discount</span>
-												</div>
-											</div>
-											<div class="text-hold">
-												<h3>Digital Marketing</h3>
-												<ul>
-													<li>
-														Category: 
-														<span>Ecommerce</span>
-													</li>
-													<li>
-														Duration: 
-														<span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-													</li>
-													<li>
-														Mode: 
-														<span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-														<span><img src="assets/images/icon10.svg" alt="">Online</span> 
-														<span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-													</li>
-												</ul>
-												<div class="btn-area">
-													<a href="#" class="btn an-btn">Apply Now</a>
-													<a href="#" class="btn md-btn">More Details</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="logo-bar">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<h2>Collaborations with leading Organizations</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="logo-slider">
-									<div>
-										<div class="img-hold">
-											<img src="assets/images/img09.png" alt="">
-										</div>
-									</div>
-									<div>
-										<div class="img-hold">
-											<img src="assets/images/img10.png" alt="">
-										</div>
-									</div>
-									<div>
-										<div class="img-hold">
-											<img src="assets/images/img11.png" alt="">
-										</div>
-									</div>
-									<div>
-										<div class="img-hold">
-											<img src="assets/images/img12.png" alt="">
-										</div>
-									</div>
-									<div>
-										<div class="img-hold">
-											<img src="assets/images/img10.png" alt="">
-										</div>
-									</div>
-									<div>
-										<div class="img-hold">
-											<img src="assets/images/img11.png" alt="">
-										</div>
 									</div>
 								</div>
 							</div>
@@ -867,7 +668,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="faq-area">
+				<section class="faq-area mb-5">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-12">
@@ -1004,17 +805,6 @@
 				</div>
 			</footer>
 		</div>
-		<div class="modal fade" id="videoModal">
-			<div class="modal-dialog modal-lg modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-body p-0">
-						<video id="popupVideo" width="100%" controls autoplay>
-							<source src="" type="video/mp4">
-						</video>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="modal fade" id="galleryModal">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content">
@@ -1028,100 +818,13 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- admission popup start here -->
-
-		<div class="modal fade" id="admission-modal" tabindex="-1" aria-labelledby="admissionModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="form-block">
-							<div class="img-hold">
-								<img src="assets/images/img38.png" alt="">
-							</div>
-							<h2>Please Complete The Following Admission Form</h2>
-							<form class="row g-2">
-								<div class="col-md-4">
-									<label class="form-label">Course Intersted</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Full Name</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Primary Contact Number</label>
-									<input type="number" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Gender</label>
-									<select class="form-select">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Email address</label>
-									<input type="email" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Education</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Guardian Name</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Guardian Contact Number</label>
-									<input type="number" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Preferred Campus</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Countries</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">City</label>
-									<select class="form-select">
-										<option selected>Choose...</option>
-										<option>...</option>
-									</select>
-								</div>
-								<div class="col-md-4">
-									<label class="form-label">Date Of Birth</label>
-									<input type="date" class="form-control">
-								</div>
-								<div class="col-md-12">
-									<label class="form-label">Postal Address</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="col-md-12">
-									<label class="form-label">Remarks</label>
-									<textarea rows="3" class="form-control"></textarea>
-								</div>
-								<div class="col-12 text-center mt-4">
-									<button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Send Message</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
 	</body>	
 
 	<!-- All js Goes here -->
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 	<script src="assets/js/app.js"></script>
 	<script src="assets/js/slider.js"></script>
 	<script src="assets/js/home.js"></script>
@@ -1129,4 +832,65 @@
 	<script>
 		AOS.init();
 	</script>
+	<script>
+	$(document).ready(function() {
+		$(".gallery-tabs li").click(function() {
+			let tab = $(this).data("tab");
+			$(".gallery-tabs li")
+				.removeClass("active");
+			$(this)
+				.addClass("active");
+			$(".gallery-panel")
+				.removeClass("active");
+			$("#" + tab)
+				.addClass("active");
+		});
+		// Gallery Data
+		const galleries = {
+			coworking: [
+				"assets/images/img14.png",
+				"assets/images/img15.png"
+			],
+			campus: [
+				"assets/images/campus1.png"
+			]
+		};
+		// Popup Swiper
+		let popupSwiper = new Swiper(".popupSlider", {
+			loop: false,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev"
+			}
+		});
+		// Eye Click
+		$(".view-btn").click(function() {
+			let galleryName =
+				$(this).data("gallery");
+			let index =
+				Number($(this).data("index"));
+			let images =
+				galleries[galleryName];
+			// remove old images
+			popupSwiper.removeAllSlides();
+			// add new images
+			images.forEach(function(img) {
+				popupSwiper.appendSlide(
+					'<div class="swiper-slide">' +
+					'<img src="' + img + '">' +
+					'</div>'
+				);
+			});
+			popupSwiper.update();
+			// open clicked image
+			popupSwiper.slideTo(index, 0);
+			// Bootstrap 5 Modal
+			let modal =
+				new bootstrap.Modal(
+					document.getElementById("galleryModal")
+				);
+			modal.show();
+		});
+	});
+</script>
 </html>
