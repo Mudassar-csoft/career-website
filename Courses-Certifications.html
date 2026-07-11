@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Career Website</title>
+        <!-- Library -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <!-- font-family -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- Main css -->
+        <link rel="stylesheet" href="assets/scss/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    </head>
+    <body class="courses-page">
+        <div id="wrapper">
+            <header class="main-header">
+                <!-- Top Bar -->
+                <div class="top-bar">
+                    <div class="container">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="top-contact d-flex align-items-center">
+                                <a href="tel:03414444101">
+                                <i class="fas fa-phone-alt"></i>
+                                0341-4444101
+                                </a>
+                                <a href="mailto:info@career.edu.pk">
+                                <i class="fas fa-envelope"></i>
+                                info@career.edu.pk
+                                </a>
+                            </div>
+                            <ul class="top-links d-none d-lg-flex">
+                                <li>
+                                    <a href="#">
+                                    Online Admission
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    How to Apply
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    Verification
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    Job Placement
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    Ambassador Program
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                    Success Stories
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light menu-bar">
+                    <div class="container">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="#">
+                        <img src="assets/images/logo.svg" alt="Career Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarMenu">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">
+                                    Home
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                    About
+                                    </a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                    Trainings
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                            Course and Certification
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                            Intermediate (HSSC)
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                            Associate Degree Program (ADP)
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Testing Services</a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                            Pearson VUE Testing Center
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                            PSI Exam Center
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                            Kryterion Testing Center
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                    Coworking Space
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                    Study Abroad
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                    Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main role="main">
+                <section class="cer-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>Courses & Certifications</h2>
+                            </div>
+                            <div class="row">
+                                <div class="form-block">
+                                    <form action="#">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-4">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select Category</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control sc-iput" placeholder="Search Certification" aria-describedby="button-addon2">
+                                                    <button class="btn" type="button" id="button-addon2"><img src="assets/images/icon19.png" alt=""></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="cor-block">
+                    <div class="container">
+                        <div class="row mb-3">
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 px-lg-1">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="assets/images/img16.png" alt="">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h2>Video Editing</h2>
+                                        <p>
+                                            Category: <span>Videography</span>
+                                        </p>
+                                        <ul>
+                                            <li><img src="assets/images/icon12.svg" alt="">3 Months</li>
+                                            <li><img src="assets/images/icon11.svg" alt="">On-premises</li>
+                                        </ul>
+                                        <a href="#" class="btn mr-btn">More Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <a href="#" class="btn see-btn">See more</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="info-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>
+                                    Request a Free Career Counseling Session
+                                </h2>
+                                <h5>
+                                    We offer a complimentary, no-obligation career counseling session to learn about your aspirations and help<br>
+                                    you map out your path to success.
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row mb-4">
+                                    <div class="col-lg-3">
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="assets/images/icon20.svg" alt="">
+                                            </div>
+                                            <div class="t-bar">
+                                                <h3>Call Us Today</h3>
+                                                <p>0341-4444010</p>
+                                                <p>0341-4444010</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="assets/images/icon21.svg" alt="">
+                                            </div>
+                                            <div class="t-bar">
+                                                <h3>Email</h3>
+                                                <p>info@career.edu.pk</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="assets/images/icon22.svg" alt="">
+                                            </div>
+                                            <div class="t-bar">
+                                                <h3>Webex Meetings</h3>
+                                                <p>Career.pk</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="assets/images/icon23.svg" alt="">
+                                            </div>
+                                            <div class="t-bar">
+                                                <h3>Office Hours</h3>
+                                                <p>Mon- Sat</p>
+                                                <p>10:00am-7:00pm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-block">
+                                    <form class="row g-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Subject">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Phone no">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <textarea placeholder="Message" class="form-control" rows="9"></textarea>
+                                        </div>
+                                        <div class="col-12 text-center mt-4">
+                                            <button type="submit" class="btn sm-btn">Send Message</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="soical-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2>Keep in Touch</h2>
+                                <ul>
+                                    <li><a href="#"><img src="assets/images/fb.png" alt=""></a></li>
+                                    <li><a href="#"><img src="assets/images/instagram.png" alt=""></a></li>
+                                    <li><a href="#"><img src="assets/images/youtube.png" alt=""></a></li>
+                                    <li><a href="#"><img src="assets/images/tiktok.png" alt=""></a></li>
+                                    <li><a href="#"><img src="assets/images/linkdin.png" alt=""></a></li>
+                                    <li><a href="#"><img src="assets/images/x.png" alt=""></a></li>
+                                    <li><a href="#"><img src="assets/images/wp.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="location-section">
+                    <div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<h2>Our Campuses</h2>
+							</div>
+						</div>
+                        <div class="row g-4">
+                            <!-- Left -->
+                            <div class="col-lg-6">
+                                <div class="location-list">
+                                    <div class="location-card active"
+                                        data-map="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3808.2315463269783!2d73.117695!3d31.41968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922686eab09f4f1%3A0x679e30a285de4fb1!2sCareer%20Institute%20-%20Madina%20Town%20Branch!5e1!3m2!1sen!2s!4v1782547783345!5m2!1sen!2s">
+                                        <div class="location-icon">
+                                            <img src="assets/images/icon24.svg" alt="">
+                                        </div>
+                                        <div class="location-info">
+                                            <h5>Career Institute - Madina Town Branch</h5>
+                                            <p>
+                                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
+												Faisalabad, 38000, Pakistan
+                                            </p>
+                                            <span>
+                                            	0418542950 / 03007662050
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="location-card"
+                                        data-map="https://maps.google.com/maps?q=lahore&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                        <div class="location-icon">
+                                            <img src="assets/images/icon24.svg" alt="">
+                                        </div>
+                                        <div class="location-info">
+                                            <h5>Career Institute - Madina Town Branch</h5>
+                                            <p>
+                                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
+												Faisalabad, 38000, Pakistan
+                                            </p>
+                                            <span>
+                                            	0418542950 / 03007662050
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="location-card"
+                                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                        <div class="location-icon">
+                                            <img src="assets/images/icon24.svg" alt="">
+                                        </div>
+                                        <div class="location-info">
+                                            <h5>Career Institute - Madina Town Branch</h5>
+                                            <p>
+                                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
+												Faisalabad, 38000, Pakistan
+                                            </p>
+                                            <span>
+                                            	0418542950 / 03007662050
+                                            </span>
+                                        </div>
+                                    </div>
+									<div class="location-card"
+                                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                        <div class="location-icon">
+                                            <img src="assets/images/icon24.svg" alt="">
+                                        </div>
+                                        <div class="location-info">
+                                            <h5>Career Institute - Madina Town Branch</h5>
+                                            <p>
+                                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
+												Faisalabad, 38000, Pakistan
+                                            </p>
+                                            <span>
+                                            	0418542950 / 03007662050
+                                            </span>
+                                        </div>
+                                    </div>
+									<div class="location-card"
+                                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                        <div class="location-icon">
+                                            <img src="assets/images/icon24.svg" alt="">
+                                        </div>
+                                        <div class="location-info">
+                                            <h5>Career Institute - Madina Town Branch</h5>
+                                            <p>
+                                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
+												Faisalabad, 38000, Pakistan
+                                            </p>
+                                            <span>
+                                            	0418542950 / 03007662050
+                                            </span>
+                                        </div>
+                                    </div>
+									<div class="location-card"
+                                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
+                                        <div class="location-icon">
+                                            <img src="assets/images/icon24.svg" alt="">
+                                        </div>
+                                        <div class="location-info">
+                                            <h5>Career Institute - Madina Town Branch</h5>
+                                            <p>
+                                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
+												Faisalabad, 38000, Pakistan
+                                            </p>
+                                            <span>
+                                            	0418542950 / 03007662050
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Aur locations yahan add kar sakte hain -->
+                                </div>
+                            </div>
+                            <!-- Right -->
+                            <div class="col-lg-6">
+                                <div class="map-wrapper">
+                                    <iframe
+                                        id="locationMap"
+                                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3808.2315463269783!2d73.117695!3d31.41968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922686eab09f4f1%3A0x679e30a285de4fb1!2sCareer%20Institute%20-%20Madina%20Town%20Branch!5e1!3m2!1sen!2s!4v1782547783345!5m2!1sen!2s"
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer id="footer">
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-lg-3">
+                            <div class="f-logo">
+                                <img src="assets/images/footer-logo.svg" alt="">
+                            </div>
+                            <div class="f-text">
+                                <p>
+                                    Career Institute offers<br>
+                                    educational services in<br>
+                                    the field of IT; we also<br>
+                                    operate as a platform for<br>
+                                    testing services and are<br>
+                                    partners with relevant<br>
+                                    authorities..
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="list-bar">
+                                <h2>Important Links</h2>
+                                <ul>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Enquiry Form</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Online Admission</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Certificate Request</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Form Certificate</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Verification</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Jobs & Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="list-bar">
+                                <h2>Important Links</h2>
+                                <ul>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Volunteer Programes</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Gallery</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Events</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">Blogs & Articles</a></li>
+                                    <li><a href="#"><img src="assets/images/icon17.png" alt="">FAQ’s</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="list-bar">
+                                <h2>Important Links</h2>
+                                <ul>
+                                    <li><a href="tel:0418724010"><img src="assets/images/tel.svg" alt="">041-8724010</a></li>
+                                    <li><a href="tel:03144444010"><img src="assets/images/wp.svg" alt="">0314-4444010</a></li>
+                                    <li><a href="tel:03414444010"><img src="assets/images/cell.svg" alt="">0341-4444010</a></li>
+                                    <li><a href="mailto:info@career.edu.pk"><img src="assets/images/mail.svg" alt="">info@career.edu.pk</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="bottom-bar">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>© Career Institute Pvt. Ltd. All rights reserved.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="s-icon">
+                                            <ul>
+                                                <li><a href="#"><img src="assets/images/facebook.svg" alt=""></a></li>
+                                                <li><a href="#"><img src="assets/images/insta.svg" alt=""></a></li>
+                                                <li><a href="#"><img src="assets/images/din.svg" alt=""></a></li>
+                                                <li><a href="#"><img src="assets/images/twitter.svg" alt=""></a></li>
+                                                <li><a href="#"><img src="assets/images/tube.svg" alt=""></a></li>
+                                                <li><a href="#"><img src="assets/images/whatapp.svg" alt=""></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <!-- All js Goes here -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+	<script>
+		$(".location-card").click(function () {
+			$(".location-card")
+				.removeClass("active");
+			$(this)
+				.addClass("active");
+			let map =
+				$(this).data("map");
+			$("#locationMap")
+				.attr("src", map);
+		});
+	</script>
+</html>

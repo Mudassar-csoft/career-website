@@ -38,7 +38,7 @@
 							</div>
 							<ul class="top-links d-none d-lg-flex">
 								<li>
-									<a href="#">
+									<a href="#" data-bs-toggle="modal" data-bs-target="#admission-modal">
 										Online Admission
 									</a>
 								</li>
@@ -94,30 +94,46 @@
 									</a>
 								</li>
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle"
-									href="#"
-									data-bs-toggle="dropdown">
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
 										Trainings
 									</a>
 									<ul class="dropdown-menu">
 										<li>
 											<a class="dropdown-item" href="#">
-												Training 1
+												Course and Certification
 											</a>
 										</li>
 										<li>
 											<a class="dropdown-item" href="#">
-												Training 2
+												Intermediate (HSSC)
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">
+												Associate Degree Program (ADP)
 											</a>
 										</li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle"
-									href="#"
-									data-bs-toggle="dropdown">
-										Testing Services
-									</a>
+									<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"> Testing Services</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">
+												Pearson VUE Testing Center
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">
+												PSI Exam Center
+											</a>
+										</li>
+										<li>
+											<a class="dropdown-item" href="#">
+												Kryterion Testing Center
+											</a>
+										</li>
+									</ul>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#">
@@ -187,7 +203,34 @@
 								</div>
 							</div>
 							<div class="col-lg-5">
-								
+								<div class="orbit-wrapper">
+									<!-- Outer Orbit -->
+									<div class="orbit orbit-outer">
+										<span style="--i:0"></span>
+										<span style="--i:1"></span>
+										<span style="--i:2"></span>
+										<span style="--i:3"></span>
+										<span style="--i:4"></span>
+										<span style="--i:5"></span>
+										<span style="--i:6"></span>
+										<span style="--i:7"></span>
+									</div>
+									<!-- Inner Orbit -->
+									<div class="orbit orbit-inner">
+										<span style="--i:0"></span>
+										<span style="--i:1"></span>
+										<span style="--i:2"></span>
+										<span style="--i:3"></span>
+										<span style="--i:4"></span>
+										<span style="--i:5"></span>
+										<span style="--i:6"></span>
+										<span style="--i:7"></span>
+									</div>
+									<!-- Center Image -->
+									<div class="center-image">
+										<img src="assets/images/img15.png" alt="">
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="row">
@@ -1118,11 +1161,9 @@
 											</p>
 										</div>
 										<form class="newsletter__form">
-											<input type="text" placeholder="Contact No.">
-											<input type="email" placeholder="Example@gmail.com">
-											<button type="submit">
-												Join
-											</button>
+											<input type="text" placeholder="Contact No." required>
+											<input type="email" placeholder="Example@gmail.com" required>
+											<button type="submit" class="join-btn">Join</button>
 										</form>
 									</div>
 								</section>
@@ -1131,6 +1172,87 @@
 					</div>
 				</section>
 			</main>
+			<footer id="footer">
+				<div class="container">
+					<div class="row mb-3">
+						<div class="col-lg-3">
+							<div class="f-logo">
+								<img src="assets/images/footer-logo.svg" alt="">
+							</div>
+							<div class="f-text">
+								<p>
+									Career Institute offers<br>
+									educational services in<br>
+									the field of IT; we also<br>
+									operate as a platform for<br>
+									testing services and are<br>
+									partners with relevant<br>
+									authorities..
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="list-bar">
+								<h2>Important Links</h2>
+								<ul>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Enquiry Form</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Online Admission</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Certificate Request</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Form Certificate</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Verification</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Jobs & Careers</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="list-bar">
+								<h2>Important Links</h2>
+								<ul>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Volunteer Programes</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Gallery</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Events</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">Blogs & Articles</a></li>
+									<li><a href="#"><img src="assets/images/icon17.png" alt="">FAQ’s</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="list-bar">
+								<h2>Important Links</h2>
+								<ul>
+									<li><a href="tel:0418724010"><img src="assets/images/tel.svg" alt="">041-8724010</a></li>
+									<li><a href="tel:03144444010"><img src="assets/images/wp.svg" alt="">0314-4444010</a></li>
+									<li><a href="tel:03414444010"><img src="assets/images/cell.svg" alt="">0341-4444010</a></li>
+									<li><a href="mailto:info@career.edu.pk"><img src="assets/images/mail.svg" alt="">info@career.edu.pk</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="bottom-bar">
+								<div class="row">
+									<div class="col-lg-6">
+										<p>© Career Institute Pvt. Ltd. All rights reserved.</p>
+									</div>
+									<div class="col-lg-6">
+										<div class="s-icon">
+											<ul>
+												<li><a href="#"><img src="assets/images/facebook.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/insta.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/din.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/twitter.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/tube.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/whatapp.svg" alt=""></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
 		<div class="modal fade" id="videoModal">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
@@ -1143,6 +1265,8 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- gallery model start here -->
 		<div class="modal fade" id="galleryModal">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content">
@@ -1156,192 +1280,165 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- admission popup start here -->
+
+		<div class="modal fade" id="admission-modal" tabindex="-1" aria-labelledby="admissionModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="form-block">
+							<div class="img-hold">
+								<img src="assets/images/img38.png" alt="">
+							</div>
+							<h2>Please Complete The Following Admission Form</h2>
+							<form class="row g-2">
+								<div class="col-md-4">
+									<label class="form-label">Course Intersted</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Full Name</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Primary Contact Number</label>
+									<input type="number" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Gender</label>
+									<select class="form-select">
+										<option selected>Choose...</option>
+										<option>...</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Email address</label>
+									<input type="email" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Education</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Guardian Name</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Guardian Contact Number</label>
+									<input type="number" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Preferred Campus</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Countries</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">City</label>
+									<select class="form-select">
+										<option selected>Choose...</option>
+										<option>...</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<label class="form-label">Date Of Birth</label>
+									<input type="date" class="form-control">
+								</div>
+								<div class="col-md-12">
+									<label class="form-label">Postal Address</label>
+									<input type="text" class="form-control">
+								</div>
+								<div class="col-md-12">
+									<label class="form-label">Remarks</label>
+									<textarea rows="3" class="form-control"></textarea>
+								</div>
+								<div class="col-12 text-center mt-4">
+									<button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Send Message</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</body>	
 
 	<!-- All js Goes here -->
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
-	<script src="assets/js/app.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/slider.js"></script>
+	<script src="assets/js/home.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
 		AOS.init();
 	</script>
 	<script>
-		const counters = document.querySelectorAll(".counter");
-		counters.forEach(counter => {
-			const target = +counter.dataset.target;
-			let current = 0;
-			const speed = target / 80;
-			function count() {
-				current += speed;
-				if (current < target) {
-					counter.textContent = Math.floor(current).toLocaleString() + "+";
-					requestAnimationFrame(count);
-				} else {
-					counter.textContent = target.toLocaleString() + "+";
-				}
-			}
-			count();
-		});
-	</script>
-	<script>
-		$('.news-slider').slick({
-			vertical: true,
-			verticalSwiping: true,
-			slidesToShow: 3,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 0,
-			speed: 5000,
-			cssEase: 'linear',
-			arrows: false,
-			pauseOnHover: true,
-			infinite: true
-		});
-	</script>
-	<script>
-		$('.feature-slider').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 0,
-			speed: 4000,
-			cssEase: 'linear',
-			arrows: true,
-			pauseOnHover: true,
-			infinite: true,
-		});
-	</script>
-	<script>
-		$('.logo-slider').slick({
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			autoplay: false,
-			autoplaySpeed: 0,
-			speed: 500,
-			cssEase: 'linear',
-			arrows: true,
-			pauseOnHover: true,
-			infinite: true,
-		});
-	</script>
-	<script>
-		var swiper = new Swiper(".mySwiper", {
-		effect: "coverflow",
-		grabCursor: false,
-		centeredSlides: false,
-		loop: true,
-		slidesPerView: "auto",
-		coverflowEffect: {
-			rotate: 30,
-			stretch: 0,
-			depth: 150,
-			modifier: 1,
-			slideShadows: false,
-		},
-		// Animation Speed
-		speed: 1000,
-		// Autoplay
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-		},
-		// Responsive
-		breakpoints: {
-			1024: {
-				slidesPerView: 3,
-				coverflowEffect: {
-					rotate: 30,
-					depth: 150,
-				}
-			},
-
-			768: {
-				slidesPerView: 2,
-				coverflowEffect: {
-					rotate: 25,
-					depth: 100,
-				}
-			},
-		}
-	});
-	</script>
-	<script>
-		$('.play-btn').on('click', function () {
-			let videoURL = $(this).data('video');
-			$('#popupVideo source').attr('src', videoURL);
-			let video = $('#popupVideo')[0];
-			video.load();
-			video.play();
-			$('#videoModal').modal('show');
-		});
-		$('#videoModal').on('hidden.bs.modal', function () {
-			let video = $('#popupVideo')[0];
-			video.pause();
-			video.currentTime = 0;
-			$('#popupVideo source').attr('src', '');
-		});
-	</script>
-	<script>
-		$(document).ready(function(){
-			$(".gallery-tabs li").click(function(){
+		$(document).ready(function() {
+			$(".gallery-tabs li").click(function() {
 				let tab = $(this).data("tab");
 				$(".gallery-tabs li")
-				.removeClass("active");
+					.removeClass("active");
 				$(this)
-				.addClass("active");
+					.addClass("active");
 				$(".gallery-panel")
-				.removeClass("active");
-				$("#"+tab)
-				.addClass("active");
+					.removeClass("active");
+				$("#" + tab)
+					.addClass("active");
 			});
 			// Gallery Data
 			const galleries = {
-				coworking:[
+				coworking: [
 					"assets/images/img14.png",
 					"assets/images/img15.png"
 				],
-				campus:[
+				campus: [
 					"assets/images/campus1.png"
 				]
 			};
 			// Popup Swiper
 			let popupSwiper = new Swiper(".popupSlider", {
-				loop:false,
-				navigation:{
-					nextEl:".swiper-button-next",
-					prevEl:".swiper-button-prev"
+				loop: false,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev"
 				}
 			});
-		// Eye Click
-		$(".view-btn").click(function(){
+			// Eye Click
+			$(".view-btn").click(function() {
 				let galleryName =
-				$(this).data("gallery");
+					$(this).data("gallery");
 				let index =
-				Number($(this).data("index"));
+					Number($(this).data("index"));
 				let images =
-				galleries[galleryName];
+					galleries[galleryName];
 				// remove old images
 				popupSwiper.removeAllSlides();
 				// add new images
-				images.forEach(function(img){
+				images.forEach(function(img) {
 					popupSwiper.appendSlide(
-					'<div class="swiper-slide">' +
-					'<img src="'+img+'">' +
-					'</div>'
+						'<div class="swiper-slide">' +
+						'<img src="' + img + '">' +
+						'</div>'
 					);
 				});
 				popupSwiper.update();
 				// open clicked image
-				popupSwiper.slideTo(index,0);
+				popupSwiper.slideTo(index, 0);
 				// Bootstrap 5 Modal
 				let modal =
-				new bootstrap.Modal(
-				document.getElementById("galleryModal")
-				);
+					new bootstrap.Modal(
+						document.getElementById("galleryModal")
+					);
 				modal.show();
 			});
 		});
