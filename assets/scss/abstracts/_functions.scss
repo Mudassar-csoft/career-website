@@ -157,3 +157,229 @@
 		}
 	}
 }
+@mixin join-btn {
+	background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+	padding: 15px 24px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 15px 15px;
+	transition: all .3s ease-in-out;
+	&:hover {
+		transform: scale(1.05);
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+@mixin ciput {
+	border: 2px solid transparent;
+	backdrop-filter: blur(23.760000228881836px);
+	background: #FFFFFF33 url(../images/icon18.png) no-repeat center right 25px;
+	border-radius: 50px 50px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #fff;
+	padding: 20px 20px;
+	option {
+		color: #000;
+	}
+	&:focus {
+		box-shadow: none;
+	}
+}
+@mixin sc-iput {
+	border: 2px solid transparent;
+	backdrop-filter: blur(23.760000228881836px);
+	background: #FFFFFF33;
+	border-radius: 50px 50px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #fff;
+	padding: 20px 20px;
+	&:focus {
+		box-shadow: none;
+	}
+	&::placeholder {
+		color: #fff;
+	}
+}
+@mixin addon-btn {
+	background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+	border-radius: 0 50px 50px 0;
+	padding: 15px 25px;
+	border: 0;
+	&:focus {
+		box-shadow: none;
+	}
+}
+@mixin sm-box {
+	background: linear-gradient(90deg, rgba(3, 197, 135, 0.7) 0%, rgba(0, 157, 184, 0.7) 100%);
+	padding: 70px 35px;
+	border-radius: 20px 20px 0 0;
+	display: inline-block;
+	h1 {
+		font-size: 38px;
+		line-height: 42px;
+		color: #fff;
+		font-weight: 700;
+	}
+	ul {
+		margin: 10px 0 0;
+		li {
+			font-size: 18px;
+			line-height: 20px;
+			color: #fff;
+			font-weight: 300;
+			margin: 0 0 5px;
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	p {
+		margin: 0 0 10px;
+		font-size: 24px;
+		line-height: 26px;
+		color: #fff;
+		font-weight: 400;
+	}
+	h5 {
+		font-size: 18px;
+		line-height: 20px;
+		color: #fff;
+		font-weight: 300;
+	}
+	.breadcrumb {
+		margin: 7px 0 0;
+		justify-content: center;
+		li {
+			padding: 0 20px 0 0;
+			position: relative;
+			a {
+				font-size: 16px;
+				line-height: 18px;
+				color: #fff;
+				font-weight: 500;
+			}
+			&.active {
+				color: #fff;
+			}
+			&:before {
+				display: none;
+			}
+			&::after {
+				content: "";
+				background: #fff;
+				width: 7px;
+				height: 7px;
+				border-radius: 50% 50%;
+				position: absolute;
+				top: 8px;
+				right: 5px;
+			}
+			&:last-child {
+				padding: 0;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@mixin select-file {
+	.custom-file-upload {
+		max-width: 500px;
+		.input-group-text {
+			background: #d9d9d9;
+			border: none;
+			height: 48px;
+			min-width: 110px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: 700;
+			color: #000;
+			border-radius: 5px 5px;
+		}
+		.file-text {
+			height: 48px;
+			display: flex;
+			align-items: center;
+			background: #fff;
+			border-left: 0;
+			color: #000;
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 400;
+			box-shadow: none;
+			border: 0;
+		}
+	}
+}
+
+@mixin top-banner {
+	padding: 8rem 0;
+    background: url(../images/banner15.png) no-repeat center bottom;
+    background-size: 100%;
+    text-align: center;
+    color: #fff;
+	position: relative;
+	z-index: 1;
+    h2 {
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 400;
+      margin: 0 0 10px;
+    }
+    h1 {
+      font-size: 38px;
+      line-height: 42px;
+      font-weight: 700;
+      margin: 0 0 15px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 400;
+      margin: 0;
+    }
+	.btn-bar {
+      .sr-btn {
+        @include apply-btn;
+        padding: 12px 30px;
+        margin: 0 7px 0 0
+      }
+      .pj-btn {
+        @include rm-btn;
+        padding: 12px 30px;
+      }
+    }
+	.tb-text {
+      display: flex;
+      justify-content: flex-end;
+      h3 {
+        font-size: 38px;
+        line-height: 42px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
+	.btn-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .aq-btn {
+        @include apply-btn;
+        padding: 14px 25px
+      }
+      .wa-btn {
+        @include rm-btn;
+      }
+    }
+}
