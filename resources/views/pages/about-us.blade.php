@@ -493,7 +493,7 @@
 									</div>
 								</div>
 								<div class="btn-area">
-									<a href="#" class="btn more-btn">More Gallery</a>
+									<a href="#" class="btn more-btn">More Gallerykasdasd</a>
 								</div>
 							</div>
 						</div>
