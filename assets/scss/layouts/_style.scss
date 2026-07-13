@@ -255,7 +255,7 @@
         line-height: 25px;
         color: #fff;
         font-weight: 400;
-        margin: 0;
+        margin: 0 0 10px;
         position: relative;
         display: inline-block;
         &:before {
@@ -285,6 +285,28 @@
         }
         b {
           font-weight: 600;
+        }
+      }
+      h4 {
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        font-weight: 400;
+        padding: 0 2rem;
+      }
+      .s-link {
+        margin: 0 0 10px;
+        text-align: center;
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          li {
+            margin: 0 7px 0 0;
+            &:last-child {
+              margin: 0;
+            }
+          }
         }
       }
     }
