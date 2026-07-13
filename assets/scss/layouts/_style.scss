@@ -390,10 +390,6 @@
     border: 2px solid #9f9f9f;
     border-radius: 20px 20px;
     text-align: center;
-    // transition: all 0.3s ease-in-out;
-    // &:hover {
-    //   transform: scale(1.05);
-    // }
     .img-hold {
       margin: 0 0 20px;
       img {
@@ -430,12 +426,6 @@
         color: #000;
         font-style: italic;
       }
-    }
-  }
-  .btn-bar {
-    text-align: center;
-    .v-btn {
-      @include event-btn;
     }
   }
 }

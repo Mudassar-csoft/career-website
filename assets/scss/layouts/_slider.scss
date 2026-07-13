@@ -343,21 +343,64 @@
 // review slider start here
 
 .testimonial-slider {
-    .slick-slide {
-        padding: 0 10px;
-        .testimonial-card {
-            transition: .35s;
+    position: relative;
+    .slick-list {
+      .slick-track {
+        display: flex;
+        align-items: center;
+        .slick-slide {
+          height: inherit;
+          padding: 0;
+          div {
+            height: 100%;
+          }
+          .item {
+            padding: 0 7px;
+            .card-wrap {
+              transition: all .45s ease;
+            }
+          }
         }
+      }
     }
-    // Center Card
-    .slick-center {
-        .testimonial-card {
-        }
+    .center-1,
+    .center-2 {
+      opacity: 1;
+      z-index: 10;
+      .box {
+        border: 2px solid #19B8F8;
+        padding: 3rem 15px;
+      }
     }
-    // Second Center Card
-    .slick-center + .slick-slide {
-        .testimonial-card {
-        }
+    .slider-prev,
+    .slider-next {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      transition: .3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0px 0px 6px 0px #00000026;
+      i {
+        font-size: 40px;
+      }
+      &:hover {
+        background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+        color: #fff;
+      }
     }
-
+    .slider-prev {
+      left: -60px;
+    }
+    .slider-next {
+      right: -60px;
+    }
 }
