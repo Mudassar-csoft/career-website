@@ -4617,6 +4617,10 @@ body {
   padding: 2rem 0 1rem;
 }
 
+.main-header {
+  position: relative;
+  z-index: 9;
+}
 .main-header .top-bar {
   background: #01324d;
   padding: 15px 0;
