@@ -351,9 +351,18 @@
 								<div class="col-lg-6 border-end">
 									<div class="t-detail">
 										<div class="img-hold">
-											<img src="{{ asset('assets/images/img02.png') }}" alt="">
+											<img src="assets/images/img02.png" alt="">
 										</div>
 										<span>Adeel Javaid - Founder & CEO</span>
+										<div class="s-link">
+											<ul>
+												<li><a href="#"><img src="assets/images/icon75.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon76.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon77.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon78.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon79.svg" alt=""></a></li>
+											</ul>
+										</div>
 										<p>
 											<b>Our mission</b> is to educate and empower enterprise<br>
 											leaders. We firmly believe that the leaders nurtured<br>
@@ -361,14 +370,33 @@
 											positive change within their organizations and<br>
 											on a global scale.
 										</p>
+										<h4>
+											Inspired by rapid technological advancement and the changing global landscape,
+											I founded this initiative to guide talent toward the right career path and build future
+											IT leaders. As an IT professional and businessman, I believe education is the key to
+											developing skilled professionals. At Career Institute, we focus not only on technical
+											expertise but also on communication, presentation, and problem-solving skills.
+											Our goal is to transform students into IT specialists, encourage innovation, and
+											prepare them for successful careers while promoting Pakistan’s technological
+											growth on an international level.
+										</h4>
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="t-detail">
 										<div class="img-hold">
-											<img src="{{ asset('assets/images/img02.png') }}" alt="">
+											<img src="assets/images/img02.png" alt="">
 										</div>
 										<span>Adeel Javaid - Founder & CEO</span>
+										<div class="s-link">
+											<ul>
+												<li><a href="#"><img src="assets/images/icon75.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon76.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon77.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon78.svg" alt=""></a></li>
+												<li><a href="#"><img src="assets/images/icon79.svg" alt=""></a></li>
+											</ul>
+										</div>
 										<p>
 											<b>Our mission</b> is to educate and empower enterprise<br>
 											leaders. We firmly believe that the leaders nurtured<br>
@@ -376,6 +404,16 @@
 											positive change within their organizations and<br>
 											on a global scale.
 										</p>
+										<h4>
+											Inspired by rapid technological advancement and the changing global landscape,
+											I founded this initiative to guide talent toward the right career path and build future
+											IT leaders. As an IT professional and businessman, I believe education is the key to
+											developing skilled professionals. At Career Institute, we focus not only on technical
+											expertise but also on communication, presentation, and problem-solving skills.
+											Our goal is to transform students into IT specialists, encourage innovation, and
+											prepare them for successful careers while promoting Pakistan’s technological
+											growth on an international level.
+										</h4>
 									</div>
 								</div>
 							</div>
