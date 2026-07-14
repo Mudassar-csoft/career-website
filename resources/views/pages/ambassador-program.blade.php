@@ -197,15 +197,15 @@
                                     Become Ambassador
                                 </h2>
                                 <h5>
-                                    Joining an Institute Ambassadors Program offers numerous benefits that can significantly
+                                    Joining an Institute Ambassadors Program offers numerous benefits that can significantly<br>
                                     enhance personal and professional growth.
                                 </h5>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="row mb-4">
-                                    <div class="col-lg-3">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-6">
                                         <div class="box">
                                             <div class="img-hold">
                                                 <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
@@ -217,7 +217,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-6">
                                         <div class="box">
                                             <div class="img-hold">
                                                 <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
@@ -228,7 +228,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-6">
                                         <div class="box">
                                             <div class="img-hold">
                                                 <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
@@ -239,7 +239,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-lg-6">
                                         <div class="box">
                                             <div class="img-hold">
                                                 <img src="{{ asset('assets/images/icon23.svg') }}" alt="">
@@ -253,7 +253,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <div class="form-block">
                                     <form class="row g-3">
                                         <div class="col-md-6">
@@ -290,8 +290,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 text-center mt-4">
-                                            <button type="submit" class="btn sm-btn">Send Message</button>
+                                        <div class="col-12 mt-4">
+                                            <button type="submit" class="btn sm-btn px-5">Submit</button>
                                         </div>
                                     </form>
                                 </div>
