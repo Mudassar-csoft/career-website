@@ -4672,6 +4672,33 @@ body {
   border: 0;
 }
 
+#videoModal .modal-dialog {
+  height: inherit;
+  max-width: 1000px;
+}
+#videoModal .modal-dialog .modal-content {
+  background-color: transparent;
+  border: 0;
+}
+#videoModal .modal-dialog .modal-content .modal-body video {
+  border-radius: 10px 10px;
+}
+#videoModal .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  border: 0;
+}
+#videoModal .modal-dialog .modal-content .modal-header .btn-close {
+  position: absolute;
+  z-index: 9;
+  left: auto;
+  right: 25px;
+  top: 25px;
+}
+#videoModal .modal-dialog .modal-content .modal-header .btn-close:focus {
+  box-shadow: none;
+  border: 0;
+}
+
 .main-header {
   position: relative;
   z-index: 9;

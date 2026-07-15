@@ -506,7 +506,7 @@
 										<div class="swiper-slide">
 											<div class="video-card">
 												<img src="assets/images/img04.png" alt="">
-												<button class="play-btn" data-video="video1.mp4">
+												<button class="play-btn" data-video="../assets/video/Web_Header.mp4">
 													<img src="assets/images/ply-btn.png" alt="">
 												</button>
 											</div>

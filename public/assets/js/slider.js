@@ -62,12 +62,12 @@ if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper"))
             modifier: 1,
             slideShadows: false
         },
-        speed: 1000,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-        },
+        // speed: 1000,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        //     pauseOnMouseEnter: true
+        // },
         breakpoints: {
             1024: {
                 slidesPerView: 3,

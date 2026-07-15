@@ -2675,3 +2675,34 @@
     }
   }
 }
+
+#videoModal {
+  .modal-dialog {
+    height: inherit;
+    max-width: 1000px;
+    .modal-content {
+      background-color: transparent;
+      border: 0;
+      .modal-body {
+        video {
+          border-radius: 10px 10px;
+        }
+      }
+      .modal-header {
+        padding: 0;
+        border: 0;
+        .btn-close {
+          position: absolute;
+          z-index: 9;
+          left: auto;
+          right: 25px;
+          top: 25px;
+          &:focus {
+            box-shadow: none;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}
