@@ -2130,13 +2130,14 @@
       border-bottom: 0;
       align-items: flex-end;
       li {
-        width: 33.33%;
+        width: 25%;
         button {
           background: #F9FAFB;
           padding: 20px 3rem;
           border-radius: 0;
           width: 100%;
           border: 0;
+          min-height: 100px;
           &.active {
             padding: 30px 3rem;
             border-radius: 10px 10px 0 0 !important;
@@ -2612,5 +2613,65 @@
   }
   .logo-bar {
     padding: 2rem 0 1rem;
+  }
+}
+
+#galleryModal {
+  .modal-dialog {
+    height: inherit;
+    max-width: 1000px;
+    .modal-content {
+      background-color: transparent;
+      border: 0;
+      .modal-body {
+        padding: 0;
+        .swiper-slide {
+          border: 0;
+          img {
+            width: 100%;
+            padding: 0 5rem;
+          }
+        }
+        .swiper-button-next {
+          background: #FFFFFFB2;
+          padding: 10px 10px;
+          border-radius: 100px 100px;
+          top: 45%;
+          box-shadow: 0px 0px 6px 0px #00000026;
+          svg {
+            path {
+              fill :#000;
+            }
+          }
+        }
+        .swiper-button-prev {
+          background: #FFFFFFB2;
+          padding: 10px 10px;
+          border-radius: 100px 100px;
+          box-shadow: 0px 0px 6px 0px #00000026;
+          top: 45%;
+          svg {
+            path {
+              fill :#000;
+            }
+          }
+        }
+      }
+      .modal-header {
+        padding: 0;
+        border: 0;
+        .btn-close {
+          position: absolute;
+          z-index: 9;
+          left: auto;
+          right: 6.5rem;
+          top: 1.5rem;
+          &:focus {
+            box-shadow: none;
+            border: 0;
+          }
+        }
+      }
+    }
   }
 }

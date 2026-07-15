@@ -4015,7 +4015,7 @@ body {
   align-items: flex-end;
 }
 .pay-page .tabs-area .nav-tabs li {
-  width: 33.33%;
+  width: 25%;
 }
 .pay-page .tabs-area .nav-tabs li button {
   background: #F9FAFB;
@@ -4023,6 +4023,7 @@ body {
   border-radius: 0;
   width: 100%;
   border: 0;
+  min-height: 100px;
 }
 .pay-page .tabs-area .nav-tabs li button.active {
   padding: 30px 3rem;
@@ -4615,6 +4616,60 @@ body {
 }
 .about-page .logo-bar {
   padding: 2rem 0 1rem;
+}
+
+#galleryModal .modal-dialog {
+  height: inherit;
+  max-width: 1000px;
+}
+#galleryModal .modal-dialog .modal-content {
+  background-color: transparent;
+  border: 0;
+}
+#galleryModal .modal-dialog .modal-content .modal-body {
+  padding: 0;
+}
+#galleryModal .modal-dialog .modal-content .modal-body .swiper-slide {
+  border: 0;
+}
+#galleryModal .modal-dialog .modal-content .modal-body .swiper-slide img {
+  width: 100%;
+  padding: 0 5rem;
+}
+#galleryModal .modal-dialog .modal-content .modal-body .swiper-button-next {
+  background: rgba(255, 255, 255, 0.6980392157);
+  padding: 10px 10px;
+  border-radius: 100px 100px;
+  top: 45%;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
+#galleryModal .modal-dialog .modal-content .modal-body .swiper-button-next svg path {
+  fill: #000;
+}
+#galleryModal .modal-dialog .modal-content .modal-body .swiper-button-prev {
+  background: rgba(255, 255, 255, 0.6980392157);
+  padding: 10px 10px;
+  border-radius: 100px 100px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  top: 45%;
+}
+#galleryModal .modal-dialog .modal-content .modal-body .swiper-button-prev svg path {
+  fill: #000;
+}
+#galleryModal .modal-dialog .modal-content .modal-header {
+  padding: 0;
+  border: 0;
+}
+#galleryModal .modal-dialog .modal-content .modal-header .btn-close {
+  position: absolute;
+  z-index: 9;
+  left: auto;
+  right: 6.5rem;
+  top: 1.5rem;
+}
+#galleryModal .modal-dialog .modal-content .modal-header .btn-close:focus {
+  box-shadow: none;
+  border: 0;
 }
 
 .main-header {
