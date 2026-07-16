@@ -18,6 +18,10 @@
                 font-weight: 400;
                 text-transform: capitalize;
                 margin: 0 0 15px;
+                @include max(1400px) {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
                 a {
                     color: #000;
                     font-size: 12px;
@@ -37,6 +41,10 @@
                     font-size: 18px;
                     line-height: 20px;
                     font-weight: 300;
+                    @include max(1400px) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
                 }
             }
             &.s-blue {
@@ -180,6 +188,9 @@
             display: flex;
             justify-content: center;
             height: 70px;
+            @include max(1400px) {
+                height: 60px;
+            }
             img {
                 width: auto;
             }
@@ -194,6 +205,9 @@
         left: 50px;
         background: url(../images/icon13.png) no-repeat center center;
         z-index: 9;
+        @include max(1400px) {
+            left: 20px;
+        }
         &:hover {
             background: url(../images/icon13.png) no-repeat center center;
         }
@@ -205,6 +219,9 @@
         right: 50px;
         background: url(../images/icon14.png) no-repeat center center;
         z-index: 9;
+        @include max(1400px) {
+            right: 20px;
+        }
         &:hover {
             background: url(../images/icon14.png) no-repeat center center;
         }
@@ -389,8 +406,14 @@
     }
     .slider-prev {
       left: -60px;
+      @include max(1280px) {
+        left: -15px;
+      }
     }
     .slider-next {
       right: -60px;
+      @include max(1280px) {
+        right: -15px;
+      }
     }
 }

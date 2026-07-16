@@ -21,13 +21,35 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
         $(".feature-slider").slick({
             slidesToShow: 4,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 0,
             speed: 4000,
             cssEase: "linear",
             arrows: true,
             pauseOnHover: true,
-            infinite: true
+            infinite: true,
+            responsive: [{
+				breakpoint: 1400,
+				settings: {
+					slidesToShow: 3,
+                    slidesToScroll: 1,
+				}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 3,
+                        slidesToScroll: 1,
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 2,
+                        slidesToScroll: 1,
+					}
+				}
+    		]
         });
     }
 

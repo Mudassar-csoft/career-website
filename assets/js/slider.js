@@ -27,7 +27,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             cssEase: "linear",
             arrows: true,
             pauseOnHover: true,
-            infinite: true
+            infinite: true,
         });
     }
 

@@ -1,3 +1,5 @@
+@use "../abstracts/functions" as *;
+
 #footer {
     padding: 3rem 0 0;
     background: #00A0B41A;
@@ -21,6 +23,11 @@
             line-height: 20px;
             color: #000;
             font-weight: 400;
+            @include max(1400px) {
+                br {
+                    display: none;
+                }
+            }
         }
     }
     .list-bar {
@@ -41,6 +48,10 @@
                     margin: 0 0 12px;
                     display: flex;
                     align-items: center;
+                    @include max(1400px) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
                     img {
                         margin: 0 10px 0 0;
                     }

@@ -1,3 +1,5 @@
+@use "../abstracts/functions" as *;
+
 .main-header {
   position: relative;
   z-index: 9;
@@ -19,6 +21,9 @@
     }
     .top-contact {
       gap: 25px;
+      @include max(1200px) {
+        gap: 12px;
+      }
       a {
         display: flex;
         align-items: center;
@@ -34,6 +39,9 @@
       margin: 0;
       padding: 0;
       gap: 25px;
+      @include max(1200px) {
+        gap: 12px;
+      }
       li {
         display: flex;
         align-items: center;
@@ -51,6 +59,9 @@
     }
     .navbar-nav {
       gap: 25px;
+      @include max(1200px) {
+        gap: 15px;
+      }
       .nav-item {
         &:focus-visible {
             outline: none;
@@ -68,6 +79,10 @@
       transition: 0.3s;
       padding: 8px 0;
       border: 0;
+      @include max(1200px) {
+        font-size: 13px;
+        line-height: 15px;
+      }
       &:hover,
       &.active {
         opacity: 0.8;
@@ -86,6 +101,11 @@
         line-height: 16px;
         font-weight: 500;
         color: #929292;
+        @include max(1200px) {
+          font-size: 13\px;
+          line-height: 15px;
+          padding: 10px 10px;
+        }
         &:hover {
           background: linear-gradient(90deg, #009db8 0%, #00c487 100%);
           color: #fff;

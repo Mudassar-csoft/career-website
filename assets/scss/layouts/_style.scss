@@ -5,21 +5,36 @@
   background: url("../images/banner01.png") no-repeat top center;
   background-size: cover;
   padding: 7rem 0 4rem;
+  @include max(992px) {
+    padding: 4rem 0 4rem;
+  }
   h1 {
     font-size: 40px;
     line-height: 42px;
     color: #fff;
     font-weight: 700;
     margin: 0 0 20px;
+    @include max(1400px) {
+      font-size: 35px;
+      line-height: 40px;
+      margin: 0 0 15px;
+    }
   }
   p {
     font-size: 16px;
     line-height: 25px;
     color: #fff;
     margin: 0 0 30px;
+    @include max(1400px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
   .form-block {
     margin: 0 0 4rem;
+    @include max(992px) {
+      margin: 0 0 2rem
+    }
     .form-control,
     select {
       @include inputbar;
@@ -38,6 +53,12 @@
     background: url(../images/banner02.png) no-repeat;
     background-size: cover;
     padding: 42px 0;
+    @include max(1400px) {
+      padding: 30px 0;
+    }
+    @include max(1200px) {
+      padding: 20px 0;
+    }
   }
   .counter-item {
     flex: 1;
@@ -65,6 +86,14 @@
       font-family: $f-second;
       margin: 0 0 15px;
       letter-spacing: 2px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
+      @include max(1200px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
     }
     p {
       font-size: 18px;
@@ -85,6 +114,11 @@
       color: #000000;
       font-weight: 700;
       margin: 0 0 40px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 25px;
+      }
       span {
         color: #00a1b3;
       }
@@ -105,6 +139,11 @@
       line-height: 22px;
       margin: 0 0 18px;
       color: #000;
+      @include max(1400px) {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 0 15px
+      }
     }
     .r-btn {
       @include event-btn;
@@ -117,6 +156,11 @@
       color: #000000;
       font-weight: 700;
       margin: 0 0 40px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 25px;
+      }
     }
     ul {
       li {
@@ -135,6 +179,11 @@
             color: #000;
             font-weight: 600;
             margin: 0 0 17px;
+            @include max(1400px) {
+              font-size: 12px;
+              line-height: 16px;
+              margin: 0 0 15px;
+            }
           }
           span {
             background: #009db8;
@@ -181,6 +230,11 @@
       color: #000000;
       font-weight: 700;
       margin: 0 0 40px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 25px;
+      }
     }
     .r-btn {
       @include apply-btn;
@@ -228,6 +282,11 @@
       font-size: 38px;
       line-height: 40px;
       margin: 0 0 50px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 30px;
+      }
     }
     .t-detail {
       .img-hold {
@@ -326,6 +385,10 @@
     font-weight: 700;
     margin: 0 0 20px;
     text-align: center;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
   p {
     text-align: center;
@@ -334,6 +397,11 @@
     color: #000;
     font-weight: 500;
     margin: 0 0 50px;
+    @include max(1400px) {
+      font-size: 15px;
+      line-height: 20px;
+      margin: 0 0 40px;
+    }
   }
 }
 .video-block {
@@ -354,6 +422,10 @@
     font-weight: 700;
     margin: 0 0 20px;
     text-align: center;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
   p {
     text-align: center;
@@ -362,6 +434,10 @@
     color: #000;
     font-weight: 300;
     margin: 0 0 20px;
+    @include max(1400px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
   .swiper {
     width: 100%;
@@ -377,6 +453,9 @@
       border-radius: 25px;
       display: block;
       margin: 0 auto;
+      @include max(1400px) {
+        width: 95%;
+      }
     }
     .play-btn {
       position: absolute;
@@ -409,6 +488,11 @@
     font-weight: 600;
     margin: 0 0 50px;
     text-align: center;
+    @include max(1400px) {
+      font-size: 32px;
+      line-height: 34px;
+      margin: 0 0 30px
+    }
   }
   .box {
     padding: 15px 15px;
@@ -462,6 +546,9 @@
 }
 .logo-bar {
   padding: 2rem 0 4rem;
+  @include max(1400px) {
+    padding: 2rem 0 2rem;
+  }
   h2 {
     text-align: center;
     font-size: 38px;
@@ -469,6 +556,11 @@
     color: #000;
     font-weight: 700;
     margin: 0 0 50px;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+      margin: 0 0 30px;
+    }
   }
 }
 .blog-area {
@@ -480,6 +572,11 @@
     font-weight: 600;
     margin: 0 0 50px;
     text-align: center;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+      margin: 0 0 30px;
+    }
   }
   .block {
     .img-hold {
@@ -497,6 +594,11 @@
         color: #000;
         font-weight: 700;
         margin: 0 0 15px;
+        @include max(1400px) {
+          font-size: 14px;
+          line-height: 16px;
+          margin: 0 0 10px;
+        }
       }
       p {
         font-size: 12px;
@@ -518,6 +620,9 @@
   padding: 5rem 0;
   background: url(../images/banner03.png) no-repeat top center;
   background-size: cover;
+  @include max(1400px) {
+    padding: 3rem 0;
+  }
   h2 {
     text-align: center;
     font-size: 44px;
@@ -525,6 +630,10 @@
     color: #fff;
     margin: 0 0 30px;
     font-weight: 600;
+    @include max(1400px) {
+      font-size: 35px;
+      line-height: 37px;
+    }
   }
   .form-block {
     .form-control,
@@ -561,6 +670,10 @@
       font-size: 20px;
       line-height: 22px;
       font-weight: 500;
+      @include max(1400px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
       &.active {
         background: #ffffff4d;
         font-weight: 700;
@@ -635,6 +748,11 @@
     color: #000;
     margin: 0 0 40px;
     font-weight: 600;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+      margin: 0 0 30px;
+    }
   }
   ul {
     display: flex;
@@ -643,6 +761,9 @@
     gap: 15px;
     li {
       width: 13%;
+      @include max(1200px) {
+        width: 12%;
+      }
       a {
         box-shadow: 2px 4px 13px 2px #0000001a;
         padding: 25px 25px;
@@ -650,6 +771,9 @@
         display: block;
         border-radius: 10px 10px;
         transition: transform 0.3s ease;
+        @include max(1200px) {
+          padding: 15px 15px;
+        }
         &:hover {
           transform: translateY(-7px);
         }
@@ -667,6 +791,11 @@
     color: #000;
     margin: 0 0 50px;
     font-weight: 600;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+      margin: 0 0 40px;
+    }
     span {
       color: #009db8;
     }
@@ -741,13 +870,21 @@
         font-size: 30px;
         font-weight: 700;
         margin-bottom: 12px;
-        line-height: 1.2;
+        line-height: 36px;
+        @include max(1400px) {
+          font-size: 25px;
+          line-height: 28px;
+        }
       }
       p {
         color: rgba(255, 255, 255, 0.9);
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 20px;
         margin: 0;
+        @include max(1400px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
     }
     &__form {
@@ -775,13 +912,34 @@
   margin: 0 auto;
   left: 6rem;
   top: -4rem;
-}
-
-.orbit-wrapper {
-  width: 550px;
-  height: 550px;
-  position: relative;
-  margin: 0 auto;
+  @include max(1600px) {
+    width: 500px;
+    height: 500px;
+    left: 4rem;
+    top: -3rem;
+  }
+  @include max(1500px) {
+    left: 2rem;
+  }
+  @include max(1400px) {
+    width: 450px;
+    height: 450px;
+  }
+  @include max(1200px) {
+    width: 350px;
+    height: 350px;
+  }
+  @include max(1100px) {
+    left: 1rem;
+    top: -1rem;
+  }
+  @include max(992px) {
+    left: 0;
+    top: 0;
+    margin: 0 auto 30px;
+    width: 500px;
+    height: 500px;
+  }
 }
 
 /* Center Image */
@@ -793,6 +951,22 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  @include max(1650px) {
+    width: 410px;
+    height: 360px;
+  }
+  @include max(1400px) {
+    width: 375px;
+    height: 330px;
+  }
+  @include max(1200px) {
+    width: 280px;
+    height: 250px;
+  }
+  @include max(992px) {
+    width: 410px;
+    height: 365px;
+  }
   img {
     width: 100%;
     height: 100%;
@@ -829,9 +1003,34 @@
 .orbit-outer {
   width: 550px;
   height: 550px;
-  animation: rotateClockwise 30s linear infinite;
+  @include max(1650px) {
+    width: 500px;
+    height: 500px;
+  }
+  @include max(1400px) {
+    width: 450px;
+    height: 450px;
+  }
+  @include max(1200px) {
+    width: 350px;
+    height: 350px;
+  }
+  @include max(992px) {
+    width: 500px;
+    height: 500px;
+  }
+  // animation: rotateClockwise 30s linear infinite;
   span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-275px);
+    @include max(1650px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-225px);
+    }
+    @include max(1200px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-175px);
+    }
+    @include max(992px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-250px);
+    }
   }
 }
 
@@ -839,9 +1038,30 @@
 .orbit-inner {
   width: 430px;
   height: 430px;
-  animation: rotateAntiClockwise 25s linear infinite;
+  // animation: rotateAntiClockwise 25s linear infinite;
+  @include max(1400px) {
+    width: 400px;
+    height: 400px;
+  }
+  @include max(1200px) {
+    width: 310px;
+    height: 310px;
+  }
+  @include max(992px) {
+    width: 450px;
+    height: 450px;
+  }
   span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-215px);
+    @include max(1400px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-200px);
+    }
+    @include max(1200px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-155px);
+    }
+    @include max(992px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-225px);
+    }
   }
 }
 
@@ -2402,6 +2622,10 @@
         font-weight: 700;
         color: #fff;
         margin: 0 0 30px;
+        @include max(1400px) {
+          font-size: 35px;
+          line-height: 40px;
+        }
       }
       p {
         font-size: 16px;
