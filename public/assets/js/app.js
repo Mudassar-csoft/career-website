@@ -3,14 +3,16 @@
 // }
 
 document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-    dropdown.addEventListener('mouseenter', function () {
-        bootstrap.Dropdown.getOrCreateInstance(
-            this.querySelector('.dropdown-toggle')
-        ).show();
-    });
-    dropdown.addEventListener('mouseleave', function () {
-        bootstrap.Dropdown.getOrCreateInstance(
-            this.querySelector('.dropdown-toggle')
-        ).hide();
-    });
+    if (window.innerWidth >= 992) {
+        dropdown.addEventListener('mouseenter', function () {
+            bootstrap.Dropdown.getOrCreateInstance(
+                this.querySelector('.dropdown-toggle')
+            ).show();
+        });
+        dropdown.addEventListener('mouseleave', function () {
+            bootstrap.Dropdown.getOrCreateInstance(
+                this.querySelector('.dropdown-toggle')
+            ).hide();
+        });
+    }
 });

@@ -119,8 +119,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-lg-6">
+                <div class="row mb-4 mb-lg-0">
+                    <div class="col-md-6">
                         <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
                             <h2>News</h2>
                             <div class="news-slider">
@@ -176,7 +176,7 @@
                             <a href="#" class="btn r-btn">Read More</a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="event-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
                             <h2>Events</h2>
                             <ul>
@@ -260,7 +260,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 border-end">
+                <div class="col-lg-6 border-lg-end mb-4 mb-lg-0">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                             <img src="assets/images/img02.png" alt="">
@@ -759,7 +759,7 @@
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-lg-3 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1000">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1000">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -775,7 +775,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1100">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1100">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -791,7 +791,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -807,7 +807,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1300">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1300">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -1168,7 +1168,7 @@
 				}
 				},
 				{
-					breakpoint: 768,
+					breakpoint: 992,
 					settings: {
 						slidesToShow: 3
 					}

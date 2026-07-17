@@ -67,6 +67,10 @@
             line-height: 17px;
             color: #012E4B;
             font-weight: 700;
+            @include max(992px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
         }
         .s-icon {
             ul {

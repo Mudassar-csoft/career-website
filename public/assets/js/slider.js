@@ -36,9 +36,9 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
 				}
 				},
 				{
-					breakpoint: 768,
+					breakpoint: 992,
 					settings: {
-						slidesToShow: 3,
+						slidesToShow: 2,
                         slidesToScroll: 1,
 					}
 				},
@@ -64,7 +64,22 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             cssEase: "linear",
             arrows: true,
             pauseOnHover: true,
-            infinite: true
+            infinite: true,
+            responsive: [{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+                    slidesToScroll: 1,
+				}
+				},
+				{
+					breakpoint: 575,
+					settings: {
+						slidesToShow: 2,
+                        slidesToScroll: 1,
+					}
+				}
+    		]
         });
     }
 }
