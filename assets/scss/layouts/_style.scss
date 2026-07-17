@@ -123,6 +123,9 @@
         }
       }
     }
+    @include max(575px) {
+      padding: 20px 0;
+    }
     &:not(:last-child)::after {
       content: "";
       position: absolute;
@@ -325,6 +328,9 @@
     li {
       margin: 0 1rem 0 0;
       padding: 0 30px;
+      @include max(575px) {
+        padding: 0 15px;
+      }
       button {
         font-size: 20px;
         line-height: 22px;
@@ -1193,6 +1199,10 @@
     width: 500px;
     height: 500px;
   }
+  @include max(575px) {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 /* Center Image */
@@ -1219,6 +1229,10 @@
   @include max(992px) {
     width: 380px;
     height: 340px;
+  }
+  @include max(575px) {
+    width: 280px;
+    height: 251px;
   }
   img {
     width: 100%;
@@ -1272,6 +1286,10 @@
     width: 500px;
     height: 500px;
   }
+  @include max(575px) {
+    width: 350px;
+    height: 350px;
+  }
   // animation: rotateClockwise 30s linear infinite;
   span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-275px);
@@ -1286,6 +1304,9 @@
     }
     @include max(992px) {
       transform: rotate(calc(var(--i) * 45deg)) translateY(-250px);
+    }
+    @include max(575px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-175px);
     }
   }
 }
@@ -1307,6 +1328,10 @@
     width: 420px;
     height: 420px;
   }
+  @include max(575px) {
+    width: 310px;
+    height: 310px;
+  }
   span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-215px);
     @include max(1400px) {
@@ -1317,6 +1342,9 @@
     }
     @include max(992px) {
       transform: rotate(calc(var(--i) * 45deg)) translateY(-210px);
+    }
+    @include max(575px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-155px);
     }
   }
 }
