@@ -14,24 +14,24 @@
                 </p>
                 <div class="form-block">
                     <form class="row g-3">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <input type="text" class="form-control" placeholder="Full Name">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <input type="text" class="form-control" placeholder="Course">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <input type="text" class="form-control" placeholder="Contact">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <input type="email" class="form-control" placeholder="example@gmail.com">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <select class="form-select">
                                 <option selected>Pakistan</option>
                             </select>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <input type="text" class="form-control" placeholder="City">
                         </div>
                         <div class="col-12">
@@ -118,8 +118,126 @@
 <section class="news-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
-                <div class="row mb-4 mb-lg-0">
+            <div class="col-lg-8 mb-4 mb-md-0">
+                <div class="row d-md-none">
+                    <div class="col-12">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">News</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Events</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+                                    <div class="news-slider">
+                                        <div>
+                                            <div class="box s-blue">
+                                                <p>
+                                                    Career Institute Signs Franchise MOU for
+                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                </p>
+                                                <div class="d-bar">
+                                                    <img src="assets/images/icon05.svg" alt=""> 
+                                                    <span>09-12-2024</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="box s-black">
+                                                <p>
+                                                    Career Institute Signs Franchise MOU for
+                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                </p>
+                                                <div class="d-bar">
+                                                    <img src="assets/images/icon05.svg" alt=""> 
+                                                    <span>09-12-2024</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="box s-green">
+                                                <p>
+                                                    Career Institute Signs Franchise MOU for
+                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                </p>
+                                                <div class="d-bar">
+                                                    <img src="assets/images/icon05.svg" alt=""> 
+                                                    <span>09-12-2024</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="box s-black">
+                                                <p>
+                                                    Career Institute Signs Franchise MOU for
+                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                </p>
+                                                <div class="d-bar">
+                                                    <img src="assets/images/icon05.svg" alt=""> 
+                                                    <span>09-12-2024</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn r-btn">Read More</a>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                                <div class="event-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
+                                    <ul>
+                                        <li>
+                                            <div class="d-info">
+                                                <h3>
+                                                    27 <span>Apr</span>
+                                                </h3>
+                                            </div>
+                                            <div class="t-bar">
+                                                <p>
+                                                    Inauguration Career Institute
+                                                    Lahore Wapda Town Branch
+                                                </p>
+                                                <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-info">
+                                                <h3>
+                                                    27 <span>Apr</span>
+                                                </h3>
+                                            </div>
+                                            <div class="t-bar">
+                                                <p>
+                                                    Inauguration Career Institute
+                                                    Lahore Wapda Town Branch
+                                                </p>
+                                                <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-info">
+                                                <h3>
+                                                    27 <span>Apr</span>
+                                                </h3>
+                                            </div>
+                                            <div class="t-bar">
+                                                <p>
+                                                    Inauguration Career Institute
+                                                    Lahore Wapda Town Branch
+                                                </p>
+                                                <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn event-btn">All Events</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4 mb-lg-0 d-none d-md-flex">
                     <div class="col-md-6">
                         <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
                             <h2>News</h2>
@@ -759,7 +877,7 @@
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1000">
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1000">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -775,7 +893,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1100">
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1100">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -791,7 +909,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -807,7 +925,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1300">
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1300">
                 <div class="block">
                     <div class="img-hold">
                         <img src="assets/images/img13.png" alt="">
@@ -844,16 +962,16 @@
             <div class="col-lg-12">
                 <div class="form-block">
                     <form class="row g-4">
-                        <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
+                        <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
                             <input type="text" class="form-control" placeholder="Full Name">
                         </div>
-                        <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
+                        <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
                             <input type="text" class="form-control" placeholder="Contact no">
                         </div>
-                        <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
                             <input type="email" class="form-control" placeholder="Email Address">
                         </div>
-                        <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
                             <input type="text" class="form-control" placeholder="Business Interest">
                         </div>
                         <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
@@ -1164,19 +1282,27 @@
     		responsive: [{
 				breakpoint: 1280,
 				settings: {
-					slidesToShow: 4
+					slidesToShow: 4,
 				}
 				},
 				{
 					breakpoint: 992,
 					settings: {
-						slidesToShow: 3
+						slidesToShow: 3,
 					}
 				},
 				{
-					breakpoint: 576,
+					breakpoint: 767,
 					settings: {
-						slidesToShow: 2
+						slidesToShow: 2,
+					}
+				},
+                {
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+                        centerMode: true,
+                        centerPadding: '40px',
 					}
 				}
     		]
@@ -1213,6 +1339,16 @@
     			active.eq(0).find('.card-wrap').addClass('center-1');
     		}
     	}
+    });
+</script>
+<script>
+    $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function () {
+        setTimeout(function () {
+            $('.news-slider').each(function () {
+                $(this).slick('refresh');
+                $(this).slick('setPosition');
+            });
+        }, 100);
     });
 </script>
 @endpush

@@ -1,0 +1,13 @@
+// Abstracts
+@use "abstracts/variable" as *;
+@use "abstracts/placeholder" as *;
+@use "abstracts/functions" as *;
+@use "abstracts/reset" as *;
+
+
+// layouts
+@use "layouts/style";
+@use "layouts/header";
+@use "layouts/footer";
+@use "layouts/slider";
+

@@ -8,6 +8,9 @@
   @include max(992px) {
     padding: 4rem 0 4rem;
   }
+  @include max(767px) {
+    padding: 3rem 0;
+  }
   h1 {
     font-size: 40px;
     line-height: 42px;
@@ -18,6 +21,10 @@
       font-size: 35px;
       line-height: 40px;
       margin: 0 0 15px;
+    }
+    @include max(767px) {
+      font-size: 30px;
+      line-height: 32px;
     }
   }
   p {
@@ -151,6 +158,11 @@
         line-height: 32px;
         margin: 0 0 25px;
       }
+      @include max(767px) {
+        font-size: 25px;
+        line-height: 27px;
+        margin: 0 0 15px;
+      }
       span {
         color: #00a1b3;
       }
@@ -164,6 +176,10 @@
       color: #000;
       font-weight: 400;
       margin: 0 0 10px;
+      @include max(767px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
     }
     p {
       font-weight: 300;
@@ -205,6 +221,9 @@
         @include max(992px) {
           margin: 0 0 15px;
         }
+        @include max(767px){
+          align-items: center;
+        }
         .t-bar {
           width: 75%;
           padding: 0 0 0 10px;
@@ -239,6 +258,9 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          @include max(767px){
+            padding: 25px 25px;
+          }
           h3 {
             font-size: 22px;
             line-height: 24px;
@@ -273,6 +295,38 @@
     }
     .r-btn {
       @include apply-btn;
+    }
+  }
+  .nav {
+    border-bottom: 1px solid #BEBEBE;
+    padding: 0 0 1rem;
+    li {
+      margin: 0 1rem 0 0;
+      padding: 0 30px;
+      button {
+        font-size: 20px;
+        line-height: 22px;
+        color: #000;
+        font-weight: 400;
+        position: relative;
+        z-index: 1;
+        padding: 10px 25px;
+        &.active {
+          background: none;
+          font-weight: 600;
+          color: #000;
+          &:before {
+            position: absolute;
+            top: auto;
+            right: 0;
+            left: 0;
+            bottom: -1.05rem;
+            content: "";
+            border: 1px solid #009DB8;
+            z-index: -1;
+          }
+        }
+      }
     }
   }
 }
@@ -321,6 +375,10 @@
         font-size: 30px;
         line-height: 32px;
         margin: 0 0 30px;
+      }
+      @include max(767px) {
+        font-size: 25px;
+        line-height: 27px;
       }
     }
     .t-detail {
@@ -424,6 +482,10 @@
       font-size: 30px;
       line-height: 32px;
     }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
+    }
   }
   p {
     text-align: center;
@@ -441,6 +503,10 @@
       br {
         display: none;
       }
+    }
+    @include max(767px) {
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -465,6 +531,10 @@
     @include max(1400px) {
       font-size: 30px;
       line-height: 32px;
+    }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
     }
   }
   p {
@@ -538,6 +608,11 @@
       line-height: 34px;
       margin: 0 0 30px
     }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
+      margin: 0 0 30px
+    }
   }
   .box {
     padding: 15px 15px;
@@ -606,6 +681,11 @@
       line-height: 32px;
       margin: 0 0 30px;
     }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
+      margin: 0 0 30px;
+    }
   }
 }
 .blog-area {
@@ -620,6 +700,11 @@
     @include max(1400px) {
       font-size: 30px;
       line-height: 32px;
+      margin: 0 0 30px;
+    }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
       margin: 0 0 30px;
     }
   }
@@ -679,6 +764,10 @@
       font-size: 35px;
       line-height: 37px;
     }
+    @include max(767px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
   .form-block {
     .form-control,
@@ -695,6 +784,9 @@
   @include max(992px) {
     padding: 4rem 0 0;
   }
+  @include max(767px) {
+    padding: 3rem 0 0;
+  }
   h2 {
     text-align: center;
     font-size: 38px;
@@ -702,6 +794,14 @@
     color: #000;
     margin: 0 0 40px;
     font-weight: 600;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
+    }
   }
   .gallery-tabs {
     display: flex;
@@ -716,8 +816,7 @@
       overflow-x: auto;   
       width: 100%;
       gap: 7px;
-      border-radius: 7px 7px;
-      border-radius: 15px 15px;  
+      margin: 0 0 30px;
     }
     li {
       cursor: pointer;
@@ -733,14 +832,12 @@
       }
       @include max(992px) {
         flex: 0 0 auto;
-        width: 28%;
         align-items: center;
         justify-content: center;
         display: flex;
         font-size: 14px;
         line-height: 16px;
         padding: 10px 10px;
-        border-radius: 10px;
       }
       &.active {
         background: #ffffff4d;
@@ -756,6 +853,9 @@
     @include max(992px) {
       gap: 10px;
       grid-template-columns: repeat(3, 1fr);
+    }
+    @include max(767px) {
+      grid-template-columns: repeat(2, 1fr);
     }
     &.active {
       display: grid;
@@ -825,6 +925,11 @@
       line-height: 32px;
       margin: 0 0 30px;
     }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
+      margin: 0 0 30px;
+    }
   }
   ul {
     display: flex;
@@ -838,6 +943,9 @@
       }
       @include max(992px) {
         width: 25%;
+      }
+      @include max(767px) {
+        width: 31%;
       }
       a {
         box-shadow: 2px 4px 13px 2px #0000001a;
@@ -862,6 +970,9 @@
 .faq-area {
   padding: 4rem 0;
   background: #f4fbff;
+  @include max(767px) {
+    padding: 3rem 0;
+  }
   h6 {
     text-align: center;
     font-size: 38px;
@@ -874,6 +985,11 @@
       line-height: 32px;
       margin: 0 0 40px;
     }
+    @include max(767px) {
+      font-size: 25px;
+      line-height: 27px;
+      margin: 0 0 20px;
+    }
     span {
       color: #009db8;
     }
@@ -885,6 +1001,10 @@
     font-weight: 600;
     margin: 0 0 20px;
     text-align: center;
+    @include max(767px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
   .accordion {
     .accordion-item {
@@ -900,6 +1020,10 @@
           font-weight: 700;
           background-color: transparent;
           padding: 20px 0;
+          @include max(767px) {
+            font-size: 16px;
+            line-height: 20px;
+          }
           &:focus {
             box-shadow: none;
           }
@@ -920,6 +1044,10 @@
           font-size: 18px;
           line-height: 30px;
           color: #575757;
+          @include max(767px) {
+            font-size: 15px;
+            line-height: 23px;
+          }
         }
       }
     }
@@ -931,6 +1059,9 @@
 }
 .letter-area {
   padding: 4rem 0;
+  @include max(767px) {
+    padding: 3rem 0;
+  }
   .newsletter {
     padding: 40px 35px;
     border-radius: 22px;
@@ -980,20 +1111,30 @@
       @include max(992px) {
         justify-content: center;
       }
+      @include max(767px) {
+        flex-wrap: wrap;
+      }
       input {
         @include inputbar;
+        @include max(767px) {
+          width: 100%;
+        }
       }
       input[type="email"] {
         width: 260px;
+        @include max(767px) {
+          width: 100%;
+        }
       }
       button {
         @include join-btn;
+        @include max(767px) {
+          width: 100%;
+        }
       }
     }
   }
 }
-
-// orbit start 
 
 .orbit-wrapper {
   width: 550px;

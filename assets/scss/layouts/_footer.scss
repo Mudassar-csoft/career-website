@@ -71,6 +71,10 @@
                 font-size: 14px;
                 line-height: 16px;
             }
+            @include max(767px) {
+                text-align: center;
+                margin: 0 0 10px;
+            }
         }
         .s-icon {
             ul {
@@ -78,6 +82,9 @@
                 align-items: center;
                 gap: 10px;
                 justify-content: flex-end;
+                @include max(767px) {
+                    justify-content: center;
+                }
                 li {
                     a {
                         display: block;
@@ -87,5 +94,3 @@
         }
     }
 }
-
-// orbit start 

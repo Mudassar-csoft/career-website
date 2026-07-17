@@ -1,7 +1,7 @@
 <header class="main-header">
     <div class="top-bar">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-md-between justify-content-center align-items-center">
                 <div class="top-contact d-flex align-items-center">
                     <a href="tel:03414444101">
                         <i class="fas fa-phone-alt"></i>
