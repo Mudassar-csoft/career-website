@@ -73,6 +73,11 @@ body {
     padding: 3rem 0;
   }
 }
+@media (max-width: 575px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+}
 .hero-section h1 {
   font-size: 40px;
   line-height: 42px;
@@ -93,6 +98,12 @@ body {
     line-height: 32px;
   }
 }
+@media (max-width: 575px) {
+  .hero-section h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .hero-section p {
   font-size: 16px;
   line-height: 25px;
@@ -103,6 +114,15 @@ body {
   .hero-section p {
     font-size: 14px;
     line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .hero-section p br {
+    display: none;
   }
 }
 .hero-section .form-block {
@@ -140,6 +160,13 @@ body {
 .hero-section .form-block select:focus::placeholder {
   text-indent: 15px;
 }
+@media (max-width: 575px) {
+  .hero-section .form-block .form-control,
+  .hero-section .form-block select {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .hero-section .form-block .form-check {
   display: flex;
   align-items: center;
@@ -162,6 +189,12 @@ body {
 .hero-section .form-block .form-check input:checked {
   background-color: #00C487;
   border-color: #00C487;
+}
+@media (max-width: 575px) {
+  .hero-section .form-block .form-check {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .hero-section .form-block .apply-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -1688,6 +1721,11 @@ body {
   transform: rotate(calc(var(--i) * 45deg)) translateY(-275px);
 }
 @media (max-width: 1650px) {
+  .orbit-outer span {
+    transform: rotate(calc(var(--i) * 45deg)) translateY(-250px);
+  }
+}
+@media (max-width: 1400px) {
   .orbit-outer span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-225px);
   }

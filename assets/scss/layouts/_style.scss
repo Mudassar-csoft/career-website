@@ -7,9 +7,12 @@
   padding: 7rem 0 4rem;
   @include max(992px) {
     padding: 4rem 0 4rem;
-  }
+  } 
   @include max(767px) {
     padding: 3rem 0;
+  }
+  @include max(575px) {
+    padding: 2rem 0;
   }
   h1 {
     font-size: 40px;
@@ -26,6 +29,10 @@
       font-size: 30px;
       line-height: 32px;
     }
+    @include max(575px) {
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
   p {
     font-size: 16px;
@@ -36,6 +43,13 @@
       font-size: 14px;
       line-height: 22px;
     }
+    @include max(575px) {
+      font-size: 12px;
+      line-height: 20px;
+      br {
+        display: none;
+      }
+    }
   }
   .form-block {
     margin: 0 0 4rem;
@@ -45,9 +59,17 @@
     .form-control,
     select {
       @include inputbar;
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
     .form-check {
       @include checkbar;
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
     .apply-btn {
       @include apply-btn;
@@ -1254,6 +1276,9 @@
   span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-275px);
     @include max(1650px) {
+      transform: rotate(calc(var(--i) * 45deg)) translateY(-250px);
+    }
+    @include max(1400px) {
       transform: rotate(calc(var(--i) * 45deg)) translateY(-225px);
     }
     @include max(1200px) {

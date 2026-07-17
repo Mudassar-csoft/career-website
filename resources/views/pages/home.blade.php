@@ -14,24 +14,24 @@
                 </p>
                 <div class="form-block">
                     <form class="row g-3">
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <input type="text" class="form-control" placeholder="Full Name">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <input type="text" class="form-control" placeholder="Course">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <input type="text" class="form-control" placeholder="Contact">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <input type="email" class="form-control" placeholder="example@gmail.com">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <select class="form-select">
                                 <option selected>Pakistan</option>
                             </select>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <input type="text" class="form-control" placeholder="City">
                         </div>
                         <div class="col-12">
