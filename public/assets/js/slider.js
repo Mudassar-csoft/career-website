@@ -6,7 +6,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             verticalSwiping: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 0,
             speed: 5000,
             cssEase: "linear",
@@ -21,7 +21,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
         $(".feature-slider").slick({
             slidesToShow: 4,
             slidesToScroll: 1,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 0,
             speed: 4000,
             cssEase: "linear",
@@ -70,7 +70,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
         $(".logo-slider").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 0,
             speed: 500,
             cssEase: "linear",
@@ -111,12 +111,12 @@ if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper"))
             modifier: 1,
             slideShadows: false
         },
-        // speed: 1000,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        //     pauseOnMouseEnter: true
-        // },
+        speed: 1000,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
         breakpoints: {
             1024: {
                 slidesPerView: 3,
