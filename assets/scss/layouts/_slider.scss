@@ -116,6 +116,10 @@
                     color: #000;
                     font-weight: 600;
                     margin: 0 0 12px;
+                    @include max(480px) {
+                        font-size: 20px; 
+                        line-height: 22px;
+                    }
                 }
                 ul {
                     margin: 0 0 12px;
@@ -148,9 +152,17 @@
                     align-items: center;
                     .an-btn {
                         @include an-btn;
+                        @include max(480px) {
+                            font-size: 13px; 
+                            line-height: 15px;
+                        }
                     }
                     .md-btn {
                         @include md-btn;
+                        @include max(480px) {
+                            font-size: 13px; 
+                            line-height: 15px;
+                        }
                     }
                 }
             }
@@ -411,8 +423,15 @@
       justify-content: center;
       cursor: pointer;
       box-shadow: 0px 0px 6px 0px #00000026;
+      @include max(575px) {
+        width: 40px;
+        height: 40px;
+      }
       i {
         font-size: 40px;
+        @include max(575px) {
+            font-size: 25px;
+        }
       }
       &:hover {
         background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -424,11 +443,17 @@
       @include max(1280px) {
         left: -15px;
       }
+      @include max(575px) {
+        left: -3px;
+      }
     }
     .slider-next {
       right: -60px;
       @include max(1280px) {
         right: -15px;
+      }
+      @include max(575px) {
+        right: -3px;
       }
     }
 }

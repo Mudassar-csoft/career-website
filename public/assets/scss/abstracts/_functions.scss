@@ -33,7 +33,10 @@
     background: 
         linear-gradient(white, white) padding-box,
         linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
-
+	@include max(575px) {
+		font-size: 16px;
+		line-height: 18px;
+	}
     &:hover {
         transform: scale(1.05);
     }
@@ -51,6 +54,10 @@
 	font-weight: 700;
 	border-radius: 50px 50px;
 	transition: all .3s ease-in-out;
+	@include max(575px) {
+		font-size: 16px;
+		line-height: 18px;
+	}
 	&:hover {
 		transform: scale(1.05);
 	}
@@ -68,6 +75,10 @@
 	border-radius: 50px 50px;
 	transition: all .3s ease-in-out;
 	margin: 0 7px 0 0;
+	@include max(575px) {
+		font-size: 16px;
+		line-height: 18px;
+	}
 	&:hover {
 		transform: scale(1.05);
 	}
@@ -103,6 +114,10 @@
     background: 
         linear-gradient(#F0F7F5, #F0F7F5) padding-box,
         linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
+	@include max(575px) {
+		font-size: 16px;
+		line-height: 18px;
+	}
     &:hover {
         transform: scale(1.05);
     }
@@ -168,6 +183,10 @@
 	font-weight: 700;
 	border-radius: 15px 15px;
 	transition: all .3s ease-in-out;
+	@include max(575px) {
+		font-size: 16px;
+		line-height: 18px;
+	}
 	&:hover {
 		transform: scale(1.05);
 	}
