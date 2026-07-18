@@ -1293,6 +1293,7 @@
   @include max(992px) {
     width: 380px;
     height: 340px;
+    z-index: 1;
   }
   @include max(575px) {
     width: 280px;

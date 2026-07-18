@@ -1767,6 +1767,7 @@ body {
   .center-image {
     width: 380px;
     height: 340px;
+    z-index: 1;
   }
 }
 @media (max-width: 575px) {
