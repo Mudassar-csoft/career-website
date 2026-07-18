@@ -72,7 +72,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 0,
-            speed: 500,
+            speed: 5000,
             cssEase: "linear",
             arrows: true,
             pauseOnHover: true,
