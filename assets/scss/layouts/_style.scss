@@ -1355,7 +1355,7 @@
     width: 350px;
     height: 350px;
   }
-  // animation: rotateClockwise 30s linear infinite;
+  animation: rotateClockwise 30s linear infinite;
   span {
     transform: rotate(calc(var(--i) * 45deg)) translateY(-275px);
     @include max(1650px) {
@@ -1380,7 +1380,7 @@
 .orbit-inner {
   width: 430px;
   height: 430px;
-  // animation: rotateAntiClockwise 25s linear infinite;
+  animation: rotateAntiClockwise 25s linear infinite;
   @include max(1400px) {
     width: 400px;
     height: 400px;

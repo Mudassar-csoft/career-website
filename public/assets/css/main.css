@@ -1842,6 +1842,9 @@ body {
     height: 350px;
   }
 }
+.orbit-outer {
+  animation: rotateClockwise 30s linear infinite;
+}
 .orbit-outer span {
   transform: rotate(calc(var(--i) * 45deg)) translateY(-275px);
 }
@@ -1875,6 +1878,7 @@ body {
 .orbit-inner {
   width: 430px;
   height: 430px;
+  animation: rotateAntiClockwise 25s linear infinite;
 }
 @media (max-width: 1400px) {
   .orbit-inner {
