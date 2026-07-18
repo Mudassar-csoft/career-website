@@ -168,6 +168,12 @@
         height: 50px;
         border-radius: 100% 100%;
         z-index: 9;
+        &:hover {
+            background: #FFFFFFB2 url(../images/icon13.png) no-repeat center center;
+        }
+        &:focus {
+            background: #FFFFFFB2 url(../images/icon13.png) no-repeat center center;
+        }
     }
     .slick-next {
         right: 50px;
@@ -176,6 +182,12 @@
         height: 50px;
         border-radius: 100% 100%;
         z-index: 9;
+        &:hover {
+            background: #FFFFFFB2 url(../images/icon14.png) no-repeat center center;
+        }
+        &:focus {
+            background: #FFFFFFB2 url(../images/icon14.png) no-repeat center center;
+        }
     }
 }
 

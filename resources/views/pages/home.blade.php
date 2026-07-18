@@ -961,7 +961,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
-                    <form class="row g-4">
+                    <form class="row g-3">
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
                             <input type="text" class="form-control" placeholder="Full Name">
                         </div>

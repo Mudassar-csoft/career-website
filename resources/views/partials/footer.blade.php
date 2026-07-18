@@ -2,22 +2,24 @@
     <div class="container">
         <div class="row mb-3">
             <div class="col-lg-3">
-                <div class="f-logo">
-                    <img src="{{ asset('assets/images/footer-logo.svg') }}" alt="">
-                </div>
-                <div class="f-text">
-                    <p>
-                        Career Institute offers<br>
-                        educational services in<br>
-                        the field of IT; we also<br>
-                        operate as a platform for<br>
-                        testing services and are<br>
-                        partners with relevant<br>
-                        authorities..
-                    </p>
+                <div class="f-box">
+                    <div class="f-logo">
+                        <img src="{{ asset('assets/images/footer-logo.svg') }}" alt="">
+                    </div>
+                    <div class="f-text">
+                        <p>
+                            Career Institute offers<br>
+                            educational services in<br>
+                            the field of IT; we also<br>
+                            operate as a platform for<br>
+                            testing services and are<br>
+                            partners with relevant<br>
+                            authorities..
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4">
+            <div class="col-lg-3 col-md-4 col-6">
                 <div class="list-bar">
                     <h2>Important Links</h2>
                     <ul>
@@ -30,9 +32,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4">
+            <div class="col-lg-3 col-md-4 col-6">
                 <div class="list-bar">
-                    <h2>Important Links</h2>
+                    <h2>Extras</h2>
                     <ul>
                         <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Volunteer Programes</a></li>
                         <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Gallery</a></li>
@@ -44,8 +46,8 @@
             </div>
             <div class="col-lg-3 col-md-4">
                 <div class="list-bar">
-                    <h2>Important Links</h2>
-                    <ul>
+                    <h2>Contact Us</h2>
+                    <ul class="last-bar">
                         <li><a href="tel:0418724010"><img src="{{ asset('assets/images/tel.svg') }}" alt="">041-8724010</a></li>
                         <li><a href="tel:03144444010"><img src="{{ asset('assets/images/wp.svg') }}" alt="">0314-4444010</a></li>
                         <li><a href="tel:03414444010"><img src="{{ asset('assets/images/cell.svg') }}" alt="">0341-4444010</a></li>

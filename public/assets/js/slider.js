@@ -6,7 +6,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             verticalSwiping: true,
             slidesToShow: 3,
             slidesToScroll: 1,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 0,
             speed: 5000,
             cssEase: "linear",
@@ -49,6 +49,16 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
                         slidesToScroll: 1,
                         centerMode: true,
                         centerPadding: '100px',
+					}
+				},
+                {
+					breakpoint: 575,
+					settings: {
+						slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '15px',
+                        arrows:false,
 					}
 				}
     		]
