@@ -266,7 +266,7 @@
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="t-bar aos-init aos-animate" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="1100">
                     <h3>
                         About Career Institute
@@ -346,7 +346,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 border-end">
+                <div class="col-lg-6 border-end mb-4 mb-lg-0">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                             <img src="assets/images/img02.png" alt="">

@@ -2953,7 +2953,13 @@
     background: linear-gradient(107.15deg, #012E4B 0%, #066C5C 100%);
     background-size: 100%;
     padding: 7rem 0;
+    @include max(992px) {
+      padding: 3rem 0;
+    }
     .ab-text {
+      @include max(992px) {
+        margin: 0 0 25px;
+      }
       span {
         font-size: 22px;
         line-height: 24px;
@@ -2964,6 +2970,10 @@
         display: inline-block;
         border-radius: 10px 10px;
         margin: 0 0 25px;
+        @include max(1400px) {
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
       h1 {
         font-size: 40px;
@@ -2972,8 +2982,13 @@
         color: #fff;
         margin: 0 0 30px;
         @include max(1400px) {
-          font-size: 35px;
-          line-height: 40px;
+          font-size: 30px;
+          line-height: 35px;
+        }
+        @include max(767px) {
+          font-size: 25px;
+          line-height: 27px;
+          margin: 0 0 20px;
         }
       }
       p {
@@ -2981,14 +2996,28 @@
         line-height: 28px;
         font-weight: 400;
         color: #fff;
+        margin: 0;
+        @include max(1400px) {
+          font-size: 14px;
+          line-height: 25px;
+        }
       }
     }
     .img-hold {
       text-align: right;
+      @include max(992px) {
+        img {
+          width: 100%;
+          text-align: left;
+        }
+      }
     }
   }
   .ser-area {
     padding: 5rem 0;
+    @include max(992px) {
+      padding: 3rem 0;
+    }
     h2 {
       text-align: center;
       font-size: 44px;
@@ -2996,6 +3025,15 @@
       color: #000;
       font-weight: 700;
       margin: 0 0 50px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 30px;
+      }
+      @include max(767px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
     }
     .block {
       border: 1px solid #C2C2C2;
@@ -3021,8 +3059,26 @@
         li {
           width: 25%;
           border-right: 1px solid #C2C2C2;
+          @include max(992px) {
+            width: 50%;
+            &:nth-child(2) {
+              border-right: 0;
+              border-bottom: 1px solid #C2C2C2;  
+            }
+            &:first-child {
+              border-bottom: 1px solid #C2C2C2;  
+            }
+          }
+          @include max(575px) {
+            width: 100%;
+            border-right: 0;
+            border-bottom: 1px solid #C2C2C2;  
+          }
           &:last-child {
             border-right: 0;
+            @include max(575px) {
+              border: 0;
+            }
             .box {
               border-radius: 0 0 10px 0;
             }
@@ -3035,6 +3091,9 @@
           .box {
             padding: 25px 25px;
             height: 100%;
+            @include max(1280px) {
+              padding: 15px 15px;
+            }
             &:hover {
               background: linear-gradient(90deg, #009DB8 0%, #00C487 100%);
               .t-bar {
@@ -3049,7 +3108,10 @@
             .img-hold {
               text-align: center;
               margin: 0 0 15px;
-              min-height: 100px;
+              height: 100px;
+              @include max(1400px) {
+                height: 75px;
+              }
               img {
                 height: 100%;
               }
@@ -3062,6 +3124,10 @@
                 color: #000;
                 font-weight: 700;
                 margin: 0 0 10px;
+                @include max(1400px) {
+                  font-size: 14px;
+                  line-height: 18px;
+                }
               }
               p {
                 font-size: 12px;
@@ -3078,6 +3144,9 @@
   .news-area {
     background: none;
     padding: 0 0 4rem;
+    @include max(992px) {
+      padding: 0 0 2rem;
+    }
     h2 {
       font-size: 20px;
       line-height: 22px;
@@ -3097,12 +3166,18 @@
     }
     .tabs-bar {
       padding: 0 4rem 0 0;
+      @include max(575px) {
+        padding: 0;
+      }
       .nav {
         border-bottom: 1px solid #BEBEBE;
         padding: 0 0 1rem;
         li {
           margin: 0 1rem 0 0;
           padding: 0 30px;
+          @include max(575px) {
+            padding: 0 15px;
+          }
           &:last-child {
             margin: 0;
           }
@@ -3114,6 +3189,10 @@
             position: relative;
             z-index: 1;
             padding: 10px 25px;
+            @include max(1400px) {
+              font-size: 18px;
+              line-height: 20px;
+            }
             &.active {
               background: none;
               font-size: 20px;
@@ -3142,12 +3221,28 @@
             color: #000;
             font-weight: 700;
             margin: 0 0 30px;
+            @include max(1400px) {
+              font-size: 30px;
+              line-height: 32px;
+              margin: 0 0 20px;
+            }
+            @include max(767px) {
+              font-size: 25px;
+              line-height: 27px;
+            }
           }
           p {
             font-size: 16px;
             line-height: 28px;
             font-weight: 400;
             color: #000;
+            @include max(1400px) {
+              font-size: 14px;
+              line-height: 25px;
+            }
+            @include max(992px) {
+              margin: 0 0 15px;
+            }
           }
         }
       }
@@ -3155,6 +3250,9 @@
   }
   .chose-area {
     padding: 2rem 0 3rem;
+    @include max(992px) {
+      padding: 2rem 0 2rem;
+    }
     h2 {
       font-size: 34px;
       line-height: 36px;
@@ -3162,6 +3260,17 @@
       font-weight: 700;
       margin: 0 0 50px;
       text-align: center;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 30px;
+      }
+      @include max(767px) {
+        font-size: 25px;
+        line-height: 27px;
+        text-align: left;
+        margin: 0 0 20px;
+      }
     }
     h3 {
       font-size: 38px;
@@ -3169,6 +3278,14 @@
       color: #000;
       font-weight: 400;
       margin: 0 0 10px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
+      @include max(767px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
     }
     p {
       font-size: 18px;
@@ -3176,12 +3293,27 @@
       color: #000;
       font-weight: 300;
       margin: 0 0 25px;
+      @include max(1400px) {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 0 0 20px;
+      }
+      @include max(767px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
     }
     .rm-btn {
       @include apply-btn;
     }
     .img-hold {
       text-align: right;
+      @include max(992px) {
+        text-align: left;
+        img {
+          width: 100%;
+        }
+      }
     }
   }
   .logo-bar {
