@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <a href="https://wa.me/923414444101" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/923414444010" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </footer>
