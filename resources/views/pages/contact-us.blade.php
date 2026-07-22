@@ -43,7 +43,7 @@
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
                                 <p>0341-4444010</p>
-                                <p>0341-4444010</p>
+                                <p>0314-4444010</p>
                             </div>
                         </div>
                     </div>
