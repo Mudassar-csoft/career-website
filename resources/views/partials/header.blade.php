@@ -42,7 +42,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#footer">
+                        <a href="{{ route('stories') }}">
                         Success Stories
                         </a>
                     </li>

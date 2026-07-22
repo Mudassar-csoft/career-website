@@ -16,6 +16,7 @@ $pages = [
     ['uri' => '/psi-exam', 'view' => 'pages.psi-exam', 'name' => 'psi-exam'],
     ['uri' => '/study-abroad', 'view' => 'pages.study-abroad', 'name' => 'study-abroad'],
     ['uri' => '/verifications', 'view' => 'pages.verifications', 'name' => 'verifications'],
+    ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
 ];
 
 foreach ($pages as $page) {
@@ -35,3 +36,4 @@ Route::redirect('/Person-Vue.html', '/pearson-vue', 301);
 Route::redirect('/PSI-Exam.html', '/psi-exam', 301);
 Route::redirect('/study-abroad.html', '/study-abroad', 301);
 Route::redirect('/Verifications.html', '/verifications', 301);
+Route::redirect('/stories.html', '/stories', 301);
