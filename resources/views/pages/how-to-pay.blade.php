@@ -20,13 +20,13 @@
             <div class="col-lg-12">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                        <img src="{{ asset('assets/images/img35.png') }}" alt="">
+                        <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                        <img src="{{ asset('assets/images/img36.png') }}" alt="">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img36.png') }}" alt="">
+                        <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                        <img src="{{ asset('assets/images/img35.png') }}" alt="">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -41,7 +41,45 @@
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="bank-info">
+                            <div class="row g-4">
+                                <!-- Bank Name -->
+                                <div class="col-lg-12">
+                                    <label class="info-label">Bank Name</label>
+                                    <div class="info-box">
+                                        HBL
+                                    </div>
+                                </div>
+                                <!-- Account Title -->
+                                <div class="col-12">
+                                    <label class="info-label">Account Title</label>
+                                    <div class="info-box">
+                                        CAREER INSTITUTE (PRIVATE) LIMITED
+                                    </div>
+                                </div>
+                                <!-- IBAN -->
+                                <div class="col-12">
+                                    <label class="info-label">IBAN Number</label>
+                                    <div class="info-box copy-box">
+                                        <span>PK94HABB0002957901554603</span>
+                                        <button class="btn-copy">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                                                class="bi bi-copy" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M4 1.5H11a1.5 1.5 0 0 1 1.5 1.5V4H11V3a.5.5 0 0 0-.5-.5H4A.5.5 0 0 0 3.5 3v8A.5.5 0 0 0 4 11h1v1.5H4A1.5 1.5 0 0 1 2.5 11V3A1.5 1.5 0 0 1 4 1.5z"/>
+                                                <path fill-rule="evenodd"
+                                                    d="M6 5.5A1.5 1.5 0 0 1 7.5 4h4A1.5 1.5 0 0 1 13 5.5v7A1.5 1.5 0 0 1 11.5 14h-4A1.5 1.5 0 0 1 6 12.5v-7z"/>
+                                            </svg>
+                                            Copy
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                         <div class="bank-info">
                             <div class="row g-4">
                                 <!-- Bank Name -->
@@ -102,43 +140,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                        <div class="bank-info">
-                            <div class="row g-4">
-                                <!-- Bank Name -->
-                                <div class="col-lg-12">
-                                    <label class="info-label">Bank Name</label>
-                                    <div class="info-box">
-                                        HBL
-                                    </div>
-                                </div>
-                                <!-- Account Title -->
-                                <div class="col-12">
-                                    <label class="info-label">Account Title</label>
-                                    <div class="info-box">
-                                        CAREER INSTITUTE (PRIVATE) LIMITED
-                                    </div>
-                                </div>
-                                <!-- IBAN -->
-                                <div class="col-12">
-                                    <label class="info-label">IBAN Number</label>
-                                    <div class="info-box copy-box">
-                                        <span>PK94HABB0002957901554603</span>
-                                        <button class="btn-copy">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                                                class="bi bi-copy" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd"
-                                                    d="M4 1.5H11a1.5 1.5 0 0 1 1.5 1.5V4H11V3a.5.5 0 0 0-.5-.5H4A.5.5 0 0 0 3.5 3v8A.5.5 0 0 0 4 11h1v1.5H4A1.5 1.5 0 0 1 2.5 11V3A1.5 1.5 0 0 1 4 1.5z"/>
-                                                <path fill-rule="evenodd"
-                                                    d="M6 5.5A1.5 1.5 0 0 1 7.5 4h4A1.5 1.5 0 0 1 13 5.5v7A1.5 1.5 0 0 1 11.5 14h-4A1.5 1.5 0 0 1 6 12.5v-7z"/>
-                                            </svg>
-                                            Copy
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="tab-pane fade" id="jazz-tab-pane" role="tabpanel" aria-labelledby="jazz-tab" tabindex="0">
                         <div class="bank-info">
                             <div class="row g-4">
@@ -146,7 +148,7 @@
                                 <div class="col-lg-12">
                                     <label class="info-label">Bank Name</label>
                                     <div class="info-box">
-                                        EasyPaisa
+                                        Jazz Cash
                                     </div>
                                 </div>
                                 <!-- Account Title -->
@@ -233,23 +235,23 @@
 @push('scripts')
 <script>
     document.querySelectorAll(".btn-copy").forEach(button => {
-                button.addEventListener("click", function () {
-                    const text = this.parentElement.querySelector("span").innerText;
-                    navigator.clipboard.writeText(text);
-                    this.innerHTML = "Copied ✓";
-                    setTimeout(() => {
-                        this.innerHTML = `
-                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                                class="bi bi-copy" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M4 1.5H11a1.5 1.5 0 0 1 1.5 1.5V4H11V3a.5.5 0 0 0-.5-.5H4A.5.5 0 0 0 3.5 3v8A.5.5 0 0 0 4 11h1v1.5H4A1.5 1.5 0 0 1 2.5 11V3A1.5 1.5 0 0 1 4 1.5z"/>
-                                <path fill-rule="evenodd"
-                                    d="M6 5.5A1.5 1.5 0 0 1 7.5 4h4A1.5 1.5 0 0 1 13 5.5v7A1.5 1.5 0 0 1 11.5 14h-4A1.5 1.5 0 0 1 6 12.5v-7z"/>
-                            </svg>
-                            Copy
-                        `;
-                    }, 2000);
-                });
-            });
+        button.addEventListener("click", function () {
+            const text = this.parentElement.querySelector("span").innerText;
+            navigator.clipboard.writeText(text);
+            this.innerHTML = "Copied ✓";
+            setTimeout(() => {
+                this.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
+                        class="bi bi-copy" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4 1.5H11a1.5 1.5 0 0 1 1.5 1.5V4H11V3a.5.5 0 0 0-.5-.5H4A.5.5 0 0 0 3.5 3v8A.5.5 0 0 0 4 11h1v1.5H4A1.5 1.5 0 0 1 2.5 11V3A1.5 1.5 0 0 1 4 1.5z"/>
+                        <path fill-rule="evenodd"
+                            d="M6 5.5A1.5 1.5 0 0 1 7.5 4h4A1.5 1.5 0 0 1 13 5.5v7A1.5 1.5 0 0 1 11.5 14h-4A1.5 1.5 0 0 1 6 12.5v-7z"/>
+                    </svg>
+                    Copy
+                `;
+            }, 2000);
+        });
+    });
 </script>
 @endpush
