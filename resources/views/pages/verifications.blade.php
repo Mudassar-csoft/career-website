@@ -44,7 +44,7 @@
                                                                 <input type="text" class="form-control">
                                                             </div>
                                                             <div class="col-12 text-center mt-5">
-                                                                <button type="submit" class="btn sm-btn">Send Message</button>
+                                                                <button type="submit" class="btn sm-btn">Verify Now</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -62,25 +62,4 @@
 @endsection
 
 @push('scripts')
-<script>
-document.querySelectorAll(".btn-copy").forEach(button => {
-            button.addEventListener("click", function () {
-                const text = this.parentElement.querySelector("span").innerText;
-                navigator.clipboard.writeText(text);
-                this.innerHTML = "Copied ✓";
-                setTimeout(() => {
-                    this.innerHTML = `
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor"
-                            class="bi bi-copy" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M4 1.5H11a1.5 1.5 0 0 1 1.5 1.5V4H11V3a.5.5 0 0 0-.5-.5H4A.5.5 0 0 0 3.5 3v8A.5.5 0 0 0 4 11h1v1.5H4A1.5 1.5 0 0 1 2.5 11V3A1.5 1.5 0 0 1 4 1.5z"/>
-                            <path fill-rule="evenodd"
-                                d="M6 5.5A1.5 1.5 0 0 1 7.5 4h4A1.5 1.5 0 0 1 13 5.5v7A1.5 1.5 0 0 1 11.5 14h-4A1.5 1.5 0 0 1 6 12.5v-7z"/>
-                        </svg>
-                        Copy
-                    `;
-                }, 2000);
-            });
-        });
-</script>
 @endpush

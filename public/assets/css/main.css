@@ -3851,6 +3851,197 @@ body {
   margin: 0 0 50px;
   text-align: center;
 }
+.sa-page .ab-detail .img-hold {
+  position: relative;
+}
+.sa-page .ab-detail .img-hold img {
+  width: 100%;
+}
+.sa-page .ab-detail .img-hold h3 {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: auto;
+  bottom: 25px;
+  content: "";
+  color: #fff;
+}
+.sa-page .uni-list {
+  padding: 4rem 0 3rem;
+}
+.sa-page .uni-list h6 {
+  text-align: center;
+  font-size: 44px;
+  line-height: 47px;
+  color: #000;
+  font-weight: 700;
+  margin: 0 0 50px;
+}
+@media (max-width: 1400px) {
+  .sa-page .uni-list h6 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0 0 30px;
+  }
+}
+@media (max-width: 767px) {
+  .sa-page .uni-list h6 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+.sa-page .uni-list .box {
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.0705882353);
+  border-radius: 10px 10px;
+}
+.sa-page .uni-list .box .img-hold {
+  margin: 0;
+}
+.sa-page .uni-list .box .img-hold img {
+  width: 100%;
+}
+.sa-page .uni-list .box .txt-bar {
+  padding: 15px 25px;
+}
+.sa-page .uni-list .box .txt-bar h3 {
+  font-size: 14px;
+  line-height: 16px;
+  color: #535353;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+.sa-page .uni-list .box .txt-bar h2 {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 10px;
+}
+.sa-page .uni-list .box .txt-bar span {
+  font-size: 18px;
+  line-height: 20px;
+  color: #535353;
+  font-weight: 400;
+}
+.sa-page .uni-list .va-btn {
+  padding: 10px 24px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(white, white) padding-box, linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
+}
+.sa-page .uni-list .va-btn:hover {
+  transform: scale(1.05);
+}
+.sa-page .uni-list .va-btn:focus {
+  box-shadow: none;
+}
+.sa-page .sp-area {
+  background: #F6F9FE;
+  padding: 35px 0 0;
+}
+.sa-page .sp-area h3 {
+  font-size: 25px;
+  line-height: 27px;
+  color: #000;
+  font-weight: 700;
+  margin: 0 0 30px;
+  position: relative;
+}
+.sa-page .sp-area h3:before {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: auto;
+  bottom: -10px;
+  content: "";
+  width: 55px;
+  height: 4px;
+  background: #009DB8;
+}
+.sa-page .sp-area ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 20px;
+}
+.sa-page .sp-area ul li {
+  width: 31%;
+  border: 1px solid #EAEAEA;
+  background: #fff;
+  padding: 15px 15px;
+  border-radius: 10px 10px;
+  text-align: center;
+}
+.sa-page .sp-area ul li img {
+  margin: 0 0 15px;
+}
+.sa-page .sp-area ul li h4 {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  font-weight: 500;
+  color: #000;
+}
+.sa-page .sp-area .aj-box {
+  background: #01324D;
+  border-radius: 50px 0 0 0;
+  height: 100%;
+  padding: 10px 15px 0 30px;
+}
+.sa-page .sp-area .aj-box h2 {
+  font-size: 27px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+.sa-page .sp-area .aj-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 20px;
+}
+.sa-page .sp-area .aj-box .action-buttons {
+  gap: 8px;
+}
+.sa-page .sp-area .aj-box .action-buttons .btn {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+.sa-page .sp-area .aj-box .action-buttons .consultation-btn {
+  background: #fff;
+  color: #111;
+  border: 1px solid #e5e5e5;
+}
+.sa-page .sp-area .aj-box .action-buttons .consultation-btn:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+.sa-page .sp-area .aj-box .action-buttons .apply-btn {
+  background: #00a9c7;
+  color: #fff;
+  border: 1px solid #00a9c7;
+}
+.sa-page .sp-area .aj-box .action-buttons .apply-btn:hover {
+  background: #008da7;
+  border-color: #008da7;
+  color: #fff;
+}
 
 .contact-page .top-banner {
   padding: 8rem 0;

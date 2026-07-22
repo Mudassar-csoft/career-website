@@ -31,23 +31,170 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-lg-3">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/img29.png') }}" alt="">
+                                    <h3>Study in USA</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 pt-3">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/img30.png') }}" alt="">
+                                    <h3>Study in USA</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 pt-3">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/img31.png') }}" alt="">
+                                    <h3>Study in USA</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/img32.png') }}" alt="">
+                                    <h3>Study in USA</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="uni-list">
+                    <div class="container">
+                        <div class="row">
                             <div class="col-lg-12">
-                                <div class="country-slider">
-                                    <div class="country-item">
-                                        <img src="{{ asset('assets/images/img29.png') }}" alt="">
-                                        <h4>Study in USA</h4>
+                                <h6>Popular Universities</h6>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="{{ asset('assets/images/img47.png') }}" alt="">
                                     </div>
-                                    <div class="country-item">
-                                        <img src="{{ asset('assets/images/img30.png') }}" alt="">
-                                        <h4>Study in UK</h4>
+                                    <div class="txt-bar">
+                                        <h3>University of</h3>
+                                        <h2>Toronto</h2>
+                                        <span>Canada</span>
                                     </div>
-                                    <div class="country-item">
-                                        <img src="{{ asset('assets/images/img31.png') }}" alt="">
-                                        <h4>Study in Canada</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="{{ asset('assets/images/img48.png') }}" alt="">
                                     </div>
-                                    <div class="country-item">
-                                        <img src="{{ asset('assets/images/img32.png') }}" alt="">
-                                        <h4>Study in China</h4>
+                                    <div class="txt-bar">
+                                        <h3>University of</h3>
+                                        <h2>Sydney</h2>
+                                        <span>Australia</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="{{ asset('assets/images/img49.png') }}" alt="">
+                                    </div>
+                                    <div class="txt-bar">
+                                        <h3>Arizona State</h3>
+                                        <h2>University</h2>
+                                        <span>USA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="{{ asset('assets/images/img50.png') }}" alt="">
+                                    </div>
+                                    <div class="txt-bar">
+                                        <h3>University of</h3>
+                                        <h2>Essex</h2>
+                                        <span>UK</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-12 text-center">
+                                <a href="#" class="btn va-btn">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="sp-area">
+                    <div class="container">
+                        <div class="row align-items-end">
+                            <div class="col-lg-6">
+                                <h3>Study Programs</h3>
+                                <ul>
+                                    <li>
+                                        <img src="{{ asset('assets/images/icon80.svg') }}" alt="">
+                                        <h4>
+                                            Bachelor's<br>
+                                            Degree
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <img src="{{ asset('assets/images/icon81.svg') }}" alt="">
+                                        <h4>
+                                            Master's<br>
+                                            Degree
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <img src="{{ asset('assets/images/icon82.svg') }}" alt="">
+                                        <h4>
+                                            PHD<br>
+                                            Programs
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <img src="{{ asset('assets/images/icon83.svg') }}" alt="">
+                                        <h4>
+                                            Diploma <br>
+                                            Program
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <img src="{{ asset('assets/images/icon84.svg') }}" alt="">
+                                        <h4>
+                                            Foundation<br>
+                                            Program
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <img src="{{ asset('assets/images/icon85.svg') }}" alt="">
+                                        <h4>
+                                            English <br>
+                                            Courses
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="aj-box">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-7">
+                                            <h2>
+                                                Ready to Start Your <br>
+                                                Study Abroad Journey? 
+                                            </h2>
+                                            <p>
+                                                Let Our Expert Guide You Every Step of the Way
+                                            </p>
+                                            <div class="action-buttons d-flex align-items-center">
+                                                <a href="#" class="btn consultation-btn">
+                                                    Book Free Consultation
+                                                </a>
+                                                <a href="#" class="btn apply-btn">
+                                                    Apply Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <div class="img-hold">
+                                                <img src="{{ asset('assets/images/img51.png') }}" alt="">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

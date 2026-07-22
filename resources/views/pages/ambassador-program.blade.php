@@ -61,10 +61,10 @@
                             <div class="col px-2">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="{{ asset('assets/images/icon55.svg') }}" alt="">
+                                        <img src="{{ asset('assets/images/icon61.svg') }}" alt="">
                                     </div>
                                     <div class="t-hold">
-                                        <h5>Official Designation</h5>
+                                        <h5>Stipends & Incentives</h5>
                                     </div>
                                 </div>
                             </div>
@@ -125,10 +125,10 @@
                             <div class="col px-2">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="{{ asset('assets/images/icon61.svg') }}" alt="">
+                                        <img src="{{ asset('assets/images/icon55.svg') }}" alt="">
                                     </div>
                                     <div class="t-hold">
-                                        <h5>Exclusive Incentives</h5>
+                                        <h5>Official Designation</h5>
                                     </div>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@
                     </li>
                     <li>
                         <a href="{{ route('how-to-pay') }}">
-                        How to Apply
+                        How to Pay
                         </a>
                     </li>
                     <li>
