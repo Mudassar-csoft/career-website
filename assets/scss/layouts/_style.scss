@@ -3603,8 +3603,8 @@
 .ss-page {
   .particle-section {
     position: relative;
-    min-height: 500px;
     overflow: hidden;
+    padding: 5rem 0;
     background: linear-gradient(248.21deg, #088A64 -5.66%, #012E4B 37.75%, #012E4B 101.82%);
     #particles-js {
       position: absolute;
@@ -3616,14 +3616,49 @@
     .particle-content {
       position: relative;
       z-index: 2;
-      min-height: 500px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
       color: #fff;
-
+      .t-area {
+        h2 {
+          font-size: 40px;
+          line-height: 42px;
+          color: #fff;
+          font-weight: 700;
+          margin: 0 0 20px;
+          @include max(1400px) {
+            font-size: 35px;
+            line-height: 40px;
+            margin: 0 0 15px;
+          }
+          @include max(767px) {
+            font-size: 30px;
+            line-height: 32px;
+          }
+          @include max(575px) {
+            font-size: 20px;
+            line-height: 22px;
+          }
+        }
+        p {
+          font-size: 16px;
+          line-height: 25px;
+          color: #fff;
+          margin: 0 0 30px;
+          @include max(1400px) {
+            font-size: 14px;
+            line-height: 22px;
+          }
+          @include max(575px) {
+            font-size: 12px;
+            line-height: 20px;
+            br {
+              display: none;
+            }
+          }
+        }
+        .jn-btn {
+          @include apply-btn;
+        }
+      }
     }
   }
 }
