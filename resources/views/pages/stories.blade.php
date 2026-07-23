@@ -30,6 +30,449 @@
         </div>
     </div>
 </section>
+<section class="success-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="success-story-wrapper">
+                    <!-- MAIN SLIDER -->
+                    <div class="success-main-slider">
+                        <!-- Slide 1 -->
+                        <div class="success-main-slide">
+                            <div class="success-card">
+                                <div class="success-image">
+                                    <img src="assets/images/student-1.png" alt="">
+                                </div>
+                                <div class="success-content">
+                                    <h2>Ayesha Khan</h2>
+                                    <span class="success-program">
+                                        Frontend Development Program
+                                    </span>
+                                    <span class="success-location">
+                                        <i class="fas fa-location-dot"></i>
+                                        Faisalabad, Pakistan
+                                    </span>
+                                    <div class="success-before-after">
+                                        <div class="before-box">
+                                            <span>Before</span>
+                                            <p>
+                                                Fresh graduate with no practical
+                                                experience and no confidence in coding.
+                                            </p>
+                                        </div>
+                                        <div class="after-box">
+                                            <span>After</span>
+                                            <p>
+                                                Frontend Developer at Upwork
+                                                earning $2000 monthly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Journey</h3>
+                                    <div class="journey">
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-building"></i>
+                                            </div>
+                                            <span>
+                                                Joined<br>
+                                                Institute
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <span>
+                                                Completed<br>
+                                                React Bootstrap
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-code"></i>
+                                            </div>
+                                            <span>
+                                                Built<br>
+                                                3 Project
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-briefcase"></i>
+                                            </div>
+                                            <span>
+                                                Secured<br>
+                                                Internship
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <span>
+                                                Got<br>
+                                                Full Time Job
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Slide 2 -->
+                        <div class="success-main-slide">
+                            <div class="success-card">
+                                <div class="success-image">
+                                    <img src="assets/images/student-2.png" alt="">
+                                </div>
+                                <div class="success-content">
+                                    <h2>Kiran Akmal</h2>
+                                    <span class="success-program">
+                                        Graphic Design Program
+                                    </span>
+                                    <span class="success-location">
+                                        <i class="fas fa-location-dot"></i>
+                                        Faisalabad, Pakistan
+                                    </span>
+                                    <div class="success-before-after">
+                                        <div class="before-box">
+                                            <span>Before</span>
+                                            <p>
+                                                No professional experience
+                                                in graphic design.
+                                            </p>
+                                        </div>
+                                        <div class="after-box">
+                                            <span>After</span>
+                                            <p>
+                                                Senior Graphic Designer
+                                                working on Upwork.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Journey</h3>
+                                    <div class="journey">
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-building"></i>
+                                            </div>
+                                            <span>
+                                                Joined<br>
+                                                Institute
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <span>
+                                                Completed<br>
+                                                Course
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-palette"></i>
+                                            </div>
+                                            <span>
+                                                Created<br>
+                                                Portfolio
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-briefcase"></i>
+                                            </div>
+                                            <span>
+                                                Got<br>
+                                                Internship
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <span>
+                                                Got<br>
+                                                Job
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="success-main-slide">
+                            <div class="success-card">
+                                <div class="success-image">
+                                    <img src="assets/images/student-2.png" alt="">
+                                </div>
+                                <div class="success-content">
+                                    <h2>Ali raza</h2>
+                                    <span class="success-program">
+                                        Graphic Design Program
+                                    </span>
+                                    <span class="success-location">
+                                        <i class="fas fa-location-dot"></i>
+                                        Faisalabad, Pakistan
+                                    </span>
+                                    <div class="success-before-after">
+                                        <div class="before-box">
+                                            <span>Before</span>
+                                            <p>
+                                                No professional experience
+                                                in graphic design.
+                                            </p>
+                                        </div>
+                                        <div class="after-box">
+                                            <span>After</span>
+                                            <p>
+                                                Senior Graphic Designer
+                                                working on Upwork.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Journey</h3>
+                                    <div class="journey">
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-building"></i>
+                                            </div>
+                                            <span>
+                                                Joined<br>
+                                                Institute
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                            <span>
+                                                Completed<br>
+                                                Course
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-palette"></i>
+                                            </div>
+                                            <span>
+                                                Created<br>
+                                                Portfolio
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-briefcase"></i>
+                                            </div>
+                                            <span>
+                                                Got<br>
+                                                Internship
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <span>
+                                                Got<br>
+                                                Job
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- RIGHT SIDE NAVIGATION SLIDER -->
+                    <div class="success-nav-slider">
+                        <!-- Nav 1 -->
+                        <div class="success-nav-item">
+                            <div class="nav-student">
+                                <img src="assets/images/student-1.png" alt="">
+                                <div>
+                                    <h4>Ayesha Khan</h4>
+                                    <span>Frontend Developer</span>
+                                    <small>
+                                        <i class="fas fa-location-dot"></i>
+                                        Faisalabad, Pakistan
+                                    </small>
+                                </div>
+                            </div>
+                            <p>
+                                Frontend Developer at
+                                <strong>Upwork</strong>
+                            </p>
+                        </div>
+                        <!-- Nav 2 -->
+                        <div class="success-nav-item">
+                            <div class="nav-student">
+                                <img src="assets/images/student-2.png" alt="">
+                                <div>
+                                    <h4>Kiran Akmal</h4>
+                                    <span>Graphic Designer</span>
+                                    <small>
+                                        <i class="fas fa-location-dot"></i>
+                                        Faisalabad, Pakistan
+                                    </small>
+                                </div>
+                            </div>
+                            <p>
+                                Senior Graphic Designer at
+                                <strong>Upwork</strong>
+                            </p>
+                        </div>
+                        <!-- Nav 3 -->
+                        <div class="success-nav-item">
+                            <div class="nav-student">
+                                <img src="assets/images/student-3.png" alt="">
+                                <div>
+                                    <h4>Ali Raza</h4>
+                                    <span>Web Developer</span>
+                                    <small>
+                                        <i class="fas fa-location-dot"></i>
+                                        Lahore, Pakistan
+                                    </small>
+                                </div>
+                            </div>
+                            <p>
+                                Web Developer at
+                                <strong>Fiverr</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Top Achievers</h2>
+            </div>
+            <div class="col-lg-12">
+                <div class="img-hold">
+                    <img src="{{ asset('assets/images/img53.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="feature-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Featured Success Stories</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature-slider">
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img54.png" alt="">
+                            </div>
+                            <div class="text-hold">
+                                <h3>M. Rehan</h3>
+                                <h4><span>Course:</span> UI/UX Designing</h4>
+                                <ul>
+                                    <li>
+                                        <span> <img src="assets/images/icon86.svg" alt="">Freelance Designer</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="assets/images/icon87.svg" alt="">20+ Projects Completed</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img55.png" alt="">
+                            </div>
+                            <div class="text-hold">
+                                <h3>Amna</h3>
+                                <h4><span>Course:</span> Digital Marketing</h4>
+                                <ul>
+                                    <li>
+                                        <span> <img src="assets/images/icon86.svg" alt="">Freelance Designer</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="assets/images/icon87.svg" alt="">20+ Projects Completed</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img56.png" alt="">
+                            </div>
+                            <div class="text-hold">
+                                <h3>Ayesha Nadeem</h3>
+                                <h4><span>Course:</span> UI/UX Designing</h4>
+                                <ul>
+                                    <li>
+                                        <span> <img src="assets/images/icon86.svg" alt="">Freelance Designer</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="assets/images/icon87.svg" alt="">20+ Projects Completed</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img57.png" alt="">
+                            </div>
+                            <div class="text-hold">
+                                <h3>M. Haris</h3>
+                                <h4><span>Course:</span> UI/UX Designing</h4>
+                                <ul>
+                                    <li>
+                                        <span> <img src="assets/images/icon86.svg" alt="">Freelance Designer</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="assets/images/icon87.svg" alt="">20+ Projects Completed</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img54.png" alt="">
+                            </div>
+                            <div class="text-hold">
+                                <h3>M. Rehan</h3>
+                                <h4><span>Course:</span> UI/UX Designing</h4>
+                                <ul>
+                                    <li>
+                                        <span> <img src="assets/images/icon86.svg" alt="">Freelance Designer</span>
+                                    </li>
+                                    <li>
+                                        <span><img src="assets/images/icon87.svg" alt="">20+ Projects Completed</span> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="video-block">
     <div class="container">
         <div class="row">
@@ -331,7 +774,7 @@
     particlesJS("particles-js", {
         particles: {
             number: {
-                value: 150,
+                value: 90,
                 density: {
                     enable: true,
                     value_area: 800
@@ -353,7 +796,7 @@
             },
             line_linked: {
                 enable: true,
-                distance: 180,
+                distance: 150,
                 color: "#fff",
                 opacity: 0.4,
                 width: 1
@@ -474,6 +917,47 @@
     			active.eq(0).find('.card-wrap').addClass('center-1');
     		}
     	}
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.success-main-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.success-nav-slider',
+            adaptiveHeight: true
+        });
+        $('.success-nav-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.success-main-slider',
+            dots: false,
+            arrows: false,
+            focusOnSelect: true,
+            vertical: true,
+            verticalSwiping: true,
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        vertical: false,
+                        verticalSwiping: false,
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        vertical: false,
+                        verticalSwiping: false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
     });
 </script>
 @endpush
