@@ -41,7 +41,7 @@
                         <div class="success-main-slide">
                             <div class="success-card">
                                 <div class="success-image">
-                                    <img src="assets/images/student-1.png" alt="">
+                                    <img src="{{ asset('assets/images/img58.png') }}" alt="">
                                 </div>
                                 <div class="success-content">
                                     <h2>Ayesha Khan</h2>
@@ -49,21 +49,22 @@
                                         Frontend Development Program
                                     </span>
                                     <span class="success-location">
-                                        <i class="fas fa-location-dot"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
                                         Faisalabad, Pakistan
                                     </span>
                                     <div class="success-before-after">
                                         <div class="before-box">
                                             <span>Before</span>
                                             <p>
-                                                Fresh graduate with no practical
-                                                experience and no confidence in coding.
+                                                Fresh graduate with no  practical
+                                                experience and no confidence in
+                                                coding.
                                             </p>
                                         </div>
                                         <div class="after-box">
                                             <span>After</span>
                                             <p>
-                                                Frontend Developer at Upwork
+                                                Frontend Developer at  Upwork
                                                 earning $2000 monthly.
                                             </p>
                                         </div>
@@ -72,7 +73,7 @@
                                     <div class="journey">
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-building"></i>
+                                                <img src="{{ asset('assets/images/icon88.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Joined<br>
@@ -81,7 +82,7 @@
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-check"></i>
+                                               <img src="{{ asset('assets/images/icon89.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Completed<br>
@@ -90,16 +91,16 @@
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-code"></i>
+                                                <img src="{{ asset('assets/images/icon90.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Built<br>
-                                                3 Project
+                                                8 Project
                                             </span>
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-briefcase"></i>
+                                                <img src="{{ asset('assets/images/icon91.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Secured<br>
@@ -108,7 +109,90 @@
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-dollar-sign"></i>
+                                                <img src="{{ asset('assets/images/icon92.svg') }}" alt="">
+                                            </div>
+                                            <span>
+                                                Got<br>
+                                                Full Time Job
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="success-main-slide">
+                            <div class="success-card">
+                                <div class="success-image">
+                                    <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                </div>
+                                <div class="success-content">
+                                    <h2>Ayesha Khan</h2>
+                                    <span class="success-program">
+                                        Frontend Development Program
+                                    </span>
+                                    <span class="success-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Faisalabad, Pakistan
+                                    </span>
+                                    <div class="success-before-after">
+                                        <div class="before-box">
+                                            <span>Before</span>
+                                            <p>
+                                                Fresh graduate with no  practical
+                                                experience and no confidence in
+                                                coding.
+                                            </p>
+                                        </div>
+                                        <div class="after-box">
+                                            <span>After</span>
+                                            <p>
+                                                Frontend Developer at  Upwork
+                                                earning $2000 monthly.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <h3>Journey</h3>
+                                    <div class="journey">
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <img src="{{ asset('assets/images/icon88.svg') }}" alt="">
+                                            </div>
+                                            <span>
+                                                Joined<br>
+                                                Institute
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                               <img src="{{ asset('assets/images/icon89.svg') }}" alt="">
+                                            </div>
+                                            <span>
+                                                Completed<br>
+                                                React Bootstrap
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <img src="{{ asset('assets/images/icon90.svg') }}" alt="">
+                                            </div>
+                                            <span>
+                                                Built<br>
+                                                8 Project
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <img src="{{ asset('assets/images/icon91.svg') }}" alt="">
+                                            </div>
+                                            <span>
+                                                Secured<br>
+                                                Internship
+                                            </span>
+                                        </div>
+                                        <div class="journey-item">
+                                            <div class="journey-icon">
+                                                <img src="{{ asset('assets/images/icon92.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Got<br>
@@ -121,34 +205,34 @@
                         </div>
 
 
-                        <!-- Slide 2 -->
-                        <div class="success-main-slide">
+                         <div class="success-main-slide">
                             <div class="success-card">
                                 <div class="success-image">
-                                    <img src="assets/images/student-2.png" alt="">
+                                    <img src="{{ asset('assets/images/img58.png') }}" alt="">
                                 </div>
                                 <div class="success-content">
-                                    <h2>Kiran Akmal</h2>
+                                    <h2>Ayesha Khan</h2>
                                     <span class="success-program">
-                                        Graphic Design Program
+                                        Frontend Development Program
                                     </span>
                                     <span class="success-location">
-                                        <i class="fas fa-location-dot"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
                                         Faisalabad, Pakistan
                                     </span>
                                     <div class="success-before-after">
                                         <div class="before-box">
                                             <span>Before</span>
                                             <p>
-                                                No professional experience
-                                                in graphic design.
+                                                Fresh graduate with no  practical
+                                                experience and no confidence in
+                                                coding.
                                             </p>
                                         </div>
                                         <div class="after-box">
                                             <span>After</span>
                                             <p>
-                                                Senior Graphic Designer
-                                                working on Upwork.
+                                                Frontend Developer at  Upwork
+                                                earning $2000 monthly.
                                             </p>
                                         </div>
                                     </div>
@@ -156,7 +240,7 @@
                                     <div class="journey">
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-building"></i>
+                                                <img src="{{ asset('assets/images/icon88.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Joined<br>
@@ -165,139 +249,59 @@
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-check"></i>
+                                               <img src="{{ asset('assets/images/icon89.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Completed<br>
-                                                Course
+                                                React Bootstrap
                                             </span>
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-palette"></i>
+                                                <img src="{{ asset('assets/images/icon90.svg') }}" alt="">
                                             </div>
                                             <span>
-                                                Created<br>
-                                                Portfolio
+                                                Built<br>
+                                                8 Project
                                             </span>
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-briefcase"></i>
+                                                <img src="{{ asset('assets/images/icon91.svg') }}" alt="">
                                             </div>
                                             <span>
-                                                Got<br>
+                                                Secured<br>
                                                 Internship
                                             </span>
                                         </div>
                                         <div class="journey-item">
                                             <div class="journey-icon">
-                                                <i class="fas fa-dollar-sign"></i>
+                                                <img src="{{ asset('assets/images/icon92.svg') }}" alt="">
                                             </div>
                                             <span>
                                                 Got<br>
-                                                Job
+                                                Full Time Job
                                             </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
 
-                        <!-- Slide 3 -->
-                        <div class="success-main-slide">
-                            <div class="success-card">
-                                <div class="success-image">
-                                    <img src="assets/images/student-2.png" alt="">
-                                </div>
-                                <div class="success-content">
-                                    <h2>Ali raza</h2>
-                                    <span class="success-program">
-                                        Graphic Design Program
-                                    </span>
-                                    <span class="success-location">
-                                        <i class="fas fa-location-dot"></i>
-                                        Faisalabad, Pakistan
-                                    </span>
-                                    <div class="success-before-after">
-                                        <div class="before-box">
-                                            <span>Before</span>
-                                            <p>
-                                                No professional experience
-                                                in graphic design.
-                                            </p>
-                                        </div>
-                                        <div class="after-box">
-                                            <span>After</span>
-                                            <p>
-                                                Senior Graphic Designer
-                                                working on Upwork.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <h3>Journey</h3>
-                                    <div class="journey">
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <i class="fas fa-building"></i>
-                                            </div>
-                                            <span>
-                                                Joined<br>
-                                                Institute
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <i class="fas fa-check"></i>
-                                            </div>
-                                            <span>
-                                                Completed<br>
-                                                Course
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <i class="fas fa-palette"></i>
-                                            </div>
-                                            <span>
-                                                Created<br>
-                                                Portfolio
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <i class="fas fa-briefcase"></i>
-                                            </div>
-                                            <span>
-                                                Got<br>
-                                                Internship
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <i class="fas fa-dollar-sign"></i>
-                                            </div>
-                                            <span>
-                                                Got<br>
-                                                Job
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                     <!-- RIGHT SIDE NAVIGATION SLIDER -->
                     <div class="success-nav-slider">
                         <!-- Nav 1 -->
                         <div class="success-nav-item">
                             <div class="nav-student">
-                                <img src="assets/images/student-1.png" alt="">
+                                <img src="{{ asset('assets/images/img58.png') }}" alt="">
                                 <div>
                                     <h4>Ayesha Khan</h4>
                                     <span>Frontend Developer</span>
                                     <small>
-                                        <i class="fas fa-location-dot"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
                                         Faisalabad, Pakistan
                                     </small>
                                 </div>
@@ -310,37 +314,37 @@
                         <!-- Nav 2 -->
                         <div class="success-nav-item">
                             <div class="nav-student">
-                                <img src="assets/images/student-2.png" alt="">
+                                <img src="{{ asset('assets/images/img58.png') }}" alt="">
                                 <div>
-                                    <h4>Kiran Akmal</h4>
-                                    <span>Graphic Designer</span>
+                                    <h4>Ayesha Khan</h4>
+                                    <span>Frontend Developer</span>
                                     <small>
-                                        <i class="fas fa-location-dot"></i>
+                                        <i class="fas fa-map-marker-alt"></i>
                                         Faisalabad, Pakistan
                                     </small>
                                 </div>
                             </div>
                             <p>
-                                Senior Graphic Designer at
+                                Frontend Developer at
                                 <strong>Upwork</strong>
                             </p>
                         </div>
                         <!-- Nav 3 -->
                         <div class="success-nav-item">
                             <div class="nav-student">
-                                <img src="assets/images/student-3.png" alt="">
+                                <img src="{{ asset('assets/images/img58.png') }}" alt="">
                                 <div>
-                                    <h4>Ali Raza</h4>
-                                    <span>Web Developer</span>
+                                    <h4>Ayesha Khan</h4>
+                                    <span>Frontend Developer</span>
                                     <small>
-                                        <i class="fas fa-location-dot"></i>
-                                        Lahore, Pakistan
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Faisalabad, Pakistan
                                     </small>
                                 </div>
                             </div>
                             <p>
-                                Web Developer at
-                                <strong>Fiverr</strong>
+                                Frontend Developer at
+                                <strong>Upwork</strong>
                             </p>
                         </div>
                     </div>
