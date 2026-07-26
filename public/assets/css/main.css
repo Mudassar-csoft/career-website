@@ -6106,6 +6106,13 @@ body {
   font-weight: 400;
   padding: 8px 14px;
 }
+@media (max-width: 1200px) {
+  .main-header .top-bar a {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 8px 10px;
+  }
+}
 .main-header .top-bar a:hover {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50px 50px;
@@ -6127,6 +6134,12 @@ body {
   font-weight: 400;
   gap: 8px;
   padding: 0;
+}
+@media (max-width: 1200px) {
+  .main-header .top-bar .top-contact a {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 .main-header .top-bar .top-links {
   list-style: none;
@@ -6156,7 +6169,7 @@ body {
 }
 @media (max-width: 1200px) {
   .main-header .menu-bar .navbar-nav {
-    gap: 12px;
+    gap: 5px;
   }
 }
 .main-header .menu-bar .navbar-nav .nav-item:focus-visible {
@@ -6185,8 +6198,9 @@ body {
 }
 @media (max-width: 1200px) {
   .main-header .menu-bar .nav-link {
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 8px 10px;
   }
 }
 .main-header .menu-bar .nav-link:hover, .main-header .menu-bar .nav-link.active {
@@ -6196,6 +6210,13 @@ body {
   background: linear-gradient(90deg, rgba(0, 157, 184, 0.2) 0%, rgba(0, 196, 135, 0.2) 100%);
   border-radius: 50px 50px;
   color: #000;
+}
+@media (max-width: 992px) {
+  .main-header .menu-bar .nav-link:hover, .main-header .menu-bar .nav-link.active {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1019607843);
+    color: #fff;
+  }
 }
 .main-header .menu-bar .nav-link:focus-visible {
   outline: none;
@@ -6243,8 +6264,8 @@ body {
 }
 @media (max-width: 1200px) {
   .main-header .menu-bar .dropdown-menu .dropdown-item {
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 14px;
     padding: 10px 10px;
   }
 }
@@ -6265,6 +6286,11 @@ body {
 }
 .main-header .menu-bar .dropdown-menu li {
   border-bottom: 1px solid #ddd;
+}
+@media (max-width: 992px) {
+  .main-header .menu-bar .dropdown-menu li {
+    border-bottom: 0;
+  }
 }
 .main-header .menu-bar .dropdown-menu li:first-child a {
   border-radius: 8px 8px 0 0;

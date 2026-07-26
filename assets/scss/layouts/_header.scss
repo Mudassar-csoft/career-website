@@ -14,6 +14,11 @@
       color: #fff;
       font-weight: 400;
       padding: 8px 14px;
+      @include max(1200px) {
+        font-size: 10px;
+        line-height: 12px;
+        padding: 8px 10px;
+      }
       &:hover {
         background: #FFFFFF33;
         border-radius: 50px 50px;
@@ -33,6 +38,10 @@
         font-weight: 400;
         gap: 8px;
         padding: 0;
+        @include max(1200px) {
+          font-size: 10px;
+          line-height: 12px;
+        }
       }
     }
     .top-links {
@@ -61,7 +70,7 @@
     .navbar-nav {
       gap: 12px;
       @include max(1200px) {
-        gap: 12px;
+        gap: 5px;
       }
       .nav-item {
         &:focus-visible {
@@ -90,8 +99,9 @@
       padding: 8px 12px;
       border: 0;
       @include max(1200px) {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 8px 10px;
       }
       &:hover,
       &.active {
@@ -101,6 +111,11 @@
         background: linear-gradient(90deg, rgba(0, 157, 184, 0.2) 0%, rgba(0, 196, 135, 0.2) 100%);
         border-radius: 50px 50px;
         color: #000;
+        @include max(992px) {
+          border-radius: 0;
+          background: rgba(255, 255, 255, 0.1019607843);
+          color: #fff;
+        }
       }
       &:focus-visible {
         outline: none;
@@ -148,8 +163,8 @@
         font-weight: 500;
         color: #929292;
         @include max(1200px) {
-          font-size: 13px;
-          line-height: 15px;
+          font-size: 12px;
+          line-height: 14px;
           padding: 10px 10px;
         }
         @include max(992px) {
@@ -168,6 +183,9 @@
       }
       li {
         border-bottom: 1px solid #ddd;
+        @include max(992px) {
+          border-bottom: 0;
+        }
         &:first-child {
             a {
                 border-radius: 8px 8px 0 0;
