@@ -6095,20 +6095,20 @@ body {
 }
 .main-header .top-bar {
   background: #01324d;
-  padding: 15px 0;
-  font-size: 13px;
+  padding: 10px 0;
 }
 .main-header .top-bar a {
-  color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.1s;
   font-size: 12px;
   line-height: 14px;
   color: #fff;
   font-weight: 400;
+  padding: 8px 14px;
 }
 .main-header .top-bar a:hover {
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px 50px;
 }
 .main-header .top-bar .top-contact {
   gap: 25px;
@@ -6126,16 +6126,17 @@ body {
   color: #fff;
   font-weight: 400;
   gap: 8px;
+  padding: 0;
 }
 .main-header .top-bar .top-links {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 25px;
+  gap: 5px;
 }
 @media (max-width: 1200px) {
   .main-header .top-bar .top-links {
-    gap: 12px;
+    gap: 10px;
   }
 }
 .main-header .top-bar .top-links li {
@@ -6151,18 +6152,27 @@ body {
   object-fit: contain;
 }
 .main-header .menu-bar .navbar-nav {
-  gap: 25px;
+  gap: 12px;
 }
 @media (max-width: 1200px) {
   .main-header .menu-bar .navbar-nav {
-    gap: 15px;
+    gap: 12px;
   }
 }
 .main-header .menu-bar .navbar-nav .nav-item:focus-visible {
   outline: none;
+  box-shadow: none;
+  border: 0;
 }
 .main-header .menu-bar .navbar-nav .nav-item:focus {
   outline: none;
+  box-shadow: none;
+  border: 0;
+}
+.main-header .menu-bar .navbar-nav .nav-item:hover {
+  outline: none;
+  box-shadow: none;
+  border: 0;
 }
 .main-header .menu-bar .nav-link {
   color: #474747;
@@ -6170,7 +6180,7 @@ body {
   line-height: 16px;
   font-weight: 400;
   transition: 0.3s;
-  padding: 8px 0;
+  padding: 8px 12px;
   border: 0;
 }
 @media (max-width: 1200px) {
@@ -6180,8 +6190,16 @@ body {
   }
 }
 .main-header .menu-bar .nav-link:hover, .main-header .menu-bar .nav-link.active {
-  opacity: 0.8;
   outline: none;
+  border: 0;
+  box-shadow: none;
+  background: linear-gradient(90deg, rgba(0, 157, 184, 0.2) 0%, rgba(0, 196, 135, 0.2) 100%);
+  border-radius: 50px 50px;
+  color: #000;
+}
+.main-header .menu-bar .nav-link:focus-visible {
+  outline: none;
+  box-shadow: none;
   border: 0;
 }
 @media (max-width: 992px) {
@@ -6245,8 +6263,14 @@ body {
   background: linear-gradient(90deg, #009db8 0%, #00c487 100%);
   color: #fff;
 }
+.main-header .menu-bar .dropdown-menu li {
+  border-bottom: 1px solid #ddd;
+}
 .main-header .menu-bar .dropdown-menu li:first-child a {
   border-radius: 8px 8px 0 0;
+}
+.main-header .menu-bar .dropdown-menu li:last-child {
+  border-bottom: 0;
 }
 .main-header .menu-bar .dropdown-menu li:last-child a {
   border-radius: 0 0 8px 8px;

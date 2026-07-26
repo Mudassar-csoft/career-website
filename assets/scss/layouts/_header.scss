@@ -5,18 +5,18 @@
   z-index: 9;
   .top-bar {
     background: #01324d;
-    padding: 15px 0;
-    font-size: 13px;
+    padding: 10px 0;
     a {
-      color: #fff;
       text-decoration: none;
-      transition: 0.3s;
+      transition: 0.1s;
       font-size: 12px;
       line-height: 14px;
       color: #fff;
       font-weight: 400;
+      padding: 8px 14px;
       &:hover {
-        opacity: 0.8;
+        background: #FFFFFF33;
+        border-radius: 50px 50px;
       }
     }
     .top-contact {
@@ -32,15 +32,16 @@
         color: #fff;
         font-weight: 400;
         gap: 8px;
+        padding: 0;
       }
     }
     .top-links {
       list-style: none;
       margin: 0;
       padding: 0;
-      gap: 25px;
+      gap: 5px;
       @include max(1200px) {
-        gap: 12px;
+        gap: 10px;
       }
       li {
         display: flex;
@@ -58,16 +59,25 @@
       }
     }
     .navbar-nav {
-      gap: 25px;
+      gap: 12px;
       @include max(1200px) {
-        gap: 15px;
+        gap: 12px;
       }
       .nav-item {
         &:focus-visible {
             outline: none;
+            box-shadow: none;
+            border: 0;
         }
         &:focus {
             outline: none;
+            box-shadow: none;
+            border: 0;
+        }
+        &:hover {
+            outline: none;
+            box-shadow: none;
+            border: 0;
         }
       }
     }
@@ -77,7 +87,7 @@
       line-height: 16px;
       font-weight: 400;
       transition: 0.3s;
-      padding: 8px 0;
+      padding: 8px 12px;
       border: 0;
       @include max(1200px) {
         font-size: 13px;
@@ -85,9 +95,17 @@
       }
       &:hover,
       &.active {
-        opacity: 0.8;
         outline: none;
         border: 0;
+        box-shadow: none;
+        background: linear-gradient(90deg, rgba(0, 157, 184, 0.2) 0%, rgba(0, 196, 135, 0.2) 100%);
+        border-radius: 50px 50px;
+        color: #000;
+      }
+      &:focus-visible {
+        outline: none;
+        box-shadow: none;
+        border: 0;  
       }
     }
     .dropdown-toggle  {
@@ -149,12 +167,14 @@
         }
       }
       li {
+        border-bottom: 1px solid #ddd;
         &:first-child {
             a {
                 border-radius: 8px 8px 0 0;
             }
         }
         &:last-child {
+          border-bottom: 0;
             a {
                 border-radius: 0 0 8px 8px;
             }

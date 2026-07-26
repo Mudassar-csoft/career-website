@@ -128,6 +128,12 @@
                                 <li>
                                     <a class="dropdown-item"
                                         href="#">
+                                        Diploma’s
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="#">
                                         Intermediate (HSSC)
                                     </a>
                                 </li>
@@ -135,6 +141,12 @@
                                     <a class="dropdown-item"
                                         href="#">
                                         Associate Degree Program (ADP)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="#">
+                                        Undergraduate Programs
                                     </a>
                                 </li>
                             </ul>
