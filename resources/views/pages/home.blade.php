@@ -8,9 +8,8 @@
             <div class=	"col-lg-7">
                 <h1>Get Free Career Counseling</h1>
                 <p>
-                    Complete the form below and our career advisors will contact you shortly.<br>
-                    You'll also receive updates on courses, admissions, scholarships, events,<br>
-                    and career opportunities through our newsletter.
+                    Complete the form, and our career counsellors will contact you with<br>
+                    course details and admission updates.
                 </p>
                 <div class="form-block">
                     <form class="row g-3">
@@ -38,7 +37,7 @@
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="gridCheck" checked>
                                 <label class="form-check-label" for="gridCheck">
-                                Subscribe to newsletter
+                                    Subscribe to our newsletter
                                 </label>
                             </div>
                         </div>
