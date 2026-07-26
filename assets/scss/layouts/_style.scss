@@ -1438,7 +1438,7 @@
 
 .courses-page {
   .cer-bar {
-    padding: 5rem 0;
+    padding: 3rem 0;
     background: url(../images/banner04.png) no-repeat center center;
     background-size: 100%;
     text-align: center;
@@ -1447,17 +1447,46 @@
       font-weight: 700;
       font-size: 24px;
       line-height: 26px;
-      margin: 0 0 40px;
+      margin: 0 0 15px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 18px;
+      color: #fff;
+      font-weight: 400;
+      margin: 0 0 20px
     }
     .form-block {
-      .form-select {
-        @include ciput;
-      }
       .sc-iput {
         @include sc-iput;
       }
       #button-addon2 {
         @include addon-btn;
+      }
+    }
+    .btn-area {
+      text-align: center;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+          margin: 0 10px 0 0;
+          &:last-child {
+            margin: 0;
+          }
+          a {
+            background: linear-gradient(90deg, rgba(0, 157, 184, 0.5) 0%, rgba(3, 197, 135, 0.5) 100%);
+            padding: 15px 22px;
+            border-radius: 50px 50px;
+            font-size: 16px;
+            line-height: 18px;
+            color: #fff;
+            font-weight: 400;
+            display: block;
+            min-width: 170px;
+          }
+        }
       }
     }
   }
@@ -3084,16 +3113,40 @@
 
 #admission-modal {
   .modal-dialog {
-    max-width: 1100px;
+    max-width: 485px;
     .modal-content {
+      border: 0;
+      border-radius: 20px 20px;
+      box-shadow: 0px 6px 9px 0px #0000000D;
       .modal-header {
-        padding: 0;
+        padding: 20px 20px;
+        background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
         border: 0;
+        justify-content: center;
+        border-radius: 20px 20px 0 0;
+        @include max(575px) {
+          padding: 15px 15px;
+        }
+        h5 {
+          color: #fff;
+          font-size: 22px;
+          line-height: 24px;
+          @include max(575px) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
         .btn-close {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          z-index: 9;
+            position: absolute;
+            top: 32px;
+            right: 25px;
+            z-index: 9;
+            background: url(../images/icon93.svg) no-repeat;
+            opacity: 1;
+            padding: 0;
+            @include max(575px) {
+              top: 25px;
+            }
           &:focus {
             box-shadow: none;
             outline: none;
@@ -3101,6 +3154,7 @@
         }
       }
       .modal-body {
+        padding: 20px 20px;
         .form-block {
           .img-hold {
             text-align: center;
@@ -3115,29 +3169,39 @@
             text-align: center;
           }
           .form-label {
-            font-size: 16px;
-            line-height: 18px;
+            font-size: 14px;
+            line-height: 16px;
             color: #353535;
             font-weight: 500;
+            margin: 0 0 10px;
           }
-          input,
-          select,
-          textarea {
-            border: 1px solid #d0d0d0;
-            border-radius: 5px 5px;
-            background: #fff;
-            padding: 12px 12px;
-            font-size: 16px;
-            line-height: 18px;
-            color: #353535;
+          input {
+            border: 1px solid #D0D0D0;
+            border-radius: 3px 3px;
+            background: #F0F0F0;
+            padding: 13px 13px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #818181;
             &:focus {
               outline: none;
               box-shadow: none;
             }
+            &::placeholder {
+              transition: 0.4s ease;
+              text-indent: 0;
+              color:#818181;
+            }
+            &:hover::placeholder,
+            &:focus::placeholder {
+              text-indent: 10px;
+            }
           }
           .sm-btn {
             @include apply-btn;
-            padding: 15px 20px;
+            padding: 10px 25px;
+            font-size: 14px;
+            line-height: 16px;
           }
         }
       }

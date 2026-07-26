@@ -247,7 +247,7 @@
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                 How to Apply
+                                 How to Pay
                             </a>
                         </li>
                         <li class="nav-item d-lg-none">

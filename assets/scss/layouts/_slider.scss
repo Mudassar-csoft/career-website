@@ -827,3 +827,61 @@
     }
   }
 }
+
+
+// Courses slider start here
+
+.cor-slider {
+  .slick-slide {
+    margin: 0 10px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+    .text-box {
+      a {
+        backdrop-filter: blur(23.760000228881836px);
+        background: #FFFFFF33;
+        padding: 12px 15px;
+        border-radius: 10px 10px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        display: block;
+        color: #fff;
+      }
+    }
+  }
+  .slick-prev, .slick-next {
+    &::before {
+      display: none;
+    }
+  }
+  .slick-prev {
+    background: url(../images/icon95.svg) no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+    left: -40px;
+    top: 52%;
+    &:focus {
+      background: url(../images/icon95.svg) no-repeat;
+    }
+    &:hover {
+      background: url(../images/icon95.svg) no-repeat;
+    }
+  }
+  .slick-next {
+    background: url(../images/icon96.svg) no-repeat;
+    background-size: 100%;
+    width: 25px;
+    height: 25px;
+    right: -30px;
+    top: 52%;
+    &:focus {
+      background: url(../images/icon96.svg) no-repeat;
+    }
+    &:hover {
+      background: url(../images/icon96.svg) no-repeat;
+    }
+  }
+}
