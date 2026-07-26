@@ -59,159 +59,204 @@
         </div>
     </div>
 </section>
+<section class="c-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>
+                    Thousands of Learners trust Career<br>
+                    Institute to gain practical skills, earn recognized<br>
+                    certifications, and build successful careers.
+                </h2>
+                <p>
+                    Browse Course or Certification below to begin your success story.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="cor-block">
     <div class="container">
-        <div class="row mb-3">
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 px-lg-1">
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img16.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <h2>Video Editing</h2>
-                        <p>
-                            Category: <span>Videography</span>
-                        </p>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon12.svg') }}" alt="">3 Months</li>
-                            <li><img src="{{ asset('assets/images/icon11.svg') }}" alt="">On-premises</li>
-                        </ul>
-                        <a href="#" class="btn mr-btn">More Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <a href="#" class="btn see-btn">See more</a>
+            <div class="col-lg-12">
+                <h2>Explore By Category</h2>
+            </div>
+            <div class="col-lg-12">
+                <ul class="mb-3">
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon97.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>AI & Data Science</h4>
+                                <p>
+                                    AI, Machine Learning, Data Science, Python,
+                                    Data Analytics and Automation.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon98.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Web & Software Development</h4>
+                                <p>
+                                    MERN Stack, PHP Laravel, Python Django,
+                                    WordPress and Mobile App Development.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon99.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Digital Marketing & E-Commerce</h4>
+                                <p>
+                                    Digital Marketing, SEO, Google Ads,  TikTok,
+                                    Meta Ads, Shopify, Amazon and more.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon100.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Graphics, UI/UX & Creative Media</h4>
+                                <p>
+                                    Graphic & UI/UX Designing, Video Editing,
+                                    Motion Graphics, Animation and Content Creation.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="mb-3">
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon101.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Cybersecurity, Networking & Cloud</h4>
+                                <p>
+                                    Cybersecurity, Ethical Hacking, Networking
+                                    Administration, Cloud Computing and IT Support.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon102.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Architecture, Engineering & Design</h4>
+                                <p>
+                                    AutoCAD, Revit Architecture, SketchUp,
+                                    3D Modelling and Interior Design 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon103.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Office, Business & Accounting</h4>
+                                <p>
+                                    Office Management, Computerized Accounting,
+                                    QuickBooks and Business Administration.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon104.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Language & Test Preparation</h4>
+                                <p>
+                                    Spoken English, IELTS, PTE, Business English,
+                                    Grammar and Communication Skills.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon105.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Health, Safety & Compliance</h4>
+                                <p>
+                                    NEBOSH, IOSH, OSHA, Workplace Safety,
+                                    Fire Safety and HSE
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon106.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Freelancing & Entrepreneurship</h4>
+                                <p>
+                                    Freelancing, Personal Branding, Client Acquisition,
+                                    Business Development and Startup Skills.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon107.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>International Certifications</h4>
+                                <p>
+                                    Cisco, Microsoft, AWS, Autodesk, Oracle, SAP,
+                                    PMI, EC-Council and more.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon108.svg') }}" alt="">
+                            </div>
+                            <div class="t-hold">
+                                <h4>Professional & Soft Skills</h4>
+                                <p>
+                                    Leadership, Communication, Presentation Skills,
+                                    Career Development and Workplace Ethics.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
