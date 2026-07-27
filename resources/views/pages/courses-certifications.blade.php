@@ -471,6 +471,29 @@
                 </div>
             </div>
         </div>
+        <div class="ru-banner">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h2>
+                                Ready to Upgrade Your Skills?
+                            </h2>
+                            <p>
+                                Join our professional courses and certifications and<br>
+                                take the next step towards a successful career.
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul>
+                                <li><a href="#" class="btn gs-btn">Get Started</a></li>
+                                <li><a href="#" class="btn eac-btn">Explore All Courses</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="info-bar">
