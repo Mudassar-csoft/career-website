@@ -3,7 +3,10 @@
 // news slider start here
 
 .news-slider {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
+  @include max(1280px) {
+    margin: 0 0 30px;
+  }
   .slick-slide {
     margin: 0 0 12px;
     .box {
@@ -24,6 +27,10 @@
         @include max(1400px) {
           font-size: 14px;
           line-height: 18px;
+        }
+        @include max(1280px) {
+          font-size: 13px;
+          line-height: 16px;
         }
         a {
           color: #000;

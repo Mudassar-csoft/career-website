@@ -221,9 +221,12 @@
       margin: 0 0 18px;
       color: #000;
       @include max(1400px) {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 18px;
         margin: 0 0 15px;
+      }
+      @include max(1200px) {
+        margin: 0 0 25px;
       }
     }
     .r-btn {
@@ -1543,7 +1546,7 @@
   .cer-bar {
     padding: 3rem 0;
     background: url(../images/banner04.png) no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     text-align: center;
     h2 {
       color: #fff;

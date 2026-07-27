@@ -381,9 +381,14 @@ body {
 }
 @media (max-width: 1400px) {
   .news-area .about-bar p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
     margin: 0 0 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .news-area .about-bar p {
+    margin: 0 0 25px;
   }
 }
 .news-area .about-bar .r-btn {
@@ -2081,7 +2086,7 @@ body {
 .courses-page .cer-bar {
   padding: 3rem 0;
   background: url(../images/banner04.png) no-repeat center center;
-  background-size: 100%;
+  background-size: cover;
   text-align: center;
 }
 .courses-page .cer-bar h2 {
@@ -6764,7 +6769,12 @@ body {
 }
 
 .news-slider {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
+}
+@media (max-width: 1280px) {
+  .news-slider {
+    margin: 0 0 30px;
+  }
 }
 .news-slider .slick-slide {
   margin: 0 0 12px;
@@ -6792,6 +6802,12 @@ body {
   .news-slider .slick-slide .box p {
     font-size: 14px;
     line-height: 18px;
+  }
+}
+@media (max-width: 1280px) {
+  .news-slider .slick-slide .box p {
+    font-size: 13px;
+    line-height: 16px;
   }
 }
 .news-slider .slick-slide .box p a {
