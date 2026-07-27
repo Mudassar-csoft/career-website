@@ -1437,6 +1437,15 @@
 // Courses Certifications page start here
 
 .courses-page {
+  .feature-block {
+    background: none;
+    p {
+      margin: 0 0 30px;
+    }
+    h2 {
+      margin: 0 0 30px;
+    }
+  }
   .c-text {
     padding: 5rem 0;
     background: #F9F9F9;
@@ -1523,7 +1532,7 @@
     }
   }
   .cor-block {
-    padding: 4rem 0;
+    padding: 4rem 0 2rem;
     h2 {
       text-align: center;
       font-size: 38px;
@@ -1543,6 +1552,10 @@
           border-radius: 10px 10px;
           padding: 15px 15px;
           text-align: center;
+          transition: transform 0.3s ease;
+          &:hover {
+            transform: translateY(5px);
+          }
           .img-hold {
             margin: 0 0 20px;
           }
@@ -1552,6 +1565,7 @@
               line-height: 16px;
               font-weight: 600;
               margin: 0 0 10px;
+              color: #000;
             }
             p {
               margin: 0;

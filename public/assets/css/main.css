@@ -1946,6 +1946,15 @@ body {
     transform: translate(-50%, -50%) rotate(0deg);
   }
 }
+.courses-page .feature-block {
+  background: none;
+}
+.courses-page .feature-block p {
+  margin: 0 0 30px;
+}
+.courses-page .feature-block h2 {
+  margin: 0 0 30px;
+}
 .courses-page .c-text {
   padding: 5rem 0;
   background: #F9F9F9;
@@ -2055,7 +2064,7 @@ body {
   min-width: 170px;
 }
 .courses-page .cor-block {
-  padding: 4rem 0;
+  padding: 4rem 0 2rem;
 }
 .courses-page .cor-block h2 {
   text-align: center;
@@ -2078,6 +2087,10 @@ body {
   border-radius: 10px 10px;
   padding: 15px 15px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+.courses-page .cor-block ul li .box:hover {
+  transform: translateY(5px);
 }
 .courses-page .cor-block ul li .box .img-hold {
   margin: 0 0 20px;
@@ -2087,6 +2100,7 @@ body {
   line-height: 16px;
   font-weight: 600;
   margin: 0 0 10px;
+  color: #000;
 }
 .courses-page .cor-block ul li .box .t-hold p {
   margin: 0;

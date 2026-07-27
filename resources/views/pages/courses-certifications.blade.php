@@ -84,179 +84,391 @@
             <div class="col-lg-12">
                 <ul class="mb-3">
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon97.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon97.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>AI & Data Science</h4>
+                                    <p>
+                                        AI, Machine Learning, Data Science, Python,
+                                        Data Analytics and Automation.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>AI & Data Science</h4>
-                                <p>
-                                    AI, Machine Learning, Data Science, Python,
-                                    Data Analytics and Automation.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon98.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon98.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Web & Software Development</h4>
+                                    <p>
+                                        MERN Stack, PHP Laravel, Python Django,
+                                        WordPress and Mobile App Development.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Web & Software Development</h4>
-                                <p>
-                                    MERN Stack, PHP Laravel, Python Django,
-                                    WordPress and Mobile App Development.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon99.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon99.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Digital Marketing & E-Commerce</h4>
+                                    <p>
+                                        Digital Marketing, SEO, Google Ads,  TikTok,
+                                        Meta Ads, Shopify, Amazon and more.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Digital Marketing & E-Commerce</h4>
-                                <p>
-                                    Digital Marketing, SEO, Google Ads,  TikTok,
-                                    Meta Ads, Shopify, Amazon and more.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon100.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon100.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Graphics, UI/UX & Creative Media</h4>
+                                    <p>
+                                        Graphic & UI/UX Designing, Video Editing,
+                                        Motion Graphics, Animation and Content Creation.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Graphics, UI/UX & Creative Media</h4>
-                                <p>
-                                    Graphic & UI/UX Designing, Video Editing,
-                                    Motion Graphics, Animation and Content Creation.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
                 <ul class="mb-3">
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon101.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon101.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Cybersecurity, Networking & Cloud</h4>
+                                    <p>
+                                        Cybersecurity, Ethical Hacking, Networking
+                                        Administration, Cloud Computing and IT Support.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Cybersecurity, Networking & Cloud</h4>
-                                <p>
-                                    Cybersecurity, Ethical Hacking, Networking
-                                    Administration, Cloud Computing and IT Support.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon102.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon102.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Architecture, Engineering & Design</h4>
+                                    <p>
+                                        AutoCAD, Revit Architecture, SketchUp,
+                                        3D Modelling and Interior Design 
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Architecture, Engineering & Design</h4>
-                                <p>
-                                    AutoCAD, Revit Architecture, SketchUp,
-                                    3D Modelling and Interior Design 
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon103.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon103.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Office, Business & Accounting</h4>
+                                    <p>
+                                        Office Management, Computerized Accounting,
+                                        QuickBooks and Business Administration.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Office, Business & Accounting</h4>
-                                <p>
-                                    Office Management, Computerized Accounting,
-                                    QuickBooks and Business Administration.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon104.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon104.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Language & Test Preparation</h4>
+                                    <p>
+                                        Spoken English, IELTS, PTE, Business English,
+                                        Grammar and Communication Skills.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Language & Test Preparation</h4>
-                                <p>
-                                    Spoken English, IELTS, PTE, Business English,
-                                    Grammar and Communication Skills.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
 
                 <ul>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon105.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon105.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Health, Safety & Compliance</h4>
+                                    <p>
+                                        NEBOSH, IOSH, OSHA, Workplace Safety,
+                                        Fire Safety and HSE
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Health, Safety & Compliance</h4>
-                                <p>
-                                    NEBOSH, IOSH, OSHA, Workplace Safety,
-                                    Fire Safety and HSE
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon106.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon106.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Freelancing & Entrepreneurship</h4>
+                                    <p>
+                                        Freelancing, Personal Branding, Client Acquisition,
+                                        Business Development and Startup Skills.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Freelancing & Entrepreneurship</h4>
-                                <p>
-                                    Freelancing, Personal Branding, Client Acquisition,
-                                    Business Development and Startup Skills.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon107.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon107.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>International Certifications</h4>
+                                    <p>
+                                        Cisco, Microsoft, AWS, Autodesk, Oracle, SAP,
+                                        PMI, EC-Council and more.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>International Certifications</h4>
-                                <p>
-                                    Cisco, Microsoft, AWS, Autodesk, Oracle, SAP,
-                                    PMI, EC-Council and more.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon108.svg') }}" alt="">
+                        <a href="#">
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/icon108.svg') }}" alt="">
+                                </div>
+                                <div class="t-hold">
+                                    <h4>Professional & Soft Skills</h4>
+                                    <p>
+                                        Leadership, Communication, Presentation Skills,
+                                        Career Development and Workplace Ethics.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="t-hold">
-                                <h4>Professional & Soft Skills</h4>
-                                <p>
-                                    Leadership, Communication, Presentation Skills,
-                                    Career Development and Workplace Ethics.
-                                </p>
-                            </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="feature-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Featured Courses</h2>
+                <p class="aos-init aos-animate" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
+                    Build in-demand skills and move closer to your dream career with flexible online or on-campus learning led by expert Instructors.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature-slider">
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img03.png" alt="">
+                                <div class="offer-bar">
+                                    <h3>30%</h3>
+                                    <span>Discount</span>
+                                </div>
+                            </div>
+                            <div class="text-hold">
+                                <h3>Digital Marketing</h3>
+                                <ul>
+                                    <li>
+                                        Category: 
+                                        <span>Ecommerce</span>
+                                    </li>
+                                    <li>
+                                        Duration: 
+                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
+                                    </li>
+                                    <li>
+                                        Mode: 
+                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
+                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
+                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
+                                    </li>
+                                </ul>
+                                <div class="btn-area">
+                                    <a href="#" class="btn an-btn">Apply Now</a>
+                                    <a href="#" class="btn md-btn">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img03.png" alt="">
+                                <div class="offer-bar">
+                                    <h3>30%</h3>
+                                    <span>Discount</span>
+                                </div>
+                            </div>
+                            <div class="text-hold">
+                                <h3>Digital Marketing</h3>
+                                <ul>
+                                    <li>
+                                        Category: 
+                                        <span>Ecommerce</span>
+                                    </li>
+                                    <li>
+                                        Duration: 
+                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
+                                    </li>
+                                    <li>
+                                        Mode: 
+                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
+                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
+                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
+                                    </li>
+                                </ul>
+                                <div class="btn-area">
+                                    <a href="#" class="btn an-btn">Apply Now</a>
+                                    <a href="#" class="btn md-btn">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img03.png" alt="">
+                                <div class="offer-bar">
+                                    <h3>30%</h3>
+                                    <span>Discount</span>
+                                </div>
+                            </div>
+                            <div class="text-hold">
+                                <h3>Digital Marketing</h3>
+                                <ul>
+                                    <li>
+                                        Category: 
+                                        <span>Ecommerce</span>
+                                    </li>
+                                    <li>
+                                        Duration: 
+                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
+                                    </li>
+                                    <li>
+                                        Mode: 
+                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
+                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
+                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
+                                    </li>
+                                </ul>
+                                <div class="btn-area">
+                                    <a href="#" class="btn an-btn">Apply Now</a>
+                                    <a href="#" class="btn md-btn">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img03.png" alt="">
+                                <div class="offer-bar">
+                                    <h3>30%</h3>
+                                    <span>Discount</span>
+                                </div>
+                            </div>
+                            <div class="text-hold">
+                                <h3>Digital Marketing</h3>
+                                <ul>
+                                    <li>
+                                        Category: 
+                                        <span>Ecommerce</span>
+                                    </li>
+                                    <li>
+                                        Duration: 
+                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
+                                    </li>
+                                    <li>
+                                        Mode: 
+                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
+                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
+                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
+                                    </li>
+                                </ul>
+                                <div class="btn-area">
+                                    <a href="#" class="btn an-btn">Apply Now</a>
+                                    <a href="#" class="btn md-btn">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="assets/images/img03.png" alt="">
+                                <div class="offer-bar">
+                                    <h3>30%</h3>
+                                    <span>Discount</span>
+                                </div>
+                            </div>
+                            <div class="text-hold">
+                                <h3>Digital Marketing</h3>
+                                <ul>
+                                    <li>
+                                        Category: 
+                                        <span>Ecommerce</span>
+                                    </li>
+                                    <li>
+                                        Duration: 
+                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
+                                    </li>
+                                    <li>
+                                        Mode: 
+                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
+                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
+                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
+                                    </li>
+                                </ul>
+                                <div class="btn-area">
+                                    <a href="#" class="btn an-btn">Apply Now</a>
+                                    <a href="#" class="btn md-btn">More Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
