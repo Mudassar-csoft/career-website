@@ -2333,7 +2333,6 @@ body {
 }
 .courses-page .acc-area .course-listing .course-sidebar .filter-box ul li label input:focus {
   box-shadow: none;
-  border: 0;
   outline: none;
 }
 .courses-page .acc-area .course-listing .course-content .course-top-bar {
