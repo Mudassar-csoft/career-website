@@ -2327,6 +2327,15 @@ body {
   height: 16px;
   cursor: pointer;
 }
+.courses-page .acc-area .course-listing .course-sidebar .filter-box ul li label input:checked {
+  background-color: #03C587;
+  border-color: #03C587;
+}
+.courses-page .acc-area .course-listing .course-sidebar .filter-box ul li label input:focus {
+  box-shadow: none;
+  border: 0;
+  outline: none;
+}
 .courses-page .acc-area .course-listing .course-content .course-top-bar {
   padding: 15px 0 0;
 }

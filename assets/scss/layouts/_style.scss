@@ -1764,6 +1764,15 @@
                   width: 16px;
                   height: 16px;
                   cursor: pointer;
+                  &:checked {
+                    background-color: #03C587;
+                    border-color: #03C587;
+                  }
+                  &:focus {
+                    box-shadow: none;
+                    border: 0;
+                    outline: none;
+                  }
                 }
               }
             }
