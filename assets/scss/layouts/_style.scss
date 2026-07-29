@@ -581,6 +581,9 @@
       line-height: 20px;
     }
   }
+  .ru-banner {
+    @include banner;
+  }
 }
 .video-block {
   background: radial-gradient(
@@ -1467,64 +1470,6 @@
     }
     .feature-slider {
       margin: 0 0 4rem;
-    }
-    .ru-banner {
-      padding: 40px 0;
-      background: url(../images/img59.png) no-repeat top right;
-      background-size: cover;
-      border-radius: 35px 35px;
-      position: relative;
-      &::before {
-        position: absolute;
-        top: 15px;
-        left: 0;
-        right: auto;
-        bottom: auto;
-        content: "";
-        background: url(../images/img60.png) no-repeat;
-        background-size: 100%;
-        width: 170px;
-        height: 170px;
-        opacity: 0.4;
-      }
-      h2 {
-        text-align: left;
-        font-size: 30px;
-        line-height: 34px;
-        color: #fff;
-        font-weight: 700;
-        margin: 0 0 10px;
-      }
-      p {
-        text-align: left;
-        font-size: 18px;
-        line-height: 25px;
-        font-weight: 400;
-        color: #fff;
-        margin: 0;
-      }
-      ul {
-        li {
-          margin: 0 0 10px;
-          &:last-child {
-            margin: 0;
-          }
-          .gs-btn {
-            @include apply-btn;
-            display: block;
-            font-size: 14px;
-            line-height: 16px;
-            padding: 15px 15px;
-          }
-          .eac-btn {
-            @include rm-btn;
-            display: block;
-            font-size: 14px;
-            line-height: 16px;
-            padding: 15px 15px;
-          }
-        }
-      }
     }
   }
   .c-text {
@@ -4243,5 +4188,354 @@
   }
   .success-area {
     padding: 5rem 0 1rem;
+  }
+}
+
+// Course detail page start here
+
+.course-detail {
+  .cou-detail {
+    background: url(../images/banner18.png) no-repeat top center;
+    background-size: cover;
+    padding: 4rem 0;
+    span {
+      background: #03C587;
+      display: inline-block;
+      padding: 10px 25px;
+      border-radius: 10px 10px;
+      font-size: 18px;
+      line-height: 20px;
+      color: #fff;
+      margin: 0 0 20px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+      margin: 0 0 15px;
+      font-weight: 400;
+    }
+    h5 {
+      display: flex;
+      align-items: center;
+      font-weight: 18px;
+      line-height: 20px;
+      color: #fff;
+      font-weight: 500;
+      padding: 0 0 15px;
+      margin: 0 0 15px;
+      img {
+        margin: 0 7px 0 0;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        font-size: 14px;
+        line-height: 16px;
+        color: #fff;
+        font-weight: 500;
+        margin: 0 15px 0 0;
+        img {
+          margin: 0 5px 0 0;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .cou-info {
+    background: #fafafa;
+    padding: 3rem 0 7rem;
+    .l-box {
+      padding: 25px 25px;
+      box-shadow: 3px 4px 12px 1px #00000012;
+      border-radius: 10px 10px;
+      background: #fff;
+      h3 {
+        font-size: 24px;
+        line-height: 26px;
+        color: #000;
+        font-weight: 600;
+        margin: 0 0 15px;
+        padding: 0 0 15px;
+        border-bottom: 1px solid #DEDEDE;
+      }
+      p {
+        font-size: 16px;
+        line-height: 25px;
+        color: #656565;
+        font-weight: 400;
+        margin: 0 0 20px;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0 10px;
+        li {
+          width: 50%;
+          font-size: 14px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          margin: 0 0 15px;
+          img {
+            margin: 0 5px 0 0;
+          }
+        }
+      }
+      .list-bar {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+        li {
+          width: 25%;
+          font-size: 14px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          margin: 0;
+          img {
+            margin: 0 7px 0 0;
+          }
+        }
+      }
+    }
+    .rig-bar {
+      padding: 25px 25px;
+      box-shadow: 3px 4px 12px 1px #00000012;
+      border-radius: 10px 10px;
+      background: #fff;
+      height: 100%;
+      .btn-bar {
+        margin: 0 0 30px;
+        .en-btn {
+          @include apply-btn;
+          width: 100%;
+          border-radius: 0;
+          font-size: 14px;
+          line-height: 16px;
+          border-radius: 10px 10px;
+          padding: 12px 12px;
+          margin: 0 0 10px;
+        }
+        .db-btn {
+          @include rm-btn;
+          background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #019FB6 0%, #03C38A 100%) border-box;
+          width: 100%;
+          border-radius: 0;
+          font-size: 14px;
+          line-height: 16px;
+          border-radius: 10px 10px;
+          padding: 12px 12px;
+          margin: 0;
+        }
+      }
+      .s-link {
+        h2 {
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: #000;
+          font-weight: 400;
+          margin: 0 0 20px;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 0 15px;
+          padding: 0 0 20px;
+          border-bottom: 1px solid #EDEDED;
+          li {
+            margin: 0 10px 0 0;
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .c-de {
+        h3 {
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 600;
+          margin: 0 0 15px;
+        }
+        ul {
+          margin: 0 0 25px;
+          padding: 0 0 20px;
+          border-bottom: 1px solid #EDEDED;
+          li {
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 600;
+            margin: 0 0 12px;
+            display: flex;
+            align-items: center;
+            img {
+              margin: 0 7px 0 0;
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .dis-aera {
+        h2 {
+          font-size: 14px;
+          line-height: 16px;
+          color: #000;
+          margin: 0 0 10px;
+          font-weight: 600;
+        }
+        .voucher-input {
+          border: 1px solid #CCCCCC;
+          border-radius: 10px 10px;
+          padding: 15px 15px;
+          font-size: 12px;
+          line-height: 14px;
+          color: #737373;
+          &::placeholder {
+              color: #737373;
+          }
+          &:focus {
+              border-color: #ccc;
+              box-shadow: none;
+          }
+        }
+        .voucher-btn {
+          border: 1px solid #03C587;
+          border-radius: 10px 10px;
+          background: #fff;
+          color: #03C587;
+          font-size: 12px;
+          line-height: 14px;
+          font-weight: 400;
+          padding: 14px 10px;
+          &:hover {
+            background:#03C587;
+            color: #fff;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  .course-info {
+    padding: 25px 25px;
+    box-shadow: 3px 4px 12px 1px #00000012;
+    border-radius: 10px 10px;
+    background: #fff;
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 24px;
+      line-height: 26px;
+      font-weight: 600;
+      margin: 0 0 20px;
+      span {
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 400;
+      }
+    }
+    .accordion-area {
+      .accordion {
+        .accordion-item {
+          border: 0;
+          box-shadow: 0px 0px 8px 1px #00000012;
+          margin: 0 0 15px;
+          h2 {
+            box-shadow: 0px 0px 8px 2px #00000012;
+            margin: 0;
+            button {
+              background: #F8FFFD;
+              display: flex;
+              align-content: center;
+              justify-content: space-between;
+              padding: 12px 12px 12px 45px;
+              color: #000;
+              p {
+                font-size: 18px;
+                line-height: 20px;
+                color: #000;
+                font-weight: 400;
+              }
+              span {
+                font-size: 18px;
+                line-height: 20px;
+                color: #000;
+                font-weight: 400;
+              }
+              &::after {
+                position: absolute;
+                left: 15px;
+                background-image: url(../images/icon124.png);
+                background-size: 15px;
+                width: 1rem;
+                height: 1rem;
+              }
+              &:focus {
+                box-shadow: none;
+                border: 0;
+              }
+              &:not(.collapsed)::after {
+                background-image: url(../images/icon125.png);
+                height: 2px;
+              }
+            }
+          }
+          .accordion-body {
+            padding: 15px 15px 15px 60px;
+            ul {
+              li {
+                font-size: 14px;
+                line-height: 16px;
+                color: #000;
+                font-weight: 400;
+                margin: 0 0 15px;
+                position: relative;
+                &:last-child {
+                  margin: 0;
+                }
+                &::before {
+                  position: absolute;
+                  top: 4px;
+                  left: -15px;
+                  right: auto;
+                  bottom: auto;
+                  content: "";
+                  width: 10px;
+                  height: 10px;
+                  background: #000;
+                  border-radius: 100% 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .ru-banner {
+    @include banner;
+    margin: 0 0 5rem;
   }
 }
