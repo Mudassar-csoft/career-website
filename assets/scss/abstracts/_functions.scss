@@ -447,3 +447,54 @@
 		}
 	}
 }
+
+@mixin pagi {
+	.pagination {
+		gap: 8px;
+		align-items: center;
+		}
+		.page-item {
+		.page-link {
+			border-radius: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #000;
+			font-weight: 400;
+			border: 0;
+			width: 40px;
+			height: 40px;
+			padding: 10px 10px;
+			&:hover {
+			background: #03C587;
+			color: #fff;
+			font-weight: 700;
+			}
+		}
+		&.active {
+			.page-link {
+			background: #03C587;
+			color: #fff;
+			font-weight: 700;
+			}
+		}
+		&:first-child {
+			a {
+			width: auto;
+			height: auto;
+			i {
+				margin: 0 5px 0 0;
+			}
+			}
+		}
+		&:last-child {
+			a {
+			width: auto;
+			height: auto;
+			i {
+				margin: 0 0 0 5px;
+			}
+			}
+		}
+	}
+}

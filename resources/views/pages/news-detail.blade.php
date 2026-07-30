@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'News Detail | Career Website')
-@section('body_class', 'news-detail')
+@section('body_class', 'news-page')
 @section('content')
 <section class="news-bar">
     <div class="container">
