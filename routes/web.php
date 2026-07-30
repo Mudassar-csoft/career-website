@@ -18,6 +18,7 @@ $pages = [
     ['uri' => '/verifications', 'view' => 'pages.verifications', 'name' => 'verifications'],
     ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
     ['uri' => '/course-detail', 'view' => 'pages.course-detail', 'name' => 'course-detail'],
+    ['uri' => '/news-detail', 'view' => 'pages.news-detail', 'name' => 'news-detail'],
 ];
 
 foreach ($pages as $page) {
@@ -39,3 +40,4 @@ Route::redirect('/study-abroad.html', '/study-abroad', 301);
 Route::redirect('/Verifications.html', '/verifications', 301);
 Route::redirect('/stories.html', '/stories', 301);
 Route::redirect('/course-detail.html', '/course-detail', 301);
+Route::redirect('/news-detail.html', '/news-detail', 301);
