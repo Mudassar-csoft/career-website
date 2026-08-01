@@ -2,7 +2,7 @@
 @section('title', 'News Page | Career Website')
 @section('body_class', 'news-page')
 @section('content')
-<div class="top-banner">
+<section class="top-banner">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <section class="news-bar">
     <div class="container">
         <div class="row">
