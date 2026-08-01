@@ -1799,6 +1799,14 @@
     font-weight: 500;
     margin: 0 0 50px;
   }
+  p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
+    font-weight: 500;
+    margin: 0 0 40px;
+    text-align: center;
+  }
   .box {
     padding: 0;
     margin: 0 0 25px;
@@ -4054,64 +4062,7 @@
 
 .course-detail {
   .cou-detail {
-    background: url(../images/banner18.png) no-repeat top center;
-    background-size: cover;
-    padding: 4rem 0;
-    span {
-      background: #03C587;
-      display: inline-block;
-      padding: 10px 25px;
-      border-radius: 10px 10px;
-      font-size: 18px;
-      line-height: 20px;
-      color: #fff;
-      margin: 0 0 20px;
-      font-weight: 600;
-    }
-    h1 {
-      font-size: 24px;
-      line-height: 26px;
-      font-weight: 700;
-      color: #fff;
-      margin: 0 0 10px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 22px;
-      color: #fff;
-      margin: 0 0 15px;
-      font-weight: 400;
-    }
-    h5 {
-      display: flex;
-      align-items: center;
-      font-weight: 18px;
-      line-height: 20px;
-      color: #fff;
-      font-weight: 500;
-      padding: 0 0 15px;
-      margin: 0 0 15px;
-      img {
-        margin: 0 7px 0 0;
-      }
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      li {
-        font-size: 14px;
-        line-height: 16px;
-        color: #fff;
-        font-weight: 500;
-        margin: 0 15px 0 0;
-        img {
-          margin: 0 5px 0 0;
-        }
-        &:last-child {
-          margin: 0;
-        }
-      }
-    }
+    @include gc-detail;
   }
   .cou-info {
     background: #fafafa;
@@ -4937,6 +4888,195 @@
           }
           &:last-child {
             margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// gotegory detail page start here
+
+.gategory-page {
+  .gate-detail {
+    @include gc-detail;
+    background: url(../images/banner21.png) no-repeat top center;
+    background-size: cover;
+    padding: 7rem 0;
+  }
+  .info-bar {
+    .ru-banner {
+      @include banner;
+      margin: 0 0 7rem;
+    }
+  }
+  .gate-info {
+    padding: 50px 0;
+    background: #fafafa;
+    .box {
+      padding: 30px 15px;
+      box-shadow: 3px 4px 12px 1px #00000012;
+      border-radius: 10px 10px;
+      background: #fff;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+          width: 32%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          .img-hold {
+            width: 25%;
+            img {
+              width: 100%;
+            }
+          }
+          .text-hold {
+            padding: 0 0 0 10px;
+            width: 75%;
+            h4 {
+              font-size: 18px;
+              line-height: 20px;
+              color: #000;
+              font-weight: 600;
+              margin: 0 0 7px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 16px;
+              color: #000;
+              font-weight: 400;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .course-category {
+    padding: 3rem 0;
+    h2 {
+      font-size: 38px;
+      line-height: 40px;
+      color: #000;
+      font-weight: 700;
+      margin: 0 0 40px;
+      text-align: center;
+      @include max(1400px) {
+        font-size: 35px;
+        line-height: 40px;
+        margin: 0 0 30px;
+      }
+      @include max(767px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
+      @include max(575px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+    }
+    .box {
+      box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.07);
+      border-radius: 10px 10px;
+      margin: 5px 5px;
+      .img-hold {
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        img {
+          width: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+        .offer-bar {
+          position: absolute;
+          top: 0;
+          left: auto;
+          right: 0;
+          bottom: auto;
+          content: "";
+          background: linear-gradient(
+            180deg,
+            rgba(252, 95, 1, 0.7) 0%,
+            rgba(210, 143, 13, 0.7) 100%
+          );
+          border-radius: 0 10px 0 10px;
+          padding: 10px 15px;
+          text-align: center;
+          h3 {
+            font-size: 16px;
+            line-height: 18px;
+            color: #fff;
+            font-weight: 700;
+            margin: 0;
+          }
+          span {
+            font-size: 12px;
+            line-height: 14px;
+            color: #fff;
+            font-weight: 600;
+            display: block;
+          }
+        }
+      }
+      .text-hold {
+        padding: 15px 15px;
+        background: #fff;
+        border-radius: 10px 10px;
+        h3 {
+          font-size: 22px;
+          line-height: 24px;
+          color: #000;
+          font-weight: 600;
+          margin: 0 0 12px;
+          @include max(480px) {
+            font-size: 20px;
+            line-height: 22px;
+          }
+        }
+        ul {
+          margin: 0 0 12px;
+          li {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 700;
+            color: #535353;
+            margin: 0 0 8px;
+            span {
+              font-size: 12px;
+              line-height: 14px;
+              font-weight: 400;
+              margin: 0 0 0 7px;
+              display: flex;
+              align-items: center;
+              img {
+                margin: 0 5px 0 0;
+              }
+            }
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        .btn-area {
+          display: flex;
+          align-items: center;
+          .an-btn {
+            @include an-btn;
+            @include max(480px) {
+              font-size: 13px;
+              line-height: 15px;
+            }
+          }
+          .md-btn {
+            @include md-btn;
+            @include max(480px) {
+              font-size: 13px;
+              line-height: 15px;
+            }
           }
         }
       }
