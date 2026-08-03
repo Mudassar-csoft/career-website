@@ -8648,6 +8648,7 @@ body {
   line-height: 16px;
   font-weight: 400;
   color: #929292;
+  border: 1.5px solid #fff;
 }
 @media (max-width: 1200px) {
   .main-header .menu-bar .dropdown-menu .dropdown-item {
