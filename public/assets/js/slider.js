@@ -23,6 +23,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000,
+            speed: 500,
             arrows: true,
             pauseOnHover: true,
             infinite: true,

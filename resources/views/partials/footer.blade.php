@@ -34,7 +34,7 @@
             </div>
             <div class="col-lg-3 col-md-4 col-6">
                 <div class="list-bar">
-                    <h2>Extras</h2>
+                    <h2>Others</h2>
                     <ul>
                         <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Online Admission</a></li>
                         <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">How to Pay</a></li>
