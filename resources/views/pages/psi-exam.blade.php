@@ -103,7 +103,8 @@
                                     <h2>Schedule your exam</h2>
                                 </div>
                             </div>
-                            <form class="row g-3" action="#">
+                            <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                                @csrf
                                 <div class="col-md-4">
                                     <input type="text" class="form-control" placeholder="Enter Exam Title">
                                 </div>
@@ -111,10 +112,10 @@
                                     <input type="text" class="form-control" placeholder="Exam Code">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Full Name">
+                                    <input type="text" class="form-control" name="name" placeholder="Full Name">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="email" class="form-control" placeholder="Email">
+                                    <input type="email" class="form-control" name="email" placeholder="Email">
                                 </div>
                                 <div class="col-md-4">
                                     <select id="inputcity" class="form-select">
@@ -131,6 +132,7 @@
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn sr-btn">Submit Request</button>
                                 </div>
+                                <input type="hidden" name="source" value="PSI Exam Booking">
                             </form>
                         </div>
                     </div>

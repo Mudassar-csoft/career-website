@@ -41,18 +41,19 @@
             </div>
             <div class="modal-body">
                 <div class="form-block">
-                    <form class="row g-2">
+                    <form class="row g-2 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
                         <div class="col-md-12">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Your  Full Name ">
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your  Full Name ">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Contact Number</label>
-                            <input type="text" class="form-control" placeholder="Enter Your  Contact Number ">
+                            <input type="text" class="form-control" name="phone" placeholder="Enter Your  Contact Number ">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Email Address (Optional)</label>
-                            <input type="text" class="form-control" placeholder="Enter Your Email Address">
+                            <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Interested Course or Certification</label>
@@ -69,6 +70,7 @@
                         <div class="col-12 text-center mt-4">
                             <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
                         </div>
+                        <input type="hidden" name="source" value="Online Admission Modal">
                     </form>
                 </div>
             </div>

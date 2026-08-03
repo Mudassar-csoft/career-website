@@ -12,18 +12,19 @@
                     course details and admission updates.
                 </p>
                 <div class="form-block">
-                    <form class="row g-3">
+                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Full Name">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name">
                         </div>
                         <div class="col-12 col-sm-6">
                             <input type="text" class="form-control" placeholder="Course">
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Contact">
+                            <input type="text" class="form-control" name="phone" placeholder="Contact">
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control" placeholder="example@gmail.com">
+                            <input type="email" class="form-control" name="email" placeholder="example@gmail.com">
                         </div>
                         <div class="col-12 col-sm-6">
                             <select class="form-select">
@@ -44,6 +45,7 @@
                         <div class="col-12">
                             <button type="submit" class="btn apply-btn">Apply Now</button>
                         </div>
+                        <input type="hidden" name="source" value="Homepage Hero">
                     </form>
                 </div>
             </div>
@@ -960,15 +962,16 @@
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
-                    <form class="row g-3">
+                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
-                            <input type="text" class="form-control" placeholder="Full Name">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name">
                         </div>
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                            <input type="text" class="form-control" placeholder="Contact no">
+                            <input type="text" class="form-control" name="phone" placeholder="Contact no">
                         </div>
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                            <input type="email" class="form-control" placeholder="Email Address">
+                            <input type="email" class="form-control" name="email" placeholder="Email Address">
                         </div>
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
                             <input type="text" class="form-control" placeholder="Business Interest">
@@ -979,6 +982,7 @@
                         <div class="col-12 text-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300">
                             <button type="submit" class="btn apply-btn mt-4">Apply Now</button>
                         </div>
+                        <input type="hidden" name="source" value="Partner Inquiry - Home">
                     </form>
                 </div>
             </div>
@@ -1187,10 +1191,12 @@
                                 career opportunities.
                             </p>
                         </div>
-                        <form class="newsletter__form">
-                            <input type="text" placeholder="Contact No." required>
-                            <input type="email" placeholder="Example@gmail.com" required>
+                        <form class="newsletter__form lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                            @csrf
+                            <input type="text" name="phone" placeholder="Contact No." required>
+                            <input type="email" name="email" placeholder="Example@gmail.com" required>
                             <button type="submit" class="join-btn">Join</button>
+                            <input type="hidden" name="source" value="Newsletter - Home">
                         </form>
                     </div>
                 </section>

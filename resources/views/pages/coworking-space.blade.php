@@ -194,15 +194,16 @@
                         shared spaces, our solutions offer the flexibility and value you need to succeed.<br>
                         We’re Here to Help You Achieve Your Goals!.
                     </p>
-                    <form class="row g-2">
+                    <form class="row g-2 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" name="name" placeholder="Name">
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Contact">
+                            <input type="text" class="form-control" name="phone" placeholder="Contact">
                         </div>
                         <div class="col-md-6">
                             <input type="text" class="form-control" placeholder="City">
@@ -219,6 +220,7 @@
                         <div class="col-12 text-center">
                             <button type="submit" class="btn sr-btn">Submit Request</button>
                         </div>
+                        <input type="hidden" name="source" value="Coworking Space">
                     </form>
                 </div>
             </div>

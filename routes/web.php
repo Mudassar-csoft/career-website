@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
+
+Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
 
 $pages = [
     ['uri' => '/', 'view' => 'pages.home', 'name' => 'home'],

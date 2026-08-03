@@ -624,18 +624,19 @@
                     <p>
                         Please complete the form, and one of our representatives will get back to you shortly.
                     </p>
-                    <form class="row g-3">
+                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" name="name" placeholder="Name">
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email">
                         </div>
                         <div class="col-md-6">
                             <input type="text" class="form-control" placeholder="Subject">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Phone no">
+                            <input type="text" class="form-control" name="phone" placeholder="Phone no">
                         </div>
                         <div class="col-md-12">
                             <textarea placeholder="Message" class="form-control" rows="9"></textarea>
@@ -643,6 +644,7 @@
                         <div class="col-12 text-center mt-4">
                             <button type="submit" class="btn sm-btn">Send Message</button>
                         </div>
+                        <input type="hidden" name="source" value="Category Page">
                     </form>
                 </div>
             </div>

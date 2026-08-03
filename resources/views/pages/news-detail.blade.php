@@ -189,10 +189,12 @@
                                 career opportunities.
                             </p>
                         </div>
-                        <form class="newsletter__form">
-                            <input type="text" placeholder="Contact No." required>
-                            <input type="email" placeholder="Example@gmail.com" required>
+                        <form class="newsletter__form lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                            @csrf
+                            <input type="text" name="phone" placeholder="Contact No." required>
+                            <input type="email" name="email" placeholder="Example@gmail.com" required>
                             <button type="submit" class="join-btn">Join</button>
+                            <input type="hidden" name="source" value="Newsletter - News Detail">
                         </form>
                     </div>
                 </section>
