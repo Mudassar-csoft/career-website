@@ -1,8 +1,6 @@
 @extends('layouts.app')
-
 @section('title', 'Job Placement | Career Website')
 @section('body_class', 'job-page')
-
 @section('content')
 <section class="f-job">
     <div class="container">

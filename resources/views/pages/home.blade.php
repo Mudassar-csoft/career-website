@@ -239,7 +239,7 @@
                 </div>
                 <div class="row mb-4 mb-lg-0 d-none d-md-flex">
                     <div class="col-md-6">
-                        <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+                        <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="600">
                             <h2>News</h2>
                             <div class="news-slider">
                                 <div>
