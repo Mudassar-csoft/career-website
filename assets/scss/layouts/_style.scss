@@ -154,6 +154,15 @@
     }
     ul {
       margin: 0 0 38px;
+      @include max(1400px) {
+        margin: 0 0 34px;
+      }
+      @include max(1200px) {
+        margin: 0 0 55px;
+      }
+      @include max(993px) {
+        margin: 0;
+      }
       li {
         display: flex;
         flex-wrap: wrap;

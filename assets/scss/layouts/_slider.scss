@@ -4,8 +4,20 @@
 
 .news-slider {
   margin: 0 0 44px;
+  @include max(1400px) {
+    margin: 0 0 35px;
+  }
   @include max(1280px) {
+    margin: 0 0 45px;
+  }
+  @include max(1200px) {
+    margin: 0 0 66px;
+  }
+  @include max(993px) {
     margin: 0 0 30px;
+  }
+  @include max(767px) {
+    margin: 0 0 20px;
   }
   .slick-slide {
     margin: 0 0 12px;
