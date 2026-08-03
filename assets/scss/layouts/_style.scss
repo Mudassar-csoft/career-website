@@ -36,7 +36,7 @@
   }
   p {
     font-size: 16px;
-    line-height: 25px;
+    line-height: 22px;
     color: #fff;
     margin: 0 0 30px;
     @include max(1400px) {
@@ -153,6 +153,16 @@
       }
     }
     ul {
+      margin: 0 0 38px;
+      @include max(1400px) {
+        margin: 0 0 34px;
+      }
+      @include max(1200px) {
+        margin: 0 0 55px;
+      }
+      @include max(993px) {
+        margin: 0;
+      }
       li {
         display: flex;
         flex-wrap: wrap;
@@ -542,8 +552,17 @@
     object-fit: cover;
     border-radius: 20px;
   }
+  .swipe-text {
+    h3 {
+      font-size: 20px;
+      line-height: 22px;
+      color: #000;
+      font-weight: 600;
+    }
+  }
   .video-card {
     position: relative;
+    margin: 0 0 15px;
     img {
       width: 90%;
       border-radius: 25px;
@@ -1350,7 +1369,7 @@
 
 .courses-page {
   .form-block {
-    margin: 70px 0 0;
+    margin: 0;
     p {
       text-align: center;
       margin: 0 0 40px;
@@ -1368,7 +1387,7 @@
   .feature-block {
     background: none;
     p {
-      margin: 0 0 30px;
+      margin: 0;
       font-weight: 300;
     }
     h2 {
@@ -1412,7 +1431,7 @@
   }
   .cer-bar {
     padding: 3rem 0;
-    background: url(../images/banner04.png) no-repeat center center;
+    background: url(../images/banner04.png) no-repeat bottom center;
     background-size: cover;
     text-align: center;
     h2 {
@@ -1783,6 +1802,17 @@
 }
 .info-bar {
   padding: 2rem 0 0;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+      width: 20%;
+      .img-hold {
+        width: 60px;
+      }
+    }
+  }
   h2 {
     text-align: center;
     font-size: 38px;
@@ -1805,7 +1835,7 @@
     color: #000;
     font-weight: 500;
     margin: 0 0 40px;
-    text-align: center;
+    text-align: left;
   }
   .box {
     padding: 0;
@@ -1839,6 +1869,7 @@
     }
   }
   .form-block {
+    margin: 3rem 0 0;
     input {
       @include inputbar;
       background: none;
@@ -2792,7 +2823,7 @@
   .top-banner {
     @include top-banner;
     padding: 15rem 0 0;
-    background: url(../images/banner13.png) no-repeat center center;
+    background: url(../images/banner13.png) no-repeat bottom center;
     background-size: 100%;
     text-align: left;
     .sm-box {
@@ -2802,6 +2833,33 @@
   }
   .info-bar {
     padding: 5rem 0 0;
+  }
+  .query-bar {
+    background: #f9f9f9;
+    padding: 3rem 0 7rem;
+    h2 {
+      font-size: 30px;
+      line-height: 38px;
+      color: #000;
+      font-weight: 300;
+      text-align: center;
+      position: relative;
+      span {
+        font-weight: 500;
+      }
+      &:before {
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: -3rem;
+        content: "";
+        width: 200px;
+        height: 4px;
+        background: #03C587;
+        margin: 0 auto
+      }
+    }
   }
 }
 
@@ -4063,6 +4121,11 @@
 .course-detail {
   .cou-detail {
     @include gc-detail;
+    p {
+      margin: 0 0 15px;
+      padding: 0 0 50px;
+      border-bottom: 1px solid #fff;
+    }
   }
   .cou-info {
     background: #fafafa;
@@ -4347,6 +4410,11 @@
   .ru-banner {
     @include banner;
     margin: 0 0 5rem;
+    ul {
+      li {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -4602,7 +4670,7 @@
   .top-banner {
     background: url(../images/banner19.png) no-repeat top center;
     background-size: cover;
-    padding: 11rem 0;
+    padding: 10rem 0;
     h2 {
       font-size: 50px;
       line-height: 52px;
@@ -4626,11 +4694,11 @@
           margin: 0;
         }
         .nav-link {
-          font-size: 16px;
-          line-height: 18px;
+          font-size: 14px;
+          line-height: 16px;
           font-weight: 700;
           color: #03C587;
-          padding: 12px 25px;
+          padding: 12px 24px;
           border: 1px solid #03C587;
           border-radius: 30px 30px;
           background: #fff;
@@ -4734,7 +4802,7 @@
   .top-banner {
     background: url(../images/banner20.png) no-repeat top center;
     background-size: cover;
-    padding: 7rem 0 4rem;
+    padding: 5rem 0 4rem;
     h2 {
       font-size: 50px;
       line-height: 52px;
@@ -4747,7 +4815,7 @@
       line-height: 20px;
       color: #fff;
       font-weight: 400;
-      margin: 0 0 7rem;
+      margin: 0 0 3rem;
     }
     .counter-box {
       @include counter;
@@ -4836,7 +4904,7 @@
         border: 1px solid #EDEDED;
         border-radius: 10px 10px;
         height: 100%;
-        min-height: 105px;
+        min-height: 100px;
         background: #fff;
         img {
           margin: 0 0 10px;
@@ -4897,9 +4965,14 @@
 
 // gotegory detail page start here
 
-.gategory-page {
+.category-page {
   .gate-detail {
     @include gc-detail;
+    p {
+      padding: 0 0 15px;
+      margin: 0 0 15px;
+	    border-bottom: 1px solid #fff;
+    }
     background: url(../images/banner21.png) no-repeat top center;
     background-size: cover;
     padding: 7rem 0;
@@ -4907,7 +4980,12 @@
   .info-bar {
     .ru-banner {
       @include banner;
-      margin: 0 0 7rem;
+      margin: 0 0 4rem;
+      ul {
+        li {
+          width: 100%;
+        }
+      }
     }
   }
   .gate-info {

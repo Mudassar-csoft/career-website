@@ -13,13 +13,13 @@
                     media marketing, Google Ads, and analytics to grow <br>
                     businesses and build your career.
                 </p>
-                <h5>
+                {{-- <h5>
                     <img src="{{ asset('assets/images/icon110.svg') }}" alt="">
                     <small>4.8 (1108 Reviews)</small>
-                </h5>
+                </h5> --}}
                 <ul>
                     <li>
-                        <strong>Category:</strong> Digital Marketing
+                        <strong class="pe-1">Category:</strong> Digital Marketing
                     </li>
                     <li>
                         <img src="{{ asset('assets/images/icon111.svg') }}" alt="">
@@ -491,8 +491,8 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="row mb-4">
-                    <div class="col-lg-3">
+                <ul>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
@@ -503,8 +503,8 @@
                                 <p>0314-4444010</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
@@ -514,8 +514,8 @@
                                 <p>info@career.edu.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
@@ -525,27 +525,37 @@
                                 <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon23.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
-                                <h3>Office Hours</h3>
-                                <p>Mon- Sat</p>
-                                <p>10:00am-7:00pm</p>
+                                <h3>Google Meet</h3>
+                                <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                            </div>
+                            <div class="t-bar">
+                                <h3>Microsoft Team</h3>
+                                <p>Career.pk</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
                     <h2>
                         Fill Out the Form Below
                     </h2>
-                    <p>
+                    <p class="text-center">
                         Please complete the form, and one of our representatives will get back to you shortly.
                     </p>
                     <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">

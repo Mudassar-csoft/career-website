@@ -16,12 +16,12 @@
                     <div class="form-block">
                         <form action="#">
                             <div class="input-group mb-4">
-                                <input type="text" class="form-control sc-iput" placeholder="Search courses and certifications that match your goals." aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input type="text" class="form-control sc-iput" placeholder="Search courses and certifications that match your goals." aria-describedby="button-addon2">
                                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
                             </div>
                         </form>
                     </div>
-                    <div class="cor-slider mb-4">
+                    <div class="cor-slider mb-3">
                         <div>
                             <div class="text-box">
                                 <a href="#">IELTS </a>
@@ -290,7 +290,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Featured Courses</h2>
-                <p class="aos-init aos-animate" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
+                <p class="aos-init aos-animate mb-4" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
                     Build in-demand skills and move closer to your dream career with flexible online or on-campus learning led by expert Instructors.
                 </p>
             </div>
@@ -995,15 +995,15 @@
                     Request a Free Career Counseling Session
                 </h2>
                 <h5>
-                    We offer a complimentary, no-obligation career counseling session to learn about your aspirations and help<br>
-                    you map out your path to success.
+                    Book a complimentary career counselling session to discuss your goals and create a clear path to success. Sessions are
+                    available Monday to Saturday, from 10:00 AM to 6:00 PM, via WhatsApp, Webex, Google Meet, or Microsoft Teams.
                 </h5>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
-                <div class="row mb-4">
-                    <div class="col-lg-3">
+            <div class="col-lg-12 mb-4">
+                <ul>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
@@ -1014,8 +1014,8 @@
                                 <p>0314-4444010</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
@@ -1025,8 +1025,8 @@
                                 <p>info@career.edu.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
@@ -1036,20 +1036,30 @@
                                 <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon23.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
-                                <h3>Office Hours</h3>
-                                <p>Mon- Sat</p>
-                                <p>10:00am-7:00pm</p>
+                                <h3>Google Meet</h3>
+                                <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                            </div>
+                            <div class="t-bar">
+                                <h3>Microsoft Team</h3>
+                                <p>Career.pk</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
@@ -1074,7 +1084,7 @@
                             <input type="text" class="form-control" name="phone" placeholder="Phone no">
                         </div>
                         <div class="col-md-12">
-                            <textarea placeholder="Message" class="form-control" rows="9"></textarea>
+                            <textarea placeholder="Questions & Quires" class="form-control" rows="9"></textarea>
                         </div>
                         <div class="col-12 text-center mt-4">
                             <button type="submit" class="btn sm-btn">Send Message</button>
