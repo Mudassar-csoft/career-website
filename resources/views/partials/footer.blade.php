@@ -8,7 +8,7 @@
                     </div>
                     <div class="f-text">
                         <p>
-                            Since 2010, Career Institute has empowered over 150,000 learners through industry-focused IT training, certified instructors and modern curricula. We also provide international testing services and collaborative coworking spaces for professionals, freelancers and startups.
+                            Since 2010, Career Institute has delivered industry-focused IT training, international testing services and modern coworking spaces for learners, professionals and startups.
                         </p>
                     </div>
                 </div>
