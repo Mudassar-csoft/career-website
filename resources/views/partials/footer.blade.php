@@ -8,13 +8,7 @@
                     </div>
                     <div class="f-text">
                         <p>
-                            Career Institute offers<br>
-                            educational services in<br>
-                            the field of IT; we also<br>
-                            operate as a platform for<br>
-                            testing services and are<br>
-                            partners with relevant<br>
-                            authorities..
+                            Since 2010, Career Institute has empowered over 150,000 learners through industry-focused IT training, certified instructors and modern curricula. We also provide international testing services and collaborative coworking spaces for professionals, freelancers and startups.
                         </p>
                     </div>
                 </div>
