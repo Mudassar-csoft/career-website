@@ -79,7 +79,7 @@
                 <!-- Mobile Header -->
                 <div class="offcanvas-header d-lg-none">
                     <a href="{{ route('home') }}">
-                    <img src="{{ asset('assets/images/w-logo.svg') }}"
+                    <img src="{{ asset('assets/images/mobile-logo.svg') }}"
                         alt="Menu Logo">
                     </a>
                     <button type="button"
