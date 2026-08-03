@@ -19,23 +19,28 @@
         </div>
     </div>
 </section>
+<section class="query-bar">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2>
+                    <span>
+                        Have questions about our courses, admissions, certifications,
+                        testing services, coworking spaces, study abroad, or campuses?
+                    </span><br>
+                    Connect with our team via WhatsApp, phone, email, Webex,
+                    Google Meet, or Microsoft Teams at your convenience.
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="info-bar">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
-                    Request a Free Career Counseling Session
-                </h2>
-                <h5 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
-                    We offer a complimentary, no-obligation career counseling session to learn about your aspirations and help<br>
-                    you map out your path to success.
-                </h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="row mb-4">
-                    <div class="col-lg-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000">
+                <ul>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
@@ -46,8 +51,8 @@
                                 <p>0314-4444010</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
@@ -57,8 +62,8 @@
                                 <p>info@career.edu.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
@@ -68,20 +73,30 @@
                                 <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon23.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
-                                <h3>Office Hours</h3>
-                                <p>Mon- Sat</p>
-                                <p>10:00am-7:00pm</p>
+                                <h3>Google Meet</h3>
+                                <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                            </div>
+                            <div class="t-bar">
+                                <h3>Microsoft Team</h3>
+                                <p>Career.pk</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="col-lg-12">
                 <div class="form-block">

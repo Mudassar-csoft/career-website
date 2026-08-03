@@ -8,8 +8,9 @@
             <div class=	"col-lg-7">
                 <h1>Get Free Career Counseling</h1>
                 <p>
-                    Complete the form, and our career counsellors will contact you with<br>
-                    course details and admission updates.
+                    Complete the form, and our career advisors will contact you shortly with<br>
+                    information about courses, admissions, coworking spaces, study-abroad<br>
+                    opportunities, scholarships, events, and career development.
                 </p>
                 <div class="form-block">
                     <form class="row g-3">
@@ -100,7 +101,7 @@
                             <img src="assets/images/icon03.svg" alt="">
                         </div>
                         <h2 class="counter" data-target="100">0</h2>
-                        <p>Trainings</p>
+                        <p>Programs</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
@@ -136,7 +137,7 @@
                                             <div class="box s-blue">
                                                 <p>
                                                     Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                                 </p>
                                                 <div class="d-bar">
                                                     <img src="assets/images/icon05.svg" alt=""> 
@@ -148,7 +149,7 @@
                                             <div class="box s-black">
                                                 <p>
                                                     Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                                 </p>
                                                 <div class="d-bar">
                                                     <img src="assets/images/icon05.svg" alt=""> 
@@ -160,7 +161,7 @@
                                             <div class="box s-green">
                                                 <p>
                                                     Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                                 </p>
                                                 <div class="d-bar">
                                                     <img src="assets/images/icon05.svg" alt=""> 
@@ -172,7 +173,7 @@
                                             <div class="box s-black">
                                                 <p>
                                                     Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                                 </p>
                                                 <div class="d-bar">
                                                     <img src="assets/images/icon05.svg" alt=""> 
@@ -181,7 +182,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn r-btn">Read More</a>
+                                    <a href="{{ route('news') }}" class="btn r-btn">Read More</a>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
@@ -245,7 +246,7 @@
                                     <div class="box s-blue">
                                         <p>
                                             Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                         </p>
                                         <div class="d-bar">
                                             <img src="assets/images/icon05.svg" alt=""> 
@@ -257,7 +258,7 @@
                                     <div class="box s-black">
                                         <p>
                                             Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                         </p>
                                         <div class="d-bar">
                                             <img src="assets/images/icon05.svg" alt=""> 
@@ -269,7 +270,7 @@
                                     <div class="box s-green">
                                         <p>
                                             Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                         </p>
                                         <div class="d-bar">
                                             <img src="assets/images/icon05.svg" alt=""> 
@@ -281,7 +282,7 @@
                                     <div class="box s-black">
                                         <p>
                                             Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="#">Read more...</a>
+                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
                                         </p>
                                         <div class="d-bar">
                                             <img src="assets/images/icon05.svg" alt=""> 
@@ -290,7 +291,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="btn r-btn">Read More</a>
+                            <a href="{{ route('news') }}" class="btn r-btn">Read More</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -353,14 +354,14 @@
                     </div>
                     <h3>About Career Institute</h3>
                     <p>
-                        Since 2010, Career Institute, a global tech training
-                        leader, has impacted 150,000+ students worldwide.
-                        Our commitment to industry trends is seen in our
-                        current curriculum and certified trainers. Beyond
-                        training, we offer coworking spaces to tech startups,
-                        fostering professional excellence. Elevate your skills
-                        and business at Career Institute – where innovation
-                        meets education
+                        Since 2010, Career Institute has empowered more
+                        than 150,000 learners worldwide through
+                        industry-focused training, up-to-date curricula
+                        and certified instructors. Beyond education, we
+                        support freelancers, professionals and technology
+                        startups through modern coworking spaces
+                        designed for growth and collaboration. Advance your skills, career and business with Career
+                        Institute - where education meets innovation.
                     </p>
                     <a href="#" class="btn r-btn">Read More</a>
                 </div>
@@ -417,7 +418,7 @@
             <div class="col-lg-12">
                 <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Featured Courses</h2>
                 <p class="aos-init aos-animate" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
-                    Elevate Your Skills and Land Your Dream Job - Whether you prefer the convenience of learning from home or the<br>
+                    Elevate Your Skills and Land Your Dream Job - Whether you prefer the convenience of learning from home or the
                     advantages of direct sessions on campus with our expert instructors, we've got you covered!
                 </p>
             </div>
@@ -606,9 +607,8 @@
             <div class="col-lg-12">
                 <h2 class="aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000">Explore our campuses through an immersive virtual tour</h2>
                 <p class="aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200">
-                    Discover the allure of our stunning campuses in this captivating video tour,where you can truly immerse yourself in the vibrant<br>
-                    atmosphere that characterizes our esteemed institution. We extend a warm invitation for you to virtually experience our campus,<br>
-                    offering you a glimpse into what sets our educational and personal growth environment apart as something truly exceptional.
+                    Elevate Your Skills, Unlock Earning Opportunities, and Land Your Dream Job Learn online from the comfort of your home or join
+                    interactive on-campus sessions with our expert instructors -the choice is yours.
                 </p>
                 <a href="#" class="btn ep-btn mb-5">Explore Campuses</a>
             </div>
@@ -621,18 +621,24 @@
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="../assets/video/Web_Header.mp4">
+                                <button class="play-btn" data-video="video2.mp4">
                                 <img src="assets/images/ply-btn.png" alt="">
                                 </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Jinnah Colony Branch</h3>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="video2.mp4">
+                                <button class="play-btn" data-video="video3.mp4">
                                 <img src="assets/images/ply-btn.png" alt="">
                                 </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Millat Chowk Branch</h3>
                             </div>
                         </div>
                         <!-- Slide 3 -->
@@ -643,7 +649,11 @@
                                 <img src="assets/images/ply-btn.png" alt="">
                                 </button>
                             </div>
+                            <div class="swipe-text">
+                                <h3>Satyana Raod Branch</h3>
+                            </div>
                         </div>
+                        <!-- Slide 4 -->
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img04.png" alt="">
@@ -651,13 +661,8 @@
                                 <img src="assets/images/ply-btn.png" alt="">
                                 </button>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
-                                </button>
+                            <div class="swipe-text">
+                                <h3>Kohnoor Branch</h3>
                             </div>
                         </div>
                     </div>

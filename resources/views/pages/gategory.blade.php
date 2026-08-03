@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Gategory | Career Website')
-@section('body_class', 'gategory-page')
+@section('title', 'Category | Career Website')
+@section('body_class', 'category-page')
 @section('content')
 <section class="gate-detail">
     <div class="container">
@@ -9,14 +9,15 @@
                 <span>Category</span>
                 <h1>AI & Data Science</h1>
                 <p>
-                    Unlock the power of data and artificial intelligence to <br>
-                    solve real-world problems and build intelligent<br>
-                    solutions for the future.
+                    Build practical skills in artificial intelligence, data science,
+                    analytics, Python, and generative AI. Learn how to work with
+                    data, uncover meaningful insights, and use modern AI tools to
+                    solve real-world problems.
                 </p>
-                <h5>
+                {{-- <h5>
                     <img src="{{ asset('assets/images/icon110.svg') }}" alt="">
                     <small>4.8 (1108 Reviews)</small>
-                </h5>
+                </h5> --}}
                 <ul>
                     <li>
                         <img src="{{ asset('assets/images/icon113.svg') }}" alt="">
@@ -48,10 +49,9 @@
                             <div class="text-hold">
                                 <h4>Category Overview</h4>
                                 <p>
-                                    AI & Data Science combines programming,
-                                    statistics, machine learning and data
-                                    analysis to extract valuable insights
-                                    and build intelligent systems.
+                                    Build practical skills in AI, data science,
+                                    Python, analytics, and generative AI to
+                                    solve real-world problems.
                                 </p>
                             </div>
                         </li>
@@ -62,9 +62,10 @@
                             <div class="text-hold">
                                 <h4>Career Opportunities</h4>
                                 <p>
-                                    From data analysis to machine learning,
-                                    explore exciting roles in tech, healthcare,
-                                    finance, marketing and many other industries.
+                                    Build career opportunities in data analytics, AI,
+                                    business intelligence, Python, and generative
+                                    AI across technology, finance, healthcare,
+                                    marketing, and other growing industries.
                                 </p>
                             </div>
                         </li>
@@ -75,9 +76,10 @@
                             <div class="text-hold">
                                 <h4>Industry Demand</h4>
                                 <p>
-                                    AI & Data Science professionals are
-                                    among the highest in demand worldwide
-                                    with excellent salary potential and growth.
+                                    AI and data science skills are in high
+                                    demand across industries as organizations
+                                    increasingly rely on automation and
+                                    data-driven decisions.
                                 </p>
                             </div>
                         </li>
@@ -567,11 +569,11 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="row mb-4">
-                    <div class="col-lg-3">
+                <ul>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon20.svg" alt="">
+                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -579,49 +581,59 @@
                                 <p>0314-4444010</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon21.svg" alt="">
+                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
                                 <p>info@career.edu.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon22.svg" alt="">
+                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
                                 <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon23.svg" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
-                                <h3>Office Hours</h3>
-                                <p>Mon- Sat</p>
-                                <p>10:00am-7:00pm</p>
+                                <h3>Google Meet</h3>
+                                <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                            </div>
+                            <div class="t-bar">
+                                <h3>Microsoft Team</h3>
+                                <p>Career.pk</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
                     <h2>
                         Fill Out the Form Below
                     </h2>
-                    <p>
+                    <p class="text-center">
                         Please complete the form, and one of our representatives will get back to you shortly.
                     </p>
                     <form class="row g-3">

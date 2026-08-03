@@ -10,8 +10,9 @@
                     Events
                 </h2>
                 <p>
-                    Stay updated with our latest events, seminars,<br>
-                    workshops and career sessions.
+                    Stay connected with Career Institute through seminars, workshops,<br>
+                    orientations, conferences, project displays, and other engaging<br>
+                    events designed to inspire learning, innovation, and career growth.
                 </p>
             </div>
             <div class="col-lg-12">
@@ -176,40 +177,40 @@
 <section class="rcre-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-5">
                 <h2>
                     Event Category
                 </h2>
                 <ul class="mb-3">
                     <li>
-                        <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
-                        <h3>All<br> Events</h3>
-                    </li>
-                    <li>
                         <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
-                        <h3>Seminars</h3>
+                        <h3>Seminars & <br>Webinars</h3>
                     </li>
                     <li>
                         <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
                         <h3>Workshops</h3>
                     </li>
+                    <li>
+                        <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
+                        <h3>Conferences</h3>
+                    </li>
                 </ul>
                 <ul>
                     <li>
-                        <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
-                        <h3>Career<br>Sessions</h3>
+                        <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
+                        <h3>Project Displays</h3>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
-                        <h3>Inagurations</h3>
+                        <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
+                        <h3>Job Fairs</h3>
                     </li>
                     <li>
                         <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
-                        <h3>Student<br>Activities</h3>
+                        <h3>Celebrations</h3>
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <div class="box">
                     <h2>
                         Our Recent Events

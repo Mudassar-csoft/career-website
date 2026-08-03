@@ -23,12 +23,12 @@
                 <div class="list-bar">
                     <h2>Important Links</h2>
                     <ul>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Enquiry Form</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Online Admission</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Certificate Request</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Form Certificate</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Verification</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Jobs & Careers</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">About</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Programs</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Testing Services</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Coworking Space</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Study Abroad</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,11 +36,12 @@
                 <div class="list-bar">
                     <h2>Extras</h2>
                     <ul>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Volunteer Programes</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Gallery</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Events</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Blogs & Articles</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">FAQ’s</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Online Admission</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">How to Pay</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Verification</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Job Placement</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Ambassador Program</a></li>
+                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Success Stories</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +62,7 @@
                 <div class="bottom-bar">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <p>© Career Institute Pvt. Ltd. All rights reserved.</p>
+                            <p>© Career Institute Pvt. Ltd. All rights reserved.</p>
                         </div>
                         <div class="col-md-6">
                             <div class="s-icon">
