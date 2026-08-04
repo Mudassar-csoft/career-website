@@ -75,6 +75,17 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             $slider.slick("slickPlay");
         });
     });
+    $(document).ready(function() {
+        const $slider = $(".feature-slider");
+        $(".feature-slider").on("mousedown", ".slick-prev, .slick-next", function () {
+            $slider.slick("slickSetOption", "speed", 200, false);
+        });
+        $(".feature-slider").on("click", ".slick-prev, .slick-next", function () {
+            setTimeout(function () {
+                $slider.slick("slickSetOption", "speed", 1200, false);
+            }, 100);
+        });
+    });
     // logo slider start here
     if (document.querySelector(".logo-slider")) {
         $(".logo-slider").slick({
