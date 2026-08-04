@@ -162,6 +162,7 @@
         line-height: 16px;
         font-weight: 400;
         color: #929292;
+        border: 1.5px solid #fff;
         @include max(1200px) {
           font-size: 12px;
           line-height: 14px;

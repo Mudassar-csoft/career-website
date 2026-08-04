@@ -15,6 +15,19 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             infinite: true
         });
     }
+    if (document.querySelector(".event-slider")) {
+        $(".event-slider").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 500,
+            cssEase: "linear",
+            arrows: true,
+            fade: true,
+            pauseOnHover: true,
+            infinite: true,
+        });
+    }
 
     // feature slider start here
     if (document.querySelector(".feature-slider")) {
@@ -22,10 +35,13 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             slidesToShow: 4,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
-            speed: 500,
+            autoplaySpeed: 2500,
+            speed: 1200,
             arrows: true,
-            pauseOnHover: true,
+            cssEase: "linear",
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            waitForAnimate: true,
             infinite: true,
             responsive: [{
 				breakpoint: 1400,
@@ -63,18 +79,39 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
     		]
         });
     }
-
+    $(document).ready(function() {
+        const $slider = $(".feature-slider");
+        $slider.on("mouseenter", function () {
+            $slider.slick("slickPause");
+        });
+        $slider.on("mouseleave", function () {
+            $slider.slick("slickPlay");
+        });
+    });
+    $(document).ready(function() {
+        const $slider = $(".feature-slider");
+        $(".feature-slider").on("mousedown", ".slick-prev, .slick-next", function () {
+            $slider.slick("slickSetOption", "speed", 200, false);
+        });
+        $(".feature-slider").on("click", ".slick-prev, .slick-next", function () {
+            setTimeout(function () {
+                $slider.slick("slickSetOption", "speed", 1200, false);
+            }, 100);
+        });
+    });
     // logo slider start here
     if (document.querySelector(".logo-slider")) {
         $(".logo-slider").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 0,
-            speed: 5000,
-            cssEase: "linear",
+            autoplaySpeed: 2500,
+            speed: 1200,
+            cssEase: "ease",
             arrows: true,
             pauseOnHover: true,
+            pauseOnFocus: true,
+            waitForAnimate: false,
             infinite: true,
             responsive: [{
 				breakpoint: 992,
