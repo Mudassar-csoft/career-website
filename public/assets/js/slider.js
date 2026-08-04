@@ -22,10 +22,13 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             slidesToShow: 4,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 2000,
-            speed: 500,
+            autoplaySpeed: 2500,
+            speed: 1200,
             arrows: true,
-            pauseOnHover: true,
+            cssEase: "linear",
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            waitForAnimate: true,
             infinite: true,
             responsive: [{
 				breakpoint: 1400,
@@ -63,18 +66,28 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
     		]
         });
     }
-
+    $(document).ready(function() {
+        const $slider = $(".feature-slider");
+        $slider.on("mouseenter", function () {
+            $slider.slick("slickPause");
+        });
+        $slider.on("mouseleave", function () {
+            $slider.slick("slickPlay");
+        });
+    });
     // logo slider start here
     if (document.querySelector(".logo-slider")) {
         $(".logo-slider").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 0,
-            speed: 5000,
-            cssEase: "linear",
+            autoplaySpeed: 2500,
+            speed: 1200,
+            cssEase: "ease",
             arrows: true,
             pauseOnHover: true,
+            pauseOnFocus: true,
+            waitForAnimate: false,
             infinite: true,
             responsive: [{
 				breakpoint: 992,

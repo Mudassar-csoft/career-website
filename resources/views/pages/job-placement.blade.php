@@ -395,14 +395,14 @@
 @push('scripts')
 <script>
 $(".location-card").click(function () {
-			$(".location-card")
-				.removeClass("active");
-			$(this)
-				.addClass("active");
-			let map =
-				$(this).data("map");
-			$("#locationMap")
-				.attr("src", map);
-		});
+    $(".location-card")
+        .removeClass("active");
+    $(this)
+        .addClass("active");
+    let map =
+        $(this).data("map");
+    $("#locationMap")
+        .attr("src", map);
+});
 </script>
 @endpush

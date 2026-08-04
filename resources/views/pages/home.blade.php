@@ -131,7 +131,7 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                                <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+                                <div class="news-bar" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
                                     <div class="news-slider">
                                         <div>
                                             <div class="box s-blue">
@@ -186,7 +186,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                                <div class="event-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
+                                <div class="event-bar" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
                                     <ul>
                                         <li>
                                             <div class="d-info">
@@ -239,7 +239,7 @@
                 </div>
                 <div class="row mb-4 mb-lg-0 d-none d-md-flex">
                     <div class="col-md-6">
-                        <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="600">
+                        <div class="news-bar" data-aos="fade-up" data-aos-duration="800" data-aos-offset="80">
                             <h2>News</h2>
                             <div class="news-slider">
                                 <div>
@@ -295,7 +295,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="event-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
+                        <div class="event-bar" data-aos="fade-up" data-aos-duration="1100" data-aos-offset="80">
                             <h2>Events</h2>
                             <ul>
                                 <li>
@@ -347,7 +347,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="about-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1500">
+                <div class="about-bar" data-aos="fade-up" data-aos-duration="1400" data-aos-offset="80">
                     <h2><span>Why</span> Choose Us</h2>
                     <div class="img-hold">
                         <img src="assets/images/img01.png" alt="">
