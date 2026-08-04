@@ -15,6 +15,19 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             infinite: true
         });
     }
+    if (document.querySelector(".event-slider")) {
+        $(".event-slider").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 500,
+            cssEase: "linear",
+            arrows: true,
+            fade: true,
+            pauseOnHover: true,
+            infinite: true,
+        });
+    }
 
     // feature slider start here
     if (document.querySelector(".feature-slider")) {
