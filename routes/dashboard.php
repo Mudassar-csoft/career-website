@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsletterController;
@@ -18,6 +19,17 @@ Route::prefix('dashboard')->name('dashboard.')->group(function () {
         Route::post('/', [NewsController::class, 'store'])->name('store');
         Route::post('/types', [NewsController::class, 'storeType'])->name('types.store');
         Route::delete('/{news}', [NewsController::class, 'destroy'])->name('destroy');
+    });
+
+    Route::prefix('courses')->name('courses.')->group(function () {
+        Route::get('/', [CourseController::class, 'index'])->name('index');
+        Route::get('/create', [CourseController::class, 'create'])->name('create');
+        Route::post('/', [CourseController::class, 'store'])->name('store');
+        Route::post('/categories', [CourseController::class, 'storeCategory'])->name('categories.store');
+        Route::post('/modes', [CourseController::class, 'storeMode'])->name('modes.store');
+        Route::get('/{course}/edit', [CourseController::class, 'edit'])->name('edit');
+        Route::put('/{course}', [CourseController::class, 'update'])->name('update');
+        Route::delete('/{course}', [CourseController::class, 'destroy'])->name('destroy');
     });
 
     Route::prefix('newsletter')->name('newsletter.')->group(function () {

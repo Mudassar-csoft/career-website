@@ -25,7 +25,10 @@ trait BuildsDashboardMenu
     {
         return [
             ['key' => 'dashboard', 'label' => 'Dashboard', 'type' => 'home'],
-            ['key' => 'courses', 'label' => 'Courses', 'type' => 'page', 'route' => 'courses-certifications'],
+            ['key' => 'courses', 'label' => 'Courses', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Create Course', 'route' => 'dashboard.courses.create'],
+                ['label' => 'All Courses', 'route' => 'dashboard.courses.index'],
+            ]],
             ['key' => 'newsletter', 'label' => 'Newsletter', 'type' => 'dropdown', 'children' => [
                 ['label' => 'All Subscribers', 'route' => 'dashboard.newsletter.index'],
                 ['label' => 'Messages', 'route' => 'dashboard.newsletter.messages'],
