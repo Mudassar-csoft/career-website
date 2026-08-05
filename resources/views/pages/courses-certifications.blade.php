@@ -82,7 +82,7 @@
                 <h2>Explore By Category</h2>
             </div>
             <div class="col-lg-12">
-                <ul class="mb-3">
+                <ul>
                     <li>
                         <a href="#">
                             <div class="box">
@@ -147,8 +147,6 @@
                             </div>
                         </a>
                     </li>
-                </ul>
-                <ul class="mb-3">
                     <li>
                         <a href="#">
                             <div class="box">
@@ -213,9 +211,6 @@
                             </div>
                         </a>
                     </li>
-                </ul>
-
-                <ul>
                     <li>
                         <a href="#">
                             <div class="box">
@@ -473,8 +468,8 @@
         </div>
         <div class="ru-banner">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                    <div class="row align-items-center">
                         <div class="col-lg-8">
                             <h2>
                                 Ready to Upgrade Your Skills?
@@ -1257,12 +1252,37 @@
             slidesToShow: 4,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 0,
-            speed: 3500,
+            autoplaySpeed: 2500,
+            speed: 1200,
             cssEase: "linear",
             arrows: true,
             pauseOnHover: true,
             infinite: true,
+            responsive: [
+                {
+                breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        autoplaySpeed: 2500,
+                        speed: 1200,
+                    }
+                },
+                {
+                breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
     }
 </script>

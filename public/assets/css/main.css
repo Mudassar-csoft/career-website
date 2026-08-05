@@ -2090,10 +2090,30 @@ body {
 .courses-page .feature-block .feature-slider {
   margin: 0 0 4rem;
 }
+.courses-page .feature-block .ru-banner h2 {
+  margin: 0 0 10px;
+}
+@media (max-width: 1400px) {
+  .courses-page .feature-block .ru-banner h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 1400px) {
+  .courses-page .feature-block .ru-banner p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .courses-page .c-text {
   padding: 5rem 0;
   background: #f9f9f9;
   text-align: center;
+}
+@media (max-width: 1400px) {
+  .courses-page .c-text {
+    padding: 3rem 0;
+  }
 }
 .courses-page .c-text h2 {
   font-size: 36px;
@@ -2102,6 +2122,12 @@ body {
   color: #000;
   margin: 0 0 60px;
   position: relative;
+}
+@media (max-width: 1400px) {
+  .courses-page .c-text h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 .courses-page .c-text h2::before {
   position: absolute;
@@ -2122,6 +2148,12 @@ body {
   font-weight: 600;
   margin: 0;
 }
+@media (max-width: 1400px) {
+  .courses-page .c-text p {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
 .courses-page .cer-bar {
   padding: 3rem 0;
   background: url(../images/banner04.png) no-repeat bottom center;
@@ -2135,12 +2167,24 @@ body {
   line-height: 26px;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .courses-page .cer-bar h2 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .courses-page .cer-bar p {
   font-size: 16px;
   line-height: 18px;
   color: #fff;
   font-weight: 400;
   margin: 0 0 20px;
+}
+@media (max-width: 1400px) {
+  .courses-page .cer-bar p {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 .courses-page .cer-bar .form-block .sc-iput {
   border: 2px solid transparent;
@@ -2163,6 +2207,12 @@ body {
 }
 .courses-page .cer-bar .form-block .sc-iput:hover::placeholder, .courses-page .cer-bar .form-block .sc-iput:focus::placeholder {
   text-indent: 10px;
+}
+@media (max-width: 1400px) {
+  .courses-page .cer-bar .form-block .sc-iput {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .courses-page .cer-bar .form-block #button-addon2 {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -2198,6 +2248,12 @@ body {
   display: block;
   min-width: 170px;
 }
+@media (max-width: 1400px) {
+  .courses-page .cer-bar .btn-area ul li a {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .courses-page .cor-block {
   padding: 4rem 0 2rem;
 }
@@ -2209,40 +2265,74 @@ body {
   color: #000;
   margin: 0 0 40px;
 }
+@media (max-width: 1400px) {
+  .courses-page .cor-block h2 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0 0 25px;
+  }
+}
+@media (max-width: 767px) {
+  .courses-page .cor-block h2 {
+    font-size: 28px;
+    line-height: 30px;
+    margin: 0 0 15px;
+  }
+}
 .courses-page .cor-block ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
 }
 .courses-page .cor-block ul li {
   width: 24%;
 }
-.courses-page .cor-block ul li .box {
+@media (max-width: 1200px) {
+  .courses-page .cor-block ul li {
+    width: 32.5%;
+  }
+}
+.courses-page .cor-block ul li a {
+  display: inline-block;
+}
+.courses-page .cor-block ul li a .box {
   background: #f7f5f7;
   border-radius: 10px 10px;
   padding: 15px 15px;
   text-align: center;
   transition: transform 0.3s ease;
 }
-.courses-page .cor-block ul li .box:hover {
+.courses-page .cor-block ul li a .box:hover {
   transform: translateY(5px);
 }
-.courses-page .cor-block ul li .box .img-hold {
+.courses-page .cor-block ul li a .box .img-hold {
   margin: 0 0 20px;
 }
-.courses-page .cor-block ul li .box .t-hold h4 {
+.courses-page .cor-block ul li a .box .t-hold h4 {
   font-size: 14px;
   line-height: 16px;
   font-weight: 600;
   margin: 0 0 10px;
   color: #000;
 }
-.courses-page .cor-block ul li .box .t-hold p {
+@media (max-width: 1400px) {
+  .courses-page .cor-block ul li a .box .t-hold h4 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.courses-page .cor-block ul li a .box .t-hold p {
   margin: 0;
   font-size: 11px;
   line-height: 14px;
   color: #000;
   font-weight: 400;
+}
+@media (max-width: 1400px) {
+  .courses-page .cor-block ul li a .box .t-hold p {
+    height: 40px;
+  }
 }
 .courses-page .acc-area {
   padding: 2rem 0 3rem;
@@ -2255,6 +2345,12 @@ body {
   margin: 0 0 20px;
   text-align: center;
 }
+@media (max-width: 1400px) {
+  .courses-page .acc-area h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .courses-page .acc-area p {
   text-align: center;
   font-weight: 300;
@@ -2263,6 +2359,12 @@ body {
   color: #000;
   margin: 0 0 30px;
 }
+@media (max-width: 1400px) {
+  .courses-page .acc-area p {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
 .courses-page .acc-area .course-listing {
   padding: 0;
 }
@@ -2270,7 +2372,11 @@ body {
   background: #fff;
   padding: 15px 15px;
   position: sticky;
-  top: 20px;
+}
+@media (max-width: 1400px) {
+  .courses-page .acc-area .course-listing .course-sidebar {
+    padding: 15px 0;
+  }
 }
 .courses-page .acc-area .course-listing .course-sidebar .sidebar-title {
   font-size: 25px;
@@ -2512,6 +2618,13 @@ body {
   margin: 0;
   width: 48.5%;
 }
+@media (max-width: 1400px) {
+  .courses-page .acc-area .course-listing .course-content .apply-btn {
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .courses-page .acc-area .course-listing .course-content .detail-btn {
   background: #E9E9E9;
   padding: 10px 20px;
@@ -2530,6 +2643,13 @@ body {
 }
 .courses-page .acc-area .course-listing .course-content .detail-btn {
   width: 48.5%;
+}
+@media (max-width: 1400px) {
+  .courses-page .acc-area .course-listing .course-content .detail-btn {
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .courses-page .acc-area .course-listing .course-content .pagination-wrap {
   margin-top: 50px;
@@ -2582,9 +2702,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 10px;
 }
 .info-bar ul li {
   width: 20%;
+}
+@media (max-width: 1400px) {
+  .info-bar ul li {
+    width: 32.5%;
+  }
 }
 .info-bar ul li .img-hold {
   width: 60px;
@@ -2597,6 +2723,12 @@ body {
   font-weight: 700;
   margin: 0 0 20px;
 }
+@media (max-width: 1400px) {
+  .info-bar h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .info-bar h5 {
   text-align: center;
   font-size: 18px;
@@ -2604,6 +2736,12 @@ body {
   color: #000;
   font-weight: 500;
   margin: 0 0 50px;
+}
+@media (max-width: 1400px) {
+  .info-bar h5 {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 .info-bar p {
   font-size: 16px;
@@ -2630,12 +2768,23 @@ body {
 .info-bar .box .t-bar {
   padding: 0 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .info-bar .box .t-bar {
+    padding: 0 0 0 10px;
+  }
+}
 .info-bar .box .t-bar h3 {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #000;
   margin: 0 0 5px;
+}
+@media (max-width: 1400px) {
+  .info-bar .box .t-bar h3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 .info-bar .box .t-bar p {
   font-size: 16px;
@@ -2644,8 +2793,19 @@ body {
   color: #000;
   margin: 0;
 }
+@media (max-width: 1400px) {
+  .info-bar .box .t-bar p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .info-bar .form-block {
   margin: 3rem 0 0;
+}
+@media (max-width: 1400px) {
+  .info-bar .form-block p {
+    font-size: 15px;
+  }
 }
 .info-bar .form-block input {
   border-radius: 0;
@@ -2754,6 +2914,12 @@ body {
   font-weight: 700;
   margin: 0 0 50px;
   text-align: center;
+}
+@media (max-width: 1400px) {
+  .location-section h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 .location-section .location-list {
   max-height: 620px;
@@ -7117,6 +7283,9 @@ body {
 .course-detail .ru-banner {
   margin: 0 0 5rem;
 }
+.course-detail .ru-banner h2 {
+  display: none;
+}
 .course-detail .ru-banner ul li {
   width: 100%;
 }
@@ -10085,6 +10254,13 @@ body {
   font-weight: 400;
   display: block;
   color: #fff;
+}
+@media (max-width: 1400px) {
+  .cor-slider .slick-slide .text-box a {
+    padding: 12px 10px;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .cor-slider .slick-prev::before, .cor-slider .slick-next::before {
   display: none;

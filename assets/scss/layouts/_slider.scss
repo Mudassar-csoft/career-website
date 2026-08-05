@@ -867,6 +867,11 @@
         font-weight: 400;
         display: block;
         color: #fff;
+        @include max(1400px) {
+          padding: 12px 10px;
+          font-size: 12px;
+          line-height: 14px;
+        }
       }
     }
   }

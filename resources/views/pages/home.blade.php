@@ -376,7 +376,7 @@
         <div class="g-box">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">Guiding Vision from Our Directors</h2>
+                    <h2 data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">Guiding Vision from Our Directors</h2>
                 </div>
             </div>
             <div class="row">
@@ -418,8 +418,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Featured Courses</h2>
-                <p class="aos-init aos-animate" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">Featured Courses</h2>
+                <p data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
                     Elevate Your Skills and Land Your Dream Job - Whether you prefer the convenience of learning from home or the
                     advantages of direct sessions on campus with our expert instructors, we've got you covered!
                 </p>
@@ -607,8 +607,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1000">Explore our campuses through an immersive virtual tour</h2>
-                <p class="aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1200">
+                <h2  data-aos="zoom-in" data-aos-duration="1000">Explore our campuses through an immersive virtual tour</h2>
+                <p  data-aos="zoom-in" data-aos-duration="1200">
                     Elevate Your Skills, Unlock Earning Opportunities, and Land Your Dream Job Learn online from the comfort of your home or join
                     interactive on-campus sessions with our expert instructors -the choice is yours.
                 </p>
@@ -677,7 +677,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
                     What Our Alumni Say
                 </h2>
             </div>
@@ -834,7 +834,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">Collaborations with leading Organizations</h2>
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">Collaborations with leading Organizations</h2>
             </div>
         </div>
         <div class="row">
@@ -879,7 +879,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Latest Blogs</h2>
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Latest Blogs</h2>
             </div>
         </div>
         <div class="row mb-5">
@@ -949,7 +949,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 aos-init aos-animate" aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400">
+            <div class="col-lg-12" aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400">
                 <div class="btn-box">
                     <a href="#" class="btn rm-btn">Read More</a>
                 </div>
@@ -960,7 +960,7 @@
 <section class="partner-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
                 <h2>
                     Become a Partner
                 </h2>
@@ -997,7 +997,7 @@
 <section class="gallery-bar">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
                 <h2>Gallery</h2>
             </div>
         </div>
@@ -1005,19 +1005,19 @@
             <div class="col-lg-12 col-xl-10">
                 <div class="gallery-section">
                     <ul class="gallery-tabs">
-                        <li class="active aos-init aos-animate" data-tab="coworking" data-aos="fade-up" data-aos-duration="600">Coworking Space</li>
-                        <li data-tab="campus" data-aos="fade-up" data-aos-duration="700" class="aos-init aos-animate">Campuses</li>
-                        <li data-tab="tour" data-aos="fade-up" data-aos-duration="800" class="aos-init aos-animate">Tour</li>
-                        <li data-tab="expo" data-aos="fade-up" data-aos-duration="900" class="aos-init aos-animate">Expo</li>
-                        <li data-tab="navttc" data-aos="fade-up" data-aos-duration="1000" class="aos-init aos-animate">Navttc</li>
-                        <li data-tab="certificate" data-aos="fade-up" data-aos-duration="1100" class="aos-init aos-animate">Certificate Distribution</li>
-                        <li data-tab="event" data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">Events</li>
+                        <li class="active" data-tab="coworking" data-aos="fade-up" data-aos-duration="600">Coworking Space</li>
+                        <li data-tab="campus" data-aos="fade-up" data-aos-duration="700">Campuses</li>
+                        <li data-tab="tour" data-aos="fade-up" data-aos-duration="800">Tour</li>
+                        <li data-tab="expo" data-aos="fade-up" data-aos-duration="900">Expo</li>
+                        <li data-tab="navttc" data-aos="fade-up" data-aos-duration="1000">Navttc</li>
+                        <li data-tab="certificate" data-aos="fade-up" data-aos-duration="1100">Certificate Distribution</li>
+                        <li data-tab="event" data-aos="fade-up" data-aos-duration="1200">Events</li>
                     </ul>
                     <!-- Gallery Content -->
                     <div class="gallery-content">
                         <!-- Coworking -->
                         <div class="gallery-panel active" id="coworking">
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="900">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="900">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1026,7 +1026,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
+                            <div class="gallery-item " data-aos="flip-right" data-aos-duration="1000">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1035,7 +1035,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1100">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="1100">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1044,7 +1044,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="1200">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1053,7 +1053,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1300">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="1300">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1062,7 +1062,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1400">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="1400">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1071,7 +1071,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1500">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="1500">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1080,7 +1080,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1600">
+                            <div class="gallery-item " data-aos="flip-left" data-aos-duration="1600">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
                                     <h3>Coworking Space</h3>
@@ -1091,7 +1091,7 @@
                             </div>
                         </div>
                         <!-- Campus -->
-                        <div class="gallery-panel aos-init aos-animate" id="campus" data-aos="flip-left" data-aos-duration="1700">
+                        <div class="gallery-panel " id="campus" data-aos="flip-left" data-aos-duration="1700">
                             <div class="gallery-item">
                                 <img src="assets/images/img14.png">
                                 <div class="detial">
@@ -1115,15 +1115,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Keep in Touch</h2>
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Keep in Touch</h2>
                 <ul>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/fb.png" alt=""></a></li>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/instagram.png" alt=""></a></li>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/youtube.png" alt=""></a></li>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt=""></a></li>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/linkdin.png" alt=""></a></li>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/x.png" alt=""></a></li>
-                    <li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/wp.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/fb.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/instagram.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/youtube.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/linkdin.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/x.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/wp.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -1133,15 +1133,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom">Do You Need Help?</h3>
-                <h6 class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom">Frequently Asked <span>Questions</span></h6>
+                <h3 data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom">Do You Need Help?</h3>
+                <h6 data-aos="fade-up" data-aos-duration="900" data-aos-anchor-placement="top-bottom">Frequently Asked <span>Questions</span></h6>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="faq-bar">
                     <div class="accordion" id="accordionExample">
-                        <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 What is Lorem Ipsum?
@@ -1153,7 +1153,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry?
@@ -1165,7 +1165,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom">
+                        <div class="accordion-item" data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry?
@@ -1187,7 +1187,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <section class="newsletter aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom">
+                <section class="newsletter" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom">
                     <div class="newsletter__content">
                         <div class="newsletter__text">
                             <h2>Join Our News Letter</h2>

@@ -1396,11 +1396,29 @@
     .feature-slider {
       margin: 0 0 4rem;
     }
+    .ru-banner {
+      h2 {
+        margin: 0 0 10px;
+        @include max(1400px) {
+          font-size: 25px;
+          line-height: 27px;
+        }
+      }
+      p {
+        @include max(1400px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
   }
   .c-text {
     padding: 5rem 0;
     background: #f9f9f9;
     text-align: center;
+    @include max(1400px) {
+      padding: 3rem 0;
+    }
     h2 {
       font-size: 36px;
       line-height: 42px;
@@ -1408,6 +1426,10 @@
       color: #000;
       margin: 0 0 60px;
       position: relative;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
       &::before {
         position: absolute;
         top: auto;
@@ -1427,6 +1449,10 @@
       color: #000;
       font-weight: 600;
       margin: 0;
+      @include max(1400px) {
+        font-size: 22px;
+        line-height: 24px;
+      }
     }
   }
   .cer-bar {
@@ -1440,6 +1466,10 @@
       font-size: 24px;
       line-height: 26px;
       margin: 0 0 15px;
+      @include max(1400px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
     }
     p {
       font-size: 16px;
@@ -1447,10 +1477,18 @@
       color: #fff;
       font-weight: 400;
       margin: 0 0 20px;
+      @include max(1400px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
     }
     .form-block {
       .sc-iput {
         @include sc-iput;
+        @include max(1400px) {
+          font-size: 12px;
+          line-height: 14px;
+        }
       }
       #button-addon2 {
         @include addon-btn;
@@ -1481,6 +1519,10 @@
             font-weight: 400;
             display: block;
             min-width: 170px;
+            @include max(1400px) {
+              font-size: 14px;
+              line-height: 16px;
+            }
           }
         }
       }
@@ -1495,39 +1537,63 @@
       font-weight: 700;
       color: #000;
       margin: 0 0 40px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 25px;
+      }
+      @include max(767px) {
+        font-size: 28px;
+        line-height: 30px;
+        margin: 0 0 15px;
+      }
     }
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      gap: 10px;
       li {
         width: 24%;
-        .box {
-          background: #f7f5f7;
-          border-radius: 10px 10px;
-          padding: 15px 15px;
-          text-align: center;
-          transition: transform 0.3s ease;
-          &:hover {
-            transform: translateY(5px);
-          }
-          .img-hold {
-            margin: 0 0 20px;
-          }
-          .t-hold {
-            h4 {
-              font-size: 14px;
-              line-height: 16px;
-              font-weight: 600;
-              margin: 0 0 10px;
-              color: #000;
+        @include max(1200px){
+          width: 32.5%;
+        }
+        a {
+          display: inline-block;
+          .box {
+            background: #f7f5f7;
+            border-radius: 10px 10px;
+            padding: 15px 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            &:hover {
+              transform: translateY(5px);
             }
-            p {
-              margin: 0;
-              font-size: 11px;
-              line-height: 14px;
-              color: #000;
-              font-weight: 400;
+            .img-hold {
+              margin: 0 0 20px;
+            }
+            .t-hold {
+              h4 {
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 600;
+                margin: 0 0 10px;
+                color: #000;
+                @include max(1400px) {
+                  font-size: 12px;
+                  line-height: 14px;
+                }
+              }
+              p {
+                margin: 0;
+                font-size: 11px;
+                line-height: 14px;
+                color: #000;
+                font-weight: 400;
+                @include max(1400px) {
+                  height: 40px;
+                }
+              }
             }
           }
         }
@@ -1543,6 +1609,10 @@
       font-weight: 700;
       margin: 0 0 20px;
       text-align: center;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      } 
     }
     p {
       text-align: center;
@@ -1551,6 +1621,10 @@
       line-height: 20px;
       color: #000;
       margin: 0 0 30px;
+      @include max(1400px) {
+        font-size: 15px;
+        line-height: 20px;
+      } 
     }
     .course-listing {
       padding: 0;
@@ -1558,7 +1632,9 @@
         background: #fff;
         padding: 15px 15px;
         position: sticky;
-        top: 20px;
+        @include max(1400px) {
+          padding: 15px 0;
+        }
         .sidebar-title {
           font-size: 25px;
           line-height: 27px;
@@ -1787,10 +1863,20 @@
           @include an-btn;
           margin: 0;
           width: 48.5%;
+          @include max(1400px) {
+            padding: 10px 0;
+            font-size: 12px;
+            line-height: 14px;
+          }
         }
         .detail-btn {
           @include md-btn;
           width: 48.5%;
+          @include max(1400px) {
+            padding: 10px 0;
+            font-size: 12px;
+            line-height: 14px;
+          }
         }
         .pagination-wrap {
           margin-top: 50px;
@@ -1806,8 +1892,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 10px;
     li {
       width: 20%;
+      @include max(1400px) {
+        width: 32.5%;
+      }
       .img-hold {
         width: 60px;
       }
@@ -1820,6 +1910,10 @@
     color: #000;
     font-weight: 700;
     margin: 0 0 20px;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
   h5 {
     text-align: center;
@@ -1828,6 +1922,10 @@
     color: #000;
     font-weight: 500;
     margin: 0 0 50px;
+    @include max(1400px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
   }
   p {
     font-size: 16px;
@@ -1852,12 +1950,19 @@
     }
     .t-bar {
       padding: 0 0 0 15px;
+      @include max(1400px) {
+        padding: 0 0 0 10px;
+      }
       h3 {
         font-size: 16px;
         line-height: 18px;
         font-weight: 500;
         color: #000;
         margin: 0 0 5px;
+        @include max(1400px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
       p {
         font-size: 16px;
@@ -1865,11 +1970,20 @@
         font-weight: 400;
         color: #000;
         margin: 0;
+        @include max(1400px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
   }
   .form-block {
     margin: 3rem 0 0;
+    p {
+      @include max(1400px) {
+        font-size: 15px;
+      }
+    }
     input {
       @include inputbar;
       background: none;
@@ -1897,6 +2011,10 @@
     font-weight: 700;
     margin: 0 0 50px;
     text-align: center;
+    @include max(1400px) {
+      font-size: 30px;
+      line-height: 32px;
+    }
   }
   .location-list {
     max-height: 620px;
@@ -4410,6 +4528,9 @@
   .ru-banner {
     @include banner;
     margin: 0 0 5rem;
+    h2 {
+      display: none;
+    }
     ul {
       li {
         width: 100%;
