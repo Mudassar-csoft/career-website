@@ -9026,6 +9026,7 @@ body {
     padding: 10px 10px;
     font-size: 14px;
     line-height: 16px;
+    border: 0;
   }
   .main-header .menu-bar .dropdown-menu .dropdown-item:hover {
     background: none;
