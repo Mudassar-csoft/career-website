@@ -2986,9 +2986,13 @@
 .job-page {
   .top-banner {
     @include top-banner;
-    padding: 8rem 0;
+    padding: 10rem 0;
     background: url(../images/banner14.png) no-repeat center center;
     background-size: 100%;
+    @include max(1600px) {
+      padding: 8rem 0;
+      background-size: cover;
+    }
   }
   .cata-area {
     padding: 4rem 0 2rem;
@@ -2999,6 +3003,10 @@
       font-weight: 700;
       margin: 0 0 30px;
       text-align: center;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
     }
     ul {
       display: flex;
@@ -3029,6 +3037,10 @@
           font-weight: 500;
           color: #fff;
           margin: 0;
+          @include max(1400px) {
+            font-size: 18px;
+            line-height: 22px;
+          }
         }
       }
     }
@@ -3056,6 +3068,10 @@
       align-items: center;
       img {
         margin: 0 10px 0 0;
+      }
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
       }
     }
     .career-section {
@@ -3153,9 +3169,16 @@
 .ambassador-page {
   .top-banner {
     @include top-banner;
-    padding: 8rem 0;
+    padding: 10rem 0;
     background: url(../images/banner15.png) no-repeat center bottom;
     background-size: 100%;
+    @include max(1600px) {
+      background-size: cover;
+      padding: 8rem 0;
+    }
+    @include max(1200px) {
+      padding: 6rem 0;
+    }
   }
   .efl-area {
     padding: 5rem 0;
@@ -3177,6 +3200,10 @@
         color: #03c587;
         font-weight: 400;
         margin: 0 0 15px;
+        @include max(1400px) {
+          font-size: 20px;
+          line-height: 22px;
+        }
       }
       h2 {
         font-size: 36px;
@@ -3184,6 +3211,10 @@
         color: #282a2e;
         font-weight: 700;
         margin: 0 0 20px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 32px;
+        }
       }
       h5 {
         font-size: 18px;
@@ -3191,6 +3222,10 @@
         color: #2f2f2f;
         font-weight: 400;
         margin: 0 0 20px;
+        @include max(1400px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
       h4 {
         font-size: 22px;
@@ -3198,6 +3233,10 @@
         color: #282a2e;
         font-weight: 400;
         margin: 0 0 20px;
+        @include max(1400px) {
+          font-size: 20px;
+          line-height: 22px;
+        }
       }
       ul {
         margin: 0 0 20px;
@@ -3230,6 +3269,10 @@
       color: #000;
       font-weight: 400;
       margin: 0 0 10px;
+      @include max(1400px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
     }
     h2 {
       font-size: 36px;
@@ -3237,6 +3280,10 @@
       color: #000;
       font-weight: 600;
       margin: 0 0 30px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
     }
     .box {
       padding: 12px 12px 20px;
@@ -3259,6 +3306,10 @@
           color: #000;
           font-weight: 400;
           margin: 0;
+          @include max(1400px) {
+            font-size: 14px;
+            line-height: 16px;
+          }
         }
       }
       .img-hold {
@@ -3284,6 +3335,10 @@
         color: #000;
         font-weight: 700;
         margin: 0 0 30px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 32px;
+        }
       }
       .ec-btn {
         @include apply-btn;
@@ -3322,6 +3377,10 @@
     padding: 10rem 0;
     background: url(../images/banner16.png) no-repeat center top;
     background-size: 100%;
+    @include max(1600px) {
+      background-size: cover;
+      padding: 8rem 0;
+    }
   }
   .tabs-area {
     background: radial-gradient(
@@ -3342,11 +3401,26 @@
           width: 100%;
           border: 0;
           min-height: 100px;
+          @include max(1400px) {
+            padding: 25px 2rem;
+          }
+          @include max(992px) {
+            min-height: 85px;
+            padding: 20px 1.5rem  ;
+          }
           &.active {
-            padding: 30px 3rem;
             border-radius: 10px 10px 0 0 !important;
             box-shadow: 3px 0px 5px 0px #0000001a;
             background: #fff;
+            padding: 30px 3rem;
+            min-height: 115px;
+            @include max(1400px) {
+              padding: 25px 2rem;
+            }
+            @include max(992px) {
+              min-height: 100px;
+              padding: 20px 1.5rem;
+            }
           }
         }
         &:first-child {
@@ -3365,6 +3439,9 @@
       background: #fff;
       padding: 2rem 7rem;
       border-radius: 0 0 10px 10px;
+      @include max(992px) {
+        padding: 2rem 2rem;
+      }
       .bank-info {
         .info-label {
           display: block;
@@ -3373,6 +3450,10 @@
           color: #000;
           margin: 0 0 10px;
           font-weight: 400;
+          @include max(1400px) {
+            font-size: 18px;
+            line-height: 20px;
+          }
         }
         .info-box {
           background: #eeeeee;
@@ -3385,6 +3466,11 @@
           display: flex;
           align-items: center;
           height: 60px;
+          @include max(1400px) {
+            font-size: 18px;
+            line-height: 20px;
+            height: 50px;
+          }
         }
         .copy-box {
           display: flex;
@@ -3448,6 +3534,12 @@
     background: url(../images/banner17.png) no-repeat center bottom;
     background-size: cover;
     padding: 10rem 0;
+    @include max(1400px) {
+      padding: 8rem 0;
+    }
+    @include max(1280px) {
+      padding: 7rem 0;
+    }
   }
   .tabs-area {
     padding: 4rem 0;
@@ -3457,6 +3549,12 @@
       padding: 0 0 1rem;
       li {
         margin: 0 25px;
+        @include max(1400px) {
+          margin: 0 20px;
+        }
+        @include max(1200px) {
+          margin: 0 15px;
+        }
         button {
           font-size: 22px;
           line-height: 24px;
@@ -3464,6 +3562,14 @@
           font-weight: 600;
           padding: 15px 15px;
           position: relative;
+          @include max(1280px) {
+            font-size: 20px;
+            line-height: 22px;
+          }
+          @include max(1200px) {
+            font-size: 18px;
+            line-height: 20px;
+          }
           &.active {
             background: none;
             &::before {
@@ -3491,6 +3597,11 @@
           color: #03c587;
           margin: 0 0 40px;
           font-weight: 700;
+          @include max(1400px) {
+            font-size: 30px;
+            line-height: 32px;
+            margin: 0 0 25px;
+          }
         }
         .form-block {
           input {
@@ -3506,6 +3617,9 @@
               box-shadow: none;
               outline: none;
               border: 0;
+            }
+            @include max(1400px) {
+              height: 60px;
             }
           }
           .sm-btn {

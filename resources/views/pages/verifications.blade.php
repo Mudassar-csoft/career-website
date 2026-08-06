@@ -46,7 +46,7 @@
                                             <div class="col-12">
                                                 <input type="text" class="form-control">
                                             </div>
-                                            <div class="col-12 text-center mt-5">
+                                            <div class="col-12 text-center mt-4 mt-xxl-5">
                                                 <button type="submit" class="btn sm-btn">Verify Now</button>
                                             </div>
                                         </form>

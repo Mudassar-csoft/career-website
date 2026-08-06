@@ -2,6 +2,20 @@
 @section('title', 'Job Placement | Career Website')
 @section('body_class', 'job-page')
 @section('content')
+<section class="top-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="mb-3">Transform Your Future</p>
+                <h1 class="mb-4">Discover Opportunities That Inspire !</h1>
+                <div class="btn-block">
+                    <a href="#" class="btn aq-btn">Submit Resume</a>
+                    <a href="#" class="btn wa-btn">Post a Job</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="f-job">
     <div class="container">
         <div class="row">
@@ -364,7 +378,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 text-center mt-4">
+                        <div class="col-12 mt-4">
                             <button type="submit" class="btn sm-btn">Send Message</button>
                         </div>
                         <input type="hidden" name="source" value="Job Placement">

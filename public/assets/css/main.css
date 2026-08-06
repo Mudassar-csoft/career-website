@@ -2890,6 +2890,11 @@ body {
   color: #000;
   border-radius: 5px 5px;
 }
+@media (max-width: 1200px) {
+  .info-bar .form-block .file-upload-wrapper .custom-file-upload .input-group-text {
+    font-size: 14px;
+  }
+}
 .info-bar .form-block .file-upload-wrapper .custom-file-upload .file-text {
   height: 48px;
   display: flex;
@@ -2902,6 +2907,12 @@ body {
   font-weight: 400;
   box-shadow: none;
   border: 0;
+}
+@media (max-width: 1200px) {
+  .info-bar .form-block .file-upload-wrapper .custom-file-upload .file-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .location-section {
@@ -3085,11 +3096,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .vue-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .vue-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .vue-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .vue-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -3398,11 +3421,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .PSI-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .PSI-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .PSI-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .PSI-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -3795,11 +3830,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .cws-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .cws-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .cws-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .cws-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -4161,11 +4208,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .sa-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .sa-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .sa-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .sa-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -4749,11 +4808,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .contact-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .contact-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .contact-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .contact-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -4983,11 +5054,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .job-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .job-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .job-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .job-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -5083,9 +5166,15 @@ body {
   box-shadow: none;
 }
 .job-page .top-banner {
-  padding: 8rem 0;
+  padding: 10rem 0;
   background: url(../images/banner14.png) no-repeat center center;
   background-size: 100%;
+}
+@media (max-width: 1600px) {
+  .job-page .top-banner {
+    padding: 8rem 0;
+    background-size: cover;
+  }
 }
 .job-page .cata-area {
   padding: 4rem 0 2rem;
@@ -5097,6 +5186,12 @@ body {
   font-weight: 700;
   margin: 0 0 30px;
   text-align: center;
+}
+@media (max-width: 1400px) {
+  .job-page .cata-area h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 .job-page .cata-area ul {
   display: flex;
@@ -5129,6 +5224,12 @@ body {
   font-weight: 500;
   color: #fff;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .job-page .cata-area ul li p {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 .job-page .cata-area .btn-bar {
   text-align: center;
@@ -5170,6 +5271,12 @@ body {
 }
 .job-page .f-job h2 img {
   margin: 0 10px 0 0;
+}
+@media (max-width: 1400px) {
+  .job-page .f-job h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 .job-page .f-job .career-section .career-filter {
   display: flex;
@@ -5327,11 +5434,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .ambassador-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .ambassador-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .ambassador-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .ambassador-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -5427,9 +5546,20 @@ body {
   box-shadow: none;
 }
 .ambassador-page .top-banner {
-  padding: 8rem 0;
+  padding: 10rem 0;
   background: url(../images/banner15.png) no-repeat center bottom;
   background-size: 100%;
+}
+@media (max-width: 1600px) {
+  .ambassador-page .top-banner {
+    background-size: cover;
+    padding: 8rem 0;
+  }
+}
+@media (max-width: 1200px) {
+  .ambassador-page .top-banner {
+    padding: 6rem 0;
+  }
 }
 .ambassador-page .efl-area {
   padding: 5rem 0;
@@ -5454,12 +5584,24 @@ body {
   font-weight: 400;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .ambassador-page .efl-area .t-text p {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .ambassador-page .efl-area .t-text h2 {
   font-size: 36px;
   line-height: 40px;
   color: #282a2e;
   font-weight: 700;
   margin: 0 0 20px;
+}
+@media (max-width: 1400px) {
+  .ambassador-page .efl-area .t-text h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 .ambassador-page .efl-area .t-text h5 {
   font-size: 18px;
@@ -5468,12 +5610,24 @@ body {
   font-weight: 400;
   margin: 0 0 20px;
 }
+@media (max-width: 1400px) {
+  .ambassador-page .efl-area .t-text h5 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 .ambassador-page .efl-area .t-text h4 {
   font-size: 22px;
   line-height: 24px;
   color: #282a2e;
   font-weight: 400;
   margin: 0 0 20px;
+}
+@media (max-width: 1400px) {
+  .ambassador-page .efl-area .t-text h4 {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 .ambassador-page .efl-area .t-text ul {
   margin: 0 0 20px;
@@ -5519,12 +5673,24 @@ body {
   font-weight: 400;
   margin: 0 0 10px;
 }
+@media (max-width: 1400px) {
+  .ambassador-page .pa-area h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .ambassador-page .pa-area h2 {
   font-size: 36px;
   line-height: 40px;
   color: #000;
   font-weight: 600;
   margin: 0 0 30px;
+}
+@media (max-width: 1400px) {
+  .ambassador-page .pa-area h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 .ambassador-page .pa-area .box {
   padding: 12px 12px 20px;
@@ -5550,6 +5716,12 @@ body {
   font-weight: 400;
   margin: 0;
 }
+@media (max-width: 1400px) {
+  .ambassador-page .pa-area .box .t-hold h5 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .ambassador-page .pa-area .box .img-hold {
   height: 40px;
   display: flex;
@@ -5567,6 +5739,12 @@ body {
   color: #000;
   font-weight: 700;
   margin: 0 0 30px;
+}
+@media (max-width: 1400px) {
+  .ambassador-page .tour-area .t-box h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
 }
 .ambassador-page .tour-area .t-box .ec-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -5629,11 +5807,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .pay-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .pay-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .pay-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .pay-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -5733,6 +5923,12 @@ body {
   background: url(../images/banner16.png) no-repeat center top;
   background-size: 100%;
 }
+@media (max-width: 1600px) {
+  .pay-page .top-banner {
+    background-size: cover;
+    padding: 8rem 0;
+  }
+}
 .pay-page .tabs-area {
   background: radial-gradient(100.9% 275.8% at 14.51% 43.51%, #03c38a 0%, #009db8 100%);
   padding: 70px 0;
@@ -5752,11 +5948,34 @@ body {
   border: 0;
   min-height: 100px;
 }
+@media (max-width: 1400px) {
+  .pay-page .tabs-area .nav-tabs li button {
+    padding: 25px 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .pay-page .tabs-area .nav-tabs li button {
+    min-height: 85px;
+    padding: 20px 1.5rem;
+  }
+}
 .pay-page .tabs-area .nav-tabs li button.active {
-  padding: 30px 3rem;
   border-radius: 10px 10px 0 0 !important;
   box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.1019607843);
   background: #fff;
+  padding: 30px 3rem;
+  min-height: 115px;
+}
+@media (max-width: 1400px) {
+  .pay-page .tabs-area .nav-tabs li button.active {
+    padding: 25px 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .pay-page .tabs-area .nav-tabs li button.active {
+    min-height: 100px;
+    padding: 20px 1.5rem;
+  }
 }
 .pay-page .tabs-area .nav-tabs li:first-child button {
   border-radius: 10px 0 0 0;
@@ -5769,6 +5988,11 @@ body {
   padding: 2rem 7rem;
   border-radius: 0 0 10px 10px;
 }
+@media (max-width: 992px) {
+  .pay-page .tabs-area .tab-content {
+    padding: 2rem 2rem;
+  }
+}
 .pay-page .tabs-area .tab-content .bank-info .info-label {
   display: block;
   font-size: 20px;
@@ -5776,6 +6000,12 @@ body {
   color: #000;
   margin: 0 0 10px;
   font-weight: 400;
+}
+@media (max-width: 1400px) {
+  .pay-page .tabs-area .tab-content .bank-info .info-label {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 .pay-page .tabs-area .tab-content .bank-info .info-box {
   background: #eeeeee;
@@ -5788,6 +6018,13 @@ body {
   display: flex;
   align-items: center;
   height: 60px;
+}
+@media (max-width: 1400px) {
+  .pay-page .tabs-area .tab-content .bank-info .info-box {
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+  }
 }
 .pay-page .tabs-area .tab-content .bank-info .copy-box {
   display: flex;
@@ -5860,11 +6097,23 @@ body {
   font-weight: 700;
   margin: 0 0 15px;
 }
+@media (max-width: 1400px) {
+  .veri-page .top-banner h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 .veri-page .top-banner p {
   font-size: 24px;
   line-height: 28px;
   font-weight: 400;
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .veri-page .top-banner p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .veri-page .top-banner .btn-bar .sr-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
@@ -5964,6 +6213,16 @@ body {
   background-size: cover;
   padding: 10rem 0;
 }
+@media (max-width: 1400px) {
+  .veri-page .top-banner {
+    padding: 8rem 0;
+  }
+}
+@media (max-width: 1280px) {
+  .veri-page .top-banner {
+    padding: 7rem 0;
+  }
+}
 .veri-page .tabs-area {
   padding: 4rem 0;
 }
@@ -5975,6 +6234,16 @@ body {
 .veri-page .tabs-area .nav li {
   margin: 0 25px;
 }
+@media (max-width: 1400px) {
+  .veri-page .tabs-area .nav li {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .veri-page .tabs-area .nav li {
+    margin: 0 15px;
+  }
+}
 .veri-page .tabs-area .nav li button {
   font-size: 22px;
   line-height: 24px;
@@ -5982,6 +6251,18 @@ body {
   font-weight: 600;
   padding: 15px 15px;
   position: relative;
+}
+@media (max-width: 1280px) {
+  .veri-page .tabs-area .nav li button {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 1200px) {
+  .veri-page .tabs-area .nav li button {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 .veri-page .tabs-area .nav li button.active {
   background: none;
@@ -6008,6 +6289,13 @@ body {
   margin: 0 0 40px;
   font-weight: 700;
 }
+@media (max-width: 1400px) {
+  .veri-page .tabs-area .tab-content .text-info h2 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0 0 25px;
+  }
+}
 .veri-page .tabs-area .tab-content .text-info .form-block input {
   height: 80px;
   background: #eeeeee;
@@ -6022,6 +6310,11 @@ body {
   box-shadow: none;
   outline: none;
   border: 0;
+}
+@media (max-width: 1400px) {
+  .veri-page .tabs-area .tab-content .text-info .form-block input {
+    height: 60px;
+  }
 }
 .veri-page .tabs-area .tab-content .text-info .form-block .sm-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);

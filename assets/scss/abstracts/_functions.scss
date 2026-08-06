@@ -310,6 +310,9 @@
 			font-weight: 700;
 			color: #000;
 			border-radius: 5px 5px;
+			@include max(1200px) {
+				font-size: 14px;
+			}
 		}
 		.file-text {
 			height: 48px;
@@ -323,6 +326,10 @@
 			font-weight: 400;
 			box-shadow: none;
 			border: 0;
+			@include max(1200px) {
+				font-size: 12px;
+				line-height: 16px;
+			}
 		}
 	}
 }
@@ -346,12 +353,20 @@
       line-height: 42px;
       font-weight: 700;
       margin: 0 0 15px;
+	  @include max(1400px) {
+		font-size: 30px;
+		line-height: 32px;
+	  }
     }
     p {
       font-size: 24px;
       line-height: 28px;
       font-weight: 400;
       margin: 0;
+	  @include max(1400px) {
+		font-size: 20px;
+		line-height: 25px
+	  }
     }
 	.btn-bar {
       .sr-btn {
