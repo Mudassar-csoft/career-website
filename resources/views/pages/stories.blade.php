@@ -945,11 +945,11 @@
             infinite: true,
             responsive: [
                 {
-                    breakpoint: 992,
+                    breakpoint: 1200,
                     settings: {
                         vertical: false,
                         verticalSwiping: false,
-                        slidesToShow: 2
+                        slidesToShow: 3
                     }
                 },
                 {

@@ -604,8 +604,8 @@
     margin: 0 0 50px;
     text-align: center;
     @include max(1400px) {
-      font-size: 32px;
-      line-height: 34px;
+      font-size: 30px;
+      line-height: 35px;
       margin: 0 0 30px;
     }
     @include max(767px) {
@@ -4213,13 +4213,9 @@
       font-weight: 600;
       margin: 0 0 40px;
       @include max(1400px) {
-        font-size: 35px;
-        line-height: 40px;
-        margin: 0 0 30px;
-      }
-      @include max(767px) {
         font-size: 30px;
-        line-height: 32px;
+        line-height: 35px;
+        margin: 0 0 30px;
       }
       @include max(575px) {
         font-size: 20px;
@@ -4231,6 +4227,9 @@
     position: relative;
     overflow: hidden;
     padding: 5rem 0;
+    @include max(1280px) {
+      padding: 3rem 0;
+    }
     background: linear-gradient(
       248.21deg,
       #088a64 -5.66%,
@@ -4299,6 +4298,9 @@
       rgba(1, 161, 180, 0.15) 0%,
       rgba(241, 247, 247, 0) 100%
     );
+    @include max(1280px) {
+      padding: 3rem 0;
+    }
   }
   .feature-block {
     background: none;
@@ -4337,14 +4339,23 @@
     .slick-next {
       box-shadow: 0px 0px 6px 0px #00000026;
       right: -80px;
+      @include max(1400px) {
+        right: -20px;
+      }
     }
     .slick-prev {
       box-shadow: 0px 0px 6px 0px #00000026;
       left: -80px;
+      @include max(1400px) {
+        left: -20px;
+      }
     }
   }
   .success-area {
     padding: 5rem 0 1rem;
+    @include max(1280px) {
+      padding: 3rem 0 1rem
+    }
   }
 }
 

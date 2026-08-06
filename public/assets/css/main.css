@@ -1045,8 +1045,8 @@ body {
 }
 @media (max-width: 1400px) {
   .review-area h2 {
-    font-size: 32px;
-    line-height: 34px;
+    font-size: 30px;
+    line-height: 35px;
     margin: 0 0 30px;
   }
 }
@@ -6976,15 +6976,9 @@ body {
 }
 @media (max-width: 1400px) {
   .ss-page .top-bar h2 {
-    font-size: 35px;
-    line-height: 40px;
-    margin: 0 0 30px;
-  }
-}
-@media (max-width: 767px) {
-  .ss-page .top-bar h2 {
     font-size: 30px;
-    line-height: 32px;
+    line-height: 35px;
+    margin: 0 0 30px;
   }
 }
 @media (max-width: 575px) {
@@ -6997,6 +6991,13 @@ body {
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
+}
+@media (max-width: 1280px) {
+  .ss-page .particle-section {
+    padding: 3rem 0;
+  }
+}
+.ss-page .particle-section {
   background: linear-gradient(248.21deg, #088a64 -5.66%, #012e4b 37.75%, #012e4b 101.82%);
 }
 .ss-page .particle-section #particles-js {
@@ -7078,6 +7079,11 @@ body {
   padding: 5rem 0;
   background: radial-gradient(52.57% 119.57% at 86.39% 75.79%, rgba(1, 161, 180, 0.15) 0%, rgba(241, 247, 247, 0) 100%);
 }
+@media (max-width: 1280px) {
+  .ss-page .video-block {
+    padding: 3rem 0;
+  }
+}
 .ss-page .feature-block {
   background: none;
   padding: 4rem 0;
@@ -7111,12 +7117,27 @@ body {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1490196078);
   right: -80px;
 }
+@media (max-width: 1400px) {
+  .ss-page .feature-block .slick-next {
+    right: -20px;
+  }
+}
 .ss-page .feature-block .slick-prev {
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1490196078);
   left: -80px;
 }
+@media (max-width: 1400px) {
+  .ss-page .feature-block .slick-prev {
+    left: -20px;
+  }
+}
 .ss-page .success-area {
   padding: 5rem 0 1rem;
+}
+@media (max-width: 1280px) {
+  .ss-page .success-area {
+    padding: 3rem 0 1rem;
+  }
 }
 
 .course-detail .cou-detail {
@@ -9668,6 +9689,63 @@ body {
   }
 }
 
+.back-to-top {
+  position: fixed;
+  right: 25px;
+  bottom: 110px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  animation: zoomInOut 3s ease-in-out infinite;
+  cursor: pointer;
+}
+.back-to-top i {
+  pointer-events: none;
+}
+.back-to-top:hover {
+  background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+  color: #fff;
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:focus {
+  box-shadow: none;
+  border: 0;
+  outline: none;
+}
+@media (max-width: 575px) {
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .news-slider {
   margin: 0 0 44px;
 }
@@ -10281,6 +10359,12 @@ body {
   border-radius: 10px 10px;
   width: 35%;
 }
+@media (max-width: 1280px) {
+  .success-story-wrapper .before-box,
+  .success-story-wrapper .after-box {
+    width: 50%;
+  }
+}
 .success-story-wrapper .before-box span,
 .success-story-wrapper .after-box span {
   display: block;
@@ -10446,7 +10530,7 @@ body {
   ========================================= */
 @media (max-width: 1199.98px) {
   .success-story-wrapper {
-    grid-template-columns: minmax(0, 1fr) 150px;
+    display: block;
   }
   .success-story-wrapper .success-card {
     grid-template-columns: 220px minmax(0, 1fr);
@@ -10456,6 +10540,19 @@ body {
   }
   .success-story-wrapper .success-content h2 {
     font-size: 24px;
+  }
+  .success-story-wrapper .success-nav-slider {
+    padding: 0;
+    border: 0;
+  }
+  .success-story-wrapper .success-nav-slider .slick-slide {
+    margin: 5px 5px;
+  }
+  .success-story-wrapper .success-nav-slider .slick-slide:last-child {
+    margin: 5px 5px;
+  }
+  .success-story-wrapper .success-main-slider {
+    margin: 0 0 15px;
   }
 }
 /* =========================================

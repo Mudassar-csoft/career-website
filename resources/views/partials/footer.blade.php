@@ -78,4 +78,7 @@
     <a href="https://wa.me/923414444010" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <a href="javascript:void(0)" id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 </footer>

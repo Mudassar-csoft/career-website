@@ -575,6 +575,9 @@
     padding: 15px 15px;
     border-radius: 10px 10px;
     width: 35%;
+    @include max(1280px) {
+      width: 50%;
+    }
     span {
       display: block;
       margin: 0 0 8px;
@@ -746,7 +749,7 @@
 
 @media (max-width: 1199.98px) {
   .success-story-wrapper {
-    grid-template-columns: minmax(0, 1fr) 150px;
+    display: block;
     .success-card {
       grid-template-columns: 220px minmax(0, 1fr);
     }
@@ -757,6 +760,19 @@
       h2 {
         font-size: 24px;
       }
+    }
+    .success-nav-slider {
+      padding: 0;
+      border: 0;
+      .slick-slide {
+        margin: 5px 5px;
+        &:last-child {
+          margin: 5px 5px;
+        }
+      }
+    }
+    .success-main-slider {
+      margin: 0 0 15px;
     }
   }
 }

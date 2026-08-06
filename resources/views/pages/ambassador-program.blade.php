@@ -346,23 +346,23 @@
 @push('scripts')
 <script>
 $(".location-card").click(function () {
-			$(".location-card")
-				.removeClass("active");
-			$(this)
-				.addClass("active");
-			let map =
-				$(this).data("map");
-			$("#locationMap")
-				.attr("src", map);
-		});
+    $(".location-card")
+        .removeClass("active");
+    $(this)
+        .addClass("active");
+    let map =
+        $(this).data("map");
+    $("#locationMap")
+        .attr("src", map);
+});
 </script>
 <script>
 $("#fileUpload").on("change", function () {
-            let fileName = this.files.length
-                ? this.files[0].name
-                : "Upload your Document";
+let fileName = this.files.length
+        ? this.files[0].name
+        : "Upload your Document";
 
-            $(".file-text").text(fileName);
-        });
+    $(".file-text").text(fileName);
+});
 </script>
 @endpush

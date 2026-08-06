@@ -70,3 +70,70 @@ document.addEventListener('submit', function (e) {
             }
         });
 });
+
+// top scrool button code start here
+
+$(document).ready(function () {
+    const $backToTop = $("#backToTop");
+    let animationId = null;
+    let isScrolling = false;
+    // Show / Hide Button
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 300) {
+            $backToTop.addClass("show");
+        } else {
+            $backToTop.removeClass("show");
+        }
+    });
+    // Stop Animation Function
+    function stopScroll() {
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+        isScrolling = false;
+    }
+    // Mouse Wheel Stop
+    $(window).on("wheel", function () {
+        stopScroll();
+    });
+    // Touch Stop (Mobile)
+    $(window).on("touchmove", function () {
+        stopScroll();
+    });
+    // Keyboard Stop
+    $(window).on("keydown", function () {
+        stopScroll();
+    });
+    // Click Anywhere Stop
+    $(document).on("click", function (e) {
+        // Ignore Back To Top button click
+        if ($(e.target).closest("#backToTop").length) {
+            return;
+        }
+        stopScroll();
+    });
+    // Back To Top Click
+    $backToTop.on("click", function (e) {
+        e.preventDefault();
+        if (isScrolling) return;
+        isScrolling = true;
+        // ===== SPEED =====
+        // 2 = Very Slow
+        // 5 = Slow
+        // 8 = Medium
+        // 15 = Fast
+        const speed = 15;
+        function animate() {
+            if (!isScrolling) return;
+            let current = window.pageYOffset;
+            if (current <= 0) {
+                stopScroll();
+                return;
+            }
+            window.scrollTo(0, current - speed);
+            animationId = requestAnimationFrame(animate);
+        }
+        animationId = requestAnimationFrame(animate);
+    });
+});
