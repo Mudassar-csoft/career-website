@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class EventRegistration extends Model
+{
+    protected $fillable = [
+        'event_id',
+        'name',
+        'email',
+        'phone',
+        'status',
+        'fee_proof',
+        'token',
+    ];
+
+    public function event(): BelongsTo
+    {
+        return $this->belongsTo(Event::class);
+    }
+
+    public function isParticipant(): bool
+    {
+        return $this->status === 'participant';
+    }
+}

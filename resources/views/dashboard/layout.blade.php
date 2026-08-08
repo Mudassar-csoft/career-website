@@ -340,7 +340,8 @@
             color: var(--dash-text);
             text-decoration: none;
         }
-        .dash-profile-menu a:hover {
+        .dash-profile-menu a:hover,
+        .dash-profile-menu form button:hover {
             background: #f4f7f9;
         }
         .dash-menu-divider {
@@ -878,8 +879,8 @@
                     @yield('topbar-actions')
                     <div class="dash-profile" id="dash-profile">
                         <button type="button" class="dash-profile-btn" id="dash-profile-btn">
-                            <span class="dash-avatar">A</span>
-                            <span class="dash-profile-name">Admin</span>
+                            <span class="dash-avatar">{{ strtoupper(substr(auth()->user()->name ?? 'A', 0, 1)) }}</span>
+                            <span class="dash-profile-name">{{ auth()->user()->name ?? 'Admin' }}</span>
                             <svg class="dash-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
                                 <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -888,7 +889,10 @@
                             <a href="{{ route('dashboard.profile') }}">View Profile</a>
                             <a href="{{ route('dashboard.settings') }}">Settings</a>
                             <div class="dash-menu-divider"></div>
-                            <a href="{{ route('login') }}" class="dash-menu-danger">Sign Out</a>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="dash-menu-danger" style="width:100%;text-align:left;background:none;border:0;padding:9px 12px;border-radius:6px;font-size:14px;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:8px;">Sign Out</button>
+                            </form>
                         </div>
                     </div>
                 </div>

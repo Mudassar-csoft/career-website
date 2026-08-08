@@ -58,8 +58,10 @@
         <div class="dash-selection-bar" id="selection-bar">
             <span class="dash-selection-count" id="selection-count">0 selected</span>
             <div class="dash-selection-actions">
-                <button type="button" class="dash-btn dash-btn-secondary" id="send-sms-btn">Send SMS</button>
-                <button type="button" class="dash-btn" id="send-email-btn">Send Email</button>
+                @can('newsletter.send')
+                    <button type="button" class="dash-btn dash-btn-secondary" id="send-sms-btn">Send SMS</button>
+                    <button type="button" class="dash-btn" id="send-email-btn">Send Email</button>
+                @endcan
             </div>
         </div>
     </div>

@@ -52,216 +52,68 @@
                 <div class="news-tabs">
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                            <div class="main-box">
-                                <div class="row">
-                                    <div class="col-lg-7">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img62.png') }}" alt="">
-                                            <h4>Featured</h4>
+                            @if ($featuredNews)
+                                <div class="main-box">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <div class="img-hold">
+                                                <img src="{{ $featuredNews->image ? asset('storage/'.$featuredNews->image) : asset('assets/images/img62.png') }}" alt="{{ $featuredNews->title }}">
+                                                <h4>Featured</h4>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <div class="t-box">
-                                            <h3>
-                                                Career Institute Signs
-                                                Franchise MOU for
-                                                Kohinoor FSD Branch
-                                            </h3>
-                                            <p>
-                                                A significant milestone as we expand
-                                                our footprint to Faisalabad, bringing
-                                                quality education closer to more
-                                                students.
-                                            </p>
-                                            <div class="last-box">
-                                                <span>
-                                                    <img src="{{ asset('assets/images/icon127.png') }}" alt="">
-                                                    09-12-2024
-                                                </span>
-                                                <a href="#" class="btn ra-btn">Read full Article</a>
+                                        <div class="col-lg-5">
+                                            <div class="t-box">
+                                                <h3>
+                                                    {{ $featuredNews->title }}
+                                                </h3>
+                                                <p>
+                                                    {{ $featuredNews->subtitle }}
+                                                </p>
+                                                <div class="last-box">
+                                                    <span>
+                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="">
+                                                        {{ $featuredNews->created_at->format('d-m-Y') }}
+                                                    </span>
+                                                    <a href="{{ route('news-detail', $featuredNews->slug) }}" class="btn ra-btn">Read full Article</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                             <div class="more-bar">
-                                <div class="row mb-4">
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="workshop-card">
-                                            <!-- Image -->
-                                            <div class="workshop-card__image">
-                                                <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                                                <span class="workshop-card__badge">Institute</span>
-                                            </div>
-                                            <!-- Content -->
-                                            <div class="workshop-card__body">
-                                                <h3 class="workshop-card__title">
-                                                    Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                                                </h3>
-                                                <p class="workshop-card__text">
-                                                    A significant milestone as we expand our footprint to Faisalabad,
-                                                    bringing quality education closer to more students.
-                                                </p>
-                                                <!-- Bottom -->
-                                                <div class="workshop-card__footer">
-                                                    <div class="workshop-card__date">
-                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                        <span>09-12-2024</span>
-                                                    </div>
-                                                    <a href="#" class="workshop-card__btn">
-                                                        Read More
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="workshop-card">
-                                            <!-- Image -->
-                                            <div class="workshop-card__image">
-                                                <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                                                <span class="workshop-card__badge">Institute</span>
-                                            </div>
-                                            <!-- Content -->
-                                            <div class="workshop-card__body">
-                                                <h3 class="workshop-card__title">
-                                                    Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                                                </h3>
-                                                <p class="workshop-card__text">
-                                                    A significant milestone as we expand our footprint to Faisalabad,
-                                                    bringing quality education closer to more students.
-                                                </p>
-                                                <!-- Bottom -->
-                                                <div class="workshop-card__footer">
-                                                    <div class="workshop-card__date">
-                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                        <span>09-12-2024</span>
-                                                    </div>
-                                                    <a href="#" class="workshop-card__btn">
-                                                        Read More
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="workshop-card">
-                                            <!-- Image -->
-                                            <div class="workshop-card__image">
-                                                <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                                                <span class="workshop-card__badge">Institute</span>
-                                            </div>
-                                            <!-- Content -->
-                                            <div class="workshop-card__body">
-                                                <h3 class="workshop-card__title">
-                                                    Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                                                </h3>
-                                                <p class="workshop-card__text">
-                                                    A significant milestone as we expand our footprint to Faisalabad,
-                                                    bringing quality education closer to more students.
-                                                </p>
-                                                <!-- Bottom -->
-                                                <div class="workshop-card__footer">
-                                                    <div class="workshop-card__date">
-                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                        <span>09-12-2024</span>
-                                                    </div>
-                                                    <a href="#" class="workshop-card__btn">
-                                                        Read More
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="workshop-card">
-                                            <!-- Image -->
-                                            <div class="workshop-card__image">
-                                                <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                                                <span class="workshop-card__badge">Institute</span>
-                                            </div>
-                                            <!-- Content -->
-                                            <div class="workshop-card__body">
-                                                <h3 class="workshop-card__title">
-                                                    Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                                                </h3>
-                                                <p class="workshop-card__text">
-                                                    A significant milestone as we expand our footprint to Faisalabad,
-                                                    bringing quality education closer to more students.
-                                                </p>
-                                                <!-- Bottom -->
-                                                <div class="workshop-card__footer">
-                                                    <div class="workshop-card__date">
-                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                        <span>09-12-2024</span>
+                                    @forelse ($otherNews as $item)
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="workshop-card">
+                                                <!-- Image -->
+                                                <div class="workshop-card__image">
+                                                    <img src="{{ $item->image ? asset('storage/'.$item->image) : asset('assets/images/img64.png') }}" alt="{{ $item->title }}">
+                                                    <span class="workshop-card__badge">{{ $item->type->name }}</span>
+                                                </div>
+                                                <!-- Content -->
+                                                <div class="workshop-card__body">
+                                                    <h3 class="workshop-card__title">
+                                                        {{ $item->title }}
+                                                    </h3>
+                                                    <p class="workshop-card__text">
+                                                        {{ $item->subtitle }}
+                                                    </p>
+                                                    <!-- Bottom -->
+                                                    <div class="workshop-card__footer">
+                                                        <div class="workshop-card__date">
+                                                            <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
+                                                            <span>{{ $item->created_at->format('d-m-Y') }}</span>
+                                                        </div>
+                                                        <a href="{{ route('news-detail', $item->slug) }}" class="workshop-card__btn">
+                                                            Read More
+                                                        </a>
                                                     </div>
-                                                    <a href="#" class="workshop-card__btn">
-                                                        Read More
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="workshop-card">
-                                            <!-- Image -->
-                                            <div class="workshop-card__image">
-                                                <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                                                <span class="workshop-card__badge">Institute</span>
-                                            </div>
-                                            <!-- Content -->
-                                            <div class="workshop-card__body">
-                                                <h3 class="workshop-card__title">
-                                                    Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                                                </h3>
-                                                <p class="workshop-card__text">
-                                                    A significant milestone as we expand our footprint to Faisalabad,
-                                                    bringing quality education closer to more students.
-                                                </p>
-                                                <!-- Bottom -->
-                                                <div class="workshop-card__footer">
-                                                    <div class="workshop-card__date">
-                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                        <span>09-12-2024</span>
-                                                    </div>
-                                                    <a href="#" class="workshop-card__btn">
-                                                        Read More
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="workshop-card">
-                                            <!-- Image -->
-                                            <div class="workshop-card__image">
-                                                <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                                                <span class="workshop-card__badge">Institute</span>
-                                            </div>
-                                            <!-- Content -->
-                                            <div class="workshop-card__body">
-                                                <h3 class="workshop-card__title">
-                                                    Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                                                </h3>
-                                                <p class="workshop-card__text">
-                                                    A significant milestone as we expand our footprint to Faisalabad,
-                                                    bringing quality education closer to more students.
-                                                </p>
-                                                <!-- Bottom -->
-                                                <div class="workshop-card__footer">
-                                                    <div class="workshop-card__date">
-                                                        <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                        <span>09-12-2024</span>
-                                                    </div>
-                                                    <a href="#" class="workshop-card__btn">
-                                                        Read More
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @empty
+                                    @endforelse
                                 </div>
                             </div>
                         </div>
@@ -284,61 +136,20 @@
                         <div class="rec-post">
                             <h3>Recent Posts</h3>
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                @forelse ($recentPosts as $post)
+                                    <li>
+                                        <a href="{{ route('news-detail', $post->slug) }}">
+                                            <div class="img-hold">
+                                                <img src="{{ $post->image ? asset('storage/'.$post->image) : asset('assets/images/img61.png') }}" alt="{{ $post->title }}">
+                                            </div>
+                                            <div class="text-hold">
+                                                <h3>{{ $post->title }}</h3>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> {{ $post->created_at->format('d-m-Y') }}</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                @empty
+                                @endforelse
                             </ul>
                         </div>
                     </div>
@@ -346,33 +157,16 @@
                         <h3>Categories</h3>
                         <ul>
                             <li>
-                                <a href="#">All News</a>
-                                <span>36</span>
+                                <a href="{{ route('news') }}">All News</a>
+                                <span>{{ $newsItems->count() }}</span>
                             </li>
-                            <li>
-                                <a href="#">Admission</a>
-                                <span>08</span>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Announcements</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Achievements</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Workshops</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Scholarships</a>
-                                <span>36</span>
-                            </li>
+                            @forelse ($newsTypes as $type)
+                                <li>
+                                    <a href="{{ route('news') }}">{{ $type->name }}</a>
+                                    <span>{{ $type->news_count }}</span>
+                                </li>
+                            @empty
+                            @endforelse
                         </ul>
                     </div>
                 </div>

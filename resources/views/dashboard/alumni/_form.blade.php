@@ -1,0 +1,38 @@
+@csrf
+
+<div class="dash-form-row">
+    <div class="dash-form-group">
+        <label for="alumni-name">Name</label>
+        <input type="text" id="alumni-name" name="name" value="{{ old('name', $alum->name) }}" required>
+        @error('name')
+            <p class="dash-form-error">{{ $message }}</p>
+        @enderror
+    </div>
+    <div class="dash-form-group">
+        <label for="alumni-designation">Designation</label>
+        <input type="text" id="alumni-designation" name="designation" value="{{ old('designation', $alum->designation) }}" placeholder="e.g. Graphic Designer" required>
+        @error('designation')
+            <p class="dash-form-error">{{ $message }}</p>
+        @enderror
+    </div>
+</div>
+
+<div class="dash-form-group">
+    <label for="alumni-review">Review</label>
+    <textarea id="alumni-review" name="review" rows="5" required>{{ old('review', $alum->review) }}</textarea>
+    @error('review')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>
+
+<div class="dash-form-group">
+    <label for="alumni-photo">Photo</label>
+    <input type="file" id="alumni-photo" name="photo" accept="image/*">
+    @if ($alum->photo)
+        <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ asset('storage/'.$alum->photo) }}" alt="{{ $alum->name }}">
+    @endif
+    <img id="alumni-photo-preview" class="dash-image-preview" alt="Preview">
+    @error('photo')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>

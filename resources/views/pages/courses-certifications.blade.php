@@ -22,31 +22,14 @@
                         </form>
                     </div>
                     <div class="cor-slider mb-3">
-                        <div>
-                            <div class="text-box">
-                                <a href="#">IELTS </a>
+                        @forelse ($categories as $cat)
+                            <div>
+                                <div class="text-box">
+                                    <a href="{{ route('courses-certifications') }}#course-{{ $cat->slug }}">{{ $cat->name }}</a>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="text-box">
-                                <a href="#">UI/UX Designing</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-box">
-                                <a href="#">Digital Marketing & SEO</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-box">
-                                <a href="#">AI & Data Science</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="text-box">
-                                <a href="#">IELTS </a>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
                     <div class="btn-area">
                         <ul>
@@ -293,176 +276,36 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature-slider">
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
+                    @forelse ($featuredCourses as $course)
+                        <div>
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/img03.png') }}" alt="{{ $course->title }}">
                                 </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
+                                <div class="text-hold">
+                                    <h3>{{ $course->title }}</h3>
+                                    <ul>
+                                        <li>
+                                            Category:
+                                            <span>{{ $course->category->name }}</span>
+                                        </li>
+                                        <li>
+                                            Duration:
+                                            <span><img src="assets/images/icon12.svg" alt=""> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                        </li>
+                                        <li>
+                                            Mode:
+                                            <span><img src="assets/images/icon09.svg" alt="">{{ $course->mode->name }}</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-area">
+                                        <a href="{{ route('course-detail', $course->slug) }}" class="btn md-btn">More Details</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                    @endforelse
                 </div>
             </div>
         </div>
@@ -636,7 +479,7 @@
                                     <div class="col-lg-12">
                                         <div class="course-top-bar">
                                             <h3>
-                                                <strong>Showing</strong> 1-12 of 120+ Courses
+                                                <strong>Showing</strong> {{ $courses->count() }} of {{ $courses->count() }} Courses
                                             </h3>
                                         </div>
                                     </div>
@@ -645,289 +488,48 @@
                                 <!-- Cards -->
 
                                 <div class="row g-3">
-                                    <!-- Course Card -->
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="course-card">
-                                            <!-- Discount Badge -->
-                                            <div class="discount-badge">
-                                                <strong>30%</strong>
-                                                <span>Discount</span>
-                                            </div>
-                                            <!-- Course Image -->
-                                            <div class="course-image">
-                                                <img src="{{ asset('assets/images/img03.png') }}" alt="Graphic Designing">
-                                            </div>
-                                            <!-- Course Content -->
-                                            <div class="course-content">
-                                                <h3>
-                                                    Graphic Designing
-                                                </h3>
-                                                <ul class="course-info">
-                                                    <li>
-                                                        Category: 
-                                                        <span>Ecommerce</span>
-                                                    </li>
-                                                    <li>
-                                                        Duration: 
-                                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                                    </li>
-                                                    <li>
-                                                        Mode: 
-                                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                                    </li>
-                                                </ul>
-                                                <!-- Buttons -->
+                                    @forelse ($courses as $course)
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="course-card">
+                                                <!-- Course Image -->
+                                                <div class="course-image">
+                                                    <img src="{{ asset('assets/images/img03.png') }}" alt="{{ $course->title }}">
+                                                </div>
+                                                <!-- Course Content -->
+                                                <div class="course-content">
+                                                    <h3>
+                                                        {{ $course->title }}
+                                                    </h3>
+                                                    <ul class="course-info">
+                                                        <li>
+                                                            Category:
+                                                            <span>{{ $course->category->name }}</span>
+                                                        </li>
+                                                        <li>
+                                                            Duration:
+                                                            <span><img src="assets/images/icon12.svg" alt=""> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                                        </li>
+                                                        <li>
+                                                            Mode:
+                                                            <span><img src="assets/images/icon09.svg" alt="">{{ $course->mode->name }}</span>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Buttons -->
 
-                                                <div class="course-buttons">
-                                                    <a href="#"
-                                                    class="btn apply-btn">
-                                                        Apply Now
-                                                    </a>
-                                                    <a href="#"
-                                                    class="btn detail-btn">
-                                                        More Details
-                                                    </a>
+                                                    <div class="course-buttons">
+                                                        <a href="{{ route('course-detail', $course->slug) }}"
+                                                        class="btn detail-btn">
+                                                            More Details
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="course-card">
-                                            <!-- Discount Badge -->
-                                            <div class="discount-badge">
-                                                <strong>30%</strong>
-                                                <span>Discount</span>
-                                            </div>
-                                            <!-- Course Image -->
-                                            <div class="course-image">
-                                                <img src="{{ asset('assets/images/img03.png') }}" alt="Graphic Designing">
-                                            </div>
-                                            <!-- Course Content -->
-                                            <div class="course-content">
-                                                <h3>
-                                                    Graphic Designing
-                                                </h3>
-                                                <ul class="course-info">
-                                                    <li>
-                                                        Category: 
-                                                        <span>Ecommerce</span>
-                                                    </li>
-                                                    <li>
-                                                        Duration: 
-                                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                                    </li>
-                                                    <li>
-                                                        Mode: 
-                                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                                    </li>
-                                                </ul>
-                                                <!-- Buttons -->
-
-                                                <div class="course-buttons">
-                                                    <a href="#"
-                                                    class="btn apply-btn">
-                                                        Apply Now
-                                                    </a>
-                                                    <a href="#"
-                                                    class="btn detail-btn">
-                                                        More Details
-                                                    </a>
-                                                </div>
-                                            </div>
+                                    @empty
+                                        <div class="col-lg-12">
+                                            <p>No courses published yet. Check back soon.</p>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="course-card">
-                                            <!-- Discount Badge -->
-                                            <div class="discount-badge">
-                                                <strong>30%</strong>
-                                                <span>Discount</span>
-                                            </div>
-                                            <!-- Course Image -->
-                                            <div class="course-image">
-                                                <img src="{{ asset('assets/images/img03.png') }}" alt="Graphic Designing">
-                                            </div>
-                                            <!-- Course Content -->
-                                            <div class="course-content">
-                                                <h3>
-                                                    Graphic Designing
-                                                </h3>
-                                                <ul class="course-info">
-                                                    <li>
-                                                        Category: 
-                                                        <span>Ecommerce</span>
-                                                    </li>
-                                                    <li>
-                                                        Duration: 
-                                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                                    </li>
-                                                    <li>
-                                                        Mode: 
-                                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                                    </li>
-                                                </ul>
-                                                <!-- Buttons -->
-
-                                                <div class="course-buttons">
-                                                    <a href="#"
-                                                    class="btn apply-btn">
-                                                        Apply Now
-                                                    </a>
-                                                    <a href="#"
-                                                    class="btn detail-btn">
-                                                        More Details
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="course-card">
-                                            <!-- Discount Badge -->
-                                            <div class="discount-badge">
-                                                <strong>30%</strong>
-                                                <span>Discount</span>
-                                            </div>
-                                            <!-- Course Image -->
-                                            <div class="course-image">
-                                                <img src="{{ asset('assets/images/img03.png') }}" alt="Graphic Designing">
-                                            </div>
-                                            <!-- Course Content -->
-                                            <div class="course-content">
-                                                <h3>
-                                                    Graphic Designing
-                                                </h3>
-                                                <ul class="course-info">
-                                                    <li>
-                                                        Category: 
-                                                        <span>Ecommerce</span>
-                                                    </li>
-                                                    <li>
-                                                        Duration: 
-                                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                                    </li>
-                                                    <li>
-                                                        Mode: 
-                                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                                    </li>
-                                                </ul>
-                                                <!-- Buttons -->
-
-                                                <div class="course-buttons">
-                                                    <a href="#"
-                                                    class="btn apply-btn">
-                                                        Apply Now
-                                                    </a>
-                                                    <a href="#"
-                                                    class="btn detail-btn">
-                                                        More Details
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="course-card">
-                                            <!-- Discount Badge -->
-                                            <div class="discount-badge">
-                                                <strong>30%</strong>
-                                                <span>Discount</span>
-                                            </div>
-                                            <!-- Course Image -->
-                                            <div class="course-image">
-                                                <img src="{{ asset('assets/images/img03.png') }}" alt="Graphic Designing">
-                                            </div>
-                                            <!-- Course Content -->
-                                            <div class="course-content">
-                                                <h3>
-                                                    Graphic Designing
-                                                </h3>
-                                                <ul class="course-info">
-                                                    <li>
-                                                        Category: 
-                                                        <span>Ecommerce</span>
-                                                    </li>
-                                                    <li>
-                                                        Duration: 
-                                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                                    </li>
-                                                    <li>
-                                                        Mode: 
-                                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                                    </li>
-                                                </ul>
-                                                <!-- Buttons -->
-
-                                                <div class="course-buttons">
-                                                    <a href="#"
-                                                    class="btn apply-btn">
-                                                        Apply Now
-                                                    </a>
-                                                    <a href="#"
-                                                    class="btn detail-btn">
-                                                        More Details
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 col-md-6">
-                                        <div class="course-card">
-                                            <!-- Discount Badge -->
-                                            <div class="discount-badge">
-                                                <strong>30%</strong>
-                                                <span>Discount</span>
-                                            </div>
-                                            <!-- Course Image -->
-                                            <div class="course-image">
-                                                <img src="{{ asset('assets/images/img03.png') }}" alt="Graphic Designing">
-                                            </div>
-                                            <!-- Course Content -->
-                                            <div class="course-content">
-                                                <h3>
-                                                    Graphic Designing
-                                                </h3>
-                                                <ul class="course-info">
-                                                    <li>
-                                                        Category: 
-                                                        <span>Ecommerce</span>
-                                                    </li>
-                                                    <li>
-                                                        Duration: 
-                                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                                    </li>
-                                                    <li>
-                                                        Mode: 
-                                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                                    </li>
-                                                </ul>
-                                                <!-- Buttons -->
-
-                                                <div class="course-buttons">
-                                                    <a href="#"
-                                                    class="btn apply-btn">
-                                                        Apply Now
-                                                    </a>
-                                                    <a href="#"
-                                                    class="btn detail-btn">
-                                                        More Details
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforelse
                                 </div>
 
 

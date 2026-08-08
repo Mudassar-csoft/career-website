@@ -8,65 +8,23 @@
             <div class="col-lg-8">
                 <div class="news-info">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img61.png') }}" alt="">
+                        <img src="{{ $news->image ? asset('storage/'.$news->image) : asset('assets/images/img61.png') }}" alt="{{ $news->title }}">
                     </div>
                     <div class="head-text">
                         <h2>
-                            Career Institute Signs Franchise MOU
-                            for Kohinoor FSD Branch
+                            {{ $news->title }}
                         </h2>
                         <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="">Share</a>
                         <p>
-                            A significant milestone as we expand our footprint
-                            to Faisalabad, bringing quality education closer
-                            to more students
+                            {{ $news->subtitle }}
                         </p>
                         <span>
                             <img src="{{ asset('assets/images/icon127.png') }}" alt="">
-                            09-12-2024
+                            {{ $news->created_at->format('d-m-Y') }}
                         </span>
                     </div>
                     <div class="mid-area">
-                        <p>
-                            We are delighted to announce the signing of a Franchise
-                            Memorandum of Understanding (MOU) for our new branch
-                            in Kohinoor City, Faisalabad. This partnership marks a
-                            significant step in our mission to provide industry-focused
-                            education and professional training to students across Pakistan.
-                        </p>
-                        <h4>
-                            Expanding Opportunities
-                        </h4>
-                        <p>
-                            The new branch will offer a wide range of programs in
-                            Digital Marketing, Web Development, Graphic Design,
-                            UI/UX Design, Cyber Security, and more. Our state-of-the-art
-                            labs and experienced trainers will ensure that students
-                            receive the highest quality education.
-                        </p>
-                        <div class="s-box">
-                            <h4>Our vision</h4>
-                            <p>
-                                is to empower students with practical skills and industry knowledge that help
-                                them build successful careers and contribute to the nation's growth.
-                            </p>
-                            <span>
-                                — Director, Career Institute  
-                            </span>
-                        </div>
-                        <h4>
-                            What This Means for Students
-                        </h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Access to top-notch training and modern facilities</li>
-                            <li><i class="fas fa-check"></i> Industry-recognized certifications</li>
-                            <li><i class="fas fa-check"></i> Better career opportunities in Faisalabad and beyond</li>
-                            <li><i class="fas fa-check"></i> Practical learning with real-world projects</li>
-                        </ul>
-                        <p>
-                            We thank our partners, students, and team members who continue to support
-                            our journey. Together, we are shaping a brighter future!
-                        </p>
+                        {!! $news->content !!}
                     </div>
                 </div>
             </div>
@@ -80,61 +38,20 @@
                         <div class="rec-post">
                             <h3>Recent Posts</h3>
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img61.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Career Institute Signs Franchise MOU for Kohinoor FSD Branch</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                @forelse ($relatedNews as $post)
+                                    <li>
+                                        <a href="{{ route('news-detail', $post->slug) }}">
+                                            <div class="img-hold">
+                                                <img src="{{ $post->image ? asset('storage/'.$post->image) : asset('assets/images/img61.png') }}" alt="{{ $post->title }}">
+                                            </div>
+                                            <div class="text-hold">
+                                                <h3>{{ $post->title }}</h3>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> {{ $post->created_at->format('d-m-Y') }}</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                @empty
+                                @endforelse
                             </ul>
                         </div>
                     </div>
@@ -142,33 +59,16 @@
                         <h3>Categories</h3>
                         <ul>
                             <li>
-                                <a href="#">All News</a>
-                                <span>36</span>
+                                <a href="{{ route('news') }}">All News</a>
+                                <span>{{ $newsTypes->sum('news_count') }}</span>
                             </li>
-                            <li>
-                                <a href="#">Admission</a>
-                                <span>08</span>
-                            </li>
-                            <li>
-                                <a href="#">Events</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Announcements</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Achievements</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Workshops</a>
-                                <span>36</span>
-                            </li>
-                            <li>
-                                <a href="#">Scholarships</a>
-                                <span>36</span>
-                            </li>
+                            @forelse ($newsTypes as $type)
+                                <li>
+                                    <a href="{{ route('news') }}">{{ $type->name }}</a>
+                                    <span>{{ $type->news_count }}</span>
+                                </li>
+                            @empty
+                            @endforelse
                         </ul>
                     </div>
                 </div>

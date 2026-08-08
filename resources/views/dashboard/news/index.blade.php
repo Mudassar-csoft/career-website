@@ -3,7 +3,9 @@
 @section('title', 'All News | Dashboard')
 
 @section('topbar-actions')
-    <a href="{{ route('dashboard.news.create') }}" class="dash-btn">+ Create News</a>
+    @can('news.create')
+        <a href="{{ route('dashboard.news.create') }}" class="dash-btn">+ Create News</a>
+    @endcan
 @endsection
 
 @section('content')
@@ -50,11 +52,13 @@
                                     <td><span class="dash-badge dash-badge-green">{{ $item->type->name }}</span></td>
                                     <td>{{ $item->created_at->format('M d, Y') }}</td>
                                     <td>
-                                        <form action="{{ route('dashboard.news.destroy', $item) }}" method="POST" onsubmit="return confirm('Delete this news article?');">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="dash-btn dash-btn-danger" style="padding:6px 12px;font-size:12px;">Delete</button>
-                                        </form>
+                                        @can('news.delete')
+                                            <form action="{{ route('dashboard.news.destroy', $item) }}" method="POST" onsubmit="return confirm('Delete this news article?');">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="dash-btn dash-btn-danger" style="padding:6px 12px;font-size:12px;">Delete</button>
+                                            </form>
+                                        @endcan
                                     </td>
                                 </tr>
                             @endforeach

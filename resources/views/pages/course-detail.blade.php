@@ -6,32 +6,28 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <span>Bestseller</span>
-                <h1>Digital Marketing & SEO Complete Course</h1>
+                @if ($course->is_featured)
+                    <span>Featured</span>
+                @endif
+                <h1>{{ $course->title }}</h1>
                 <p>
-                    Master digital marketing strategies, SEO techniques, social <br>
-                    media marketing, Google Ads, and analytics to grow <br>
-                    businesses and build your career.
+                    {{ $course->subtitle }}
                 </p>
-                {{-- <h5>
-                    <img src="{{ asset('assets/images/icon110.svg') }}" alt="">
-                    <small>4.8 (1108 Reviews)</small>
-                </h5> --}}
                 <ul>
                     <li>
-                        <strong class="pe-1">Category:</strong> Digital Marketing
+                        <strong class="pe-1">Category:</strong> {{ $course->category->name }}
                     </li>
                     <li>
                         <img src="{{ asset('assets/images/icon111.svg') }}" alt="">
-                        3 Months
+                        {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}
                     </li>
                     <li>
                         <img src="{{ asset('assets/images/icon112.svg') }}" alt="">
-                        On-premises
+                        {{ $course->mode->name }}
                     </li>
                     <li>
                         <img src="{{ asset('assets/images/icon113.svg') }}" alt="">
-                        Certificate Included
+                        {{ $course->has_certificate ? 'Certificate Included' : 'No Certificate' }}
                     </li>
                 </ul>
             </div>
@@ -44,107 +40,33 @@
             <div class="col-lg-8">
                 <div class="l-box">
                     <h3>About This Course </h3>
-                    <p>
-                        This Digital Marketing & SEO Complete Course is designed to take you from beginner to
-                        advanced level. You will learn all the essential digital marketing skills including SEO, Social
-                        Media Marketing, Google Ads, Email Marketing, Content Marketing, and Web Analytics. 
-                    </p>
-                    <p>
-                        By the end of this course, you will be able to create and manage successful digital
-                        marketing campaigns that drive traffic, generate leads, and increase sales.
-                    </p>
-                    <h3>
-                        What You’ll Learn
-                    </h3>
-                    <ul>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Understand Digital Marketing Fundamentals
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Understand Digital Marketing Fundamentals
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Keyword Research & Competitor Analysis
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Keyword Research & Competitor Analysis
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            On-Page & Off-Page SEO Techniques
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            On-Page & Off-Page SEO Techniques
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Google Ads (Search, Display, YouTube)
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Google Ads (Search, Display, YouTube)
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Social Media Marketing Strategies
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Social Media Marketing Strategies
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Content Marketing & Copywriting
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
-                            Content Marketing & Copywriting
-                        </li>
-                    </ul>
-                    <h3>
-                        Tools & Technologies You'll Master
-                    </h3>
-                    <ul class="list-bar mb-3">
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                    </ul>
-                    <ul class="list-bar">
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                        <li>
-                            <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
-                            Google Analytics
-                        </li>
-                    </ul>
+                    {!! $course->about !!}
+                    @if ($course->what_you_will_learn)
+                        <h3>
+                            What You’ll Learn
+                        </h3>
+                        <ul>
+                            @foreach ($course->what_you_will_learn as $point)
+                                <li>
+                                    <img src="{{ asset('assets/images/icon114.svg') }}" alt="">
+                                    {{ $point }}
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    @if ($course->tools_technology)
+                        <h3>
+                            Tools & Technologies You'll Master
+                        </h3>
+                        <ul class="list-bar">
+                            @foreach ($course->tools_technology as $tool)
+                                <li>
+                                    <img src="{{ asset('assets/images/icon115.svg') }}" alt="">
+                                    {{ $tool }}
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
             </div>
             <div class="col-lg-4">
@@ -168,34 +90,13 @@
                     <div class="c-de">
                         <h3>This Course includes</h3>
                         <ul>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                36+ Hours On demand Video
-                            </li>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                45+ Lectures
-                            </li>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                Assignments & Projects
-                            </li>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                Downloadable Resources
-                            </li>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                Certificate of Completion
-                            </li>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                Certificate of Completion
-                            </li>
-                            <li>
-                                <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
-                                Access on Mobile & TV
-                            </li>
+                            @forelse ($course->course_includes as $include)
+                                <li>
+                                    <img src="{{ asset('assets/images/icon123.svg') }}" alt="">
+                                    {{ $include }}
+                                </li>
+                            @empty
+                            @endforelse
                         </ul>
                     </div>
                     <div class="dis-aera">
@@ -225,70 +126,25 @@
                 <div class="course-info">
                     <h2>
                         Course Curriculum
-                        <span>Total Duration 3 Months (36+ Hours)</span>
+                        <span>{{ count($course->curriculum) }} Lectures</span>
                     </h2>
                     <div class="accordion-area">
                         <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <p>1.Introduction to Digital Marketing</p>
-                                        <span>4 Lecture . 1hr 20m</span>
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <ul>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                        </ul>
+                            @forelse ($course->curriculum as $index => $lecture)
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ $index }}">
+                                        <button class="accordion-button @if($index !== 0) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $index }}" aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" aria-controls="collapse{{ $index }}">
+                                            <p>{{ $index + 1 }}. {{ $lecture['title'] }}</p>
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{ $index }}" class="accordion-collapse collapse @if($index === 0) show @endif" aria-labelledby="heading{{ $index }}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>{{ $lecture['content'] }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <p>1.Introduction to Digital Marketing</p>
-                                    <span>4 Lecture . 1hr 20m</span>
-                                </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <ul>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <p>1.Introduction to Digital Marketing</p>
-                                    <span>4 Lecture . 1hr 20m</span>
-                                </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <ul>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                            <li>Introduction to Digital Marketing</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                 </div>
@@ -309,144 +165,24 @@
             <div class="col-lg-12">
                 <section class="testimonial-section">
                     <div class="testimonial-slider">
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
+                        @forelse ($alumni as $alum)
+                            <div class="item">
+                                <div class="card-wrap">
+                                    <div class="box">
+                                        <div class="img-hold">
+                                            <img src="{{ $alum->photo ? asset('storage/'.$alum->photo) : asset('assets/images/img05.png') }}" alt="{{ $alum->name }}">
+                                        </div>
+                                        <div class="rt-bar">
+                                            <h3>{{ $alum->name }}</h3>
+                                            <span>{{ $alum->designation }}</span>
+                                            <h5>Review</h5>
+                                            <p>{{ $alum->review }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img06.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Fatima Maqsood</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            I loved the practical learning approach.
-                                            The courses are well structured and useful
-                                            for real-world projects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img07.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Umar Ishfaq</h3>
-                                        <span>Web Developer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Very professional environment with friendly
-                                            teachers. I gained confidence and learned
-                                            a lot here.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img08.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Asad Riaz</h3>
-                                        <span>Digital Marketing</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            One of the best places to start a career in IT.
-                                            Highly recommended for beginners and professionals.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img41.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Ayan Ali</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img42.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Haroon Rashid</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
                 </section>
             </div>

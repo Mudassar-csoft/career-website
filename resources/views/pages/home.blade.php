@@ -135,54 +135,21 @@
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                                 <div class="news-bar" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
                                     <div class="news-slider">
-                                        <div>
-                                            <div class="box s-blue">
-                                                <p>
-                                                    Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                                </p>
-                                                <div class="d-bar">
-                                                    <img src="assets/images/icon05.svg" alt=""> 
-                                                    <span>09-12-2024</span>
+                                        @forelse ($newsWidget as $index => $newsItem)
+                                            <div>
+                                                <div class="box {{ ['s-blue', 's-black', 's-green'][$index % 3] }}">
+                                                    <p>
+                                                        {{ $newsItem->title }}
+                                                        <a href="{{ route('news-detail', $newsItem->slug) }}">Read more...</a>
+                                                    </p>
+                                                    <div class="d-bar">
+                                                        <img src="assets/images/icon05.svg" alt="">
+                                                        <span>{{ $newsItem->created_at->format('d-m-Y') }}</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <div class="box s-black">
-                                                <p>
-                                                    Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                                </p>
-                                                <div class="d-bar">
-                                                    <img src="assets/images/icon05.svg" alt=""> 
-                                                    <span>09-12-2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="box s-green">
-                                                <p>
-                                                    Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                                </p>
-                                                <div class="d-bar">
-                                                    <img src="assets/images/icon05.svg" alt=""> 
-                                                    <span>09-12-2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="box s-black">
-                                                <p>
-                                                    Career Institute Signs Franchise MOU for
-                                                    Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                                </p>
-                                                <div class="d-bar">
-                                                    <img src="assets/images/icon05.svg" alt=""> 
-                                                    <span>09-12-2024</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        @empty
+                                        @endforelse
                                     </div>
                                     <a href="{{ route('news') }}" class="btn r-btn">Read More</a>
                                 </div>
@@ -190,50 +157,24 @@
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                                 <div class="event-bar" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
                                     <ul>
-                                        <li>
-                                            <div class="d-info">
-                                                <h3>
-                                                    27 <span>Apr</span>
-                                                </h3>
-                                            </div>
-                                            <div class="t-bar">
-                                                <p>
-                                                    Inauguration Career Institute
-                                                    Lahore Wapda Town Branch
-                                                </p>
-                                                <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-info">
-                                                <h3>
-                                                    27 <span>Apr</span>
-                                                </h3>
-                                            </div>
-                                            <div class="t-bar">
-                                                <p>
-                                                    Inauguration Career Institute
-                                                    Lahore Wapda Town Branch
-                                                </p>
-                                                <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-info">
-                                                <h3>
-                                                    27 <span>Apr</span>
-                                                </h3>
-                                            </div>
-                                            <div class="t-bar">
-                                                <p>
-                                                    Inauguration Career Institute
-                                                    Lahore Wapda Town Branch
-                                                </p>
-                                                <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-                                            </div>
-                                        </li>
+                                        @forelse ($eventsWidget as $upcomingEvent)
+                                            <li>
+                                                <div class="d-info">
+                                                    <h3>
+                                                        {{ $upcomingEvent->event_date->format('d') }} <span>{{ $upcomingEvent->event_date->format('M') }}</span>
+                                                    </h3>
+                                                </div>
+                                                <div class="t-bar">
+                                                    <p>
+                                                        {{ $upcomingEvent->title }}
+                                                    </p>
+                                                    <span><i class="fas fa-map-marker-alt"></i> {{ $upcomingEvent->campus }}</span>
+                                                </div>
+                                            </li>
+                                        @empty
+                                        @endforelse
                                     </ul>
-                                    <a href="#" class="btn event-btn">All Events</a>
+                                    <a href="{{ route('events') }}" class="btn event-btn">All Events</a>
                                 </div>
                             </div>
                         </div>
@@ -244,54 +185,21 @@
                         <div class="news-bar" data-aos="fade-up" data-aos-duration="800" data-aos-offset="80">
                             <h2>News</h2>
                             <div class="news-slider">
-                                <div>
-                                    <div class="box s-blue">
-                                        <p>
-                                            Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                        </p>
-                                        <div class="d-bar">
-                                            <img src="assets/images/icon05.svg" alt=""> 
-                                            <span>09-12-2024</span>
+                                @forelse ($newsWidget as $index => $newsItem)
+                                    <div>
+                                        <div class="box {{ ['s-blue', 's-black', 's-green'][$index % 3] }}">
+                                            <p>
+                                                {{ $newsItem->title }}
+                                                <a href="{{ route('news-detail', $newsItem->slug) }}">Read more...</a>
+                                            </p>
+                                            <div class="d-bar">
+                                                <img src="assets/images/icon05.svg" alt="">
+                                                <span>{{ $newsItem->created_at->format('d-m-Y') }}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div class="box s-black">
-                                        <p>
-                                            Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                        </p>
-                                        <div class="d-bar">
-                                            <img src="assets/images/icon05.svg" alt=""> 
-                                            <span>09-12-2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="box s-green">
-                                        <p>
-                                            Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                        </p>
-                                        <div class="d-bar">
-                                            <img src="assets/images/icon05.svg" alt=""> 
-                                            <span>09-12-2024</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="box s-black">
-                                        <p>
-                                            Career Institute Signs Franchise MOU for
-                                            Kohinoor FSD  Branch<a href="{{ route('news-detail') }}">Read more...</a>
-                                        </p>
-                                        <div class="d-bar">
-                                            <img src="assets/images/icon05.svg" alt=""> 
-                                            <span>09-12-2024</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                @empty
+                                @endforelse
                             </div>
                             <a href="{{ route('news') }}" class="btn r-btn">Read More</a>
                         </div>
@@ -300,50 +208,24 @@
                         <div class="event-bar" data-aos="fade-up" data-aos-duration="1100" data-aos-offset="80">
                             <h2>Events</h2>
                             <ul>
-                                <li>
-                                    <div class="d-info">
-                                        <h3>
-                                            27 <span>Apr</span>
-                                        </h3>
-                                    </div>
-                                    <div class="t-bar">
-                                        <p>
-                                            Inauguration Career Institute
-                                            Lahore Wapda Town Branch
-                                        </p>
-                                        <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-info">
-                                        <h3>
-                                            27 <span>Apr</span>
-                                        </h3>
-                                    </div>
-                                    <div class="t-bar">
-                                        <p>
-                                            Inauguration Career Institute
-                                            Lahore Wapda Town Branch
-                                        </p>
-                                        <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-info">
-                                        <h3>
-                                            27 <span>Apr</span>
-                                        </h3>
-                                    </div>
-                                    <div class="t-bar">
-                                        <p>
-                                            Inauguration Career Institute
-                                            Lahore Wapda Town Branch
-                                        </p>
-                                        <span><i class="fas fa-map-marker-alt"></i> Lahore</span>
-                                    </div>
-                                </li>
+                                @forelse ($eventsWidget as $upcomingEvent)
+                                    <li>
+                                        <div class="d-info">
+                                            <h3>
+                                                {{ $upcomingEvent->event_date->format('d') }} <span>{{ $upcomingEvent->event_date->format('M') }}</span>
+                                            </h3>
+                                        </div>
+                                        <div class="t-bar">
+                                            <p>
+                                                {{ $upcomingEvent->title }}
+                                            </p>
+                                            <span><i class="fas fa-map-marker-alt"></i> {{ $upcomingEvent->campus }}</span>
+                                        </div>
+                                    </li>
+                                @empty
+                                @endforelse
                             </ul>
-                            <a href="#" class="btn event-btn">All Events</a>
+                            <a href="{{ route('events') }}" class="btn event-btn">All Events</a>
                         </div>
                     </div>
                 </div>
@@ -428,176 +310,36 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature-slider">
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
+                    @forelse ($featuredCourses as $course)
+                        <div>
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ asset('assets/images/img03.png') }}" alt="{{ $course->title }}">
                                 </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
+                                <div class="text-hold">
+                                    <h3>{{ $course->title }}</h3>
+                                    <ul>
+                                        <li>
+                                            Category:
+                                            <span>{{ $course->category->name }}</span>
+                                        </li>
+                                        <li>
+                                            Duration:
+                                            <span><img src="assets/images/icon12.svg" alt=""> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                        </li>
+                                        <li>
+                                            Mode:
+                                            <span><img src="assets/images/icon09.svg" alt="">{{ $course->mode->name }}</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-area">
+                                        <a href="{{ route('course-detail', $course->slug) }}" class="btn md-btn">More Details</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img03.png" alt="">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h3>Digital Marketing</h3>
-                                <ul>
-                                    <li>
-                                        Category: 
-                                        <span>Ecommerce</span>
-                                    </li>
-                                    <li>
-                                        Duration: 
-                                        <span><img src="assets/images/icon12.svg" alt=""> 3 Months</span>
-                                    </li>
-                                    <li>
-                                        Mode: 
-                                        <span> <img src="assets/images/icon09.svg" alt="">Campus</span> 
-                                        <span><img src="assets/images/icon10.svg" alt="">Online</span> 
-                                        <span><img src="assets/images/icon11.svg" alt="">Hybrid</span>
-                                    </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="#" class="btn an-btn">Apply Now</a>
-                                    <a href="#" class="btn md-btn">More Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                    @endforelse
                 </div>
             </div>
         </div>
@@ -686,144 +428,24 @@
             <div class="col-lg-12">
                 <section class="testimonial-section">
                     <div class="testimonial-slider">
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
+                        @forelse ($alumni as $alum)
+                            <div class="item">
+                                <div class="card-wrap">
+                                    <div class="box">
+                                        <div class="img-hold">
+                                            <img src="{{ $alum->photo ? asset('storage/'.$alum->photo) : asset('assets/images/img05.png') }}" alt="{{ $alum->name }}">
+                                        </div>
+                                        <div class="rt-bar">
+                                            <h3>{{ $alum->name }}</h3>
+                                            <span>{{ $alum->designation }}</span>
+                                            <h5>Review</h5>
+                                            <p>{{ $alum->review }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img06.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Fatima Maqsood</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            I loved the practical learning approach.
-                                            The courses are well structured and useful
-                                            for real-world projects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img07.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Umar Ishfaq</h3>
-                                        <span>Web Developer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Very professional environment with friendly
-                                            teachers. I gained confidence and learned
-                                            a lot here.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img08.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Asad Riaz</h3>
-                                        <span>Digital Marketing</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            One of the best places to start a career in IT.
-                                            Highly recommended for beginners and professionals.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img41.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Ayan Ali</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img42.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Haroon Rashid</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
                 </section>
             </div>
@@ -840,36 +462,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="logo-slider">
-                    <div>
-                        <div class="img-hold">
-                            <img src="assets/images/img09.png" alt="">
+                    @forelse ($collaborators as $collaborator)
+                        <div>
+                            <div class="img-hold">
+                                <img src="{{ asset('storage/'.$collaborator->logo) }}" alt="{{ $collaborator->name }}">
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="assets/images/img10.png" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="assets/images/img11.png" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="assets/images/img12.png" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="assets/images/img10.png" alt="">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="assets/images/img11.png" alt="">
-                        </div>
-                    </div>
+                    @empty
+                    @endforelse
                 </div>
             </div>
         </div>
@@ -883,70 +483,20 @@
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1000">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="assets/images/img13.png" alt="">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
+            @forelse ($blogs as $index => $blog)
+                <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="{{ $index % 2 === 0 ? 'flip-left' : 'flip-right' }}" data-aos-duration="{{ 1000 + $index * 100 }}">
+                    <div class="block">
+                        <div class="img-hold">
+                            <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img13.png') }}" alt="{{ $blog->title }}">
+                        </div>
+                        <div class="t-bar">
+                            <h3>{{ $blog->title }}</h3>
+                            <p>{{ $blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 90) }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1100">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="assets/images/img13.png" alt="">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="assets/images/img13.png" alt="">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="flip-right" data-aos-duration="1300">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="assets/images/img13.png" alt="">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @empty
+            @endforelse
         </div>
         <div class="row">
             <div class="col-lg-12" aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400">

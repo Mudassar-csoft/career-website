@@ -267,35 +267,33 @@
             <h1>Welcome back</h1>
             <p class="login-subtitle">Sign in to access your dashboard</p>
 
-            <form id="login-form">
+            <form id="login-form" action="{{ route('login.attempt') }}" method="POST">
+                @csrf
                 <div class="login-field">
                     <label for="login-email">Email</label>
-                    <input type="email" id="login-email" placeholder="you@example.com" autocomplete="username">
+                    <input type="email" id="login-email" name="email" value="{{ old('email') }}" placeholder="you@example.com" autocomplete="username" required autofocus>
                 </div>
                 <div class="login-field">
                     <label for="login-password">Password</label>
-                    <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password">
+                    <input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" required>
                 </div>
                 <div class="login-row">
                     <label class="login-remember">
-                        <input type="checkbox" id="login-remember">
+                        <input type="checkbox" id="login-remember" name="remember">
                         Remember me
                     </label>
-                    <a href="#">Forgot password?</a>
                 </div>
                 <button type="submit" class="login-submit">Sign In</button>
-                <p class="login-notice" id="login-notice">Authentication isn't set up yet — this is a UI preview.</p>
+                @if ($errors->any())
+                    <p class="login-notice" style="display:block;">{{ $errors->first() }}</p>
+                @endif
+                @if (session('status'))
+                    <p class="login-notice" style="display:block;">{{ session('status') }}</p>
+                @endif
             </form>
 
-            <a href="{{ route('dashboard.index') }}" class="login-back">&larr; Back to dashboard preview</a>
+            <a href="{{ route('home') }}" class="login-back">&larr; Back to website</a>
         </div>
     </div>
-
-    <script>
-        document.getElementById('login-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            document.getElementById('login-notice').style.display = 'block';
-        });
-    </script>
 </body>
 </html>

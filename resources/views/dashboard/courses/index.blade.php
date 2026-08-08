@@ -3,7 +3,9 @@
 @section('title', 'All Courses | Dashboard')
 
 @section('topbar-actions')
-    <a href="{{ route('dashboard.courses.create') }}" class="dash-btn">+ Create Course</a>
+    @can('courses.create')
+        <a href="{{ route('dashboard.courses.create') }}" class="dash-btn">+ Create Course</a>
+    @endcan
 @endsection
 
 @section('content')
@@ -61,12 +63,16 @@
                                     </td>
                                     <td>
                                         <div style="display:flex;gap:8px;">
-                                            <a href="{{ route('dashboard.courses.edit', $item) }}" class="dash-btn dash-btn-secondary" style="padding:6px 12px;font-size:12px;">Edit</a>
-                                            <form action="{{ route('dashboard.courses.destroy', $item) }}" method="POST" onsubmit="return confirm('Delete this course?');">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="dash-btn dash-btn-danger" style="padding:6px 12px;font-size:12px;">Delete</button>
-                                            </form>
+                                            @can('courses.edit')
+                                                <a href="{{ route('dashboard.courses.edit', $item) }}" class="dash-btn dash-btn-secondary" style="padding:6px 12px;font-size:12px;">Edit</a>
+                                            @endcan
+                                            @can('courses.delete')
+                                                <form action="{{ route('dashboard.courses.destroy', $item) }}" method="POST" onsubmit="return confirm('Delete this course?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="dash-btn dash-btn-danger" style="padding:6px 12px;font-size:12px;">Delete</button>
+                                                </form>
+                                            @endcan
                                         </div>
                                     </td>
                                 </tr>

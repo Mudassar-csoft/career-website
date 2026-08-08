@@ -30,11 +30,6 @@ class DashboardController extends Controller
         return $this->placeholder('Settings');
     }
 
-    public function login()
-    {
-        return view('dashboard.login');
-    }
-
     protected function placeholder(string $label)
     {
         return view('dashboard.coming-soon', [

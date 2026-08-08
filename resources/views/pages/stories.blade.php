@@ -555,144 +555,24 @@
             <div class="col-lg-12">
                 <section class="testimonial-section">
                     <div class="testimonial-slider">
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
+                        @forelse ($alumni as $alum)
+                            <div class="item">
+                                <div class="card-wrap">
+                                    <div class="box">
+                                        <div class="img-hold">
+                                            <img src="{{ $alum->photo ? asset('storage/'.$alum->photo) : asset('assets/images/img05.png') }}" alt="{{ $alum->name }}">
+                                        </div>
+                                        <div class="rt-bar">
+                                            <h3>{{ $alum->name }}</h3>
+                                            <span>{{ $alum->designation }}</span>
+                                            <h5>Review</h5>
+                                            <p>{{ $alum->review }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img06.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Fatima Maqsood</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            I loved the practical learning approach.
-                                            The courses are well structured and useful
-                                            for real-world projects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img07.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Umar Ishfaq</h3>
-                                        <span>Web Developer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Very professional environment with friendly
-                                            teachers. I gained confidence and learned
-                                            a lot here.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img08.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Asad Riaz</h3>
-                                        <span>Digital Marketing</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            One of the best places to start a career in IT.
-                                            Highly recommended for beginners and professionals.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img41.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Ayan Ali</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img42.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Haroon Rashid</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
                 </section>
             </div>
