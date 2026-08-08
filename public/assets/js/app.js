@@ -77,6 +77,7 @@ $(document).ready(function () {
     const $backToTop = $("#backToTop");
     let animationId = null;
     let isScrolling = false;
+    let scrollInterval = null;
     // Show / Hide Button
     $(window).on("scroll", function () {
         if ($(this).scrollTop() > 300) {
@@ -87,9 +88,9 @@ $(document).ready(function () {
     });
     // Stop Animation Function
     function stopScroll() {
-        if (animationId) {
-            cancelAnimationFrame(animationId);
-            animationId = null;
+        if (scrollInterval) {
+            clearInterval(scrollInterval);
+            scrollInterval = null;
         }
         isScrolling = false;
     }
@@ -118,22 +119,17 @@ $(document).ready(function () {
         e.preventDefault();
         if (isScrolling) return;
         isScrolling = true;
-        // ===== SPEED =====
-        // 2 = Very Slow
-        // 5 = Slow
-        // 8 = Medium
-        // 15 = Fast
-        const speed = 15;
-        function animate() {
-            if (!isScrolling) return;
-            let current = window.pageYOffset;
+        const speed = 30; // Pixels per step
+        const delay = 5; // Milliseconds
+        scrollInterval = setInterval(function () {
+            let current = $(window).scrollTop();
             if (current <= 0) {
-                stopScroll();
+                clearInterval(scrollInterval);
+                scrollInterval = null;
+                isScrolling = false;
                 return;
             }
-            window.scrollTo(0, current - speed);
-            animationId = requestAnimationFrame(animate);
-        }
-        animationId = requestAnimationFrame(animate);
+            $(window).scrollTop(current - speed);
+        }, delay);
     });
 });

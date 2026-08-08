@@ -1892,7 +1892,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
+    @include max(1400px) {
+      gap: 10px;
+    }
     li {
       width: 20%;
       @include max(1400px) {
@@ -2088,11 +2090,15 @@
   }
 }
 .se-area {
-  padding: 0 0 5rem;
+  padding: 0 0 3rem;
   .form-block {
     padding: 4rem 1.5rem;
     background: url(../images/banner06.png) no-repeat center center;
     background-size: 100%;
+    @include max(1400px) {
+      background-size: cover;
+      padding: 3rem 1.5rem;
+    }
     h2 {
       color: #fff;
       font-size: 38px;
@@ -2100,6 +2106,10 @@
       font-weight: 700;
       margin: 0 0 35px;
       text-align: center;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
     }
     input,
     select,
@@ -2129,6 +2139,9 @@
     background: url(../images/banner05.png) no-repeat center center;
     background-size: 100%;
     text-align: left;
+    @include max(1600px) {
+      background-size: cover;
+    }
     .sm-box {
       @include sm-box;
     }
@@ -2160,6 +2173,10 @@
       font-weight: 700;
       text-align: right;
       padding: 0 15px 0 0;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     p {
       color: #000;
@@ -2167,6 +2184,10 @@
       line-height: 25px;
       font-weight: 300;
       padding: 0 0 0 15px;
+      @include max(1400px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
     .g-box {
       background: #03c587;
@@ -2179,6 +2200,10 @@
         font-weight: 600;
         color: #fff;
         margin: 0 0 10px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 35px;
+        }
       }
       p {
         padding: 0;
@@ -2186,6 +2211,10 @@
         line-height: 26px;
         color: #fff;
         font-weight: 400;
+        @include max(1400px) {
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
     }
     h4 {
@@ -2194,6 +2223,10 @@
       line-height: 42px;
       font-weight: 700;
       padding: 0 0 0 15px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     span {
       color: #000;
@@ -2202,6 +2235,10 @@
       font-weight: 300;
       padding: 0 15px 0 0;
       display: block;
+      @include max(1400px) {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
   }
   .gb-area {
@@ -2220,6 +2257,11 @@
           line-height: 42px;
           font-weight: 400;
           margin: 0 0 15px;
+          @include max(1400px) {
+            font-size: 30px;
+            line-height: 35px;
+          }
+          
         }
         p {
           font-size: 18px;
@@ -2227,6 +2269,10 @@
           color: #fff;
           font-weight: 300;
           margin: 0 0 20px;
+          @include max(1400px) {
+            font-size: 15px;
+            line-height: 22px;
+          }
         }
         .en-btn {
           @include apply-btn;
@@ -2241,10 +2287,13 @@
 .PSI-page {
   .top-banner {
     @include top-banner;
-    padding: 5rem 0 0;
+    padding: 8rem 0 0;
     background: url(../images/banner07.png) no-repeat center center;
     background-size: 100%;
     text-align: left;
+    @include max(1600px) {
+      background-size: cover;
+    }
     .sm-box {
       @include sm-box;
     }
@@ -2253,6 +2302,9 @@
     padding: 5rem 0;
     position: relative;
     z-index: 1;
+    @include max(1400px) {
+      padding: 4rem 0;
+    }
     &:before {
       position: absolute;
       top: -30rem;
@@ -2279,12 +2331,20 @@
       line-height: 42px;
       font-weight: 700;
       margin: 0 0 15px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     p {
       color: #000;
       font-size: 18px;
       line-height: 25px;
       font-weight: 300;
+      @include max(1400px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
   }
   .s-block {
@@ -2298,7 +2358,7 @@
       border-radius: 10px 10px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       flex-direction: column;
       box-shadow: 0px 0px 10px 0px #0000001a;
       height: 100%;
@@ -2308,6 +2368,19 @@
       }
       .img-hold {
         margin: 0 0 25px;
+        height: 70px;
+        width: 70px;
+        text-align: center;
+        @include max(1280px) {
+          width: 60px;
+          height: 60px;
+        }
+        img {
+          height: 100%;
+        }
+        @include max(1400px) {
+          margin: 0 0 15px;
+        }
       }
       p {
         font-size: 24px;
@@ -2315,15 +2388,23 @@
         color: #000;
         font-weight: 500;
         text-align: center;
+        @include max(1400px) {
+          font-size: 20px;
+          line-height: 25px;
+        }
+        @include max(1280px) {
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
     }
   }
 }
 .kry-page {
   .top-banner {
-    padding: 5rem 0 0;
+    padding: 8rem 0 0;
     background: url(../images/banner07.png) no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     position: relative;
     z-index: 1;
     .sm-box {
@@ -2339,11 +2420,18 @@
         color: #fff;
         font-weight: 700;
         margin: 0;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 35px;
+        }
       }
     }
   }
   .feature-box {
     padding: 5rem 0;
+    @include max(1400px) {
+      padding: 3rem 0;
+    }
     h2 {
       text-align: center;
       font-size: 38px;
@@ -2351,6 +2439,10 @@
       color: #000;
       font-weight: 700;
       margin: 0 0 50px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
     }
     .box {
       box-shadow: 0px 0px 10px 0px #0000001a;
@@ -2359,6 +2451,9 @@
       border-radius: 10px 10px;
       text-align: center;
       transition: transform 0.3s ease;
+      @include max(1400px) {
+        padding: 50px 35px;
+      }
       &:hover {
         transform: translateY(-7px);
       }
@@ -2370,6 +2465,10 @@
         line-height: 26px;
         color: #fff;
         font-weight: 500;
+        @include max(1400px) {
+          font-size: 20px;
+          line-height: 22px;
+        }
       }
     }
   }
@@ -2384,14 +2483,36 @@
     background: url(../images/banner09.png) no-repeat center center;
     background-size: 100%;
     color: #fff;
+    @include max(1600px) {
+      background-size: cover;
+    }
+    @include max(1400px) {
+      padding: 7rem 0;
+    }
+    @include max(1280px) {
+      padding: 5rem 0;
+    }
+    p {
+      margin: 0 0 15px;
+    }
+    h1 {
+      margin: 0 0 25px;
+    }
   }
   .two-block {
     padding: 5rem 0;
+    @include max(1400px) {
+      padding: 3rem 0 1rem;
+    }
     h2 {
       font-size: 36px;
       line-height: 44px;
       font-weight: 600;
       margin: 0 0 20px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     p {
       font-size: 18px;
@@ -2399,6 +2520,10 @@
       color: #2f2f2f;
       margin: 0 0 15px;
       font-weight: 400;
+      @include max(1400px) {
+        font-size: 16px;
+        line-height: 25px;
+      }
     }
     .img-hold {
       text-align: right;
@@ -2419,6 +2544,10 @@
       font-weight: 600;
       font-size: 22px;
       line-height: 24px;
+      @include max(1400px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
     }
     h2 {
       text-align: center;
@@ -2427,6 +2556,10 @@
       font-weight: 600;
       font-size: 36px;
       line-height: 38px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     p {
       text-align: center;
@@ -2435,6 +2568,11 @@
       font-weight: 600;
       font-size: 22px;
       line-height: 24px;
+      @include max(1400px) {
+        font-size: 18px;
+        line-height: 20px;
+        margin: 0 0 20px;
+      }
     }
   }
   .fea-box {
@@ -2446,6 +2584,10 @@
       font-weight: 700;
       font-size: 36px;
       line-height: 38px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     .box {
       background: linear-gradient(107.69deg, #009db8 1.33%, #03c587 100%);
@@ -2477,12 +2619,25 @@
             font-weight: 600;
             color: #fff;
             margin: 0 0 10px;
+            @include max(1400px) {
+              font-size: 18px;
+              line-height: 20px;
+            }
+            @include max(1280px) {
+              font-size: 16px;
+              line-height: 18px;
+              margin: 0 0 5px;
+            }
           }
           p {
             font-size: 16px;
             line-height: 22px;
             font-weight: 400;
             color: #fff;
+            @include max(1400px) {
+              font-size: 14px;
+              line-height: 18px;
+            }
           }
         }
       }
@@ -2494,6 +2649,10 @@
       padding: 4rem 3rem;
       background: url(../images/banner10.png) no-repeat center center;
       background-size: 100%;
+      @include max(1400px) {
+        background-size: cover;
+        padding: 3rem 3rem;
+      }
       h3 {
         text-align: center;
         font-size: 24px;
@@ -2501,6 +2660,10 @@
         color: #fff;
         font-weight: 400;
         margin: 0 0 10px;
+        @include max(1400px) {
+          font-size: 20px;
+          line-height: 22px;
+        }
       }
       h2 {
         text-align: center;
@@ -2509,6 +2672,11 @@
         color: #fff;
         font-weight: 700;
         margin: 0 0 20px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 32px;
+          margin: 0 0 15px;
+        }
       }
       p {
         text-align: center;
@@ -2517,6 +2685,10 @@
         color: #fff;
         font-weight: 400;
         margin: 0 0 15px;
+        @include max(1400px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
       input,
       select {
@@ -2536,6 +2708,9 @@
   .co-say {
     padding: 4rem 0;
     background: #f3fffb;
+    @include max(1400px) {
+      padding: 3rem 0;
+    }
     .bar {
       display: flex;
       align-items: center;
@@ -2552,6 +2727,14 @@
           color: #000;
           margin: 0 0 25px;
           font-weight: 600;
+          @include max(1400px) {
+            font-size: 25px;
+            line-height: 27px;
+          }
+          @include max(1280px) {
+            font-size: 20px;
+            line-height: 22px;
+          }
         }
         .tv-btn {
           @include apply-btn;
