@@ -11,32 +11,32 @@
                     Explore Industry-Focused Courses and Certifications to Build Skills and Shape Your Future.
                 </p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-block">
-                        <form action="#">
-                            <div class="input-group mb-4">
-                                <input type="text" class="form-control sc-iput" placeholder="Search courses and certifications that match your goals." aria-describedby="button-addon2">
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-block">
+                    <form action="#">
+                        <div class="input-group mb-4">
+                            <input type="text" class="form-control sc-iput" placeholder="Search courses and certifications that match your goals." aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="cor-slider mb-lg-3">
+                    @forelse ($categories as $cat)
+                        <div>
+                            <div class="text-box">
+                                <a href="{{ route('courses-certifications') }}#course-{{ $cat->slug }}">{{ $cat->name }}</a>
                             </div>
-                        </form>
-                    </div>
-                    <div class="cor-slider mb-3">
-                        @forelse ($categories as $cat)
-                            <div>
-                                <div class="text-box">
-                                    <a href="{{ route('courses-certifications') }}#course-{{ $cat->slug }}">{{ $cat->name }}</a>
-                                </div>
-                            </div>
-                        @empty
-                        @endforelse
-                    </div>
-                    <div class="btn-area">
-                        <ul>
-                            <li><a href="#">Explore all Courses</a></li>
-                            <li><a href="#">Get Started</a></li>
-                        </ul>
-                    </div>
+                        </div>
+                    @empty
+                    @endforelse
+                </div>
+                <div class="btn-area">
+                    <ul>
+                        <li><a href="#">Explore all Courses</a></li>
+                        <li><a href="#">Get Started</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -313,7 +313,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-xl-7">
                     <div class="row align-items-center">
-                        <div class="col-lg-8">
+                        <div class="col-md-8 col-sm-7">
                             <h2>
                                 Ready to Upgrade Your Skills?
                             </h2>
@@ -322,7 +322,7 @@
                                 take the next step towards a successful career.
                             </p>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4 col-sm-5">
                             <ul>
                                 <li><a href="#" class="btn gs-btn">Get Started</a></li>
                                 <li><a href="#" class="btn eac-btn">Explore All Courses</a></li>
@@ -874,14 +874,15 @@
                 breakpoint: 600,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1,
                     }
                 },
                 {
                 breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
                     }
                 }
             ]
