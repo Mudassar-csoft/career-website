@@ -496,10 +496,17 @@
 			width: 40px;
 			height: 40px;
 			padding: 10px 10px;
+			@include max(575px) {
+				font-size: 15px;
+				line-height: 17px;
+				width: 27px;
+				height: 27px;
+				border-radius: 5px 5px;
+			}
 			&:hover {
-			background: #03C587;
-			color: #fff;
-			font-weight: 700;
+				background: #03C587;
+				color: #fff;
+				font-weight: 700;
 			}
 		}
 		&.active {

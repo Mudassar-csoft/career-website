@@ -1386,28 +1386,81 @@
   }
   .feature-block {
     background: none;
+    @include max(992px) {
+      padding: 3rem 0 0;
+    }
     p {
       margin: 0;
       font-weight: 300;
     }
     h2 {
       margin: 0 0 30px;
+      @include max(575px) {
+        margin: 0 0 20px;
+      }
     }
     .feature-slider {
       margin: 0 0 4rem;
+      @include max(575px) {
+        margin: 0 0 1rem;
+      }
     }
     .ru-banner {
+      @include max(992px) {
+        padding: 20px 20px;
+        border-radius: 25px 25px;
+      }
+      @include max(575px) {
+        &:before {
+          top: 7px;
+          left: 7px;
+          width: 72px;
+          height: 80px;
+        }
+      }
       h2 {
         margin: 0 0 10px;
         @include max(1400px) {
           font-size: 25px;
           line-height: 27px;
         }
+        @include max(767px) {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        @include max(575px) {
+          font-size: 20px;
+          line-height: 22px;
+          text-align: center;
+          margin: 0 0 7px;
+        }
       }
       p {
         @include max(1400px) {
           font-size: 16px;
           line-height: 22px;
+        }
+        @include max(575px) {
+          font-size: 13px;
+          line-height: 18px;
+          text-align: center;
+          margin: 0 0 40px;
+          br {
+            display: none;
+          }
+        }
+      }
+      @include max(575px) {
+        background: url(../images/banner23.png) no-repeat top center;
+        background-size: cover;
+        padding: 50px 15px 30px;
+        ul {
+          width: 50%;
+          margin: 0 auto;
+          @include max(400px) {
+            width: 60%;
+            margin: 0;
+          }
         }
       }
     }
@@ -1419,6 +1472,9 @@
     @include max(1400px) {
       padding: 3rem 0;
     }
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     h2 {
       font-size: 36px;
       line-height: 42px;
@@ -1429,6 +1485,22 @@
       @include max(1400px) {
         font-size: 30px;
         line-height: 35px;
+      }
+      @include max(992px) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      @include max(767px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      @include max(575px) {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 0 0 50px;
+        br {
+          display: none;
+        }
       }
       &::before {
         position: absolute;
@@ -1453,6 +1525,14 @@
         font-size: 22px;
         line-height: 24px;
       }
+      @include max(992px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      @include max(575px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
   .cer-bar {
@@ -1460,6 +1540,11 @@
     background: url(../images/banner04.png) no-repeat bottom center;
     background-size: cover;
     text-align: center;
+    @include max(575px) {
+      background: url(../images/banner22.png) no-repeat top center;
+      background-size: cover;
+      padding: 30px 0;
+    }
     h2 {
       color: #fff;
       font-weight: 700;
@@ -1480,6 +1565,10 @@
       @include max(1400px) {
         font-size: 14px;
         line-height: 16px;
+      }
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 18px;
       }
     }
     .form-block {
@@ -1523,6 +1612,9 @@
               font-size: 14px;
               line-height: 16px;
             }
+            @include max(575px) {
+              padding: 15px 15px;
+            }
           }
         }
       }
@@ -1530,6 +1622,9 @@
   }
   .cor-block {
     padding: 4rem 0 2rem;
+    @include max(992px) {
+      padding: 2rem 0 0;
+    }
     h2 {
       text-align: center;
       font-size: 38px;
@@ -1543,9 +1638,13 @@
         margin: 0 0 25px;
       }
       @include max(767px) {
-        font-size: 28px;
-        line-height: 30px;
-        margin: 0 0 15px;
+        font-size: 25px;
+        line-height: 27px;
+        margin: 0 0 20px;
+      }
+      @include max(400px) {
+        font-size: 22px;
+        line-height: 24px;
       }
     }
     ul {
@@ -1558,14 +1657,26 @@
         @include max(1200px){
           width: 32.5%;
         }
+        @include max(992px){
+          width: 32%;
+        }
+        @include max(575px){
+          width: 48.5%;
+        }
         a {
           display: inline-block;
+          @include max(992px) {
+            height: 100%;
+          }
           .box {
             background: #f7f5f7;
             border-radius: 10px 10px;
             padding: 15px 15px;
             text-align: center;
             transition: transform 0.3s ease;
+            @include max(992px) {
+              height: 100%;
+            }
             &:hover {
               transform: translateY(5px);
             }
@@ -1593,6 +1704,9 @@
                 @include max(1400px) {
                   height: 40px;
                 }
+                @include max(575px) {
+                  height: auto;
+                }
               }
             }
           }
@@ -1602,6 +1716,9 @@
   }
   .acc-area {
     padding: 2rem 0 3rem;
+    @include max(575px) {
+      padding: 2rem 0 0;
+    }
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -1612,6 +1729,14 @@
       @include max(1400px) {
         font-size: 30px;
         line-height: 32px;
+      }
+      @include max(767px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
+      @include max(400px) {
+        font-size: 22px;
+        line-height: 24px;
       } 
     }
     p {
@@ -1900,6 +2025,12 @@
       @include max(1400px) {
         width: 32.5%;
       }
+      @include max(992px) {
+        width: 49%;
+      }
+      @include max(575px) {
+        width: 100%;
+      }
       .img-hold {
         width: 60px;
       }
@@ -1916,6 +2047,14 @@
       font-size: 30px;
       line-height: 32px;
     }
+    @include max(575px) {
+      font-size: 28px;
+      line-height: 30px;
+    }
+    @include max(400px) {
+      font-size: 25px;
+      line-height: 27px;
+    }
   }
   h5 {
     text-align: center;
@@ -1927,6 +2066,11 @@
     @include max(1400px) {
       font-size: 15px;
       line-height: 20px;
+    }
+    @include max(575px) {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 300;
     }
   }
   p {
@@ -1981,9 +2125,19 @@
   }
   .form-block {
     margin: 3rem 0 0;
+    @include max(992px) {
+      margin: 2rem 0 0;
+    }
+    @include max(575px) {
+      margin: 1.5rem 0 0;
+    }
     p {
       @include max(1400px) {
         font-size: 15px;
+      }
+      @include max(575px) {
+        font-weight: 300;
+        margin: 0 0 20px
       }
     }
     input {
@@ -1997,6 +2151,11 @@
     .sm-btn {
       @include apply-btn;
       padding: 15px 15px;
+      @include max(575px) {
+        padding: 15px 25px;
+        font-size: 16px;
+        line-height: 18px;
+      }
     }
     .file-upload-wrapper {
       @include select-file;
@@ -2016,6 +2175,15 @@
     @include max(1400px) {
       font-size: 30px;
       line-height: 32px;
+    }
+    @include max(575px) {
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 20px;
+    }
+    @include max(400px) {
+      font-size: 25px;
+      line-height: 27px;
     }
   }
   .location-list {
@@ -2054,6 +2222,10 @@
   .location-icon {
     width: 40px;
     height: 40px;
+    @include max(575px) {
+      width: 50px;
+      height: 50px;
+    }
   }
   .location-info {
     h5 {
@@ -2061,6 +2233,10 @@
       line-height: 22px;
       font-weight: 700;
       margin: 0 0 5px;
+      @include max(575px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
     }
     p {
       color: #000;

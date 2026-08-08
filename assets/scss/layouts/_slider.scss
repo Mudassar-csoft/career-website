@@ -867,6 +867,12 @@
 // Courses slider start here
 
 .cor-slider {
+  @include max(992px) {
+    margin: 0 3rem 30px;
+  }
+  @include max(575px) {
+    margin: 0 0 20px;
+  }
   .slick-slide {
     margin: 0 10px 0 0;
     &:last-child {
