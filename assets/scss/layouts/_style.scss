@@ -2088,6 +2088,9 @@
     transition: transform 0.3s ease;
     display: flex;
     align-items: center;
+    @include max(1400px) {
+      margin: 0;
+    }
     &:hover {
       transform: translateY(-7px);
     }
@@ -5648,11 +5651,6 @@
       margin: 0 0 40px;
       text-align: center;
       @include max(1400px) {
-        font-size: 35px;
-        line-height: 40px;
-        margin: 0 0 30px;
-      }
-      @include max(767px) {
         font-size: 30px;
         line-height: 32px;
       }
@@ -5707,6 +5705,9 @@
         padding: 15px 15px;
         background: #fff;
         border-radius: 10px 10px;
+        @include max(1400px) {
+          padding: 10px 10px;
+        }
         h3 {
           font-size: 22px;
           line-height: 24px;
@@ -5749,6 +5750,9 @@
           align-items: center;
           .an-btn {
             @include an-btn;
+            @include max(1400px) {
+              padding: 10px 15px;
+            }
             @include max(480px) {
               font-size: 13px;
               line-height: 15px;
@@ -5756,6 +5760,9 @@
           }
           .md-btn {
             @include md-btn;
+            @include max(1400px) {
+              padding: 10px 15px;
+            }
             @include max(480px) {
               font-size: 13px;
               line-height: 15px;

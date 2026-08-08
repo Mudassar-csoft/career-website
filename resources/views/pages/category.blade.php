@@ -535,9 +535,9 @@
     <div class="container">
         <div class="ru-banner">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-lg-8">
+                <div class="col-lg-9 col-xl-8">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 col-sm-7">
                             <h2>
                                 Ready to Upgrade Your Skills?
                             </h2>
@@ -546,7 +546,7 @@
                                 take the next step towards a successful career.
                             </p>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4 col-sm-5">
                             <ul>
                                 <li><a href="#" class="btn gs-btn">Get Started</a></li>
                                 <li><a href="#" class="btn eac-btn">Explore All Courses</a></li>
