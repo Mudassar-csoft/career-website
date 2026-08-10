@@ -5580,18 +5580,89 @@
       padding: 0 0 15px;
       margin: 0 0 15px;
 	    border-bottom: 1px solid #fff;
+      @include max(767px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
     background: url(../images/banner21.png) no-repeat top center;
     background-size: cover;
     padding: 7rem 0;
+    @include max(1400px) {
+      padding: 5rem 0
+    }
+    @include max(767px) {
+      padding: 3rem 0
+    }
   }
   .info-bar {
     .ru-banner {
       @include banner;
-      margin: 0 0 4rem;
       ul {
         li {
           width: 100%;
+        }
+      }
+      @include max(992px) {
+        padding: 20px 20px;
+        border-radius: 25px 25px;
+        ul {
+          li {
+            margin: 0;
+          }
+        }
+      }
+      @include max(575px) {
+        &:before {
+          top: 7px;
+          left: 7px;
+          width: 72px;
+          height: 80px;
+        }
+      }
+      h2 {
+        margin: 0 0 10px;
+        @include max(1400px) {
+          font-size: 25px;
+          line-height: 27px;
+        }
+        @include max(767px) {
+          font-size: 22px;
+          line-height: 27px;
+        }
+        @include max(575px) {
+          font-size: 20px;
+          line-height: 22px;
+          text-align: center;
+          margin: 0 0 7px;
+        }
+      }
+      p {
+        @include max(1400px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        @include max(575px) {
+          font-size: 13px;
+          line-height: 18px;
+          text-align: center;
+          margin: 0 0 40px;
+          br {
+            display: none;
+          }
+        }
+      }
+      @include max(575px) {
+        background: url(../images/banner23.png) no-repeat top center;
+        background-size: cover;
+        padding: 50px 15px 30px;
+        ul {
+          width: 50%;
+          margin: 0 auto;
+          @include max(400px) {
+            width: 60%;
+            margin: 0;
+          }
         }
       }
     }
@@ -5599,11 +5670,17 @@
   .gate-info {
     padding: 50px 0;
     background: #fafafa;
+    @include max(575px) {
+      padding: 30px 0;
+    }
     .box {
       padding: 30px 15px;
       box-shadow: 3px 4px 12px 1px #00000012;
       border-radius: 10px 10px;
       background: #fff;
+      @include max(992px) {
+        padding: 15px 15px;
+      }
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -5613,6 +5690,13 @@
           display: flex;
           flex-wrap: wrap;
           align-items: center;
+          @include max(992px) {
+            width: 100%;
+            margin: 0 0 15px;
+            &:last-child {
+              margin: 0;
+            }
+          }
           .img-hold {
             width: 25%;
             img {

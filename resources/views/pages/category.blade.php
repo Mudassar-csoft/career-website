@@ -5,7 +5,7 @@
 <section class="gate-detail">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8 col-xl-6">
                 <span>Category</span>
                 <h1>AI & Data Science</h1>
                 <p>
@@ -99,7 +99,7 @@
             </div>
         </div>
         <div class="row g-2">
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -167,7 +167,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -235,7 +235,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -269,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -303,7 +303,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -337,7 +337,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/img03.png') }}" alt="">
@@ -413,7 +413,7 @@
 </section>
 <section class="info-bar">
     <div class="container">
-        <div class="ru-banner">
+        <div class="ru-banner mb-5">
             <div class="row justify-content-center">
                 <div class="col-lg-9 col-xl-8">
                     <div class="row align-items-center">

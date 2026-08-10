@@ -7852,6 +7852,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .course-detail .cou-detail ul {
+    flex-wrap: wrap;
+  }
+}
 .course-detail .cou-detail ul li {
   font-size: 14px;
   line-height: 16px;
@@ -7866,6 +7871,30 @@ body {
 }
 .course-detail .cou-detail ul li:last-child {
   margin: 0;
+}
+@media (max-width: 1400px) {
+  .course-detail .cou-detail ul li {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .course-detail .cou-detail ul li {
+    width: 50%;
+    margin: 0 0 10px;
+  }
+  .course-detail .cou-detail ul li:last-child {
+    margin: 0;
+  }
+}
+@media (max-width: 450px) {
+  .course-detail .cou-detail ul li {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .course-detail .cou-detail ul li:last-child {
+    margin: 0;
+  }
 }
 .course-detail .cou-detail p {
   margin: 0 0 15px;
@@ -9306,6 +9335,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .category-page .gate-detail ul {
+    flex-wrap: wrap;
+  }
+}
 .category-page .gate-detail ul li {
   font-size: 14px;
   line-height: 16px;
@@ -9321,15 +9355,55 @@ body {
 .category-page .gate-detail ul li:last-child {
   margin: 0;
 }
+@media (max-width: 1400px) {
+  .category-page .gate-detail ul li {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .category-page .gate-detail ul li {
+    width: 50%;
+    margin: 0 0 10px;
+  }
+  .category-page .gate-detail ul li:last-child {
+    margin: 0;
+  }
+}
+@media (max-width: 450px) {
+  .category-page .gate-detail ul li {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+  .category-page .gate-detail ul li:last-child {
+    margin: 0;
+  }
+}
 .category-page .gate-detail p {
   padding: 0 0 15px;
   margin: 0 0 15px;
   border-bottom: 1px solid #fff;
 }
+@media (max-width: 767px) {
+  .category-page .gate-detail p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 .category-page .gate-detail {
   background: url(../images/banner21.png) no-repeat top center;
   background-size: cover;
   padding: 7rem 0;
+}
+@media (max-width: 1400px) {
+  .category-page .gate-detail {
+    padding: 5rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .category-page .gate-detail {
+    padding: 3rem 0;
+  }
 }
 .category-page .info-bar .ru-banner {
   padding: 40px 0;
@@ -9418,21 +9492,102 @@ body {
   line-height: 16px;
   padding: 15px 15px;
 }
-.category-page .info-bar .ru-banner {
-  margin: 0 0 4rem;
-}
 .category-page .info-bar .ru-banner ul li {
   width: 100%;
+}
+@media (max-width: 992px) {
+  .category-page .info-bar .ru-banner {
+    padding: 20px 20px;
+    border-radius: 25px 25px;
+  }
+  .category-page .info-bar .ru-banner ul li {
+    margin: 0;
+  }
+}
+@media (max-width: 575px) {
+  .category-page .info-bar .ru-banner:before {
+    top: 7px;
+    left: 7px;
+    width: 72px;
+    height: 80px;
+  }
+}
+.category-page .info-bar .ru-banner h2 {
+  margin: 0 0 10px;
+}
+@media (max-width: 1400px) {
+  .category-page .info-bar .ru-banner h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .category-page .info-bar .ru-banner h2 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 575px) {
+  .category-page .info-bar .ru-banner h2 {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0 0 7px;
+  }
+}
+@media (max-width: 1400px) {
+  .category-page .info-bar .ru-banner p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .category-page .info-bar .ru-banner p {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  .category-page .info-bar .ru-banner p br {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .category-page .info-bar .ru-banner {
+    background: url(../images/banner23.png) no-repeat top center;
+    background-size: cover;
+    padding: 50px 15px 30px;
+  }
+  .category-page .info-bar .ru-banner ul {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) and (max-width: 400px) {
+  .category-page .info-bar .ru-banner ul {
+    width: 60%;
+    margin: 0;
+  }
 }
 .category-page .gate-info {
   padding: 50px 0;
   background: #fafafa;
+}
+@media (max-width: 575px) {
+  .category-page .gate-info {
+    padding: 30px 0;
+  }
 }
 .category-page .gate-info .box {
   padding: 30px 15px;
   box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.0705882353);
   border-radius: 10px 10px;
   background: #fff;
+}
+@media (max-width: 992px) {
+  .category-page .gate-info .box {
+    padding: 15px 15px;
+  }
 }
 .category-page .gate-info .box ul {
   display: flex;
@@ -9444,6 +9599,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+@media (max-width: 992px) {
+  .category-page .gate-info .box ul li {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+  .category-page .gate-info .box ul li:last-child {
+    margin: 0;
+  }
 }
 .category-page .gate-info .box ul li .img-hold {
   width: 25%;
