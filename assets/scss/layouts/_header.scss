@@ -38,6 +38,9 @@
         font-weight: 400;
         gap: 8px;
         padding: 0;
+        &:hover {
+          background: none;
+        }
         @include max(1200px) {
           font-size: 10px;
           line-height: 12px;
