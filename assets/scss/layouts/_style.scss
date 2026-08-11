@@ -4784,7 +4784,7 @@
           line-height: 16px;
           display: flex;
           align-items: center;
-          margin: 0;
+          margin: 0 0 15px;
           img {
             margin: 0 7px 0 0;
           }
@@ -5014,13 +5014,71 @@
   }
   .ru-banner {
     @include banner;
-    margin: 0 0 5rem;
-    h2 {
-      display: none;
-    }
     ul {
       li {
         width: 100%;
+      }
+    }
+    @include max(992px) {
+      padding: 20px 20px;
+      border-radius: 25px 25px;
+      ul {
+        li {
+          margin: 0;
+        }
+      }
+    }
+    @include max(575px) {
+      &:before {
+        top: 7px;
+        left: 7px;
+        width: 72px;
+        height: 80px;
+      }
+    }
+    h2 {
+      margin: 0 0 10px;
+      @include max(1400px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
+      @include max(767px) {
+        font-size: 22px;
+        line-height: 27px;
+      }
+      @include max(575px) {
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        margin: 0 0 7px;
+      }
+    }
+    p {
+      @include max(1400px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      @include max(575px) {
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0 0 40px;
+        br {
+          display: none;
+        }
+      }
+    }
+    @include max(575px) {
+      background: url(../images/banner23.png) no-repeat top center;
+      background-size: cover;
+      padding: 50px 15px 30px;
+      ul {
+        width: 50%;
+        margin: 0 auto;
+        @include max(400px) {
+          width: 60%;
+          margin: 0;
+        }
       }
     }
   }

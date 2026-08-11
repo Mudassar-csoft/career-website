@@ -7956,7 +7956,7 @@ body {
   line-height: 16px;
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 0 0 15px;
 }
 .course-detail .cou-info .l-box .list-bar li img {
   margin: 0 7px 0 0;
@@ -8287,14 +8287,82 @@ body {
   line-height: 16px;
   padding: 15px 15px;
 }
-.course-detail .ru-banner {
-  margin: 0 0 5rem;
-}
-.course-detail .ru-banner h2 {
-  display: none;
-}
 .course-detail .ru-banner ul li {
   width: 100%;
+}
+@media (max-width: 992px) {
+  .course-detail .ru-banner {
+    padding: 20px 20px;
+    border-radius: 25px 25px;
+  }
+  .course-detail .ru-banner ul li {
+    margin: 0;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner:before {
+    top: 7px;
+    left: 7px;
+    width: 72px;
+    height: 80px;
+  }
+}
+.course-detail .ru-banner h2 {
+  margin: 0 0 10px;
+}
+@media (max-width: 1400px) {
+  .course-detail .ru-banner h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .course-detail .ru-banner h2 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner h2 {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0 0 7px;
+  }
+}
+@media (max-width: 1400px) {
+  .course-detail .ru-banner p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner p {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  .course-detail .ru-banner p br {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner {
+    background: url(../images/banner23.png) no-repeat top center;
+    background-size: cover;
+    padding: 50px 15px 30px;
+  }
+  .course-detail .ru-banner ul {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) and (max-width: 400px) {
+  .course-detail .ru-banner ul {
+    width: 60%;
+    margin: 0;
+  }
 }
 
 .news-page .news-bar .pagination-wrap .pagination {
