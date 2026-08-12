@@ -47,8 +47,8 @@
                 </h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3">
+        <div class="row g-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="workshop-card">
                     <!-- Image -->
                     <div class="workshop-card__image">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="workshop-card">
                     <!-- Image -->
                     <div class="workshop-card__image">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="workshop-card">
                     <!-- Image -->
                     <div class="workshop-card__image">
@@ -135,7 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-sm-6">
                 <div class="workshop-card">
                     <!-- Image -->
                     <div class="workshop-card__image">
@@ -177,36 +177,86 @@
 <section class="rcre-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 mb-4 mb-lg-0">
                 <h2>
                     Event Category
                 </h2>
-                <ul class="mb-3">
+                <ul class="mb-3 d-none d-sm-flex">
                     <li>
-                        <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
-                        <h3>Seminars & <br>Webinars</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
+                            <h3>Seminars & <br>Webinars</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
-                        <h3>Workshops</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
+                            <h3>Workshops</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
-                        <h3>Conferences</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
+                            <h3>Conferences</h3>
+                        </a>
                     </li>
                 </ul>
-                <ul>
+                <ul class="d-none d-sm-flex">
                     <li>
-                        <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
-                        <h3>Project Displays</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
+                            <h3>Project Displays</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
-                        <h3>Job Fairs</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
+                            <h3>Job Fairs</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
-                        <h3>Celebrations</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
+                            <h3>Celebrations</h3>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="d-sm-none">
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
+                            <h3>Seminars & <br>Webinars</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
+                            <h3>Workshops</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
+                            <h3>Conferences</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
+                            <h3>Project Displays</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
+                            <h3>Job Fairs</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
+                            <h3>Celebrations</h3>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -219,8 +269,8 @@
                         View all Recent Events
                     </a>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 px-1">
+                <div class="row g-2">
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
                         <div class="block">
                             <img src="{{ asset('assets/images/img65.png') }}" alt="">
                             <h4>
@@ -233,7 +283,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-1">
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
                         <div class="block">
                             <img src="{{ asset('assets/images/img65.png') }}" alt="">
                             <h4>
@@ -246,7 +296,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-1">
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
                         <div class="block">
                             <img src="{{ asset('assets/images/img65.png') }}" alt="">
                             <h4>
@@ -259,7 +309,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 px-1">
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
                         <div class="block">
                             <img src="{{ asset('assets/images/img65.png') }}" alt="">
                             <h4>

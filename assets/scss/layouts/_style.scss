@@ -5620,12 +5620,27 @@
     background: url(../images/banner20.png) no-repeat top center;
     background-size: cover;
     padding: 5rem 0 4rem;
+    @include max(1400px) {
+      padding: 3rem 0 3rem;
+    }
+    @include max(575px) {
+      padding: 2rem 0 2rem;
+    }
     h2 {
       font-size: 50px;
       line-height: 52px;
       color: #fff;
       margin: 0 0 10px;
       font-weight: 700;
+      @include max(1400px) {
+        font-size: 40px;
+        line-height: 42px;
+      }
+      @include max(575px) {
+        font-size: 20px;
+        line-height: 22px;
+        margin: 0 0 7px;
+      }
     }
     p {
       font-size: 16px;
@@ -5633,6 +5648,14 @@
       color: #fff;
       font-weight: 400;
       margin: 0 0 3rem;
+      @include max(575px) {
+        br {
+          display: none;
+        }
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0 0 1rem
+      }
     }
     .counter-box {
       @include counter;
@@ -5643,10 +5666,21 @@
       border: 2px solid #C4C4C4;
       background: #FFFFFF17;
       padding: 15px 0;
+      @include max(575px) {
+        .counter-item {
+          p {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
     }
   }
   .events-area {
     padding: 3rem 0 2rem;
+    @include max(992px) {
+      padding: 2rem 0 2rem;
+    }
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -5655,9 +5689,9 @@
       margin: 0 0 40px;
       text-align: center;
       @include max(1400px) {
-        font-size: 35px;
-        line-height: 40px;
-        margin: 0 0 30px;
+        font-size: 30px;
+        line-height: 32px;
+        margin: 0 0 20px;
       }
       @include max(767px) {
         font-size: 30px;
@@ -5681,6 +5715,9 @@
   .rcre-area {
     padding: 3rem 0;
     background: #F6F9FE;
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     .box {
       display: flex;
       align-items: center;
@@ -5697,6 +5734,15 @@
       font-weight: 700;
       margin: 0 0 35px;
       position: relative;
+      @include max(767px) {
+        font-size: 20px;
+        line-height: 22px;
+        margin: 0 0 25px;
+      }
+      @include max(450px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
       &:before {
         position: absolute;
         top: auto;
@@ -5714,6 +5760,9 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
+      @include max(575px) {
+        gap: 14px;
+      }
       li {
         width: 31%;
         padding: 15px 15px;
@@ -5723,6 +5772,12 @@
         height: 100%;
         min-height: 100px;
         background: #fff;
+        @include max(992px) {
+          width: 32%;
+        }
+        @include max(575px) {
+          width: 48%;
+        }
         img {
           margin: 0 0 10px;
         }
@@ -5737,6 +5792,15 @@
     }
     .more-btn {
       @include event-btn;
+      @include max(767px) {
+        padding: 10px 10px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      @include max(450px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
     .block {
       background: #fff;
