@@ -82,7 +82,7 @@
                                 </div>
                             @endif
                             <div class="more-bar">
-                                <div class="row">
+                                <div class="row g-3">
                                     @forelse ($otherNews as $item)
                                         <div class="col-lg-4 col-md-6">
                                             <div class="workshop-card">

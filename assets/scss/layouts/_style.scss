@@ -5167,6 +5167,9 @@
       @include pagi
     }
     padding: 4rem 0 0;
+    @include max(1200px) {
+      padding: 2rem 0 0;
+    }
     .rig-bar {
       .top-box {
         box-shadow: 0px 0px 8px 1px #00000012;
@@ -5412,12 +5415,36 @@
     background: url(../images/banner19.png) no-repeat top center;
     background-size: cover;
     padding: 10rem 0;
+    @include max(1400px) {
+      padding: 6rem 0;
+    }
+    @include max(1200px) {
+      padding: 4rem 0;
+    }
+    @include max(767px) {
+      padding: 3rem 0;
+    }
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     h2 {
       font-size: 50px;
       line-height: 52px;
       color: #fff;
       margin: 0 0 10px;
       font-weight: 700;
+      @include max(1400px) {
+        font-size: 40px;
+        line-height: 42px;
+      }
+      @include max(1200px) {
+        font-size: 30px;
+        line-height: 32px;
+      }
+      @include max(575px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
     }
     p {
       font-size: 16px;
@@ -5425,12 +5452,28 @@
       color: #fff;
       font-weight: 400;
       margin: 0;
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 18px;
+        br {
+          display: none;
+        }
+      }
     }
   }
   .news-tabs {
     .nav {
+      @include max(1400px) {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+      }
       li {
         margin: 0 15px 0 0;
+        @include max(1400px) {
+          flex-shrink: 0;
+          margin: 0 10px 0 0;
+        }
         &:last-child {
           margin: 0;
         }
@@ -5485,6 +5528,12 @@
           padding: 30px 0 0;
           height: 100%;
           position: relative;
+          @include max(1200px) {
+            padding: 10px 0 0;
+          }
+          @include max(992px) {
+            padding: 20px 20px 0;
+          }
           h3 {
             font-size: 20px;
             line-height: 24px;
@@ -5497,6 +5546,9 @@
             line-height: 20px;
             font-weight: 400;
             color: #000;
+            @include max(992px) {
+              margin: 0 0 20px;
+            }
           }
           span {
             display: flex;
@@ -5525,12 +5577,36 @@
             right: 0;
             top: auto;
             bottom: 0;
+            @include max(992px) {
+              position: relative;
+            }
           }
         }
       }
       .more-bar {
+        @include max(1200px) {
+          margin: 30px 0 0;
+        }
+        @include max(992px) {
+          margin: 30px 0;
+        }
         .workshop-card {
           @include work-card;
+        }
+        @include max(1200px) {
+          .row {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100%;
+            .col-lg-4 {
+              flex-shrink: 0;
+              width: 50%;
+              margin: 0 0 10px;
+              @include max(575px) {
+                width: 80%;
+              }
+            }
+          }
         }
       }
     }
