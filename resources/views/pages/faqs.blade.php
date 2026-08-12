@@ -5,7 +5,7 @@
 <section class="top-banner">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-7">
+            <div class="col-lg-8">
                 <h3>
                     DO YOU NEED HELP?
                 </h3>
@@ -96,6 +96,12 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="rig-bar">
+                        <div class="top-box">
+                            <div class="new-search">
+                                <h2>Search</h2>
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                        </div>
                         <div class="bottom-area">
                             <h3>Categories</h3>
                             <ul>

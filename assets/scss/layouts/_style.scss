@@ -6635,11 +6635,25 @@
       padding: 2rem 0;
     }
     h1 {
-      font-size: 50;
+      font-size: 50px;
       line-height: 52px;
       color: #fff;
       font-weight: 600;
       margin: 0 0 40px;
+      @include max(1400px) {
+        font-size: 40px;
+        line-height: 42px;
+      }
+      @include max(767px) {
+        font-size: 35px;
+        line-height: 37px;
+        margin: 0 0 20px;
+      }
+      @include max(575px) {
+        font-size: 20px;
+        line-height: 22px;
+        margin: 0 0 20px;
+      }
     }
     p {
       font-size: 16px;
@@ -6667,6 +6681,19 @@
       color: #fff;
       font-weight: 400;
       margin: 0 0 20px;
+      @include max(1400px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
+      @include max(767px) {
+        font-size: 20px;
+        line-height: 22px;
+        margin: 0 0 15px;
+      }
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
     .form-block {
       .sc-iput {
@@ -6757,8 +6784,43 @@
   .faqs-area {
     padding: 5rem 0;
     background: #FAFAFA;
+    @include max(1400px) {
+      padding: 3rem 0;
+    }
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     .rig-bar {
       margin: 4.4rem 0 0;
+      @include max(767px) {
+        margin: 30px 0 0;
+      }
+      .top-box {
+        margin: 0 0 10px;
+        .new-search {
+          h2 {
+            font-size: 22px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 600;
+            margin: 0 0 10px;
+          }
+          input {
+            border: 1px solid #DADADA;
+            border-radius: 8px 8px;
+            padding: 10px 12px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #646464;
+            font-weight: 500;
+            background: #fff url(../images/search.svg) no-repeat right 15px center;
+            &:focus {
+              box-shadow: none;
+              outline: none;
+            }
+          }
+        }
+      }
       .bottom-area {
         padding: 10px 10px;
         box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.0705882353);
@@ -6807,11 +6869,28 @@
         color: #000;
         font-weight: 700;
         margin: 0 0 30px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 25px;
+        }
+        @include max(767px) {
+          font-size: 25px;
+          line-height: 27px;
+          margin: 0 0 20px;
+        }
       }
       .nav {
-        margin: 0 0 30px;
+        margin: 0 0 20px;
+        @include max(575px) {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          width: 100%;
+        }
         .nav-item {
           margin: 0 10px 0 0;
+          @include max(575px) {
+            flex-shrink: 0;
+          }
           .nav-link {
             color: #03C587;
             font-size: 14px;
@@ -6832,6 +6911,12 @@
             &:focus {
               box-shadow: none;
             }
+            @include max(575px) {
+              width:100%;
+              font-size: 12px;
+              line-height: 14px;
+              padding: 12px 15px;
+            }
           }
         }
       }
@@ -6842,6 +6927,9 @@
             box-shadow: 3px 4px 12px 1px #00000012;
             background: #FFFFFF;
             border-radius: 10px 10px;
+            @include max(767px) {
+              padding: 15px 15px;
+            }
             .top-bar {
               display: flex;
               align-items: center;
@@ -6879,6 +6967,11 @@
                   font-weight: 400;
                   color: #000;
                   box-shadow: none;
+                  @include max(575px) {
+                    padding: 14px 15px;
+                    font-size: 12px;
+                    line-height: 14px;
+                  }
                   &::after {
                     background-image: url(../images/icon124.png);
                     background-size: 15px;
@@ -6897,6 +6990,11 @@
                 line-height: 20px;
                 color: #000;
                 font-weight: 400;
+                @include max(575px) {
+                  padding: 15px 15px;
+                  font-size: 12px;
+                  line-height: 14px;
+                }
               }
             }
           }
