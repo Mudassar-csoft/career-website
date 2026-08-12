@@ -7827,12 +7827,24 @@ body {
   color: #fff;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .course-detail .cou-detail h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .course-detail .cou-detail p {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
   margin: 0 0 15px;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .course-detail .cou-detail p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 .course-detail .cou-detail h5 {
   display: flex;
@@ -7896,20 +7908,36 @@ body {
     margin: 0;
   }
 }
+@media (max-width: 992px) {
+  .course-detail .cou-detail {
+    padding: 3rem 0;
+  }
+}
 .course-detail .cou-detail p {
   margin: 0 0 15px;
-  padding: 0 0 50px;
+  padding: 0 0 20px;
   border-bottom: 1px solid #fff;
 }
 .course-detail .cou-info {
   background: #fafafa;
   padding: 3rem 0 7rem;
 }
+@media (max-width: 575px) {
+  .course-detail .cou-info {
+    padding: 1rem 0 3rem;
+  }
+}
 .course-detail .cou-info .l-box {
   padding: 25px 25px;
   box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.0705882353);
   border-radius: 10px 10px;
   background: #fff;
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box {
+    padding: 15px 15px;
+    margin: 0 0 15px;
+  }
 }
 .course-detail .cou-info .l-box h3 {
   font-size: 24px;
@@ -7920,12 +7948,37 @@ body {
   padding: 0 0 15px;
   border-bottom: 1px solid #DEDEDE;
 }
+@media (max-width: 1200px) {
+  .course-detail .cou-info .l-box h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
 .course-detail .cou-info .l-box p {
   font-size: 16px;
   line-height: 25px;
   color: #656565;
   font-weight: 400;
   margin: 0 0 20px;
+}
+@media (max-width: 1280px) {
+  .course-detail .cou-info .l-box p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 10px;
+  }
 }
 .course-detail .cou-info .l-box ul {
   display: flex;
@@ -7940,6 +7993,17 @@ body {
   display: flex;
   align-items: center;
   margin: 0 0 15px;
+}
+@media (max-width: 1280px) {
+  .course-detail .cou-info .l-box ul li {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box ul li {
+    width: 100%;
+  }
 }
 .course-detail .cou-info .l-box ul li img {
   margin: 0 5px 0 0;
@@ -7956,7 +8020,17 @@ body {
   line-height: 16px;
   display: flex;
   align-items: center;
-  margin: 0;
+  margin: 0 0 15px;
+}
+@media (max-width: 1200px) {
+  .course-detail .cou-info .l-box .list-bar li {
+    width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box .list-bar li {
+    width: 100%;
+  }
 }
 .course-detail .cou-info .l-box .list-bar li img {
   margin: 0 7px 0 0;
@@ -7967,6 +8041,11 @@ body {
   border-radius: 10px 10px;
   background: #fff;
   height: 100%;
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .rig-bar {
+    padding: 15px 15px;
+  }
 }
 .course-detail .cou-info .rig-bar .btn-bar {
   margin: 0 0 30px;
@@ -8064,6 +8143,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 575px) {
+  .course-detail .cou-info .rig-bar .c-de ul li {
+    font-weight: 400;
+  }
+}
 .course-detail .cou-info .rig-bar .c-de ul li img {
   margin: 0 7px 0 0;
 }
@@ -8115,6 +8199,11 @@ body {
   border-radius: 10px 10px;
   background: #fff;
 }
+@media (max-width: 575px) {
+  .course-detail .course-info {
+    padding: 15px 15px;
+  }
+}
 .course-detail .course-info h2 {
   display: flex;
   align-items: center;
@@ -8124,10 +8213,26 @@ body {
   font-weight: 600;
   margin: 0 0 20px;
 }
+@media (max-width: 575px) {
+  .course-detail .course-info h2 {
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 12px;
+  }
+}
 .course-detail .course-info h2 span {
   font-size: 20px;
   line-height: 22px;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .course-detail .course-info h2 span {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 5px 0 0;
+  }
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item {
   border: 0;
@@ -8151,6 +8256,18 @@ body {
   line-height: 20px;
   color: #000;
   font-weight: 400;
+}
+@media (max-width: 1280px) {
+  .course-detail .course-info .accordion-area .accordion .accordion-item h2 button p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .course-info .accordion-area .accordion .accordion-item h2 button p {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item h2 button span {
   font-size: 18px;
@@ -8176,6 +8293,14 @@ body {
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body {
   padding: 15px 15px 15px 60px;
+}
+@media (max-width: 575px) {
+  .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body {
+    padding: 15px 15px 15px 45px;
+  }
+  .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body p {
+    font-size: 14px;
+  }
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body ul li {
   font-size: 14px;
@@ -8287,14 +8412,82 @@ body {
   line-height: 16px;
   padding: 15px 15px;
 }
-.course-detail .ru-banner {
-  margin: 0 0 5rem;
-}
-.course-detail .ru-banner h2 {
-  display: none;
-}
 .course-detail .ru-banner ul li {
   width: 100%;
+}
+@media (max-width: 992px) {
+  .course-detail .ru-banner {
+    padding: 20px 20px;
+    border-radius: 25px 25px;
+  }
+  .course-detail .ru-banner ul li {
+    margin: 0;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner:before {
+    top: 7px;
+    left: 7px;
+    width: 72px;
+    height: 80px;
+  }
+}
+.course-detail .ru-banner h2 {
+  margin: 0 0 10px;
+}
+@media (max-width: 1400px) {
+  .course-detail .ru-banner h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .course-detail .ru-banner h2 {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner h2 {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0 0 7px;
+  }
+}
+@media (max-width: 1400px) {
+  .course-detail .ru-banner p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner p {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  .course-detail .ru-banner p br {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .ru-banner {
+    background: url(../images/banner23.png) no-repeat top center;
+    background-size: cover;
+    padding: 50px 15px 30px;
+  }
+  .course-detail .ru-banner ul {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) and (max-width: 400px) {
+  .course-detail .ru-banner ul {
+    width: 60%;
+    margin: 0;
+  }
 }
 
 .news-page .news-bar .pagination-wrap .pagination {
@@ -8348,6 +8541,11 @@ body {
 }
 .news-page .news-bar {
   padding: 4rem 0 0;
+}
+@media (max-width: 1200px) {
+  .news-page .news-bar {
+    padding: 2rem 0 0;
+  }
 }
 .news-page .news-bar .rig-bar .top-box {
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.0705882353);
@@ -8584,12 +8782,50 @@ body {
   background-size: cover;
   padding: 10rem 0;
 }
+@media (max-width: 1400px) {
+  .news-page .top-banner {
+    padding: 6rem 0;
+  }
+}
+@media (max-width: 1200px) {
+  .news-page .top-banner {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .news-page .top-banner {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 575px) {
+  .news-page .top-banner {
+    padding: 2rem 0;
+  }
+}
 .news-page .top-banner h2 {
   font-size: 50px;
   line-height: 52px;
   color: #fff;
   margin: 0 0 10px;
   font-weight: 700;
+}
+@media (max-width: 1400px) {
+  .news-page .top-banner h2 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 1200px) {
+  .news-page .top-banner h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 575px) {
+  .news-page .top-banner h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
 }
 .news-page .top-banner p {
   font-size: 16px;
@@ -8598,8 +8834,30 @@ body {
   font-weight: 400;
   margin: 0;
 }
+@media (max-width: 575px) {
+  .news-page .top-banner p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .news-page .top-banner p br {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .news-page .news-tabs .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
 .news-page .news-tabs .nav li {
   margin: 0 15px 0 0;
+}
+@media (max-width: 1400px) {
+  .news-page .news-tabs .nav li {
+    flex-shrink: 0;
+    margin: 0 10px 0 0;
+  }
 }
 .news-page .news-tabs .nav li:last-child {
   margin: 0;
@@ -8654,6 +8912,16 @@ body {
   height: 100%;
   position: relative;
 }
+@media (max-width: 1200px) {
+  .news-page .news-tabs .tab-content .main-box .t-box {
+    padding: 10px 0 0;
+  }
+}
+@media (max-width: 992px) {
+  .news-page .news-tabs .tab-content .main-box .t-box {
+    padding: 20px 20px 0;
+  }
+}
 .news-page .news-tabs .tab-content .main-box .t-box h3 {
   font-size: 20px;
   line-height: 24px;
@@ -8666,6 +8934,11 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #000;
+}
+@media (max-width: 992px) {
+  .news-page .news-tabs .tab-content .main-box .t-box p {
+    margin: 0 0 20px;
+  }
 }
 .news-page .news-tabs .tab-content .main-box .t-box span {
   display: flex;
@@ -8694,6 +8967,21 @@ body {
   right: 0;
   top: auto;
   bottom: 0;
+}
+@media (max-width: 992px) {
+  .news-page .news-tabs .tab-content .main-box .t-box .last-box {
+    position: relative;
+  }
+}
+@media (max-width: 1200px) {
+  .news-page .news-tabs .tab-content .more-bar {
+    margin: 30px 0 0;
+  }
+}
+@media (max-width: 992px) {
+  .news-page .news-tabs .tab-content .more-bar {
+    margin: 30px 0;
+  }
 }
 .news-page .news-tabs .tab-content .more-bar .workshop-card {
   position: relative;
@@ -8839,6 +9127,23 @@ body {
 .news-page .news-tabs .tab-content .more-bar .workshop-card__btn:hover {
   background: rgb(0, 143.2, 115.1826086957);
   color: #fff;
+}
+@media (max-width: 1200px) {
+  .news-page .news-tabs .tab-content .more-bar .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .news-page .news-tabs .tab-content .more-bar .row .col-lg-4 {
+    flex-shrink: 0;
+    width: 50%;
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 1200px) and (max-width: 575px) {
+  .news-page .news-tabs .tab-content .more-bar .row .col-lg-4 {
+    width: 80%;
+  }
 }
 
 .events-page .top-banner {
@@ -9310,12 +9615,24 @@ body {
   color: #fff;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .category-page .gate-detail h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .category-page .gate-detail p {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
   margin: 0 0 15px;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .category-page .gate-detail p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 .category-page .gate-detail h5 {
   display: flex;
@@ -10633,11 +10950,31 @@ body {
   }
 }
 .faqs-page .top-banner h1 {
-  font-size: 50;
+  font-size: 50px;
   line-height: 52px;
   color: #fff;
   font-weight: 600;
   margin: 0 0 40px;
+}
+@media (max-width: 1400px) {
+  .faqs-page .top-banner h1 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 767px) {
+  .faqs-page .top-banner h1 {
+    font-size: 35px;
+    line-height: 37px;
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 575px) {
+  .faqs-page .top-banner h1 {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 20px;
+  }
 }
 .faqs-page .top-banner p {
   font-size: 16px;
@@ -10667,6 +11004,25 @@ body {
   color: #fff;
   font-weight: 400;
   margin: 0 0 20px;
+}
+@media (max-width: 1400px) {
+  .faqs-page .top-banner h3 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .faqs-page .top-banner h3 {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 15px;
+  }
+}
+@media (max-width: 575px) {
+  .faqs-page .top-banner h3 {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .faqs-page .top-banner .form-block .sc-iput {
   border: 2px solid transparent;
@@ -10876,8 +11232,47 @@ body {
   padding: 5rem 0;
   background: #FAFAFA;
 }
+@media (max-width: 1400px) {
+  .faqs-page .faqs-area {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 575px) {
+  .faqs-page .faqs-area {
+    padding: 2rem 0;
+  }
+}
 .faqs-page .faqs-area .rig-bar {
   margin: 4.4rem 0 0;
+}
+@media (max-width: 767px) {
+  .faqs-page .faqs-area .rig-bar {
+    margin: 30px 0 0;
+  }
+}
+.faqs-page .faqs-area .rig-bar .top-box {
+  margin: 0 0 10px;
+}
+.faqs-page .faqs-area .rig-bar .top-box .new-search h2 {
+  font-size: 22px;
+  line-height: 24px;
+  color: #000;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.faqs-page .faqs-area .rig-bar .top-box .new-search input {
+  border: 1px solid #DADADA;
+  border-radius: 8px 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #646464;
+  font-weight: 500;
+  background: #fff url(../images/search.svg) no-repeat right 15px center;
+}
+.faqs-page .faqs-area .rig-bar .top-box .new-search input:focus {
+  box-shadow: none;
+  outline: none;
 }
 .faqs-page .faqs-area .rig-bar .bottom-area {
   padding: 10px 10px;
@@ -10924,11 +11319,36 @@ body {
   font-weight: 700;
   margin: 0 0 30px;
 }
+@media (max-width: 1400px) {
+  .faqs-page .faqs-area .tabs-bar h4 {
+    font-size: 30px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .faqs-page .faqs-area .tabs-bar h4 {
+    font-size: 25px;
+    line-height: 27px;
+    margin: 0 0 20px;
+  }
+}
 .faqs-page .faqs-area .tabs-bar .nav {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
+}
+@media (max-width: 575px) {
+  .faqs-page .faqs-area .tabs-bar .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+  }
 }
 .faqs-page .faqs-area .tabs-bar .nav .nav-item {
   margin: 0 10px 0 0;
+}
+@media (max-width: 575px) {
+  .faqs-page .faqs-area .tabs-bar .nav .nav-item {
+    flex-shrink: 0;
+  }
 }
 .faqs-page .faqs-area .tabs-bar .nav .nav-item .nav-link {
   color: #03C587;
@@ -10951,11 +11371,24 @@ body {
 .faqs-page .faqs-area .tabs-bar .nav .nav-item .nav-link:focus {
   box-shadow: none;
 }
+@media (max-width: 575px) {
+  .faqs-page .faqs-area .tabs-bar .nav .nav-item .nav-link {
+    width: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 12px 15px;
+  }
+}
 .faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion {
   padding: 25px 25px;
   box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.0705882353);
   background: #FFFFFF;
   border-radius: 10px 10px;
+}
+@media (max-width: 767px) {
+  .faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion {
+    padding: 15px 15px;
+  }
 }
 .faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion .top-bar {
   display: flex;
@@ -10997,12 +11430,36 @@ body {
   color: #000;
   box-shadow: none;
 }
+@media (max-width: 575px) {
+  .faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion .accordion-item .accordion-header button {
+    padding: 14px 15px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion .accordion-item .accordion-header button::after {
+  background-image: url(../images/icon124.png);
+  background-size: 15px;
+  width: 1rem;
+  height: 1rem;
+}
+.faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion .accordion-item .accordion-header button:not(.collapsed)::after {
+  background-image: url(../images/icon125.png);
+  height: 2px;
+}
 .faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion .accordion-item .accordion-body {
   padding: 15px 20px;
   font-size: 14px;
   line-height: 20px;
   color: #000;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .faqs-page .faqs-area .tabs-bar .tab-content .tab-pane .accordion .accordion-item .accordion-body {
+    padding: 15px 15px;
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .main-header {

@@ -7,7 +7,7 @@
 <section class="cou-detail">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-7 col-xxl-6">
                 @if ($course->is_featured)
                     <span>Featured</span>
                 @endif
@@ -105,14 +105,14 @@
                         <h2>Have a Discount Voucher?</h2>
                         <form action="#">
                             <div class="row align-items-center">
-                                <div class="col-lg-8 pe-2">
+                                <div class="col-lg-8 col-8 pe-0 pe-sm-2">
                                     <input
                                         type="text"
                                         class="form-control voucher-input"
                                         placeholder="Enter Discount Code">
                                 </div>
 
-                                <div class="col-lg-4 ps-2">
+                                <div class="col-lg-4 ps-2 col-4">
                                     <button type="submit" class="btn voucher-btn w-100">
                                         Apply Now
                                     </button>
@@ -193,11 +193,11 @@
 </section>
 <section class="info-bar">
     <div class="container">
-        <div class="ru-banner">
+        <div class="ru-banner mb-5">
             <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-lg-8">
+                <div class="col-lg-9 col-xl-7">
+                    <div class="row align-items-center">
+                        <div class="col-md-8 col-sm-7">
                             <h2>
                                 Ready to Upgrade Your Skills?
                             </h2>
@@ -206,7 +206,7 @@
                                 take the next step towards a successful career.
                             </p>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-md-4 col-sm-5">
                             <ul>
                                 <li><a href="#" class="btn gs-btn">Get Started</a></li>
                                 <li><a href="#" class="btn eac-btn">Explore All Courses</a></li>
