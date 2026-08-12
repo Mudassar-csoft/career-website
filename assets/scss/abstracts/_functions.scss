@@ -810,6 +810,10 @@
       font-weight: 700;
       color: #fff;
       margin: 0 0 10px;
+	  @include max(575px) {
+		font-size: 20px;
+		line-height: 22px;
+	  }
     }
     p {
       font-size: 16px;
@@ -817,6 +821,10 @@
       color: #fff;
       margin: 0 0 15px;
       font-weight: 400;
+	  @include max(575px) {
+		font-size: 12px;
+		line-height: 18px;
+	  }
     }
     h5 {
       display: flex;

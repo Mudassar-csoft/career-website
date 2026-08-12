@@ -103,14 +103,14 @@
                         <h2>Have a Discount Voucher?</h2>
                         <form action="#">
                             <div class="row align-items-center">
-                                <div class="col-lg-8 pe-2">
+                                <div class="col-lg-8 col-8 pe-0 pe-sm-2">
                                     <input
                                         type="text"
                                         class="form-control voucher-input"
                                         placeholder="Enter Discount Code">
                                 </div>
 
-                                <div class="col-lg-4 ps-2">
+                                <div class="col-lg-4 ps-2 col-4">
                                     <button type="submit" class="btn voucher-btn w-100">
                                         Apply Now
                                     </button>

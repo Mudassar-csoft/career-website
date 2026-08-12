@@ -4726,20 +4726,30 @@
 .course-detail {
   .cou-detail {
     @include gc-detail;
+    @include max(992px) {
+      padding: 3rem 0;
+    }
     p {
       margin: 0 0 15px;
-      padding: 0 0 50px;
+      padding: 0 0 20px;
       border-bottom: 1px solid #fff;
     }
   }
   .cou-info {
     background: #fafafa;
     padding: 3rem 0 7rem;
+    @include max(575px) {
+      padding: 1rem 0 3rem;
+    }
     .l-box {
       padding: 25px 25px;
       box-shadow: 3px 4px 12px 1px #00000012;
       border-radius: 10px 10px;
       background: #fff;
+      @include max(575px) {
+        padding: 15px 15px;
+        margin: 0 0 15px;
+      } 
       h3 {
         font-size: 24px;
         line-height: 26px;
@@ -4748,6 +4758,14 @@
         margin: 0 0 15px;
         padding: 0 0 15px;
         border-bottom: 1px solid #DEDEDE;
+        @include max(1200px) {
+          font-size: 20px;
+          line-height: 22px;
+        }
+        @include max(575px) {
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
       p {
         font-size: 16px;
@@ -4755,6 +4773,15 @@
         color: #656565;
         font-weight: 400;
         margin: 0 0 20px;
+        @include max(1280px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+        @include max(575px) {
+          font-size: 12px;
+          line-height: 18px;
+          margin: 0 0 10px;
+        }
       }
       ul {
         display: flex;
@@ -4768,6 +4795,13 @@
           display: flex;
           align-items: center;
           margin: 0 0 15px;
+          @include max(1280px) {
+            font-size: 13px;
+            line-height: 15px;
+          }
+          @include max(575px) {
+            width: 100%;
+          }
           img {
             margin: 0 5px 0 0;
           }
@@ -4785,6 +4819,12 @@
           display: flex;
           align-items: center;
           margin: 0 0 15px;
+          @include max(1200px) {
+            width: 50%;
+          }
+          @include max(575px) {
+            width: 100%;
+          }
           img {
             margin: 0 7px 0 0;
           }
@@ -4797,6 +4837,9 @@
       border-radius: 10px 10px;
       background: #fff;
       height: 100%;
+      @include max(575px) {
+        padding: 15px 15px;
+      }
       .btn-bar {
         margin: 0 0 30px;
         .en-btn {
@@ -4863,6 +4906,9 @@
             margin: 0 0 12px;
             display: flex;
             align-items: center;
+            @include max(575px) {
+              font-weight: 400;
+            }
             img {
               margin: 0 7px 0 0;
             }
@@ -4920,6 +4966,9 @@
     box-shadow: 3px 4px 12px 1px #00000012;
     border-radius: 10px 10px;
     background: #fff;
+    @include max(575px) {
+      padding: 15px 15px;
+    }
     h2 {
       display: flex;
       align-items: center;
@@ -4928,10 +4977,22 @@
       line-height: 26px;
       font-weight: 600;
       margin: 0 0 20px;
+      @include max(575px) {
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 0 0 12px;
+      }
       span {
         font-size: 20px;
         line-height: 22px;
         font-weight: 400;
+        @include max(575px) {
+          font-size: 12px;
+          line-height: 14px;
+          margin: 5px 0 0;
+        }
       }
     }
     .accordion-area {
@@ -4955,6 +5016,14 @@
                 line-height: 20px;
                 color: #000;
                 font-weight: 400;
+                @include max(1280px) {
+                  font-size: 16px;
+                  line-height: 18px;
+                }
+                @include max(575px) {
+                  font-size: 14px;
+                  line-height: 16px;
+                }
               }
               span {
                 font-size: 18px;
@@ -4982,6 +5051,12 @@
           }
           .accordion-body {
             padding: 15px 15px 15px 60px;
+            @include max(575px) {
+              padding: 15px 15px 15px 45px;
+              p {
+                font-size: 14px;
+              }
+            }
             ul {
               li {
                 font-size: 14px;

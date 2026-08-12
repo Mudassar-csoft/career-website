@@ -7827,12 +7827,24 @@ body {
   color: #fff;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .course-detail .cou-detail h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .course-detail .cou-detail p {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
   margin: 0 0 15px;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .course-detail .cou-detail p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 .course-detail .cou-detail h5 {
   display: flex;
@@ -7896,20 +7908,36 @@ body {
     margin: 0;
   }
 }
+@media (max-width: 992px) {
+  .course-detail .cou-detail {
+    padding: 3rem 0;
+  }
+}
 .course-detail .cou-detail p {
   margin: 0 0 15px;
-  padding: 0 0 50px;
+  padding: 0 0 20px;
   border-bottom: 1px solid #fff;
 }
 .course-detail .cou-info {
   background: #fafafa;
   padding: 3rem 0 7rem;
 }
+@media (max-width: 575px) {
+  .course-detail .cou-info {
+    padding: 1rem 0 3rem;
+  }
+}
 .course-detail .cou-info .l-box {
   padding: 25px 25px;
   box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.0705882353);
   border-radius: 10px 10px;
   background: #fff;
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box {
+    padding: 15px 15px;
+    margin: 0 0 15px;
+  }
 }
 .course-detail .cou-info .l-box h3 {
   font-size: 24px;
@@ -7920,12 +7948,37 @@ body {
   padding: 0 0 15px;
   border-bottom: 1px solid #DEDEDE;
 }
+@media (max-width: 1200px) {
+  .course-detail .cou-info .l-box h3 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
 .course-detail .cou-info .l-box p {
   font-size: 16px;
   line-height: 25px;
   color: #656565;
   font-weight: 400;
   margin: 0 0 20px;
+}
+@media (max-width: 1280px) {
+  .course-detail .cou-info .l-box p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 10px;
+  }
 }
 .course-detail .cou-info .l-box ul {
   display: flex;
@@ -7940,6 +7993,17 @@ body {
   display: flex;
   align-items: center;
   margin: 0 0 15px;
+}
+@media (max-width: 1280px) {
+  .course-detail .cou-info .l-box ul li {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box ul li {
+    width: 100%;
+  }
 }
 .course-detail .cou-info .l-box ul li img {
   margin: 0 5px 0 0;
@@ -7958,6 +8022,16 @@ body {
   align-items: center;
   margin: 0 0 15px;
 }
+@media (max-width: 1200px) {
+  .course-detail .cou-info .l-box .list-bar li {
+    width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .l-box .list-bar li {
+    width: 100%;
+  }
+}
 .course-detail .cou-info .l-box .list-bar li img {
   margin: 0 7px 0 0;
 }
@@ -7967,6 +8041,11 @@ body {
   border-radius: 10px 10px;
   background: #fff;
   height: 100%;
+}
+@media (max-width: 575px) {
+  .course-detail .cou-info .rig-bar {
+    padding: 15px 15px;
+  }
 }
 .course-detail .cou-info .rig-bar .btn-bar {
   margin: 0 0 30px;
@@ -8064,6 +8143,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 575px) {
+  .course-detail .cou-info .rig-bar .c-de ul li {
+    font-weight: 400;
+  }
+}
 .course-detail .cou-info .rig-bar .c-de ul li img {
   margin: 0 7px 0 0;
 }
@@ -8115,6 +8199,11 @@ body {
   border-radius: 10px 10px;
   background: #fff;
 }
+@media (max-width: 575px) {
+  .course-detail .course-info {
+    padding: 15px 15px;
+  }
+}
 .course-detail .course-info h2 {
   display: flex;
   align-items: center;
@@ -8124,10 +8213,26 @@ body {
   font-weight: 600;
   margin: 0 0 20px;
 }
+@media (max-width: 575px) {
+  .course-detail .course-info h2 {
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 12px;
+  }
+}
 .course-detail .course-info h2 span {
   font-size: 20px;
   line-height: 22px;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .course-detail .course-info h2 span {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 5px 0 0;
+  }
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item {
   border: 0;
@@ -8151,6 +8256,18 @@ body {
   line-height: 20px;
   color: #000;
   font-weight: 400;
+}
+@media (max-width: 1280px) {
+  .course-detail .course-info .accordion-area .accordion .accordion-item h2 button p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .course-detail .course-info .accordion-area .accordion .accordion-item h2 button p {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item h2 button span {
   font-size: 18px;
@@ -8176,6 +8293,14 @@ body {
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body {
   padding: 15px 15px 15px 60px;
+}
+@media (max-width: 575px) {
+  .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body {
+    padding: 15px 15px 15px 45px;
+  }
+  .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body p {
+    font-size: 14px;
+  }
 }
 .course-detail .course-info .accordion-area .accordion .accordion-item .accordion-body ul li {
   font-size: 14px;
@@ -9378,12 +9503,24 @@ body {
   color: #fff;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .category-page .gate-detail h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
 .category-page .gate-detail p {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
   margin: 0 0 15px;
   font-weight: 400;
+}
+@media (max-width: 575px) {
+  .category-page .gate-detail p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 .category-page .gate-detail h5 {
   display: flex;
