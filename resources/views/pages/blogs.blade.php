@@ -32,94 +32,29 @@
     </div>
 </section>
 <section class="blog-area">
-    {{-- <div class="container">
-        <div class="row mb-5">
-            @forelse ($blogs as $blog)
-                <div class="col-lg-3 col-sm-6 mb-4">
-                    <div class="block">
-                        <div class="img-hold">
-                            <a href="{{ route('blog-detail', $blog->slug) }}">
-                                <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img13.png') }}" alt="{{ $blog->title }}">
-                            </a>
-                        </div>
-                        <div class="t-bar">
-                            <h3>
-                                <a href="{{ route('blog-detail', $blog->slug) }}" style="color:inherit;text-decoration:none;">{{ $blog->title }}</a>
-                            </h3>
-                            <p>
-                                {{ $blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 90) }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            @empty
-                <div class="col-lg-12">
-                    <p>No blog posts published yet. Check back soon.</p>
-                </div>
-            @endforelse
-        </div>
-    </div> --}}
-
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
                 <h2>Latest Articles</h2>
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img69.png') }}" alt="">
+                @forelse ($blogs as $blog)
+                    <div class="box">
+                        <div class="img-hold">
+                            <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img69.png') }}" alt="{{ $blog->title }}">
+                        </div>
+                        <div class="t-hold">
+                            <h3>
+                                {{ $blog->title }}
+                            </h3>
+                            @if ($blog->excerpt)
+                                <h5>{{ \Illuminate\Support\Str::limit($blog->excerpt, 90) }}</h5>
+                            @endif
+                            <a href="{{ route('blog-detail', $blog->slug) }}">Read More</a>
+                            <p>{{ $blog->created_at->format('M d, Y') }}</p>
+                        </div>
                     </div>
-                    <div class="t-hold">
-                        <span>Design</span>
-                        <h3>
-                            Adobe Photoshop | The Ultimate Guide 2025
-                        </h3>
-                        <h5>Street 4, Main town, NYC, 444000, NY</h5>
-                        <a href="#">Read More</a>
-                        <p>May 10, 2025</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <span>Design</span>
-                        <h3>
-                            Adobe Photoshop | The Ultimate Guide 2025
-                        </h3>
-                        <h5>Street 4, Main town, NYC, 444000, NY</h5>
-                        <a href="#">Read More</a>
-                        <p>May 10, 2025</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <span>Design</span>
-                        <h3>
-                            Adobe Photoshop | The Ultimate Guide 2025
-                        </h3>
-                        <h5>Street 4, Main town, NYC, 444000, NY</h5>
-                        <a href="#">Read More</a>
-                        <p>May 10, 2025</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                    </div>
-                    <div class="t-hold">
-                        <span>Design</span>
-                        <h3>
-                            Adobe Photoshop | The Ultimate Guide 2025
-                        </h3>
-                        <h5>Street 4, Main town, NYC, 444000, NY</h5>
-                        <a href="#">Read More</a>
-                        <p>May 10, 2025</p>
-                    </div>
-                </div>
+                @empty
+                    <p>No blog posts published yet. Check back soon.</p>
+                @endforelse
                 <nav class="pagination-wrap mt-4">
                     <ul class="pagination justify-content-center">
                         <li class="page-item">
@@ -172,61 +107,20 @@
                         <div class="rec-post">
                             <h3>Popular Articles</h3>
                             <ul>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Adobe Photoshop | The Ultimate Guide 2025</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Adobe Photoshop | The Ultimate Guide 2025</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Adobe Photoshop | The Ultimate Guide 2025</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Adobe Photoshop | The Ultimate Guide 2025</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="img-hold">
-                                            <img src="{{ asset('assets/images/img69.png') }}" alt="">
-                                        </div>
-                                        <div class="text-hold">
-                                            <h3>Adobe Photoshop | The Ultimate Guide 2025</h3>
-                                            <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> 09-12-2024</span>
-                                        </div>
-                                    </a>
-                                </li>
+                                @forelse ($popularBlogs as $popular)
+                                    <li>
+                                        <a href="{{ route('blog-detail', $popular->slug) }}">
+                                            <div class="img-hold">
+                                                <img src="{{ $popular->image ? asset('storage/'.$popular->image) : asset('assets/images/img69.png') }}" alt="{{ $popular->title }}">
+                                            </div>
+                                            <div class="text-hold">
+                                                <h3>{{ $popular->title }}</h3>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> {{ $popular->created_at->format('d-m-Y') }}</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                @empty
+                                @endforelse
                             </ul>
                         </div>
                     </div>
@@ -373,8 +267,9 @@
                     <p>
                         Please complete the form, and one of our representatives will get back to you shortly.
                     </p>
-                    <form class="row g-3 lead-form" method="POST" action="http://127.0.0.1:8000/subscribe">
-                        <input type="hidden" name="_token" value="B7U8NRX8nQ52PyUIBEdtKcVdUVatBmwXEJnZ9Bpk" autocomplete="off">                        <div class="col-md-6">
+                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
+                        <div class="col-md-6">
                             <input type="text" class="form-control" name="name" placeholder="Name">
                         </div>
                         <div class="col-md-6">
@@ -392,7 +287,7 @@
                         <div class="col-12 text-center mt-4">
                             <button type="submit" class="btn sm-btn">Send Message</button>
                         </div>
-                        <input type="hidden" name="source" value="Courses Enroll">
+                        <input type="hidden" name="source" value="Blog Contact">
                     </form>
                 </div>
             </div>

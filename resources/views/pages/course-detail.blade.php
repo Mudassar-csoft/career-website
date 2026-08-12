@@ -1,5 +1,7 @@
 @extends('layouts.app')
-@section('title', 'Courses & Certifications Detail | Career Website')
+@section('title', ($course->meta_title ?: $course->title).' | Career Website')
+@section('meta_description', $course->meta_description ?: \Illuminate\Support\Str::limit(strip_tags($course->about), 160))
+@section('meta_keywords', $course->meta_keywords ?? '')
 @section('body_class', 'course-detail')
 @section('content')
 <section class="cou-detail">

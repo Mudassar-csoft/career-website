@@ -204,3 +204,32 @@
         <p class="dash-form-error">{{ $message }}</p>
     @enderror
 </div>
+
+<div class="dash-form-group" style="margin-top:8px;padding-top:24px;border-top:1px solid #eef1f4;">
+    <label style="font-size:15px;">SEO Settings</label>
+    <p class="dash-form-hint">Controls how this course appears in search engine results. Leave blank to use sensible defaults.</p>
+</div>
+
+<div class="dash-form-group">
+    <label for="course-meta-title">Meta Title</label>
+    <input type="text" id="course-meta-title" name="meta_title" value="{{ old('meta_title', $course->meta_title) }}" maxlength="255" placeholder="Defaults to the course title if left blank">
+    @error('meta_title')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>
+
+<div class="dash-form-group">
+    <label for="course-meta-description">Meta Description</label>
+    <textarea id="course-meta-description" name="meta_description" rows="3" maxlength="500" placeholder="Shown under the title in search results — aim for 150-160 characters.">{{ old('meta_description', $course->meta_description) }}</textarea>
+    @error('meta_description')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>
+
+<div class="dash-form-group">
+    <label for="course-meta-keywords">Meta Keywords</label>
+    <input type="text" id="course-meta-keywords" name="meta_keywords" value="{{ old('meta_keywords', $course->meta_keywords) }}" placeholder="Comma-separated, e.g. digital marketing course, seo training, career institute">
+    @error('meta_keywords')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>

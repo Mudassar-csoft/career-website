@@ -47,130 +47,42 @@
                 </h2>
             </div>
         </div>
-        <div class="row g-3">
-            <div class="col-lg-3 col-sm-6">
-                <div class="workshop-card">
-                    <!-- Image -->
-                    <div class="workshop-card__image">
-                        <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                        <span class="workshop-card__badge">Institute</span>
-                        <div class="date">
-                            <h4>27</h4>
-                            <span>Apr</span>
+        <div class="row">
+            @forelse ($upcomingEvents as $upcomingEvent)
+                <div class="col-lg-3">
+                    <div class="workshop-card">
+                        <!-- Image -->
+                        <div class="workshop-card__image">
+                            <img src="{{ asset('assets/images/img64.png') }}" alt="{{ $upcomingEvent->title }}">
+                            <span class="workshop-card__badge">{{ $upcomingEvent->category->name }}</span>
+                            <div class="date">
+                                <h4>{{ $upcomingEvent->event_date->format('d') }}</h4>
+                                <span>{{ $upcomingEvent->event_date->format('M') }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Content -->
-                    <div class="workshop-card__body">
-                        <h3 class="workshop-card__title">
-                            Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                        </h3>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                            <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                        </ul>
-                        <!-- Bottom -->
-                        <div class="workshop-card__footer">
-                            <a href="#" class="workshop-card__btn">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="workshop-card">
-                    <!-- Image -->
-                    <div class="workshop-card__image">
-                        <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                        <span class="workshop-card__badge">Institute</span>
-                        <div class="date">
-                            <h4>27</h4>
-                            <span>Apr</span>
-                        </div>
-                    </div>
-                    <!-- Content -->
-                    <div class="workshop-card__body">
-                        <h3 class="workshop-card__title">
-                            Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                        </h3>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                            <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                        </ul>
-                        <!-- Bottom -->
-                        <div class="workshop-card__footer">
-                            <a href="#" class="workshop-card__btn">
-                                Read More
-                            </a>
+                        <!-- Content -->
+                        <div class="workshop-card__body">
+                            <h3 class="workshop-card__title">
+                                {{ $upcomingEvent->title }}
+                            </h3>
+                            <ul>
+                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> {{ $upcomingEvent->campus }}</li>
+                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> {{ $upcomingEvent->venue }}</li>
+                            </ul>
+                            <!-- Bottom -->
+                            <div class="workshop-card__footer">
+                                <a href="{{ route('events.show', $upcomingEvent) }}" class="workshop-card__btn">
+                                    Read More
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="workshop-card">
-                    <!-- Image -->
-                    <div class="workshop-card__image">
-                        <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                        <span class="workshop-card__badge">Institute</span>
-                        <div class="date">
-                            <h4>27</h4>
-                            <span>Apr</span>
-                        </div>
-                    </div>
-                    <!-- Content -->
-                    <div class="workshop-card__body">
-                        <h3 class="workshop-card__title">
-                            Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                        </h3>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                            <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                        </ul>
-                        <!-- Bottom -->
-                        <div class="workshop-card__footer">
-                            <a href="#" class="workshop-card__btn">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
+            @empty
+                <div class="col-lg-12">
+                    <p>No upcoming events right now. Check back soon.</p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="workshop-card">
-                    <!-- Image -->
-                    <div class="workshop-card__image">
-                        <img src="{{ asset('assets/images/img64.png') }}" alt="Workshop">
-                        <span class="workshop-card__badge">Institute</span>
-                        <div class="date">
-                            <h4>27</h4>
-                            <span>Apr</span>
-                        </div>
-                    </div>
-                    <!-- Content -->
-                    <div class="workshop-card__body">
-                        <h3 class="workshop-card__title">
-                            Career Institute Signs Franchise MOU for Kohinoor FSD Branch
-                        </h3>
-                        <ul>
-                            <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                            <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                        </ul>
-                        <!-- Bottom -->
-                        <div class="workshop-card__footer">
-                            <a href="#" class="workshop-card__btn">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 mt-4">
-                <div class="btn-bar">
-                    <a href="#" class="more-btn btn">
-                        Read More
-                    </a>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>
@@ -265,9 +177,6 @@
                     <h2>
                         Our Recent Events
                     </h2>
-                    <a href="#" class="more-btn btn">
-                        View all Recent Events
-                    </a>
                 </div>
                 <div class="row g-2">
                     <div class="col-lg-3 col-md-3 col-6 px-1">
@@ -457,144 +366,24 @@
             <div class="col-lg-12">
                 <section class="testimonial-section">
                     <div class="testimonial-slider">
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
+                        @forelse ($alumni as $alum)
+                            <div class="item">
+                                <div class="card-wrap">
+                                    <div class="box">
+                                        <div class="img-hold">
+                                            <img src="{{ $alum->photo ? asset('storage/'.$alum->photo) : asset('assets/images/img05.png') }}" alt="{{ $alum->name }}">
+                                        </div>
+                                        <div class="rt-bar">
+                                            <h3>{{ $alum->name }}</h3>
+                                            <span>{{ $alum->designation }}</span>
+                                            <h5>Review</h5>
+                                            <p>{{ $alum->review }}</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img06.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Fatima Maqsood</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            I loved the practical learning approach.
-                                            The courses are well structured and useful
-                                            for real-world projects.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img07.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Umar Ishfaq</h3>
-                                        <span>Web Developer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Very professional environment with friendly
-                                            teachers. I gained confidence and learned
-                                            a lot here.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img08.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Asad Riaz</h3>
-                                        <span>Digital Marketing</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            One of the best places to start a career in IT.
-                                            Highly recommended for beginners and professionals.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img41.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Ayan Ali</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slide -->
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img42.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Haroon Rashid</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with best trainers and
-                                            easy-to-understand concepts. Really helped
-                                            me improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card-wrap">
-                                <div class="box">
-                                    <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
-                                    </div>
-                                    <div class="rt-bar">
-                                        <h3>Muhammad Talha</h3>
-                                        <span>Graphic Designer</span>
-                                        <h5>Review</h5>
-                                        <p>
-                                            Great institute with supportive trainers and
-                                            easy-to-understand concepts. Really helped me
-                                            improve my IT skills.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @empty
+                        @endforelse
                     </div>
                 </section>
             </div>

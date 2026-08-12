@@ -1,5 +1,7 @@
 @extends('layouts.app')
-@section('title', $blog->title.' | Career Website')
+@section('title', ($blog->meta_title ?: $blog->title).' | Career Website')
+@section('meta_description', $blog->meta_description ?: ($blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 160)))
+@section('meta_keywords', $blog->meta_keywords ?? '')
 @section('body_class', 'blog-page')
 @section('content')
 <section class="news-bar">
@@ -33,6 +35,10 @@
             <div class="col-lg-4">
                 <div class="rig-bar">
                     <div class="top-box">
+                        <div class="new-search">
+                            <h2>Search Blogs</h2>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
                         <div class="rec-post">
                             <h3>Recent Posts</h3>
                             <ul>

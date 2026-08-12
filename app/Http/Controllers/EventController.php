@@ -96,6 +96,9 @@ class EventController extends Controller
             'fee_amount' => ['nullable', 'required_if:is_paid,1', 'numeric', 'min:0'],
             'has_seat_limit' => ['required', 'in:0,1'],
             'seat_limit' => ['nullable', 'required_if:has_seat_limit,1', 'integer', 'min:1'],
+            'meta_title' => ['nullable', 'string', 'max:255'],
+            'meta_description' => ['nullable', 'string', 'max:500'],
+            'meta_keywords' => ['nullable', 'string', 'max:255'],
         ]);
 
         $validated['is_paid'] = (bool) $validated['is_paid'];

@@ -21,6 +21,9 @@ class Event extends Model
         'fee_amount',
         'has_seat_limit',
         'seat_limit',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
     ];
 
     protected $casts = [

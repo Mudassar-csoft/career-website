@@ -1,5 +1,7 @@
 @extends('layouts.app')
-@section('title', $event->title.' | Career Website')
+@section('title', ($event->meta_title ?: $event->title).' | Career Website')
+@section('meta_description', $event->meta_description ?: \Illuminate\Support\Str::limit(strip_tags($event->description), 160))
+@section('meta_keywords', $event->meta_keywords ?? '')
 @section('body_class', 'event-detail')
 @push('styles')
 <style>
