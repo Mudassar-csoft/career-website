@@ -12,6 +12,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
 
+Route::get('/events', [EventRegistrationController::class, 'index'])->name('events');
 Route::get('/events/register/{token}/upload-fee', [EventRegistrationController::class, 'showUploadFee'])->name('events.upload-fee');
 Route::post('/events/register/{token}/upload-fee', [EventRegistrationController::class, 'uploadFee'])->name('events.upload-fee');
 Route::get('/events/{event:slug}', [EventRegistrationController::class, 'show'])->name('events.show');
@@ -39,7 +40,6 @@ $pages = [
     ['uri' => '/study-abroad', 'view' => 'pages.study-abroad', 'name' => 'study-abroad'],
     ['uri' => '/verifications', 'view' => 'pages.verifications', 'name' => 'verifications'],
     ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
-    ['uri' => '/events', 'view' => 'pages.events', 'name' => 'events'],
     ['uri' => '/category', 'view' => 'pages.category', 'name' => 'category'],
     ['uri' => '/event-detail', 'view' => 'pages.event-detail', 'name' => 'event-detail'],
     ['uri' => '/faqs', 'view' => 'pages.faqs', 'name' => 'faqs'],

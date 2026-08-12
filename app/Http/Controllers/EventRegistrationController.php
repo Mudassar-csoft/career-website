@@ -13,6 +13,22 @@ use Illuminate\Validation\Rule;
 
 class EventRegistrationController extends Controller
 {
+    public function index()
+    {
+        return view('pages.events', [
+            'upcomingEvents' => Event::with('category')
+                ->where('event_date', '>=', now()->toDateString())
+                ->orderBy('event_date')
+                ->take(8)
+                ->get(),
+            'recentEvents' => Event::with('category')
+                ->where('event_date', '<', now()->toDateString())
+                ->orderByDesc('event_date')
+                ->take(4)
+                ->get(),
+        ]);
+    }
+
     public function show(Event $event)
     {
         return view('pages.event-show', [

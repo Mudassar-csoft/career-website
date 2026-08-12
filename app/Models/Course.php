@@ -21,6 +21,9 @@ class Course extends Model
         'curriculum',
         'has_certificate',
         'is_featured',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
     ];
 
     protected $casts = [

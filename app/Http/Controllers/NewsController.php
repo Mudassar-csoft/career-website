@@ -39,6 +39,9 @@ class NewsController extends Controller
             'news_type_id' => ['required', 'exists:news_types,id'],
             'image' => ['nullable', 'image', 'max:4096'],
             'content' => ['nullable', 'string'],
+            'meta_title' => ['nullable', 'string', 'max:255'],
+            'meta_description' => ['nullable', 'string', 'max:500'],
+            'meta_keywords' => ['nullable', 'string', 'max:255'],
         ]);
 
         if ($request->hasFile('image')) {

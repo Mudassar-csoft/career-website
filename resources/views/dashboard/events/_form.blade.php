@@ -119,3 +119,32 @@
         @enderror
     </div>
 </div>
+
+<div class="dash-form-group" style="margin-top:8px;padding-top:24px;border-top:1px solid #eef1f4;">
+    <label style="font-size:15px;">SEO Settings</label>
+    <p class="dash-form-hint">Controls how this event appears in search engine results. Leave blank to use sensible defaults.</p>
+</div>
+
+<div class="dash-form-group">
+    <label for="event-meta-title">Meta Title</label>
+    <input type="text" id="event-meta-title" name="meta_title" value="{{ old('meta_title', $event->meta_title) }}" maxlength="255" placeholder="Defaults to the event title if left blank">
+    @error('meta_title')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>
+
+<div class="dash-form-group">
+    <label for="event-meta-description">Meta Description</label>
+    <textarea id="event-meta-description" name="meta_description" rows="3" maxlength="500" placeholder="Shown under the title in search results — aim for 150-160 characters.">{{ old('meta_description', $event->meta_description) }}</textarea>
+    @error('meta_description')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>
+
+<div class="dash-form-group">
+    <label for="event-meta-keywords">Meta Keywords</label>
+    <input type="text" id="event-meta-keywords" name="meta_keywords" value="{{ old('meta_keywords', $event->meta_keywords) }}" placeholder="Comma-separated, e.g. digital marketing workshop, career institute event">
+    @error('meta_keywords')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>

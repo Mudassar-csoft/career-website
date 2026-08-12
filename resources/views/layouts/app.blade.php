@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Career Website')</title>
+    @php $metaDescription = trim($__env->yieldContent('meta_description')); @endphp
+    @if ($metaDescription)
+        <meta name="description" content="{!! $metaDescription !!}">
+    @endif
+    @php $metaKeywords = trim($__env->yieldContent('meta_keywords')); @endphp
+    @if ($metaKeywords)
+        <meta name="keywords" content="{!! $metaKeywords !!}">
+    @endif
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

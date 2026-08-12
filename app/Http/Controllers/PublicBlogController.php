@@ -8,8 +8,11 @@ class PublicBlogController extends Controller
 {
     public function index()
     {
+        $blogs = Blog::latest()->get();
+
         return view('pages.blogs', [
-            'blogs' => Blog::latest()->get(),
+            'blogs' => $blogs,
+            'popularBlogs' => $blogs->take(5),
         ]);
     }
 

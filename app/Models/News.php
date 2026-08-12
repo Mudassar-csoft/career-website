@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class News extends Model
 {
-    protected $fillable = ['news_type_id', 'title', 'subtitle', 'slug', 'image', 'content'];
+    protected $fillable = ['news_type_id', 'title', 'subtitle', 'slug', 'image', 'content', 'meta_title', 'meta_description', 'meta_keywords'];
 
     public function type(): BelongsTo
     {
