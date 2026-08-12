@@ -32,7 +32,7 @@ class EventRegistrationController extends Controller
     public function show(Event $event)
     {
         return view('pages.event-show', [
-            'event' => $event->load('category'),
+            'event' => $event->load(['category', 'images']),
         ]);
     }
 
