@@ -9536,7 +9536,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 0 20px;
+  margin: 0 0 35px;
+}
+@media (max-width: 767px) {
+  .events-page .rcre-area .box {
+    margin: 0 0 20px;
+  }
 }
 .events-page .rcre-area .box h2 {
   margin: 0;

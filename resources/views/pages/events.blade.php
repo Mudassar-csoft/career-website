@@ -177,6 +177,7 @@
                     <h2>
                         Our Recent Events
                     </h2>
+                    <a href="#" class="btn more-btn">View all Recent Events</a>
                 </div>
                 <div class="row g-2">
                     <div class="col-lg-3 col-md-3 col-6 px-1">
