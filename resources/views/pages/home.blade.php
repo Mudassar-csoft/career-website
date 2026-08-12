@@ -159,17 +159,19 @@
                                     <ul>
                                         @forelse ($eventsWidget as $upcomingEvent)
                                             <li>
-                                                <div class="d-info">
-                                                    <h3>
-                                                        {{ $upcomingEvent->event_date->format('d') }} <span>{{ $upcomingEvent->event_date->format('M') }}</span>
-                                                    </h3>
-                                                </div>
-                                                <div class="t-bar">
-                                                    <p>
-                                                        {{ $upcomingEvent->title }}
-                                                    </p>
-                                                    <span><i class="fas fa-map-marker-alt"></i> {{ $upcomingEvent->campus }}</span>
-                                                </div>
+                                                <a href="{{ route('events.show', $upcomingEvent) }}" style="display:flex;flex-wrap:wrap;width:100%;color:inherit;text-decoration:none;">
+                                                    <div class="d-info">
+                                                        <h3>
+                                                            {{ $upcomingEvent->event_date->format('d') }} <span>{{ $upcomingEvent->event_date->format('M') }}</span>
+                                                        </h3>
+                                                    </div>
+                                                    <div class="t-bar">
+                                                        <p>
+                                                            {{ $upcomingEvent->title }}
+                                                        </p>
+                                                        <span><i class="fas fa-map-marker-alt"></i> {{ $upcomingEvent->campus }}</span>
+                                                    </div>
+                                                </a>
                                             </li>
                                         @empty
                                         @endforelse
@@ -210,17 +212,19 @@
                             <ul>
                                 @forelse ($eventsWidget as $upcomingEvent)
                                     <li>
-                                        <div class="d-info">
-                                            <h3>
-                                                {{ $upcomingEvent->event_date->format('d') }} <span>{{ $upcomingEvent->event_date->format('M') }}</span>
-                                            </h3>
-                                        </div>
-                                        <div class="t-bar">
-                                            <p>
-                                                {{ $upcomingEvent->title }}
-                                            </p>
-                                            <span><i class="fas fa-map-marker-alt"></i> {{ $upcomingEvent->campus }}</span>
-                                        </div>
+                                        <a href="{{ route('events.show', $upcomingEvent) }}" style="display:flex;flex-wrap:wrap;width:100%;color:inherit;text-decoration:none;">
+                                            <div class="d-info">
+                                                <h3>
+                                                    {{ $upcomingEvent->event_date->format('d') }} <span>{{ $upcomingEvent->event_date->format('M') }}</span>
+                                                </h3>
+                                            </div>
+                                            <div class="t-bar">
+                                                <p>
+                                                    {{ $upcomingEvent->title }}
+                                                </p>
+                                                <span><i class="fas fa-map-marker-alt"></i> {{ $upcomingEvent->campus }}</span>
+                                            </div>
+                                        </a>
                                     </li>
                                 @empty
                                 @endforelse
@@ -485,7 +489,7 @@
         <div class="row mb-5">
             @forelse ($blogs as $index => $blog)
                 <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="{{ $index % 2 === 0 ? 'flip-left' : 'flip-right' }}" data-aos-duration="{{ 1000 + $index * 100 }}">
-                    <div class="block">
+                    <a href="{{ route('blog-detail', $blog->slug) }}" class="block" style="display:block;color:inherit;text-decoration:none;">
                         <div class="img-hold">
                             <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img13.png') }}" alt="{{ $blog->title }}">
                         </div>
@@ -493,7 +497,7 @@
                             <h3>{{ $blog->title }}</h3>
                             <p>{{ $blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 90) }}</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             @empty
             @endforelse
@@ -501,7 +505,7 @@
         <div class="row">
             <div class="col-lg-12" aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400">
                 <div class="btn-box">
-                    <a href="#" class="btn rm-btn">Read More</a>
+                    <a href="{{ route('blogs') }}" class="btn rm-btn">Read More</a>
                 </div>
             </div>
         </div>
