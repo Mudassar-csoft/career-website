@@ -3557,14 +3557,36 @@
     .sm-box {
       @include sm-box;
       padding: 40px 50px;
+      @include max(1200px) {
+        padding: 25px 25px;
+      }
+    }
+    @include max(1400px) {
+      background-size: cover;
+      padding: 10rem 0 0;
+    }
+    @include max(1200px) {
+      padding: 8rem 0 0;
+    }
+    @include max(767px) {
+      padding: 5rem 0 0;
     }
   }
   .info-bar {
     padding: 5rem 0 0;
+    @include max(992px) {
+      padding: 3rem 0 0;
+    }
+    @include max(575px) {
+      padding: 2rem 0 0;
+    }
   }
   .query-bar {
     background: #f9f9f9;
     padding: 3rem 0 7rem;
+    @include max(767px) {
+      padding: 3rem 0 5rem;
+    }
     h2 {
       font-size: 30px;
       line-height: 38px;
@@ -3572,6 +3594,22 @@
       font-weight: 300;
       text-align: center;
       position: relative;
+      @include max(1400px) {
+        font-size: 28px;
+        line-height: 35px;
+      }
+      @include max(1200px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      @include max(767px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+      @include max(575px) {
+        font-size: 18px;
+        line-height: 23px;
+      }
       span {
         font-weight: 500;
       }
@@ -3585,7 +3623,10 @@
         width: 200px;
         height: 4px;
         background: #03C587;
-        margin: 0 auto
+        margin: 0 auto;
+        @include max(767px) {
+          bottom: -2rem;
+        }
       }
     }
   }
