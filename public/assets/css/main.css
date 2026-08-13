@@ -4741,6 +4741,7 @@ body {
 @media (max-width: 1600px) {
   .cws-page .top-banner {
     background-size: cover;
+    padding: 9rem 0;
   }
 }
 @media (max-width: 1400px) {
@@ -4750,14 +4751,40 @@ body {
 }
 @media (max-width: 1280px) {
   .cws-page .top-banner {
-    padding: 5rem 0;
+    padding: 6rem 0;
+  }
+}
+@media (max-width: 992px) {
+  .cws-page .top-banner {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .cws-page .top-banner {
+    padding: 3rem 0;
   }
 }
 .cws-page .top-banner p {
   margin: 0 0 15px;
 }
+@media (max-width: 767px) {
+  .cws-page .top-banner p {
+    margin: 0 0 10px;
+  }
+}
 .cws-page .top-banner h1 {
   margin: 0 0 25px;
+}
+@media (max-width: 767px) {
+  .cws-page .top-banner h1 {
+    margin: 0 0 15px;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .top-banner h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 .cws-page .two-block {
   padding: 5rem 0;
@@ -4765,6 +4792,11 @@ body {
 @media (max-width: 1400px) {
   .cws-page .two-block {
     padding: 3rem 0 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .cws-page .two-block {
+    padding: 2rem 0 1rem;
   }
 }
 .cws-page .two-block h2 {
@@ -4777,6 +4809,15 @@ body {
   .cws-page .two-block h2 {
     font-size: 30px;
     line-height: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .cws-page .two-block h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .cws-page .two-block h2 br {
+    display: none;
   }
 }
 .cws-page .two-block p {
@@ -4792,6 +4833,13 @@ body {
     line-height: 25px;
   }
 }
+@media (max-width: 575px) {
+  .cws-page .two-block p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 10px;
+  }
+}
 .cws-page .two-block .img-hold {
   text-align: right;
 }
@@ -4803,6 +4851,11 @@ body {
 }
 .cws-page .work-area {
   padding: 3rem 0 5rem;
+}
+@media (max-width: 767px) {
+  .cws-page .work-area {
+    padding: 2rem 0 2rem;
+  }
 }
 .cws-page .work-area h3 {
   text-align: center;
@@ -4818,6 +4871,12 @@ body {
     line-height: 20px;
   }
 }
+@media (max-width: 575px) {
+  .cws-page .work-area h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .cws-page .work-area h2 {
   text-align: center;
   color: #383838;
@@ -4830,6 +4889,18 @@ body {
   .cws-page .work-area h2 {
     font-size: 30px;
     line-height: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .cws-page .work-area h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .work-area h2 {
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 .cws-page .work-area p {
@@ -4847,8 +4918,26 @@ body {
     margin: 0 0 20px;
   }
 }
+@media (max-width: 767px) {
+  .cws-page .work-area p {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .work-area p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .cws-page .fea-box {
   padding: 0 0 5rem;
+}
+@media (max-width: 767px) {
+  .cws-page .fea-box {
+    padding: 0 0 2rem;
+  }
 }
 .cws-page .fea-box h2 {
   text-align: center;
@@ -4864,6 +4953,12 @@ body {
     line-height: 35px;
   }
 }
+@media (max-width: 575px) {
+  .cws-page .fea-box h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
 .cws-page .fea-box .box {
   background: linear-gradient(107.69deg, #009db8 1.33%, #03c587 100%);
   padding: 15px 15px;
@@ -4876,6 +4971,16 @@ body {
   justify-content: space-between;
   margin: 0 0 10px;
 }
+@media (max-width: 992px) {
+  .cws-page .fea-box .box ul {
+    gap: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .cws-page .fea-box .box ul {
+    gap: 9px;
+  }
+}
 .cws-page .fea-box .box ul li {
   width: 24.4%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1019607843);
@@ -4883,6 +4988,16 @@ body {
   border-radius: 10px 10px;
   padding: 15px 15px;
   text-align: center;
+}
+@media (max-width: 992px) {
+  .cws-page .fea-box .box ul li {
+    width: 49%;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .fea-box .box ul li {
+    width: 100%;
+  }
 }
 .cws-page .fea-box .box ul li .img-hold {
   height: 35px;
@@ -4937,6 +5052,16 @@ body {
     padding: 3rem 3rem;
   }
 }
+@media (max-width: 767px) {
+  .cws-page .chose-area .form-block {
+    padding: 2rem 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .chose-area .form-block {
+    padding: 2rem 1rem;
+  }
+}
 .cws-page .chose-area .form-block h3 {
   text-align: center;
   font-size: 24px;
@@ -4949,6 +5074,12 @@ body {
   .cws-page .chose-area .form-block h3 {
     font-size: 20px;
     line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .chose-area .form-block h3 {
+    font-size: 18px;
+    line-height: 20px;
   }
 }
 .cws-page .chose-area .form-block h2 {
@@ -4966,6 +5097,18 @@ body {
     margin: 0 0 15px;
   }
 }
+@media (max-width: 767px) {
+  .cws-page .chose-area .form-block h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .chose-area .form-block h2 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
 .cws-page .chose-area .form-block p {
   text-align: center;
   font-size: 18px;
@@ -4978,6 +5121,17 @@ body {
   .cws-page .chose-area .form-block p {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .cws-page .chose-area .form-block p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .cws-page .chose-area .form-block p br {
+    display: none;
   }
 }
 .cws-page .chose-area .form-block input,
@@ -5099,6 +5253,23 @@ body {
   }
   to {
     transform: scale(1.07);
+  }
+}
+.cws-page .video-block {
+  padding: 3rem 0;
+  background: radial-gradient(52.57% 119.57% at 86.39% 75.79%, rgba(1, 161, 180, 0.15) 0%, rgba(241, 247, 247, 0) 100%);
+}
+@media (max-width: 575px) {
+  .cws-page .video-block {
+    padding: 2rem 0;
+  }
+}
+.cws-page .video-block h2 {
+  margin: 0 0 50px;
+}
+@media (max-width: 575px) {
+  .cws-page .video-block h2 {
+    margin: 0 0 25px;
   }
 }
 
@@ -13596,8 +13767,8 @@ body {
   background: rgba(255, 255, 255, 0.2);
   padding: 12px 15px;
   border-radius: 10px 10px;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 14px;
   font-weight: 400;
   display: block;
   color: #fff;
@@ -13605,8 +13776,6 @@ body {
 @media (max-width: 1400px) {
   .cor-slider .slick-slide .text-box a {
     padding: 12px 10px;
-    font-size: 12px;
-    line-height: 14px;
   }
 }
 .cor-slider .slick-prev::before, .cor-slider .slick-next::before {
