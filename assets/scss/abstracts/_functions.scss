@@ -230,6 +230,9 @@
 	@include max(1400px) {
 		padding: 40px 35px;
 	}
+	@include max(575px) {
+		padding: 30px 20px;
+	}
 	h1 {
 		font-size: 38px;
 		line-height: 42px;
@@ -239,6 +242,14 @@
 			font-size: 30px;
 			line-height: 35px;
 			margin: 0;
+		}
+		@include max(767px) {
+			font-size: 25px;
+			line-height: 30px;
+		}
+		@include max(575px) {
+			font-size: 22px;
+			line-height: 25px;
 		}
 	}
 	ul {

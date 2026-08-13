@@ -2289,6 +2289,10 @@
         font-size: 30px;
         line-height: 32px;
       }
+      @include max(575px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
     }
     input,
     select,
@@ -2329,6 +2333,12 @@
     padding: 5rem 0;
     position: relative;
     z-index: 1;
+    @include max(992px) {
+      padding: 3rem 0;
+    }
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     &:before {
       position: absolute;
       top: -30rem;
@@ -2356,6 +2366,19 @@
         font-size: 30px;
         line-height: 35px;
       }
+      @include max(992px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include max(767px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include max(575px) {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 0;
+      }
     }
     p {
       color: #000;
@@ -2367,12 +2390,28 @@
         font-size: 18px;
         line-height: 22px;
       }
+      @include max(992px) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0;
+        br {
+          display: none;
+        }
+      }
     }
     .g-box {
       background: #03c587;
       border-radius: 20px 20px;
       padding: 35px 35px;
       text-align: center;
+      @include max(767px) {
+        padding: 25px 20px;
+        border-radius: 15px 15px;
+      }
       h3 {
         font-size: 38px;
         line-height: 40px;
@@ -2382,6 +2421,18 @@
         @include max(1400px) {
           font-size: 30px;
           line-height: 35px;
+        }
+        @include max(992px) {
+          font-size: 25px;
+          line-height: 27px;
+        }
+        @include max(767px) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        @include max(767px) {
+          font-size: 16px;
+          line-height: 18px;
         }
       }
       p {
@@ -2393,6 +2444,14 @@
         @include max(1400px) {
           font-size: 18px;
           line-height: 20px;
+        }
+        @include max(992px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        @include max(767px) {
+          font-size: 14px;
+          line-height: 18px;
         }
       }
     }
@@ -2406,6 +2465,19 @@
         font-size: 30px;
         line-height: 35px;
       }
+      @include max(992px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include max(767px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @include max(575px) {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 0;
+      }
     }
     span {
       color: #000;
@@ -2418,6 +2490,15 @@
         font-size: 18px;
         line-height: 22px;
       }
+      @include max(992px) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0;
+      }
     }
   }
   .gb-area {
@@ -2426,8 +2507,14 @@
       padding: 50px 50px;
       background: #01718c;
       border-radius: 50px 50px;
+      @include max(575px) {
+        padding: 40px 20px;
+      }
       .img-hold {
         text-align: right;
+        @include max(992px) {
+          text-align: left;
+        }
       }
       .t-bar {
         h3 {
@@ -2440,7 +2527,10 @@
             font-size: 30px;
             line-height: 35px;
           }
-          
+          @include max(1400px) {
+            font-size: 25px;
+            line-height: 30px;
+          }
         }
         p {
           font-size: 18px;
@@ -2451,6 +2541,7 @@
           @include max(1400px) {
             font-size: 15px;
             line-height: 22px;
+            margin: 0 0 15px
           }
         }
         .en-btn {
