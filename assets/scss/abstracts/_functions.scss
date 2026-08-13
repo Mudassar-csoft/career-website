@@ -373,6 +373,11 @@
 		font-size: 30px;
 		line-height: 32px;
 	  }
+	  @include max(575px) {
+		font-size: 25px;
+		line-height: 27px;
+		margin: 0 0 10px;
+	  }
     }
     p {
       font-size: 24px;
@@ -382,6 +387,13 @@
 	  @include max(1400px) {
 		font-size: 20px;
 		line-height: 25px
+	  }
+	  @include max(575px) {
+		font-size: 14px;
+		line-height: 18px;
+		br {
+			display: none;
+		}
 	  }
     }
 	.btn-bar {

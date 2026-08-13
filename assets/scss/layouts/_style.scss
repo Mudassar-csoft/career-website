@@ -3902,13 +3902,28 @@
     @include max(1280px) {
       padding: 7rem 0;
     }
+    @include max(992px) {
+      padding: 5rem 0;
+    }
+    @include max(575px) {
+      padding: 3rem 0;
+    }
   }
   .tabs-area {
-    padding: 4rem 0;
+    padding: 4rem 0 0;
+    @include max(767px) {
+      padding: 2rem 0 0;
+    }
     .nav {
       justify-content: center;
       border-bottom: 1px solid #e3e3e3;
       padding: 0 0 1rem;
+      @include max(575px) {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+      }
       li {
         margin: 0 25px;
         @include max(1400px) {
@@ -3916,6 +3931,15 @@
         }
         @include max(1200px) {
           margin: 0 15px;
+        }
+        @include max(992px) {
+          margin: 0 10px;
+        }
+        @include max(767px) {
+          margin: 0 5px;
+        }
+        @include max(575px) {
+          flex-shrink: 0;
         }
         button {
           font-size: 22px;
@@ -3931,6 +3955,14 @@
           @include max(1200px) {
             font-size: 18px;
             line-height: 20px;
+          }
+          @include max(992px) {
+            padding: 10px 10px;
+          }
+          @include max(767px) {
+            padding: 7px 7px;
+            font-size: 14px;
+            line-height: 16px;
           }
           &.active {
             background: none;
@@ -3951,6 +3983,9 @@
     }
     .tab-content {
       padding: 3rem 0;
+      @include max(767px) {
+        padding: 2rem 0 0;
+      }
       .text-info {
         h2 {
           text-align: center;
@@ -3963,6 +3998,10 @@
             font-size: 30px;
             line-height: 32px;
             margin: 0 0 25px;
+          }
+          @include max(992px) {
+            font-size: 22px;
+            line-height: 24px;
           }
         }
         .form-block {
@@ -3983,10 +4022,18 @@
             @include max(1400px) {
               height: 60px;
             }
+            @include max(575px) {
+              height: 50px;
+              font-size: 14px
+            }
           }
           .sm-btn {
             @include apply-btn;
-            padding: 15px 20px;
+            padding: 15px 30px;
+            @include max(767px) {
+              font-size: 16px;
+              line-height: 18px;
+            }
           }
         }
       }
@@ -5306,7 +5353,7 @@
       align-items: flex-start;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: 0 0 30px;
+      margin: 0 0 20px;
       padding: 0 0 20px;
       border-bottom: 1px solid #CDCDCD;
       h2 {
@@ -5316,6 +5363,16 @@
         font-weight: 600;
         margin: 0 0 15px;
         width: 80%;
+        @include max(1400px) {
+          font-size: 22px;
+          line-height: 24px;
+        }
+        @include max(575px) {
+          font-size: 20px;
+          line-height: 24px;
+          width: 100%;
+          margin: 0 0 10px;
+        }
       }
       a {
         font-size: 14px;
@@ -5331,6 +5388,9 @@
         img {
           margin: 0 7px 0 0;
         }
+        @include max(575px) {
+          margin: 0 0 10px;
+        }
       }
       p {
         font-size: 20px;
@@ -5338,6 +5398,10 @@
         margin: 0 0 15px;
         font-weight: 400;
         color: #000;
+        @include max(1400px) {
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
       span {
         display: flex;
@@ -5357,6 +5421,15 @@
         color: #000;
         font-weight: 400;
         margin: 0 0 25px;
+        @include max(1400px) {
+          font-size: 18px;
+          line-height: 25px;
+          margin: 0 0 20px;
+        }
+        @include max(450px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
       }
       h4 {
         font-size: 22px;
