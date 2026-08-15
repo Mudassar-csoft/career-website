@@ -41,9 +41,15 @@
                                 <div class="col-lg">
                                     <input type="text" class="form-control" placeholder="Search Location">
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-auto d-none d-lg-block">
                                     <button class="search-btn">
                                         <img src="{{ asset('assets/images/icon53.png') }}" alt="">
+                                    </button>
+                                </div>
+                                <div class="col-12 d-lg-none">
+                                    <button class="search-btn">
+                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="">
+                                        Search
                                     </button>
                                 </div>
                             </div>
@@ -290,12 +296,12 @@
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-6">
+            <div class="col-lg-12">
+                <ul>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon20.svg" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -303,44 +309,54 @@
                                 <p>0314-4444010</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon21.svg" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
                                 <p>info@career.edu.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon22.svg" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
                                 <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon23.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon136.svg" alt="">
                             </div>
                             <div class="t-bar">
-                                <h3>Office Hours</h3>
-                                <p>Mon- Sat</p>
-                                <p>10:00am-7:00pm</p>
+                                <h3>Google Meet</h3>
+                                <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="http://127.0.0.1:8000/assets/images/icon137.svg" alt="">
+                            </div>
+                            <div class="t-bar">
+                                <h3>Microsoft Team</h3>
+                                <p>Career.pk</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-block">
                     <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
                         @csrf

@@ -2017,12 +2017,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    @include max(1400px) {
+    @include max(1200px) {
       gap: 10px;
     }
     li {
       width: 20%;
-      @include max(1400px) {
+      @include max(1200px) {
         width: 32.5%;
       }
       @include max(992px) {
@@ -2127,10 +2127,7 @@
     }
   }
   .form-block {
-    margin: 3rem 0 0;
-    @include max(992px) {
-      margin: 2rem 0 0;
-    }
+    margin: 2rem 0 0;
     @include max(575px) {
       margin: 1.5rem 0 0;
     }
@@ -3635,6 +3632,23 @@
 // job placement page start here
 
 .job-page {
+  .info-bar {
+    h2 {
+      @include max(992px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
+    }
+    h5 {
+      @include max(992px) {
+        br {
+          display: none;
+        }
+        margin: 0 0 40px;
+        font-weight: 300;
+      }
+    }
+  }
   .top-banner {
     @include top-banner;
     padding: 10rem 0;
@@ -3644,9 +3658,38 @@
       padding: 8rem 0;
       background-size: cover;
     }
+    @include max(1400px) {
+      padding: 6rem 0;
+    }
+    @include max(1200px) {
+      padding: 5rem 0;
+    }
+    @include max(992px) {
+      padding: 3rem 0;
+    }
+    .btn-block {
+      .aq-btn {
+        @include max(575px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+      .wa-btn {
+        @include max(575px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
   }
   .cata-area {
     padding: 4rem 0 2rem;
+    @include max(1400px) {
+      padding: 2rem 0 2rem;
+    }
+    @include max(575px) {
+      padding: 2rem 0 0;
+    }
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -3657,6 +3700,10 @@
       @include max(1400px) {
         font-size: 30px;
         line-height: 32px;
+      }
+      @include max(992px) {
+        font-size: 25px;
+        line-height: 27px;
       }
     }
     ul {
@@ -3672,6 +3719,12 @@
         text-align: center;
         margin: 0 0 15px;
         transition: transform 0.3s ease;
+        @include max(992px) {
+          width: 49%;
+        }
+        @include max(450px) {
+          width: 100%;
+        }
         &:hover {
           transform: translateY(-7px);
         }
@@ -3692,22 +3745,37 @@
             font-size: 18px;
             line-height: 22px;
           }
+          @include max(450px) {
+            font-size: 15px;
+            line-height: 18px;
+          }
         }
       }
     }
     .btn-bar {
       text-align: center;
       margin: 30px 0 0;
+      @include max(575px) {
+        margin: 15px 0 0;
+      }
       .va-btn {
         @include rm-btn;
         padding: 12px 30px;
-        background: linear-gradient(#fff, #fff) padding-box,
-          linear-gradient(90deg, #019fb6 0%, #03c38a 100%) border-box;
+        background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #019fb6 0%, #03c38a 100%) border-box;
       }
     }
   }
   .f-job {
     padding: 5rem 0 2rem;
+    @include max(1400px) {
+      padding: 3rem 0 2rem;
+    }
+    @include max(992px) {
+      padding: 2rem 0 2rem;
+    }
+    @include max(575px) {
+      padding: 2rem 0 1rem;
+    }
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -3733,6 +3801,9 @@
         margin-bottom: 25px;
         gap: 20px;
         flex-wrap: wrap;
+        @include max(992px) {
+          gap: 15px;
+        }
       }
       .show-box {
         min-width: 100px;
@@ -3745,10 +3816,20 @@
         font-size: 18px;
         font-weight: 500;
         color: #000;
+        @include max(992px) {
+          width: 100px;
+          order: 2;
+        }
       }
       .filter-box {
         flex: 1;
         padding: 0 0 0 7rem;
+        @include max(992px) {
+          width: 100%;
+          order: 1;
+          padding: 0;
+          flex: inherit;
+        }
       }
       .form-control {
         @include inputbar;
@@ -3760,6 +3841,16 @@
         @include apply-btn;
         border-radius: 10px 10px;
         padding: 14px 25px;
+        @include max(992px) {
+          width: 100%;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            margin: 0 5px 0 0;
+          }
+        }
       }
       .career-table {
         border: 1px solid #e6e6e6;
@@ -3818,6 +3909,13 @@
 // ambassador page start here
 
 .ambassador-page {
+  .info-bar {
+    @include max(575px) {
+      h5 {
+        margin: 0 0 30px;
+      }
+    }
+  }
   .top-banner {
     @include top-banner;
     padding: 10rem 0;
@@ -3830,12 +3928,47 @@
     @include max(1200px) {
       padding: 6rem 0;
     }
+    @include max(992px) {
+      padding: 4rem 0;
+    }
+    @include max(767px) {
+      padding: 3rem 0;
+      h2 {
+        font-size: 22px;
+        line-height: 24px;
+      }
+      h1 {
+        font-size: 25px;
+        line-height: 27px;
+        margin: 0 0 10px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        br {
+          display: none;
+        }
+        @include max(450px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
   }
   .efl-area {
     padding: 5rem 0;
     background: #f3f7ff;
+    @include max(992px) {
+      padding: 3rem 0;
+    }
+    @include max(767px) {
+      padding: 2rem 0;
+    }
     .img-hold {
       text-align: center;
+      @include max(992px) {
+        text-align: left;
+      }
       img {
         transition: all 0.3s ease-in-out;
         &:hover {
@@ -3845,6 +3978,9 @@
     }
     .t-text {
       padding: 0 7rem 0 0;
+      @include max(992px) {
+        padding: 0;
+      }
       p {
         font-size: 24px;
         line-height: 26px;
@@ -3853,6 +3989,14 @@
         margin: 0 0 15px;
         @include max(1400px) {
           font-size: 20px;
+          line-height: 22px;
+        }
+        @include max(767px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        @include max(450px) {
+          font-size: 14px;
           line-height: 22px;
         }
       }
@@ -3866,6 +4010,14 @@
           font-size: 30px;
           line-height: 32px;
         }
+        @include max(767px) {
+          font-size: 25px;
+          line-height: 27px;
+        }
+        @include max(450px) {
+          font-size: 22px;
+          line-height: 24px;
+        }
       }
       h5 {
         font-size: 18px;
@@ -3876,6 +4028,12 @@
         @include max(1400px) {
           font-size: 16px;
           line-height: 22px;
+        }
+        @include max(767px) {
+          font-size: 14px;
+        }
+        @include max(450px) {
+          font-size: 12px;
         }
       }
       h4 {
@@ -3897,6 +4055,14 @@
           color: #282a2e;
           font-weight: 400;
           margin: 0 0 10px;
+          @include max(575px) {
+            font-size: 12px;
+            line-height: 15px;
+          }
+          @include max(450px) {
+            font-size: 11px;
+            line-height: 14px;
+          }
           &:last-child {
             margin: 0;
           }
@@ -3907,6 +4073,10 @@
       }
       .an-btn {
         @include apply-btn;
+        @include max(575px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
       }
     }
   }
@@ -3914,6 +4084,19 @@
     padding: 4rem 0;
     background: #f5f5f5;
     text-align: center;
+    @include max(992px) {
+      padding: 3rem 0;
+      .col {
+        width: 33.33%;
+        flex: inherit;
+        @include max(450px) {
+          width: 50%;
+        }
+      }
+    }
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     h3 {
       font-size: 24px;
       line-height: 26px;
@@ -3923,6 +4106,10 @@
       @include max(1400px) {
         font-size: 20px;
         line-height: 22px;
+      }
+      @include max(575px) {
+        font-size: 16px;
+        line-height: 18px;
       }
     }
     h2 {
@@ -3934,6 +4121,11 @@
       @include max(1400px) {
         font-size: 30px;
         line-height: 32px;
+      }
+      @include max(575px) {
+        font-size: 25px;
+        line-height: 27px;
+        margin: 0 0 25px;
       }
     }
     .box {
@@ -4017,6 +4209,9 @@
   }
   .info-bar {
     padding: 3rem 0;
+    @include max(575px) {
+      padding: 2rem 0;
+    }
   }
 }
 
@@ -4035,6 +4230,9 @@
     @include max(992px) {
       background-size: cover;
       padding: 5rem 0;
+    }
+    @include max(575px) {
+      padding: 3rem 0;
     }
   }
   .tabs-area {

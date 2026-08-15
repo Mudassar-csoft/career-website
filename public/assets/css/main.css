@@ -2893,7 +2893,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .info-bar ul {
     gap: 10px;
   }
@@ -2901,7 +2901,7 @@ body {
 .info-bar ul li {
   width: 20%;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .info-bar ul li {
     width: 32.5%;
   }
@@ -3028,12 +3028,7 @@ body {
   }
 }
 .info-bar .form-block {
-  margin: 3rem 0 0;
-}
-@media (max-width: 992px) {
-  .info-bar .form-block {
-    margin: 2rem 0 0;
-  }
+  margin: 2rem 0 0;
 }
 @media (max-width: 575px) {
   .info-bar .form-block {
@@ -6298,6 +6293,21 @@ body {
   }
 }
 
+@media (max-width: 992px) {
+  .job-page .info-bar h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 992px) {
+  .job-page .info-bar h5 br {
+    display: none;
+  }
+  .job-page .info-bar h5 {
+    margin: 0 0 40px;
+    font-weight: 300;
+  }
+}
 .job-page .top-banner {
   padding: 8rem 0;
   background: url(../images/banner15.png) no-repeat center bottom;
@@ -6457,8 +6467,45 @@ body {
     background-size: cover;
   }
 }
+@media (max-width: 1400px) {
+  .job-page .top-banner {
+    padding: 6rem 0;
+  }
+}
+@media (max-width: 1200px) {
+  .job-page .top-banner {
+    padding: 5rem 0;
+  }
+}
+@media (max-width: 992px) {
+  .job-page .top-banner {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 575px) {
+  .job-page .top-banner .btn-block .aq-btn {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .job-page .top-banner .btn-block .wa-btn {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 .job-page .cata-area {
   padding: 4rem 0 2rem;
+}
+@media (max-width: 1400px) {
+  .job-page .cata-area {
+    padding: 2rem 0 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .job-page .cata-area {
+    padding: 2rem 0 0;
+  }
 }
 .job-page .cata-area h2 {
   font-size: 38px;
@@ -6472,6 +6519,12 @@ body {
   .job-page .cata-area h2 {
     font-size: 30px;
     line-height: 32px;
+  }
+}
+@media (max-width: 992px) {
+  .job-page .cata-area h2 {
+    font-size: 25px;
+    line-height: 27px;
   }
 }
 .job-page .cata-area ul {
@@ -6488,6 +6541,16 @@ body {
   text-align: center;
   margin: 0 0 15px;
   transition: transform 0.3s ease;
+}
+@media (max-width: 992px) {
+  .job-page .cata-area ul li {
+    width: 49%;
+  }
+}
+@media (max-width: 450px) {
+  .job-page .cata-area ul li {
+    width: 100%;
+  }
 }
 .job-page .cata-area ul li:hover {
   transform: translateY(-7px);
@@ -6512,9 +6575,20 @@ body {
     line-height: 22px;
   }
 }
+@media (max-width: 450px) {
+  .job-page .cata-area ul li p {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
 .job-page .cata-area .btn-bar {
   text-align: center;
   margin: 30px 0 0;
+}
+@media (max-width: 575px) {
+  .job-page .cata-area .btn-bar {
+    margin: 15px 0 0;
+  }
 }
 .job-page .cata-area .btn-bar .va-btn {
   padding: 14px 24px;
@@ -6539,6 +6613,21 @@ body {
 }
 .job-page .f-job {
   padding: 5rem 0 2rem;
+}
+@media (max-width: 1400px) {
+  .job-page .f-job {
+    padding: 3rem 0 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .job-page .f-job {
+    padding: 2rem 0 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .job-page .f-job {
+    padding: 2rem 0 1rem;
+  }
 }
 .job-page .f-job h2 {
   font-size: 38px;
@@ -6567,6 +6656,11 @@ body {
   gap: 20px;
   flex-wrap: wrap;
 }
+@media (max-width: 992px) {
+  .job-page .f-job .career-section .career-filter {
+    gap: 15px;
+  }
+}
 .job-page .f-job .career-section .show-box {
   min-width: 100px;
   height: 50px;
@@ -6579,9 +6673,23 @@ body {
   font-weight: 500;
   color: #000;
 }
+@media (max-width: 992px) {
+  .job-page .f-job .career-section .show-box {
+    width: 100px;
+    order: 2;
+  }
+}
 .job-page .f-job .career-section .filter-box {
   flex: 1;
   padding: 0 0 0 7rem;
+}
+@media (max-width: 992px) {
+  .job-page .f-job .career-section .filter-box {
+    width: 100%;
+    order: 1;
+    padding: 0;
+    flex: inherit;
+  }
 }
 .job-page .f-job .career-section .form-control {
   border-radius: 0;
@@ -6629,6 +6737,18 @@ body {
 .job-page .f-job .career-section .search-btn {
   border-radius: 10px 10px;
   padding: 14px 25px;
+}
+@media (max-width: 992px) {
+  .job-page .f-job .career-section .search-btn {
+    width: 100%;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .job-page .f-job .career-section .search-btn img {
+    margin: 0 5px 0 0;
+  }
 }
 .job-page .f-job .career-section .career-table {
   border: 1px solid #e6e6e6;
@@ -6694,6 +6814,11 @@ body {
   font-weight: 400;
 }
 
+@media (max-width: 575px) {
+  .ambassador-page .info-bar h5 {
+    margin: 0 0 30px;
+  }
+}
 .ambassador-page .top-banner {
   padding: 8rem 0;
   background: url(../images/banner15.png) no-repeat center bottom;
@@ -6858,12 +6983,59 @@ body {
     padding: 6rem 0;
   }
 }
+@media (max-width: 992px) {
+  .ambassador-page .top-banner {
+    padding: 4rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .ambassador-page .top-banner {
+    padding: 3rem 0;
+  }
+  .ambassador-page .top-banner h2 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .ambassador-page .top-banner h1 {
+    font-size: 25px;
+    line-height: 27px;
+    margin: 0 0 10px;
+  }
+  .ambassador-page .top-banner p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .ambassador-page .top-banner p br {
+    display: none;
+  }
+}
+@media (max-width: 767px) and (max-width: 450px) {
+  .ambassador-page .top-banner p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 .ambassador-page .efl-area {
   padding: 5rem 0;
   background: #f3f7ff;
 }
+@media (max-width: 992px) {
+  .ambassador-page .efl-area {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .ambassador-page .efl-area {
+    padding: 2rem 0;
+  }
+}
 .ambassador-page .efl-area .img-hold {
   text-align: center;
+}
+@media (max-width: 992px) {
+  .ambassador-page .efl-area .img-hold {
+    text-align: left;
+  }
 }
 .ambassador-page .efl-area .img-hold img {
   transition: all 0.3s ease-in-out;
@@ -6873,6 +7045,11 @@ body {
 }
 .ambassador-page .efl-area .t-text {
   padding: 0 7rem 0 0;
+}
+@media (max-width: 992px) {
+  .ambassador-page .efl-area .t-text {
+    padding: 0;
+  }
 }
 .ambassador-page .efl-area .t-text p {
   font-size: 24px;
@@ -6884,6 +7061,18 @@ body {
 @media (max-width: 1400px) {
   .ambassador-page .efl-area .t-text p {
     font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .ambassador-page .efl-area .t-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 450px) {
+  .ambassador-page .efl-area .t-text p {
+    font-size: 14px;
     line-height: 22px;
   }
 }
@@ -6900,6 +7089,18 @@ body {
     line-height: 32px;
   }
 }
+@media (max-width: 767px) {
+  .ambassador-page .efl-area .t-text h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+@media (max-width: 450px) {
+  .ambassador-page .efl-area .t-text h2 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
 .ambassador-page .efl-area .t-text h5 {
   font-size: 18px;
   line-height: 26px;
@@ -6911,6 +7112,16 @@ body {
   .ambassador-page .efl-area .t-text h5 {
     font-size: 16px;
     line-height: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .ambassador-page .efl-area .t-text h5 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .ambassador-page .efl-area .t-text h5 {
+    font-size: 12px;
   }
 }
 .ambassador-page .efl-area .t-text h4 {
@@ -6936,6 +7147,18 @@ body {
   font-weight: 400;
   margin: 0 0 10px;
 }
+@media (max-width: 575px) {
+  .ambassador-page .efl-area .t-text ul li {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 450px) {
+  .ambassador-page .efl-area .t-text ul li {
+    font-size: 11px;
+    line-height: 14px;
+  }
+}
 .ambassador-page .efl-area .t-text ul li:last-child {
   margin: 0;
 }
@@ -6958,10 +7181,35 @@ body {
 .ambassador-page .efl-area .t-text .an-btn:focus {
   box-shadow: none;
 }
+@media (max-width: 575px) {
+  .ambassador-page .efl-area .t-text .an-btn {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .ambassador-page .pa-area {
   padding: 4rem 0;
   background: #f5f5f5;
   text-align: center;
+}
+@media (max-width: 992px) {
+  .ambassador-page .pa-area {
+    padding: 3rem 0;
+  }
+  .ambassador-page .pa-area .col {
+    width: 33.33%;
+    flex: inherit;
+  }
+}
+@media (max-width: 992px) and (max-width: 450px) {
+  .ambassador-page .pa-area .col {
+    width: 50%;
+  }
+}
+@media (max-width: 575px) {
+  .ambassador-page .pa-area {
+    padding: 2rem 0;
+  }
 }
 .ambassador-page .pa-area h3 {
   font-size: 24px;
@@ -6976,6 +7224,12 @@ body {
     line-height: 22px;
   }
 }
+@media (max-width: 575px) {
+  .ambassador-page .pa-area h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
 .ambassador-page .pa-area h2 {
   font-size: 36px;
   line-height: 40px;
@@ -6987,6 +7241,13 @@ body {
   .ambassador-page .pa-area h2 {
     font-size: 30px;
     line-height: 32px;
+  }
+}
+@media (max-width: 575px) {
+  .ambassador-page .pa-area h2 {
+    font-size: 25px;
+    line-height: 27px;
+    margin: 0 0 25px;
   }
 }
 .ambassador-page .pa-area .box {
@@ -7081,6 +7342,11 @@ body {
 }
 .ambassador-page .info-bar {
   padding: 3rem 0;
+}
+@media (max-width: 575px) {
+  .ambassador-page .info-bar {
+    padding: 2rem 0;
+  }
 }
 
 .pay-page .top-banner {
@@ -7246,6 +7512,11 @@ body {
   .pay-page .top-banner {
     background-size: cover;
     padding: 5rem 0;
+  }
+}
+@media (max-width: 575px) {
+  .pay-page .top-banner {
+    padding: 3rem 0;
   }
 }
 .pay-page .tabs-area {
@@ -12398,7 +12669,7 @@ body {
   font-size: 12px;
   line-height: 14px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 500;
   padding: 8px 14px;
 }
 @media (max-width: 1200px) {
