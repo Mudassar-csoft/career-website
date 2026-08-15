@@ -4032,6 +4032,10 @@
       background-size: cover;
       padding: 8rem 0;
     }
+    @include max(992px) {
+      background-size: cover;
+      padding: 5rem 0;
+    }
   }
   .tabs-area {
     background: radial-gradient(
@@ -4043,8 +4047,18 @@
     .nav-tabs {
       border-bottom: 0;
       align-items: flex-end;
+      @include max(575px) {
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+      }
       li {
         width: 25%;
+        @include max(575px) {
+          width: 40%;
+          flex-shrink: 0;
+        }
         button {
           background: #f9fafb;
           padding: 20px 3rem;
@@ -4057,7 +4071,10 @@
           }
           @include max(992px) {
             min-height: 85px;
-            padding: 20px 1.5rem  ;
+            padding: 20px 1.5rem;
+            @include max(767px) {
+              padding: 20px 15px;
+            }
           }
           &.active {
             border-radius: 10px 10px 0 0 !important;
@@ -4071,6 +4088,10 @@
             @include max(992px) {
               min-height: 100px;
               padding: 20px 1.5rem;
+            }
+            @include max(767px) {
+              min-height: 100px;
+              padding: 20px 15px;
             }
           }
         }
@@ -4092,6 +4113,9 @@
       border-radius: 0 0 10px 10px;
       @include max(992px) {
         padding: 2rem 2rem;
+      }
+      @include max(575px) {
+        padding: 1rem 1rem;
       }
       .bank-info {
         .info-label {
@@ -4122,6 +4146,12 @@
             line-height: 20px;
             height: 50px;
           }
+          @include max(575px) {
+            font-size: 14px;
+            line-height: 16px;
+            height: 40px;
+            padding: 10px 10px;
+          }
         }
         .copy-box {
           display: flex;
@@ -4138,6 +4168,11 @@
             gap: 5px;
             font-size: 14px;
             line-height: 16px;
+            @include max(575px) {
+              font-size: 12px;
+              line-height: 14px;
+              padding: 7px 8px;
+            }
             &:hover {
               background: #05917f;
             }

@@ -7242,6 +7242,12 @@ body {
     padding: 8rem 0;
   }
 }
+@media (max-width: 992px) {
+  .pay-page .top-banner {
+    background-size: cover;
+    padding: 5rem 0;
+  }
+}
 .pay-page .tabs-area {
   background: radial-gradient(100.9% 275.8% at 14.51% 43.51%, #03c38a 0%, #009db8 100%);
   padding: 70px 0;
@@ -7250,8 +7256,22 @@ body {
   border-bottom: 0;
   align-items: flex-end;
 }
+@media (max-width: 575px) {
+  .pay-page .tabs-area .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+  }
+}
 .pay-page .tabs-area .nav-tabs li {
   width: 25%;
+}
+@media (max-width: 575px) {
+  .pay-page .tabs-area .nav-tabs li {
+    width: 40%;
+    flex-shrink: 0;
+  }
 }
 .pay-page .tabs-area .nav-tabs li button {
   background: #f9fafb;
@@ -7272,6 +7292,11 @@ body {
     padding: 20px 1.5rem;
   }
 }
+@media (max-width: 992px) and (max-width: 767px) {
+  .pay-page .tabs-area .nav-tabs li button {
+    padding: 20px 15px;
+  }
+}
 .pay-page .tabs-area .nav-tabs li button.active {
   border-radius: 10px 10px 0 0 !important;
   box-shadow: 3px 0px 5px 0px rgba(0, 0, 0, 0.1019607843);
@@ -7290,6 +7315,12 @@ body {
     padding: 20px 1.5rem;
   }
 }
+@media (max-width: 767px) {
+  .pay-page .tabs-area .nav-tabs li button.active {
+    min-height: 100px;
+    padding: 20px 15px;
+  }
+}
 .pay-page .tabs-area .nav-tabs li:first-child button {
   border-radius: 10px 0 0 0;
 }
@@ -7304,6 +7335,11 @@ body {
 @media (max-width: 992px) {
   .pay-page .tabs-area .tab-content {
     padding: 2rem 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .pay-page .tabs-area .tab-content {
+    padding: 1rem 1rem;
   }
 }
 .pay-page .tabs-area .tab-content .bank-info .info-label {
@@ -7339,6 +7375,14 @@ body {
     height: 50px;
   }
 }
+@media (max-width: 575px) {
+  .pay-page .tabs-area .tab-content .bank-info .info-box {
+    font-size: 14px;
+    line-height: 16px;
+    height: 40px;
+    padding: 10px 10px;
+  }
+}
 .pay-page .tabs-area .tab-content .bank-info .copy-box {
   display: flex;
   justify-content: space-between;
@@ -7355,6 +7399,13 @@ body {
   gap: 5px;
   font-size: 14px;
   line-height: 16px;
+}
+@media (max-width: 575px) {
+  .pay-page .tabs-area .tab-content .bank-info .copy-box .btn-copy {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 7px 8px;
+  }
 }
 .pay-page .tabs-area .tab-content .bank-info .copy-box .btn-copy:hover {
   background: #05917f;
