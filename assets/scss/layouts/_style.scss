@@ -5137,6 +5137,9 @@
   .top-bar {
     padding: 3rem 0 0;
     text-align: center;
+    @include max(575px) {
+      padding: 2rem 0 0;
+    }
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -5149,8 +5152,8 @@
         margin: 0 0 30px;
       }
       @include max(575px) {
-        font-size: 20px;
-        line-height: 22px;
+        font-size: 25px;
+        line-height: 27px;
       }
     }
   }
@@ -5236,6 +5239,9 @@
   .feature-block {
     background: none;
     padding: 4rem 0;
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     h2 {
       margin: 0 0 30px;
     }

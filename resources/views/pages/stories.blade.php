@@ -833,11 +833,19 @@
                     }
                 },
                 {
-                    breakpoint: 768,
+                    breakpoint: 767,
                     settings: {
                         vertical: false,
                         verticalSwiping: false,
-                        slidesToShow: 1
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 450,
+                    settings: {
+                        vertical: false,
+                        verticalSwiping: false,
+                        slidesToShow: 1,
                     }
                 }
             ]

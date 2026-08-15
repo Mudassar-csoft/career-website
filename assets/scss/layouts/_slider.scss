@@ -578,6 +578,9 @@
     @include max(1280px) {
       width: 50%;
     }
+    @include max(575px) {
+      width: 100%;
+    }
     span {
       display: block;
       margin: 0 0 8px;
@@ -651,6 +654,14 @@
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
+      @include max(992px) {
+        font-size: 10px;
+        line-height: 13px;
+      }
+      @include max(575px) {
+        font-size: 9px;
+        line-height: 13px;
+      }
     }
   }
 
@@ -706,6 +717,12 @@
       width: 60px;
       object-fit: cover;
       border-radius: 5px;
+      @include max(575px) {
+        width: 40px;
+      }
+      @include max(450px) {
+        width: 60px;
+      }
     }
     h4 {
       margin: 0 0 2px;
@@ -713,6 +730,10 @@
       font-size: 14px;
       font-weight: 700;
       line-height: 16px;
+      @include max(575px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
     span {
       display: block;
@@ -721,6 +742,10 @@
       line-height: 14px;
       font-weight: 400;
       margin: 0 0 2px;
+      @include max(575px) {
+        font-size: 10px;
+        line-height: 12px;
+      }
     }
     small {
       display: block;
@@ -734,6 +759,10 @@
       font-size: 12px;
       line-height: 15px;
       font-weight: 400;
+      @include max(575px) {
+        font-size: 10px;
+        line-height: 12px;
+      }
       strong {
         display: block;
         color: #03c587;
@@ -791,7 +820,7 @@
       .slick-track {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        gap: 0;
       }
     }
     .success-nav-item {
@@ -812,7 +841,8 @@
       gap: 15px;
     }
     .success-image {
-      height: 300px;
+      height: auto;
+      border-radius: 25px 25px;
     }
     .success-content {
       h2 {
@@ -827,6 +857,11 @@
       justify-content: flex-start;
       gap: 15px;
       padding-bottom: 10px;
+      @include max(575px) {
+        flex-wrap: inherit;
+        gap: 10px;
+        z-index: 99;
+      }
       &::before {
         left: 25px;
         right: 25px;
@@ -839,6 +874,10 @@
     .success-nav-slider {
       .success-nav-item {
         padding: 10px;
+        @include max(575px) {
+          padding: 5px 5px;
+          margin: 0;
+        }
       }
     }
   }
@@ -850,11 +889,9 @@
 
 @media (max-width: 575.98px) {
   .success-story-wrapper {
-    .success-image {
-      height: 260px;
-    }
     .success-before-after {
       gap: 8px;
+      flex-wrap: wrap;
     }
     .journey-item {
       flex-basis: 75px;
