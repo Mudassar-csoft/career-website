@@ -89,36 +89,86 @@
 <section class="rcre-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-5 mb-4 mb-lg-0">
                 <h2>
                     Event Category
                 </h2>
-                <ul class="mb-3">
+                <ul class="mb-3 d-none d-sm-flex">
                     <li>
-                        <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
-                        <h3>Seminars & <br>Webinars</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
+                            <h3>Seminars & <br>Webinars</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
-                        <h3>Workshops</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
+                            <h3>Workshops</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
-                        <h3>Conferences</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
+                            <h3>Conferences</h3>
+                        </a>
                     </li>
                 </ul>
-                <ul>
+                <ul class="d-none d-sm-flex">
                     <li>
-                        <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
-                        <h3>Project Displays</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
+                            <h3>Project Displays</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
-                        <h3>Job Fairs</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
+                            <h3>Job Fairs</h3>
+                        </a>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
-                        <h3>Celebrations</h3>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
+                            <h3>Celebrations</h3>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="d-sm-none">
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
+                            <h3>Seminars & <br>Webinars</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
+                            <h3>Workshops</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
+                            <h3>Conferences</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
+                            <h3>Project Displays</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
+                            <h3>Job Fairs</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
+                            <h3>Celebrations</h3>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -127,26 +177,61 @@
                     <h2>
                         Our Recent Events
                     </h2>
+                    <a href="#" class="btn more-btn">View all Recent Events</a>
                 </div>
-                <div class="row">
-                    @forelse ($recentEvents as $recentEvent)
-                        <div class="col-lg-3 px-1">
-                            <a href="{{ route('events.show', $recentEvent) }}" class="block" style="display:block;color:inherit;text-decoration:none;">
-                                <img src="{{ asset('assets/images/img65.png') }}" alt="{{ $recentEvent->title }}">
-                                <h4>
-                                    {{ $recentEvent->title }}
-                                </h4>
-                                <ul>
-                                    <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> {{ $recentEvent->campus }}</li>
-                                    <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> {{ $recentEvent->event_date->format('d M, Y') }}</li>
-                                </ul>
-                            </a>
+                <div class="row g-2">
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
+                        <div class="block">
+                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
+                            <h4>
+                                MOU Signing
+                                Ceremony
+                            </h4>
+                            <ul>
+                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
+                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
+                            </ul>
                         </div>
-                    @empty
-                        <div class="col-lg-12">
-                            <p>No past events yet.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
+                        <div class="block">
+                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
+                            <h4>
+                                MOU Signing
+                                Ceremony
+                            </h4>
+                            <ul>
+                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
+                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
+                            </ul>
                         </div>
-                    @endforelse
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
+                        <div class="block">
+                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
+                            <h4>
+                                MOU Signing
+                                Ceremony
+                            </h4>
+                            <ul>
+                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
+                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-6 px-1">
+                        <div class="block">
+                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
+                            <h4>
+                                MOU Signing
+                                Ceremony
+                            </h4>
+                            <ul>
+                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
+                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

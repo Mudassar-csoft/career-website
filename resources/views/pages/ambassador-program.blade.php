@@ -1,8 +1,6 @@
 @extends('layouts.app')
-
 @section('title', 'Ambassador Program | Career Website')
 @section('body_class', 'ambassador-page')
-
 @section('content')
 <section class="top-banner">
     <div class="container">
@@ -21,7 +19,7 @@
 <section class="efl-area">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mb-3 mb-lg-0">
                 <div class="t-text">
                     <p>About Ambassador Program</p>
                     <h2>Empowering Future Leaders</h2>
@@ -57,7 +55,7 @@
                 <h2>Perks & Amenities</h2>
             </div>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-3 g-3">
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
@@ -121,7 +119,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-3 g-3">
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
@@ -203,12 +201,12 @@
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-6">
+            <div class="col-lg-12">
+                <ul>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon20.svg" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -216,44 +214,54 @@
                                 <p>0314-4444010</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon21.svg" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
                                 <p>info@career.edu.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon22.svg" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
                                 <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
+                    </li>
+                    <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon23.svg') }}" alt="">
+                                <img src="http://127.0.0.1:8000/assets/images/icon136.svg" alt="">
                             </div>
                             <div class="t-bar">
-                                <h3>Office Hours</h3>
-                                <p>Mon- Sat</p>
-                                <p>10:00am-7:00pm</p>
+                                <h3>Google Meet</h3>
+                                <p>Career.pk</p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <div class="box">
+                            <div class="img-hold">
+                                <img src="http://127.0.0.1:8000/assets/images/icon137.svg" alt="">
+                            </div>
+                            <div class="t-bar">
+                                <h3>Microsoft Team</h3>
+                                <p>Career.pk</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-block">
                     <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
                         @csrf
@@ -301,7 +309,7 @@
         </div>
     </div>
 </section>
-<section class="tour-area">
+{{-- <section class="tour-area">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -318,6 +326,77 @@
                     <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal">
                         <img src="{{ asset('assets/images/img34.png') }}" alt="">
                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> --}}
+<section class="video-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2  data-aos="zoom-in" data-aos-duration="1000">Explore our campuses through an immersive virtual tour</h2>
+                <p  data-aos="zoom-in" data-aos-duration="1200">
+                    Discover the allure of our stunning campuses in this captivating video tour,where you can truly immerse yourself in the vibrant
+                    atmosphere that characterizes our esteemed institution. We extend a warm invitation for you to virtually experience our campus,
+                    offering you a glimpse into what sets our educational and personal growth environment apart as something truly exceptional.
+                </p>
+                <a href="#" class="btn ep-btn mb-5">Explore Campuses</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video2.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Jinnah Colony Branch</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video3.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Millat Chowk Branch</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video3.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Satyana Raod Branch</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video3.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Kohnoor Branch</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

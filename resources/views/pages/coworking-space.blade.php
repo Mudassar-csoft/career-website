@@ -19,7 +19,7 @@
 <section class="two-block">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-5">
+            <div class="col-lg-5"> 
                 <h2>
                     Where Ambition Meets<br>
                     Opportunity - Explore<br>
@@ -28,7 +28,7 @@
                 <p>
                     Our modern office spaces provide freelancers, entrepreneurs, and teams with comfortable work areas.
                 </p>
-                <p>
+                <p class="mb-4 mb-lg-0">
                     Explore today and find the perfect environment to enhance your productivity and achieve your goals! Experience the difference of a workspace designed to support your success and innovation.
                 </p>
             </div>
@@ -227,7 +227,7 @@
         </div>
     </div>
 </section>
-<section class="co-say">
+{{-- <section class="co-say">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -250,42 +250,134 @@
             </div>
         </div>
     </div>
+</section> --}}
+<section class="video-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2  data-aos="zoom-in" data-aos-duration="1000">What Our Coworker Say</h2>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video2.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Jinnah Colony Branch</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video3.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Millat Chowk Branch</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video3.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Satyana Raod Branch</h3>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="video-card">
+                                <img src="assets/images/img04.png" alt="">
+                                <button class="play-btn" data-video="video3.mp4">
+                                <img src="assets/images/ply-btn.png" alt="">
+                                </button>
+                            </div>
+                            <div class="swipe-text">
+                                <h3>Kohnoor Branch</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="#" class="btn ep-btn">Testimonial Video</a>
+            </div>
+        </div>
+    </div>
 </section>
 @endsection
 @push('scripts')
 <script>
     $('.workspace-slider').slick({
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                arrows: false,
-                dots: false,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 8000,
-                cssEase: 'linear',
-                variableWidth: true,
-                pauseOnHover: false,
-                pauseOnFocus: false,
-                swipe: true,
-            });
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 8000,
+        cssEase: 'linear',
+        variableWidth: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        swipe: true,
+    });
 </script>
 <script>
-    const videoModal = document.getElementById('videoModal');
-            const video =	document.getElementById('popupVideo');
-            // Modal open
-            videoModal.addEventListener(
-                'shown.bs.modal',
-                function() {
-                    video.play();
+    if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper")) {
+    new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: false,
+        centeredSlides: false,
+        loop: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 150,
+            modifier: 1,
+            slideShadows: false
+        },
+        speed: 1000,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                coverflowEffect: {
+                    rotate: 30,
+                    depth: 150
                 }
-            );
-            //Modal close
-            videoModal.addEventListener(
-                'hidden.bs.modal',
-                function() {
-                    video.pause();
+            },
+            768: {
+                slidesPerView: 2,
+                coverflowEffect: {
+                    rotate: 25,
+                    depth: 100
                 }
-            );
+            }
+        }
+    });
+}
 </script>
 @endpush
