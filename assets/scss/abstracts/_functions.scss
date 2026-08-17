@@ -285,6 +285,13 @@
 		line-height: 20px;
 		color: #fff;
 		font-weight: 300;
+		@include max(575px) {
+			br {
+				display: none;
+			}
+			font-size: 15px;
+			line-height: 19px;
+		}
 	}
 	.breadcrumb {
 		margin: 7px 0 0;
