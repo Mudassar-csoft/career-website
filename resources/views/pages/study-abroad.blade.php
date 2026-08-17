@@ -123,7 +123,7 @@
                 <section class="sp-area">
                     <div class="container">
                         <div class="row align-items-end">
-                            <div class="col-lg-6">
+                            <div class="col-lg-5">
                                 <h3>Study Programs</h3>
                                 <ul>
                                     <li>
@@ -170,7 +170,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-7">
                                 <div class="aj-box">
                                     <div class="row align-items-center">
                                         <div class="col-lg-7">
