@@ -2,20 +2,73 @@
 //     this.classList.toggle('open');
 // }
 
-document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-    if (window.innerWidth >= 992) {
-        dropdown.addEventListener('mouseenter', function () {
-            bootstrap.Dropdown.getOrCreateInstance(
-                this.querySelector('.dropdown-toggle')
-            ).show();
-        });
-        dropdown.addEventListener('mouseleave', function () {
-            bootstrap.Dropdown.getOrCreateInstance(
-                this.querySelector('.dropdown-toggle')
-            ).hide();
-        });
+// document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+//     if (window.innerWidth >= 992) {
+//         dropdown.addEventListener('mouseenter', function () {
+//             bootstrap.Dropdown.getOrCreateInstance(
+//                 this.querySelector('.dropdown-toggle')
+//             ).show();
+//         });
+//         dropdown.addEventListener('mouseleave', function () {
+//             bootstrap.Dropdown.getOrCreateInstance(
+//                 this.querySelector('.dropdown-toggle')
+//             ).hide();
+//         });
+//     }
+// });
+
+document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+    if (!toggle) return;
+    const dropdownInstance =
+        bootstrap.Dropdown.getOrCreateInstance(toggle);
+
+    let hideTimeout;
+    // =========================
+    // DESKTOP - 992px+
+    // =========================
+    function enableDesktopHover() {
+        dropdown.addEventListener("mouseenter", showDropdown);
+        dropdown.addEventListener("mouseleave", hideDropdown);
     }
+    function disableDesktopHover() {
+        dropdown.removeEventListener("mouseenter", showDropdown);
+        dropdown.removeEventListener("mouseleave", hideDropdown);
+        clearTimeout(hideTimeout);
+    }
+    function showDropdown() {
+        clearTimeout(hideTimeout);
+        dropdownInstance.show();
+    }
+    function hideDropdown() {
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(function () {
+            // Agar mouse dropdown ke andar nahi hai
+            if (!dropdown.matches(":hover")) {
+                dropdownInstance.hide();
+            }
+        }, 100);
+    }
+    // =========================
+    // CHECK SCREEN SIZE
+    // =========================
+    function checkDropdownMode() {
+        if (window.innerWidth >= 992) {
+            enableDesktopHover();
+        } else {
+            disableDesktopHover();
+        }
+    }
+    checkDropdownMode();
+    // Resize hone par dobara check
+    window.addEventListener("resize", function () {
+        disableDesktopHover();
+        if (window.innerWidth >= 992) {
+            enableDesktopHover();
+        }
+    });
 });
+
 
 document.addEventListener('submit', function (e) {
     var form = e.target;
