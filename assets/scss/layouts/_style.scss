@@ -3473,15 +3473,41 @@
       position: relative;
       img {
         width: 100%;
+        border-radius: 5px 5px;
       }
       h3 {
         position: absolute;
         top: auto;
-        left: 0;
+        left: 20px;
         right: auto;
-        bottom: 25px;
+        bottom: 20px;
         content: "";
         color: #fff;
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 600;
+        @include max(767px) {
+          font-size: 18px;
+          line-height: 20px;
+          bottom: 20px;
+          left: 20px;
+        }
+        @include max(575px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+    ul {
+      display: flex;
+      overflow-x: auto;
+      gap: 7px;
+      li {
+        flex-shrink: 0;
+        width: 48%;
+        @include max(575px) {
+          width: 85%;
+        }
       }
     }
   }

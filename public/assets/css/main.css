@@ -5935,15 +5935,47 @@ body {
 }
 .sa-page .ab-detail .img-hold img {
   width: 100%;
+  border-radius: 5px 5px;
 }
 .sa-page .ab-detail .img-hold h3 {
   position: absolute;
   top: auto;
-  left: 0;
+  left: 20px;
   right: auto;
-  bottom: 25px;
+  bottom: 20px;
   content: "";
   color: #fff;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .sa-page .ab-detail .img-hold h3 {
+    font-size: 18px;
+    line-height: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .sa-page .ab-detail .img-hold h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.sa-page .ab-detail ul {
+  display: flex;
+  overflow-x: auto;
+  gap: 7px;
+}
+.sa-page .ab-detail ul li {
+  flex-shrink: 0;
+  width: 48%;
+}
+@media (max-width: 575px) {
+  .sa-page .ab-detail ul li {
+    width: 85%;
+  }
 }
 @media (max-width: 992px) {
   .sa-page .uni-list ul {
