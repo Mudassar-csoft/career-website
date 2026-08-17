@@ -33,25 +33,25 @@
         <div class="row g-3 d-none d-md-flex">
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img29.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img70.png') }}" alt="">
                     <h3>Study in USA</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img30.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img71.png') }}" alt="">
                     <h3>Study in USA</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img31.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img72.png') }}" alt="">
                     <h3>Study in USA</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img32.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img73.png') }}" alt="">
                     <h3>Study in USA</h3>
                 </div>
             </div>
@@ -61,25 +61,25 @@
                 <ul>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img29.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img70.png') }}" alt="">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img30.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img71.png') }}" alt="">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img31.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img72.png') }}" alt="">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img32.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img73.png') }}" alt="">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
