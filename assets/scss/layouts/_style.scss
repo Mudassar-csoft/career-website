@@ -2273,9 +2273,13 @@
     background-size: 100%;
     @include max(1400px) {
       background-size: cover;
+      padding: 3rem 5rem;
+    }
+    @include max(767px) {
       padding: 3rem 1.5rem;
     }
     h2 {
+      
       color: #fff;
       font-size: 38px;
       line-height: 42px;
@@ -3191,10 +3195,13 @@
 .sa-page {
   .top-banner {
     @include top-banner;
-    padding: 7rem 0 0;
+    padding: 8rem 0 0;
     background: url(../images/banner11.png) no-repeat center center;
     background-size: 100%;
     text-align: left;
+    @include max(1400px) {
+      background-size: cover;
+    }
     .sm-box {
       @include sm-box;
       padding: 25px 25px;
@@ -3208,6 +3215,14 @@
       margin: 0 0 40px;
       text-align: center;
       font-weight: 700;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @include max(992px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     .feature-slider {
       .slick-slide {
@@ -3259,9 +3274,15 @@
   .blog-area {
     padding: 5rem 0;
     background: #01a1b403;
+    @include max(1400px) {
+      padding: 3rem 0;
+    }
   }
   .abrod-info {
     padding: 4rem 0;
+    @include max(1400px) {
+      padding: 2rem 0;
+    }
     .t-bar {
       h2 {
         font-size: 36px;
@@ -3270,6 +3291,14 @@
         font-weight: 700;
         margin: 0 0 15px;
         letter-spacing: 0.3px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 35px;
+        }
+        @include max(992px) {
+          font-size: 30px;
+          line-height: 35px;
+      }
       }
       p {
         font-size: 18px;
@@ -3277,6 +3306,14 @@
         color: #2f2f2f;
         font-weight: 400;
         margin: 0 0 15px;
+        @include max(1400px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        @include max(575px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
     .img-hold {
@@ -3289,7 +3326,7 @@
       }
     }
     .form-block {
-      padding: 4rem 2rem;
+      padding: 4rem 7rem;
       background: url(../images/banner12.png) no-repeat center center;
       background-size: 100%;
       h2 {
@@ -3299,6 +3336,14 @@
         font-weight: 700;
         margin: 0 0 40px;
         text-align: center;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 35px;
+        }
+        @include max(992px) {
+          font-size: 30px;
+          line-height: 35px;
+        }
       }
       input {
         @include inputbar;
@@ -3320,6 +3365,14 @@
       color: #000;
       font-weight: 700;
       margin: 0 0 30px;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @include max(992px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     .box {
       background: linear-gradient(107.69deg, #009db8 1.33%, #03c587 100%);
@@ -3340,6 +3393,10 @@
         color: #fff;
         font-weight: 500;
         margin: 0;
+        @include max(1400px) {
+          font-size: 18px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -3352,6 +3409,14 @@
       font-weight: 700;
       margin: 0 0 20px;
       text-align: center;
+      @include max(1400px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @include max(992px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
     p {
       font-size: 18px;
@@ -3524,16 +3589,11 @@
         }
         .apply-btn {
           background: #00a9c7;
-
           color: #fff;
-
           border: 1px solid #00a9c7;
-
           &:hover {
             background: #008da7;
-
             border-color: #008da7;
-
             color: #fff;
           }
         }
