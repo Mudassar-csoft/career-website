@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="row col-md-none">
+        <div class="row d-md-none">
             <div class="col-lg-12">
                 <ul>
                     <li>
