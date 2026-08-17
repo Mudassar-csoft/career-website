@@ -64,7 +64,7 @@
                             <div class="col-lg-12">
                                 <h6>Popular Universities</h6>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 d-none d-lg-block">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/img47.png') }}" alt="">
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 d-none d-lg-block">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/img48.png') }}" alt="">
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 d-none d-lg-block">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/img49.png') }}" alt="">
@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 d-none d-lg-block">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/img50.png') }}" alt="">
@@ -111,6 +111,58 @@
                                         <span>UK</span>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-12 d-lg-none">
+                                <ul>
+                                    <li>
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="{{ asset('assets/images/img47.png') }}" alt="">
+                                            </div>
+                                            <div class="txt-bar">
+                                                <h3>University of</h3>
+                                                <h2>Toronto</h2>
+                                                <span>Canada</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="{{ asset('assets/images/img48.png') }}" alt="">
+                                            </div>
+                                            <div class="txt-bar">
+                                                <h3>University of</h3>
+                                                <h2>Sydney</h2>
+                                                <span>Australia</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="{{ asset('assets/images/img49.png') }}" alt="">
+                                            </div>
+                                            <div class="txt-bar">
+                                                <h3>Arizona State</h3>
+                                                <h2>University</h2>
+                                                <span>USA</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <div class="img-hold">
+                                                <img src="{{ asset('assets/images/img50.png') }}" alt="">
+                                            </div>
+                                            <div class="txt-bar">
+                                                <h3>University of</h3>
+                                                <h2>Essex</h2>
+                                                <span>UK</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="row mt-4">
@@ -173,7 +225,7 @@
                             <div class="col-lg-7">
                                 <div class="aj-box">
                                     <div class="row align-items-center">
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-7 mb-4 mb-lg-0">
                                             <h2>
                                                 Ready to Start Your <br>
                                                 Study Abroad Journey? 
@@ -333,8 +385,8 @@
 								<h2>Latest Blogs</h2>
 							</div>
 						</div>
-						<div class="row mb-5">
-							<div class="col-lg-3">
+						<div class="row mb-5 g-3">
+							<div class="col-lg-3 col-sm-6">
 								<div class="block">
 									<div class="img-hold">
 										<img src="{{ asset('assets/images/img13.png') }}" alt="">
@@ -350,7 +402,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-3 col-sm-6">
 								<div class="block">
 									<div class="img-hold">
 										<img src="{{ asset('assets/images/img13.png') }}" alt="">
@@ -366,7 +418,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-3 col-sm-6">
 								<div class="block">
 									<div class="img-hold">
 										<img src="{{ asset('assets/images/img13.png') }}" alt="">
@@ -382,7 +434,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-3">
+							<div class="col-lg-3 col-sm-6">
 								<div class="block">
 									<div class="img-hold">
 										<img src="{{ asset('assets/images/img13.png') }}" alt="">
@@ -408,7 +460,7 @@
 						</div>
 					</div>
 				</section>
-                <section class="abrod-info">
+                {{-- <section class="abrod-info">
                     <div class="container">
                         <div class="row align-items-center mb-5">
                             <div class="col-lg-6">
@@ -460,7 +512,7 @@
                             </div>
                         </div>
                     </div>
-                </section>  
+                </section>   --}}
                 <section class="ser-area">
                     <div class="container">
                         <div class="row">
@@ -468,8 +520,8 @@
                                 <h2>Our Services</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-3">
+                        <div class="row g-3">
+                            <div class="col-lg-3 col-6">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/icon44.svg') }}" alt="">
@@ -479,7 +531,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-6">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/icon45.svg') }}" alt="">
@@ -489,7 +541,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-6">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/icon46.svg') }}" alt="">
@@ -499,7 +551,7 @@
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-lg-3 col-6">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ asset('assets/images/icon47.svg') }}" alt="">
@@ -569,38 +621,4 @@
 @endsection
 
 @push('scripts')
-<script>
-$('.country-slider').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: false,
-            infinite: true,
-            autoplay: false,
-            autoplaySpeed: 2500,
-            speed: 800,
-            centerMode: true,
-            centerPadding: '0px',
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-</script>
 @endpush

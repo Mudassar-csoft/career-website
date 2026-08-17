@@ -3263,11 +3263,17 @@
         left: -6rem;
         background: url(../images/icon42.png) no-repeat center center;
         background-size: 100%;
+        @include max(1400px) {
+          left: -1rem;
+        }
       }
       .slick-next {
         right: -6rem;
         background: url(../images/icon43.png) no-repeat center center;
         background-size: 100%;
+        @include max(1400px) {
+          right: -1rem;
+        }
       }
     }
   }
@@ -3329,6 +3335,9 @@
       padding: 4rem 7rem;
       background: url(../images/banner12.png) no-repeat center center;
       background-size: 100%;
+      @include max(1400px) {
+        background-size: cover;
+      }
       h2 {
         font-size: 38px;
         line-height: 40px;
@@ -3358,6 +3367,9 @@
   }
   .ser-area {
     padding: 3rem 0 4rem;
+    @include max(575px) {
+      padding: 2rem 0;
+    }
     h2 {
       text-align: center;
       font-size: 38px;
@@ -3381,11 +3393,21 @@
       text-align: center;
       border-radius: 10px 10px;
       transition: transform 0.3s ease;
+      @include max(575px) {
+        padding: 20px 20px;
+      }
       &:hover {
         transform: translateY(-7px);
       }
       .img-hold {
         margin: 0 0 15px;
+        @include max(575px) {
+          height: 45px;
+          margin: 0 0 10px;
+          img {
+            height: 100%;
+          }
+        }
       }
       h3 {
         font-size: 24px;
@@ -3397,11 +3419,18 @@
           font-size: 18px;
           line-height: 20px;
         }
+        @include max(575px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
   }
   .ab-detail {
     padding: 4rem 0 0;
+    @include max(992px) {
+      padding: 2rem 0 0;
+    }
     h2 {
       font-size: 38px;
       line-height: 40px;
@@ -3417,6 +3446,10 @@
         font-size: 30px;
         line-height: 35px;
       }
+      @include max(575px) {
+        font-size: 25px;
+        line-height: 30px;
+      }
     }
     p {
       font-size: 18px;
@@ -3425,6 +3458,16 @@
       font-weight: 400;
       margin: 0 0 50px;
       text-align: center;
+      @include max(1400px) {
+        font-size: 16px;
+        line-height: 18px;
+        margin: 0 0 30px;
+      }
+      @include max(1200px) {
+        br {
+          display: none;
+        }
+      }
     }
     .img-hold {
       position: relative;
@@ -3443,6 +3486,22 @@
     }
   }
   .uni-list {
+    @include max(992px) {
+      ul {
+        overflow-x: auto;
+        width: 100%;
+        display: flex;
+        li {
+          flex-shrink: 0;
+          width: 47%;
+          margin: 10px 10px;
+          @include max(575px) {
+            width: 85%;
+            margin: 7px 7px;
+          }
+        }
+      }
+    }
     padding: 4rem 0 3rem;
     h6 {
       text-align: center;
@@ -3459,6 +3518,7 @@
       @include max(767px) {
         font-size: 25px;
         line-height: 27px;
+        margin: 0 0 20px;
       }
     }
     .box {
@@ -3525,6 +3585,9 @@
       flex-wrap: wrap;
       gap: 10px;
       margin: 0 0 20px;
+      @include max(992px) {
+        gap: 8px;
+      }
       li {
         width: 31%;
         border: 1px solid #eaeaea;
@@ -3532,6 +3595,15 @@
         padding: 15px 15px;
         border-radius: 10px 10px;
         text-align: center;
+        @include max(992px) {
+          width: 32.5%;
+        }
+        @include max(767px) {
+          width: 32%;
+        }
+        @include max(575px) {
+          width: 48.5%;
+        }
         img {
           margin: 0 0 15px;
         }
@@ -3549,12 +3621,27 @@
       border-radius: 50px 0 0 0;
       height: 100%;
       padding: 10px 15px 0 30px;
+      @include max(992px) {
+        padding: 40px 20px 0;
+        border-radius: 40px 40px 0 0;
+      }
       h2 {
         font-size: 27px;
         line-height: 30px;
         color: #fff;
         font-weight: 700;
         margin: 0 0 15px;
+        @include max(1200px) {
+          font-size: 22px;
+          line-height: 24px;
+          margin: 0 0 10px;
+        }
+        @include max(992px) {
+          text-align: center;
+        }
+        @include max(575px) {
+          text-align: left;
+        }
       }
       p {
         margin: 0;
@@ -3563,12 +3650,27 @@
         font-weight: 400;
         color: #fff;
         margin: 0 0 20px;
+        @include max(1200px) {
+          margin: 0 0 15px;
+        }
+        @include max(992px) {
+          text-align: center;
+        }
+        @include max(575px) {
+          text-align: left;
+        }
       }
       .action-buttons {
         gap: 8px;
+        @include max(992px) {
+          justify-content: center;
+        }
+        @include max(575px) {
+          justify-content: flex-start;
+        }
         .btn {
           min-height: 40px;
-          display: inline-flex;
+          display: flex;
           align-items: center;
           justify-content: center;
           padding: 0 14px;
@@ -3577,6 +3679,10 @@
           font-weight: 700;
           line-height: 1;
           transition: all 0.3s ease;
+          @include max(1200px) {
+            padding: 0 10px;
+            font-size: 12px;
+          }
         }
         .consultation-btn {
           background: #fff;
@@ -3596,6 +3702,14 @@
             border-color: #008da7;
             color: #fff;
           }
+        }
+      }
+      .img-hold {
+        @include max(992px) {
+          text-align: center;
+        }
+        @include max(575px) {
+          text-align: left;
         }
       }
     }
