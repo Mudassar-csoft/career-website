@@ -29,7 +29,11 @@ class CourseController extends Controller
             'screens' => $this->screens(),
             'active' => 'courses',
             'course' => new Course,
-            'categories' => CourseCategory::orderBy('name')->get(),
+            'categories' => CourseCategory::sortFixed(
+                CourseCategory::query()
+                    ->whereIn('slug', CourseCategory::fixedSlugs())
+                    ->get()
+            ),
             'modes' => CourseMode::orderBy('name')->get(),
         ]);
     }
@@ -53,7 +57,11 @@ class CourseController extends Controller
             'screens' => $this->screens(),
             'active' => 'courses',
             'course' => $course,
-            'categories' => CourseCategory::orderBy('name')->get(),
+            'categories' => CourseCategory::sortFixed(
+                CourseCategory::query()
+                    ->whereIn('slug', CourseCategory::fixedSlugs())
+                    ->get()
+            ),
             'modes' => CourseMode::orderBy('name')->get(),
         ]);
     }
@@ -88,16 +96,9 @@ class CourseController extends Controller
 
     public function storeCategory(Request $request)
     {
-        $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255', 'unique:course_categories,name'],
-        ]);
-
-        $category = CourseCategory::create([
-            'name' => $validated['name'],
-            'slug' => Str::slug($validated['name']),
-        ]);
-
-        return response()->json($category);
+        return response()->json([
+            'message' => 'Course categories are fixed and cannot be added from the dashboard.',
+        ], 422);
     }
 
     public function storeMode(Request $request)

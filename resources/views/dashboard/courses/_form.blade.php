@@ -57,15 +57,12 @@
 <div class="dash-form-row">
     <div class="dash-form-group">
         <label for="course-category">Category</label>
-        <div class="dash-type-row">
-            <select id="course-category" name="course_category_id" required>
-                <option value="">Select a category</option>
-                @foreach ($categories as $category)
-                    <option value="{{ $category->id }}" @selected(old('course_category_id', $course->course_category_id) == $category->id)>{{ $category->name }}</option>
-                @endforeach
-            </select>
-            <button type="button" class="dash-icon-btn-add" id="course-category-add-btn" aria-label="Add category">+</button>
-        </div>
+        <select id="course-category" name="course_category_id" required>
+            <option value="">Select a category</option>
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}" @selected(old('course_category_id', $course->course_category_id) == $category->id)>{{ $category->name }}</option>
+            @endforeach
+        </select>
         @error('course_category_id')
             <p class="dash-form-error">{{ $message }}</p>
         @enderror

@@ -82,11 +82,13 @@ class PublicCourseController extends Controller
             'selectedDurations' => $selectedDurations,
             'courses' => (clone $coursesQuery)->latest()->paginate(9)->withQueryString(),
             'featuredCourses' => $featuredCourses,
-            'categories' => CourseCategory::query()
-                ->withCount('courses')
-                ->with(['courses' => fn ($query) => $query->select('id', 'course_category_id', 'title')->latest()])
-                ->orderBy('name')
-                ->get(),
+            'categories' => CourseCategory::sortFixed(
+                CourseCategory::query()
+                    ->whereIn('slug', CourseCategory::fixedSlugs())
+                    ->withCount('courses')
+                    ->with(['courses' => fn ($query) => $query->select('id', 'course_category_id', 'title')->latest()])
+                    ->get()
+            ),
             'modes' => CourseMode::query()
                 ->withCount('courses')
                 ->whereHas('courses')

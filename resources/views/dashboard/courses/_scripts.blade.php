@@ -212,17 +212,6 @@
     }
 
     wireAddModal({
-        modal: 'course-category-modal',
-        addBtn: 'course-category-add-btn',
-        cancelBtn: 'course-category-cancel',
-        saveBtn: 'course-category-save',
-        nameInput: 'course-category-name',
-        errorEl: 'course-category-error',
-        select: 'course-category',
-        url: '{{ route('dashboard.courses.categories.store') }}',
-    });
-
-    wireAddModal({
         modal: 'course-mode-modal',
         addBtn: 'course-mode-add-btn',
         cancelBtn: 'course-mode-cancel',

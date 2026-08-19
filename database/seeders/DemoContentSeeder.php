@@ -29,11 +29,11 @@ class DemoContentSeeder extends Seeder
     protected function seedCourses(): void
     {
         $categories = collect([
-            'Digital Marketing',
-            'Web Development',
+            'Digital Marketing & E-Commerce',
+            'Web & Software Development',
             'AI & Data Science',
-            'Graphic Design & UI/UX',
-            'Cybersecurity & Networking',
+            'Graphic Design, UI/UX & Creative Media',
+            'Cybersecurity, Networking & Cloud',
         ])->mapWithKeys(fn ($name) => [$name => CourseCategory::firstOrCreate(
             ['slug' => Str::slug($name)],
             ['name' => $name]
@@ -47,7 +47,7 @@ class DemoContentSeeder extends Seeder
         $courses = [
             [
                 'title' => 'Digital Marketing & SEO Complete Course',
-                'category' => 'Digital Marketing',
+                'category' => 'Digital Marketing & E-Commerce',
                 'mode' => 'Online',
                 'duration_weeks' => 12,
                 'subtitle' => 'Master SEO, social media marketing, Google Ads, and analytics to grow businesses and build your career.',
@@ -76,7 +76,7 @@ class DemoContentSeeder extends Seeder
             ],
             [
                 'title' => 'Full Stack Web Development (MERN)',
-                'category' => 'Web Development',
+                'category' => 'Web & Software Development',
                 'mode' => 'Hybrid',
                 'duration_weeks' => 24,
                 'subtitle' => 'Build and deploy real-world web applications using MongoDB, Express, React, and Node.js.',
@@ -134,7 +134,7 @@ class DemoContentSeeder extends Seeder
             ],
             [
                 'title' => 'UI/UX & Graphic Designing Masterclass',
-                'category' => 'Graphic Design & UI/UX',
+                'category' => 'Graphic Design, UI/UX & Creative Media',
                 'mode' => 'On-Campus',
                 'duration_weeks' => 10,
                 'subtitle' => 'Design beautiful, user-friendly interfaces and build a professional design portfolio from scratch.',
@@ -162,7 +162,7 @@ class DemoContentSeeder extends Seeder
             ],
             [
                 'title' => 'Cybersecurity & Ethical Hacking',
-                'category' => 'Cybersecurity & Networking',
+                'category' => 'Cybersecurity, Networking & Cloud',
                 'mode' => 'Hybrid',
                 'duration_weeks' => 14,
                 'subtitle' => 'Learn network security, ethical hacking, and defensive techniques used by real security professionals.',
