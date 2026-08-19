@@ -75,12 +75,16 @@
         -webkit-line-clamp: 2;
     }
     .courses-page .cor-block ul li a .box .t-hold p {
-        min-height: 20px;
+        min-height: 42px;
         margin: 0;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 13px;
+        line-height: 18px;
         color: #5f6b76;
         text-align: center;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
     }
     @media (max-width: 1200px) {
         .courses-page .cor-block ul {
@@ -216,11 +220,19 @@
             return 'No courses';
         }
 
-        if ($category->courses_count === 1) {
-            return '1 course';
+        $titles = collect($category->courses ?? [])
+            ->pluck('title')
+            ->filter()
+            ->take(2)
+            ->values();
+
+        $summary = $titles->implode(', ');
+
+        if ($category->courses_count > 2) {
+            $summary .= ' ...';
         }
 
-        return $category->courses_count.' courses';
+        return $summary !== '' ? $summary : 'No courses';
     };
 
     $durationOptions = [
