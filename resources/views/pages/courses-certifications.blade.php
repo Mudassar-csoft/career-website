@@ -1,6 +1,34 @@
 @extends('layouts.app')
 @section('title', 'Courses & Certifications | Career Website')
 @section('body_class', 'courses-page')
+@push('styles')
+<style>
+    .courses-page .catalog-note {
+        margin: 12px 0 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6b76;
+    }
+    .courses-page .catalog-note a {
+        color: #009db8;
+        font-weight: 600;
+    }
+    .courses-page .text-box.is-active,
+    .courses-page .cor-block .box.is-active {
+        border-color: #03c587;
+        box-shadow: 0 0 0 2px rgba(3, 197, 135, 0.12);
+    }
+    .courses-page .course-empty {
+        padding: 18px 20px;
+        border: 1px solid #d9dfe5;
+        border-radius: 12px;
+        background: #fff;
+        color: #5f6b76;
+        font-size: 15px;
+        line-height: 22px;
+    }
+</style>
+@endpush
 @section('content')
 <section class="cer-bar">
     <div class="container">
@@ -15,18 +43,27 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="form-block">
-                    <form action="#">
+                    <form action="{{ route('courses-certifications') }}#all-courses" method="GET">
+                        @foreach ($selectedCategories as $selectedCategory)
+                            <input type="hidden" name="categories[]" value="{{ $selectedCategory }}">
+                        @endforeach
+                        @foreach ($selectedModes as $selectedMode)
+                            <input type="hidden" name="modes[]" value="{{ $selectedMode }}">
+                        @endforeach
+                        @foreach ($selectedDurations as $selectedDuration)
+                            <input type="hidden" name="durations[]" value="{{ $selectedDuration }}">
+                        @endforeach
                         <div class="input-group mb-4">
-                            <input type="text" class="form-control sc-iput" placeholder="Search courses and certifications that match your goals." aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
+                            <input type="text" class="form-control sc-iput" name="search" value="{{ $search }}" placeholder="Search courses and certifications that match your goals." aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
                         </div>
                     </form>
                 </div>
                 <div class="cor-slider mb-lg-3">
                     @forelse ($categories as $cat)
                         <div>
-                            <div class="text-box">
-                                <a href="{{ route('courses-certifications') }}#course-{{ $cat->slug }}">{{ $cat->name }}</a>
+                            <div class="text-box @if (in_array($cat->slug, $selectedCategories, true)) is-active @endif">
+                                <a href="{{ route('courses-certifications', ['categories' => [$cat->slug]]) }}#all-courses">{{ $cat->name }}</a>
                             </div>
                         </div>
                     @empty
@@ -34,8 +71,8 @@
                 </div>
                 <div class="btn-area">
                     <ul>
-                        <li><a href="#">Explore all Courses</a></li>
-                        <li><a href="#">Get Started</a></li>
+                        <li><a href="#all-courses">Explore all Courses</a></li>
+                        <li><a href="#career-counseling">Get Started</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +95,67 @@
         </div>
     </div>
 </section>
+@php
+    $categoryIconMap = [
+        'ai' => 'assets/images/icon97.svg',
+        'data' => 'assets/images/icon97.svg',
+        'web' => 'assets/images/icon98.svg',
+        'software' => 'assets/images/icon98.svg',
+        'marketing' => 'assets/images/icon99.svg',
+        'commerce' => 'assets/images/icon99.svg',
+        'graphic' => 'assets/images/icon100.svg',
+        'ui' => 'assets/images/icon100.svg',
+        'ux' => 'assets/images/icon100.svg',
+        'creative' => 'assets/images/icon100.svg',
+        'cyber' => 'assets/images/icon101.svg',
+        'network' => 'assets/images/icon101.svg',
+        'cloud' => 'assets/images/icon101.svg',
+        'architecture' => 'assets/images/icon102.svg',
+        'engineering' => 'assets/images/icon102.svg',
+        'design' => 'assets/images/icon102.svg',
+        'office' => 'assets/images/icon103.svg',
+        'business' => 'assets/images/icon103.svg',
+        'accounting' => 'assets/images/icon103.svg',
+        'language' => 'assets/images/icon104.svg',
+        'test' => 'assets/images/icon104.svg',
+        'health' => 'assets/images/icon105.svg',
+        'safety' => 'assets/images/icon105.svg',
+        'compliance' => 'assets/images/icon105.svg',
+        'freelanc' => 'assets/images/icon106.svg',
+        'entrepreneur' => 'assets/images/icon106.svg',
+        'international' => 'assets/images/icon107.svg',
+        'certification' => 'assets/images/icon107.svg',
+        'professional' => 'assets/images/icon108.svg',
+        'soft' => 'assets/images/icon108.svg',
+    ];
+
+    $resolveCategoryIcon = function ($category) use ($categoryIconMap) {
+        $haystack = strtolower($category->slug.' '.$category->name);
+
+        foreach ($categoryIconMap as $keyword => $icon) {
+            if (str_contains($haystack, $keyword)) {
+                return asset($icon);
+            }
+        }
+
+        return asset('assets/images/icon97.svg');
+    };
+
+    $buildCategorySummary = function ($category) {
+        if ($category->courses_count === 1) {
+            return '1 course available in this track to build practical, job-ready skills.';
+        }
+
+        return $category->courses_count.' courses available in this track to build practical, job-ready skills.';
+    };
+
+    $durationOptions = [
+        '1-12' => '1 - 3 Months',
+        '13-24' => '3 - 6 Months',
+        '25-52' => '6 - 12 Months',
+        'flexible' => 'Flexible Pace',
+    ];
+@endphp
 <section class="cor-block">
     <div class="container">
         <div class="row">
@@ -66,198 +164,25 @@
             </div>
             <div class="col-lg-12">
                 <ul>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon97.svg') }}" alt="">
+                    @forelse ($categories as $category)
+                        <li>
+                            <a href="{{ route('courses-certifications', ['categories' => [$category->slug]]) }}#all-courses">
+                                <div class="box @if (in_array($category->slug, $selectedCategories, true)) is-active @endif">
+                                    <div class="img-hold">
+                                        <img src="{{ $resolveCategoryIcon($category) }}" alt="{{ $category->name }}">
+                                    </div>
+                                    <div class="t-hold">
+                                        <h4>{{ $category->name }}</h4>
+                                        <p>{{ $buildCategorySummary($category) }}</p>
+                                    </div>
                                 </div>
-                                <div class="t-hold">
-                                    <h4>AI & Data Science</h4>
-                                    <p>
-                                        AI, Machine Learning, Data Science, Python,
-                                        Data Analytics and Automation.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon98.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Web & Software Development</h4>
-                                    <p>
-                                        MERN Stack, PHP Laravel, Python Django,
-                                        WordPress and Mobile App Development.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon99.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Digital Marketing & E-Commerce</h4>
-                                    <p>
-                                        Digital Marketing, SEO, Google Ads,  TikTok,
-                                        Meta Ads, Shopify, Amazon and more.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon100.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Graphics, UI/UX & Creative Media</h4>
-                                    <p>
-                                        Graphic & UI/UX Designing, Video Editing,
-                                        Motion Graphics, Animation and Content Creation.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon101.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Cybersecurity, Networking & Cloud</h4>
-                                    <p>
-                                        Cybersecurity, Ethical Hacking, Networking
-                                        Administration, Cloud Computing and IT Support.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon102.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Architecture, Engineering & Design</h4>
-                                    <p>
-                                        AutoCAD, Revit Architecture, SketchUp,
-                                        3D Modelling and Interior Design 
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon103.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Office, Business & Accounting</h4>
-                                    <p>
-                                        Office Management, Computerized Accounting,
-                                        QuickBooks and Business Administration.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon104.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Language & Test Preparation</h4>
-                                    <p>
-                                        Spoken English, IELTS, PTE, Business English,
-                                        Grammar and Communication Skills.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon105.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Health, Safety & Compliance</h4>
-                                    <p>
-                                        NEBOSH, IOSH, OSHA, Workplace Safety,
-                                        Fire Safety and HSE
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon106.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Freelancing & Entrepreneurship</h4>
-                                    <p>
-                                        Freelancing, Personal Branding, Client Acquisition,
-                                        Business Development and Startup Skills.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon107.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>International Certifications</h4>
-                                    <p>
-                                        Cisco, Microsoft, AWS, Autodesk, Oracle, SAP,
-                                        PMI, EC-Council and more.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon108.svg') }}" alt="">
-                                </div>
-                                <div class="t-hold">
-                                    <h4>Professional & Soft Skills</h4>
-                                    <p>
-                                        Leadership, Communication, Presentation Skills,
-                                        Career Development and Workplace Ethics.
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                            </a>
+                        </li>
+                    @empty
+                        <li>
+                            <div class="course-empty">No course categories available yet.</div>
+                        </li>
+                    @endforelse
                 </ul>
             </div>
         </div>
@@ -305,6 +230,9 @@
                             </div>
                         </div>
                     @empty
+                        <div>
+                            <div class="course-empty">No featured courses match the current filters.</div>
+                        </div>
                     @endforelse
                 </div>
             </div>
@@ -324,8 +252,8 @@
                         </div>
                         <div class="col-md-4 col-sm-5">
                             <ul>
-                                <li><a href="#" class="btn gs-btn">Get Started</a></li>
-                                <li><a href="#" class="btn eac-btn">Explore All Courses</a></li>
+                                <li><a href="#career-counseling" class="btn gs-btn">Get Started</a></li>
+                                <li><a href="#all-courses" class="btn eac-btn">Explore All Courses</a></li>
                             </ul>
                         </div>
                     </div>
@@ -334,7 +262,7 @@
         </div>
     </div>
 </section>
-<section class="acc-area">
+<section class="acc-area" id="all-courses">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -348,128 +276,64 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-4">
                             <aside class="course-sidebar">
-                                <h2 class="sidebar-title">
-                                    Search Courses
-                                </h2>
-                                <!-- Search -->
-                                <div class="search-box">
-                                    <input type="text" class="form-control" placeholder="Search for Courses">
-                                    <button type="button"><i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </div>
-                                <!-- Categories -->
-                                <div class="filter-box">
-                                    <div class="filter-title">
-                                        <h4>Categories</h4>
-                                        <a href="#">Clear all</a>
+                                <form action="{{ route('courses-certifications') }}#all-courses" method="GET" id="course-filter-form">
+                                    <h2 class="sidebar-title">
+                                        Search Courses
+                                    </h2>
+                                    <div class="search-box">
+                                        <input type="text" class="form-control" name="search" value="{{ $search }}" placeholder="Search for Courses">
+                                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                AI & Data Science
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Digital Marketing & E-Commerce
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Graphics, UI/UX Creative Media
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Architecture, Engineering & Design
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Health, Safety & Professional Compliance
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Web & Software Development
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Cyber Security
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Office, Business & Accounting
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <!-- Teaching Method -->
-
-                                <div class="filter-box">
-                                    <div class="filter-title">
-                                        <h4>Teaching Method</h4>
+                                    <div class="filter-box">
+                                        <div class="filter-title">
+                                            <h4>Categories</h4>
+                                            <a href="{{ route('courses-certifications') }}#all-courses">Clear all</a>
+                                        </div>
+                                        <ul>
+                                            @foreach ($categories as $category)
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="form-check-input course-filter-auto" name="categories[]" value="{{ $category->slug }}" @checked(in_array($category->slug, $selectedCategories, true))>
+                                                        {{ $category->name }}
+                                                    </label>
+                                                </li>
+                                            @endforeach
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                On-Campus
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Online
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                Hybrid
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
 
-                                <!-- Duration -->
-
-                                <div class="filter-box">
-                                    <div class="filter-title">
-                                        <h4>Duration</h4>
+                                    <div class="filter-box">
+                                        <div class="filter-title">
+                                            <h4>Teaching Method</h4>
+                                        </div>
+                                        <ul>
+                                            @foreach ($modes as $mode)
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="form-check-input course-filter-auto" name="modes[]" value="{{ $mode->slug }}" @checked(in_array($mode->slug, $selectedModes, true))>
+                                                        {{ $mode->name }}
+                                                    </label>
+                                                </li>
+                                            @endforeach
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                1 - 3 Months
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                3 - 6 Months
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label>
-                                                <input type="checkbox" class="form-check-input">
-                                                6 - 12 Months
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
+
+                                    <div class="filter-box">
+                                        <div class="filter-title">
+                                            <h4>Duration</h4>
+                                        </div>
+                                        <ul>
+                                            @foreach ($durationOptions as $durationValue => $durationLabel)
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" class="form-check-input course-filter-auto" name="durations[]" value="{{ $durationValue }}" @checked(in_array($durationValue, $selectedDurations, true))>
+                                                        {{ $durationLabel }}
+                                                    </label>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </form>
                             </aside>
                         </div>
 
@@ -479,8 +343,14 @@
                                     <div class="col-lg-12">
                                         <div class="course-top-bar">
                                             <h3>
-                                                <strong>Showing</strong> {{ $courses->count() }} of {{ $courses->count() }} Courses
+                                                <strong>Showing</strong> {{ $courses->count() }} of {{ $courses->total() }} Courses
                                             </h3>
+                                            @if ($search !== '' || ! empty($selectedCategories) || ! empty($selectedModes) || ! empty($selectedDurations))
+                                                <p class="catalog-note">
+                                                    Filtered results.
+                                                    <a href="{{ route('courses-certifications') }}#all-courses">Reset catalog</a>
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -527,55 +397,40 @@
                                         </div>
                                     @empty
                                         <div class="col-lg-12">
-                                            <p>No courses published yet. Check back soon.</p>
+                                            <div class="course-empty">No courses match the current search or filters.</div>
                                         </div>
                                     @endforelse
                                 </div>
 
-
-                                <!-- Pagination -->
-
-                                <nav class="pagination-wrap mt-3">
-                                    <ul class="pagination justify-content-center">
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                <i class="fas fa-chevron-left"></i>
-                                                Previous
-                                            </a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="#">
-                                                1
-                                            </a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                2
-                                            </a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                3
-                                            </a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                4
-                                            </a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                5
-                                            </a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                Next
-                                               <i class="fas fa-chevron-right"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                                @if ($courses->hasPages())
+                                    @php
+                                        $startPage = max(1, $courses->currentPage() - 2);
+                                        $endPage = min($courses->lastPage(), $courses->currentPage() + 2);
+                                    @endphp
+                                    <nav class="pagination-wrap mt-3">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item @if ($courses->onFirstPage()) disabled @endif">
+                                                <a class="page-link" href="{{ $courses->onFirstPage() ? '#' : $courses->previousPageUrl().'#all-courses' }}">
+                                                    <i class="fas fa-chevron-left"></i>
+                                                    Previous
+                                                </a>
+                                            </li>
+                                            @foreach ($courses->getUrlRange($startPage, $endPage) as $page => $url)
+                                                <li class="page-item @if ($page === $courses->currentPage()) active @endif">
+                                                    <a class="page-link" href="{{ $url }}#all-courses">
+                                                        {{ $page }}
+                                                    </a>
+                                                </li>
+                                            @endforeach
+                                            <li class="page-item @if (! $courses->hasMorePages()) disabled @endif">
+                                                <a class="page-link" href="{{ $courses->hasMorePages() ? $courses->nextPageUrl().'#all-courses' : '#' }}">
+                                                    Next
+                                                   <i class="fas fa-chevron-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -584,7 +439,7 @@
         </div>
     </div>
 </section>
-<section class="info-bar">
+<section class="info-bar" id="career-counseling">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -888,5 +743,20 @@
             ]
         });
     }
+</script>
+<script>
+    (function () {
+        var filterForm = document.getElementById('course-filter-form');
+
+        if (!filterForm) {
+            return;
+        }
+
+        filterForm.querySelectorAll('.course-filter-auto').forEach(function (input) {
+            input.addEventListener('change', function () {
+                filterForm.submit();
+            });
+        });
+    })();
 </script>
 @endpush
