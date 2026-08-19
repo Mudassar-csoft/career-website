@@ -30,7 +30,13 @@
     <label for="blog-image">Image</label>
     <input type="file" id="blog-image" name="image" accept="image/*">
     @if ($blog->image)
-        <img class="dash-image-preview" style="display:block;" src="{{ asset('storage/'.$blog->image) }}" alt="{{ $blog->title }}">
+        <img
+            class="dash-image-preview"
+            style="display:block;"
+            src="{{ asset('storage/'.$blog->image) }}"
+            alt=""
+            onerror="this.style.display='none';"
+        >
     @endif
     <img id="blog-image-preview" class="dash-image-preview" alt="Preview">
     @error('image')

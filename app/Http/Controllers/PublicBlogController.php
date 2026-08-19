@@ -3,16 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Http\Request;
 
 class PublicBlogController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $blogs = Blog::latest()->get();
+        $search = trim((string) $request->input('search', ''));
+
+        $blogsQuery = Blog::query()
+            ->when($search !== '', function ($query) use ($search) {
+                $query->where(function ($nested) use ($search) {
+                    $nested->where('title', 'like', "%{$search}%")
+                        ->orWhere('excerpt', 'like', "%{$search}%")
+                        ->orWhere('content', 'like', "%{$search}%");
+                });
+            });
 
         return view('pages.blogs', [
-            'blogs' => $blogs,
-            'popularBlogs' => $blogs->take(5),
+            'search' => $search,
+            'blogs' => (clone $blogsQuery)->latest()->paginate(6)->withQueryString(),
+            'popularBlogs' => Blog::latest()->take(5)->get(),
         ]);
     }
 

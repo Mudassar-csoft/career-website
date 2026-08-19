@@ -37,7 +37,9 @@
                     <div class="top-box">
                         <div class="new-search">
                             <h2>Search Blogs</h2>
-                            <input type="text" class="form-control" placeholder="Search">
+                            <form action="{{ route('blogs') }}" method="GET">
+                                <input type="text" class="form-control" name="search" value="{{ request('search') }}" placeholder="Search">
+                            </form>
                         </div>
                         <div class="rec-post">
                             <h3>Recent Posts</h3>

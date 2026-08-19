@@ -1,6 +1,20 @@
 @extends('layouts.app')
 @section('title', 'Blog | Career Website')
 @section('body_class', 'blog-page')
+@push('styles')
+<style>
+    .blog-page .search-note {
+        margin: 0 0 18px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6b76;
+    }
+    .blog-page .search-note a {
+        color: #009db8;
+        font-weight: 600;
+    }
+</style>
+@endpush
 @section('content')
 <section class="top-banner">
     <div class="container">
@@ -36,6 +50,12 @@
         <div class="row">
             <div class="col-lg-8">
                 <h2>Latest Articles</h2>
+                @if ($search !== '')
+                    <p class="search-note">
+                        Showing results for "{{ $search }}".
+                        <a href="{{ route('blogs') }}">Clear search</a>
+                    </p>
+                @endif
                 @forelse ($blogs as $blog)
                     <div class="box">
                         <div class="img-hold">
@@ -53,56 +73,46 @@
                         </div>
                     </div>
                 @empty
-                    <p>No blog posts published yet. Check back soon.</p>
+                    <p>No blog posts match your search right now.</p>
                 @endforelse
-                <nav class="pagination-wrap mt-4">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                <i class="fas fa-chevron-left"></i>
-                                Previous
-                            </a>
-                        </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">
-                                1
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                2
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                3
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                4
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                5
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                Next
-                                <i class="fas fa-chevron-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                @if ($blogs->hasPages())
+                    @php
+                        $startPage = max(1, $blogs->currentPage() - 2);
+                        $endPage = min($blogs->lastPage(), $blogs->currentPage() + 2);
+                    @endphp
+                    <nav class="pagination-wrap mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item @if ($blogs->onFirstPage()) disabled @endif">
+                                <a class="page-link" href="{{ $blogs->onFirstPage() ? '#' : $blogs->previousPageUrl() }}">
+                                    <i class="fas fa-chevron-left"></i>
+                                    Previous
+                                </a>
+                            </li>
+                            @foreach ($blogs->getUrlRange($startPage, $endPage) as $page => $url)
+                                <li class="page-item @if ($page === $blogs->currentPage()) active @endif">
+                                    <a class="page-link" href="{{ $url }}">
+                                        {{ $page }}
+                                    </a>
+                                </li>
+                            @endforeach
+                            <li class="page-item @if (! $blogs->hasMorePages()) disabled @endif">
+                                <a class="page-link" href="{{ $blogs->hasMorePages() ? $blogs->nextPageUrl() : '#' }}">
+                                    Next
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                @endif
             </div>
             <div class="col-lg-4">
                 <div class="rig-bar">
                     <div class="top-box">
                         <div class="new-search">
                             <h2>Search Blogs</h2>
-                            <input type="text" class="form-control" placeholder="Search">
+                            <form action="{{ route('blogs') }}" method="GET">
+                                <input type="text" class="form-control" name="search" value="{{ $search }}" placeholder="Search">
+                            </form>
                         </div>
                         <div class="rec-post">
                             <h3>Popular Articles</h3>
