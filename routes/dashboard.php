@@ -9,6 +9,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\EventRegistrantController;
+use App\Http\Controllers\FaqCategoryController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\NewsController;
@@ -91,6 +93,24 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
             Route::post('/', [GalleryImageController::class, 'store'])->name('store');
             Route::delete('/{galleryImage}', [GalleryImageController::class, 'destroy'])->name('destroy');
         });
+    });
+
+    Route::prefix('faqs')->name('faqs.')->group(function () {
+        Route::prefix('categories')->name('categories.')->group(function () {
+            Route::get('/', [FaqCategoryController::class, 'index'])->name('index')->middleware('can:faqs.view');
+            Route::get('/create', [FaqCategoryController::class, 'create'])->name('create')->middleware('can:faqs.create');
+            Route::post('/', [FaqCategoryController::class, 'store'])->name('store')->middleware('can:faqs.create');
+            Route::get('/{faqCategory}/edit', [FaqCategoryController::class, 'edit'])->name('edit')->middleware('can:faqs.edit');
+            Route::put('/{faqCategory}', [FaqCategoryController::class, 'update'])->name('update')->middleware('can:faqs.edit');
+            Route::delete('/{faqCategory}', [FaqCategoryController::class, 'destroy'])->name('destroy')->middleware('can:faqs.delete');
+        });
+
+        Route::get('/', [FaqController::class, 'index'])->name('index')->middleware('can:faqs.view');
+        Route::get('/create', [FaqController::class, 'create'])->name('create')->middleware('can:faqs.create');
+        Route::post('/', [FaqController::class, 'store'])->name('store')->middleware('can:faqs.create');
+        Route::get('/{faq}/edit', [FaqController::class, 'edit'])->name('edit')->middleware('can:faqs.edit');
+        Route::put('/{faq}', [FaqController::class, 'update'])->name('update')->middleware('can:faqs.edit');
+        Route::delete('/{faq}', [FaqController::class, 'destroy'])->name('destroy')->middleware('can:faqs.delete');
     });
 
     Route::prefix('alumni')->name('alumni.')->group(function () {

@@ -70,7 +70,12 @@ trait BuildsDashboardMenu
                 ['label' => 'Add Category', 'route' => 'dashboard.gallery.create', 'permission' => 'gallery.create'],
                 ['label' => 'All Categories', 'route' => 'dashboard.gallery.index', 'permission' => 'gallery.view'],
             ]],
-            ['key' => 'faq', 'label' => 'FAQ', 'type' => 'soon'],
+            ['key' => 'faqs', 'label' => 'FAQs', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Add FAQ', 'route' => 'dashboard.faqs.create', 'permission' => 'faqs.create'],
+                ['label' => 'All FAQs', 'route' => 'dashboard.faqs.index', 'permission' => 'faqs.view'],
+                ['label' => 'Add Category', 'route' => 'dashboard.faqs.categories.create', 'permission' => 'faqs.create'],
+                ['label' => 'All Categories', 'route' => 'dashboard.faqs.categories.index', 'permission' => 'faqs.view'],
+            ]],
             ['key' => 'administration', 'label' => 'Administration', 'type' => 'dropdown', 'children' => [
                 ['label' => 'All Users', 'route' => 'dashboard.users.index', 'permission' => 'users.view'],
                 ['label' => 'Roles & Permissions', 'route' => 'dashboard.roles.index', 'permission' => 'roles.view'],

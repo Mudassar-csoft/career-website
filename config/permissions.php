@@ -63,6 +63,16 @@ return [
         ],
     ],
 
+    'faqs' => [
+        'label' => 'FAQs',
+        'actions' => [
+            'view' => 'View FAQs',
+            'create' => 'Create FAQs & Categories',
+            'edit' => 'Edit FAQs & Categories',
+            'delete' => 'Delete FAQs & Categories',
+        ],
+    ],
+
     'alumni' => [
         'label' => 'Alumni',
         'actions' => [

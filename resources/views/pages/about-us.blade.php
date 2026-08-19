@@ -437,6 +437,8 @@
 		</div>
 	</div>
 </section>
+@include('partials.site-faq-section', ['withAos' => true])
+@if(false)
 <section class="faq-area">
 	<div class="container">
 		<div class="row">
@@ -491,6 +493,7 @@
 		</div>
 	</div>
 </section>
+@endif
 @endsection
 @push('scripts')
 @endpush

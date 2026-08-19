@@ -4,6 +4,7 @@ use App\Http\Controllers\EventRegistrationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
+use App\Http\Controllers\PublicFaqController;
 use App\Http\Controllers\PublicNewsController;
 use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,7 @@ Route::get('/news-detail/{news:slug}', [PublicNewsController::class, 'show'])->n
 
 Route::get('/blogs', [PublicBlogController::class, 'index'])->name('blogs');
 Route::get('/blog-detail/{blog:slug}', [PublicBlogController::class, 'show'])->name('blog-detail');
+Route::get('/faqs', [PublicFaqController::class, 'index'])->name('faqs');
 
 $pages = [
     ['uri' => '/about-us', 'view' => 'pages.about-us', 'name' => 'about'],
@@ -43,7 +45,6 @@ $pages = [
     ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
     ['uri' => '/category', 'view' => 'pages.category', 'name' => 'category'],
     ['uri' => '/event-detail', 'view' => 'pages.event-detail', 'name' => 'event-detail'],
-    ['uri' => '/faqs', 'view' => 'pages.faqs', 'name' => 'faqs'],
 ];
 
 foreach ($pages as $page) {

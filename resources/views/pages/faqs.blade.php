@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Faqs | Career Website')
+@section('title', 'FAQs | Career Website')
 @section('body_class', 'faqs-page')
 @section('content')
 <section class="top-banner">
@@ -13,10 +13,10 @@
                     Frequently Asked Questions
                 </h1>
                 <div class="form-block">
-                    <form action="#">
+                    <form action="{{ route('faqs') }}" method="GET">
                         <div class="input-group mb-4">
-                            <input type="text" class="form-control sc-iput" placeholder="Search for questions..." aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="http://127.0.0.1:8000/assets/images/icon94.svg" alt=""></button>
+                            <input type="text" class="form-control sc-iput" name="search" value="{{ $faqSearch }}" placeholder="Search for questions..." aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
                         </div>
                     </form>
                 </div>
@@ -31,67 +31,35 @@
                 <div class="col-lg-12">
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+                            <a href="{{ route('faqs', array_filter(['search' => $faqSearch ?: null])) }}" class="nav-link @if (! $selectedFaqCategory) active @endif">All</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Admissions</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Coworking Space</button>
-                        </li>
+                        @foreach ($faqCategories as $category)
+                            <li class="nav-item" role="presentation">
+                                <a href="{{ route('faqs', array_filter(['category' => $category->slug, 'search' => $faqSearch ?: null])) }}" class="nav-link @if ($selectedFaqCategory?->id === $category->id) active @endif">{{ $category->name }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <h4>All Categories</h4>
+                    <h4>{{ $selectedFaqCategory?->name ?? 'All Categories' }}</h4>
+                    @if ($faqSearch !== '')
+                        <p style="margin-bottom:18px;color:#667682;">Showing results for "{{ $faqSearch }}".</p>
+                    @endif
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                            <div class="accordion" id="accordionExample">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" tabindex="0">
+                            <div class="accordion">
                                 <div class="top-bar">
-                                    <h5>Courses</h5>
-                                    <span>8 Questions</span>
+                                    <h5>{{ $selectedFaqCategory?->name ?? 'All FAQs' }}</h5>
+                                    <span>{{ $filteredFaqs->count() }} Question{{ $filteredFaqs->count() === 1 ? '' : 's' }}</span>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            What courses do you offer?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            We offer a wid      
-                                        </div>   
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        1.Introduction to Digital Marketing
-                                    </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        1.Introduction to Digital Marketing
-                                    </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                    </div>
-                                </div>
+                                @include('partials.site-faq-accordion', [
+                                    'faqItems' => $filteredFaqs,
+                                    'accordionId' => 'faqs-page-accordion',
+                                ])
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -99,36 +67,27 @@
                         <div class="top-box">
                             <div class="new-search">
                                 <h2>Search</h2>
-                                <input type="text" class="form-control" placeholder="Search">
+                                <form action="{{ route('faqs') }}" method="GET">
+                                    @if ($selectedFaqCategory)
+                                        <input type="hidden" name="category" value="{{ $selectedFaqCategory->slug }}">
+                                    @endif
+                                    <input type="text" class="form-control" name="search" value="{{ $faqSearch }}" placeholder="Search">
+                                </form>
                             </div>
                         </div>
                         <div class="bottom-area">
                             <h3>Categories</h3>
                             <ul>
                                 <li>
-                                    <a href="#">All Categories</a>
-                                    <span>36</span>
+                                    <a href="{{ route('faqs', array_filter(['search' => $faqSearch ?: null])) }}" @if (! $selectedFaqCategory) style="font-weight:700;" @endif>All Categories</a>
+                                    <span>{{ $totalFaqCount }}</span>
                                 </li>
-                                <li>
-                                    <a href="#">Design</a>
-                                    <span>08</span>
-                                </li>
-                                <li>
-                                    <a href="#">Web Development</a>
-                                    <span>36</span>
-                                </li>
-                                <li>
-                                    <a href="#">Ai &amp; Data Science</a>
-                                    <span>36</span>
-                                </li>
-                                <li>
-                                    <a href="#">Achievements</a>
-                                    <span>36</span>
-                                </li>
-                                <li>
-                                    <a href="#">Workshops</a>
-                                    <span>36</span>
-                                </li>
+                                @foreach ($faqCategories as $category)
+                                    <li>
+                                        <a href="{{ route('faqs', array_filter(['category' => $category->slug, 'search' => $faqSearch ?: null])) }}" @if ($selectedFaqCategory?->id === $category->id) style="font-weight:700;" @endif>{{ $category->name }}</a>
+                                        <span>{{ $category->faqs_count }}</span>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -246,8 +205,9 @@
                     <p>
                         Please complete the form, and one of our representatives will get back to you shortly.
                     </p>
-                    <form class="row g-3 lead-form" method="POST" action="http://127.0.0.1:8000/subscribe">
-                        <input type="hidden" name="_token" value="B7U8NRX8nQ52PyUIBEdtKcVdUVatBmwXEJnZ9Bpk" autocomplete="off">                        <div class="col-md-6">
+                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
+                        <div class="col-md-6">
                             <input type="text" class="form-control" name="name" placeholder="Name">
                         </div>
                         <div class="col-md-6">
