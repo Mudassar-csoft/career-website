@@ -27,6 +27,76 @@
         font-size: 15px;
         line-height: 22px;
     }
+    .courses-page .cor-block ul {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        align-items: stretch;
+    }
+    .courses-page .cor-block ul li {
+        width: auto;
+        display: block;
+    }
+    .courses-page .cor-block ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .courses-page .cor-block ul li a .box {
+        min-height: 184px;
+        height: 100%;
+        padding: 22px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .courses-page .cor-block ul li a .box .img-hold {
+        height: 56px;
+        margin: 0 0 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .courses-page .cor-block ul li a .box .t-hold {
+        width: 100%;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .courses-page .cor-block ul li a .box .t-hold h4 {
+        min-height: 48px;
+        margin: 0 0 10px;
+        display: -webkit-box;
+        overflow: hidden;
+        text-align: center;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+    .courses-page .cor-block ul li a .box .t-hold p {
+        min-height: 20px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6b76;
+        text-align: center;
+    }
+    @media (max-width: 1200px) {
+        .courses-page .cor-block ul {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+    @media (max-width: 767px) {
+        .courses-page .cor-block ul {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+    @media (max-width: 575px) {
+        .courses-page .cor-block ul {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
 @endpush
 @section('content')
@@ -143,14 +213,14 @@
 
     $buildCategorySummary = function ($category) {
         if ($category->courses_count === 0) {
-            return 'No courses available in this track yet.';
+            return 'No courses';
         }
 
         if ($category->courses_count === 1) {
-            return '1 course available in this track to build practical, job-ready skills.';
+            return '1 course';
         }
 
-        return $category->courses_count.' courses available in this track to build practical, job-ready skills.';
+        return $category->courses_count.' courses';
     };
 
     $durationOptions = [
