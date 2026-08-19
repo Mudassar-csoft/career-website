@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Alumni;
 use App\Models\Collaborator;
+use App\Models\GalleryCategory;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -23,14 +24,27 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (! Schema::hasTable('alumni') || ! Schema::hasTable('collaborators')) {
-            return;
-        }
+        $hasAlumniTable = Schema::hasTable('alumni');
+        $hasCollaboratorsTable = Schema::hasTable('collaborators');
+        $hasGalleryTables = Schema::hasTable('gallery_categories') && Schema::hasTable('gallery_images');
 
-        View::composer('pages.*', function ($view) {
+        View::composer('pages.*', function ($view) use ($hasAlumniTable, $hasCollaboratorsTable, $hasGalleryTables) {
             $view->with([
-                'alumni' => Alumni::latest()->get(),
-                'collaborators' => Collaborator::latest()->get(),
+                'alumni' => $hasAlumniTable ? Alumni::latest()->get() : collect(),
+                'collaborators' => $hasCollaboratorsTable ? Collaborator::latest()->get() : collect(),
+                'siteGalleryCategories' => $hasGalleryTables
+                    ? GalleryCategory::query()
+                        ->where('is_active', true)
+                        ->with([
+                            'images' => fn ($query) => $query
+                                ->where('is_active', true)
+                                ->orderBy('sort_order')
+                                ->orderBy('id'),
+                        ])
+                        ->orderBy('sort_order')
+                        ->orderBy('name')
+                        ->get()
+                    : collect(),
             ]);
         });
     }

@@ -53,6 +53,16 @@ return [
         ],
     ],
 
+    'gallery' => [
+        'label' => 'Gallery',
+        'actions' => [
+            'view' => 'View Gallery',
+            'create' => 'Create Gallery Categories',
+            'edit' => 'Edit Gallery Categories & Photos',
+            'delete' => 'Delete Gallery Categories & Photos',
+        ],
+    ],
+
     'alumni' => [
         'label' => 'Alumni',
         'actions' => [

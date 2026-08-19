@@ -9,6 +9,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\EventRegistrantController;
+use App\Http\Controllers\GalleryCategoryController;
+use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RoleController;
@@ -74,6 +76,21 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::get('/{blog}/edit', [BlogController::class, 'edit'])->name('edit')->middleware('can:blogs.edit');
         Route::put('/{blog}', [BlogController::class, 'update'])->name('update')->middleware('can:blogs.edit');
         Route::delete('/{blog}', [BlogController::class, 'destroy'])->name('destroy')->middleware('can:blogs.delete');
+    });
+
+    Route::prefix('gallery')->name('gallery.')->group(function () {
+        Route::get('/', [GalleryCategoryController::class, 'index'])->name('index')->middleware('can:gallery.view');
+        Route::get('/create', [GalleryCategoryController::class, 'create'])->name('create')->middleware('can:gallery.create');
+        Route::post('/', [GalleryCategoryController::class, 'store'])->name('store')->middleware('can:gallery.create');
+        Route::get('/{galleryCategory}/edit', [GalleryCategoryController::class, 'edit'])->name('edit')->middleware('can:gallery.edit');
+        Route::put('/{galleryCategory}', [GalleryCategoryController::class, 'update'])->name('update')->middleware('can:gallery.edit');
+        Route::delete('/{galleryCategory}', [GalleryCategoryController::class, 'destroy'])->name('destroy')->middleware('can:gallery.delete');
+
+        Route::prefix('{galleryCategory}/images')->name('images.')->middleware('can:gallery.edit')->group(function () {
+            Route::get('/', [GalleryImageController::class, 'index'])->name('index');
+            Route::post('/', [GalleryImageController::class, 'store'])->name('store');
+            Route::delete('/{galleryImage}', [GalleryImageController::class, 'destroy'])->name('destroy');
+        });
     });
 
     Route::prefix('alumni')->name('alumni.')->group(function () {

@@ -66,7 +66,10 @@ trait BuildsDashboardMenu
                 ['label' => 'Add Collaborator', 'route' => 'dashboard.collaborators.create', 'permission' => 'collaborators.create'],
                 ['label' => 'All Collaborators', 'route' => 'dashboard.collaborators.index', 'permission' => 'collaborators.view'],
             ]],
-            ['key' => 'gallery', 'label' => 'Gallery', 'type' => 'soon'],
+            ['key' => 'gallery', 'label' => 'Gallery', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Add Category', 'route' => 'dashboard.gallery.create', 'permission' => 'gallery.create'],
+                ['label' => 'All Categories', 'route' => 'dashboard.gallery.index', 'permission' => 'gallery.view'],
+            ]],
             ['key' => 'faq', 'label' => 'FAQ', 'type' => 'soon'],
             ['key' => 'administration', 'label' => 'Administration', 'type' => 'dropdown', 'children' => [
                 ['label' => 'All Users', 'route' => 'dashboard.users.index', 'permission' => 'users.view'],

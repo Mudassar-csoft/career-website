@@ -32,6 +32,7 @@ $pages = [
     ['uri' => '/ambassador-program', 'view' => 'pages.ambassador-program', 'name' => 'ambassador-program'],
     ['uri' => '/contact-us', 'view' => 'pages.contact-us', 'name' => 'contact-us'],
     ['uri' => '/coworking-space', 'view' => 'pages.coworking-space', 'name' => 'coworking-space'],
+    ['uri' => '/gallery', 'view' => 'pages.gallery', 'name' => 'gallery'],
     ['uri' => '/how-to-pay', 'view' => 'pages.how-to-pay', 'name' => 'how-to-pay'],
     ['uri' => '/job-placement', 'view' => 'pages.job-placement', 'name' => 'job-placement'],
     ['uri' => '/kryterion', 'view' => 'pages.kryterion', 'name' => 'kryterion'],
@@ -55,6 +56,7 @@ Route::redirect('/ambassador-program.html', '/ambassador-program', 301);
 Route::redirect('/contact-us.html', '/contact-us', 301);
 Route::redirect('/Courses-Certifications.html', '/courses-certifications', 301);
 Route::redirect('/coworking-space.html', '/coworking-space', 301);
+Route::redirect('/gallery.html', '/gallery', 301);
 Route::redirect('/how-to-pay.html', '/how-to-pay', 301);
 Route::redirect('/job-placement.html', '/job-placement', 301);
 Route::redirect('/Kryterion.html', '/kryterion', 301);
