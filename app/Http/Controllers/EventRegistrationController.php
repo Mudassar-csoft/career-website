@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\EventFeeVoucherMail;
 use App\Mail\EventPassMail;
 use App\Models\Event;
+use App\Models\EventCategory;
 use App\Models\EventRegistration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -13,19 +14,60 @@ use Illuminate\Validation\Rule;
 
 class EventRegistrationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.events', [
-            'upcomingEvents' => Event::with('category')
-                ->where('event_date', '>=', now()->toDateString())
-                ->orderBy('event_date')
-                ->take(8)
-                ->get(),
-            'recentEvents' => Event::with('category')
-                ->where('event_date', '<', now()->toDateString())
+        $selectedCategory = null;
+
+        if ($request->filled('category')) {
+            $selectedCategory = EventCategory::where('slug', $request->string('category')->toString())->first();
+        }
+
+        $eventsQuery = Event::query()
+            ->with([
+                'category',
+                'images' => fn ($query) => $query->latest(),
+            ])
+            ->when($selectedCategory, fn ($query) => $query->where('event_category_id', $selectedCategory->id));
+
+        $upcomingEvents = (clone $eventsQuery)
+            ->where('event_date', '>=', now()->toDateString())
+            ->orderBy('event_date')
+            ->take(8)
+            ->get();
+
+        $recentEvents = (clone $eventsQuery)
+            ->where('event_date', '<', now()->toDateString())
+            ->orderByDesc('event_date')
+            ->take(4)
+            ->get();
+
+        $highlightEvents = (clone $eventsQuery)
+            ->where('event_date', '<', now()->toDateString())
+            ->whereHas('images')
+            ->orderByDesc('event_date')
+            ->take(6)
+            ->get();
+
+        if ($highlightEvents->isEmpty()) {
+            $highlightEvents = (clone $eventsQuery)
+                ->whereHas('images')
                 ->orderByDesc('event_date')
-                ->take(4)
+                ->take(6)
+                ->get();
+        }
+
+        return view('pages.events', [
+            'selectedCategory' => $selectedCategory,
+            'eventCategories' => EventCategory::query()
+                ->withCount('events')
+                ->whereHas('events')
+                ->orderByDesc('events_count')
+                ->orderBy('name')
+                ->take(6)
                 ->get(),
+            'upcomingEvents' => $upcomingEvents,
+            'recentEvents' => $recentEvents,
+            'highlightEvents' => $highlightEvents,
         ]);
     }
 

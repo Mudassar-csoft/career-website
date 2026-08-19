@@ -20,7 +20,7 @@ class HomeController extends Controller
         return view('pages.home', [
             'blogs' => Blog::latest()->take(4)->get(),
             'newsWidget' => News::with('type')->latest()->take(4)->get(),
-            'eventsWidget' => Event::where('event_date', '>=', now()->toDateString())->orderBy('event_date')->take(3)->get(),
+            'eventsWidget' => Event::where('event_date', '>=', now()->toDateString())->orderBy('event_date')->take(4)->get(),
             'featuredCourses' => $featuredCourses,
         ]);
     }

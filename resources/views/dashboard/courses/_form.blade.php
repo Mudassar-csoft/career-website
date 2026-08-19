@@ -171,13 +171,14 @@
 <div class="dash-form-group">
     <label>Course Curriculum</label>
     <p class="dash-form-hint">Enter how many lectures this course has and click Generate, then fill in each lecture. Use "+ Add Lecture" to add more anytime.</p>
-    <div class="dash-form-row" style="align-items: flex-end;">
-        <div class="dash-form-group" style="margin-bottom: 0;">
+    <div class="dash-curriculum-toolbar">
+        <div class="dash-form-group dash-curriculum-count">
             <label for="course-lecture-count">No. of Lectures</label>
             <input type="number" id="course-lecture-count" min="1" placeholder="e.g. 10">
         </div>
-        <div class="dash-form-group" style="margin-bottom: 0;">
+        <div class="dash-curriculum-toolbar-actions">
             <button type="button" class="dash-btn dash-btn-secondary" id="course-generate-lectures">Generate Lectures</button>
+            <button type="button" class="dash-btn dash-btn-secondary" id="course-add-lecture">+ Add Lecture</button>
         </div>
     </div>
 
@@ -199,7 +200,6 @@
             </div>
         @endforeach
     </div>
-    <button type="button" class="dash-btn dash-btn-secondary" id="course-add-lecture">+ Add Lecture</button>
     @error('curriculum')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror

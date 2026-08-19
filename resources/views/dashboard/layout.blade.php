@@ -586,6 +586,8 @@
             color: var(--dash-text);
         }
         .dash-form-group input[type="text"],
+        .dash-form-group input[type="date"],
+        .dash-form-group input[type="number"],
         .dash-form-group input[type="file"],
         .dash-form-group select,
         .dash-form-group textarea {
@@ -600,6 +602,8 @@
             transition: border-color .15s, box-shadow .15s;
         }
         .dash-form-group input[type="text"]:focus,
+        .dash-form-group input[type="date"]:focus,
+        .dash-form-group input[type="number"]:focus,
         .dash-form-group select:focus,
         .dash-form-group textarea:focus {
             border-color: var(--dash-sidebar-to);

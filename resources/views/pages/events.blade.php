@@ -1,6 +1,67 @@
 @extends('layouts.app')
 @section('title', 'Events | Career Website')
 @section('body_class', 'events-page')
+@push('styles')
+<style>
+    .events-page .filter-note {
+        margin: 10px 0 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6b76;
+    }
+    .events-page .filter-note a {
+        color: #009db8;
+        font-weight: 600;
+    }
+    .events-page .section-empty,
+    .events-page .gallery-empty {
+        padding: 20px;
+        border: 1px solid #dbdbdb;
+        border-radius: 12px;
+        background: #fff;
+        font-size: 15px;
+        line-height: 22px;
+        color: #5f6b76;
+    }
+    .events-page .rcre-area ul li.is-active {
+        border-color: #03c587;
+        background: rgba(3, 197, 135, 0.08);
+    }
+    .events-page .rcre-area .category-link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        color: inherit;
+    }
+    .events-page .rcre-area .category-link img {
+        flex-shrink: 0;
+    }
+    .events-page .rcre-area .category-meta {
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #5f6b76;
+    }
+    .events-page .rcre-area a.block {
+        display: block;
+        height: 100%;
+        color: inherit;
+    }
+    .events-page .gallery-bar .gallery-tabs li {
+        max-width: 240px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .events-page .gallery-bar .gallery-panel .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+@endpush
 @section('content')
 <section class="top-banner">
     <div class="container">
@@ -38,22 +99,31 @@
         </div>
     </div>
 </section>
-<section class="events-area">
+<section class="events-area" id="upcoming-events">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <h2>
                     Upcoming Events
                 </h2>
+                @if ($selectedCategory)
+                    <p class="filter-note">
+                        Showing {{ $selectedCategory->name }} events.
+                        <a href="{{ route('events') }}">Clear filter</a>
+                    </p>
+                @endif
             </div>
         </div>
         <div class="row">
             @forelse ($upcomingEvents as $upcomingEvent)
+                @php
+                    $upcomingImage = $upcomingEvent->images->first();
+                @endphp
                 <div class="col-lg-3">
                     <div class="workshop-card">
                         <!-- Image -->
                         <div class="workshop-card__image">
-                            <img src="{{ asset('assets/images/img64.png') }}" alt="{{ $upcomingEvent->title }}">
+                            <img src="{{ $upcomingImage ? asset('storage/'.$upcomingImage->image) : asset('assets/images/img64.png') }}" alt="{{ $upcomingEvent->title }}" onerror="this.src='{{ asset('assets/images/img64.png') }}'">
                             <span class="workshop-card__badge">{{ $upcomingEvent->category->name }}</span>
                             <div class="date">
                                 <h4>{{ $upcomingEvent->event_date->format('d') }}</h4>
@@ -86,6 +156,41 @@
         </div>
     </div>
 </section>
+@php
+    $categoryIconMap = [
+        'seminar' => 'assets/images/icon131.svg',
+        'webinar' => 'assets/images/icon131.svg',
+        'workshop' => 'assets/images/icon132.svg',
+        'conference' => 'assets/images/icon130.svg',
+        'expo' => 'assets/images/icon130.svg',
+        'project' => 'assets/images/icon134.svg',
+        'job' => 'assets/images/icon133.svg',
+        'fair' => 'assets/images/icon133.svg',
+        'celebration' => 'assets/images/icon135.svg',
+        'ceremony' => 'assets/images/icon135.svg',
+    ];
+
+    $resolveCategoryIcon = function ($category) use ($categoryIconMap) {
+        $haystack = strtolower($category->slug.' '.$category->name);
+
+        foreach ($categoryIconMap as $keyword => $icon) {
+            if (str_contains($haystack, $keyword)) {
+                return asset($icon);
+            }
+        }
+
+        return asset('assets/images/icon130.svg');
+    };
+
+    $highlightGalleries = $highlightEvents->mapWithKeys(function ($event) {
+        return [
+            'event-'.$event->id => $event->images
+                ->map(fn ($image) => asset('storage/'.$image->image))
+                ->values()
+                ->all(),
+        ];
+    })->toArray();
+@endphp
 <section class="rcre-area">
     <div class="container">
         <div class="row">
@@ -93,146 +198,71 @@
                 <h2>
                     Event Category
                 </h2>
-                <ul class="mb-3 d-none d-sm-flex">
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
-                            <h3>Seminars & <br>Webinars</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
-                            <h3>Workshops</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
-                            <h3>Conferences</h3>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="d-none d-sm-flex">
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
-                            <h3>Project Displays</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
-                            <h3>Job Fairs</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
-                            <h3>Celebrations</h3>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="d-sm-none">
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon131.svg') }}" alt="">
-                            <h3>Seminars & <br>Webinars</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon132.svg') }}" alt="">
-                            <h3>Workshops</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon130.svg') }}" alt="">
-                            <h3>Conferences</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon134.svg') }}" alt="">
-                            <h3>Project Displays</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon133.svg') }}" alt="">
-                            <h3>Job Fairs</h3>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="{{ asset('assets/images/icon135.svg') }}" alt="">
-                            <h3>Celebrations</h3>
-                        </a>
-                    </li>
-                </ul>
+                @if ($eventCategories->isEmpty())
+                    <div class="section-empty">No event categories available yet.</div>
+                @else
+                    @foreach ($eventCategories->chunk(3) as $row)
+                        <ul class="@if (! $loop->last) mb-3 @endif d-none d-sm-flex">
+                            @foreach ($row as $category)
+                                <li class="@if ($selectedCategory?->id === $category->id) is-active @endif">
+                                    <a href="{{ route('events', ['category' => $category->slug]) }}" class="category-link">
+                                        <img src="{{ $resolveCategoryIcon($category) }}" alt="{{ $category->name }}">
+                                        <div>
+                                            <h3>{{ $category->name }}</h3>
+                                            <span class="category-meta">{{ $category->events_count }} {{ \Illuminate\Support\Str::plural('Event', $category->events_count) }}</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endforeach
+                    <ul class="d-sm-none">
+                        @foreach ($eventCategories as $category)
+                            <li class="@if ($selectedCategory?->id === $category->id) is-active @endif">
+                                <a href="{{ route('events', ['category' => $category->slug]) }}" class="category-link">
+                                    <img src="{{ $resolveCategoryIcon($category) }}" alt="{{ $category->name }}">
+                                    <div>
+                                        <h3>{{ $category->name }}</h3>
+                                        <span class="category-meta">{{ $category->events_count }} {{ \Illuminate\Support\Str::plural('Event', $category->events_count) }}</span>
+                                    </div>
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7" id="recent-events-grid">
                 <div class="box">
                     <h2>
                         Our Recent Events
                     </h2>
-                    <a href="#" class="btn more-btn">View all Recent Events</a>
+                    @if ($selectedCategory)
+                        <a href="{{ route('events') }}" class="btn more-btn">All Categories</a>
+                    @else
+                        <a href="#upcoming-events" class="btn more-btn">Upcoming Events</a>
+                    @endif
                 </div>
-                <div class="row g-2">
-                    <div class="col-lg-3 col-md-3 col-6 px-1">
-                        <div class="block">
-                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
-                            <h4>
-                                MOU Signing
-                                Ceremony
-                            </h4>
-                            <ul>
-                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                            </ul>
-                        </div>
+                @if ($recentEvents->isEmpty())
+                    <div class="section-empty">No recent events found for this selection yet.</div>
+                @else
+                    <div class="row g-2">
+                        @foreach ($recentEvents as $recentEvent)
+                            @php
+                                $recentImage = $recentEvent->images->first();
+                            @endphp
+                            <div class="col-lg-3 col-md-3 col-6 px-1">
+                                <a href="{{ route('events.show', $recentEvent) }}" class="block">
+                                    <img src="{{ $recentImage ? asset('storage/'.$recentImage->image) : asset('assets/images/img65.png') }}" alt="{{ $recentEvent->title }}" onerror="this.src='{{ asset('assets/images/img65.png') }}'">
+                                    <h4>{{ \Illuminate\Support\Str::limit($recentEvent->title, 34) }}</h4>
+                                    <ul>
+                                        <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> {{ $recentEvent->campus }}</li>
+                                        <li><img src="{{ asset('assets/images/icon138.svg') }}" alt=""> {{ $recentEvent->event_date->format('d M, Y') }}</li>
+                                    </ul>
+                                </a>
+                            </div>
+                        @endforeach
                     </div>
-                    <div class="col-lg-3 col-md-3 col-6 px-1">
-                        <div class="block">
-                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
-                            <h4>
-                                MOU Signing
-                                Ceremony
-                            </h4>
-                            <ul>
-                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-6 px-1">
-                        <div class="block">
-                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
-                            <h4>
-                                MOU Signing
-                                Ceremony
-                            </h4>
-                            <ul>
-                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-6 px-1">
-                        <div class="block">
-                            <img src="{{ asset('assets/images/img65.png') }}" alt="">
-                            <h4>
-                                MOU Signing
-                                Ceremony
-                            </h4>
-                            <ul>
-                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> Lahore Wapda Town</li>
-                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> 10:00 AM-12:00PM</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @endif
             </div>
         </div>
     </div>
@@ -246,110 +276,37 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-12 col-xl-10">
-                <div class="gallery-section">
-                    <ul class="gallery-tabs">
-                        <li class="active aos-init aos-animate" data-tab="coworking" data-aos="fade-up" data-aos-duration="600">Coworking Space</li>
-                        <li data-tab="campus" data-aos="fade-up" data-aos-duration="700" class="aos-init aos-animate">Campuses</li>
-                        <li data-tab="tour" data-aos="fade-up" data-aos-duration="800" class="aos-init aos-animate">Tour</li>
-                        <li data-tab="expo" data-aos="fade-up" data-aos-duration="900" class="aos-init aos-animate">Expo</li>
-                        <li data-tab="navttc" data-aos="fade-up" data-aos-duration="1000" class="aos-init aos-animate">Navttc</li>
-                        <li data-tab="certificate" data-aos="fade-up" data-aos-duration="1100" class="aos-init aos-animate">Certificate Distribution</li>
-                        <li data-tab="event" data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">Events</li>
-                    </ul>
-                    <!-- Gallery Content -->
-                    <div class="gallery-content">
-                        <!-- Coworking -->
-                        <div class="gallery-panel active" id="coworking">
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="900">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
+                @if ($highlightEvents->isEmpty())
+                    <div class="gallery-empty">No event highlights are available yet.</div>
+                @else
+                    <div class="gallery-section">
+                        <ul class="gallery-tabs">
+                            @foreach ($highlightEvents as $highlightEvent)
+                                <li class="@if ($loop->first) active @endif" data-tab="event-{{ $highlightEvent->id }}">{{ \Illuminate\Support\Str::limit($highlightEvent->title, 28) }}</li>
+                            @endforeach
+                        </ul>
+                        <div class="gallery-content">
+                            @foreach ($highlightEvents as $highlightEvent)
+                                <div class="gallery-panel @if ($loop->first) active @endif" id="event-{{ $highlightEvent->id }}">
+                                    @foreach ($highlightEvent->images->take(8)->values() as $imageIndex => $image)
+                                        <div class="gallery-item">
+                                            <img src="{{ asset('storage/'.$image->image) }}" alt="{{ $highlightEvent->title }}" onerror="this.src='{{ asset('assets/images/img14.png') }}'">
+                                            <div class="detial">
+                                                <h3>{{ \Illuminate\Support\Str::limit($highlightEvent->title, 42) }}</h3>
+                                                <button class="view-btn" data-gallery="event-{{ $highlightEvent->id }}" data-index="{{ $imageIndex }}">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-right" data-aos-duration="1000">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1100">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1200">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1300">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1400">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1500">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="gallery-item aos-init aos-animate" data-aos="flip-left" data-aos-duration="1600">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Campus -->
-                        <div class="gallery-panel aos-init aos-animate" id="campus" data-aos="flip-left" data-aos-duration="1700">
-                            <div class="gallery-item">
-                                <img src="assets/images/img14.png">
-                                <div class="detial">
-                                    <h3>Coworking Space</h3>
-                                    <button class="view-btn" data-gallery="coworking" data-index="0">
-                                    <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                </div>
-                <div class="btn-area">
-                    <a href="#" class="btn more-btn">More Gallery</a>
-                </div>
+                    <div class="btn-area">
+                        <a href="{{ route('events.show', $highlightEvents->first()) }}" class="btn more-btn">More Gallery</a>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
@@ -441,64 +398,49 @@
 </script>
 <script>
     $(document).ready(function() {
-		$(".gallery-tabs li").click(function() {
-			let tab = $(this).data("tab");
-			$(".gallery-tabs li")
-				.removeClass("active");
-			$(this)
-				.addClass("active");
-			$(".gallery-panel")
-				.removeClass("active");
-			$("#" + tab)
-				.addClass("active");
-		});
-		// Gallery Data
-		const galleries = {
-			coworking: [
-				"{{ asset('assets/images/img14.png') }}",
-				"{{ asset('assets/images/img15.png') }}"
-			],
-			campus: [
-				"{{ asset('assets/images/img14.png') }}"
-			]
-		};
-		// Popup Swiper
-		let popupSwiper = new Swiper(".popupSlider", {
-			loop: false,
-			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev"
-			}
-		});
-		// Eye Click
-		$(".view-btn").click(function() {
-			let galleryName =
-				$(this).data("gallery");
-			let index =
-				Number($(this).data("index"));
-			let images =
-				galleries[galleryName];
-			// remove old images
-			popupSwiper.removeAllSlides();
-			// add new images
-			images.forEach(function(img) {
-				popupSwiper.appendSlide(
-					'<div class="swiper-slide">' +
-					'<img src="' + img + '">' +
-					'</div>'
-				);
-			});
-			popupSwiper.update();
-			// open clicked image
-			popupSwiper.slideTo(index, 0);
-			// Bootstrap 5 Modal
-			let modal =
-				new bootstrap.Modal(
-					document.getElementById("galleryModal")
-				);
-			modal.show();
-		});
-	});
+        $(".gallery-tabs li").click(function() {
+            let tab = $(this).data("tab");
+            $(".gallery-tabs li").removeClass("active");
+            $(this).addClass("active");
+            $(".gallery-panel").removeClass("active");
+            $("#" + tab).addClass("active");
+        });
+
+        const galleries = @json($highlightGalleries);
+        let popupSwiper = new Swiper(".popupSlider", {
+            loop: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            }
+        });
+
+        $(".view-btn").click(function() {
+            let galleryName = $(this).data("gallery");
+            let index = Number($(this).data("index"));
+            let images = galleries[galleryName] || [];
+
+            if (!images.length) {
+                return;
+            }
+
+            popupSwiper.removeAllSlides();
+
+            images.forEach(function(img) {
+                popupSwiper.appendSlide(
+                    '<div class="swiper-slide">' +
+                    '<img src="' + img + '">' +
+                    '</div>'
+                );
+            });
+
+            popupSwiper.update();
+            popupSwiper.slideTo(index, 0);
+
+            let modal = new bootstrap.Modal(document.getElementById("galleryModal"));
+            modal.show();
+        });
+    });
 </script>
 <script>
     $(document).ready(function() {

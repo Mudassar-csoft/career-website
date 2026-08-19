@@ -6,26 +6,47 @@
 <style>
     .dash-gallery-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 14px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
     }
     .dash-gallery-item {
         position: relative;
         border-radius: 10px;
         overflow: hidden;
-        background: #eef1f4;
+        border: 1px solid #e2e8ef;
+        background: #fff;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+    .dash-gallery-media {
+        aspect-ratio: 1 / 1;
+        background: #eef1f4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
     .dash-gallery-item img {
         width: 100%;
-        height: 130px;
+        height: 100%;
         object-fit: cover;
         display: block;
+    }
+    .dash-gallery-fallback {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 18px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+        color: #7c8a94;
+        background: linear-gradient(135deg, #f7fafc 0%, #eaf1f6 100%);
     }
     .dash-gallery-item form {
         position: absolute;
         top: 6px;
         right: 6px;
+        z-index: 1;
     }
     .dash-gallery-item button {
         width: 28px;
@@ -37,6 +58,9 @@
         font-size: 14px;
         line-height: 1;
         cursor: pointer;
+    }
+    .dash-gallery-item button:hover {
+        background: #c53030;
     }
 </style>
 @endpush
@@ -52,7 +76,7 @@
         @endif
 
         <div class="dash-page-header">
-            <h2>Gallery — {{ $event->title }}</h2>
+            <h2>Gallery - {{ $event->title }}</h2>
         </div>
 
         <div class="dash-form-box" style="margin-bottom:20px;">
@@ -79,7 +103,15 @@
                 <div class="dash-gallery-grid">
                     @foreach ($images as $image)
                         <div class="dash-gallery-item">
-                            <img src="{{ asset('storage/'.$image->image) }}" alt="{{ $event->title }}">
+                            <div class="dash-gallery-media">
+                                <img
+                                    src="{{ asset('storage/'.$image->image) }}"
+                                    alt="{{ $event->title }}"
+                                    loading="lazy"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                                >
+                                <div class="dash-gallery-fallback">Image unavailable</div>
+                            </div>
                             <form action="{{ route('dashboard.events.gallery.destroy', [$event, $image]) }}" method="POST" onsubmit="return confirm('Remove this photo?');">
                                 @csrf
                                 @method('DELETE')

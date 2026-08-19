@@ -34,6 +34,22 @@
         margin-bottom: 12px;
         background: #fafcfd;
     }
+    .dash-curriculum-toolbar {
+        display: grid;
+        grid-template-columns: minmax(220px, 280px) auto;
+        gap: 14px 16px;
+        align-items: end;
+        margin: 12px 0 16px;
+    }
+    .dash-curriculum-count {
+        margin-bottom: 0;
+    }
+    .dash-curriculum-toolbar-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
     .dash-curriculum-item-head {
         display: flex;
         align-items: center;
@@ -43,5 +59,10 @@
     .dash-curriculum-item-title {
         font-size: 13px;
         color: var(--dash-text);
+    }
+    @media (max-width: 640px) {
+        .dash-curriculum-toolbar {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
