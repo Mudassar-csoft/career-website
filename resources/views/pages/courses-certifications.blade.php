@@ -142,6 +142,10 @@
     };
 
     $buildCategorySummary = function ($category) {
+        if ($category->courses_count === 0) {
+            return 'No courses available in this track yet.';
+        }
+
         if ($category->courses_count === 1) {
             return '1 course available in this track to build practical, job-ready skills.';
         }

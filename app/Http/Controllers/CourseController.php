@@ -9,7 +9,6 @@ use App\Models\CourseMode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Illuminate\Validation\Rule;
 
 class CourseController extends Controller
 {
@@ -121,7 +120,7 @@ class CourseController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'alpha_dash', 'unique:courses,slug,'.($course->id ?? 'NULL').',id'],
-            'image' => [Rule::requiredIf(! $course || ! $course->image), 'nullable', 'image', 'max:4096'],
+            'image' => ['nullable', 'image', 'max:4096'],
             'course_category_id' => ['required', 'exists:course_categories,id'],
             'course_mode_id' => ['required', 'exists:course_modes,id'],
             'duration_weeks' => ['nullable', 'integer', 'min:1'],

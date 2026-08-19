@@ -85,7 +85,6 @@ class PublicCourseController extends Controller
             'categories' => CourseCategory::query()
                 ->withCount('courses')
                 ->with(['courses' => fn ($query) => $query->select('id', 'course_category_id', 'title')->latest()])
-                ->whereHas('courses')
                 ->orderBy('name')
                 ->get(),
             'modes' => CourseMode::query()

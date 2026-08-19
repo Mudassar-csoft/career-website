@@ -37,7 +37,7 @@
 
 <div class="dash-form-group">
     <label for="course-image">Course Image</label>
-    <input type="file" id="course-image" name="image" accept="image/*" {{ $course->image ? '' : 'required' }}>
+    <input type="file" id="course-image" name="image" accept="image/*">
     @if ($course->image)
         <img
             class="dash-image-preview"
@@ -48,9 +48,7 @@
         >
     @endif
     <img id="course-image-preview" class="dash-image-preview" alt="Preview">
-    @if (! $course->image)
-        <p class="dash-form-hint">A course image is required for new courses.</p>
-    @endif
+    <p class="dash-form-hint">Optional. Leave empty to use the default course image on the website.</p>
     @error('image')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror
