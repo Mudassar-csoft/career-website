@@ -27,57 +27,6 @@
         font-size: 15px;
         line-height: 22px;
     }
-    .courses-page .cor-block ul {
-        align-items: stretch;
-    }
-    .courses-page .cor-block ul li {
-        display: flex;
-    }
-    .courses-page .cor-block ul li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .courses-page .cor-block ul li a .box {
-        min-height: 192px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .courses-page .cor-block ul li a .box .img-hold {
-        min-height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 18px;
-    }
-    .courses-page .cor-block ul li a .box .t-hold {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-    .courses-page .cor-block ul li a .box .t-hold h4 {
-        min-height: 40px;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .courses-page .cor-block ul li a .box .t-hold p {
-        min-height: 20px;
-        height: auto;
-        margin: 0;
-        font-size: 14px;
-        line-height: 20px;
-        color: #5f6b76;
-        font-weight: 500;
-        text-align: center;
-    }
 </style>
 @endpush
 @section('content')
@@ -194,14 +143,14 @@
 
     $buildCategorySummary = function ($category) {
         if ($category->courses_count === 0) {
-            return 'No courses';
+            return 'No courses available in this track yet.';
         }
 
         if ($category->courses_count === 1) {
-            return '1 course';
+            return '1 course available in this track to build practical, job-ready skills.';
         }
 
-        return $category->courses_count.' courses';
+        return $category->courses_count.' courses available in this track to build practical, job-ready skills.';
     };
 
     $durationOptions = [
