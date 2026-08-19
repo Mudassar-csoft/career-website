@@ -491,7 +491,7 @@
                 <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0 aos-init aos-animate" data-aos="{{ $index % 2 === 0 ? 'flip-left' : 'flip-right' }}" data-aos-duration="{{ 1000 + $index * 100 }}">
                     <a href="{{ route('blog-detail', $blog->slug) }}" class="block" style="display:block;color:inherit;text-decoration:none;">
                         <div class="img-hold">
-                            <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img13.png') }}" alt="{{ $blog->title }}">
+                            <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img13.png') }}" alt="{{ $blog->title }}" onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;">
                         </div>
                         <div class="t-bar">
                             <h3>{{ $blog->title }}</h3>

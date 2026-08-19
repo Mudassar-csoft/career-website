@@ -59,7 +59,7 @@
                 @forelse ($blogs as $blog)
                     <div class="box">
                         <div class="img-hold">
-                            <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img69.png') }}" alt="{{ $blog->title }}">
+                            <img src="{{ $blog->image ? asset('storage/'.$blog->image) : asset('assets/images/img69.png') }}" alt="{{ $blog->title }}" onerror="this.src='{{ asset('assets/images/img69.png') }}'; this.onerror=null;">
                         </div>
                         <div class="t-hold">
                             <h3>
@@ -121,7 +121,7 @@
                                     <li>
                                         <a href="{{ route('blog-detail', $popular->slug) }}">
                                             <div class="img-hold">
-                                                <img src="{{ $popular->image ? asset('storage/'.$popular->image) : asset('assets/images/img69.png') }}" alt="{{ $popular->title }}">
+                                                <img src="{{ $popular->image ? asset('storage/'.$popular->image) : asset('assets/images/img69.png') }}" alt="{{ $popular->title }}" onerror="this.src='{{ asset('assets/images/img69.png') }}'; this.onerror=null;">
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $popular->title }}</h3>

@@ -36,20 +36,13 @@
                             @foreach ($blogs as $item)
                                 <tr>
                                     <td>
-                                        @if ($item->image)
-                                            <div style="width:44px;height:44px;">
-                                                <img
-                                                    class="dash-thumb"
-                                                    src="{{ asset('storage/'.$item->image) }}"
-                                                    alt=""
-                                                    loading="lazy"
-                                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                                                >
-                                                <div class="dash-thumb" style="display:none;"></div>
-                                            </div>
-                                        @else
-                                            <div class="dash-thumb"></div>
-                                        @endif
+                                        <img
+                                            class="dash-thumb"
+                                            src="{{ $item->image ? asset('storage/'.$item->image) : asset('assets/images/img13.png') }}"
+                                            alt="{{ $item->title }}"
+                                            loading="lazy"
+                                            onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"
+                                        >
                                     </td>
                                     <td>
                                         <strong>{{ $item->title }}</strong>

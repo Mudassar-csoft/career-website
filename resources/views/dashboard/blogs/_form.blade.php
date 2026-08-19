@@ -28,17 +28,20 @@
 
 <div class="dash-form-group">
     <label for="blog-image">Image</label>
-    <input type="file" id="blog-image" name="image" accept="image/*">
+    <input type="file" id="blog-image" name="image" accept="image/*" {{ $blog->image ? '' : 'required' }}>
     @if ($blog->image)
         <img
             class="dash-image-preview"
             style="display:block;"
             src="{{ asset('storage/'.$blog->image) }}"
-            alt=""
-            onerror="this.style.display='none';"
+            alt="{{ $blog->title }}"
+            onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"
         >
     @endif
     <img id="blog-image-preview" class="dash-image-preview" alt="Preview">
+    @if (! $blog->image)
+        <p class="dash-form-hint">A blog image is required for new posts.</p>
+    @endif
     @error('image')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror
