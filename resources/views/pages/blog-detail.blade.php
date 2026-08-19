@@ -3,6 +3,32 @@
 @section('meta_description', $blog->meta_description ?: ($blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 160)))
 @section('meta_keywords', $blog->meta_keywords ?? '')
 @section('body_class', 'blog-detail news-page')
+@push('styles')
+<style>
+    .blog-detail .search-form {
+        position: relative;
+    }
+    .blog-detail .search-form .form-control {
+        padding-right: 46px;
+        background-image: none;
+    }
+    .blog-detail .search-submit {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+    .blog-detail .search-submit img {
+        width: 18px;
+        height: 18px;
+    }
+</style>
+@endpush
 @section('content')
 <section class="news-bar">
     <div class="container">
@@ -37,8 +63,11 @@
                     <div class="top-box">
                         <div class="new-search">
                             <h2>Search Blogs</h2>
-                            <form action="{{ route('blogs') }}" method="GET">
+                            <form action="{{ route('blogs') }}" method="GET" class="search-form">
                                 <input type="text" class="form-control" name="search" value="{{ request('search') }}" placeholder="Search">
+                                <button type="submit" class="search-submit" aria-label="Search blogs">
+                                    <img src="{{ asset('assets/images/search.svg') }}" alt="">
+                                </button>
                             </form>
                         </div>
                         <div class="rec-post">

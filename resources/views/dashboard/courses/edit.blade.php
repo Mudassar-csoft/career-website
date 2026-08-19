@@ -17,7 +17,7 @@
         </div>
 
         <div class="dash-form-box" style="max-width: 920px;">
-            <form action="{{ route('dashboard.courses.update', $course) }}" method="POST" id="course-form">
+            <form action="{{ route('dashboard.courses.update', $course) }}" method="POST" enctype="multipart/form-data" id="course-form">
                 @method('PUT')
                 @include('dashboard.courses._form', ['course' => $course, 'categories' => $categories, 'modes' => $modes])
 

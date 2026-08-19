@@ -17,7 +17,7 @@
         </div>
 
         <div class="dash-form-box" style="max-width: 920px;">
-            <form action="{{ route('dashboard.courses.store') }}" method="POST" id="course-form">
+            <form action="{{ route('dashboard.courses.store') }}" method="POST" enctype="multipart/form-data" id="course-form">
                 @include('dashboard.courses._form', ['course' => $course, 'categories' => $categories, 'modes' => $modes])
 
                 <button type="submit" class="dash-btn">Publish Course</button>

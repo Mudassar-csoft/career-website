@@ -13,6 +13,7 @@ class Course extends Model
         'title',
         'subtitle',
         'slug',
+        'image',
         'duration_weeks',
         'about',
         'what_you_will_learn',

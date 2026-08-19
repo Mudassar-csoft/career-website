@@ -205,7 +205,7 @@
                         <div>
                             <div class="box">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/img03.png') }}" alt="{{ $course->title }}">
+                                    <img src="{{ $course->image ? asset('storage/'.$course->image) : asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
                                 </div>
                                 <div class="text-hold">
                                     <h3>{{ $course->title }}</h3>
@@ -363,7 +363,7 @@
                                             <div class="course-card">
                                                 <!-- Course Image -->
                                                 <div class="course-image">
-                                                    <img src="{{ asset('assets/images/img03.png') }}" alt="{{ $course->title }}">
+                                                    <img src="{{ $course->image ? asset('storage/'.$course->image) : asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
                                                 </div>
                                                 <!-- Course Content -->
                                                 <div class="course-content">

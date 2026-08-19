@@ -10,6 +10,21 @@
         }
     }
 
+    var imageInput = document.getElementById('course-image');
+    var imagePreview = document.getElementById('course-image-preview');
+    if (imageInput && imagePreview) {
+        imageInput.addEventListener('change', function () {
+            var file = imageInput.files[0];
+            if (!file) {
+                imagePreview.style.display = 'none';
+                imagePreview.removeAttribute('src');
+                return;
+            }
+            imagePreview.src = URL.createObjectURL(file);
+            imagePreview.style.display = 'block';
+        });
+    }
+
     var titleInput = document.getElementById('course-title');
     var slugInput = document.getElementById('course-slug');
     if (titleInput && slugInput) {

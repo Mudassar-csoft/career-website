@@ -7,7 +7,9 @@ use App\Models\Course;
 use App\Models\CourseCategory;
 use App\Models\CourseMode;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class CourseController extends Controller
 {
@@ -37,6 +39,10 @@ class CourseController extends Controller
     {
         $validated = $this->validateCourse($request);
 
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('courses', 'public');
+        }
+
         Course::create($validated);
 
         return redirect()->route('dashboard.courses.index')->with('status', 'Course created.');
@@ -57,6 +63,14 @@ class CourseController extends Controller
     {
         $validated = $this->validateCourse($request, $course);
 
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('courses', 'public');
+
+            if ($course->image) {
+                Storage::disk('public')->delete($course->image);
+            }
+        }
+
         $course->update($validated);
 
         return redirect()->route('dashboard.courses.index')->with('status', 'Course updated.');
@@ -64,6 +78,10 @@ class CourseController extends Controller
 
     public function destroy(Course $course)
     {
+        if ($course->image) {
+            Storage::disk('public')->delete($course->image);
+        }
+
         $course->delete();
 
         return redirect()->route('dashboard.courses.index')->with('status', 'Course deleted.');
@@ -103,6 +121,7 @@ class CourseController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'alpha_dash', 'unique:courses,slug,'.($course->id ?? 'NULL').',id'],
+            'image' => [Rule::requiredIf(! $course || ! $course->image), 'nullable', 'image', 'max:4096'],
             'course_category_id' => ['required', 'exists:course_categories,id'],
             'course_mode_id' => ['required', 'exists:course_modes,id'],
             'duration_weeks' => ['nullable', 'integer', 'min:1'],

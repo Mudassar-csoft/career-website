@@ -35,6 +35,27 @@
     </div>
 </div>
 
+<div class="dash-form-group">
+    <label for="course-image">Course Image</label>
+    <input type="file" id="course-image" name="image" accept="image/*" {{ $course->image ? '' : 'required' }}>
+    @if ($course->image)
+        <img
+            class="dash-image-preview"
+            style="display:block;"
+            src="{{ asset('storage/'.$course->image) }}"
+            alt="{{ $course->title }}"
+            onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;"
+        >
+    @endif
+    <img id="course-image-preview" class="dash-image-preview" alt="Preview">
+    @if (! $course->image)
+        <p class="dash-form-hint">A course image is required for new courses.</p>
+    @endif
+    @error('image')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+</div>
+
 <div class="dash-form-row">
     <div class="dash-form-group">
         <label for="course-category">Category</label>

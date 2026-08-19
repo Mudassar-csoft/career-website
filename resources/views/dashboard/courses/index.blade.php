@@ -26,6 +26,7 @@
                     <table class="dash-table">
                         <thead>
                             <tr>
+                                <th>Image</th>
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Mode</th>
@@ -38,6 +39,15 @@
                         <tbody>
                             @foreach ($courses as $item)
                                 <tr>
+                                    <td>
+                                        <img
+                                            class="dash-thumb"
+                                            src="{{ $item->image ? asset('storage/'.$item->image) : asset('assets/images/img03.png') }}"
+                                            alt="{{ $item->title }}"
+                                            loading="lazy"
+                                            onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;"
+                                        >
+                                    </td>
                                     <td>
                                         <strong>{{ $item->title }}</strong>
                                         @if ($item->subtitle)

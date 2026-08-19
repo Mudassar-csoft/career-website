@@ -13,6 +13,28 @@
         color: #009db8;
         font-weight: 600;
     }
+    .blog-page .search-form {
+        position: relative;
+    }
+    .blog-page .search-form .form-control {
+        padding-right: 46px;
+        background-image: none;
+    }
+    .blog-page .search-submit {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+    .blog-page .search-submit img {
+        width: 18px;
+        height: 18px;
+    }
 </style>
 @endpush
 @section('content')
@@ -110,8 +132,11 @@
                     <div class="top-box">
                         <div class="new-search">
                             <h2>Search Blogs</h2>
-                            <form action="{{ route('blogs') }}" method="GET">
+                            <form action="{{ route('blogs') }}" method="GET" class="search-form">
                                 <input type="text" class="form-control" name="search" value="{{ $search }}" placeholder="Search">
+                                <button type="submit" class="search-submit" aria-label="Search blogs">
+                                    <img src="{{ asset('assets/images/search.svg') }}" alt="">
+                                </button>
                             </form>
                         </div>
                         <div class="rec-post">
