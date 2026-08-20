@@ -15,7 +15,7 @@ class CourseMediaController extends Controller
             abort(404);
         }
 
-        return response()->file(Storage::disk('public')->path($path), [
+        return Storage::disk('public')->response($path, null, [
             'Cache-Control' => 'public, max-age=86400',
         ]);
     }

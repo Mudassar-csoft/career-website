@@ -113,7 +113,7 @@
                         <div class="dash-gallery-item">
                             <div class="dash-gallery-media">
                                 <img
-                                    src="{{ asset('storage/'.$image->image) }}"
+                                    src="{{ $image->image_url ?: asset('assets/images/img14.png') }}"
                                     alt="{{ $category->name }}"
                                     loading="lazy"
                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"

@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EventImage;
+use App\Models\GalleryImage;
 use Illuminate\Support\Facades\Storage;
 
-class EventMediaController extends Controller
+class GalleryMediaController extends Controller
 {
-    public function show(EventImage $image)
+    public function show(GalleryImage $image)
     {
         $path = $image->resolveImagePath();
 

@@ -6,7 +6,8 @@
     $gallerySlides = $galleryCategories->mapWithKeys(function ($category) {
         return [
             $category->slug => $category->images
-                ->map(fn ($image) => asset('storage/'.$image->image))
+                ->map(fn ($image) => $image->image_url)
+                ->filter()
                 ->values()
                 ->all(),
         ];
@@ -68,7 +69,7 @@
                                     @forelse ($category->images->take(8)->values() as $imageIndex => $image)
                                         <div class="gallery-item" data-aos="flip-left" data-aos-duration="{{ 900 + ($imageIndex * 100) }}">
                                             <img
-                                                src="{{ asset('storage/'.$image->image) }}"
+                                                src="{{ $image->image_url ?: asset('assets/images/img14.png') }}"
                                                 alt="{{ $category->name }}"
                                                 loading="lazy"
                                                 onerror="this.src='{{ asset('assets/images/img14.png') }}'; this.onerror=null;"
