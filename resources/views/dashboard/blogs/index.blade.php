@@ -38,7 +38,7 @@
                                     <td>
                                         <img
                                             class="dash-thumb"
-                                            src="{{ $item->image ? asset('storage/'.$item->image) : asset('assets/images/img13.png') }}"
+                                            src="{{ $item->image_url ?: asset('assets/images/img13.png') }}"
                                             alt="{{ $item->title }}"
                                             loading="lazy"
                                             onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"

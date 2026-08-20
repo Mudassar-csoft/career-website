@@ -1,3 +1,7 @@
+@php
+    $currentImageUrl = $blog->image_url ?: '';
+@endphp
+
 @csrf
 
 <div class="dash-form-row">
@@ -29,18 +33,21 @@
 <div class="dash-form-group">
     <label for="blog-image">Image</label>
     <input type="file" id="blog-image" name="image" accept="image/*" {{ $blog->image ? '' : 'required' }}>
-    @if ($blog->image)
-        <img
-            class="dash-image-preview"
-            style="display:block;"
-            src="{{ asset('storage/'.$blog->image) }}"
-            alt="{{ $blog->title }}"
+    <img
+        id="blog-image-preview"
+        class="dash-image-preview"
+        src="{{ $currentImageUrl }}"
+        data-current-src="{{ $currentImageUrl }}"
+        alt="{{ $blog->title ?: 'Preview' }}"
+        style="{{ $currentImageUrl ? 'display:block;' : 'display:none;' }}"
+        @if ($currentImageUrl)
             onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"
-        >
-    @endif
-    <img id="blog-image-preview" class="dash-image-preview" alt="Preview">
+        @endif
+    >
     @if (! $blog->image)
         <p class="dash-form-hint">A blog image is required for new posts.</p>
+    @else
+        <p class="dash-form-hint">Upload a new image to replace the current one.</p>
     @endif
     @error('image')
         <p class="dash-form-error">{{ $message }}</p>

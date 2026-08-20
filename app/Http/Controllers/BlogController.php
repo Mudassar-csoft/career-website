@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class BlogController extends Controller
@@ -54,6 +55,7 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         $validated = $this->validateBlog($request, $blog);
+        $previousImagePath = $blog->resolveImagePath();
 
         if ($request->hasFile('image')) {
             $validated['image'] = $request->file('image')->store('blogs', 'public');
@@ -61,11 +63,19 @@ class BlogController extends Controller
 
         $blog->update($validated);
 
+        if ($request->hasFile('image') && $previousImagePath !== null && $previousImagePath !== $blog->resolveImagePath()) {
+            Storage::disk('public')->delete($previousImagePath);
+        }
+
         return redirect()->route('dashboard.blogs.index')->with('status', 'Blog updated.');
     }
 
     public function destroy(Blog $blog)
     {
+        if ($path = $blog->resolveImagePath()) {
+            Storage::disk('public')->delete($path);
+        }
+
         $blog->delete();
 
         return redirect()->route('dashboard.blogs.index')->with('status', 'Blog deleted.');
