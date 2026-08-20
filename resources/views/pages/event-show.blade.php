@@ -82,7 +82,7 @@
                 <div class="event-slider">
                     @forelse ($event->images as $image)
                         <div>
-                            <img src="{{ asset('storage/'.$image->image) }}" alt="{{ $event->title }}">
+                            <img src="{{ $image->image_url ?: asset('assets/images/img61.png') }}" alt="{{ $event->title }}" onerror="this.src='{{ asset('assets/images/img61.png') }}'; this.onerror=null;">
                         </div>
                     @empty
                         <div>

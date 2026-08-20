@@ -105,7 +105,7 @@
                         <div class="dash-gallery-item">
                             <div class="dash-gallery-media">
                                 <img
-                                    src="{{ asset('storage/'.$image->image) }}"
+                                    src="{{ $image->image_url }}"
                                     alt="{{ $event->title }}"
                                     loading="lazy"
                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"

@@ -123,7 +123,7 @@
                     <div class="workshop-card">
                         <!-- Image -->
                         <div class="workshop-card__image">
-                            <img src="{{ $upcomingImage ? asset('storage/'.$upcomingImage->image) : asset('assets/images/img64.png') }}" alt="{{ $upcomingEvent->title }}" onerror="this.src='{{ asset('assets/images/img64.png') }}'">
+                            <img src="{{ $upcomingImage?->image_url ?: asset('assets/images/img64.png') }}" alt="{{ $upcomingEvent->title }}" onerror="this.src='{{ asset('assets/images/img64.png') }}'; this.onerror=null;">
                             <span class="workshop-card__badge">{{ $upcomingEvent->category->name }}</span>
                             <div class="date">
                                 <h4>{{ $upcomingEvent->event_date->format('d') }}</h4>
@@ -185,7 +185,7 @@
     $highlightGalleries = $highlightEvents->mapWithKeys(function ($event) {
         return [
             'event-'.$event->id => $event->images
-                ->map(fn ($image) => asset('storage/'.$image->image))
+                ->map(fn ($image) => $image->image_url)
                 ->values()
                 ->all(),
         ];
@@ -252,7 +252,7 @@
                             @endphp
                             <div class="col-lg-3 col-md-3 col-6 px-1">
                                 <a href="{{ route('events.show', $recentEvent) }}" class="block">
-                                    <img src="{{ $recentImage ? asset('storage/'.$recentImage->image) : asset('assets/images/img65.png') }}" alt="{{ $recentEvent->title }}" onerror="this.src='{{ asset('assets/images/img65.png') }}'">
+                                    <img src="{{ $recentImage?->image_url ?: asset('assets/images/img65.png') }}" alt="{{ $recentEvent->title }}" onerror="this.src='{{ asset('assets/images/img65.png') }}'; this.onerror=null;">
                                     <h4>{{ \Illuminate\Support\Str::limit($recentEvent->title, 34) }}</h4>
                                     <ul>
                                         <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> {{ $recentEvent->campus }}</li>
@@ -290,7 +290,7 @@
                                 <div class="gallery-panel @if ($loop->first) active @endif" id="event-{{ $highlightEvent->id }}">
                                     @foreach ($highlightEvent->images->take(8)->values() as $imageIndex => $image)
                                         <div class="gallery-item">
-                                            <img src="{{ asset('storage/'.$image->image) }}" alt="{{ $highlightEvent->title }}" onerror="this.src='{{ asset('assets/images/img14.png') }}'">
+                                            <img src="{{ $image->image_url ?: asset('assets/images/img14.png') }}" alt="{{ $highlightEvent->title }}" onerror="this.src='{{ asset('assets/images/img14.png') }}'; this.onerror=null;">
                                             <div class="detial">
                                                 <h3>{{ \Illuminate\Support\Str::limit($highlightEvent->title, 42) }}</h3>
                                                 <button class="view-btn" data-gallery="event-{{ $highlightEvent->id }}" data-index="{{ $imageIndex }}">
