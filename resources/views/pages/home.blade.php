@@ -318,7 +318,7 @@
                         <div>
                             <div class="box">
                                 <div class="img-hold">
-                                    <img src="{{ $course->image ? asset('storage/'.$course->image) : asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
+                                    <img src="{{ $course->image_url ?: asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
                                 </div>
                                 <div class="text-hold">
                                     <h3>{{ $course->title }}</h3>

@@ -42,7 +42,7 @@
         <img
             class="dash-image-preview"
             style="display:block;"
-            src="{{ asset('storage/'.$course->image) }}"
+            src="{{ $course->image_url }}"
             alt="{{ $course->title }}"
             onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;"
         >

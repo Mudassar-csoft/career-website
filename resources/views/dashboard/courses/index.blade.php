@@ -3,8 +3,22 @@
 @section('title', 'All Courses | Dashboard')
 
 @push('styles')
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="{{ asset('vendor/datatables/dataTables.dataTables.min.css') }}">
     <style>
+        .courses-table-error {
+            display: none;
+            margin-bottom: 16px;
+            padding: 12px 14px;
+            border: 1px solid #ffd1d1;
+            border-radius: 12px;
+            background: #fff5f5;
+            color: #b42318;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .courses-table-error.is-visible {
+            display: block;
+        }
         .courses-table-wrap .dt-container {
             font-size: 13px;
         }
@@ -121,6 +135,8 @@
             <h2>All Courses</h2>
         </div>
 
+        <div class="courses-table-error" id="courses-table-error"></div>
+
         <div class="dash-table-box courses-table-wrap">
             <div class="dash-table-scroll">
                 <table class="dash-table" id="courses-table" style="width:100%;">
@@ -136,6 +152,11 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="8" style="padding:16px 12px;color:#5b6b78;">Loading courses...</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -143,19 +164,51 @@
 @endsection
 
 @push('scripts')
-    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script src="{{ asset('vendor/datatables/dataTables.min.js') }}"></script>
     <script>
-        (function () {
+        document.addEventListener('DOMContentLoaded', function () {
             var tableEl = document.getElementById('courses-table');
+            var errorEl = document.getElementById('courses-table-error');
 
-            if (!tableEl || typeof window.DataTable === 'undefined') {
+            if (!tableEl) {
                 return;
             }
 
-            new DataTable(tableEl, {
+            if (typeof window.DataTable === 'undefined') {
+                if (errorEl) {
+                    errorEl.textContent = 'The course table script could not be loaded. Refresh the page and try again.';
+                    errorEl.classList.add('is-visible');
+                }
+
+                return;
+            }
+
+            window.DataTable.ext.errMode = 'none';
+
+            new window.DataTable(tableEl, {
                 processing: true,
                 serverSide: true,
-                ajax: '{{ route('dashboard.courses.data') }}',
+                ajax: {
+                    url: '{{ route('dashboard.courses.data') }}',
+                    error: function (xhr) {
+                        if (!errorEl) {
+                            return;
+                        }
+
+                        var message = 'Unable to load courses right now.';
+
+                        if (xhr && xhr.status === 403) {
+                            message = 'You do not have permission to view courses.';
+                        } else if (xhr && xhr.status === 404) {
+                            message = 'The course data endpoint was not found.';
+                        } else if (xhr && xhr.status >= 500) {
+                            message = 'A server error occurred while loading courses.';
+                        }
+
+                        errorEl.textContent = message;
+                        errorEl.classList.add('is-visible');
+                    }
+                },
                 pageLength: 10,
                 searchDelay: 350,
                 order: [[1, 'asc']],
@@ -180,6 +233,6 @@
                     processing: 'Loading courses...'
                 }
             });
-        })();
+        });
     </script>
 @endpush

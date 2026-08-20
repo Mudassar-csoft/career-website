@@ -65,9 +65,7 @@ class CourseController extends Controller
             ->orderColumn('category_name', 'course_categories.name $1')
             ->orderColumn('mode_name', 'course_modes.name $1')
             ->addColumn('image_html', function ($course) {
-                $imageUrl = $course->image
-                    ? asset('storage/'.$course->image)
-                    : asset('assets/images/img03.png');
+                $imageUrl = $course->image_url ?: asset('assets/images/img03.png');
                 $fallback = asset('assets/images/img03.png');
 
                 return '<img class="dash-thumb" src="'.$imageUrl.'" alt="'.e($course->title).'" loading="lazy" onerror="this.src=\''.$fallback.'\'; this.onerror=null;">';

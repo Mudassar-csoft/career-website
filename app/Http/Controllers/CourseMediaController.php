@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EventImage;
+use App\Models\Course;
 use Illuminate\Support\Facades\Storage;
 
-class EventMediaController extends Controller
+class CourseMediaController extends Controller
 {
-    public function show(EventImage $image)
+    public function show(Course $course)
     {
-        $path = $image->resolveImagePath();
+        $path = $course->resolveImagePath();
 
         if ($path === null) {
             abort(404);

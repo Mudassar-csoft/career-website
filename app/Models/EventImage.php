@@ -11,34 +11,62 @@ class EventImage extends Model
 {
     protected $fillable = ['event_id', 'image'];
 
-    public function getImageUrlAttribute(): string
+    public function resolveImagePath(): ?string
     {
         $path = str_replace('\\', '/', trim((string) $this->image));
 
         if ($path === '') {
-            return '';
+            return null;
         }
 
         if (Str::startsWith($path, ['http://', 'https://', '//'])) {
-            return $path;
+            return null;
         }
 
         $path = ltrim($path, '/');
+        $prefixes = [
+            str_replace('\\', '/', storage_path('app/public')).'/',
+            str_replace('\\', '/', public_path('storage')).'/',
+            'storage/app/public/',
+            'app/public/',
+            'public/storage/',
+            'public/',
+            'storage/',
+        ];
 
-        foreach (['storage/app/public/', 'app/public/', 'public/'] as $prefix) {
-            if (Str::startsWith($path, $prefix)) {
-                $path = Str::after($path, $prefix);
+        do {
+            $originalPath = $path;
+
+            foreach ($prefixes as $prefix) {
+                if (Str::startsWith(Str::lower($path), Str::lower($prefix))) {
+                    $path = ltrim(substr($path, strlen($prefix)), '/');
+                    break;
+                }
+            }
+
+            if ($path === $originalPath) {
                 break;
             }
-        }
-
-        if (Str::startsWith($path, 'storage/')) {
-            $path = Str::after($path, 'storage/');
-        }
+        } while (true);
 
         $path = ltrim($path, '/');
 
         if ($path === '' || str_contains($path, '..') || ! Storage::disk('public')->exists($path)) {
+            return null;
+        }
+
+        return $path;
+    }
+
+    public function getImageUrlAttribute(): string
+    {
+        $rawPath = str_replace('\\', '/', trim((string) $this->image));
+
+        if ($rawPath !== '' && Str::startsWith($rawPath, ['http://', 'https://', '//'])) {
+            return $rawPath;
+        }
+
+        if ($this->resolveImagePath() === null) {
             return '';
         }
 
