@@ -164,6 +164,7 @@
 @endsection
 
 @push('scripts')
+    <script src="{{ asset('vendor/jquery/jquery-3.7.1.min.js') }}"></script>
     <script src="{{ asset('vendor/datatables/dataTables.min.js') }}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -171,6 +172,15 @@
             var errorEl = document.getElementById('courses-table-error');
 
             if (!tableEl) {
+                return;
+            }
+
+            if (typeof window.jQuery === 'undefined') {
+                if (errorEl) {
+                    errorEl.textContent = 'jQuery could not be loaded for the course table.';
+                    errorEl.classList.add('is-visible');
+                }
+
                 return;
             }
 
