@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Collection;
 
 class Event extends Model
 {
@@ -46,6 +47,22 @@ class Event extends Model
     public function images(): HasMany
     {
         return $this->hasMany(EventImage::class);
+    }
+
+    public function getDisplayImagesAttribute(): Collection
+    {
+        if (! $this->relationLoaded('images')) {
+            $this->load(['images' => fn ($query) => $query->latest()]);
+        }
+
+        return $this->images
+            ->filter(fn (EventImage $image) => filled($image->image_url))
+            ->values();
+    }
+
+    public function getPrimaryImageUrlAttribute(): ?string
+    {
+        return $this->display_images->first()?->image_url;
     }
 
     public function seatsRemaining(): ?int

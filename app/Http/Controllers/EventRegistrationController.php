@@ -74,7 +74,10 @@ class EventRegistrationController extends Controller
     public function show(Event $event)
     {
         return view('pages.event-show', [
-            'event' => $event->load(['category', 'images']),
+            'event' => $event->load([
+                'category',
+                'images' => fn ($query) => $query->latest(),
+            ]),
         ]);
     }
 

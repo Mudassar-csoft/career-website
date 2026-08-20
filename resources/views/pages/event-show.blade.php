@@ -80,9 +80,9 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="event-slider">
-                    @forelse ($event->images as $image)
+                    @forelse ($event->display_images as $image)
                         <div>
-                            <img src="{{ $image->image_url ?: asset('assets/images/img61.png') }}" alt="{{ $event->title }}" onerror="this.src='{{ asset('assets/images/img61.png') }}'; this.onerror=null;">
+                            <img src="{{ $image->image_url }}" alt="{{ $event->title }}" onerror="this.src='{{ asset('assets/images/img61.png') }}'; this.onerror=null;">
                         </div>
                     @empty
                         <div>
