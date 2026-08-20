@@ -5,9 +5,20 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-0">
-                <video id="popupVideo" width="100%" controls autoplay>
-                    <source src="" type="video/mp4">
-                </video>
+                <div id="popupVideoEmbed" class="ratio ratio-16x9 d-none">
+                    <iframe
+                        id="popupVideoFrame"
+                        src=""
+                        title="Campus video"
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div id="popupVideoPlayer" class="ratio ratio-16x9 d-none">
+                    <video id="popupVideo" class="w-100 h-100" controls>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
     </div>

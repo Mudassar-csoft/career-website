@@ -365,54 +365,26 @@
             <div class="col-lg-12">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="video2.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
-                                </button>
+                        @foreach (config('campus_videos', []) as $campusVideo)
+                            <div class="swiper-slide">
+                                <div class="video-card">
+                                    <img src="{{ asset($campusVideo['thumbnail']) }}" alt="{{ $campusVideo['name'] }}">
+                                    @if (!empty($campusVideo['video_url']))
+                                        <button
+                                            class="play-btn"
+                                            type="button"
+                                            data-video="{{ $campusVideo['video_url'] }}"
+                                            aria-label="Play {{ $campusVideo['name'] }} virtual tour"
+                                        >
+                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="">
+                                        </button>
+                                    @endif
+                                </div>
+                                <div class="swipe-text">
+                                    <h3>{{ $campusVideo['name'] }}</h3>
+                                </div>
                             </div>
-                            <div class="swipe-text">
-                                <h3>Jinnah Colony Branch</h3>
-                            </div>
-                        </div>
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
-                                </button>
-                            </div>
-                            <div class="swipe-text">
-                                <h3>Millat Chowk Branch</h3>
-                            </div>
-                        </div>
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
-                                </button>
-                            </div>
-                            <div class="swipe-text">
-                                <h3>Satyana Raod Branch</h3>
-                            </div>
-                        </div>
-                        <!-- Slide 4 -->
-                        <div class="swiper-slide">
-                            <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
-                                </button>
-                            </div>
-                            <div class="swipe-text">
-                                <h3>Kohnoor Branch</h3>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
