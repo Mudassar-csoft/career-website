@@ -92,7 +92,7 @@
                 <div class="dash-form-group" style="margin-bottom:14px;">
                     <label for="gallery-images">Upload Photos</label>
                     <input type="file" id="gallery-images" name="images[]" accept="image/*" multiple required>
-                    <p class="dash-form-hint">You can upload multiple images at once. They will appear in this category on the website.</p>
+                    <p class="dash-form-hint">You can upload multiple images at once. Maximum file size: 5 MB per image.</p>
                     @error('images')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror

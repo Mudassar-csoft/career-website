@@ -12,6 +12,8 @@ class GalleryImageController extends Controller
 {
     use BuildsDashboardMenu;
 
+    private const MAX_IMAGE_SIZE_KB = 5120;
+
     public function index(GalleryCategory $galleryCategory)
     {
         return view('dashboard.gallery.images', [
@@ -26,7 +28,7 @@ class GalleryImageController extends Controller
     {
         $validated = $request->validate([
             'images' => ['required', 'array', 'min:1'],
-            'images.*' => ['image', 'max:4096'],
+            'images.*' => ['image', 'max:self::MAX_IMAGE_SIZE_KB'],
         ]);
 
         $nextSortOrder = ((int) $galleryCategory->images()->max('sort_order')) + 1;
