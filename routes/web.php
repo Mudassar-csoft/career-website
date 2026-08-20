@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventRegistrationController;
+use App\Http\Controllers\EventMediaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
@@ -14,6 +15,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
 
 Route::get('/events', [EventRegistrationController::class, 'index'])->name('events');
+Route::get('/event-image/{image}', [EventMediaController::class, 'show'])->name('events.image');
 Route::get('/events/register/{token}/upload-fee', [EventRegistrationController::class, 'showUploadFee'])->name('events.upload-fee');
 Route::post('/events/register/{token}/upload-fee', [EventRegistrationController::class, 'uploadFee'])->name('events.upload-fee');
 Route::get('/events/{event:slug}', [EventRegistrationController::class, 'show'])->name('events.show');

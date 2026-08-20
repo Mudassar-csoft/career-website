@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class EventImage extends Model
@@ -32,10 +33,16 @@ class EventImage extends Model
         }
 
         if (Str::startsWith($path, 'storage/')) {
-            return asset($path);
+            $path = Str::after($path, 'storage/');
         }
 
-        return asset('storage/'.$path);
+        $path = ltrim($path, '/');
+
+        if ($path === '' || str_contains($path, '..') || ! Storage::disk('public')->exists($path)) {
+            return '';
+        }
+
+        return route('events.image', ['image' => $this->getKey()], false);
     }
 
     public function event(): BelongsTo
