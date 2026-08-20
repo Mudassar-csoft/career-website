@@ -28,7 +28,7 @@ class GalleryImageController extends Controller
     {
         $validated = $request->validate([
             'images' => ['required', 'array', 'min:1'],
-            'images.*' => ['image', 'max:self::MAX_IMAGE_SIZE_KB'],
+            'images.*' => ['image', 'max:' . self::MAX_IMAGE_SIZE_KB],
         ]);
 
         $nextSortOrder = ((int) $galleryCategory->images()->max('sort_order')) + 1;
