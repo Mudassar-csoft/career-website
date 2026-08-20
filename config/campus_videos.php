@@ -8,7 +8,7 @@ return [
     ],
     [
         'name' => 'Millat Chowk Branch',
-        'thumbnail' => 'assets/images/campuses/millat-chowk-branch.jpeg',
+        'thumbnail' => 'assets/images/campuses/millat-chowk-branch-updated.jpeg',
         'video_url' => 'https://youtu.be/W3hfkCW1U-w?si=z4THrzEAXcllG769',
     ],
     [
