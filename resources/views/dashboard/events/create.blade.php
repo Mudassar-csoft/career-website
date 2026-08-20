@@ -13,7 +13,7 @@
         </div>
 
         <div class="dash-form-box" style="max-width: 920px;">
-            <form action="{{ route('dashboard.events.store') }}" method="POST">
+            <form action="{{ route('dashboard.events.store') }}" method="POST" enctype="multipart/form-data">
                 @include('dashboard.events._form', ['event' => $event, 'categories' => $categories])
 
                 <button type="submit" class="dash-btn">Publish Event</button>

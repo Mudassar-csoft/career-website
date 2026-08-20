@@ -6,6 +6,7 @@ use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Event;
 use App\Models\EventCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -36,9 +37,16 @@ class EventController extends Controller
     {
         $validated = $this->validateEvent($request);
 
-        Event::create($validated);
+        $event = Event::create($validated);
 
-        return redirect()->route('dashboard.events.index')->with('status', 'Event created.');
+        $uploadedImages = $this->storeEventImages($request, $event);
+
+        return redirect()->route('dashboard.events.index')->with(
+            'status',
+            $uploadedImages > 0
+                ? 'Event created and gallery images uploaded.'
+                : 'Event created.'
+        );
     }
 
     public function edit(Event $event)
@@ -46,7 +54,7 @@ class EventController extends Controller
         return view('dashboard.events.edit', [
             'screens' => $this->screens(),
             'active' => 'events',
-            'event' => $event,
+            'event' => $event->load('images'),
             'categories' => EventCategory::orderBy('name')->get(),
         ]);
     }
@@ -57,11 +65,24 @@ class EventController extends Controller
 
         $event->update($validated);
 
-        return redirect()->route('dashboard.events.index')->with('status', 'Event updated.');
+        $uploadedImages = $this->storeEventImages($request, $event);
+
+        return redirect()->route('dashboard.events.index')->with(
+            'status',
+            $uploadedImages > 0
+                ? 'Event updated and new gallery images added.'
+                : 'Event updated.'
+        );
     }
 
     public function destroy(Event $event)
     {
+        $imagePaths = $event->images()->pluck('image')->filter()->all();
+
+        if ($imagePaths !== []) {
+            Storage::disk('public')->delete($imagePaths);
+        }
+
         $event->delete();
 
         return redirect()->route('dashboard.events.index')->with('status', 'Event deleted.');
@@ -92,6 +113,8 @@ class EventController extends Controller
             'venue' => ['required', 'string', 'max:255'],
             'organizer' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
+            'images' => ['nullable', 'array'],
+            'images.*' => ['nullable', 'image', 'max:4096'],
             'is_paid' => ['required', 'in:0,1'],
             'fee_amount' => ['nullable', 'required_if:is_paid,1', 'numeric', 'min:0'],
             'has_seat_limit' => ['required', 'in:0,1'],
@@ -108,5 +131,28 @@ class EventController extends Controller
         $validated['seat_limit'] = $validated['has_seat_limit'] ? $validated['seat_limit'] : null;
 
         return $validated;
+    }
+
+    protected function storeEventImages(Request $request, Event $event): int
+    {
+        if (! $request->hasFile('images')) {
+            return 0;
+        }
+
+        $count = 0;
+
+        foreach ($request->file('images', []) as $file) {
+            if (! $file) {
+                continue;
+            }
+
+            $event->images()->create([
+                'image' => $file->store('event-gallery', 'public'),
+            ]);
+
+            $count++;
+        }
+
+        return $count;
     }
 }

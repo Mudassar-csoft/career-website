@@ -77,6 +77,52 @@
 </div>
 
 @php
+    $eventImages = $event->relationLoaded('images') ? $event->images : collect();
+@endphp
+<div class="dash-form-group">
+    <label for="event-images">Event Images</label>
+    <input type="file" id="event-images" name="images[]" accept="image/*" multiple>
+    <p class="dash-form-hint">
+        Upload one or more photos to show on the frontend event page.
+        @if ($event->exists)
+            New uploads are added to the existing gallery.
+        @endif
+    </p>
+    @error('images')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+    @error('images.*')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+
+    @if ($eventImages->isNotEmpty())
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;">
+            @foreach ($eventImages->take(6) as $image)
+                <img
+                    class="dash-image-preview"
+                    style="display:block;margin-top:0;"
+                    src="{{ $image->image_url }}"
+                    alt="{{ $event->title }}"
+                    onerror="this.style.display='none';"
+                >
+            @endforeach
+        </div>
+        @if ($eventImages->count() > 6)
+            <p class="dash-form-hint">Showing the first 6 gallery images here.</p>
+        @endif
+    @endif
+
+    <div id="event-image-preview-list" style="display:none;flex-wrap:wrap;gap:10px;margin-top:10px;"></div>
+
+    @if ($event->exists)
+        <p class="dash-form-hint">
+            Need to remove photos? Use the
+            <a href="{{ route('dashboard.events.gallery.index', $event) }}">Gallery manager</a>.
+        </p>
+    @endif
+</div>
+
+@php
     $isPaid = old('is_paid', $event->is_paid ? '1' : '0');
     $hasSeatLimit = old('has_seat_limit', $event->has_seat_limit ? '1' : '0');
 @endphp

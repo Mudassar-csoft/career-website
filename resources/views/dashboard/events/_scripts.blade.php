@@ -10,6 +10,31 @@
         }
     }
 
+    var imagesInput = document.getElementById('event-images');
+    var previewList = document.getElementById('event-image-preview-list');
+    if (imagesInput && previewList) {
+        imagesInput.addEventListener('change', function () {
+            previewList.innerHTML = '';
+
+            if (!imagesInput.files || !imagesInput.files.length) {
+                previewList.style.display = 'none';
+                return;
+            }
+
+            Array.prototype.forEach.call(imagesInput.files, function (file) {
+                var preview = document.createElement('img');
+                preview.className = 'dash-image-preview';
+                preview.style.display = 'block';
+                preview.style.marginTop = '0';
+                preview.src = URL.createObjectURL(file);
+                preview.alt = 'Preview';
+                previewList.appendChild(preview);
+            });
+
+            previewList.style.display = 'flex';
+        });
+    }
+
     var titleInput = document.getElementById('event-title');
     var slugInput = document.getElementById('event-slug');
     if (titleInput && slugInput) {
