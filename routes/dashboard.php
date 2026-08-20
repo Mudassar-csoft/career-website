@@ -41,6 +41,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
 
     Route::prefix('courses')->name('courses.')->group(function () {
         Route::get('/', [CourseController::class, 'index'])->name('index')->middleware('can:courses.view');
+        Route::get('/data', [CourseController::class, 'data'])->name('data')->middleware('can:courses.view');
         Route::get('/create', [CourseController::class, 'create'])->name('create')->middleware('can:courses.create');
         Route::post('/', [CourseController::class, 'store'])->name('store')->middleware('can:courses.create');
         Route::post('/categories', [CourseController::class, 'storeCategory'])->name('categories.store')->middleware('can:courses.create');

@@ -6,9 +6,11 @@ use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Course;
 use App\Models\CourseCategory;
 use App\Models\CourseMode;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Yajra\DataTables\Facades\DataTables;
 
 class CourseController extends Controller
 {
@@ -19,8 +21,115 @@ class CourseController extends Controller
         return view('dashboard.courses.index', [
             'screens' => $this->screens(),
             'active' => 'courses',
-            'courses' => Course::with(['category', 'mode'])->latest()->get(),
         ]);
+    }
+
+    public function data(Request $request): JsonResponse
+    {
+        $courses = Course::query()
+            ->leftJoin('course_categories', 'course_categories.id', '=', 'courses.course_category_id')
+            ->leftJoin('course_modes', 'course_modes.id', '=', 'courses.course_mode_id')
+            ->select([
+                'courses.id',
+                'courses.title',
+                'courses.subtitle',
+                'courses.slug',
+                'courses.image',
+                'courses.duration_weeks',
+                'courses.has_certificate',
+                'courses.is_featured',
+                'course_categories.name as category_name',
+                'course_modes.name as mode_name',
+            ]);
+
+        return DataTables::eloquent($courses)
+            ->filter(function ($query) use ($request) {
+                $search = trim((string) data_get($request->input('search'), 'value', ''));
+
+                if ($search === '') {
+                    return;
+                }
+
+                $like = '%'.$search.'%';
+
+                $query->where(function ($subQuery) use ($like) {
+                    $subQuery
+                        ->where('courses.title', 'like', $like)
+                        ->orWhere('courses.subtitle', 'like', $like)
+                        ->orWhere('courses.slug', 'like', $like)
+                        ->orWhere('course_categories.name', 'like', $like)
+                        ->orWhere('course_modes.name', 'like', $like)
+                        ->orWhereRaw('CAST(courses.duration_weeks AS CHAR) like ?', [$like]);
+                });
+            })
+            ->orderColumn('category_name', 'course_categories.name $1')
+            ->orderColumn('mode_name', 'course_modes.name $1')
+            ->addColumn('image_html', function ($course) {
+                $imageUrl = $course->image
+                    ? asset('storage/'.$course->image)
+                    : asset('assets/images/img03.png');
+                $fallback = asset('assets/images/img03.png');
+
+                return '<img class="dash-thumb" src="'.$imageUrl.'" alt="'.e($course->title).'" loading="lazy" onerror="this.src=\''.$fallback.'\'; this.onerror=null;">';
+            })
+            ->addColumn('title_html', function ($course) {
+                $subtitle = filled($course->subtitle)
+                    ? '<div style="color:#7c8a94;font-size:12px;">'.e($course->subtitle).'</div>'
+                    : '';
+
+                return '<strong>'.e($course->title).'</strong>'.$subtitle;
+            })
+            ->editColumn('category_name', function ($course) {
+                return '<span class="dash-badge dash-badge-green">'.e($course->category_name ?: 'Unassigned').'</span>';
+            })
+            ->editColumn('mode_name', function ($course) {
+                return e($course->mode_name ?: 'Unassigned');
+            })
+            ->addColumn('duration_label', function ($course) {
+                if (! $course->duration_weeks) {
+                    return '&mdash;';
+                }
+
+                return e($course->duration_weeks.' wk'.($course->duration_weeks > 1 ? 's' : ''));
+            })
+            ->addColumn('certificate_badge', function ($course) {
+                return $course->has_certificate
+                    ? '<span class="dash-badge dash-badge-green">Included</span>'
+                    : '<span class="dash-badge dash-badge-red">Excluded</span>';
+            })
+            ->addColumn('featured_badge', function ($course) {
+                return $course->is_featured
+                    ? '<span class="dash-badge dash-badge-amber">Featured</span>'
+                    : '<span class="dash-badge dash-badge-red">Not Featured</span>';
+            })
+            ->addColumn('actions_html', function ($course) use ($request) {
+                $actions = [];
+                $user = $request->user();
+
+                if ($user?->can('courses.edit')) {
+                    $actions[] = '<a href="'.route('dashboard.courses.edit', $course->id).'" class="dash-btn dash-btn-secondary" style="padding:6px 12px;font-size:12px;">Edit</a>';
+                }
+
+                if ($user?->can('courses.delete')) {
+                    $actions[] = '<form action="'.route('dashboard.courses.destroy', $course->id).'" method="POST" onsubmit="return confirm(\'Delete this course?\');">'.
+                        csrf_field().
+                        method_field('DELETE').
+                        '<button type="submit" class="dash-btn dash-btn-danger" style="padding:6px 12px;font-size:12px;">Delete</button>'.
+                    '</form>';
+                }
+
+                return '<div style="display:flex;gap:8px;flex-wrap:wrap;">'.implode('', $actions).'</div>';
+            })
+            ->rawColumns([
+                'image_html',
+                'title_html',
+                'category_name',
+                'duration_label',
+                'certificate_badge',
+                'featured_badge',
+                'actions_html',
+            ])
+            ->toJson();
     }
 
     public function create()

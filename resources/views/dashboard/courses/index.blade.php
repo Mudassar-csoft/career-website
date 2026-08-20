@@ -2,6 +2,109 @@
 
 @section('title', 'All Courses | Dashboard')
 
+@push('styles')
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
+    <style>
+        .courses-table-wrap .dt-container {
+            font-size: 13px;
+        }
+        .courses-table-wrap .dt-layout-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .courses-table-wrap .dt-length label,
+        .courses-table-wrap .dt-search label {
+            font-size: 13px;
+            color: #5b6b78;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .courses-table-wrap .dt-input,
+        .courses-table-wrap .dt-length select {
+            border: 1px solid #e2e8ef;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 13px;
+            color: #1d2b36;
+            background: #fff;
+            min-height: 40px;
+        }
+        .courses-table-wrap .dt-input:focus,
+        .courses-table-wrap .dt-length select:focus {
+            outline: none;
+            border-color: #03C587;
+            box-shadow: 0 0 0 3px rgba(3, 197, 135, 0.15);
+        }
+        .courses-table-wrap .dt-search input {
+            min-width: 260px;
+        }
+        .courses-table-wrap table.dataTable thead th {
+            border-bottom: 1px solid #eef1f4;
+            color: #7c8a94;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            padding: 10px 12px;
+            white-space: nowrap;
+        }
+        .courses-table-wrap table.dataTable tbody td {
+            padding: 12px;
+            border-bottom: 1px solid #eef1f4;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .courses-table-wrap table.dataTable.no-footer {
+            border-bottom: 0;
+        }
+        .courses-table-wrap .dt-info {
+            color: #5b6b78;
+            font-size: 13px;
+        }
+        .courses-table-wrap .dt-paging {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .courses-table-wrap .dt-paging .dt-paging-button {
+            border: 1px solid #e2e8ef !important;
+            border-radius: 8px !important;
+            background: #fff !important;
+            color: #1d2b36 !important;
+            padding: 8px 12px !important;
+            margin: 0 !important;
+            min-width: 40px;
+        }
+        .courses-table-wrap .dt-paging .dt-paging-button.current,
+        .courses-table-wrap .dt-paging .dt-paging-button:hover {
+            border-color: transparent !important;
+            background: linear-gradient(90deg, #009DB8 0%, #03C587 100%) !important;
+            color: #fff !important;
+        }
+        .courses-table-wrap .dt-paging .dt-paging-button.disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+        .courses-table-wrap .dt-processing {
+            border: 0;
+            border-radius: 10px;
+            padding: 12px 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+        @media (max-width: 768px) {
+            .courses-table-wrap .dt-search input {
+                min-width: 180px;
+            }
+        }
+    </style>
+@endpush
+
 @section('topbar-actions')
     @can('courses.create')
         <a href="{{ route('dashboard.courses.create') }}" class="dash-btn">+ Create Course</a>
@@ -18,79 +121,65 @@
             <h2>All Courses</h2>
         </div>
 
-        <div class="dash-table-box">
-            @if ($courses->isEmpty())
-                <div class="dash-empty">No courses yet. Create your first one.</div>
-            @else
-                <div class="dash-table-scroll">
-                    <table class="dash-table">
-                        <thead>
-                            <tr>
-                                <th>Image</th>
-                                <th>Title</th>
-                                <th>Category</th>
-                                <th>Mode</th>
-                                <th>Duration</th>
-                                <th>Certificate</th>
-                                <th>Featured</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($courses as $item)
-                                <tr>
-                                    <td>
-                                        <img
-                                            class="dash-thumb"
-                                            src="{{ $item->image ? asset('storage/'.$item->image) : asset('assets/images/img03.png') }}"
-                                            alt="{{ $item->title }}"
-                                            loading="lazy"
-                                            onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;"
-                                        >
-                                    </td>
-                                    <td>
-                                        <strong>{{ $item->title }}</strong>
-                                        @if ($item->subtitle)
-                                            <div style="color:#7c8a94;font-size:12px;">{{ $item->subtitle }}</div>
-                                        @endif
-                                    </td>
-                                    <td><span class="dash-badge dash-badge-green">{{ $item->category->name }}</span></td>
-                                    <td>{{ $item->mode->name }}</td>
-                                    <td>{{ $item->duration_weeks ? $item->duration_weeks.' wk'.($item->duration_weeks > 1 ? 's' : '') : '—' }}</td>
-                                    <td>
-                                        @if ($item->has_certificate)
-                                            <span class="dash-badge dash-badge-green">Included</span>
-                                        @else
-                                            <span class="dash-badge dash-badge-red">Excluded</span>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if ($item->is_featured)
-                                            <span class="dash-badge dash-badge-amber">Featured</span>
-                                        @else
-                                            <span class="dash-badge dash-badge-red">Not Featured</span>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <div style="display:flex;gap:8px;">
-                                            @can('courses.edit')
-                                                <a href="{{ route('dashboard.courses.edit', $item) }}" class="dash-btn dash-btn-secondary" style="padding:6px 12px;font-size:12px;">Edit</a>
-                                            @endcan
-                                            @can('courses.delete')
-                                                <form action="{{ route('dashboard.courses.destroy', $item) }}" method="POST" onsubmit="return confirm('Delete this course?');">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="dash-btn dash-btn-danger" style="padding:6px 12px;font-size:12px;">Delete</button>
-                                                </form>
-                                            @endcan
-                                        </div>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            @endif
+        <div class="dash-table-box courses-table-wrap">
+            <div class="dash-table-scroll">
+                <table class="dash-table" id="courses-table" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Mode</th>
+                            <th>Duration</th>
+                            <th>Certificate</th>
+                            <th>Featured</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script>
+        (function () {
+            var tableEl = document.getElementById('courses-table');
+
+            if (!tableEl || typeof window.DataTable === 'undefined') {
+                return;
+            }
+
+            new DataTable(tableEl, {
+                processing: true,
+                serverSide: true,
+                ajax: '{{ route('dashboard.courses.data') }}',
+                pageLength: 10,
+                searchDelay: 350,
+                order: [[1, 'asc']],
+                columns: [
+                    { data: 'image_html', name: 'courses.image', orderable: false, searchable: false },
+                    { data: 'title_html', name: 'courses.title' },
+                    { data: 'category_name', name: 'course_categories.name' },
+                    { data: 'mode_name', name: 'course_modes.name' },
+                    { data: 'duration_label', name: 'courses.duration_weeks' },
+                    { data: 'certificate_badge', name: 'courses.has_certificate', orderable: false, searchable: false },
+                    { data: 'featured_badge', name: 'courses.is_featured', orderable: false, searchable: false },
+                    { data: 'actions_html', name: 'courses.id', orderable: false, searchable: false }
+                ],
+                columnDefs: [
+                    { targets: [0, 5, 6, 7], className: 'dt-body-nowrap' }
+                ],
+                language: {
+                    search: 'Search:',
+                    lengthMenu: 'Show _MENU_ courses',
+                    emptyTable: 'No courses found.',
+                    zeroRecords: 'No matching courses found.',
+                    processing: 'Loading courses...'
+                }
+            });
+        })();
+    </script>
+@endpush
