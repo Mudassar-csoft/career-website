@@ -438,14 +438,20 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="logo-slider">
-                    @forelse ($collaborators as $collaborator)
+                    @foreach ([
+                        ['image' => 'img09.png', 'name' => 'Linux Professional Institute'],
+                        ['image' => 'img10.png', 'name' => 'VMware by Broadcom'],
+                        ['image' => 'img11.png', 'name' => 'Kryterion'],
+                        ['image' => 'img12.png', 'name' => 'Linux Professional Institute'],
+                        ['image' => 'img10.png', 'name' => 'VMware by Broadcom'],
+                        ['image' => 'img11.png', 'name' => 'Kryterion'],
+                    ] as $collaborator)
                         <div>
                             <div class="img-hold">
-                                <img src="{{ asset('storage/'.$collaborator->logo) }}" alt="{{ $collaborator->name }}">
+                                <img src="{{ asset('assets/images/'.$collaborator['image']) }}" alt="{{ $collaborator['name'] }}">
                             </div>
                         </div>
-                    @empty
-                    @endforelse
+                    @endforeach
                 </div>
             </div>
         </div>
