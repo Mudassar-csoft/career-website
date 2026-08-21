@@ -870,10 +870,13 @@
     .gallery-item {
       position: relative;
       border-radius: 10px 10px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
+        display: block;
       }
       .detial {
         position: absolute;
