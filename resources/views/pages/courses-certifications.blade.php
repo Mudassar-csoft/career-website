@@ -117,7 +117,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="form-block">
-                    <form action="{{ route('courses-certifications') }}#all-courses" method="GET">
+                    <form action="{{ route('courses-certifications') }}#all-courses" method="GET" id="course-hero-search-form">
                         @foreach ($selectedCategories as $selectedCategory)
                             <input type="hidden" name="categories[]" value="{{ $selectedCategory }}">
                         @endforeach
@@ -137,7 +137,7 @@
                     @forelse ($categories as $cat)
                         <div>
                             <div class="text-box @if (in_array($cat->slug, $selectedCategories, true)) is-active @endif">
-                                <a href="{{ route('courses-certifications', ['categories' => [$cat->slug]]) }}#all-courses">{{ $cat->name }}</a>
+                                <a data-course-catalog-link href="{{ route('courses-certifications', ['categories' => [$cat->slug]]) }}#all-courses">{{ $cat->name }}</a>
                             </div>
                         </div>
                     @empty
@@ -252,7 +252,7 @@
                 <ul>
                     @forelse ($categories as $category)
                         <li>
-                            <a href="{{ route('courses-certifications', ['categories' => [$category->slug]]) }}#all-courses">
+                            <a data-course-catalog-link href="{{ route('courses-certifications', ['categories' => [$category->slug]]) }}#all-courses">
                                 <div class="box @if (in_array($category->slug, $selectedCategories, true)) is-active @endif">
                                     <div class="img-hold">
                                         <img src="{{ $resolveCategoryIcon($category) }}" alt="{{ $category->name }}">
@@ -358,7 +358,7 @@
                 </p>
             </div>
             <div class="col-lg-12">
-                <div class="course-listing">
+                <div class="course-listing" id="course-catalog">
                     <div class="row">
                         <div class="col-xl-3 col-lg-4">
                             <aside class="course-sidebar">
@@ -374,7 +374,7 @@
                                     <div class="filter-box">
                                         <div class="filter-title">
                                             <h4>Categories</h4>
-                                            <a href="{{ route('courses-certifications') }}#all-courses">Clear all</a>
+                                            <a data-course-catalog-link href="{{ route('courses-certifications') }}#all-courses">Clear all</a>
                                         </div>
                                         <ul>
                                             @foreach ($categories as $category)
@@ -434,7 +434,7 @@
                                             @if ($search !== '' || ! empty($selectedCategories) || ! empty($selectedModes) || ! empty($selectedDurations))
                                                 <p class="catalog-note">
                                                     Filtered results.
-                                                    <a href="{{ route('courses-certifications') }}#all-courses">Reset catalog</a>
+                                                    <a data-course-catalog-link href="{{ route('courses-certifications') }}#all-courses">Reset catalog</a>
                                                 </p>
                                             @endif
                                         </div>
@@ -832,16 +832,106 @@
 </script>
 <script>
     (function () {
-        var filterForm = document.getElementById('course-filter-form');
+        function getCatalogUrl(url, formData) {
+            var catalogUrl = new URL(url, window.location.origin);
 
-        if (!filterForm) {
-            return;
+            catalogUrl.hash = '';
+
+            if (formData) {
+                catalogUrl.search = new URLSearchParams(formData).toString();
+            }
+
+            return catalogUrl;
         }
 
-        filterForm.querySelectorAll('.course-filter-auto').forEach(function (input) {
-            input.addEventListener('change', function () {
-                filterForm.submit();
-            });
+        function loadCatalog(url, shouldScroll) {
+            var catalogUrl = getCatalogUrl(url);
+            var currentCatalog = document.getElementById('course-catalog');
+
+            if (!currentCatalog) {
+                window.location.assign(url);
+                return;
+            }
+
+            currentCatalog.setAttribute('aria-busy', 'true');
+
+            fetch(catalogUrl.toString(), {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('Unable to load courses.');
+                    }
+
+                    return response.text();
+                })
+                .then(function (html) {
+                    var documentResponse = new DOMParser().parseFromString(html, 'text/html');
+                    var nextCatalog = documentResponse.getElementById('course-catalog');
+
+                    if (!nextCatalog) {
+                        throw new Error('Course catalog was not found.');
+                    }
+
+                    currentCatalog.replaceWith(nextCatalog);
+                    window.history.pushState({}, '', catalogUrl.pathname + catalogUrl.search + '#all-courses');
+
+                    if (shouldScroll) {
+                        document.getElementById('all-courses').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                })
+                .catch(function () {
+                    window.location.assign(url);
+                });
+        }
+
+        document.addEventListener('submit', function (event) {
+            var form = event.target;
+
+            if (!form.matches('#course-filter-form, #course-hero-search-form')) {
+                return;
+            }
+
+            event.preventDefault();
+            var catalogForm = document.getElementById('course-filter-form');
+            var formData = form.id === 'course-hero-search-form' && catalogForm
+                ? new FormData(catalogForm)
+                : new FormData(form);
+
+            if (form.id === 'course-hero-search-form') {
+                formData.set('search', form.elements.search.value);
+            }
+
+            var catalogUrl = getCatalogUrl(form.action, formData);
+            loadCatalog(catalogUrl, form.id === 'course-hero-search-form');
+        });
+
+        document.addEventListener('change', function (event) {
+            if (!event.target.matches('#course-filter-form .course-filter-auto')) {
+                return;
+            }
+
+            var filterForm = event.target.closest('form');
+            loadCatalog(getCatalogUrl(filterForm.action, new FormData(filterForm)), false);
+        });
+
+        document.addEventListener('click', function (event) {
+            var catalogLink = event.target.closest('a[data-course-catalog-link]');
+
+            if (catalogLink) {
+                event.preventDefault();
+                loadCatalog(catalogLink.href, true);
+                return;
+            }
+
+            var paginationLink = event.target.closest('#course-catalog .pagination a');
+
+            if (paginationLink && paginationLink.getAttribute('href') !== '#') {
+                event.preventDefault();
+                loadCatalog(paginationLink.href, true);
+            }
         });
     })();
 </script>
