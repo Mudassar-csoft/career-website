@@ -301,7 +301,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon20.svg" alt="">
+                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -313,7 +313,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon21.svg" alt="">
+                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
@@ -324,7 +324,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon22.svg" alt="">
+                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
@@ -335,7 +335,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon136.svg" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Google Meet</h3>
@@ -346,7 +346,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="http://127.0.0.1:8000/assets/images/icon137.svg" alt="">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
                             </div>
                             <div class="t-bar">
                                 <h3>Microsoft Team</h3>

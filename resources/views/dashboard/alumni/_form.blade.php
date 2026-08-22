@@ -18,8 +18,9 @@
 </div>
 
 <div class="dash-form-group">
-    <label for="alumni-review">Review</label>
-    <textarea id="alumni-review" name="review" rows="5" required>{{ old('review', $alum->review) }}</textarea>
+    <label for="alumni-review">Review (90-100 characters)</label>
+    <textarea id="alumni-review" name="review" rows="5" minlength="90" maxlength="100" required>{{ old('review', $alum->review) }}</textarea>
+    <p class="dash-form-hint">Use between 90 and 100 characters.</p>
     @error('review')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror

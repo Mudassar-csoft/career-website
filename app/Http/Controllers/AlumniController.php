@@ -80,7 +80,7 @@ class AlumniController extends Controller
         return $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'designation' => ['required', 'string', 'max:255'],
-            'review' => ['required', 'string'],
+            'review' => ['required', 'string', 'min:90', 'max:100'],
             'photo' => DashboardImageUpload::rules($photoRequired),
         ]);
     }
