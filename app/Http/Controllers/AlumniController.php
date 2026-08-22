@@ -7,7 +7,8 @@ use App\Models\Alumni;
 use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class AlumniController extends Controller
@@ -86,16 +87,18 @@ class AlumniController extends Controller
 
     private function storePhoto(UploadedFile $photo): string
     {
-        $disk = Storage::disk('public');
-        $disk->makeDirectory('alumni');
-        $path = $disk->putFile('alumni', $photo);
+        $directory = public_path('uploads/alumni');
+        $filename = Str::uuid().'.'.$photo->extension();
 
-        if ($path === false) {
+        try {
+            File::ensureDirectoryExists($directory);
+            $photo->move($directory, $filename);
+        } catch (\Throwable) {
             throw ValidationException::withMessages([
                 'photo' => 'The alumni photo could not be saved. Please try again.',
             ]);
         }
 
-        return $path;
+        return 'uploads/alumni/'.$filename;
     }
 }

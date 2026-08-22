@@ -46,7 +46,10 @@ class Alumni extends Model
             }
         } while (true);
 
-        if ($path === '' || str_contains($path, '..') || ! Storage::disk('public')->exists($path)) {
+        $isStoredPhoto = Storage::disk('public')->exists($path);
+        $isPublicAlumniPhoto = Str::startsWith($path, 'uploads/alumni/') && is_file(public_path($path));
+
+        if ($path === '' || str_contains($path, '..') || (! $isStoredPhoto && ! $isPublicAlumniPhoto)) {
             return null;
         }
 
@@ -57,8 +60,12 @@ class Alumni extends Model
     {
         $path = $this->resolvePhotoPath();
 
-        return $path === null
-            ? asset('assets/images/img05.png')
+        if ($path === null) {
+            return asset('assets/images/img05.png');
+        }
+
+        return Str::startsWith($path, 'uploads/alumni/')
+            ? asset($path)
             : asset('storage/'.$path);
     }
 }
