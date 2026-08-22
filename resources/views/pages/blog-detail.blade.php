@@ -63,6 +63,12 @@
         margin: 0 0 0.45em;
         padding: 0;
     }
+    .blog-detail .blog-rich-content ul > li {
+        list-style-type: disc !important;
+    }
+    .blog-detail .blog-rich-content ol > li {
+        list-style-type: decimal !important;
+    }
     .blog-detail .blog-rich-content li > ul,
     .blog-detail .blog-rich-content li > ol {
         margin: 0.45em 0 0;

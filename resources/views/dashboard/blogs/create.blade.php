@@ -25,11 +25,22 @@
 @push('scripts')
 <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
 <script>
+    var blogEditor;
     if (window.ClassicEditor) {
-        ClassicEditor.create(document.querySelector('#blog-content')).catch(function (error) {
-            console.error(error);
-        });
+        ClassicEditor.create(document.querySelector('#blog-content'))
+            .then(function (editor) {
+                blogEditor = editor;
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
     }
+
+    document.getElementById('blog-form').addEventListener('submit', function () {
+        if (blogEditor) {
+            blogEditor.updateSourceElement();
+        }
+    });
 
     var titleInput = document.getElementById('blog-title');
     var slugInput = document.getElementById('blog-slug');
