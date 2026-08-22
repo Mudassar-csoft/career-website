@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img52.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img52.png') }}" alt="Career Institute student success story">
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                         <div class="success-main-slide">
                             <div class="success-card">
                                 <div class="success-image">
-                                    <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
                                 </div>
                                 <div class="success-content">
                                     <h2>Ayesha Khan</h2>
@@ -125,7 +125,7 @@
                          <div class="success-main-slide">
                             <div class="success-card">
                                 <div class="success-image">
-                                    <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
                                 </div>
                                 <div class="success-content">
                                     <h2>Ayesha Khan</h2>
@@ -209,7 +209,7 @@
                          <div class="success-main-slide">
                             <div class="success-card">
                                 <div class="success-image">
-                                    <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
                                 </div>
                                 <div class="success-content">
                                     <h2>Ayesha Khan</h2>
@@ -297,7 +297,7 @@
                         <!-- Nav 1 -->
                         <div class="success-nav-item">
                             <div class="nav-student">
-                                <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
                                 <div>
                                     <h4>Ayesha Khan</h4>
                                     <span>Frontend Developer</span>
@@ -315,7 +315,7 @@
                         <!-- Nav 2 -->
                         <div class="success-nav-item">
                             <div class="nav-student">
-                                <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
                                 <div>
                                     <h4>Ayesha Khan</h4>
                                     <span>Frontend Developer</span>
@@ -333,7 +333,7 @@
                         <!-- Nav 3 -->
                         <div class="success-nav-item">
                             <div class="nav-student">
-                                <img src="{{ asset('assets/images/img58.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
                                 <div>
                                     <h4>Ayesha Khan</h4>
                                     <span>Frontend Developer</span>
@@ -362,7 +362,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img53.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img53.png') }}" alt="Career Institute student success story">
                 </div>
             </div>
         </div>
@@ -381,7 +381,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="assets/images/img54.png" alt="">
+                                <img src="assets/images/img54.png" alt="Career Institute student success story">
                             </div>
                             <div class="text-hold">
                                 <h3>M. Rehan</h3>
@@ -400,7 +400,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="assets/images/img55.png" alt="">
+                                <img src="assets/images/img55.png" alt="Career Institute student success story">
                             </div>
                             <div class="text-hold">
                                 <h3>Amna</h3>
@@ -419,7 +419,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="assets/images/img56.png" alt="">
+                                <img src="assets/images/img56.png" alt="Career Institute student success story">
                             </div>
                             <div class="text-hold">
                                 <h3>Ayesha Nadeem</h3>
@@ -438,7 +438,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="assets/images/img57.png" alt="">
+                                <img src="assets/images/img57.png" alt="Career Institute student success story">
                             </div>
                             <div class="text-hold">
                                 <h3>M. Haris</h3>
@@ -457,7 +457,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="assets/images/img54.png" alt="">
+                                <img src="assets/images/img54.png" alt="Career Institute student success story">
                             </div>
                             <div class="text-hold">
                                 <h3>M. Rehan</h3>
@@ -492,43 +492,43 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
+                                <img src="assets/images/img04.png" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="../assets/video/Web_Header.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
+                                <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
+                                <img src="assets/images/img04.png" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video2.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
+                                <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
+                                <img src="assets/images/img04.png" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
+                                <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
+                                <img src="assets/images/img04.png" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
+                                <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="">
+                                <img src="assets/images/img04.png" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="">
+                                <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
                             </div>
                         </div>

@@ -25,7 +25,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img39.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img39.png') }}" alt="Career Institute campus building">
                 </div>
             </div>
         </div>
@@ -286,7 +286,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold aos-init aos-animate" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
-                    <img src="{{ asset('assets/images/img40.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img40.png') }}" alt="Career Institute learning environment">
                 </div>
             </div>
         </div>
@@ -304,32 +304,32 @@
                 <div class="logo-slider">
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img09.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img09.png') }}" alt="Career Institute classroom">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img10.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img10.png') }}" alt="Career Institute students learning">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img11.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img11.png') }}" alt="Career Institute practical training">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img12.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img12.png') }}" alt="Career Institute student achievement">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img10.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img10.png') }}" alt="Career Institute students learning">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img11.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img11.png') }}" alt="Career Institute practical training">
                         </div>
                     </div>
                 </div>
@@ -349,7 +349,7 @@
                 <div class="col-lg-6 border-end mb-4 mb-lg-0">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
                         <div class="s-link" >
@@ -383,7 +383,7 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
                         <div class="s-link">

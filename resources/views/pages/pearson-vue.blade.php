@@ -85,7 +85,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img17.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img17.png') }}" alt="Pearson VUE testing center">
                     </div>
                 </div>
             </div>

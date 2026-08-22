@@ -21,22 +21,22 @@
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img36.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img36.png') }}" alt="Bank payment method">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                        <img src="{{ asset('assets/images/img35.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img35.png') }}" alt="Online payment method">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="jazz-tab" data-bs-toggle="tab" data-bs-target="#jazz-tab-pane" type="button" role="tab" aria-controls="jazz-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img43.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img43.png') }}" alt="Online payment options">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img37.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img37.png') }}" alt="Payment receipt upload">
                         </button>
                     </li>
                 </ul>

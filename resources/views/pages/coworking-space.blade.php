@@ -34,7 +34,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img19.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img19.png') }}" alt="Career Institute coworking space">
                 </div>
             </div>
         </div>
@@ -233,7 +233,7 @@
             <div class="col-lg-6">
                 <div class="bar">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img26.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img26.png') }}" alt="Coworking workspace">
                     </div>
                     <div class="t-bar">
                         <h2>What Our Coworkers Say</h2>
@@ -244,7 +244,7 @@
             <div class="col-lg-6">
                 <div class="video-box">
                     <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal">
-                    <img src="{{ asset('assets/images/img27.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img27.png') }}" alt="Coworking office space">
                     </button>
                 </div>
             </div>
@@ -273,7 +273,7 @@
                                             data-video="{{ $campusVideo['video_url'] }}"
                                             aria-label="Play {{ $campusVideo['name'] }} virtual tour"
                                         >
-                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="">
+                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="Play video">
                                         </button>
                                     @endif
                                 </div>

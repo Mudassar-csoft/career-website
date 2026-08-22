@@ -35,10 +35,10 @@
             <div class="col-lg-7">
                 <div class="event-slider">
                     <div>
-                        <img src="{{ asset('assets/images/img61.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img61.png') }}" alt="Career Institute event">
                     </div>
                     <div>
-                        <img src="{{ asset('assets/images/img61.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img61.png') }}" alt="Career Institute event">
                     </div>
                 </div>
                 <div class="head-text">
@@ -155,7 +155,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
+                                        <img src="assets/images/img05.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Muhammad Talha</h3>
@@ -175,7 +175,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img06.png" alt="">
+                                        <img src="assets/images/img06.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Fatima Maqsood</h3>
@@ -195,7 +195,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img07.png" alt="">
+                                        <img src="assets/images/img07.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Umar Ishfaq</h3>
@@ -215,7 +215,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img08.png" alt="">
+                                        <img src="assets/images/img08.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Asad Riaz</h3>
@@ -234,7 +234,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img41.png" alt="">
+                                        <img src="assets/images/img41.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Ayan Ali</h3>
@@ -254,7 +254,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img42.png" alt="">
+                                        <img src="assets/images/img42.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Haroon Rashid</h3>
@@ -273,7 +273,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
+                                        <img src="assets/images/img05.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Muhammad Talha</h3>

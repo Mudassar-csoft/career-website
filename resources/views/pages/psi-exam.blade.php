@@ -31,7 +31,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img18.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img18.png') }}" alt="PSI exam services">
                 </div>
             </div>
         </div>

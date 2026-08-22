@@ -44,7 +44,7 @@
                     <ul>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img66.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img66.png') }}" alt="Career Institute course category">
                             </div>
                             <div class="text-hold">
                                 <h4>Category Overview</h4>
@@ -57,7 +57,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img68.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img68.png') }}" alt="Career Institute course category">
                             </div>
                             <div class="text-hold">
                                 <h4>Career Opportunities</h4>
@@ -71,7 +71,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img67.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img67.png') }}" alt="Career Institute course category">
                             </div>
                             <div class="text-hold">
                                 <h4>Industry Demand</h4>
@@ -102,7 +102,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -136,7 +136,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -170,7 +170,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -204,7 +204,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -238,7 +238,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -272,7 +272,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -306,7 +306,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>
@@ -340,7 +340,7 @@
             <div class="col-lg-4 col-xl-3 col-md-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                         <div class="offer-bar">
                             <h3>30%</h3>
                             <span>Discount</span>

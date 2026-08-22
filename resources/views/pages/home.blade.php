@@ -76,7 +76,7 @@
                     </div>
                     <!-- Center Image -->
                     <div class="center-image">
-                        <img src="assets/images/img15.png" alt="">
+                        <img src="assets/images/img15.png" alt="Career Institute student learning">
                     </div>
                 </div>
             </div>
@@ -238,7 +238,7 @@
                 <div class="about-bar" data-aos="fade-up" data-aos-duration="1400" data-aos-offset="80">
                     <h2><span>Why</span> Choose Us</h2>
                     <div class="img-hold">
-                        <img src="assets/images/img01.png" alt="">
+                        <img src="assets/images/img01.png" alt="Career Institute professional training">
                     </div>
                     <h3>About Career Institute</h3>
                     <p>
@@ -269,7 +269,7 @@
                 <div class="col-lg-6 border-lg-end mb-4 mb-lg-0">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</span>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
@@ -284,7 +284,7 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</span>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
@@ -378,7 +378,7 @@
                                             data-video="{{ $campusVideo['video_url'] }}"
                                             aria-label="Play {{ $campusVideo['name'] }} virtual tour"
                                         >
-                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="">
+                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="Play video">
                                         </button>
                                     @endif
                                 </div>

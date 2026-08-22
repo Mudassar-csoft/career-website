@@ -33,25 +33,25 @@
         <div class="row g-3 d-none d-md-flex">
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img70.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img70.png') }}" alt="Study abroad destination">
                     <h3>Study in USA</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img71.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img71.png') }}" alt="Study abroad destination">
                     <h3>Study in USA</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img72.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img72.png') }}" alt="Study abroad destination">
                     <h3>Study in USA</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img73.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img73.png') }}" alt="Study abroad destination">
                     <h3>Study in USA</h3>
                 </div>
             </div>
@@ -61,25 +61,25 @@
                 <ul>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img70.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img70.png') }}" alt="Study abroad destination">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img71.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img71.png') }}" alt="Study abroad destination">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img72.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img72.png') }}" alt="Study abroad destination">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img73.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img73.png') }}" alt="Study abroad destination">
                             <h3>Study in USA</h3>
                         </div>
                     </li>
@@ -97,7 +97,7 @@
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img47.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img47.png') }}" alt="Study abroad destination">
                     </div>
                     <div class="txt-bar">
                         <h3>University of</h3>
@@ -109,7 +109,7 @@
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img48.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img48.png') }}" alt="Study abroad destination">
                     </div>
                     <div class="txt-bar">
                         <h3>University of</h3>
@@ -121,7 +121,7 @@
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img49.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img49.png') }}" alt="Study abroad destination">
                     </div>
                     <div class="txt-bar">
                         <h3>Arizona State</h3>
@@ -133,7 +133,7 @@
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img50.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img50.png') }}" alt="Study abroad destination">
                     </div>
                     <div class="txt-bar">
                         <h3>University of</h3>
@@ -147,7 +147,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img47.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img47.png') }}" alt="Study abroad destination">
                             </div>
                             <div class="txt-bar">
                                 <h3>University of</h3>
@@ -159,7 +159,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img48.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img48.png') }}" alt="Study abroad destination">
                             </div>
                             <div class="txt-bar">
                                 <h3>University of</h3>
@@ -171,7 +171,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img49.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img49.png') }}" alt="Study abroad destination">
                             </div>
                             <div class="txt-bar">
                                 <h3>Arizona State</h3>
@@ -183,7 +183,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img50.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img50.png') }}" alt="Study abroad destination">
                             </div>
                             <div class="txt-bar">
                                 <h3>University of</h3>
@@ -274,7 +274,7 @@
                         </div>
                         <div class="col-lg-5">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img51.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img51.png') }}" alt="Study abroad consultation">
                             </div>
                         </div>
                     </div>
@@ -296,7 +296,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                                 <div class="offer-bar">
                                     <h3>30%</h3>
                                     <span>Discount</span>
@@ -318,7 +318,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                                 <div class="offer-bar">
                                     <h3>30%</h3>
                                     <span>Discount</span>
@@ -340,7 +340,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                                 <div class="offer-bar">
                                     <h3>30%</h3>
                                     <span>Discount</span>
@@ -362,7 +362,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                                 <div class="offer-bar">
                                     <h3>30%</h3>
                                     <span>Discount</span>
@@ -384,7 +384,7 @@
                     <div>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="">
+                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
                                 <div class="offer-bar">
                                     <h3>30%</h3>
                                     <span>Discount</span>
@@ -419,7 +419,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="block">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
                     </div>
                     <div class="t-bar">
                         <h3>
@@ -435,7 +435,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="block">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
                     </div>
                     <div class="t-bar">
                         <h3>
@@ -451,7 +451,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="block">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
                     </div>
                     <div class="t-bar">
                         <h3>
@@ -467,7 +467,7 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="block">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
                     </div>
                     <div class="t-bar">
                         <h3>
@@ -511,7 +511,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img28.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img28.png') }}" alt="Career Institute education services">
                 </div>
             </div>
         </div>

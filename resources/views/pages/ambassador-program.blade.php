@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img33.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img33.png') }}" alt="Career Institute ambassador program">
                 </div>
             </div>
         </div>
@@ -324,7 +324,7 @@
             <div class="col-lg-6">
                 <div class="video-box">
                     <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <img src="{{ asset('assets/images/img34.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img34.png') }}" alt="Career Institute ambassador students">
                     </button>
                 </div>
             </div>
@@ -359,7 +359,7 @@
                                             data-video="{{ $campusVideo['video_url'] }}"
                                             aria-label="Play {{ $campusVideo['name'] }} virtual tour"
                                         >
-                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="">
+                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="Play video">
                                         </button>
                                     @endif
                                 </div>
