@@ -250,7 +250,6 @@
         </div>
     </div>
 </section>
-@include('partials.campus-locations')
 @endsection
 @push('scripts')
 <script>
