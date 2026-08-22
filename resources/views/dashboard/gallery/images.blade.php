@@ -99,10 +99,12 @@
                         data-dashboard-image-upload
                         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
                         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+                        data-required-width="1080"
+                        data-required-height="1350"
                         multiple
                         required
                     >
-                    <p class="dash-form-hint">You can upload multiple images at once. {{ \App\Support\DashboardImageUpload::HINT }}</p>
+                    <p class="dash-form-hint">You can upload multiple images at once. Each image must be exactly 1080x1350 pixels. {{ \App\Support\DashboardImageUpload::HINT }}</p>
                     @error('images')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror

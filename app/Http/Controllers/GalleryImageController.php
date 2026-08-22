@@ -27,7 +27,7 @@ class GalleryImageController extends Controller
     {
         $validated = $request->validate([
             'images' => ['required', 'array', 'min:1'],
-            'images.*' => DashboardImageUpload::baseRules(),
+            'images.*' => DashboardImageUpload::rulesWithDimensions(1080, 1350),
         ]);
 
         $nextSortOrder = ((int) $galleryCategory->images()->max('sort_order')) + 1;
