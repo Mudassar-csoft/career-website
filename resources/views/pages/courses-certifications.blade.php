@@ -105,6 +105,7 @@
 @endpush
 @section('content')
 <section class="cer-bar">
+    <h1 class="visually-hidden">Courses and Certifications</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

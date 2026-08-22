@@ -69,6 +69,7 @@
 @endpush
 @section('content')
 <section class="two-block">
+    <h1 class="visually-hidden">Upload Payment Receipt for {{ $registration->event->title }}</h1>
     <div class="container">
         <div class="fee-upload-wrap">
             <div class="box">

@@ -54,6 +54,7 @@
 @endpush
 @section('content')
 <section class="top-banner">
+    <h1 class="visually-hidden">{{ $event->title }}</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">

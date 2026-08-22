@@ -145,6 +145,7 @@
 @endpush
 @section('content')
 <section class="news-bar">
+    <h1 class="visually-hidden">{{ $blog->title }}</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">

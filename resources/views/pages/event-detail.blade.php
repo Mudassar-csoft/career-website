@@ -3,6 +3,7 @@
 @section('body_class', 'event-detail')
 @section('content')
 <section class="top-banner">
+    <h1 class="visually-hidden">Career Institute Franchise MOU Event</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

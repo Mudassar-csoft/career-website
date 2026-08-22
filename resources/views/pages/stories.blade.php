@@ -3,6 +3,7 @@
 @section('body_class', 'ss-page')
 @section('content')
 <section class="particle-section">
+    <h1 class="visually-hidden">Career Institute Success Stories</h1>
     <div id="particles-js"></div>
     <div class="particle-content">
         <div class="container">

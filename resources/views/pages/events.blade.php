@@ -64,6 +64,7 @@
 @endpush
 @section('content')
 <section class="top-banner">
+    <h1 class="visually-hidden">Career Institute Events</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -423,7 +424,7 @@
             images.forEach(function(img) {
                 popupSwiper.appendSlide(
                     '<div class="swiper-slide">' +
-                    '<img src="' + img + '">' +
+                    '<img src="' + img + '" alt="Event gallery image">' +
                     '</div>'
                 );
             });

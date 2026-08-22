@@ -5,6 +5,7 @@
 @section('body_class', 'news-page')
 @section('content')
 <section class="news-bar">
+    <h1 class="visually-hidden">{{ $news->title }}</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">

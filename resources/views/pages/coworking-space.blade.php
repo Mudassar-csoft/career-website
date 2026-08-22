@@ -53,27 +53,27 @@
             <div class="col-lg-12">
                 <div class="workspace-slider">
                     <div class="workspace-item">
-                        <img src="{{ asset('assets/images/img20.png') }}">
+                        <img src="{{ asset('assets/images/img20.png') }}" alt="Coworking meeting room">
                         <h5>Meeting Room</h5>
                     </div>
                     <div class="workspace-item small">
-                        <img src="{{ asset('assets/images/img21.png') }}">
+                        <img src="{{ asset('assets/images/img21.png') }}" alt="Coworking private office">
                         <h5>Private <br>Office</h5>
                     </div>
                     <div class="workspace-item large">
-                        <img src="{{ asset('assets/images/img22.png') }}">
+                        <img src="{{ asset('assets/images/img22.png') }}" alt="Coworking dedicated desk">
                         <h5>Dedicated Desk</h5>
                     </div>
                     <div class="workspace-item mid">
-                        <img src="{{ asset('assets/images/img23.png') }}">
+                        <img src="{{ asset('assets/images/img23.png') }}" alt="Coworking event space">
                         <h5>Event Space</h5>
                     </div>
                     <div class="workspace-item small">
-                        <img src="{{ asset('assets/images/img24.png') }}">
+                        <img src="{{ asset('assets/images/img24.png') }}" alt="Coworking meeting room">
                         <h5>Meeting Room</h5>
                     </div>
                     <div class="workspace-item end">
-                        <img src="{{ asset('assets/images/img25.png') }}">
+                        <img src="{{ asset('assets/images/img25.png') }}" alt="Coworking virtual office">
                         <h5>Virtual Office</h5>
                     </div>
                 </div>

@@ -3,6 +3,7 @@
 @section('body_class', 'news-page')
 @section('content')
 <section class="top-banner">
+    <h1 class="visually-hidden">Career Institute News</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
