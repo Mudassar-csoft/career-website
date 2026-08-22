@@ -416,40 +416,55 @@
             display: none;
           }
         }
-        &:before {
-          position: absolute;
-          top: -5px;
-          left: -25px;
-          right: auto;
-          bottom: auto;
-          content: "";
-          background: url(../images/icon08.png) no-repeat;
-          background-size: 100%;
-          width: 20px;
-          height: 20px;
-          @include max(575px) {
-            left: 0;
-            top: -0.5rem;
-          }
-        }
-        &:after {
-          position: absolute;
-          top: auto;
-          left: auto;
-          right: 0;
-          bottom: 0;
-          content: "";
-          background: url(../images/icon08.png) no-repeat;
-          background-size: 100%;
-          width: 20px;
-          height: 20px;
-          transform: rotate(180deg);
-          @include max(575px) {
-            right: 18px;
-          }
-        }
+        // &:before {
+        //   position: absolute;
+        //   top: -5px;
+        //   left: -25px;
+        //   right: auto;
+        //   bottom: auto;
+        //   content: "";
+        //   background: url(../images/icon08.png) no-repeat;
+        //   background-size: 100%;
+        //   width: 20px;
+        //   height: 20px;
+        //   @include max(575px) {
+        //     left: 0;
+        //     top: -0.5rem;
+        //   }
+        // }
+        // &:after {
+        //   position: absolute;
+        //   top: auto;
+        //   left: auto;
+        //   right: 0;
+        //   bottom: 0;
+        //   content: "";
+        //   background: url(../images/icon08.png) no-repeat;
+        //   background-size: 100%;
+        //   width: 20px;
+        //   height: 20px;
+        //   transform: rotate(180deg);
+        //   @include max(575px) {
+        //     right: 18px;
+        //   }
+        // }
         b {
           font-weight: 600;
+        }
+        .coma {
+          padding: 0;
+          border: 0;
+          background: none;
+          position: relative;
+          top: -3px;
+          left: -8px;
+          margin: 0;
+          &.round {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            transform: rotate(180deg);
+          }
         }
       }
       h4 {
