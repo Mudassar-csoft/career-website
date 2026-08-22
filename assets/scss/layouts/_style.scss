@@ -368,7 +368,7 @@
           border-radius: 100% 100%;
         }
       }
-      span {
+      h6 {
         backdrop-filter: blur(25.05066680908203px);
         border: 3px solid #ffffff49;
         color: #fff;
@@ -409,9 +409,12 @@
         margin: 0 0 10px;
         position: relative;
         display: inline-block;
-        @include max(575px) {
+        @include max(1200px) {
           font-size: 14px;
           line-height: 25px;
+          display: block;
+        }
+        @include max(575px) {
           br {
             display: none;
           }
@@ -459,6 +462,7 @@
           top: -3px;
           left: -8px;
           margin: 0;
+          backdrop-filter: none;
           &.round {
             position: relative;
             top: 10px;
