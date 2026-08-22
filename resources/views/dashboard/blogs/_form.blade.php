@@ -32,7 +32,16 @@
 
 <div class="dash-form-group">
     <label for="blog-image">Image</label>
-    <input type="file" id="blog-image" name="image" accept="image/*" {{ $blog->image ? '' : 'required' }}>
+    <input
+        type="file"
+        id="blog-image"
+        name="image"
+        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+        data-dashboard-image-upload
+        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        {{ $blog->image ? '' : 'required' }}
+    >
     <img
         id="blog-image-preview"
         class="dash-image-preview"
@@ -44,6 +53,7 @@
             onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"
         @endif
     >
+    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if (! $blog->image)
         <p class="dash-form-hint">A blog image is required for new posts.</p>
     @else

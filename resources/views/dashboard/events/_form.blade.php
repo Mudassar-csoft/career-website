@@ -81,9 +81,18 @@
 @endphp
 <div class="dash-form-group">
     <label for="event-images">Event Images</label>
-    <input type="file" id="event-images" name="images[]" accept="image/*" multiple>
+    <input
+        type="file"
+        id="event-images"
+        name="images[]"
+        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+        data-dashboard-image-upload
+        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        multiple
+    >
     <p class="dash-form-hint">
-        Upload one or more photos to show on the frontend event page.
+        Upload one or more photos to show on the frontend event page. {{ \App\Support\DashboardImageUpload::HINT }}
         @if ($event->exists)
             New uploads are added to the existing gallery.
         @endif

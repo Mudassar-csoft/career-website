@@ -37,7 +37,15 @@
 
 <div class="dash-form-group">
     <label for="course-image">Course Image</label>
-    <input type="file" id="course-image" name="image" accept="image/*">
+    <input
+        type="file"
+        id="course-image"
+        name="image"
+        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+        data-dashboard-image-upload
+        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+    >
     @if ($course->image)
         <img
             class="dash-image-preview"
@@ -48,7 +56,7 @@
         >
     @endif
     <img id="course-image-preview" class="dash-image-preview" alt="Preview">
-    <p class="dash-form-hint">Optional. Leave empty to use the default course image on the website.</p>
+    <p class="dash-form-hint">Optional. Leave empty to use the default course image on the website. {{ \App\Support\DashboardImageUpload::HINT }}</p>
     @error('image')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror

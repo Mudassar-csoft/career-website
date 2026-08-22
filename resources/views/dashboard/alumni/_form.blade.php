@@ -27,7 +27,16 @@
 
 <div class="dash-form-group">
     <label for="alumni-photo">Photo</label>
-    <input type="file" id="alumni-photo" name="photo" accept="image/*">
+    <input
+        type="file"
+        id="alumni-photo"
+        name="photo"
+        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+        data-dashboard-image-upload
+        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+    >
+    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if ($alum->photo)
         <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ asset('storage/'.$alum->photo) }}" alt="{{ $alum->name }}">
     @endif

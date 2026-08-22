@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Collaborator;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 
 class CollaboratorController extends Controller
@@ -32,7 +33,7 @@ class CollaboratorController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'logo' => ['required', 'image', 'max:2048'],
+            'logo' => DashboardImageUpload::rules(true),
         ]);
 
         $validated['logo'] = $request->file('logo')->store('collaborators', 'public');
@@ -55,7 +56,7 @@ class CollaboratorController extends Controller
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'logo' => ['nullable', 'image', 'max:2048'],
+            'logo' => DashboardImageUpload::rules(),
         ]);
 
         if ($request->hasFile('logo')) {

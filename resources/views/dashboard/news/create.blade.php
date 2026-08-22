@@ -61,7 +61,16 @@
 
                 <div class="dash-form-group">
                     <label for="news-image">Image</label>
-                    <input type="file" id="news-image" name="image" accept="image/*">
+                    <input
+                        type="file"
+                        id="news-image"
+                        name="image"
+                        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+                        data-dashboard-image-upload
+                        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+                        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+                    >
+                    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
                     <img id="news-image-preview" class="dash-image-preview" alt="Preview">
                     @error('image')
                         <p class="dash-form-error">{{ $message }}</p>

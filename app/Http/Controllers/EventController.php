@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Event;
 use App\Models\EventCategory;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -114,7 +115,7 @@ class EventController extends Controller
             'organizer' => ['required', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'images' => ['nullable', 'array'],
-            'images.*' => ['nullable', 'image', 'max:4096'],
+            'images.*' => array_merge(['nullable'], DashboardImageUpload::baseRules()),
             'is_paid' => ['required', 'in:0,1'],
             'fee_amount' => ['nullable', 'required_if:is_paid,1', 'numeric', 'min:0'],
             'has_seat_limit' => ['required', 'in:0,1'],

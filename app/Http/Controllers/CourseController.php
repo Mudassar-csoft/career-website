@@ -6,6 +6,7 @@ use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Course;
 use App\Models\CourseCategory;
 use App\Models\CourseMode;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -228,7 +229,7 @@ class CourseController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'alpha_dash', 'unique:courses,slug,'.($course->id ?? 'NULL').',id'],
-            'image' => ['nullable', 'image', 'max:4096'],
+            'image' => DashboardImageUpload::rules(),
             'course_category_id' => ['required', 'exists:course_categories,id'],
             'course_mode_id' => ['required', 'exists:course_modes,id'],
             'duration_weeks' => ['nullable', 'integer', 'min:1'],

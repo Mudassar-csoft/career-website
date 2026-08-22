@@ -10,7 +10,17 @@
 
 <div class="dash-form-group">
     <label for="collaborator-logo">Logo</label>
-    <input type="file" id="collaborator-logo" name="logo" accept="image/*" @if(! $collaborator->exists) required @endif>
+    <input
+        type="file"
+        id="collaborator-logo"
+        name="logo"
+        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+        data-dashboard-image-upload
+        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        @if(! $collaborator->exists) required @endif
+    >
+    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if ($collaborator->logo)
         <img class="dash-image-preview" style="display:block;background:#fff;padding:10px;" src="{{ asset('storage/'.$collaborator->logo) }}" alt="{{ $collaborator->name }}">
     @endif

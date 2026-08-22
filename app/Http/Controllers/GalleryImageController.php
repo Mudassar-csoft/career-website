@@ -5,14 +5,13 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\GalleryCategory;
 use App\Models\GalleryImage;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class GalleryImageController extends Controller
 {
     use BuildsDashboardMenu;
-
-    private const MAX_IMAGE_SIZE_KB = 5120;
 
     public function index(GalleryCategory $galleryCategory)
     {
@@ -28,7 +27,7 @@ class GalleryImageController extends Controller
     {
         $validated = $request->validate([
             'images' => ['required', 'array', 'min:1'],
-            'images.*' => ['image', 'max:' . self::MAX_IMAGE_SIZE_KB],
+            'images.*' => DashboardImageUpload::baseRules(),
         ]);
 
         $nextSortOrder = ((int) $galleryCategory->images()->max('sort_order')) + 1;

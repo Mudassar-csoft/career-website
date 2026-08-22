@@ -650,6 +650,10 @@
             display: none;
             border: 1px solid #e2e8ef;
         }
+        .dash-form-group input[type="file"][aria-invalid="true"] {
+            border-color: #c53030;
+            box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.12);
+        }
 
         /* Modal */
         .dash-modal-overlay {
@@ -944,6 +948,117 @@
                     }, 220);
                 });
             }
+        })();
+
+        (function () {
+            function getFileErrorElement(input) {
+                var group = input.closest('.dash-form-group');
+
+                if (!group) {
+                    return null;
+                }
+
+                var key = input.id || input.name;
+                var errorEl = group.querySelector('.dash-client-file-error[data-file-input="' + key + '"]');
+
+                if (!errorEl) {
+                    errorEl = document.createElement('p');
+                    errorEl.className = 'dash-form-error dash-client-file-error';
+                    errorEl.dataset.fileInput = key;
+                    errorEl.style.display = 'none';
+                    input.insertAdjacentElement('afterend', errorEl);
+                }
+
+                return errorEl;
+            }
+
+            function clearFileValidation(input, errorEl) {
+                input.setCustomValidity('');
+                input.removeAttribute('aria-invalid');
+
+                if (errorEl) {
+                    errorEl.textContent = '';
+                    errorEl.style.display = 'none';
+                }
+            }
+
+            function validateFileInput(input) {
+                var files = Array.prototype.slice.call(input.files || []);
+                var maxSizeKb = parseInt(input.dataset.maxSizeKb || '0', 10);
+                var allowedExtensions = (input.dataset.allowedExtensions || '')
+                    .split(',')
+                    .map(function (extension) {
+                        return extension.trim().toLowerCase();
+                    })
+                    .filter(Boolean);
+                var errorEl = getFileErrorElement(input);
+
+                clearFileValidation(input, errorEl);
+
+                if (!files.length) {
+                    return true;
+                }
+
+                for (var index = 0; index < files.length; index++) {
+                    var file = files[index];
+                    var extension = '';
+                    var lastDotIndex = file.name.lastIndexOf('.');
+                    var message = '';
+
+                    if (lastDotIndex !== -1) {
+                        extension = file.name.slice(lastDotIndex + 1).toLowerCase();
+                    }
+
+                    if (allowedExtensions.length && allowedExtensions.indexOf(extension) === -1) {
+                        message = file.name + ' must use a .webp or .svg extension.';
+                    } else if (maxSizeKb > 0 && file.size > maxSizeKb * 1024) {
+                        message = file.name + ' must be ' + maxSizeKb + ' KB or smaller.';
+                    }
+
+                    if (!message) {
+                        continue;
+                    }
+
+                    input.value = '';
+                    input.setCustomValidity(message);
+                    input.setAttribute('aria-invalid', 'true');
+
+                    if (errorEl) {
+                        errorEl.textContent = message;
+                        errorEl.style.display = 'block';
+                    }
+
+                    input.reportValidity();
+
+                    return false;
+                }
+
+                return true;
+            }
+
+            document.querySelectorAll('input[type="file"][data-dashboard-image-upload]').forEach(function (input) {
+                input.addEventListener('change', function () {
+                    validateFileInput(input);
+                });
+
+                if (!input.form || input.form.hasAttribute('data-dashboard-file-validation-bound')) {
+                    return;
+                }
+
+                input.form.addEventListener('submit', function (event) {
+                    var isValid = true;
+
+                    input.form.querySelectorAll('input[type="file"][data-dashboard-image-upload]').forEach(function (fileInput) {
+                        isValid = validateFileInput(fileInput) && isValid;
+                    });
+
+                    if (!isValid) {
+                        event.preventDefault();
+                    }
+                });
+
+                input.form.setAttribute('data-dashboard-file-validation-bound', 'true');
+            });
         })();
     </script>
 

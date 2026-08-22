@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Blog;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
@@ -88,7 +89,10 @@ class BlogController extends Controller
             'slug' => ['required', 'string', 'max:255', 'alpha_dash', 'unique:blogs,slug,'.($blog->id ?? 'NULL').',id'],
             'excerpt' => ['nullable', 'string', 'max:255'],
             'content' => ['nullable', 'string'],
-            'image' => [Rule::requiredIf(! $blog || ! $blog->image), 'nullable', 'image', 'max:4096'],
+            'image' => array_merge(
+                [Rule::requiredIf(! $blog || ! $blog->image), 'nullable'],
+                DashboardImageUpload::baseRules()
+            ),
             'meta_title' => ['nullable', 'string', 'max:255'],
             'meta_description' => ['nullable', 'string', 'max:500'],
             'meta_keywords' => ['nullable', 'string', 'max:255'],

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Alumni;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 
 class AlumniController extends Controller
@@ -76,7 +77,7 @@ class AlumniController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'designation' => ['required', 'string', 'max:255'],
             'review' => ['required', 'string'],
-            'photo' => ['nullable', 'image', 'max:4096'],
+            'photo' => DashboardImageUpload::rules(),
         ]);
     }
 }

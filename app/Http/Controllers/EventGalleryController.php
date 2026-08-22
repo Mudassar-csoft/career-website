@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Event;
 use App\Models\EventImage;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -26,7 +27,7 @@ class EventGalleryController extends Controller
     {
         $validated = $request->validate([
             'images' => ['required', 'array', 'min:1'],
-            'images.*' => ['image', 'max:4096'],
+            'images.*' => DashboardImageUpload::baseRules(),
         ]);
 
         foreach ($validated['images'] as $file) {

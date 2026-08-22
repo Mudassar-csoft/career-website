@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\News;
 use App\Models\NewsType;
+use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -37,7 +38,7 @@ class NewsController extends Controller
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'unique:news,slug', 'alpha_dash'],
             'news_type_id' => ['required', 'exists:news_types,id'],
-            'image' => ['nullable', 'image', 'max:4096'],
+            'image' => DashboardImageUpload::rules(),
             'content' => ['nullable', 'string'],
             'meta_title' => ['nullable', 'string', 'max:255'],
             'meta_description' => ['nullable', 'string', 'max:500'],

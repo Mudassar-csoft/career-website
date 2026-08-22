@@ -84,7 +84,18 @@
                 @csrf
                 <div class="dash-form-group" style="margin-bottom:14px;">
                     <label for="event-gallery-images">Upload Photos</label>
-                    <input type="file" id="event-gallery-images" name="images[]" accept="image/*" multiple required>
+                    <input
+                        type="file"
+                        id="event-gallery-images"
+                        name="images[]"
+                        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+                        data-dashboard-image-upload
+                        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
+                        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+                        multiple
+                        required
+                    >
+                    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
                     @error('images')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
