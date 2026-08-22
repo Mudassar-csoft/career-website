@@ -642,7 +642,7 @@
     }
     .native-testimonial-slider::-webkit-scrollbar { display: none; }
     .native-testimonial-slider > .item {
-        flex: 0 0 calc(25% - 11px);
+        flex: 0 0 calc(16.666% - 12px);
         scroll-snap-align: start;
     }
     .testimonial-section { position: relative; }
@@ -677,7 +677,7 @@
     		setTimeout(setCardClasses, 50);
     	});
     	$slider.slick({
-            slidesToShow: 4,
+            slidesToShow: 6,
     		slidesToScroll: 1,
     		autoplay: true,
     		autoplaySpeed: 3000,
