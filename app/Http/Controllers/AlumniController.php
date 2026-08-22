@@ -6,6 +6,9 @@ use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\Alumni;
 use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\ValidationException;
 
 class AlumniController extends Controller
 {
@@ -34,7 +37,7 @@ class AlumniController extends Controller
         $validated = $this->validateAlumni($request, true);
 
         if ($photo = $validated['photo'] ?? null) {
-            $validated['photo'] = $photo->store('alumni', 'public');
+            $validated['photo'] = $this->storePhoto($photo);
         }
 
         Alumni::create($validated);
@@ -56,7 +59,7 @@ class AlumniController extends Controller
         $validated = $this->validateAlumni($request, $alum->resolvePhotoPath() === null);
 
         if ($photo = $validated['photo'] ?? null) {
-            $validated['photo'] = $photo->store('alumni', 'public');
+            $validated['photo'] = $this->storePhoto($photo);
         }
 
         $alum->update($validated);
@@ -79,5 +82,20 @@ class AlumniController extends Controller
             'review' => ['required', 'string'],
             'photo' => DashboardImageUpload::rules($photoRequired),
         ]);
+    }
+
+    private function storePhoto(UploadedFile $photo): string
+    {
+        $disk = Storage::disk('public');
+        $disk->makeDirectory('alumni');
+        $path = $disk->putFile('alumni', $photo);
+
+        if ($path === false) {
+            throw ValidationException::withMessages([
+                'photo' => 'The alumni photo could not be saved. Please try again.',
+            ]);
+        }
+
+        return $path;
     }
 }
