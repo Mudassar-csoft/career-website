@@ -271,7 +271,7 @@
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                             <img src="assets/images/img02.png" alt="">
                         </div>
-                        <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</span>
+                        <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</h6>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
                             <span class=" coma"><img src="assets/images/icon08.png" alt=""></span><b>Our vision</b>  is to transform education into meaningful<br>
                             careers. Since 2010, Career Institute has delivered<br>
@@ -284,9 +284,9 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img74.png" alt="">
                         </div>
-                        <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</span>
+                        <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</h6>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
                             <span class="coma"><img src="assets/images/icon08.png" alt=""></span>
                             <b>At Career</b> Institute  we believe every learner has unique<br>

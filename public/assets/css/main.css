@@ -697,7 +697,7 @@ body {
   border: 4px solid rgba(217, 217, 217, 0.1450980392);
   border-radius: 100% 100%;
 }
-.vision-bar .g-box .t-detail span {
+.vision-bar .g-box .t-detail h6 {
   backdrop-filter: blur(25.0506668091px);
   border: 3px solid rgba(255, 255, 255, 0.2862745098);
   color: #fff;
@@ -711,7 +711,7 @@ body {
   margin: 0 0 15px;
 }
 @media (max-width: 575px) {
-  .vision-bar .g-box .t-detail span {
+  .vision-bar .g-box .t-detail h6 {
     font-size: 14px;
     line-height: 16px;
     padding: 12px 20px;
@@ -741,11 +741,14 @@ body {
   position: relative;
   display: inline-block;
 }
-@media (max-width: 575px) {
+@media (max-width: 1200px) {
   .vision-bar .g-box .t-detail p {
     font-size: 14px;
     line-height: 25px;
+    display: block;
   }
+}
+@media (max-width: 575px) {
   .vision-bar .g-box .t-detail p br {
     display: none;
   }
@@ -761,6 +764,7 @@ body {
   top: -3px;
   left: -8px;
   margin: 0;
+  backdrop-filter: none;
 }
 .vision-bar .g-box .t-detail p .coma.round {
   position: relative;
@@ -1054,20 +1058,10 @@ body {
   text-align: center;
 }
 .review-area .box .img-hold {
-  width: 120px;
-  height: 120px;
   margin: 0 0 20px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  border-radius: 50%;
 }
 .review-area .box .img-hold img {
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
 }
 .review-area .box .rt-bar h3 {
   font-size: 16px;
