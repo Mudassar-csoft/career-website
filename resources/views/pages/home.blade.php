@@ -638,7 +638,7 @@
     		setTimeout(setCardClasses, 50);
     	});
     	$slider.slick({
-    		slidesToShow: 6,
+            slidesToShow: 4,
     		slidesToScroll: 1,
     		autoplay: true,
     		autoplaySpeed: 3000,
@@ -649,21 +649,21 @@
     		prevArrow: '<button class="slider-prev"><i class="fa fa-angle-left"></i></button>',
     		nextArrow: '<button class="slider-next"><i class="fa fa-angle-right"></i></button>',
     		responsive: [{
-				breakpoint: 1280,
+			breakpoint: 1280,
 				settings: {
 					slidesToShow: 4,
 				}
 				},
 				{
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 3,
+			breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
 					}
 				},
 				{
-					breakpoint: 767,
-					settings: {
-						slidesToShow: 2,
+			breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
 					}
 				},
                 {
