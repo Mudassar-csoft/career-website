@@ -61,12 +61,12 @@
                         <div class="col-md-6">
                             <div class="s-icon">
                                 <ul>
-                                    <li><a href="#"><img src="{{ asset('assets/images/facebook.svg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/images/insta.svg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/images/din.svg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/images/twitter.svg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/images/tube.svg') }}" alt=""></a></li>
-                                    <li><a href="#"><img src="{{ asset('assets/images/whatapp.svg') }}" alt=""></a></li>
+                                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/facebook.svg') }}" alt=""></a></li>
+                                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/insta.svg') }}" alt=""></a></li>
+                                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/din.svg') }}" alt=""></a></li>
+                                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/twitter.svg') }}" alt=""></a></li>
+                                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/tube.svg') }}" alt=""></a></li>
+                                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/whatapp.svg') }}" alt=""></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
             </div>
         </div>
     </div>
-    <a href="https://wa.me/923414444010" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/923144444010" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     <a href="javascript:void(0)" id="backToTop" class="back-to-top">
