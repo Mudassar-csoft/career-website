@@ -35,10 +35,11 @@
         data-dashboard-image-upload
         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        {{ $alum->exists ? '' : 'required' }}
     >
     <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if ($alum->photo)
-        <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ asset('storage/'.$alum->photo) }}" alt="{{ $alum->name }}">
+        <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ $alum->photo_url }}" alt="{{ $alum->name }}" onerror="this.src='{{ asset('assets/images/img05.png') }}'; this.onerror=null;">
     @endif
     <img id="alumni-photo-preview" class="dash-image-preview" alt="Preview">
     @error('photo')

@@ -31,7 +31,7 @@ class AlumniController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $this->validateAlumni($request);
+        $validated = $this->validateAlumni($request, true);
 
         if ($request->hasFile('photo')) {
             $validated['photo'] = $request->file('photo')->store('alumni', 'public');
@@ -71,13 +71,13 @@ class AlumniController extends Controller
         return redirect()->route('dashboard.alumni.index')->with('status', 'Alumni review deleted.');
     }
 
-    protected function validateAlumni(Request $request): array
+    protected function validateAlumni(Request $request, bool $photoRequired = false): array
     {
         return $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'designation' => ['required', 'string', 'max:255'],
             'review' => ['required', 'string'],
-            'photo' => DashboardImageUpload::rules(),
+            'photo' => DashboardImageUpload::rules($photoRequired),
         ]);
     }
 }

@@ -410,7 +410,7 @@
                                 <div class="card-wrap">
                                     <div class="box">
                                         <div class="img-hold">
-                                            <img src="{{ $alum->photo ? asset('storage/'.$alum->photo) : asset('assets/images/img05.png') }}" alt="{{ $alum->name }}">
+                                            <img src="{{ $alum->photo_url }}" alt="{{ $alum->name }}">
                                         </div>
                                         <div class="rt-bar">
                                             <h3>{{ $alum->name }}</h3>
@@ -534,13 +534,13 @@
             <div class="col-lg-12">
                 <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Keep in Touch</h2>
                 <ul>
-                    <li data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/fb.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/instagram.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/youtube.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="assets/images/fb.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="assets/images/instagram.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="assets/images/youtube.png" alt=""></a></li>
                     <li data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/linkdin.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/x.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/wp.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="assets/images/linkdin.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="assets/images/x.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="assets/images/wp.png" alt=""></a></li>
                 </ul>
             </div>
         </div>
