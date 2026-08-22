@@ -500,6 +500,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px 10px;
 }
 @media (max-width: 767px) {
   .news-area .event-bar ul li .d-info {

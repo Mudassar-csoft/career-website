@@ -214,6 +214,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: 10px 10px;
           @include max(767px) {
             padding: 25px 25px;
           }
