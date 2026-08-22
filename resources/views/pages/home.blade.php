@@ -273,11 +273,11 @@
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</span>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <b>Our vision</b>  is to transform education into meaningful<br>
+                            <span class=" coma"><img src="assets/images/icon08.png" alt=""></span><b>Our vision</b>  is to transform education into meaningful<br>
                             careers. Since 2010, Career Institute has delivered<br>
                             practical, industry-focused training, empowering<br>
                             learners with relevant skills, confidence and direction<br>
-                            to succeed in a rapidly evolving global workforce.
+                            to succeed in a rapidly evolving global workforce.<span class="round coma"><img src="assets/images/icon08.png" alt=""></span>
                         </p>
                     </div>
                 </div>
@@ -288,11 +288,12 @@
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</span>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
+                            <span class="coma"><img src="assets/images/icon08.png" alt=""></span>
                             <b>At Career</b> Institute  we believe every learner has unique<br>
                             potential. Through an inclusive and inspiring environment,<br>
                             we develop practical skills, confidence and creativity,<br>
                             empowering students to pursue meaningful careers<br>
-                            and achieve lifelong professional growth.
+                            and achieve lifelong professional growth.<span class="round coma"><img src="assets/images/icon08.png" alt=""></span>
                         </p>
                     </div>
                 </div>
