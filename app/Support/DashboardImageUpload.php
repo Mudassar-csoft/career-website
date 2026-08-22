@@ -49,7 +49,7 @@ class DashboardImageUpload
                 ? self::svgDimensions($value->getRealPath())
                 : @getimagesize($value->getRealPath());
 
-            if (! $dimensions || (float) $dimensions[0] !== $width || (float) $dimensions[1] !== $height) {
+            if (! $dimensions || (float) $dimensions[0] !== (float) $width || (float) $dimensions[1] !== (float) $height) {
                 $fail("The {$attribute} must be exactly {$width}x{$height} pixels.");
             }
         };
