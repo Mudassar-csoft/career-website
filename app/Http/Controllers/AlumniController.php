@@ -53,7 +53,7 @@ class AlumniController extends Controller
 
     public function update(Request $request, Alumni $alum)
     {
-        $validated = $this->validateAlumni($request);
+        $validated = $this->validateAlumni($request, $alum->resolvePhotoPath() === null);
 
         if ($request->hasFile('photo')) {
             $validated['photo'] = $request->file('photo')->store('alumni', 'public');

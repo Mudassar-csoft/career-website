@@ -35,9 +35,12 @@
         data-dashboard-image-upload
         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
-        {{ $alum->exists ? '' : 'required' }}
+        {{ $alum->exists && $alum->resolvePhotoPath() !== null ? '' : 'required' }}
     >
     <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
+    @if ($alum->exists && $alum->resolvePhotoPath() === null)
+        <p class="dash-form-hint">The current photo is unavailable. Upload a replacement image before updating this alumni record.</p>
+    @endif
     @if ($alum->photo)
         <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ $alum->photo_url }}" alt="{{ $alum->name }}" onerror="this.src='{{ asset('assets/images/img05.png') }}'; this.onerror=null;">
     @endif
