@@ -982,9 +982,55 @@
                 }
             }
 
+            function showFileValidationError(input, errorEl, message) {
+                input.value = '';
+                input.setCustomValidity(message);
+                input.setAttribute('aria-invalid', 'true');
+
+                if (errorEl) {
+                    errorEl.textContent = message;
+                    errorEl.style.display = 'block';
+                }
+
+                input.reportValidity();
+            }
+
+            function validateImageDimensions(input, errorEl, file, width, height) {
+                input.dataset.imageDimensionsValidating = 'true';
+                input.setCustomValidity('Checking image dimensions.');
+
+                var image = new Image();
+                var objectUrl = URL.createObjectURL(file);
+
+                image.onload = function () {
+                    URL.revokeObjectURL(objectUrl);
+                    delete input.dataset.imageDimensionsValidating;
+
+                    if (image.naturalWidth === width && image.naturalHeight === height) {
+                        input.dataset.imageDimensionsValid = 'true';
+                        clearFileValidation(input, errorEl);
+                        return;
+                    }
+
+                    delete input.dataset.imageDimensionsValid;
+                    showFileValidationError(input, errorEl, file.name + ' must be exactly ' + width + 'x' + height + ' pixels.');
+                };
+
+                image.onerror = function () {
+                    URL.revokeObjectURL(objectUrl);
+                    delete input.dataset.imageDimensionsValidating;
+                    delete input.dataset.imageDimensionsValid;
+                    showFileValidationError(input, errorEl, 'Unable to read the dimensions of ' + file.name + '.');
+                };
+
+                image.src = objectUrl;
+            }
+
             function validateFileInput(input) {
                 var files = Array.prototype.slice.call(input.files || []);
                 var maxSizeKb = parseInt(input.dataset.maxSizeKb || '0', 10);
+                var requiredWidth = parseInt(input.dataset.requiredWidth || '0', 10);
+                var requiredHeight = parseInt(input.dataset.requiredHeight || '0', 10);
                 var allowedExtensions = (input.dataset.allowedExtensions || '')
                     .split(',')
                     .map(function (extension) {
@@ -1019,18 +1065,20 @@
                         continue;
                     }
 
-                    input.value = '';
-                    input.setCustomValidity(message);
-                    input.setAttribute('aria-invalid', 'true');
+                    delete input.dataset.imageDimensionsValid;
+                    showFileValidationError(input, errorEl, message);
+                    return false;
+                }
 
-                    if (errorEl) {
-                        errorEl.textContent = message;
-                        errorEl.style.display = 'block';
+                if (requiredWidth > 0 && requiredHeight > 0) {
+                    if (input.dataset.imageDimensionsValidating === 'true') {
+                        return false;
                     }
 
-                    input.reportValidity();
-
-                    return false;
+                    if (input.dataset.imageDimensionsValid !== 'true') {
+                        validateImageDimensions(input, errorEl, files[0], requiredWidth, requiredHeight);
+                        return false;
+                    }
                 }
 
                 return true;

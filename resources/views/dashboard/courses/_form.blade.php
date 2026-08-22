@@ -2,8 +2,8 @@
 
 <div class="dash-form-row">
     <div class="dash-form-group">
-        <label for="course-title">Course Title</label>
-        <input type="text" id="course-title" name="title" value="{{ old('title', $course->title) }}" required>
+        <label for="course-title">Course Title (35-40 characters)</label>
+        <input type="text" id="course-title" name="title" value="{{ old('title', $course->title) }}" minlength="35" maxlength="40" required>
         @error('title')
             <p class="dash-form-error">{{ $message }}</p>
         @enderror
@@ -45,6 +45,8 @@
         data-dashboard-image-upload
         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        data-required-width="1080"
+        data-required-height="600"
     >
     @if ($course->image)
         <img
@@ -56,7 +58,7 @@
         >
     @endif
     <img id="course-image-preview" class="dash-image-preview" alt="Preview">
-    <p class="dash-form-hint">Optional. Leave empty to use the default course image on the website. {{ \App\Support\DashboardImageUpload::HINT }}</p>
+    <p class="dash-form-hint">Optional. Use an image exactly 1080x600 pixels. {{ \App\Support\DashboardImageUpload::HINT }}</p>
     @error('image')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror

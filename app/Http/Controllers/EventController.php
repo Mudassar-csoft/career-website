@@ -106,7 +106,7 @@ class EventController extends Controller
     protected function validateEvent(Request $request, ?Event $event = null): array
     {
         $validated = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'min:45', 'max:50'],
             'slug' => ['required', 'string', 'max:255', 'alpha_dash', 'unique:events,slug,'.($event->id ?? 'NULL').',id'],
             'event_category_id' => ['required', 'exists:event_categories,id'],
             'event_date' => ['required', 'date'],

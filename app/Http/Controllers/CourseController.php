@@ -226,10 +226,10 @@ class CourseController extends Controller
     protected function validateCourse(Request $request, ?Course $course = null): array
     {
         $validated = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'min:35', 'max:40'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'alpha_dash', 'unique:courses,slug,'.($course->id ?? 'NULL').',id'],
-            'image' => DashboardImageUpload::rules(),
+            'image' => DashboardImageUpload::rulesWithDimensions(1080, 600),
             'course_category_id' => ['required', 'exists:course_categories,id'],
             'course_mode_id' => ['required', 'exists:course_modes,id'],
             'duration_weeks' => ['nullable', 'integer', 'min:1'],
