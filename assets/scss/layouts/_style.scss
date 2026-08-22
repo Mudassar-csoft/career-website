@@ -5,6 +5,9 @@
   background: url("../images/banner01.png") no-repeat top center;
   background-size: cover;
   padding: 7rem 0 4rem;
+  @include max(1200px) {
+    padding: 4rem 0 4rem;
+  }
   @include max(992px) {
     padding: 4rem 0 4rem;
   }
@@ -1189,10 +1192,10 @@
   @include max(1200px) {
     width: 350px;
     height: 350px;
+    top: 1rem;
   }
   @include max(1100px) {
     left: 1rem;
-    top: 1rem;
   }
   @include max(992px) {
     left: 0;
