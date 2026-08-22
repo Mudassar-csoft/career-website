@@ -40,6 +40,8 @@
         data-dashboard-image-upload
         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        data-required-width="1920"
+        data-required-height="1080"
         {{ $blog->image ? '' : 'required' }}
     >
     <img
@@ -53,7 +55,7 @@
             onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"
         @endif
     >
-    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
+    <p class="dash-form-hint">Use an image exactly 1920x1080 pixels. {{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if (! $blog->image)
         <p class="dash-form-hint">A blog image is required for new posts.</p>
     @else

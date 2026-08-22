@@ -90,8 +90,8 @@ class BlogController extends Controller
             'excerpt' => ['nullable', 'string', 'max:255'],
             'content' => ['nullable', 'string'],
             'image' => array_merge(
-                [Rule::requiredIf(! $blog || ! $blog->image), 'nullable'],
-                DashboardImageUpload::baseRules()
+                [Rule::requiredIf(! $blog || ! $blog->image)],
+                DashboardImageUpload::rulesWithDimensions(1920, 1080)
             ),
             'meta_title' => ['nullable', 'string', 'max:255'],
             'meta_description' => ['nullable', 'string', 'max:500'],

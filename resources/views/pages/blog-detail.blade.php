@@ -27,6 +27,86 @@
         width: 18px;
         height: 18px;
     }
+    .blog-detail .blog-rich-content {
+        color: #000;
+        font-size: 20px;
+        line-height: 1.55;
+    }
+    .blog-detail .blog-rich-content h1,
+    .blog-detail .blog-rich-content h2,
+    .blog-detail .blog-rich-content h3,
+    .blog-detail .blog-rich-content h4,
+    .blog-detail .blog-rich-content h5,
+    .blog-detail .blog-rich-content h6 {
+        color: #012e4b;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 1.5em 0 0.65em;
+    }
+    .blog-detail .blog-rich-content h1 { font-size: 2em; }
+    .blog-detail .blog-rich-content h2 { font-size: 1.65em; }
+    .blog-detail .blog-rich-content h3 { font-size: 1.35em; }
+    .blog-detail .blog-rich-content h4 { font-size: 1.15em; }
+    .blog-detail .blog-rich-content p {
+        margin: 0 0 1.25em;
+    }
+    .blog-detail .blog-rich-content ul,
+    .blog-detail .blog-rich-content ol {
+        margin: 0 0 1.25em;
+        padding-left: 1.5em;
+    }
+    .blog-detail .blog-rich-content ul { list-style: disc; }
+    .blog-detail .blog-rich-content ol { list-style: decimal; }
+    .blog-detail .blog-rich-content li {
+        display: list-item !important;
+        list-style: inherit;
+        margin: 0 0 0.45em;
+        padding: 0;
+    }
+    .blog-detail .blog-rich-content li > ul,
+    .blog-detail .blog-rich-content li > ol {
+        margin: 0.45em 0 0;
+    }
+    .blog-detail .blog-rich-content a {
+        color: #009db8;
+        text-decoration: underline;
+    }
+    .blog-detail .blog-rich-content blockquote {
+        border-left: 4px solid #03c587;
+        color: #425466;
+        font-style: italic;
+        margin: 0 0 1.25em;
+        padding: 0.5em 0 0.5em 1em;
+    }
+    .blog-detail .blog-rich-content figure.table {
+        margin: 0 0 1.25em;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    .blog-detail .blog-rich-content table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .blog-detail .blog-rich-content th,
+    .blog-detail .blog-rich-content td {
+        border: 1px solid #cbd5dc;
+        padding: 0.6em 0.75em;
+        text-align: left;
+    }
+    .blog-detail .blog-rich-content th {
+        background: #eff8f5;
+        font-weight: 700;
+    }
+    .blog-detail .blog-rich-content img,
+    .blog-detail .blog-rich-content video {
+        height: auto;
+        max-width: 100%;
+    }
+    @media (max-width: 450px) {
+        .blog-detail .blog-rich-content {
+            font-size: 16px;
+        }
+    }
 </style>
 @endpush
 @section('content')
@@ -53,7 +133,7 @@
                             {{ $blog->created_at->format('d-m-Y') }}
                         </span>
                     </div>
-                    <div class="mid-area">
+                    <div class="mid-area blog-rich-content">
                         {!! $blog->content !!}
                     </div>
                 </div>
