@@ -14,14 +14,14 @@ class HomeController extends Controller
         $featuredCourses = Course::with(['category', 'mode'])->where('is_featured', true)->latest()->take(6)->get();
         $eventsWidget = Event::where('event_date', '>=', now()->toDateString())
             ->orderBy('event_date')
-            ->take(4)
+            ->take(3)
             ->get();
 
-        if ($eventsWidget->count() < 4) {
+        if ($eventsWidget->count() < 3) {
             $eventsWidget = $eventsWidget->concat(
                 Event::where('event_date', '<', now()->toDateString())
                     ->orderByDesc('event_date')
-                    ->take(4 - $eventsWidget->count())
+                    ->take(3 - $eventsWidget->count())
                     ->get()
             )->values();
         }
