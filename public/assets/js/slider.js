@@ -46,7 +46,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
             responsive: [{
 				breakpoint: 1400,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 4,
                     slidesToScroll: 1,
 				}
 				},

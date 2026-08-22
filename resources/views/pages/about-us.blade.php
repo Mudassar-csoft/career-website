@@ -351,7 +351,7 @@
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                             <img src="assets/images/img02.png" alt="">
                         </div>
-                        <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
+                        <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</span>
                         <div class="s-link" >
                             <ul>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt=""></a></li>
@@ -362,11 +362,11 @@
                             </ul>
                         </div>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <b>Our mission</b> is to educate and empower enterprise<br>
-                            leaders. We firmly believe that the leaders nurtured<br>
-                            by our institute play a crucial role in effecting<br>
-                            positive change within their organizations and<br>
-                            on a global scale.
+                            <b>Our vision</b>  is to transform education into meaningful<br>
+                            careers. Since 2010, Career Institute has delivered<br>
+                            practical, industry-focused training, empowering<br>
+                            learners with relevant skills, confidence and direction<br>
+                            to succeed in a rapidly evolving global workforce.
                         </p>
                         <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
                             Inspired by rapid technological advancement and the changing global landscape,
@@ -396,11 +396,11 @@
                             </ul>
                         </div>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <b>Our mission</b> is to educate and empower enterprise<br>
-                            leaders. We firmly believe that the leaders nurtured<br>
-                            by our institute play a crucial role in effecting<br>
-                            positive change within their organizations and<br>
-                            on a global scale.
+                            At Career Institute  we believe every learner has unique
+                            potential. Through an inclusive and inspiring environment,
+                            we develop practical skills, confidence and creativity,
+                            empowering students to pursue meaningful careers
+                            and achieve lifelong professional growth.
                         </p>
                         <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
                             Inspired by rapid technological advancement and the changing global landscape,
