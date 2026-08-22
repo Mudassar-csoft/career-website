@@ -410,7 +410,7 @@
                                 <div class="card-wrap">
                                     <div class="box">
                                         <div class="img-hold">
-                                            <img src="{{ $alum->photo_url }}" alt="{{ $alum->name }}">
+                                            <img src="{{ $alum->photo_url }}" alt="{{ $alum->name }}" onerror="this.src='{{ asset('assets/images/img05.png') }}'; this.onerror=null;">
                                         </div>
                                         <div class="rt-bar">
                                             <h3>{{ $alum->name }}</h3>
