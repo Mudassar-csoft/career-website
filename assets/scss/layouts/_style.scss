@@ -1192,10 +1192,10 @@
   @include max(1200px) {
     width: 350px;
     height: 350px;
+    top: 1rem;
   }
   @include max(1100px) {
     left: 1rem;
-    top: 1rem;
   }
   @include max(992px) {
     left: 0;
