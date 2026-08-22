@@ -682,8 +682,8 @@
     		autoplay: true,
     		autoplaySpeed: 3000,
     		cssEase: 'linear',
-    		infinite: true,
-    		arrows: true,
+		infinite: {{ $alumni->count() > 6 ? 'true' : 'false' }},
+		arrows: {{ $alumni->count() > 6 ? 'true' : 'false' }},
     		speed: 900,
     		prevArrow: '<button class="slider-prev"><i class="fa fa-angle-left"></i></button>',
     		nextArrow: '<button class="slider-next"><i class="fa fa-angle-right"></i></button>',
@@ -758,6 +758,10 @@
         }
 
         slider.classList.add('native-testimonial-slider');
+
+        if (slider.children.length <= 6) {
+            return;
+        }
 
         [
             ['native-testimonial-prev', 'Previous alumni reviews', -1, '\u2039'],
