@@ -13942,11 +13942,11 @@ body {
 }
 .logo-slider .slick-slide .img-hold {
   background: rgba(1, 161, 180, 0.1490196078);
-  padding: 15px 30px;
+  padding: 10px 25px;
   border-radius: 15px 15px;
   display: flex;
   justify-content: center;
-  height: 70px;
+  height: 75px;
 }
 @media (max-width: 1400px) {
   .logo-slider .slick-slide .img-hold {

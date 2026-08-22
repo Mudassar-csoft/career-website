@@ -441,12 +441,16 @@
             <div class="col-lg-12">
                 <div class="logo-slider">
                     @foreach ([
-                        ['image' => 'img09.png', 'name' => 'Linux Professional Institute'],
-                        ['image' => 'img10.png', 'name' => 'VMware by Broadcom'],
-                        ['image' => 'img11.png', 'name' => 'Kryterion'],
-                        ['image' => 'img12.png', 'name' => 'Linux Professional Institute'],
-                        ['image' => 'img10.png', 'name' => 'VMware by Broadcom'],
-                        ['image' => 'img11.png', 'name' => 'Kryterion'],
+                        ['image' => 'img76.png', 'name' => 'Linux Professional Institute'],
+                        ['image' => 'img77.png', 'name' => 'VMware by Broadcom'],
+                        ['image' => 'img78.png', 'name' => 'Kryterion'],
+                        ['image' => 'img79.png', 'name' => 'Linux Professional Institute'],
+                        ['image' => 'img80.png', 'name' => 'VMware by Broadcom'],
+                        ['image' => 'img81.png', 'name' => 'Kryterion'],
+                        ['image' => 'img82.png', 'name' => 'Kryterion'],
+                        ['image' => 'img83.png', 'name' => 'Kryterion'],
+                        ['image' => 'img84.png', 'name' => 'Kryterion'],
+                        ['image' => 'img85.png', 'name' => 'Kryterion'],
                     ] as $collaborator)
                         <div>
                             <div class="img-hold">

@@ -284,11 +284,11 @@
     margin: 0 10px 0 0;
     .img-hold {
       background: #01a1b426;
-      padding: 15px 30px;
+      padding: 10px 25px;
       border-radius: 15px 15px;
       display: flex;
       justify-content: center;
-      height: 70px;
+      height: 75px;
       @include max(1400px) {
         height: 60px;
       }
