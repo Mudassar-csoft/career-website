@@ -51,6 +51,13 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
 				}
 				},
 				{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 3,
+                        slidesToScroll: 1,
+					}
+				},
+                {
 					breakpoint: 992,
 					settings: {
 						slidesToShow: 2,
