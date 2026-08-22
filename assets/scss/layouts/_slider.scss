@@ -98,8 +98,8 @@
         max-height: 175px;
         overflow: hidden;
         @include max(1400px) {
-          min-height: 200px;
-          max-height: 200px;
+          min-height: 147px;
+          max-height: 147px;
         }
         @include max(1200px) {
           min-height: 165px;
@@ -166,6 +166,12 @@
           margin: 0 0 10px;
           min-height: 40px;
           max-height: 40px;
+          @include max(1400px) {
+            font-size: 14px;
+            line-height: 16px;
+            min-height: 35px;
+            max-height: 35px;
+          }
         }
         ul {
           margin: 0 0 12px;
@@ -198,6 +204,11 @@
           align-items: center;
           .an-btn {
             @include an-btn;
+            @include max(1400px) {
+              padding: 10px 15px;
+              font-size: 12px;
+              line-height: 14px;
+            }
             @include max(480px) {
               font-size: 13px;
               line-height: 15px;
@@ -205,6 +216,11 @@
           }
           .md-btn {
             @include md-btn;
+            @include max(1400px) {
+              padding: 10px 15px;
+              font-size: 12px;
+              line-height: 14px;
+            }
             @include max(480px) {
               font-size: 13px;
               line-height: 15px;
