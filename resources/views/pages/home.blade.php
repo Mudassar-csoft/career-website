@@ -238,7 +238,7 @@
                 <div class="about-bar" data-aos="fade-up" data-aos-duration="1400" data-aos-offset="80">
                     <h2><span>Why</span> Choose Us</h2>
                     <div class="img-hold">
-                        <img src="assets/images/img01.png" alt="Career Institute professional training">
+                        <img src="assets/images/img75.png" alt="Career Institute professional training">
                     </div>
                     <h3>About Career Institute</h3>
                     <p>
