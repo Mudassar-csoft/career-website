@@ -23,11 +23,53 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <style>
+        .seo-breadcrumb {
+            background: #f1f8f6;
+            border-bottom: 1px solid #dcece7;
+            color: #4d6270;
+            font: 500 13px/1.4 "Montserrat", sans-serif;
+            padding: 10px 0;
+        }
+        .seo-breadcrumb ol {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .seo-breadcrumb li {
+            align-items: center;
+            display: flex;
+            gap: 7px;
+        }
+        .seo-breadcrumb li:not(:last-child)::after {
+            color: #78919a;
+            content: "/";
+        }
+        .seo-breadcrumb a {
+            color: #017e8f;
+            text-decoration: none;
+        }
+        .seo-breadcrumb a:hover,
+        .seo-breadcrumb a:focus-visible {
+            text-decoration: underline;
+        }
+        .seo-breadcrumb [aria-current="page"] {
+            color: #173f52;
+            font-weight: 700;
+        }
+    </style>
     @stack('styles')
 </head>
 <body class="@yield('body_class')">
     <div id="wrapper">
         @include('partials.header')
+        @unless (request()->routeIs('home'))
+            @include('components.seo-breadcrumb')
+        @endunless
         <main role="main">
             @yield('content')
         </main>
