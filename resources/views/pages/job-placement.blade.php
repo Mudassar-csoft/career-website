@@ -43,12 +43,12 @@
                                 </div>
                                 <div class="col-auto d-none d-lg-block">
                                     <button class="search-btn">
-                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="">
+                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="Career Institute feature icon">
                                     </button>
                                 </div>
                                 <div class="col-12 d-lg-none">
                                     <button class="search-btn">
-                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="">
+                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="Career Institute feature icon">
                                         Search
                                     </button>
                                 </div>
@@ -183,7 +183,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon48.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon48.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Administration<br>
@@ -194,7 +194,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon49.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon49.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Information<br>
@@ -205,7 +205,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon50.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon50.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Marketing<br>
@@ -216,7 +216,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon51.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon51.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Finance &<br>
@@ -229,7 +229,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon48.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon48.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Administration<br>
@@ -240,7 +240,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon49.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon49.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Information<br>
@@ -251,7 +251,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon50.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon50.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Marketing<br>
@@ -262,7 +262,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon51.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon51.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <p>
                                 Finance &<br>
@@ -301,7 +301,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -313,7 +313,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
@@ -324,7 +324,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
@@ -335,7 +335,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Google Meet</h3>
@@ -346,7 +346,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Microsoft Team</h3>
@@ -410,13 +410,13 @@
             <div class="col-lg-12">
                 <h2>Keep in Touch</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/fb.png') }}" alt=""></a></li>
-                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/instagram.png') }}" alt=""></a></li>
-                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/youtube.png') }}" alt=""></a></li>
-                    <li><a href="#"><img src="{{ asset('assets/images/tiktok.png') }}" alt=""></a></li>
-                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/linkdin.png') }}" alt=""></a></li>
-                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/x.png') }}" alt=""></a></li>
-                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/wp.png') }}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/fb.png') }}" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/youtube.png') }}" alt="YouTube"></a></li>
+                    <li><a href="#"><img src="{{ asset('assets/images/tiktok.png') }}" alt="TikTok"></a></li>
+                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/linkdin.png') }}" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/x.png') }}" alt="X"></a></li>
+                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/wp.png') }}" alt="WhatsApp"></a></li>
                 </ul>
             </div>
         </div>

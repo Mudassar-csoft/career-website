@@ -54,17 +54,18 @@
 @endpush
 @section('content')
 <section class="top-banner">
+    <h1 class="visually-hidden">{{ $event->title }}</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
                 <h2>{{ $event->title }}</h2>
                 <ul>
                     <li>
-                        <img src="{{ asset('assets/images/icon138.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon138.svg') }}" alt="Event date">
                         {{ $event->event_date->format('d M Y') }}
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon139.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon139.svg') }}" alt="Event location">
                         {{ $event->venue }}
                     </li>
                     <li>
@@ -92,7 +93,7 @@
                 </div>
                 <div class="head-text">
                     <h2>About This Event</h2>
-                    <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="">Share</a>
+                    <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="Share">Share</a>
                 </div>
                 <div class="detail-text">
                     {!! $event->description !!}
@@ -178,28 +179,28 @@
                         <h2>Event Highlights</h2>
                         <ul>
                             <li>
-                                <img src="{{ asset('assets/images/icon140.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon140.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Seminars & <br>
                                     Webinars
                                 </p>
                             </li>
                             <li>
-                                <img src="{{ asset('assets/images/icon141.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon141.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Networking <br>
                                     Session
                                 </p>
                             </li>
                             <li>
-                                <img src="{{ asset('assets/images/icon142.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon142.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Certificate <br>
                                     Distribution
                                 </p>
                             </li>
                             <li>
-                                <img src="{{ asset('assets/images/icon143.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon143.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Q&A <br>
                                     Session

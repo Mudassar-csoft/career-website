@@ -31,17 +31,17 @@
                     </h2>
                     <h4>We welcome individuals who are:</h4>
                     <ul>
-                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt=""> Enthusiastic about career development and education.</li>
-                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt=""> Engaged in their communities.</li>
-                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt=""> Strong communicators with a knack for networking.</li>
-                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt=""> Current students or alumni of Career Institute</li>
+                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt="Career Institute feature icon"> Enthusiastic about career development and education.</li>
+                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt="Career Institute feature icon"> Engaged in their communities.</li>
+                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt="Career Institute feature icon"> Strong communicators with a knack for networking.</li>
+                        <li><img src="{{ asset('assets/images/icon54.svg') }}" alt="Career Institute feature icon"> Current students or alumni of Career Institute</li>
                     </ul>
                     <a href="#" class="btn an-btn">Apply Now</a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img33.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img33.png') }}" alt="Career Institute ambassador program">
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon61.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon61.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Stipends & Incentives</h5>
@@ -69,7 +69,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon56.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon56.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Networking Oppurtunities</h5>
@@ -79,7 +79,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon57.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon57.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>
@@ -91,7 +91,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon58.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon58.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Career Resources</h5>
@@ -101,7 +101,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon59.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon59.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Recognition Awards</h5>
@@ -111,7 +111,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon60.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon60.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Institute Facilities</h5>
@@ -123,7 +123,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon55.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon55.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Official Designation</h5>
@@ -133,7 +133,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon62.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon62.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Travel Allowance</h5>
@@ -143,7 +143,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon63.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon63.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>
@@ -155,7 +155,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon64.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon64.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>
@@ -167,7 +167,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon65.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon65.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Free IT Courses</h5>
@@ -177,7 +177,7 @@
             <div class="col px-2">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon66.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon66.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <div class="t-hold">
                         <h5>Coworking Space</h5>
@@ -206,7 +206,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -218,7 +218,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
@@ -229,7 +229,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
@@ -240,7 +240,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Google Meet</h3>
@@ -251,7 +251,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Microsoft Team</h3>
@@ -324,7 +324,7 @@
             <div class="col-lg-6">
                 <div class="video-box">
                     <button class="btn" data-bs-toggle="modal" data-bs-target="#videoModal">
-                        <img src="{{ asset('assets/images/img34.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img34.png') }}" alt="Career Institute ambassador students">
                     </button>
                 </div>
             </div>
@@ -359,7 +359,7 @@
                                             data-video="{{ $campusVideo['video_url'] }}"
                                             aria-label="Play {{ $campusVideo['name'] }} virtual tour"
                                         >
-                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="">
+                                            <img src="{{ asset('assets/images/ply-btn.png') }}" alt="Play video">
                                         </button>
                                     @endif
                                 </div>
@@ -380,13 +380,13 @@
             <div class="col-lg-12">
                 <h2>Keep in Touch</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/fb.png') }}" alt=""></a></li>
-                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/instagram.png') }}" alt=""></a></li>
-                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/youtube.png') }}" alt=""></a></li>
-                    <li><a href="#"><img src="{{ asset('assets/images/tiktok.png') }}" alt=""></a></li>
-                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/linkdin.png') }}" alt=""></a></li>
-                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/x.png') }}" alt=""></a></li>
-                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/wp.png') }}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/fb.png') }}" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/youtube.png') }}" alt="YouTube"></a></li>
+                    <li><a href="#"><img src="{{ asset('assets/images/tiktok.png') }}" alt="TikTok"></a></li>
+                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/linkdin.png') }}" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/x.png') }}" alt="X"></a></li>
+                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/wp.png') }}" alt="WhatsApp"></a></li>
                 </ul>
             </div>
         </div>

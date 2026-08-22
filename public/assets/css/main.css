@@ -3214,6 +3214,10 @@ body {
   margin-bottom: 18px;
   transition: 0.3s;
 }
+.location-section a.location-card {
+  color: inherit;
+  text-decoration: none;
+}
 .location-section .location-card.active {
   border: 2px solid #00b8a9;
 }

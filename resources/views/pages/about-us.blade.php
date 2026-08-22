@@ -25,7 +25,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img39.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img39.png') }}" alt="Career Institute campus building">
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="600">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon68.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon68.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>Career development</h3>
@@ -59,7 +59,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="700">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon69.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon69.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>
@@ -74,7 +74,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="800">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon68.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon68.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>
@@ -89,7 +89,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="900">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon70.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon70.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>
@@ -106,7 +106,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon71.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon71.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>Coworking Space</h3>
@@ -119,7 +119,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1100">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon72.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon72.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>
@@ -134,7 +134,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon73.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon73.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>
@@ -149,7 +149,7 @@
                         <li>
                             <div class="box aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1300">
                                 <div class="img-hold">
-                                    <img src="{{ asset('assets/images/icon74.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon74.svg') }}" alt="Career Institute feature icon">
                                 </div>
                                 <div class="t-bar">
                                     <h3>
@@ -210,7 +210,7 @@
                                     Kohinoor FSD  Branch<a href="#">Read more...</a>
                                 </p>
                                 <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt=""> 
+                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
                                     <span>09-12-2024</span>
                                 </div>
                             </div>
@@ -222,7 +222,7 @@
                                     Kohinoor FSD  Branch<a href="#">Read more...</a>
                                 </p>
                                 <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt=""> 
+                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
                                     <span>09-12-2024</span>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@
                                     Kohinoor FSD  Branch<a href="#">Read more...</a>
                                 </p>
                                 <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt=""> 
+                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
                                     <span>09-12-2024</span>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@
                                     Kohinoor FSD  Branch<a href="#">Read more...</a>
                                 </p>
                                 <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt=""> 
+                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
                                     <span>09-12-2024</span>
                                 </div>
                             </div>
@@ -286,7 +286,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold aos-init aos-animate" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
-                    <img src="{{ asset('assets/images/img40.png') }}" alt="">
+                    <img src="{{ asset('assets/images/img40.png') }}" alt="Career Institute learning environment">
                 </div>
             </div>
         </div>
@@ -304,32 +304,32 @@
                 <div class="logo-slider">
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img09.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img09.png') }}" alt="Career Institute classroom">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img10.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img10.png') }}" alt="Career Institute students learning">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img11.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img11.png') }}" alt="Career Institute practical training">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img12.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img12.png') }}" alt="Career Institute student achievement">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img10.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img10.png') }}" alt="Career Institute students learning">
                         </div>
                     </div>
                     <div>
                         <div class="img-hold">
-                            <img src="{{ asset('assets/images/img11.png') }}" alt="">
+                            <img src="{{ asset('assets/images/img11.png') }}" alt="Career Institute practical training">
                         </div>
                     </div>
                 </div>
@@ -349,16 +349,16 @@
                 <div class="col-lg-6 border-end mb-4 mb-lg-0">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
                         <div class="s-link" >
                             <ul>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100"><a href="#"><img src="assets/images/icon76.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200"><a href="#"><img src="assets/images/icon77.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1300"><a href="#"><img src="assets/images/icon78.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1400"><a href="#"><img src="assets/images/icon79.svg" alt=""></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100"><a href="#"><img src="assets/images/icon76.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200"><a href="#"><img src="assets/images/icon77.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1300"><a href="#"><img src="assets/images/icon78.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1400"><a href="#"><img src="assets/images/icon79.svg" alt="Career Institute feature icon"></a></li>
                             </ul>
                         </div>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
@@ -383,16 +383,16 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="">
+                            <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
                         <div class="s-link">
                             <ul>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100"><a href="#"><img src="assets/images/icon76.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200"><a href="#"><img src="assets/images/icon77.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1300"><a href="#"><img src="assets/images/icon78.svg" alt=""></a></li>
-                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1400"><a href="#"><img src="assets/images/icon79.svg" alt=""></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100"><a href="#"><img src="assets/images/icon76.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200"><a href="#"><img src="assets/images/icon77.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1300"><a href="#"><img src="assets/images/icon78.svg" alt="Career Institute feature icon"></a></li>
+                                <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1400"><a href="#"><img src="assets/images/icon79.svg" alt="Career Institute feature icon"></a></li>
                             </ul>
                         </div>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
@@ -425,13 +425,13 @@
 			<div class="col-lg-12">
 				<h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Keep in Touch</h2>
 				<ul>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="assets/images/fb.png" alt=""></a></li>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="assets/images/instagram.png" alt=""></a></li>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="assets/images/youtube.png" alt=""></a></li>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt=""></a></li>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="assets/images/linkdin.png" alt=""></a></li>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="assets/images/x.png" alt=""></a></li>
-					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="assets/images/wp.png" alt=""></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="assets/images/fb.png" alt="Facebook"></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="assets/images/instagram.png" alt="Instagram"></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="assets/images/youtube.png" alt="YouTube"></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt="TikTok"></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="assets/images/linkdin.png" alt="LinkedIn"></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="assets/images/x.png" alt="X"></a></li>
+					<li class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="assets/images/wp.png" alt="WhatsApp"></a></li>
 				</ul>
 			</div>
 		</div>

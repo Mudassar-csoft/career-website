@@ -3,6 +3,7 @@
 @section('body_class', 'event-detail')
 @section('content')
 <section class="top-banner">
+    <h1 class="visually-hidden">Career Institute Franchise MOU Event</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -12,15 +13,15 @@
                 </h2>
                 <ul>
                     <li>
-                        <img src=" {{ asset('assets/images/icon111.svg') }}" alt="">
+                        <img src=" {{ asset('assets/images/icon111.svg') }}" alt="Course schedule">
                         10:00am-12-00pm
                     </li>
                     <li>
-                        <img src=" {{ asset('assets/images/icon138.svg') }}" alt="">
+                        <img src=" {{ asset('assets/images/icon138.svg') }}" alt="Event date">
                         27 April 2026
                     </li>
                     <li>
-                        <img src=" {{ asset('assets/images/icon139.svg') }}" alt="">
+                        <img src=" {{ asset('assets/images/icon139.svg') }}" alt="Event location">
                         Lahore Wapda Town
                     </li>
                 </ul>
@@ -34,17 +35,17 @@
             <div class="col-lg-7">
                 <div class="event-slider">
                     <div>
-                        <img src="{{ asset('assets/images/img61.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img61.png') }}" alt="Career Institute event">
                     </div>
                     <div>
-                        <img src="{{ asset('assets/images/img61.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img61.png') }}" alt="Career Institute event">
                     </div>
                 </div>
                 <div class="head-text">
                     <h2>
                         About This Event
                     </h2>
-                    <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="">Share</a>
+                    <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="Share">Share</a>
                 </div>
                 <div class="detail-text">
                     <p>
@@ -101,28 +102,28 @@
                         <h2>Event Highlights</h2>
                         <ul>
                             <li>
-                                <img src=" {{ asset('assets/images/icon140.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon140.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Seminars & <br>
                                     Webinars
                                 </p>
                             </li>
                             <li>
-                                <img src=" {{ asset('assets/images/icon141.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon141.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Networking <br>
                                     Session
                                 </p>
                             </li>
                             <li>
-                                <img src=" {{ asset('assets/images/icon142.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon142.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Certificate <br>
                                     Distribution
                                 </p>
                             </li>
                             <li>
-                                <img src=" {{ asset('assets/images/icon143.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon143.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Q&A <br>
                                     Session
@@ -154,7 +155,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
+                                        <img src="assets/images/img05.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Muhammad Talha</h3>
@@ -174,7 +175,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img06.png" alt="">
+                                        <img src="assets/images/img06.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Fatima Maqsood</h3>
@@ -194,7 +195,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img07.png" alt="">
+                                        <img src="assets/images/img07.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Umar Ishfaq</h3>
@@ -214,7 +215,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img08.png" alt="">
+                                        <img src="assets/images/img08.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Asad Riaz</h3>
@@ -233,7 +234,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img41.png" alt="">
+                                        <img src="assets/images/img41.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Ayan Ali</h3>
@@ -253,7 +254,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img42.png" alt="">
+                                        <img src="assets/images/img42.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Haroon Rashid</h3>
@@ -272,7 +273,7 @@
                             <div class="card-wrap">
                                 <div class="box">
                                     <div class="img-hold">
-                                        <img src="assets/images/img05.png" alt="">
+                                        <img src="assets/images/img05.png" alt="Career Institute alumni">
                                     </div>
                                     <div class="rt-bar">
                                         <h3>Muhammad Talha</h3>

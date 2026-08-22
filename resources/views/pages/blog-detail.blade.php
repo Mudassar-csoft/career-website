@@ -145,6 +145,7 @@
 @endpush
 @section('content')
 <section class="news-bar">
+    <h1 class="visually-hidden">{{ $blog->title }}</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -164,14 +165,14 @@
                         <h2>
                             {{ $blog->title }}
                         </h2>
-                        <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="">Share</a>
+                        <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="Share">Share</a>
                         @if ($blog->excerpt)
                             <p>
                                 {{ $blog->excerpt }}
                             </p>
                         @endif
                         <span>
-                            <img src="{{ asset('assets/images/icon127.png') }}" alt="">
+                            <img src="{{ asset('assets/images/icon127.png') }}" alt="Publication date">
                             {{ $blog->created_at->format('d-m-Y') }}
                         </span>
                     </div>
@@ -188,7 +189,7 @@
                             <form action="{{ route('blogs') }}" method="GET" class="search-form">
                                 <input type="text" class="form-control" name="search" value="{{ request('search') }}" placeholder="Search">
                                 <button type="submit" class="search-submit" aria-label="Search blogs">
-                                    <img src="{{ asset('assets/images/search.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/search.svg') }}" alt="Search">
                                 </button>
                             </form>
                         </div>
@@ -203,7 +204,7 @@
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $post->title }}</h3>
-                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> {{ $post->created_at->format('d-m-Y') }}</span>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt="Publication date"> {{ $post->created_at->format('d-m-Y') }}</span>
                                             </div>
                                         </a>
                                     </li>

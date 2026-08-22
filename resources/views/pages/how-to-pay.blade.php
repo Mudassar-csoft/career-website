@@ -21,22 +21,22 @@
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img36.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img36.png') }}" alt="Bank payment method">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-                        <img src="{{ asset('assets/images/img35.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img35.png') }}" alt="Online payment method">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="jazz-tab" data-bs-toggle="tab" data-bs-target="#jazz-tab-pane" type="button" role="tab" aria-controls="jazz-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img43.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img43.png') }}" alt="Online payment options">
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
-                        <img src="{{ asset('assets/images/img37.png') }}" alt="">
+                        <img src="{{ asset('assets/images/img37.png') }}" alt="Payment receipt upload">
                         </button>
                     </li>
                 </ul>
@@ -221,7 +221,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="box">
-                    <h3><img src="{{ asset('assets/images/icon67.svg') }}" alt=""> Note</h3>
+                    <h3><img src="{{ asset('assets/images/icon67.svg') }}" alt="Career Institute feature icon"> Note</h3>
                     <p>
                         Make payments to specified bank accounts through online banking, ATM, or internet banking for your course at <b>Career.edu.pk.</b> After payment, send deposit slip image
                         with Course Name or invoice reference to <b>accounts@career.edu.pk</b> or <b>WhatsApp at 0314-5000083.</b>

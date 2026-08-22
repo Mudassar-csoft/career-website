@@ -5,6 +5,7 @@
 @section('body_class', 'news-page')
 @section('content')
 <section class="news-bar">
+    <h1 class="visually-hidden">{{ $news->title }}</h1>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -16,12 +17,12 @@
                         <h2>
                             {{ $news->title }}
                         </h2>
-                        <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="">Share</a>
+                        <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="Share">Share</a>
                         <p>
                             {{ $news->subtitle }}
                         </p>
                         <span>
-                            <img src="{{ asset('assets/images/icon127.png') }}" alt="">
+                            <img src="{{ asset('assets/images/icon127.png') }}" alt="Publication date">
                             {{ $news->created_at->format('d-m-Y') }}
                         </span>
                     </div>
@@ -48,7 +49,7 @@
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $post->title }}</h3>
-                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt=""> {{ $post->created_at->format('d-m-Y') }}</span>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt="Publication date"> {{ $post->created_at->format('d-m-Y') }}</span>
                                             </div>
                                         </a>
                                     </li>

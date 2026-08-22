@@ -149,7 +149,7 @@
                 images.forEach(function (imageUrl) {
                     popupSwiper.appendSlide(
                         '<div class="swiper-slide">' +
-                        '<img src="' + imageUrl + '">' +
+                        '<img src="' + imageUrl + '" alt="Gallery image">' +
                         '</div>'
                     );
                 });
