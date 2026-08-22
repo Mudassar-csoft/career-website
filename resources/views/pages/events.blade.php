@@ -134,8 +134,8 @@
                                 {{ $upcomingEvent->title }}
                             </h3>
                             <ul>
-                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> {{ $upcomingEvent->campus }}</li>
-                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt=""> {{ $upcomingEvent->venue }}</li>
+                                <li><img src="{{ asset('assets/images/icon128.svg') }}" alt="Campus location"> {{ $upcomingEvent->campus }}</li>
+                                <li><img src="{{ asset('assets/images/icon129.svg') }}" alt="Event venue"> {{ $upcomingEvent->venue }}</li>
                             </ul>
                             <!-- Bottom -->
                             <div class="workshop-card__footer">
@@ -250,8 +250,8 @@
                                     <img src="{{ $recentEvent->primary_image_url ?: asset('assets/images/img65.png') }}" alt="{{ $recentEvent->title }}" onerror="this.src='{{ asset('assets/images/img65.png') }}'; this.onerror=null;">
                                     <h4>{{ \Illuminate\Support\Str::limit($recentEvent->title, 34) }}</h4>
                                     <ul>
-                                        <li><img src="{{ asset('assets/images/icon128.svg') }}" alt=""> {{ $recentEvent->campus }}</li>
-                                        <li><img src="{{ asset('assets/images/icon138.svg') }}" alt=""> {{ $recentEvent->event_date->format('d M, Y') }}</li>
+                                        <li><img src="{{ asset('assets/images/icon128.svg') }}" alt="Campus location"> {{ $recentEvent->campus }}</li>
+                                        <li><img src="{{ asset('assets/images/icon138.svg') }}" alt="Event date"> {{ $recentEvent->event_date->format('d M, Y') }}</li>
                                     </ul>
                                 </a>
                             </div>

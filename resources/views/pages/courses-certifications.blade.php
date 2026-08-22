@@ -130,7 +130,7 @@
                         @endforeach
                         <div class="input-group mb-4">
                             <input type="text" class="form-control sc-iput" name="search" value="{{ $search }}" placeholder="Search courses and certifications that match your goals." aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt=""></button>
+                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><img src="{{ asset('assets/images/icon94.svg') }}" alt="Search courses"></button>
                         </div>
                     </form>
                 </div>
@@ -303,11 +303,11 @@
                                         </li>
                                         <li>
                                             Duration:
-                                            <span><img src="assets/images/icon12.svg" alt=""> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                            <span><img src="assets/images/icon12.svg" alt="Career Institute feature icon"> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
                                         </li>
                                         <li>
                                             Mode:
-                                            <span><img src="assets/images/icon09.svg" alt="">{{ $course->mode->name }}</span>
+                                            <span><img src="assets/images/icon09.svg" alt="Career Institute feature icon">{{ $course->mode->name }}</span>
                                         </li>
                                     </ul>
                                     <div class="btn-area">
@@ -464,11 +464,11 @@
                                                         </li>
                                                         <li>
                                                             Duration:
-                                                            <span><img src="assets/images/icon12.svg" alt=""> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                                            <span><img src="assets/images/icon12.svg" alt="Career Institute feature icon"> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
                                                         </li>
                                                         <li>
                                                             Mode:
-                                                            <span><img src="assets/images/icon09.svg" alt="">{{ $course->mode->name }}</span>
+                                                            <span><img src="assets/images/icon09.svg" alt="Career Institute feature icon">{{ $course->mode->name }}</span>
                                                         </li>
                                                     </ul>
                                                     <!-- Buttons -->
@@ -545,7 +545,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon20.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Call Us Today</h3>
@@ -557,7 +557,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon21.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Email</h3>
@@ -568,7 +568,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon22.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Webex Meetings</h3>
@@ -579,7 +579,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon136.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Google Meet</h3>
@@ -590,7 +590,7 @@
                     <li>
                         <div class="box">
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon137.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <div class="t-bar">
                                 <h3>Microsoft Team</h3>
@@ -641,141 +641,19 @@
             <div class="col-lg-12">
                 <h2>Keep in Touch</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/fb.png') }}" alt=""></a></li>
-                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/instagram.png') }}" alt=""></a></li>
-                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/youtube.png') }}" alt=""></a></li>
-                    <li><a href="#"><img src="{{ asset('assets/images/tiktok.png') }}" alt=""></a></li>
-                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/linkdin.png') }}" alt=""></a></li>
-                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/x.png') }}" alt=""></a></li>
-                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/wp.png') }}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="{{ asset('assets/images/fb.png') }}" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="{{ asset('assets/images/instagram.png') }}" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="{{ asset('assets/images/youtube.png') }}" alt="YouTube"></a></li>
+                    <li><a href="#"><img src="{{ asset('assets/images/tiktok.png') }}" alt="TikTok"></a></li>
+                    <li><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="{{ asset('assets/images/linkdin.png') }}" alt="LinkedIn"></a></li>
+                    <li><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="{{ asset('assets/images/x.png') }}" alt="X"></a></li>
+                    <li><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="{{ asset('assets/images/wp.png') }}" alt="WhatsApp"></a></li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-<section class="location-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Our Campuses</h2>
-            </div>
-        </div>
-        <div class="row g-4">
-            <!-- Left -->
-            <div class="col-lg-6">
-                <div class="location-list">
-                    <div class="location-card active"
-                        data-map="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3808.2315463269783!2d73.117695!3d31.41968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922686eab09f4f1%3A0x679e30a285de4fb1!2sCareer%20Institute%20-%20Madina%20Town%20Branch!5e1!3m2!1sen!2s!4v1782547783345!5m2!1sen!2s">
-                        <div class="location-icon">
-                            <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
-                        </div>
-                        <div class="location-info">
-                            <h5>Career Institute - Madina Town Branch</h5>
-                            <p>
-                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
-                                Faisalabad, 38000, Pakistan
-                            </p>
-                            <span>
-                            0418542950 / 03007662050
-                            </span>
-                        </div>
-                    </div>
-                    <div class="location-card"
-                        data-map="https://maps.google.com/maps?q=lahore&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        <div class="location-icon">
-                            <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
-                        </div>
-                        <div class="location-info">
-                            <h5>Career Institute - Madina Town Branch</h5>
-                            <p>
-                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
-                                Faisalabad, 38000, Pakistan
-                            </p>
-                            <span>
-                            0418542950 / 03007662050
-                            </span>
-                        </div>
-                    </div>
-                    <div class="location-card"
-                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        <div class="location-icon">
-                            <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
-                        </div>
-                        <div class="location-info">
-                            <h5>Career Institute - Madina Town Branch</h5>
-                            <p>
-                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
-                                Faisalabad, 38000, Pakistan
-                            </p>
-                            <span>
-                            0418542950 / 03007662050
-                            </span>
-                        </div>
-                    </div>
-                    <div class="location-card"
-                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        <div class="location-icon">
-                            <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
-                        </div>
-                        <div class="location-info">
-                            <h5>Career Institute - Madina Town Branch</h5>
-                            <p>
-                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
-                                Faisalabad, 38000, Pakistan
-                            </p>
-                            <span>
-                            0418542950 / 03007662050
-                            </span>
-                        </div>
-                    </div>
-                    <div class="location-card"
-                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        <div class="location-icon">
-                            <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
-                        </div>
-                        <div class="location-info">
-                            <h5>Career Institute - Madina Town Branch</h5>
-                            <p>
-                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
-                                Faisalabad, 38000, Pakistan
-                            </p>
-                            <span>
-                            0418542950 / 03007662050
-                            </span>
-                        </div>
-                    </div>
-                    <div class="location-card"
-                        data-map="https://maps.google.com/maps?q=karachi&t=&z=13&ie=UTF8&iwloc=&output=embed">
-                        <div class="location-icon">
-                            <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
-                        </div>
-                        <div class="location-info">
-                            <h5>Career Institute - Madina Town Branch</h5>
-                            <p>
-                                Career Institute, P-49, Chenab Market, Susan Road, Block Z Madina Town,
-                                Faisalabad, 38000, Pakistan
-                            </p>
-                            <span>
-                            0418542950 / 03007662050
-                            </span>
-                        </div>
-                    </div>
-                    <!-- Aur locations yahan add kar sakte hain -->
-                </div>
-            </div>
-            <!-- Right -->
-            <div class="col-lg-6">
-                <div class="map-wrapper">
-                    <iframe
-                        id="locationMap"
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3808.2315463269783!2d73.117695!3d31.41968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922686eab09f4f1%3A0x679e30a285de4fb1!2sCareer%20Institute%20-%20Madina%20Town%20Branch!5e1!3m2!1sen!2s!4v1782547783345!5m2!1sen!2s"
-                        loading="lazy">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include('partials.campus-locations')
 @endsection
 @push('scripts')
 <script>

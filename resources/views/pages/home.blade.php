@@ -86,28 +86,28 @@
                 <div class="counter-box">
                     <div class="counter-item">
                         <div class="icon">
-                            <img src="assets/images/icon01.svg" alt="">
+                            <img src="assets/images/icon01.svg" alt="Career Institute feature icon">
                         </div>
                         <h2 class="counter" data-target="150000">0</h2>
                         <p>Alumni</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
-                            <img src="assets/images/icon02.svg" alt="">
+                            <img src="assets/images/icon02.svg" alt="Career Institute feature icon">
                         </div>
                         <h2 class="counter" data-target="50">0</h2>
                         <p>Affiliations</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
-                            <img src="assets/images/icon03.svg" alt="">
+                            <img src="assets/images/icon03.svg" alt="Career Institute feature icon">
                         </div>
                         <h2 class="counter" data-target="100">0</h2>
                         <p>Programs</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
-                            <img src="assets/images/icon04.svg" alt="">
+                            <img src="assets/images/icon04.svg" alt="Career Institute feature icon">
                         </div>
                         <h2 class="counter" data-target="15">0</h2>
                         <p>Campuses</p>
@@ -143,7 +143,7 @@
                                                         <a href="{{ route('news-detail', $newsItem->slug) }}">Read more...</a>
                                                     </p>
                                                     <div class="d-bar">
-                                                        <img src="assets/images/icon05.svg" alt="">
+                                                        <img src="assets/images/icon05.svg" alt="Career Institute feature icon">
                                                         <span>{{ $newsItem->created_at->format('d-m-Y') }}</span>
                                                     </div>
                                                 </div>
@@ -195,7 +195,7 @@
                                                 <a href="{{ route('news-detail', $newsItem->slug) }}">Read more...</a>
                                             </p>
                                             <div class="d-bar">
-                                                <img src="assets/images/icon05.svg" alt="">
+                                                <img src="assets/images/icon05.svg" alt="Career Institute feature icon">
                                                 <span>{{ $newsItem->created_at->format('d-m-Y') }}</span>
                                             </div>
                                         </div>
@@ -273,11 +273,11 @@
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</span>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <span class=" coma"><img src="assets/images/icon08.png" alt=""></span><b>Our vision</b>  is to transform education into meaningful<br>
+                            <span class=" coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span><b>Our vision</b>  is to transform education into meaningful<br>
                             careers. Since 2010, Career Institute has delivered<br>
                             practical, industry-focused training, empowering<br>
                             learners with relevant skills, confidence and direction<br>
-                            to succeed in a rapidly evolving global workforce.<span class="round coma"><img src="assets/images/icon08.png" alt=""></span>
+                            to succeed in a rapidly evolving global workforce.<span class="round coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
                         </p>
                     </div>
                 </div>
@@ -288,12 +288,12 @@
                         </div>
                         <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</span>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <span class="coma"><img src="assets/images/icon08.png" alt=""></span>
+                            <span class="coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
                             <b>At Career</b> Institute  we believe every learner has unique<br>
                             potential. Through an inclusive and inspiring environment,<br>
                             we develop practical skills, confidence and creativity,<br>
                             empowering students to pursue meaningful careers<br>
-                            and achieve lifelong professional growth.<span class="round coma"><img src="assets/images/icon08.png" alt=""></span>
+                            and achieve lifelong professional growth.<span class="round coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
                         </p>
                     </div>
                 </div>
@@ -330,11 +330,11 @@
                                         </li>
                                         <li>
                                             Duration:
-                                            <span><img src="assets/images/icon12.svg" alt=""> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                            <span><img src="assets/images/icon12.svg" alt="Career Institute feature icon"> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
                                         </li>
                                         <li>
                                             Mode:
-                                            <span><img src="assets/images/icon09.svg" alt="">{{ $course->mode->name }}</span>
+                                            <span><img src="assets/images/icon09.svg" alt="Career Institute feature icon">{{ $course->mode->name }}</span>
                                         </li>
                                     </ul>
                                     <div class="btn-area">
@@ -535,13 +535,13 @@
             <div class="col-lg-12">
                 <h2 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">Keep in Touch</h2>
                 <ul>
-                    <li data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="assets/images/fb.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="assets/images/instagram.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="assets/images/youtube.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="assets/images/linkdin.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="assets/images/x.png" alt=""></a></li>
-                    <li data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="assets/images/wp.png" alt=""></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom"><a href="https://www.facebook.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Facebook"><img src="assets/images/fb.png" alt="Facebook"></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1100" data-aos-anchor-placement="top-bottom"><a href="https://www.instagram.com/careerinstituteofficial" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on Instagram"><img src="assets/images/instagram.png" alt="Instagram"></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom"><a href="https://www.youtube.com/@CareerInstitutepk" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on YouTube"><img src="assets/images/youtube.png" alt="YouTube"></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1300" data-aos-anchor-placement="top-bottom"><a href="#"><img src="assets/images/tiktok.png" alt="TikTok"></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1400" data-aos-anchor-placement="top-bottom"><a href="https://www.linkedin.com/company/careerinstituteofficial/" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on LinkedIn"><img src="assets/images/linkdin.png" alt="LinkedIn"></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"><a href="https://twitter.com/careerofficials" target="_blank" rel="noopener noreferrer" aria-label="Career Institute on X"><img src="assets/images/x.png" alt="X"></a></li>
+                    <li data-aos="fade-up" data-aos-duration="1600" data-aos-anchor-placement="top-bottom"><a href="https://wa.me/923144444010" target="_blank" rel="noopener noreferrer" aria-label="Chat with Career Institute on WhatsApp"><img src="assets/images/wp.png" alt="WhatsApp"></a></li>
                 </ul>
             </div>
         </div>

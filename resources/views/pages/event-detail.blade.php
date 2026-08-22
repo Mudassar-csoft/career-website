@@ -13,15 +13,15 @@
                 </h2>
                 <ul>
                     <li>
-                        <img src=" {{ asset('assets/images/icon111.svg') }}" alt="">
+                        <img src=" {{ asset('assets/images/icon111.svg') }}" alt="Course schedule">
                         10:00am-12-00pm
                     </li>
                     <li>
-                        <img src=" {{ asset('assets/images/icon138.svg') }}" alt="">
+                        <img src=" {{ asset('assets/images/icon138.svg') }}" alt="Event date">
                         27 April 2026
                     </li>
                     <li>
-                        <img src=" {{ asset('assets/images/icon139.svg') }}" alt="">
+                        <img src=" {{ asset('assets/images/icon139.svg') }}" alt="Event location">
                         Lahore Wapda Town
                     </li>
                 </ul>
@@ -45,7 +45,7 @@
                     <h2>
                         About This Event
                     </h2>
-                    <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="">Share</a>
+                    <a href="#"><img src="{{ asset('assets/images/share.svg') }}" alt="Share">Share</a>
                 </div>
                 <div class="detail-text">
                     <p>
@@ -102,28 +102,28 @@
                         <h2>Event Highlights</h2>
                         <ul>
                             <li>
-                                <img src=" {{ asset('assets/images/icon140.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon140.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Seminars & <br>
                                     Webinars
                                 </p>
                             </li>
                             <li>
-                                <img src=" {{ asset('assets/images/icon141.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon141.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Networking <br>
                                     Session
                                 </p>
                             </li>
                             <li>
-                                <img src=" {{ asset('assets/images/icon142.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon142.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Certificate <br>
                                     Distribution
                                 </p>
                             </li>
                             <li>
-                                <img src=" {{ asset('assets/images/icon143.svg') }}" alt="">
+                                <img src=" {{ asset('assets/images/icon143.svg') }}" alt="Career Institute feature icon">
                                 <p>
                                     Q&A <br>
                                     Session

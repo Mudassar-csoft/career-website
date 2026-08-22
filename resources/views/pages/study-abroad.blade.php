@@ -209,42 +209,42 @@
                 <h3>Study Programs</h3>
                 <ul>
                     <li>
-                        <img src="{{ asset('assets/images/icon80.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon80.svg') }}" alt="Career Institute feature icon">
                         <h4>
                             Bachelor's<br>
                             Degree
                         </h4>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon81.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon81.svg') }}" alt="Career Institute feature icon">
                         <h4>
                             Master's<br>
                             Degree
                         </h4>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon82.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon82.svg') }}" alt="Career Institute feature icon">
                         <h4>
                             PHD<br>
                             Programs
                         </h4>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon83.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon83.svg') }}" alt="Career Institute feature icon">
                         <h4>
                             Diploma <br>
                             Program
                         </h4>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon84.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon84.svg') }}" alt="Career Institute feature icon">
                         <h4>
                             Foundation<br>
                             Program
                         </h4>
                     </li>
                     <li>
-                        <img src="{{ asset('assets/images/icon85.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon85.svg') }}" alt="Career Institute feature icon">
                         <h4>
                             English <br>
                             Courses
@@ -554,7 +554,7 @@
             <div class="col-lg-3 col-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon44.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon44.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <h3>
                         ONE ON ONE<br>COUNSELING
@@ -564,7 +564,7 @@
             <div class="col-lg-3 col-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon45.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon45.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <h3>
                         ADMISSION<br>ASSESMENT
@@ -574,7 +574,7 @@
             <div class="col-lg-3 col-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon46.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon46.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <h3>
                         VISA<br>GUIDANCE
@@ -584,7 +584,7 @@
             <div class="col-lg-3 col-6">
                 <div class="box">
                     <div class="img-hold">
-                        <img src="{{ asset('assets/images/icon47.svg') }}" alt="">
+                        <img src="{{ asset('assets/images/icon47.svg') }}" alt="Career Institute feature icon">
                     </div>
                     <h3>
                         IELTS<br>PREPARATION

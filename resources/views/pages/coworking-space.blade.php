@@ -96,7 +96,7 @@
                     <ul>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon34.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon34.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Free Wifi Access</h3>
                             <p>
@@ -106,7 +106,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon35.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon35.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Tea and Coffee</h3>
                             <p>
@@ -116,7 +116,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon36.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon36.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Free Wifi Access</h3>
                             <p>
@@ -126,7 +126,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon37.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon37.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Free Parking</h3>
                             <p>
@@ -138,7 +138,7 @@
                     <ul>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon38.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon38.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Support Center</h3>
                             <p>
@@ -148,7 +148,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon39.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon39.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Business community</h3>
                             <p>
@@ -158,7 +158,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon40.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon40.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Events & Conferences</h3>
                             <p>
@@ -168,7 +168,7 @@
                         </li>
                         <li>
                             <div class="img-hold">
-                                <img src="{{ asset('assets/images/icon41.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/icon41.svg') }}" alt="Career Institute feature icon">
                             </div>
                             <h3>Digital Library</h3>
                             <p>
