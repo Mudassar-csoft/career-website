@@ -3,12 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class Blog extends Model
 {
     protected $fillable = ['title', 'slug', 'image', 'excerpt', 'content', 'meta_title', 'meta_description', 'meta_keywords'];
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(BlogImage::class)->orderBy('sort_order')->orderBy('id');
+    }
 
     public function resolveImagePath(): ?string
     {

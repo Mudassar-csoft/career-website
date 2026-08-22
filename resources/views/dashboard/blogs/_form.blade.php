@@ -31,17 +31,18 @@
 </div>
 
 <div class="dash-form-group">
-    <label for="blog-image">Image</label>
+    <label for="blog-image">Blog Images</label>
     <input
         type="file"
         id="blog-image"
-        name="image"
+        name="images[]"
         accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
         data-dashboard-image-upload
         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
         data-required-width="1920"
         data-required-height="1080"
+        multiple
         {{ $blog->image ? '' : 'required' }}
     >
     <img
@@ -55,13 +56,16 @@
             onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;"
         @endif
     >
-    <p class="dash-form-hint">Use an image exactly 1920x1080 pixels. {{ \App\Support\DashboardImageUpload::HINT }}</p>
+    <p class="dash-form-hint">Upload one or more images for the blog slider. Each image must be exactly 1920x1080 pixels. {{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if (! $blog->image)
-        <p class="dash-form-hint">A blog image is required for new posts.</p>
+        <p class="dash-form-hint">At least one blog image is required for new posts.</p>
     @else
-        <p class="dash-form-hint">Upload a new image to replace the current one.</p>
+        <p class="dash-form-hint">New images are added to the end of the current slider.</p>
     @endif
-    @error('image')
+    @error('images')
+        <p class="dash-form-error">{{ $message }}</p>
+    @enderror
+    @error('images.*')
         <p class="dash-form-error">{{ $message }}</p>
     @enderror
 </div>

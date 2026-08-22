@@ -29,6 +29,8 @@ class PublicBlogController extends Controller
 
     public function show(Blog $blog)
     {
+        $blog->load('images');
+
         return view('pages.blog-detail', [
             'blog' => $blog,
             'relatedBlogs' => Blog::where('id', '!=', $blog->id)->latest()->take(4)->get(),

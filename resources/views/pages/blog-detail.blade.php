@@ -27,6 +27,34 @@
         width: 18px;
         height: 18px;
     }
+    .blog-detail .blog-image-slider {
+        margin-bottom: 20px;
+    }
+    .blog-detail .blog-image-slide img {
+        aspect-ratio: 16 / 9;
+        border-radius: 20px;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+    .blog-detail .blog-image-slider .slick-prev,
+    .blog-detail .blog-image-slider .slick-next {
+        z-index: 1;
+    }
+    .blog-detail .blog-image-slider .slick-prev { left: 18px; }
+    .blog-detail .blog-image-slider .slick-next { right: 18px; }
+    .blog-detail .blog-image-slider .slick-dots {
+        bottom: 12px;
+    }
+    .blog-detail .blog-image-slider .slick-dots li button:before {
+        color: #fff;
+        font-size: 10px;
+        opacity: 0.75;
+    }
+    .blog-detail .blog-image-slider .slick-dots li.slick-active button:before {
+        color: #03c587;
+        opacity: 1;
+    }
     .blog-detail .blog-rich-content {
         color: #000;
         font-size: 20px;
@@ -121,8 +149,16 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="news-info">
-                    <div class="img-hold">
-                        <img src="{{ $blog->image_url ?: asset('assets/images/img13.png') }}" alt="{{ $blog->title }}" onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;">
+                    <div class="blog-image-slider" data-slide-count="{{ $blog->images->count() }}">
+                        @forelse ($blog->images as $image)
+                            <div class="blog-image-slide">
+                                <img src="{{ $image->image_url }}" alt="{{ $blog->title }}" onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;">
+                            </div>
+                        @empty
+                            <div class="blog-image-slide">
+                                <img src="{{ $blog->image_url ?: asset('assets/images/img13.png') }}" alt="{{ $blog->title }}" onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;">
+                            </div>
+                        @endforelse
                     </div>
                     <div class="head-text">
                         <h2>
@@ -208,3 +244,20 @@
     </div>
 </section>
 @endsection
+
+@push('scripts')
+<script>
+    $(function () {
+        var slider = $('.blog-image-slider');
+
+        if (slider.length && parseInt(slider.data('slide-count'), 10) > 1) {
+            slider.slick({
+                arrows: true,
+                dots: true,
+                infinite: true,
+                adaptiveHeight: false,
+            });
+        }
+    });
+</script>
+@endpush
