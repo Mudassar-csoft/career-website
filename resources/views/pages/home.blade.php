@@ -631,6 +631,45 @@
 </section>
 @endsection
 @push('scripts')
+<style>
+    .native-testimonial-slider {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+    .native-testimonial-slider::-webkit-scrollbar { display: none; }
+    .native-testimonial-slider > .item {
+        flex: 0 0 calc(25% - 11px);
+        scroll-snap-align: start;
+    }
+    .testimonial-section { position: relative; }
+    .native-testimonial-control {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        width: 42px;
+        height: 42px;
+        border: 1px solid #03c587;
+        border-radius: 50%;
+        background: #fff;
+        color: #012e4b;
+        font-size: 26px;
+        line-height: 1;
+    }
+    .native-testimonial-prev { left: -18px; }
+    .native-testimonial-next { right: -18px; }
+    @media (max-width: 991px) {
+        .native-testimonial-slider > .item { flex-basis: calc(50% - 7px); }
+    }
+    @media (max-width: 575px) {
+        .native-testimonial-slider > .item { flex-basis: 100%; }
+        .native-testimonial-prev { left: 4px; }
+        .native-testimonial-next { right: 4px; }
+    }
+</style>
 <script>
     $(document).ready(function() {
     	var $slider = $('.testimonial-slider');
@@ -708,6 +747,32 @@
     			active.eq(0).find('.card-wrap').addClass('center-1');
     		}
     	}
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var slider = document.querySelector('.testimonial-slider');
+
+        if (!slider || slider.classList.contains('slick-initialized')) {
+            return;
+        }
+
+        slider.classList.add('native-testimonial-slider');
+
+        [
+            ['native-testimonial-prev', 'Previous alumni reviews', -1, '\u2039'],
+            ['native-testimonial-next', 'Next alumni reviews', 1, '\u203a'],
+        ].forEach(function (control) {
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'native-testimonial-control ' + control[0];
+            button.setAttribute('aria-label', control[1]);
+            button.textContent = control[3];
+            button.addEventListener('click', function () {
+                slider.scrollBy({ left: slider.clientWidth * control[2], behavior: 'smooth' });
+            });
+            slider.parentNode.appendChild(button);
+        });
     });
 </script>
 <script>
