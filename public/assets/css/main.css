@@ -13817,6 +13817,12 @@ body {
   color: #535353;
   margin: 0 0 8px;
 }
+@media (max-width: 1400px) {
+  .feature-slider .slick-slide .box .text-hold ul li {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .feature-slider .slick-slide .box .text-hold ul li span {
   font-size: 12px;
   line-height: 14px;
@@ -13825,8 +13831,19 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1400px) {
+  .feature-slider .slick-slide .box .text-hold ul li span {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
 .feature-slider .slick-slide .box .text-hold ul li span img {
   margin: 0 5px 0 0;
+}
+@media (max-width: 1400px) {
+  .feature-slider .slick-slide .box .text-hold ul li span img {
+    width: 12px;
+  }
 }
 .feature-slider .slick-slide .box .text-hold ul li:last-child {
   margin: 0;
