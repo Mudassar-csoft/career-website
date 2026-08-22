@@ -38,7 +38,7 @@
     >
     <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
     @if ($alum->photo)
-        <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ asset('storage/'.$alum->photo) }}" alt="{{ $alum->name }}">
+        <img class="dash-image-preview" style="display:block;border-radius:50%;width:90px;height:90px;" src="{{ $alum->photo_url }}" alt="{{ $alum->name }}">
     @endif
     <img id="alumni-photo-preview" class="dash-image-preview" alt="Preview">
     @error('photo')

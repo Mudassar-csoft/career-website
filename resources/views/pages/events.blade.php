@@ -323,7 +323,7 @@
                                 <div class="card-wrap">
                                     <div class="box">
                                         <div class="img-hold">
-                                            <img src="{{ $alum->photo ? asset('storage/'.$alum->photo) : asset('assets/images/img05.png') }}" alt="{{ $alum->name }}">
+                                            <img src="{{ $alum->photo_url }}" alt="{{ $alum->name }}">
                                         </div>
                                         <div class="rt-bar">
                                             <h3>{{ $alum->name }}</h3>

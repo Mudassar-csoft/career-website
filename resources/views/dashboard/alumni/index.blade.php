@@ -38,7 +38,7 @@
                                 <tr>
                                     <td>
                                         @if ($item->photo)
-                                            <img class="dash-thumb" style="border-radius:50%;" src="{{ asset('storage/'.$item->photo) }}" alt="{{ $item->name }}">
+                                            <img class="dash-thumb" style="border-radius:50%;" src="{{ $item->photo_url }}" alt="{{ $item->name }}">
                                         @else
                                             <div class="dash-thumb" style="border-radius:50%;"></div>
                                         @endif
