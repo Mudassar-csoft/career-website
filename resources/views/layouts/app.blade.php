@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Career Website')</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.svg') }}">
     @php $metaDescription = trim($__env->yieldContent('meta_description')); @endphp
     @if ($metaDescription)
         <meta name="description" content="{!! $metaDescription !!}">
