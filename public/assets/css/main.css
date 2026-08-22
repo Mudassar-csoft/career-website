@@ -9323,6 +9323,9 @@ body {
     margin: 0;
   }
 }
+.course-detail .cou-detail {
+  padding: 7rem 0;
+}
 @media (max-width: 992px) {
   .course-detail .cou-detail {
     padding: 3rem 0;
@@ -9415,7 +9418,7 @@ body {
     line-height: 15px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .course-detail .cou-info .l-box ul li {
     width: 100%;
   }
@@ -13714,10 +13717,45 @@ body {
 .feature-slider .slick-slide .box .img-hold {
   border-radius: 10px 10px 0 0;
   position: relative;
+  min-height: 175px;
+  max-height: 175px;
+  overflow: hidden;
+}
+@media (max-width: 1400px) {
+  .feature-slider .slick-slide .box .img-hold {
+    min-height: 200px;
+    max-height: 200px;
+  }
+}
+@media (max-width: 1200px) {
+  .feature-slider .slick-slide .box .img-hold {
+    min-height: 165px;
+    max-height: 165px;
+  }
+}
+@media (max-width: 992px) {
+  .feature-slider .slick-slide .box .img-hold {
+    min-height: 185px;
+    max-height: 185px;
+  }
+}
+@media (max-width: 767px) {
+  .feature-slider .slick-slide .box .img-hold {
+    min-height: 170px;
+    max-height: 170px;
+  }
+}
+@media (max-width: 575px) {
+  .feature-slider .slick-slide .box .img-hold {
+    min-height: inherit;
+    max-height: inherit;
+  }
 }
 .feature-slider .slick-slide .box .img-hold img {
   width: 100%;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: 100%;
 }
 .feature-slider .slick-slide .box .img-hold .offer-bar {
   position: absolute;
@@ -13751,8 +13789,8 @@ body {
   border-radius: 10px 10px;
 }
 .feature-slider .slick-slide .box .text-hold h3 {
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   color: #000;
   font-weight: 600;
   margin: 0 0 12px;

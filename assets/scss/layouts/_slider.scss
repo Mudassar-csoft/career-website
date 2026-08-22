@@ -94,9 +94,34 @@
       .img-hold {
         border-radius: 10px 10px 0 0;
         position: relative;
+        min-height: 175px;
+        max-height: 175px;
+        overflow: hidden;
+        @include max(1400px) {
+          min-height: 200px;
+          max-height: 200px;
+        }
+        @include max(1200px) {
+          min-height: 165px;
+          max-height: 165px;
+        }
+        @include max(992px) {
+          min-height: 185px;
+          max-height: 185px;
+        }
+        @include max(767px) {
+          min-height: 170px;
+          max-height: 170px;
+        }
+        @include max(575px) {
+          min-height: inherit;
+          max-height: inherit;
+        }
         img {
           width: 100%;
           border-radius: 10px 10px 0 0;
+          object-fit: cover;
+          height: 100%;
         }
         .offer-bar {
           position: absolute;
@@ -134,8 +159,8 @@
         background: #fff;
         border-radius: 10px 10px;
         h3 {
-          font-size: 22px;
-          line-height: 24px;
+          font-size: 18px;
+          line-height: 20px;
           color: #000;
           font-weight: 600;
           margin: 0 0 12px;

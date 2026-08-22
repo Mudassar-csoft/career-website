@@ -7,7 +7,7 @@
 <section class="cou-detail">
     <div class="container">
         <div class="row">
-            <div class="col-lg-7 col-xxl-6">
+            <div class="col-lg-9 col-xxl-7">
                 @if ($course->is_featured)
                     <span>Featured</span>
                 @endif
