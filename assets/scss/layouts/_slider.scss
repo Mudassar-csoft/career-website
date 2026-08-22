@@ -163,11 +163,9 @@
           line-height: 20px;
           color: #000;
           font-weight: 600;
-          margin: 0 0 12px;
-          @include max(480px) {
-            font-size: 20px;
-            line-height: 22px;
-          }
+          margin: 0 0 10px;
+          min-height: 40px;
+          max-height: 40px;
         }
         ul {
           margin: 0 0 12px;
