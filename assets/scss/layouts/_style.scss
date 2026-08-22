@@ -203,6 +203,9 @@
             font-size: 12px;
             line-height: 14px;
             font-weight: 400;
+            @include max(1200px) {
+              padding: 7px 10px;
+            }
             i {
               margin: 0 5px 0 0;
             }
