@@ -34,7 +34,7 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['required', 'string', 'min:50', 'max:55'],
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'unique:news,slug', 'alpha_dash'],
             'news_type_id' => ['required', 'exists:news_types,id'],
