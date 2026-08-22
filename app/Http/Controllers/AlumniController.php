@@ -33,8 +33,8 @@ class AlumniController extends Controller
     {
         $validated = $this->validateAlumni($request, true);
 
-        if ($request->hasFile('photo')) {
-            $validated['photo'] = $request->file('photo')->store('alumni', 'public');
+        if ($photo = $validated['photo'] ?? null) {
+            $validated['photo'] = $photo->store('alumni', 'public');
         }
 
         Alumni::create($validated);
@@ -55,8 +55,8 @@ class AlumniController extends Controller
     {
         $validated = $this->validateAlumni($request, $alum->resolvePhotoPath() === null);
 
-        if ($request->hasFile('photo')) {
-            $validated['photo'] = $request->file('photo')->store('alumni', 'public');
+        if ($photo = $validated['photo'] ?? null) {
+            $validated['photo'] = $photo->store('alumni', 'public');
         }
 
         $alum->update($validated);
