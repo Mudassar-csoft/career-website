@@ -98,8 +98,8 @@
         max-height: 175px;
         overflow: hidden;
         @include max(1400px) {
-          min-height: 200px;
-          max-height: 200px;
+          min-height: 147px;
+          max-height: 147px;
         }
         @include max(1200px) {
           min-height: 165px;
@@ -166,6 +166,12 @@
           margin: 0 0 10px;
           min-height: 40px;
           max-height: 40px;
+          @include max(1400px) {
+            font-size: 14px;
+            line-height: 16px;
+            min-height: 35px;
+            max-height: 35px;
+          }
         }
         ul {
           margin: 0 0 12px;
@@ -177,6 +183,10 @@
             font-weight: 700;
             color: #535353;
             margin: 0 0 8px;
+            @include max(1400px) {
+              font-size: 12px;
+              line-height: 14px;
+            }
             span {
               font-size: 12px;
               line-height: 14px;
@@ -184,8 +194,15 @@
               margin: 0 0 0 7px;
               display: flex;
               align-items: center;
+              @include max(1400px) {
+                font-size: 10px;
+                line-height: 12px;
+              }
               img {
                 margin: 0 5px 0 0;
+                @include max(1400px) {
+                  width: 12px;
+                }
               }
             }
             &:last-child {
@@ -198,6 +215,11 @@
           align-items: center;
           .an-btn {
             @include an-btn;
+            @include max(1400px) {
+              padding: 10px 15px;
+              font-size: 12px;
+              line-height: 14px;
+            }
             @include max(480px) {
               font-size: 13px;
               line-height: 15px;
@@ -205,6 +227,11 @@
           }
           .md-btn {
             @include md-btn;
+            @include max(1400px) {
+              padding: 10px 15px;
+              font-size: 12px;
+              line-height: 14px;
+            }
             @include max(480px) {
               font-size: 13px;
               line-height: 15px;
