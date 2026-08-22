@@ -17,12 +17,12 @@
                 <div class="list-bar">
                     <h2>Important Links</h2>
                     <ul>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">About</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Programs</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Testing Services</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Coworking Space</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Study Abroad</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Contact Us</a></li>
+                        <li><a href="{{ route('about') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">About</a></li>
+                        <li><a href="{{ route('courses-certifications') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Programs</a></li>
+                        <li><a href="{{ route('pearson-vue') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Testing Services</a></li>
+                        <li><a href="{{ route('coworking-space') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Coworking Space</a></li>
+                        <li><a href="{{ route('study-abroad') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Study Abroad</a></li>
+                        <li><a href="{{ route('contact-us') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,12 +30,12 @@
                 <div class="list-bar">
                     <h2>Others</h2>
                     <ul>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Online Admission</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">How to Pay</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Verification</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Job Placement</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Ambassador Program</a></li>
-                        <li><a href="#"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Success Stories</a></li>
+                        <li><a href="#admission-modal" data-bs-toggle="modal" data-bs-target="#admission-modal"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Online Admission</a></li>
+                        <li><a href="{{ route('how-to-pay') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">How to Pay</a></li>
+                        <li><a href="{{ route('verifications') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Verification</a></li>
+                        <li><a href="{{ route('job-placement') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Job Placement</a></li>
+                        <li><a href="{{ route('ambassador-program') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Ambassador Program</a></li>
+                        <li><a href="{{ route('stories') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="">Success Stories</a></li>
                     </ul>
                 </div>
             </div>
