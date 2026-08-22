@@ -2,8 +2,8 @@
 
 <div class="dash-form-row">
     <div class="dash-form-group">
-        <label for="course-title">Course Title (35-40 characters)</label>
-        <input type="text" id="course-title" name="title" value="{{ old('title', $course->title) }}" minlength="35" maxlength="40" required>
+        <label for="course-title">Course Title (maximum 40 characters)</label>
+        <input type="text" id="course-title" name="title" value="{{ old('title', $course->title) }}" maxlength="40" required>
         @error('title')
             <p class="dash-form-error">{{ $message }}</p>
         @enderror
