@@ -76,7 +76,7 @@
                     </div>
                     <!-- Center Image -->
                     <div class="center-image">
-                        <img src="assets/images/img15.png" alt="Career Institute student learning">
+                        <img src="assets/images/img95.png" alt="Career Institute student learning">
                     </div>
                 </div>
             </div>
