@@ -14571,7 +14571,7 @@ body {
   border-left: 1px solid #eeeeee;
 }
 .success-story-wrapper .success-nav-slider .slick-list {
-  height: 100% !important;
+  height: auto !important;
 }
 .success-story-wrapper .success-nav-slider .slick-slide {
   margin: 0 0 7px;
