@@ -84,6 +84,16 @@ return [
         ],
     ],
 
+    'success-stories' => [
+        'label' => 'Success Stories',
+        'actions' => [
+            'view' => 'View Success Stories',
+            'create' => 'Create Success Stories',
+            'edit' => 'Edit Success Stories',
+            'delete' => 'Delete Success Stories',
+        ],
+    ],
+
     'collaborators' => [
         'label' => 'Collaborators',
         'actions' => [

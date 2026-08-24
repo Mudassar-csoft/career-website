@@ -11,6 +11,7 @@ use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
 use App\Http\Controllers\PublicFaqController;
 use App\Http\Controllers\PublicNewsController;
+use App\Http\Controllers\PublicSuccessStoryController;
 use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,7 +52,6 @@ $pages = [
     ['uri' => '/pearson-vue', 'view' => 'pages.pearson-vue', 'name' => 'pearson-vue'],
     ['uri' => '/psi-exam', 'view' => 'pages.psi-exam', 'name' => 'psi-exam'],
     ['uri' => '/verifications', 'view' => 'pages.verifications', 'name' => 'verifications'],
-    ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
     ['uri' => '/category', 'view' => 'pages.category', 'name' => 'category'],
     ['uri' => '/event-detail', 'view' => 'pages.event-detail', 'name' => 'event-detail'],
     ['uri' => '/404', 'view' => 'pages.404', 'name' => '404'],
@@ -62,6 +62,7 @@ foreach ($pages as $page) {
 }
 
 Route::get('/study-abroad', [PublicCourseController::class, 'studyAbroad'])->name('study-abroad');
+Route::get('/stories', [PublicSuccessStoryController::class, 'index'])->name('stories');
 
 Route::redirect('/index.html', '/', 301);
 Route::redirect('/about-us.html', '/about-us', 301);
