@@ -13031,6 +13031,63 @@ body {
   }
 }
 
+.for-page .m-text {
+  padding: 3rem 0;
+}
+.for-page .m-text .img-hold {
+  text-align: center;
+  margin: 0 0 25px;
+}
+.for-page .m-text .t-bar {
+  text-align: center;
+}
+.for-page .m-text .t-bar h1 {
+  font-size: 42px;
+  line-height: 44px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #000;
+}
+@media (max-width: 1400px) {
+  .for-page .m-text .t-bar h1 {
+    font-size: 35px;
+    line-height: 37px;
+  }
+}
+@media (max-width: 1200px) {
+  .for-page .m-text .t-bar h1 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 575px) {
+  .for-page .m-text .t-bar h1 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+.for-page .m-text .t-bar p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #595959;
+  font-weight: 400;
+}
+@media (max-width: 992px) {
+  .for-page .m-text .t-bar p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .for-page .m-text .t-bar p br {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .for-page .m-text .t-bar p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
 .main-header {
   position: relative;
   z-index: 9;

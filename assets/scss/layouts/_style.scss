@@ -7998,3 +7998,55 @@
     }
   }
 }
+
+
+// 404 page start here
+
+.for-page {
+  .m-text {
+    padding: 3rem 0;
+    .img-hold {
+      text-align: center;
+      margin: 0 0 25px;
+    }
+    .t-bar {
+      text-align: center;
+      h1 {
+        font-size: 42px;
+        line-height: 44px;
+        font-weight: 700;
+        margin: 0 0 20px;
+        color: #000;
+        @include max(1400px) {
+          font-size: 35px;
+          line-height: 37px;
+        }
+        @include max(1200px) {
+          font-size: 30px;
+          line-height: 32px;
+        }
+        @include max(575px) {
+          font-size: 25px;
+          line-height: 27px;
+        }
+      }
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        color: #595959;
+        font-weight: 400;
+        @include max(992px) {
+          font-size: 16px;
+          line-height: 24px;
+          br {
+            display: none;
+          }
+        }
+        @include max(767px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  } 
+}
