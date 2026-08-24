@@ -9,6 +9,17 @@ use Illuminate\Http\Request;
 
 class PublicCourseController extends Controller
 {
+    public function studyAbroad()
+    {
+        return view('pages.study-abroad', [
+            'languageCourses' => Course::query()
+                ->with('category')
+                ->whereHas('category', fn ($query) => $query->where('slug', 'language-test-preparation'))
+                ->latest()
+                ->get(),
+        ]);
+    }
+
     public function index(Request $request)
     {
         $search = trim((string) $request->input('search', ''));

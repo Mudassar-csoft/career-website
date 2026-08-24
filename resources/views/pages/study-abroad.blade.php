@@ -293,116 +293,33 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature-slider">
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
+                    @forelse ($languageCourses as $course)
+                        <div>
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ $course->image_url ?: asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
+                                    <div class="offer-bar">
+                                        <h3>30%</h3>
+                                        <span>Discount</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="text-hold">
-                                <h5>English Proficiency</h5>
-                                <h3>Digital Marketing</h3>
-                                <p>
-                                    Get ready for university with our comprehensive
-                                    IELTS Academic course...
-                                </p>
-                                <div class="btn-area">
-                                    <a href="#" class="btn en-btn">Enroll Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h5>English Proficiency</h5>
-                                <h3>Digital Marketing</h3>
-                                <p>
-                                    Get ready for university with our comprehensive
-                                    IELTS Academic course...
-                                </p>
-                                <div class="btn-area">
-                                    <a href="#" class="btn en-btn">Enroll Now</a>
+                                <div class="text-hold">
+                                    <h5>{{ $course->category->name }}</h5>
+                                    <h3>{{ $course->title }}</h3>
+                                    <p>{{ \Illuminate\Support\Str::limit(strip_tags($course->about ?: $course->subtitle ?: ''), 115) }}</p>
+                                    <div class="btn-area">
+                                        <a href="{{ route('course-detail', $course->slug) }}" class="btn en-btn">Enroll Now</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                    @empty
                         <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
                             <div class="text-hold">
-                                <h5>English Proficiency</h5>
-                                <h3>Digital Marketing</h3>
-                                <p>
-                                    Get ready for university with our comprehensive
-                                    IELTS Academic course...
-                                </p>
-                                <div class="btn-area">
-                                    <a href="#" class="btn en-btn">Enroll Now</a>
-                                </div>
+                                <p>No Language &amp; Test Preparation courses are available at the moment.</p>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h5>English Proficiency</h5>
-                                <h3>Digital Marketing</h3>
-                                <p>
-                                    Get ready for university with our comprehensive
-                                    IELTS Academic course...
-                                </p>
-                                <div class="btn-area">
-                                    <a href="#" class="btn en-btn">Enroll Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="{{ asset('assets/images/img03.png') }}" alt="Career Institute course">
-                                <div class="offer-bar">
-                                    <h3>30%</h3>
-                                    <span>Discount</span>
-                                </div>
-                            </div>
-                            <div class="text-hold">
-                                <h5>English Proficiency</h5>
-                                <h3>Digital Marketing</h3>
-                                <p>
-                                    Get ready for university with our comprehensive
-                                    IELTS Academic course...
-                                </p>
-                                <div class="btn-area">
-                                    <a href="#" class="btn en-btn">Enroll Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforelse
                 </div>
             </div>
         </div>

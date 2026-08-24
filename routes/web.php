@@ -50,7 +50,6 @@ $pages = [
     ['uri' => '/kryterion', 'view' => 'pages.kryterion', 'name' => 'kryterion'],
     ['uri' => '/pearson-vue', 'view' => 'pages.pearson-vue', 'name' => 'pearson-vue'],
     ['uri' => '/psi-exam', 'view' => 'pages.psi-exam', 'name' => 'psi-exam'],
-    ['uri' => '/study-abroad', 'view' => 'pages.study-abroad', 'name' => 'study-abroad'],
     ['uri' => '/verifications', 'view' => 'pages.verifications', 'name' => 'verifications'],
     ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
     ['uri' => '/category', 'view' => 'pages.category', 'name' => 'category'],
@@ -61,6 +60,8 @@ $pages = [
 foreach ($pages as $page) {
     Route::view($page['uri'], $page['view'])->name($page['name']);
 }
+
+Route::get('/study-abroad', [PublicCourseController::class, 'studyAbroad'])->name('study-abroad');
 
 Route::redirect('/index.html', '/', 301);
 Route::redirect('/about-us.html', '/about-us', 301);
