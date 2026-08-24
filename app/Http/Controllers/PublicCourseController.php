@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Course;
 use App\Models\CourseCategory;
 use App\Models\CourseMode;
@@ -17,6 +18,7 @@ class PublicCourseController extends Controller
                 ->whereHas('category', fn ($query) => $query->where('slug', 'language-test-preparation'))
                 ->latest()
                 ->get(),
+            'latestBlogs' => Blog::latest()->take(4)->get(),
         ]);
     }
 

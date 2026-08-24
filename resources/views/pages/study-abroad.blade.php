@@ -333,75 +333,24 @@
             </div>
         </div>
         <div class="row mb-5 g-3">
-            <div class="col-lg-3 col-sm-6">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
+            @forelse ($latestBlogs as $blog)
+                <div class="col-lg-3 col-sm-6">
+                    <a href="{{ route('blog-detail', $blog->slug) }}" class="block" style="display:block;color:inherit;text-decoration:none;">
+                        <div class="img-hold">
+                            <img src="{{ $blog->image_url ?: asset('assets/images/img13.png') }}" alt="{{ $blog->title }}" onerror="this.src='{{ asset('assets/images/img13.png') }}'; this.onerror=null;">
+                        </div>
+                        <div class="t-bar">
+                            <h3>{{ $blog->title }}</h3>
+                            <p>{{ $blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 90) }}</p>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="block">
-                    <div class="img-hold">
-                        <img src="{{ asset('assets/images/img13.png') }}" alt="Career Institute blog article">
-                    </div>
-                    <div class="t-bar">
-                        <h3>
-                            Shorthand Stenography Skills,
-                            Career, Pros and Cons, FAQs.
-                        </h3>
-                        <p>
-                            Shorthand Stenography is such […]
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="btn-box">
-                    <a href="#" class="btn rm-btn">Read More</a>
+                    <a href="{{ route('blogs') }}" class="btn rm-btn">Read More</a>
                 </div>
             </div>
         </div>
