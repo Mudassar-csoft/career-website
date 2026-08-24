@@ -8533,6 +8533,79 @@ body {
   line-height: 16px;
 }
 
+#Verification-modal .modal-dialog {
+  max-width: 600px;
+}
+#Verification-modal .modal-dialog .modal-body {
+  text-align: center;
+}
+#Verification-modal .modal-dialog .modal-body h2 {
+  font-size: 35px;
+  line-height: 37px;
+  color: #000;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+@media (max-width: 1400px) {
+  #Verification-modal .modal-dialog .modal-body h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media (max-width: 767px) {
+  #Verification-modal .modal-dialog .modal-body h2 {
+    font-size: 25px;
+    line-height: 27px;
+  }
+}
+#Verification-modal .modal-dialog .modal-body p {
+  font-size: 16px;
+  line-height: 18px;
+  color: #595959;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+@media (max-width: 767px) {
+  #Verification-modal .modal-dialog .modal-body p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+#Verification-modal .modal-dialog .modal-body ul li {
+  font-size: 16px;
+  line-height: 18px;
+  color: #595959;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+@media (max-width: 767px) {
+  #Verification-modal .modal-dialog .modal-body ul li {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+#Verification-modal .modal-dialog .modal-body ul li a {
+  color: #595959;
+  font-weight: 500;
+  margin: 0 0 0 5px;
+}
+#Verification-modal .modal-dialog .modal-body .c-btn {
+  background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
+  padding: 10px 24px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50px 50px;
+  transition: all 0.3s ease-in-out;
+}
+#Verification-modal .modal-dialog .modal-body .c-btn:hover {
+  transform: scale(1.05);
+}
+#Verification-modal .modal-dialog .modal-body .c-btn:focus {
+  box-shadow: none;
+}
+
 .about-page .hero-section {
   background: linear-gradient(107.15deg, #012e4b 0%, #066c5c 100%);
   background-size: 100%;

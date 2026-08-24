@@ -47,7 +47,7 @@
                                                 <input type="text" class="form-control">
                                             </div>
                                             <div class="col-12 text-center mt-4 mt-xxl-5">
-                                                <button type="submit" class="btn sm-btn">Verify Now</button>
+                                                <button class="btn sm-btn" data-bs-toggle="modal" data-bs-target="#Verification-modal">Verify Now</button>
                                             </div>
                                         </form>
                                     </div>

@@ -4908,6 +4908,61 @@
     }
   }
 }
+#Verification-modal {
+  .modal-dialog {
+    max-width: 600px;
+    .modal-body {
+      text-align: center;
+      h2 {
+        font-size: 35px;
+        line-height: 37px;
+        color: #000;
+        font-weight: 500;
+        margin: 0 0 10px;
+        @include max(1400px) {
+          font-size: 30px;
+          line-height: 32px;
+        }
+        @include max(767px) {
+          font-size: 25px;
+          line-height: 27px;
+        }
+      }
+      p {
+        font-size: 16px;
+        line-height: 18px;
+        color: #595959;
+        font-weight: 400;
+        margin: 0 0 10px;
+        @include max(767px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      ul {
+        li {
+          font-size: 16px;
+          line-height: 18px;
+          color: #595959;
+          font-weight: 400;
+          margin: 0 0 10px;
+          @include max(767px) {
+            font-size: 14px;
+            line-height: 18px;
+          }
+          a {
+            color: #595959;
+            font-weight: 500;
+            margin: 0 0 0 5px;
+          }
+        }
+      }
+      .c-btn {
+        @include apply-btn;
+      }
+    }
+  }
+}
 
 // About us page start here
 
