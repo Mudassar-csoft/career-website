@@ -111,7 +111,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
         $(".logo-slider").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 2500,
             speed: 1200,
             cssEase: "ease",

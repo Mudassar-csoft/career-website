@@ -649,6 +649,7 @@
       margin: 0 0 20px;
       img {
         margin: 0 auto;
+        border-radius: 100% 100%;
       }
     }
     .rt-bar {
@@ -881,7 +882,7 @@
   .gallery-panel {
     display: none;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 10px;
     margin: 0 0 50px;
     @include max(992px) {
       gap: 10px;
@@ -898,6 +899,9 @@
       border-radius: 10px 10px;
       aspect-ratio: 1 / 1;
       overflow: hidden;
+      min-height: 180px;
+      max-height: 180px;
+      width: 100%;
       img {
         width: 100%;
         height: 100%;

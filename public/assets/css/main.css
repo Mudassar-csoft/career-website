@@ -1062,6 +1062,7 @@ body {
 }
 .review-area .box .img-hold img {
   margin: 0 auto;
+  border-radius: 100% 100%;
 }
 .review-area .box .rt-bar h3 {
   font-size: 16px;
@@ -1388,7 +1389,7 @@ body {
 .gallery-bar .gallery-panel {
   display: none;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 10px;
   margin: 0 0 50px;
 }
 @media (max-width: 992px) {
@@ -1410,6 +1411,9 @@ body {
   border-radius: 10px 10px;
   aspect-ratio: 1/1;
   overflow: hidden;
+  min-height: 180px;
+  max-height: 180px;
+  width: 100%;
 }
 .gallery-bar .gallery-panel .gallery-item img {
   width: 100%;
@@ -14117,7 +14121,7 @@ body {
 .testimonial-slider .center-1 .box,
 .testimonial-slider .center-2 .box {
   border: 2px solid #19b8f8;
-  padding: 3rem 15px;
+  padding: 2.5rem 15px;
 }
 .testimonial-slider .slider-prev,
 .testimonial-slider .slider-next {

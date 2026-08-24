@@ -302,36 +302,24 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="logo-slider">
-                    <div>
-                        <div class="img-hold">
-                            <img src="{{ asset('assets/images/img09.png') }}" alt="Career Institute classroom">
+                    @foreach ([
+                        ['image' => 'img76.png', 'name' => 'Linux Professional Institute'],
+                        ['image' => 'img77.png', 'name' => 'VMware by Broadcom'],
+                        ['image' => 'img78.png', 'name' => 'Kryterion'],
+                        ['image' => 'img79.png', 'name' => 'Linux Professional Institute'],
+                        ['image' => 'img80.png', 'name' => 'VMware by Broadcom'],
+                        ['image' => 'img81.png', 'name' => 'Kryterion'],
+                        ['image' => 'img82.png', 'name' => 'Kryterion'],
+                        ['image' => 'img83.png', 'name' => 'Kryterion'],
+                        ['image' => 'img84.png', 'name' => 'Kryterion'],
+                        ['image' => 'img85.png', 'name' => 'Kryterion'],
+                    ] as $collaborator)
+                        <div>
+                            <div class="img-hold">
+                                <img src="{{ asset('assets/images/'.$collaborator['image']) }}" alt="{{ $collaborator['name'] }}">
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="{{ asset('assets/images/img10.png') }}" alt="Career Institute students learning">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="{{ asset('assets/images/img11.png') }}" alt="Career Institute practical training">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="{{ asset('assets/images/img12.png') }}" alt="Career Institute student achievement">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="{{ asset('assets/images/img10.png') }}" alt="Career Institute students learning">
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-hold">
-                            <img src="{{ asset('assets/images/img11.png') }}" alt="Career Institute practical training">
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -351,7 +339,7 @@
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
                             <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
-                        <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
+                        <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</h6>
                         <div class="s-link" >
                             <ul>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt="Career Institute feature icon"></a></li>
@@ -362,11 +350,13 @@
                             </ul>
                         </div>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <b>Our mission</b> is to educate and empower enterprise<br>
-                            leaders. We firmly believe that the leaders nurtured<br>
-                            by our institute play a crucial role in effecting<br>
-                            positive change within their organizations and<br>
-                            on a global scale.
+                            <span class=" coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span><b>
+                            Our vision</b>  is to transform education into meaningful<br>
+                            careers. Since 2010, Career Institute has delivered<br>
+                            practical, industry-focused training, empowering<br>
+                            learners with relevant skills, confidence and direction<br>
+                            to succeed in a rapidly evolving global workforce.
+                            <span class="round coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon">
                         </p>
                         <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
                             Inspired by rapid technological advancement and the changing global landscape,
@@ -383,9 +373,9 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img02.png" alt="Career Institute campus">
+                            <img src="assets/images/img74.png" alt="Career Institute campus">
                         </div>
-                        <span class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Founder & CEO</span>
+                        <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</h6>
                         <div class="s-link">
                             <ul>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt="Career Institute feature icon"></a></li>
@@ -396,11 +386,13 @@
                             </ul>
                         </div>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
-                            <b>Our mission</b> is to educate and empower enterprise<br>
-                            leaders. We firmly believe that the leaders nurtured<br>
-                            by our institute play a crucial role in effecting<br>
-                            positive change within their organizations and<br>
-                            on a global scale.
+                            <span class="coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
+                            <b>At Career</b> Institute  we believe every learner has unique<br>
+                            potential. Through an inclusive and inspiring environment,<br>
+                            we develop practical skills, confidence and creativity,<br>
+                            empowering students to pursue meaningful careers<br>
+                            and achieve lifelong professional growth.
+                            <span class="round coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
                         </p>
                         <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
                             Inspired by rapid technological advancement and the changing global landscape,
