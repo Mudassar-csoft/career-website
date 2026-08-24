@@ -251,7 +251,7 @@
                         designed for growth and collaboration. Advance your skills, career and business with Career
                         Institute - where education meets innovation.
                     </p>
-                    <a href="#" class="btn r-btn">Read More</a>
+                    <a href="{{ route('about') }}" class="btn r-btn">Read More</a>
                 </div>
             </div>
         </div>
@@ -360,7 +360,7 @@
                     Elevate Your Skills, Unlock Earning Opportunities, and Land Your Dream Job Learn online from the comfort of your home or join
                     interactive on-campus sessions with our expert instructors -the choice is yours.
                 </p>
-                <a href="#" class="btn ep-btn mb-5">Explore Campuses</a>
+                <a href="https://www.youtube.com/@CareerInstitutepk/videos" class="btn ep-btn mb-5">Explore Campuses</a>
             </div>
         </div>
         <div class="row">

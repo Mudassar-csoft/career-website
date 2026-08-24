@@ -55,6 +55,7 @@ $pages = [
     ['uri' => '/stories', 'view' => 'pages.stories', 'name' => 'stories'],
     ['uri' => '/category', 'view' => 'pages.category', 'name' => 'category'],
     ['uri' => '/event-detail', 'view' => 'pages.event-detail', 'name' => 'event-detail'],
+    ['uri' => '/404', 'view' => 'pages.404', 'name' => '404'],
 ];
 
 foreach ($pages as $page) {
@@ -83,3 +84,4 @@ Route::redirect('/events.html', '/events', 301);
 Route::redirect('/category.html', '/category', 301);
 Route::redirect('/event-detail.html', '/event-detail', 301);
 Route::redirect('/faqs.html', '/faqs', 301);
+Route::redirect('/404.html', '/404', 301);
