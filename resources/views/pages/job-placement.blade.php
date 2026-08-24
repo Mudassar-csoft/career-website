@@ -27,33 +27,16 @@
             <div class="col-lg-12">
                 <div class="career-section">
                     <div class="career-filter">
-                        <div class="show-box">
-                            05 Show
-                        </div>
-                        <div class="filter-box">
+                        <div class="show-box">{{ $jobOffers->count() }} Show</div>
+                        <form class="filter-box" method="GET" action="{{ route('job-placement') }}">
                             <div class="row g-2">
-                                <div class="col-lg">
-                                    <input type="text" class="form-control" placeholder="Search Keyword...">
-                                </div>
-                                <div class="col-lg">
-                                    <input type="text" class="form-control" placeholder="Job Type...">
-                                </div>
-                                <div class="col-lg">
-                                    <input type="text" class="form-control" placeholder="Search Location">
-                                </div>
-                                <div class="col-auto d-none d-lg-block">
-                                    <button class="search-btn">
-                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="Career Institute feature icon">
-                                    </button>
-                                </div>
-                                <div class="col-12 d-lg-none">
-                                    <button class="search-btn">
-                                        <img src="{{ asset('assets/images/icon53.png') }}" alt="Career Institute feature icon">
-                                        Search
-                                    </button>
-                                </div>
+                                <div class="col-lg"><input type="text" class="form-control" name="search" value="{{ $search }}" placeholder="Search Keyword..."></div>
+                                <div class="col-lg"><input type="text" class="form-control" name="job_type" value="{{ $jobType }}" placeholder="Job Type..."></div>
+                                <div class="col-lg"><input type="text" class="form-control" name="location" value="{{ $location }}" placeholder="Search Location"></div>
+                                <div class="col-auto d-none d-lg-block"><button class="search-btn" type="submit"><img src="{{ asset('assets/images/icon53.png') }}" alt="Search jobs"></button></div>
+                                <div class="col-12 d-lg-none"><button class="search-btn" type="submit"><img src="{{ asset('assets/images/icon53.png') }}" alt="Search jobs"> Search</button></div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                     <div class="table-responsive">
                         <table class="table career-table">
@@ -68,86 +51,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Graphic Designer</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <span class="job-badge">
-                                            Full Time
-                                        </span>
-                                    </td>
-                                    <td>Faisalabad</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <a href="#" class="apply-btn">
-                                            Apply Now
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>UI/UX Designer</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <span class="job-badge">
-                                            Full Time
-                                        </span>
-                                    </td>
-                                    <td>Faisalabad</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <a href="#" class="apply-btn">
-                                            Apply Now
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Full Stack Digital Marketer</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <span class="job-badge">
-                                            Full Time
-                                        </span>
-                                    </td>
-                                    <td>Faisalabad</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <a href="#" class="apply-btn">
-                                            Apply Now
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Full Stack Web Developer</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <span class="job-badge">
-                                            Full Time
-                                        </span>
-                                    </td>
-                                    <td>Faisalabad</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <a href="#" class="apply-btn">
-                                            Apply Now
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Microsoft Office Manager</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <span class="job-badge">
-                                            Full Time
-                                        </span>
-                                    </td>
-                                    <td>Faisalabad</td>
-                                    <td>02-04-2026</td>
-                                    <td>
-                                        <a href="#" class="apply-btn">
-                                            Apply Now
-                                        </a>
-                                    </td>
-                                </tr>
+                                @forelse ($jobOffers as $jobOffer)
+                                    <tr>
+                                        <td>{{ $jobOffer->title }}</td>
+                                        <td>{{ $jobOffer->created_at->format('d-m-Y') }}</td>
+                                        <td><span class="job-badge">{{ $jobOffer->job_type }}</span></td>
+                                        <td>{{ $jobOffer->location }}</td>
+                                        <td>{{ $jobOffer->deadline->format('d-m-Y') }}</td>
+                                        <td>
+                                            @if ($jobOffer->application_url)
+                                                <a href="{{ $jobOffer->application_url }}" class="apply-btn" target="_blank" rel="noopener noreferrer">Apply Now</a>
+                                            @else
+                                                <span class="apply-btn" style="opacity:.55;cursor:default;">Apply Unavailable</span>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr><td colspan="6" class="text-center py-4">No job offers available.</td></tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

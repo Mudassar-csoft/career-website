@@ -7,6 +7,7 @@ use App\Http\Controllers\EventRegistrationController;
 use App\Http\Controllers\EventMediaController;
 use App\Http\Controllers\GalleryMediaController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PublicJobPlacementController;
 use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
 use App\Http\Controllers\PublicFaqController;
@@ -49,7 +50,6 @@ $pages = [
     ['uri' => '/coworking-space', 'view' => 'pages.coworking-space', 'name' => 'coworking-space'],
     ['uri' => '/gallery', 'view' => 'pages.gallery', 'name' => 'gallery'],
     ['uri' => '/how-to-pay', 'view' => 'pages.how-to-pay', 'name' => 'how-to-pay'],
-    ['uri' => '/job-placement', 'view' => 'pages.job-placement', 'name' => 'job-placement'],
     ['uri' => '/kryterion', 'view' => 'pages.kryterion', 'name' => 'kryterion'],
     ['uri' => '/pearson-vue', 'view' => 'pages.pearson-vue', 'name' => 'pearson-vue'],
     ['uri' => '/psi-exam', 'view' => 'pages.psi-exam', 'name' => 'psi-exam'],
@@ -66,6 +66,7 @@ foreach ($pages as $page) {
 
 Route::get('/study-abroad', [PublicCourseController::class, 'studyAbroad'])->name('study-abroad');
 Route::get('/stories', [PublicSuccessStoryController::class, 'index'])->name('stories');
+Route::get('/job-placement', [PublicJobPlacementController::class, 'index'])->name('job-placement');
 
 Route::redirect('/index.html', '/', 301);
 Route::redirect('/about-us.html', '/about-us', 301);

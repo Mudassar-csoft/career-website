@@ -11,6 +11,7 @@ use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\EventRegistrantController;
 use App\Http\Controllers\FaqCategoryController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\JobOfferController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\NewsController;
@@ -133,6 +134,15 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::get('/{successStory}/edit', [SuccessStoryController::class, 'edit'])->name('edit')->middleware('can:success-stories.edit');
         Route::put('/{successStory}', [SuccessStoryController::class, 'update'])->name('update')->middleware('can:success-stories.edit');
         Route::delete('/{successStory}', [SuccessStoryController::class, 'destroy'])->name('destroy')->middleware('can:success-stories.delete');
+    });
+
+    Route::prefix('job-offers')->name('job-offers.')->group(function () {
+        Route::get('/', [JobOfferController::class, 'index'])->name('index')->middleware('can:job-offers.view');
+        Route::get('/create', [JobOfferController::class, 'create'])->name('create')->middleware('can:job-offers.create');
+        Route::post('/', [JobOfferController::class, 'store'])->name('store')->middleware('can:job-offers.create');
+        Route::get('/{jobOffer}/edit', [JobOfferController::class, 'edit'])->name('edit')->middleware('can:job-offers.edit');
+        Route::put('/{jobOffer}', [JobOfferController::class, 'update'])->name('update')->middleware('can:job-offers.edit');
+        Route::delete('/{jobOffer}', [JobOfferController::class, 'destroy'])->name('destroy')->middleware('can:job-offers.delete');
     });
 
     Route::prefix('collaborators')->name('collaborators.')->group(function () {

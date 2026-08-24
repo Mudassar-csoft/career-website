@@ -66,6 +66,10 @@ trait BuildsDashboardMenu
                 ['label' => 'Add Story', 'route' => 'dashboard.success-stories.create', 'permission' => 'success-stories.create'],
                 ['label' => 'All Stories', 'route' => 'dashboard.success-stories.index', 'permission' => 'success-stories.view'],
             ]],
+            ['key' => 'job-offers', 'label' => 'Job Offers', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Add Job Offer', 'route' => 'dashboard.job-offers.create', 'permission' => 'job-offers.create'],
+                ['label' => 'All Job Offers', 'route' => 'dashboard.job-offers.index', 'permission' => 'job-offers.view'],
+            ]],
             ['key' => 'collaborators', 'label' => 'Collaborators', 'type' => 'dropdown', 'children' => [
                 ['label' => 'Add Collaborator', 'route' => 'dashboard.collaborators.create', 'permission' => 'collaborators.create'],
                 ['label' => 'All Collaborators', 'route' => 'dashboard.collaborators.index', 'permission' => 'collaborators.view'],

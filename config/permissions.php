@@ -94,6 +94,16 @@ return [
         ],
     ],
 
+    'job-offers' => [
+        'label' => 'Job Offers',
+        'actions' => [
+            'view' => 'View Job Offers',
+            'create' => 'Create Job Offers',
+            'edit' => 'Edit Job Offers',
+            'delete' => 'Delete Job Offers',
+        ],
+    ],
+
     'collaborators' => [
         'label' => 'Collaborators',
         'actions' => [
