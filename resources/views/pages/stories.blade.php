@@ -100,7 +100,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img53.png') }}" alt="Career Institute student success story">
+                    <img src="{{ asset('assets/images/img102.png') }}" alt="Career Institute student success story">
                 </div>
             </div>
         </div>
