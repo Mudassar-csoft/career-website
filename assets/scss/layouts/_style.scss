@@ -4963,6 +4963,28 @@
     }
   }
 }
+#cospace-modal {
+  .modal-dialog {
+    max-width: 800px;
+    .modal-body {
+      height: 500px;
+      padding: 0;
+      position: relative;
+      .btn-close {
+        position: absolute;
+          top: 32px;
+          right: 25px;
+          z-index: 9;
+          background: url(../images/icon93.svg) no-repeat;
+          opacity: 1;
+          padding: 0;
+      }
+      iframe {
+        border-radius: 20px 20px;
+      }
+    }
+  }
+}
 
 // About us page start here
 

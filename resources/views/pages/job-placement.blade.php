@@ -10,7 +10,7 @@
                 <h1 class="mb-4">Discover Opportunities That Inspire !</h1>
                 <div class="btn-block">
                     <a href="#" class="btn aq-btn">Submit Resume</a>
-                    <a href="#" class="btn wa-btn">Post a Job</a>
+                    {{-- <a href="#" class="btn wa-btn">Post a Job</a> --}}
                 </div>
             </div>
         </div>
