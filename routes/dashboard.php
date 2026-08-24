@@ -36,6 +36,8 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::get('/create', [NewsController::class, 'create'])->name('create')->middleware('can:news.create');
         Route::post('/', [NewsController::class, 'store'])->name('store')->middleware('can:news.create');
         Route::post('/types', [NewsController::class, 'storeType'])->name('types.store')->middleware('can:news.create');
+        Route::get('/{news}/edit', [NewsController::class, 'edit'])->name('edit')->middleware('can:news.edit');
+        Route::put('/{news}', [NewsController::class, 'update'])->name('update')->middleware('can:news.edit');
         Route::delete('/{news}', [NewsController::class, 'destroy'])->name('destroy')->middleware('can:news.delete');
     });
 

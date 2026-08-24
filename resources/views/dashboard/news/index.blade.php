@@ -52,6 +52,9 @@
                                     <td><span class="dash-badge dash-badge-green">{{ $item->type->name }}</span></td>
                                     <td>{{ $item->created_at->format('M d, Y') }}</td>
                                     <td>
+                                        @can('news.edit')
+                                            <a href="{{ route('dashboard.news.edit', $item) }}" class="dash-btn dash-btn-secondary" style="padding:6px 12px;font-size:12px;">Edit</a>
+                                        @endcan
                                         @can('news.delete')
                                             <form action="{{ route('dashboard.news.destroy', $item) }}" method="POST" onsubmit="return confirm('Delete this news article?');">
                                                 @csrf
