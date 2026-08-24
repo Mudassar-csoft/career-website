@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Concerns\BuildsDashboardMenu;
 use App\Models\SuccessStory;
-use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -89,7 +88,10 @@ class SuccessStoryController extends Controller
             'after_story' => ['required', 'string', 'max:1000'],
             'journey_steps' => ['nullable', 'array', 'max:5'],
             'journey_steps.*' => ['nullable', 'string', 'max:80'],
-            'image' => DashboardImageUpload::rules($imageRequired),
+            'image' => array_merge(
+                [$imageRequired ? 'required' : 'nullable'],
+                ['file', 'mimes:jpg,jpeg,png,webp,svg', 'extensions:jpg,jpeg,png,webp,svg', 'max:2048']
+            ),
         ]);
 
         $validated['journey_steps'] = collect($validated['journey_steps'] ?? [])

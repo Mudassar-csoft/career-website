@@ -63,13 +63,13 @@
         type="file"
         id="story-image"
         name="image"
-        accept="{{ \App\Support\DashboardImageUpload::ACCEPT_ATTRIBUTE }}"
+        accept=".jpg,.jpeg,.png,.webp,.svg"
         data-dashboard-image-upload
-        data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
-        data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+        data-allowed-extensions="jpg,jpeg,png,webp,svg"
+        data-max-size-kb="2048"
         @if (! $story->exists) required @endif
     >
-    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
+    <p class="dash-form-hint">JPG, PNG, WEBP, or SVG, up to 2 MB.</p>
     @if ($story->exists)
         <img class="dash-image-preview" style="display:block;" src="{{ $story->image_url }}" alt="{{ $story->name }}">
     @endif
