@@ -333,7 +333,7 @@
             </div>
         </div>
         <div class="row mb-5 g-3">
-            @forelse ($latestBlogs as $blog)
+            @foreach ($latestBlogs as $blog)
                 <div class="col-lg-3 col-sm-6">
                     <a href="{{ route('blog-detail', $blog->slug) }}" class="block" style="display:block;color:inherit;text-decoration:none;">
                         <div class="img-hold">
@@ -345,7 +345,7 @@
                         </div>
                     </a>
                 </div>
-            @endforelse
+            @endforeach
         </div>
         <div class="row">
             <div class="col-lg-12">
