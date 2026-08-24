@@ -203,7 +203,7 @@
 </div>
 
 
-// Co Space model popup start here
+<!-- Co Space model popup start here -->
 
 <div class="modal fade career-model" id="cospace-modal" tabindex="-1" aria-labelledby="CospaceModalLabel" aria-hidden="true">
     <div class="modal-dialog">
