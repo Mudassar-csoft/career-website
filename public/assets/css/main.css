@@ -1057,6 +1057,11 @@ body {
   border-radius: 20px 20px;
   text-align: center;
 }
+@media (max-width: 1400px) {
+  .review-area .box {
+    padding: 15px 10px;
+  }
+}
 .review-area .box .img-hold {
   margin: 0 auto 20px;
   width: 125px;
@@ -1073,6 +1078,12 @@ body {
   color: #000;
   font-weight: 700;
   margin: 0 0 5px;
+}
+@media (max-width: 1400px) {
+  .review-area .box .rt-bar h3 {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 .review-area .box .rt-bar span {
   display: block;
@@ -14132,6 +14143,12 @@ body {
 .testimonial-slider .center-2 .box {
   border: 2px solid #19b8f8;
   padding: 2.5rem 15px;
+}
+@media (max-width: 1400px) {
+  .testimonial-slider .center-1 .box,
+  .testimonial-slider .center-2 .box {
+    padding: 2rem 10px;
+  }
 }
 .testimonial-slider .slider-prev,
 .testimonial-slider .slider-next {

@@ -645,6 +645,9 @@
     border: 2px solid #9f9f9f;
     border-radius: 20px 20px;
     text-align: center;
+    @include max(1400px) {
+      padding: 15px 10px;
+    }
     .img-hold {
       margin: 0 auto 20px;
       width: 125px;
@@ -662,6 +665,10 @@
         color: #000;
         font-weight: 700;
         margin: 0 0 5px;
+        @include max(1400px) {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
       span {
         display: block;
