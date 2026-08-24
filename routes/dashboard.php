@@ -16,6 +16,7 @@ use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SuccessStoryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -123,6 +124,15 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::get('/{alum}/edit', [AlumniController::class, 'edit'])->name('edit')->middleware('can:alumni.edit');
         Route::put('/{alum}', [AlumniController::class, 'update'])->name('update')->middleware('can:alumni.edit');
         Route::delete('/{alum}', [AlumniController::class, 'destroy'])->name('destroy')->middleware('can:alumni.delete');
+    });
+
+    Route::prefix('success-stories')->name('success-stories.')->group(function () {
+        Route::get('/', [SuccessStoryController::class, 'index'])->name('index')->middleware('can:success-stories.view');
+        Route::get('/create', [SuccessStoryController::class, 'create'])->name('create')->middleware('can:success-stories.create');
+        Route::post('/', [SuccessStoryController::class, 'store'])->name('store')->middleware('can:success-stories.create');
+        Route::get('/{successStory}/edit', [SuccessStoryController::class, 'edit'])->name('edit')->middleware('can:success-stories.edit');
+        Route::put('/{successStory}', [SuccessStoryController::class, 'update'])->name('update')->middleware('can:success-stories.edit');
+        Route::delete('/{successStory}', [SuccessStoryController::class, 'destroy'])->name('destroy')->middleware('can:success-stories.delete');
     });
 
     Route::prefix('collaborators')->name('collaborators.')->group(function () {

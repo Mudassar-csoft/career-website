@@ -62,6 +62,10 @@ trait BuildsDashboardMenu
                 ['label' => 'Add Alumni', 'route' => 'dashboard.alumni.create', 'permission' => 'alumni.create'],
                 ['label' => 'All Alumni', 'route' => 'dashboard.alumni.index', 'permission' => 'alumni.view'],
             ]],
+            ['key' => 'success-stories', 'label' => 'Success Stories', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Add Story', 'route' => 'dashboard.success-stories.create', 'permission' => 'success-stories.create'],
+                ['label' => 'All Stories', 'route' => 'dashboard.success-stories.index', 'permission' => 'success-stories.view'],
+            ]],
             ['key' => 'collaborators', 'label' => 'Collaborators', 'type' => 'dropdown', 'children' => [
                 ['label' => 'Add Collaborator', 'route' => 'dashboard.collaborators.create', 'permission' => 'collaborators.create'],
                 ['label' => 'All Collaborators', 'route' => 'dashboard.collaborators.index', 'permission' => 'collaborators.view'],

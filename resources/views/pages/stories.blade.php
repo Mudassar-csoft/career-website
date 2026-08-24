@@ -38,316 +38,54 @@
                 <div class="success-story-wrapper">
                     <!-- MAIN SLIDER -->
                     <div class="success-main-slider">
-                        <!-- Slide 1 -->
-                        <div class="success-main-slide">
-                            <div class="success-card">
-                                <div class="success-image">
-                                    <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
-                                </div>
-                                <div class="success-content">
-                                    <h2>Ayesha Khan</h2>
-                                    <span class="success-program">
-                                        Frontend Development Program
-                                    </span>
-                                    <span class="success-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        Faisalabad, Pakistan
-                                    </span>
-                                    <div class="success-before-after">
-                                        <div class="before-box">
-                                            <span>Before</span>
-                                            <p>
-                                                Fresh graduate with no  practical
-                                                experience and no confidence in
-                                                coding.
-                                            </p>
-                                        </div>
-                                        <div class="after-box">
-                                            <span>After</span>
-                                            <p>
-                                                Frontend Developer at  Upwork
-                                                earning $2000 monthly.
-                                            </p>
-                                        </div>
+                        @forelse ($successStories as $story)
+                            <div class="success-main-slide">
+                                <div class="success-card">
+                                    <div class="success-image">
+                                        <img src="{{ $story->image_url }}" alt="{{ $story->name }}" onerror="this.src='{{ asset('assets/images/img58.png') }}'; this.onerror=null;">
                                     </div>
-                                    <h3>Journey</h3>
-                                    <div class="journey">
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon88.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Joined<br>
-                                                Institute
-                                            </span>
+                                    <div class="success-content">
+                                        <h2>{{ $story->name }}</h2>
+                                        <span class="success-program">{{ $story->program }}</span>
+                                        <span class="success-location"><i class="fas fa-map-marker-alt"></i> {{ $story->location }}</span>
+                                        <div class="success-before-after">
+                                            <div class="before-box"><span>Before</span><p>{{ $story->before_story }}</p></div>
+                                            <div class="after-box"><span>After</span><p>{{ $story->after_story }}</p></div>
                                         </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                               <img src="{{ asset('assets/images/icon89.svg') }}" alt="Career Institute feature icon">
+                                        @if (! empty($story->journey_steps))
+                                            <h3>Journey</h3>
+                                            <div class="journey">
+                                                @foreach ($story->journey_steps as $index => $step)
+                                                    <div class="journey-item">
+                                                        <div class="journey-icon"><img src="{{ asset('assets/images/icon'.(88 + $index).'.svg') }}" alt="Career Institute feature icon"></div>
+                                                        <span>{{ $step }}</span>
+                                                    </div>
+                                                @endforeach
                                             </div>
-                                            <span>
-                                                Completed<br>
-                                                React Bootstrap
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon90.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Built<br>
-                                                8 Project
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon91.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Secured<br>
-                                                Internship
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon92.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Got<br>
-                                                Full Time Job
-                                            </span>
-                                        </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                         <div class="success-main-slide">
-                            <div class="success-card">
-                                <div class="success-image">
-                                    <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
-                                </div>
-                                <div class="success-content">
-                                    <h2>Ayesha Khan</h2>
-                                    <span class="success-program">
-                                        Frontend Development Program
-                                    </span>
-                                    <span class="success-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        Faisalabad, Pakistan
-                                    </span>
-                                    <div class="success-before-after">
-                                        <div class="before-box">
-                                            <span>Before</span>
-                                            <p>
-                                                Fresh graduate with no  practical
-                                                experience and no confidence in
-                                                coding.
-                                            </p>
-                                        </div>
-                                        <div class="after-box">
-                                            <span>After</span>
-                                            <p>
-                                                Frontend Developer at  Upwork
-                                                earning $2000 monthly.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <h3>Journey</h3>
-                                    <div class="journey">
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon88.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Joined<br>
-                                                Institute
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                               <img src="{{ asset('assets/images/icon89.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Completed<br>
-                                                React Bootstrap
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon90.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Built<br>
-                                                8 Project
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon91.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Secured<br>
-                                                Internship
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon92.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Got<br>
-                                                Full Time Job
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                         <div class="success-main-slide">
-                            <div class="success-card">
-                                <div class="success-image">
-                                    <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
-                                </div>
-                                <div class="success-content">
-                                    <h2>Ayesha Khan</h2>
-                                    <span class="success-program">
-                                        Frontend Development Program
-                                    </span>
-                                    <span class="success-location">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        Faisalabad, Pakistan
-                                    </span>
-                                    <div class="success-before-after">
-                                        <div class="before-box">
-                                            <span>Before</span>
-                                            <p>
-                                                Fresh graduate with no  practical
-                                                experience and no confidence in
-                                                coding.
-                                            </p>
-                                        </div>
-                                        <div class="after-box">
-                                            <span>After</span>
-                                            <p>
-                                                Frontend Developer at  Upwork
-                                                earning $2000 monthly.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <h3>Journey</h3>
-                                    <div class="journey">
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon88.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Joined<br>
-                                                Institute
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                               <img src="{{ asset('assets/images/icon89.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Completed<br>
-                                                React Bootstrap
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon90.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Built<br>
-                                                8 Project
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon91.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Secured<br>
-                                                Internship
-                                            </span>
-                                        </div>
-                                        <div class="journey-item">
-                                            <div class="journey-icon">
-                                                <img src="{{ asset('assets/images/icon92.svg') }}" alt="Career Institute feature icon">
-                                            </div>
-                                            <span>
-                                                Got<br>
-                                                Full Time Job
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
+                        @empty
+                            <div class="success-main-slide"><div class="success-card"><div class="success-content"><h2>Success Stories Coming Soon</h2></div></div></div>
+                        @endforelse
                     </div>
-                    <!-- RIGHT SIDE NAVIGATION SLIDER -->
                     <div class="success-nav-slider">
-                        <!-- Nav 1 -->
-                        <div class="success-nav-item">
-                            <div class="nav-student">
-                                <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
-                                <div>
-                                    <h4>Ayesha Khan</h4>
-                                    <span>Frontend Developer</span>
-                                    <small>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        Faisalabad, Pakistan
-                                    </small>
+                        @forelse ($successStories as $story)
+                            <div class="success-nav-item">
+                                <div class="nav-student">
+                                    <img src="{{ $story->image_url }}" alt="{{ $story->name }}" onerror="this.src='{{ asset('assets/images/img58.png') }}'; this.onerror=null;">
+                                    <div>
+                                        <h4>{{ $story->name }}</h4>
+                                        <span>{{ $story->role }}</span>
+                                        <small><i class="fas fa-map-marker-alt"></i> {{ $story->location }}</small>
+                                    </div>
                                 </div>
+                                <p>{{ $story->role }}@if ($story->company) at <strong>{{ $story->company }}</strong>@endif</p>
                             </div>
-                            <p>
-                                Frontend Developer at
-                                <strong>Upwork</strong>
-                            </p>
-                        </div>
-                        <!-- Nav 2 -->
-                        <div class="success-nav-item">
-                            <div class="nav-student">
-                                <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
-                                <div>
-                                    <h4>Ayesha Khan</h4>
-                                    <span>Frontend Developer</span>
-                                    <small>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        Faisalabad, Pakistan
-                                    </small>
-                                </div>
-                            </div>
-                            <p>
-                                Frontend Developer at
-                                <strong>Upwork</strong>
-                            </p>
-                        </div>
-                        <!-- Nav 3 -->
-                        <div class="success-nav-item">
-                            <div class="nav-student">
-                                <img src="{{ asset('assets/images/img58.png') }}" alt="Career Institute student success story">
-                                <div>
-                                    <h4>Ayesha Khan</h4>
-                                    <span>Frontend Developer</span>
-                                    <small>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        Faisalabad, Pakistan
-                                    </small>
-                                </div>
-                            </div>
-                            <p>
-                                Frontend Developer at
-                                <strong>Upwork</strong>
-                            </p>
-                        </div>
+                        @empty
+                            <div class="success-nav-item"><p>No stories available yet.</p></div>
+                        @endforelse
                     </div>
                 </div>
             </div>
@@ -378,101 +116,27 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="feature-slider">
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img54.png" alt="Career Institute student success story">
-                            </div>
-                            <div class="text-hold">
-                                <h3>M. Rehan</h3>
-                                <h4><span>Course:</span> UI/UX Designing</h4>
-                                <ul>
-                                    <li>
-                                        <span> <img src="assets/images/icon86.svg" alt="Career Institute feature icon">Freelance Designer</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="assets/images/icon87.svg" alt="Career Institute feature icon">20+ Projects Completed</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img55.png" alt="Career Institute student success story">
-                            </div>
-                            <div class="text-hold">
-                                <h3>Amna</h3>
-                                <h4><span>Course:</span> Digital Marketing</h4>
-                                <ul>
-                                    <li>
-                                        <span> <img src="assets/images/icon86.svg" alt="Career Institute feature icon">Freelance Designer</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="assets/images/icon87.svg" alt="Career Institute feature icon">20+ Projects Completed</span>
-                                    </li>
-                                </ul>
+                    @forelse ($successStories as $story)
+                        <div>
+                            <div class="box">
+                                <div class="img-hold">
+                                    <img src="{{ $story->image_url }}" alt="{{ $story->name }}" onerror="this.src='{{ asset('assets/images/img54.png') }}'; this.onerror=null;">
+                                </div>
+                                <div class="text-hold">
+                                    <h3>{{ $story->name }}</h3>
+                                    <h4><span>Course:</span> {{ $story->program }}</h4>
+                                    <ul>
+                                        <li><span><img src="{{ asset('assets/images/icon86.svg') }}" alt="Career Institute feature icon">{{ $story->role }}</span></li>
+                                        @if ($story->company)
+                                            <li><span><img src="{{ asset('assets/images/icon87.svg') }}" alt="Career Institute feature icon">{{ $story->company }}</span></li>
+                                        @endif
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img56.png" alt="Career Institute student success story">
-                            </div>
-                            <div class="text-hold">
-                                <h3>Ayesha Nadeem</h3>
-                                <h4><span>Course:</span> UI/UX Designing</h4>
-                                <ul>
-                                    <li>
-                                        <span> <img src="assets/images/icon86.svg" alt="Career Institute feature icon">Freelance Designer</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="assets/images/icon87.svg" alt="Career Institute feature icon">20+ Projects Completed</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img57.png" alt="Career Institute student success story">
-                            </div>
-                            <div class="text-hold">
-                                <h3>M. Haris</h3>
-                                <h4><span>Course:</span> UI/UX Designing</h4>
-                                <ul>
-                                    <li>
-                                        <span> <img src="assets/images/icon86.svg" alt="Career Institute feature icon">Freelance Designer</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="assets/images/icon87.svg" alt="Career Institute feature icon">20+ Projects Completed</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="box">
-                            <div class="img-hold">
-                                <img src="assets/images/img54.png" alt="Career Institute student success story">
-                            </div>
-                            <div class="text-hold">
-                                <h3>M. Rehan</h3>
-                                <h4><span>Course:</span> UI/UX Designing</h4>
-                                <ul>
-                                    <li>
-                                        <span> <img src="assets/images/icon86.svg" alt="Career Institute feature icon">Freelance Designer</span>
-                                    </li>
-                                    <li>
-                                        <span><img src="assets/images/icon87.svg" alt="Career Institute feature icon">20+ Projects Completed</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                        <div><div class="box"><div class="text-hold"><p>Success stories will appear here soon.</p></div></div></div>
+                    @endforelse
                 </div>
             </div>
         </div>
