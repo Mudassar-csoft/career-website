@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\LeadNotificationMail;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SubscriberController extends Controller
 {
@@ -40,6 +42,15 @@ class SubscriberController extends Controller
             $subscriber->fill(array_filter($validated))->save();
         } else {
             $subscriber = Subscriber::create($validated);
+        }
+
+        $recipient = config('lead-recipients.sources.'.strtolower((string) $subscriber->source))
+            ?: config('lead-recipients.default');
+
+        try {
+            Mail::to($recipient)->send(new LeadNotificationMail($subscriber));
+        } catch (\Throwable $exception) {
+            report($exception);
         }
 
         $message = 'Thanks! We will be in touch shortly.';
