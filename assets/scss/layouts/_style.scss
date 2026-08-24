@@ -5667,15 +5667,11 @@
         margin: 0 0 10px;
         li {
           width: 50%;
-          font-size: 14px;
-          line-height: 16px;
+          font-size: 13px;
+          line-height: 15px;
           display: flex;
           align-items: center;
           margin: 0 0 15px;
-          @include max(1280px) {
-            font-size: 13px;
-            line-height: 15px;
-          }
           @include max(767px) {
             width: 100%;
           }
@@ -8104,4 +8100,11 @@
       }
     }
   } 
+}
+
+
+// policy page start here
+
+.policy-page {
+  
 }
