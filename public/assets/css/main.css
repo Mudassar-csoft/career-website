@@ -8419,15 +8419,15 @@ body {
   }
 }
 
-#admission-modal .modal-dialog {
+.career-model .modal-dialog {
   max-width: 485px;
 }
-#admission-modal .modal-dialog .modal-content {
+.career-model .modal-dialog .modal-content {
   border: 0;
   border-radius: 20px 20px;
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.0509803922);
 }
-#admission-modal .modal-dialog .modal-content .modal-header {
+.career-model .modal-dialog .modal-content .modal-header {
   padding: 20px 20px;
   background: linear-gradient(90deg, #009db8 0%, #03c587 100%);
   border: 0;
@@ -8435,22 +8435,22 @@ body {
   border-radius: 20px 20px 0 0;
 }
 @media (max-width: 575px) {
-  #admission-modal .modal-dialog .modal-content .modal-header {
+  .career-model .modal-dialog .modal-content .modal-header {
     padding: 15px 15px;
   }
 }
-#admission-modal .modal-dialog .modal-content .modal-header h5 {
+.career-model .modal-dialog .modal-content .modal-header h5 {
   color: #fff;
   font-size: 22px;
   line-height: 24px;
 }
 @media (max-width: 575px) {
-  #admission-modal .modal-dialog .modal-content .modal-header h5 {
+  .career-model .modal-dialog .modal-content .modal-header h5 {
     font-size: 16px;
     line-height: 18px;
   }
 }
-#admission-modal .modal-dialog .modal-content .modal-header .btn-close {
+.career-model .modal-dialog .modal-content .modal-header .btn-close {
   position: absolute;
   top: 32px;
   right: 25px;
@@ -8460,22 +8460,22 @@ body {
   padding: 0;
 }
 @media (max-width: 575px) {
-  #admission-modal .modal-dialog .modal-content .modal-header .btn-close {
+  .career-model .modal-dialog .modal-content .modal-header .btn-close {
     top: 25px;
   }
 }
-#admission-modal .modal-dialog .modal-content .modal-header .btn-close:focus {
+.career-model .modal-dialog .modal-content .modal-header .btn-close:focus {
   box-shadow: none;
   outline: none;
 }
-#admission-modal .modal-dialog .modal-content .modal-body {
+.career-model .modal-dialog .modal-content .modal-body {
   padding: 20px 20px;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block .img-hold {
+.career-model .modal-dialog .modal-content .modal-body .form-block .img-hold {
   text-align: center;
   margin: 0 0 25px;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block h2 {
+.career-model .modal-dialog .modal-content .modal-body .form-block h2 {
   font-size: 25px;
   line-height: 27px;
   color: #000;
@@ -8483,14 +8483,14 @@ body {
   margin: 0 0 40px;
   text-align: center;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block .form-label {
+.career-model .modal-dialog .modal-content .modal-body .form-block .form-label {
   font-size: 14px;
   line-height: 16px;
   color: #353535;
   font-weight: 500;
   margin: 0 0 10px;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block input {
+.career-model .modal-dialog .modal-content .modal-body .form-block input {
   border: 1px solid #d0d0d0;
   border-radius: 3px 3px;
   background: #f0f0f0;
@@ -8499,19 +8499,19 @@ body {
   line-height: 14px;
   color: #818181;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block input:focus {
+.career-model .modal-dialog .modal-content .modal-body .form-block input:focus {
   outline: none;
   box-shadow: none;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block input::placeholder {
+.career-model .modal-dialog .modal-content .modal-body .form-block input::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
   color: #818181;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block input:hover::placeholder, #admission-modal .modal-dialog .modal-content .modal-body .form-block input:focus::placeholder {
+.career-model .modal-dialog .modal-content .modal-body .form-block input:hover::placeholder, .career-model .modal-dialog .modal-content .modal-body .form-block input:focus::placeholder {
   text-indent: 10px;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block .sm-btn {
+.career-model .modal-dialog .modal-content .modal-body .form-block .sm-btn {
   background: linear-gradient(90deg, #009DB8 0%, #03C587 100%);
   padding: 10px 24px;
   font-size: 18px;
@@ -8521,13 +8521,13 @@ body {
   border-radius: 50px 50px;
   transition: all 0.3s ease-in-out;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block .sm-btn:hover {
+.career-model .modal-dialog .modal-content .modal-body .form-block .sm-btn:hover {
   transform: scale(1.05);
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block .sm-btn:focus {
+.career-model .modal-dialog .modal-content .modal-body .form-block .sm-btn:focus {
   box-shadow: none;
 }
-#admission-modal .modal-dialog .modal-content .modal-body .form-block .sm-btn {
+.career-model .modal-dialog .modal-content .modal-body .form-block .sm-btn {
   padding: 10px 25px;
   font-size: 14px;
   line-height: 16px;

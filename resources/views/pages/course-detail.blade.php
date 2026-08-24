@@ -74,8 +74,8 @@
             <div class="col-lg-4">
                 <div class="rig-bar">
                     <div class="btn-bar">
-                        <a href="#" class="btn en-btn">Enroll Now</a>
-                        <a href="#" class="btn db-btn">Download Brochure</a>
+                        <a href="#" class="btn en-btn" data-bs-toggle="modal" data-bs-target="#enroll-modal">Enroll Now</a>
+                        <a href="#" class="btn db-btn" data-bs-toggle="modal" data-bs-target="#brochure-modal">Download Brochure</a>
                     </div>
                     <div class="s-link">
                         <h2>Share this Course</h2>

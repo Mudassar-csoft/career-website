@@ -43,7 +43,7 @@
 </div>
 
 <!-- admission popup start here -->
-<div class="modal fade" id="admission-modal" tabindex="-1" aria-labelledby="admissionModalLabel" aria-hidden="true">
+<div class="modal fade career-model" id="admission-modal" tabindex="-1" aria-labelledby="admissionModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -77,6 +77,86 @@
                         <div class="col-md-12">
                             <label class="form-label">Additional Information (Optional)</label>
                             <input type="text" class="form-control" placeholder="Enter Any Additional Information or Questions">
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                        <input type="hidden" name="source" value="Online Admission Modal">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- admission popup start here -->
+
+<div class="modal fade career-model" id="enroll-modal" tabindex="-1" aria-labelledby="admissionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Register Now</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-block">
+                    <form class="row g-2 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
+                        <div class="col-md-12">
+                            <label class="form-label">Enter Interested Course</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Interested Course">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your  Full Name ">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Contact Number</label>
+                            <input type="text" class="form-control" name="phone" placeholder="Enter Your  Contact Number ">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Email Address</label>
+                            <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address">
+                        </div>
+                        <div class="col-12 text-center mt-4">
+                            <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
+                        </div>
+                        <input type="hidden" name="source" value="Online Admission Modal">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Download Brochure popup start here -->
+
+<div class="modal fade career-model" id="brochure-modal" tabindex="-1" aria-labelledby="admissionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Request Broucher</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="form-block">
+                    <form class="row g-2 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                        @csrf
+                        <div class="col-md-12">
+                            <label class="form-label">Enter Interested Course</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Interested Course">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your  Full Name ">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Contact Number</label>
+                            <input type="text" class="form-control" name="phone" placeholder="Enter Your  Contact Number ">
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Email Address</label>
+                            <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address">
                         </div>
                         <div class="col-12 text-center mt-4">
                             <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
