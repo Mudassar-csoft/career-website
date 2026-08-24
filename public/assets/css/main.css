@@ -1058,11 +1058,14 @@ body {
   text-align: center;
 }
 .review-area .box .img-hold {
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
+  width: 125px;
+  height: 125px !important;
 }
 .review-area .box .img-hold img {
-  margin: 0 auto;
   border-radius: 100% 100%;
+  width: 100%;
+  height: 100%;
 }
 .review-area .box .rt-bar h3 {
   font-size: 16px;
@@ -2780,7 +2783,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.courses-page .acc-area .course-listing .course-content .apply-btn {
+.courses-page .acc-area .course-listing .course-content .an-btn {
   background: linear-gradient(90deg, #FF5C00 0%, #D0910D 100%);
   padding: 10px 20px;
   font-size: 14px;
@@ -2791,18 +2794,18 @@ body {
   transition: all 0.3s ease-in-out;
   margin: 0 7px 0 0;
 }
-.courses-page .acc-area .course-listing .course-content .apply-btn:hover {
+.courses-page .acc-area .course-listing .course-content .an-btn:hover {
   transform: scale(1.05);
 }
-.courses-page .acc-area .course-listing .course-content .apply-btn:focus {
+.courses-page .acc-area .course-listing .course-content .an-btn:focus {
   box-shadow: none;
 }
-.courses-page .acc-area .course-listing .course-content .apply-btn {
+.courses-page .acc-area .course-listing .course-content .an-btn {
   margin: 0;
   width: 48.5%;
 }
 @media (max-width: 1400px) {
-  .courses-page .acc-area .course-listing .course-content .apply-btn {
+  .courses-page .acc-area .course-listing .course-content .an-btn {
     padding: 10px 0;
     font-size: 12px;
     line-height: 14px;

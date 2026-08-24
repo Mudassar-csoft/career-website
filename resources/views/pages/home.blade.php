@@ -338,7 +338,7 @@
                                         </li>
                                     </ul>
                                     <div class="btn-area">
-                                        <a href="#" class="btn an-btn" tabindex="0">Apply Now</a>
+                                        <a href="#" class="btn an-btn" data-bs-toggle="modal" data-bs-target="#admission-modal">Apply Now</a>
                                         <a href="{{ route('course-detail', $course->slug) }}" class="btn md-btn">More Details</a>
                                     </div>
                                 </div>
