@@ -147,7 +147,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .hero-section .form-block .form-control:focus,
@@ -158,7 +158,7 @@ body {
 .hero-section .form-block select::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .hero-section .form-block .form-control:hover::placeholder, .hero-section .form-block .form-control:focus::placeholder,
 .hero-section .form-block select:hover::placeholder,
@@ -382,7 +382,7 @@ body {
   font-size: 16px;
   line-height: 22px;
   margin: 0 0 18px;
-  color: #000;
+  color: #595959;
 }
 @media (max-width: 1400px) {
   .news-area .about-bar p {
@@ -809,7 +809,7 @@ body {
   text-align: center;
   font-size: 18px;
   line-height: 22px;
-  color: #000;
+  color: #595959;
   font-weight: 500;
   margin: 0 0 50px;
 }
@@ -964,8 +964,8 @@ body {
   text-align: center;
   font-size: 16px;
   line-height: 22px;
-  color: #000;
-  font-weight: 300;
+  color: #595959;
+  font-weight: 400;
   margin: 0 0 20px;
 }
 @media (max-width: 1400px) {
@@ -1083,14 +1083,14 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #000;
+  color: #595959;
   margin: 0 0 10px;
 }
 .review-area .box .rt-bar p {
   font-weight: 300;
   font-size: 12px;
   line-height: 16px;
-  color: #000;
+  color: #595959;
   font-style: italic;
 }
 .review-area .btn-bar {
@@ -1206,7 +1206,7 @@ body {
 .blog-area .block .t-bar p {
   font-size: 12px;
   line-height: 14px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
   margin: 0;
 }
@@ -1270,7 +1270,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .partner-area .form-block .form-control:focus,
@@ -1281,7 +1281,7 @@ body {
 .partner-area .form-block textarea::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .partner-area .form-block .form-control:hover::placeholder, .partner-area .form-block .form-control:focus::placeholder,
 .partner-area .form-block textarea:hover::placeholder,
@@ -1644,7 +1644,7 @@ body {
 .faq-area .accordion .accordion-item .accordion-body p {
   font-size: 18px;
   line-height: 30px;
-  color: #575757;
+  color: #595959;
 }
 @media (max-width: 767px) {
   .faq-area .accordion .accordion-item .accordion-body p {
@@ -1749,7 +1749,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .letter-area .newsletter__form input:focus {
@@ -1758,7 +1758,7 @@ body {
 .letter-area .newsletter__form input::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .letter-area .newsletter__form input:hover::placeholder, .letter-area .newsletter__form input:focus::placeholder {
   text-indent: 15px;
@@ -2072,7 +2072,7 @@ body {
   margin: 0 0 40px;
   font-size: 18px;
   line-height: 20px;
-  color: #000;
+  color: #595959;
   font-weight: 500;
 }
 .courses-page .info-bar .box {
@@ -2088,7 +2088,7 @@ body {
 }
 .courses-page .feature-block p {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 .courses-page .feature-block h2 {
   margin: 0 0 30px;
@@ -2196,7 +2196,7 @@ body {
   font-size: 36px;
   line-height: 42px;
   font-weight: 300;
-  color: #000;
+  color: #595959;
   margin: 0 0 60px;
   position: relative;
 }
@@ -2427,6 +2427,7 @@ body {
 }
 .courses-page .cor-block ul li {
   width: 24%;
+  height: 100%;
 }
 @media (max-width: 1200px) {
   .courses-page .cor-block ul li {
@@ -2444,7 +2445,7 @@ body {
   }
 }
 .courses-page .cor-block ul li a {
-  display: inline-block;
+  display: block;
 }
 @media (max-width: 992px) {
   .courses-page .cor-block ul li a {
@@ -2486,7 +2487,7 @@ body {
   margin: 0;
   font-size: 11px;
   line-height: 14px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
 }
 @media (max-width: 1400px) {
@@ -2538,7 +2539,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 20px;
-  color: #000;
+  color: #595959;
   margin: 0 0 30px;
 }
 @media (max-width: 1400px) {
@@ -2632,7 +2633,7 @@ body {
   gap: 7px;
   font-size: 12px;
   line-height: 14px;
-  color: #646464;
+  color: #595959;
   cursor: pointer;
 }
 .courses-page .acc-area .course-listing .course-sidebar .filter-box ul li label input {
@@ -2950,7 +2951,7 @@ body {
   text-align: center;
   font-size: 18px;
   line-height: 25px;
-  color: #000;
+  color: #595959;
   font-weight: 500;
   margin: 0 0 50px;
 }
@@ -3019,7 +3020,7 @@ body {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: #000;
+  color: #595959;
   margin: 0;
 }
 @media (max-width: 1400px) {
@@ -3055,7 +3056,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .info-bar .form-block input:focus {
@@ -3064,7 +3065,7 @@ body {
 .info-bar .form-block input::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .info-bar .form-block input:hover::placeholder, .info-bar .form-block input:focus::placeholder {
   text-indent: 15px;
@@ -3080,7 +3081,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .info-bar .form-block textarea:focus {
@@ -3089,7 +3090,7 @@ body {
 .info-bar .form-block textarea::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .info-bar .form-block textarea:hover::placeholder, .info-bar .form-block textarea:focus::placeholder {
   text-indent: 15px;
@@ -3134,7 +3135,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  color: #000;
+  color: #595959;
   border-radius: 5px 5px;
 }
 @media (max-width: 1200px) {
@@ -3318,7 +3319,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .se-area .form-block input:focus,
@@ -3331,7 +3332,7 @@ body {
 .se-area .form-block textarea::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .se-area .form-block input:hover::placeholder, .se-area .form-block input:focus::placeholder,
 .se-area .form-block select:hover::placeholder,
@@ -3718,7 +3719,7 @@ body {
   }
 }
 .vue-page .bus-area p {
-  color: #000;
+  color: #595959;
   font-size: 20px;
   line-height: 25px;
   font-weight: 300;
@@ -3847,7 +3848,7 @@ body {
   }
 }
 .vue-page .bus-area span {
-  color: #000;
+  color: #595959;
   font-size: 20px;
   line-height: 25px;
   font-weight: 300;
@@ -4282,7 +4283,7 @@ body {
   }
 }
 .PSI-page .dis-area p {
-  color: #000;
+  color: #595959;
   font-size: 18px;
   line-height: 25px;
   font-weight: 300;
@@ -4832,6 +4833,7 @@ body {
   line-height: 44px;
   font-weight: 600;
   margin: 0 0 20px;
+  color: #000;
 }
 @media (max-width: 1400px) {
   .cws-page .two-block h2 {
@@ -4851,7 +4853,7 @@ body {
 .cws-page .two-block p {
   font-size: 18px;
   line-height: 28px;
-  color: #2f2f2f;
+  color: #595959;
   margin: 0 0 15px;
   font-weight: 400;
 }
@@ -4907,7 +4909,7 @@ body {
 }
 .cws-page .work-area h2 {
   text-align: center;
-  color: #383838;
+  color: #000;
   margin: 0 0 15px;
   font-weight: 600;
   font-size: 36px;
@@ -4933,7 +4935,7 @@ body {
 }
 .cws-page .work-area p {
   text-align: center;
-  color: #383838;
+  color: #595959;
   margin: 0 0 40px;
   font-weight: 600;
   font-size: 22px;
@@ -5171,7 +5173,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .cws-page .chose-area .form-block input:focus,
@@ -5182,7 +5184,7 @@ body {
 .cws-page .chose-area .form-block select::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .cws-page .chose-area .form-block input:hover::placeholder, .cws-page .chose-area .form-block input:focus::placeholder,
 .cws-page .chose-area .form-block select:hover::placeholder,
@@ -5765,7 +5767,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .sa-page .abrod-info .form-block input:focus {
@@ -5774,7 +5776,7 @@ body {
 .sa-page .abrod-info .form-block input::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .sa-page .abrod-info .form-block input:hover::placeholder, .sa-page .abrod-info .form-block input:focus::placeholder {
   text-indent: 15px;
@@ -5914,7 +5916,7 @@ body {
 .sa-page .ab-detail p {
   font-size: 18px;
   line-height: 25px;
-  color: #2f2f2f;
+  color: #595959;
   font-weight: 400;
   margin: 0 0 50px;
   text-align: center;
@@ -6585,7 +6587,7 @@ body {
 .contact-page .query-bar h2 {
   font-size: 30px;
   line-height: 38px;
-  color: #000;
+  color: #595959;
   font-weight: 300;
   text-align: center;
   position: relative;
@@ -6616,6 +6618,7 @@ body {
 }
 .contact-page .query-bar h2 span {
   font-weight: 500;
+  color: #000;
 }
 .contact-page .query-bar h2:before {
   position: absolute;
@@ -7041,7 +7044,7 @@ body {
   background: #f6f6f6;
   border-radius: 10px 10px;
   padding: 15px 17px;
-  color: #606060;
+  color: #595959;
   font-weight: 400;
 }
 .job-page .f-job .career-section .form-control:focus {
@@ -7050,7 +7053,7 @@ body {
 .job-page .f-job .career-section .form-control::placeholder {
   transition: 0.4s ease;
   text-indent: 0;
-  color: #606060;
+  color: #595959;
 }
 .job-page .f-job .career-section .form-control:hover::placeholder, .job-page .f-job .career-section .form-control:focus::placeholder {
   text-indent: 15px;
@@ -7112,10 +7115,10 @@ body {
   padding: 18px 18px;
   vertical-align: middle;
   border-color: #e6e6e6;
-  color: #000;
+  color: #595959;
   white-space: nowrap;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 16px;
 }
 .job-page .f-job .career-section .career-table tbody tr {
@@ -7421,7 +7424,7 @@ body {
 .ambassador-page .efl-area .t-text h2 {
   font-size: 36px;
   line-height: 40px;
-  color: #282a2e;
+  color: #000;
   font-weight: 700;
   margin: 0 0 20px;
 }
@@ -7446,7 +7449,7 @@ body {
 .ambassador-page .efl-area .t-text h5 {
   font-size: 18px;
   line-height: 26px;
-  color: #2f2f2f;
+  color: #595959;
   font-weight: 400;
   margin: 0 0 20px;
 }
@@ -7485,7 +7488,7 @@ body {
 .ambassador-page .efl-area .t-text ul li {
   font-size: 14px;
   line-height: 20px;
-  color: #282a2e;
+  color: #595959;
   font-weight: 400;
   margin: 0 0 10px;
 }
@@ -7612,7 +7615,7 @@ body {
 .ambassador-page .pa-area .box .t-hold h5 {
   font-size: 16px;
   line-height: 20px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
   margin: 0;
 }
@@ -7976,7 +7979,7 @@ body {
   font-size: 20px;
   line-height: 22px;
   font-weight: 600;
-  color: #000;
+  color: #595959;
   display: flex;
   align-items: center;
   height: 60px;
@@ -8723,7 +8726,7 @@ body {
 .about-page .ser-area .block ul li .box .t-bar p {
   font-size: 12px;
   line-height: 16px;
-  color: #656565;
+  color: #595959;
   font-weight: 400;
 }
 .about-page .news-area {
@@ -8834,7 +8837,7 @@ body {
   font-size: 16px;
   line-height: 28px;
   font-weight: 400;
-  color: #000;
+  color: #595959;
 }
 @media (max-width: 1400px) {
   .about-page .news-area .tabs-bar .tab-content .tab-pane p {
@@ -8900,7 +8903,7 @@ body {
 .about-page .chose-area p {
   font-size: 18px;
   line-height: 28px;
-  color: #000;
+  color: #595959;
   font-weight: 300;
   margin: 0 0 25px;
 }
@@ -10065,14 +10068,14 @@ body {
 .news-page .news-bar .rig-bar .bottom-area ul li a {
   font-size: 16px;
   line-height: 18px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
 }
 .news-page .news-bar .rig-bar .bottom-area ul li span {
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color: #000;
+  color: #595959;
   border-radius: 20px 20px;
   border: 1px solid #A4A4A4;
   background: #f9f9f9;
@@ -10119,7 +10122,7 @@ body {
 .news-page .news-info .head-text a {
   font-size: 14px;
   line-height: 16px;
-  color: #000;
+  color: #595959;
   font-weight: 300;
   background: #EAF1FF;
   border-radius: 10px 10px;
@@ -10141,7 +10144,7 @@ body {
   line-height: 28px;
   margin: 0 0 15px;
   font-weight: 400;
-  color: #000;
+  color: #595959;
 }
 @media (max-width: 1400px) {
   .news-page .news-info .head-text p {
@@ -10162,7 +10165,7 @@ body {
 .news-page .news-info .mid-area p {
   font-size: 20px;
   line-height: 25px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
   margin: 0 0 25px;
 }
@@ -10203,14 +10206,14 @@ body {
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
-  color: #000;
+  color: #595959;
   margin: 0 0 5px;
 }
 .news-page .news-info .mid-area .s-box span {
   font-size: 14px;
   line-height: 16px;
   font-weight: 300;
-  color: #000;
+  color: #595959;
 }
 .news-page .news-info .mid-area ul {
   margin: 0 0 20px;
@@ -10386,7 +10389,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: #000;
+  color: #595959;
 }
 @media (max-width: 992px) {
   .news-page .news-tabs .tab-content .main-box .t-box p {
@@ -10514,7 +10517,7 @@ body {
 .news-page .news-tabs .tab-content .more-bar .workshop-card__body ul li {
   font-size: 12px;
   line-height: 14px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
   margin: 0 0 5px;
   display: flex;
@@ -10537,7 +10540,7 @@ body {
 }
 .news-page .news-tabs .tab-content .more-bar .workshop-card__text {
   margin: 0 0 5px;
-  color: #000;
+  color: #595959;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -10889,7 +10892,7 @@ body {
 .events-page .events-area .workshop-card__body ul li {
   font-size: 12px;
   line-height: 14px;
-  color: #000;
+  color: #595959;
   font-weight: 400;
   margin: 0 0 5px;
   display: flex;
@@ -10912,7 +10915,7 @@ body {
 }
 .events-page .events-area .workshop-card__text {
   margin: 0 0 5px;
-  color: #000;
+  color: #595959;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -11051,6 +11054,7 @@ body {
   height: 100%;
   min-height: 100px;
   background: #fff;
+  color: #595959;
 }
 @media (max-width: 992px) {
   .events-page .rcre-area ul li {
@@ -11813,6 +11817,9 @@ body {
 .event-detail .two-block .side-bar .sm-box ul li img {
   margin: 0 0 7px;
 }
+.event-detail .two-block .side-bar .sm-box ul li p {
+  color: #595959;
+}
 .event-detail .two-block .event-slider {
   margin: 0 0 20px;
 }
@@ -11879,7 +11886,7 @@ body {
 }
 .event-detail .two-block .detail-text p {
   font: 400 20px/28px "Montserrat", sans-serif;
-  color: #000;
+  color: #595959;
 }
 
 .blog-page .top-banner {
@@ -14311,7 +14318,7 @@ body {
 .success-story-wrapper .before-box p,
 .success-story-wrapper .after-box p {
   margin: 0;
-  color: #000;
+  color: #595959;
   font-size: 12px;
   line-height: 16px;
 }
@@ -14371,7 +14378,7 @@ body {
   border-radius: 50%;
 }
 .success-story-wrapper .journey-item span {
-  color: #000;
+  color: #595959;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -14477,13 +14484,13 @@ body {
 }
 .success-story-wrapper .success-nav-item small {
   display: block;
-  color: #000;
+  color: #595959;
   font-size: 10px;
   line-height: 12px;
 }
 .success-story-wrapper .success-nav-item p {
   margin: 5px 0 0;
-  color: #000;
+  color: #595959;
   font-size: 12px;
   line-height: 15px;
   font-weight: 400;
@@ -14637,10 +14644,10 @@ body {
 .cor-slider .slick-slide .text-box a {
   backdrop-filter: blur(23.7600002289px);
   background: rgba(255, 255, 255, 0.2);
-  padding: 12px 15px;
+  padding: 14px 10px;
   border-radius: 10px 10px;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 10px;
+  line-height: 12px;
   font-weight: 400;
   display: block;
   color: #fff;

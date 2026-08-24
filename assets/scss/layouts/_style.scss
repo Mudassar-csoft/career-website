@@ -128,7 +128,7 @@
       font-size: 16px;
       line-height: 22px;
       margin: 0 0 18px;
-      color: #000;
+      color: #595959;
       @include max(1400px) {
         font-size: 13px;
         line-height: 18px;
@@ -505,7 +505,7 @@
     text-align: center;
     font-size: 18px;
     line-height: 22px;
-    color: #000;
+    color: #595959;
     font-weight: 500;
     margin: 0 0 50px;
     @include max(1400px) {
@@ -558,8 +558,8 @@
     text-align: center;
     font-size: 16px;
     line-height: 22px;
-    color: #000;
-    font-weight: 300;
+    color: #595959;
+    font-weight: 400;
     margin: 0 0 20px;
     @include max(1400px) {
       font-size: 14px;
@@ -672,14 +672,14 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
-        color: #000;
+        color: #595959;
         margin: 0 0 10px;
       }
       p {
         font-weight: 300;
         font-size: 12px;
         line-height: 16px;
-        color: #000;
+        color: #595959;
         font-style: italic;
       }
     }
@@ -767,7 +767,7 @@
       p {
         font-size: 12px;
         line-height: 14px;
-        color: #000;
+        color: #595959;
         font-weight: 400;
         margin: 0;
       }
@@ -1091,7 +1091,7 @@
         p {
           font-size: 18px;
           line-height: 30px;
-          color: #575757;
+          color: #595959;
           @include max(767px) {
             font-size: 15px;
             line-height: 23px;
@@ -1408,7 +1408,7 @@
       margin: 0 0 40px;
       font-size: 18px;
       line-height: 20px;
-      color: #000;
+      color: #595959;
       font-weight: 500;
     }
   }
@@ -1424,7 +1424,7 @@
     }
     p {
       margin: 0;
-      font-weight: 300;
+      font-weight: 400;
     }
     h2 {
       margin: 0 0 30px;
@@ -1512,7 +1512,7 @@
       font-size: 36px;
       line-height: 42px;
       font-weight: 300;
-      color: #000;
+      color: #595959;
       margin: 0 0 60px;
       position: relative;
       @include max(1400px) {
@@ -1687,6 +1687,7 @@
       gap: 10px;
       li {
         width: 24%;
+        height: 100%;
         @include max(1200px){
           width: 32.5%;
         }
@@ -1697,7 +1698,7 @@
           width: 48.5%;
         }
         a {
-          display: inline-block;
+          display: block;
           @include max(992px) {
             height: 100%;
           }
@@ -1732,7 +1733,7 @@
                 margin: 0;
                 font-size: 11px;
                 line-height: 14px;
-                color: #000;
+                color: #595959;
                 font-weight: 400;
                 @include max(1400px) {
                   height: 40px;
@@ -1777,7 +1778,7 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 20px;
-      color: #000;
+      color: #595959;
       margin: 0 0 30px;
       @include max(1400px) {
         font-size: 15px;
@@ -1862,7 +1863,7 @@
                 gap: 7px;
                 font-size: 12px;
                 line-height: 14px;
-                color: #646464;
+                color: #595959;
                 cursor: pointer;
                 input {
                   width: 16px;
@@ -2093,7 +2094,7 @@
     text-align: center;
     font-size: 18px;
     line-height: 25px;
-    color: #000;
+    color: #595959;
     font-weight: 500;
     margin: 0 0 50px;
     @include max(1400px) {
@@ -2150,7 +2151,7 @@
         font-size: 16px;
         line-height: 18px;
         font-weight: 400;
-        color: #000;
+        color: #595959;
         margin: 0;
         @include max(1400px) {
           font-size: 14px;
@@ -2415,7 +2416,7 @@
       }
     }
     p {
-      color: #000;
+      color: #595959;
       font-size: 20px;
       line-height: 25px;
       font-weight: 300;
@@ -2514,7 +2515,7 @@
       }
     }
     span {
-      color: #000;
+      color: #595959;
       font-size: 20px;
       line-height: 25px;
       font-weight: 300;
@@ -2648,7 +2649,7 @@
       }
     }
     p {
-      color: #000;
+      color: #595959;
       font-size: 18px;
       line-height: 25px;
       font-weight: 300;
@@ -2875,6 +2876,7 @@
       line-height: 44px;
       font-weight: 600;
       margin: 0 0 20px;
+      color: #000;
       @include max(1400px) {
         font-size: 30px;
         line-height: 35px;
@@ -2890,7 +2892,7 @@
     p {
       font-size: 18px;
       line-height: 28px;
-      color: #2f2f2f;
+      color: #595959;
       margin: 0 0 15px;
       font-weight: 400;
       @include max(1400px) {
@@ -2936,7 +2938,7 @@
     }
     h2 {
       text-align: center;
-      color: #383838;
+      color: #000;
       margin: 0 0 15px;
       font-weight: 600;
       font-size: 36px;
@@ -2956,7 +2958,7 @@
     }
     p {
       text-align: center;
-      color: #383838;
+      color: #595959;
       margin: 0 0 40px;
       font-weight: 600;
       font-size: 22px;
@@ -3487,7 +3489,7 @@
     p {
       font-size: 18px;
       line-height: 25px;
-      color: #2f2f2f;
+      color: #595959;
       font-weight: 400;
       margin: 0 0 50px;
       text-align: center;
@@ -3820,7 +3822,7 @@
     h2 {
       font-size: 30px;
       line-height: 38px;
-      color: #000;
+      color: #595959;
       font-weight: 300;
       text-align: center;
       position: relative;
@@ -3842,6 +3844,7 @@
       }
       span {
         font-weight: 500;
+        color: #000;
       }
       &:before {
         position: absolute;
@@ -4105,10 +4108,10 @@
             padding: 18px 18px;
             vertical-align: middle;
             border-color: #e6e6e6;
-            color: #000;
+            color: #595959;
             white-space: nowrap;
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 16px;
           }
           tr {
@@ -4236,7 +4239,7 @@
       h2 {
         font-size: 36px;
         line-height: 40px;
-        color: #282a2e;
+        color: #000;
         font-weight: 700;
         margin: 0 0 20px;
         @include max(1400px) {
@@ -4255,7 +4258,7 @@
       h5 {
         font-size: 18px;
         line-height: 26px;
-        color: #2f2f2f;
+        color: #595959;
         font-weight: 400;
         margin: 0 0 20px;
         @include max(1400px) {
@@ -4285,7 +4288,7 @@
         li {
           font-size: 14px;
           line-height: 20px;
-          color: #282a2e;
+          color: #595959;
           font-weight: 400;
           margin: 0 0 10px;
           @include max(575px) {
@@ -4379,7 +4382,7 @@
         h5 {
           font-size: 16px;
           line-height: 20px;
-          color: #000;
+          color: #595959;
           font-weight: 400;
           margin: 0;
           @include max(1400px) {
@@ -4568,7 +4571,7 @@
           font-size: 20px;
           line-height: 22px;
           font-weight: 600;
-          color: #000;
+          color: #595959;
           display: flex;
           align-items: center;
           height: 60px;
@@ -5082,7 +5085,7 @@
               p {
                 font-size: 12px;
                 line-height: 16px;
-                color: #656565;
+                color: #595959;
                 font-weight: 400;
               }
             }
@@ -5185,7 +5188,7 @@
             font-size: 16px;
             line-height: 28px;
             font-weight: 400;
-            color: #000;
+            color: #595959;
             @include max(1400px) {
               font-size: 14px;
               line-height: 25px;
@@ -5240,7 +5243,7 @@
     p {
       font-size: 18px;
       line-height: 28px;
-      color: #000;
+      color: #595959;
       font-weight: 300;
       margin: 0 0 25px;
       @include max(1400px) {
@@ -6084,14 +6087,14 @@
             a {
               font-size: 16px;
               line-height: 18px;
-              color: #000;
+              color: #595959;
               font-weight: 400;
             }
             span {
               font-size: 16px;
               line-height: 18px;
               font-weight: 400;
-              color: #000;
+              color: #595959;
               border-radius: 20px 20px;
               border: 1px solid #A4A4A4;
               background: #f9f9f9;
@@ -6139,7 +6142,7 @@
       a {
         font-size: 14px;
         line-height: 16px;
-        color: #000;
+        color: #595959;
         font-weight: 300;
         background: #EAF1FF;
         border-radius: 10px 10px;
@@ -6159,7 +6162,7 @@
         line-height: 28px;
         margin: 0 0 15px;
         font-weight: 400;
-        color: #000;
+        color: #595959;
         @include max(1400px) {
           font-size: 18px;
           line-height: 25px;
@@ -6180,7 +6183,7 @@
       p {
         font-size: 20px;
         line-height: 25px;
-        color: #000;
+        color: #595959;
         font-weight: 400;
         margin: 0 0 25px;
         @include max(1400px) {
@@ -6216,14 +6219,14 @@
           font-size: 16px;
           line-height: 22px;
           font-weight: 300;
-          color: #000;
+          color: #595959;
           margin: 0 0 5px;
         }
         span {
           font-size: 14px;
           line-height: 16px;
           font-weight: 300;
-          color: #000;
+          color: #595959;
         }
       }
       ul {
@@ -6380,7 +6383,7 @@
             font-size: 14px;
             line-height: 20px;
             font-weight: 400;
-            color: #000;
+            color: #595959;
             @include max(992px) {
               margin: 0 0 20px;
             }
@@ -6610,6 +6613,7 @@
         height: 100%;
         min-height: 100px;
         background: #fff;
+        color: #595959;
         @include max(992px) {
           width: 32%;
         }
@@ -7096,6 +7100,9 @@
             img {
               margin: 0 0 7px;
             }
+            p {
+              color: #595959;
+            }
           }
         }
       }
@@ -7171,7 +7178,7 @@
     .detail-text {
       p {
         font: 400 20px/28px $f-primary;
-        color: #000;
+        color: #595959;
       }
     }
   }

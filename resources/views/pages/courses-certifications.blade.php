@@ -3,7 +3,7 @@
 @section('body_class', 'courses-page')
 @push('styles')
 <style>
-    .courses-page .catalog-note {
+    /* .courses-page .catalog-note {
         margin: 12px 0 0;
         font-size: 14px;
         line-height: 20px;
@@ -90,7 +90,7 @@
         .courses-page .cor-block ul {
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
-    }
+    } */
     @media (max-width: 767px) {
         .courses-page .cor-block ul {
             grid-template-columns: repeat(2, minmax(0, 1fr));
