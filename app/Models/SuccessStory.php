@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
 class SuccessStory extends Model
 {
@@ -25,8 +24,8 @@ class SuccessStory extends Model
 
     public function getImageUrlAttribute(): string
     {
-        return $this->image && Storage::disk('public')->exists($this->image)
-            ? asset('storage/'.$this->image)
-            : asset('assets/images/img58.png');
+        return $this->image
+            ? '/storage/'.ltrim($this->image, '/')
+            : '/assets/images/img58.png';
     }
 }
