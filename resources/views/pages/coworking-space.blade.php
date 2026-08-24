@@ -9,8 +9,8 @@
                 <p>Our modern spaces are simply stunning</p>
                 <h1>Coworking Space for Success</h1>
                 <div class="btn-block">
-                    <a href="#" class="btn aq-btn">Get Quote</a>
-                    <a href="#" class="btn wa-btn">Watch Now</a>
+                    <a href="#chose-bar" class="btn aq-btn">Get Quote</a>
+                    <a href="https://www.youtube.com/watch?v=LTXWRabnr9k" class="btn wa-btn">Watch Now</a>
                 </div>
             </div>
         </div>
@@ -53,11 +53,11 @@
             <div class="col-lg-12">
                 <div class="workspace-slider">
                     <div class="workspace-item">
-                        <img src="{{ asset('assets/images/img20.png') }}" alt="Coworking meeting room">
+                        <img src="{{ asset('assets/images/img89.webp') }}" alt="Coworking meeting room">
                         <h5>Meeting Room</h5>
                     </div>
                     <div class="workspace-item small">
-                        <img src="{{ asset('assets/images/img21.png') }}" alt="Coworking private office">
+                        <img src="{{ asset('assets/images/img90.webp') }}" alt="Coworking private office">
                         <h5>Private <br>Office</h5>
                     </div>
                     <div class="workspace-item large">
@@ -182,7 +182,7 @@
         </div>
     </div>
 </section>
-<section class="chose-area">
+<section class="chose-area" id="chose-bar">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

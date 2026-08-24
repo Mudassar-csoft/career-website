@@ -9493,17 +9493,11 @@ body {
 }
 .course-detail .cou-info .l-box ul li {
   width: 50%;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 13px;
+  line-height: 15px;
   display: flex;
   align-items: center;
   margin: 0 0 15px;
-}
-@media (max-width: 1280px) {
-  .course-detail .cou-info .l-box ul li {
-    font-size: 13px;
-    line-height: 15px;
-  }
 }
 @media (max-width: 767px) {
   .course-detail .cou-info .l-box ul li {
