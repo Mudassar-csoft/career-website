@@ -34,7 +34,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img19.png') }}" alt="Career Institute coworking space">
+                    <img src="{{ asset('assets/images/img101.png') }}" alt="Career Institute coworking space">
                 </div>
             </div>
         </div>

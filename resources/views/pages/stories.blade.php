@@ -156,16 +156,16 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img96.jpeg" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="../assets/video/Web_Header.mp4">
-                                <img src="assets/images/ply-btn.png" alt="Play video">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img97.jpeg" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video2.mp4">
                                 <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
@@ -174,7 +174,7 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img98.jpeg" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video3.mp4">
                                 <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
@@ -182,7 +182,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img99.jpeg" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video3.mp4">
                                 <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
@@ -190,7 +190,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img100.jpeg" alt="Career Institute student success video">
                                 <button class="play-btn" data-video="video3.mp4">
                                 <img src="assets/images/ply-btn.png" alt="Play video">
                                 </button>
@@ -202,7 +202,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <a href="#" class="btn ep-btn">Testimonial Video</a>
+                <a href="https://www.youtube.com/@CareerInstitutepk" class="btn ep-btn">Testimonial Video</a>
             </div>
         </div>
     </div>
