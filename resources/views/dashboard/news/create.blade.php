@@ -1,6 +1,6 @@
 @extends('dashboard.layout')
 
-@section('title', 'Create News | Dashboard')
+@section('title', $news->exists ? 'Edit News | Dashboard' : 'Create News | Dashboard')
 
 @section('topbar-actions')
     <a href="{{ route('dashboard.news.index') }}" class="dash-btn dash-btn-secondary">&larr; All News</a>
@@ -9,24 +9,27 @@
 @section('content')
     <div class="dash-page">
         <div class="dash-page-header">
-            <h2>Create News</h2>
+            <h2>{{ $news->exists ? 'Edit News' : 'Create News' }}</h2>
         </div>
 
         <div class="dash-form-box">
-            <form action="{{ route('dashboard.news.store') }}" method="POST" enctype="multipart/form-data" id="news-form">
+            <form action="{{ $news->exists ? route('dashboard.news.update', $news) : route('dashboard.news.store') }}" method="POST" enctype="multipart/form-data" id="news-form">
                 @csrf
+                @if ($news->exists)
+                    @method('PUT')
+                @endif
 
                 <div class="dash-form-row">
                     <div class="dash-form-group">
                         <label for="news-title">Title (50-55 characters)</label>
-                        <input type="text" id="news-title" name="title" value="{{ old('title') }}" minlength="50" maxlength="55" required>
+                        <input type="text" id="news-title" name="title" value="{{ old('title', $news->title) }}" minlength="50" maxlength="55" required>
                         @error('title')
                             <p class="dash-form-error">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="dash-form-group">
                         <label for="news-subtitle">Sub Title</label>
-                        <input type="text" id="news-subtitle" name="subtitle" value="{{ old('subtitle') }}">
+                        <input type="text" id="news-subtitle" name="subtitle" value="{{ old('subtitle', $news->subtitle) }}">
                         @error('subtitle')
                             <p class="dash-form-error">{{ $message }}</p>
                         @enderror
@@ -36,7 +39,7 @@
                 <div class="dash-form-row">
                     <div class="dash-form-group">
                         <label for="news-slug">Slug</label>
-                        <input type="text" id="news-slug" name="slug" value="{{ old('slug') }}" required>
+                        <input type="text" id="news-slug" name="slug" value="{{ old('slug', $news->slug) }}" required>
                         <p class="dash-form-hint">Auto-filled from the title — edit if needed.</p>
                         @error('slug')
                             <p class="dash-form-error">{{ $message }}</p>
@@ -48,7 +51,7 @@
                             <select id="news-type" name="news_type_id" required>
                                 <option value="">Select a type</option>
                                 @foreach ($newsTypes as $type)
-                                    <option value="{{ $type->id }}" @selected(old('news_type_id') == $type->id)>{{ $type->name }}</option>
+                                    <option value="{{ $type->id }}" @selected(old('news_type_id', $news->news_type_id) == $type->id)>{{ $type->name }}</option>
                                 @endforeach
                             </select>
                             <button type="button" class="dash-icon-btn-add" id="news-type-add-btn" aria-label="Add news type">+</button>
@@ -70,8 +73,8 @@
                         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
                         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
                     >
-                    <p class="dash-form-hint">{{ \App\Support\DashboardImageUpload::HINT }}</p>
-                    <img id="news-image-preview" class="dash-image-preview" alt="Preview">
+                    <p class="dash-form-hint">{{ $news->image ? 'Upload a new file only to replace the current image. ' : '' }}{{ \App\Support\DashboardImageUpload::HINT }}</p>
+                    <img id="news-image-preview" class="dash-image-preview" src="{{ $news->image ? asset('storage/'.$news->image) : '' }}" alt="Preview" @if ($news->image) style="display:block;" @endif>
                     @error('image')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
@@ -79,7 +82,7 @@
 
                 <div class="dash-form-group">
                     <label for="news-content">Content</label>
-                    <textarea id="news-content" name="content" rows="10">{{ old('content') }}</textarea>
+                    <textarea id="news-content" name="content" rows="10">{{ old('content', $news->content) }}</textarea>
                     @error('content')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
@@ -92,7 +95,7 @@
 
                 <div class="dash-form-group">
                     <label for="news-meta-title">Meta Title</label>
-                    <input type="text" id="news-meta-title" name="meta_title" value="{{ old('meta_title') }}" maxlength="255" placeholder="Defaults to the title above if left blank">
+                    <input type="text" id="news-meta-title" name="meta_title" value="{{ old('meta_title', $news->meta_title) }}" maxlength="255" placeholder="Defaults to the title above if left blank">
                     @error('meta_title')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
@@ -100,7 +103,7 @@
 
                 <div class="dash-form-group">
                     <label for="news-meta-description">Meta Description</label>
-                    <textarea id="news-meta-description" name="meta_description" rows="3" maxlength="500" placeholder="Shown under the title in search results — aim for 150-160 characters.">{{ old('meta_description') }}</textarea>
+                    <textarea id="news-meta-description" name="meta_description" rows="3" maxlength="500" placeholder="Shown under the title in search results — aim for 150-160 characters.">{{ old('meta_description', $news->meta_description) }}</textarea>
                     @error('meta_description')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
@@ -108,13 +111,13 @@
 
                 <div class="dash-form-group">
                     <label for="news-meta-keywords">Meta Keywords</label>
-                    <input type="text" id="news-meta-keywords" name="meta_keywords" value="{{ old('meta_keywords') }}" placeholder="Comma-separated, e.g. career institute news, admissions, faisalabad campus">
+                    <input type="text" id="news-meta-keywords" name="meta_keywords" value="{{ old('meta_keywords', $news->meta_keywords) }}" placeholder="Comma-separated, e.g. career institute news, admissions, faisalabad campus">
                     @error('meta_keywords')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
                 </div>
 
-                <button type="submit" class="dash-btn">Publish News</button>
+                <button type="submit" class="dash-btn">{{ $news->exists ? 'Update News' : 'Publish News' }}</button>
             </form>
         </div>
     </div>

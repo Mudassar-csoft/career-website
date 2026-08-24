@@ -39,6 +39,7 @@ return [
         'actions' => [
             'view' => 'View News',
             'create' => 'Create News',
+            'edit' => 'Edit News',
             'delete' => 'Delete News',
         ],
     ],
