@@ -3,12 +3,12 @@
 <div class="dash-form-row">
     <div class="dash-form-group">
         <label for="story-name">Student Name</label>
-        <input id="story-name" name="name" value="{{ old('name', $story->name) }}" required>
+        <input type="text" id="story-name" name="name" value="{{ old('name', $story->name) }}" required>
         @error('name') <p class="dash-form-error">{{ $message }}</p> @enderror
     </div>
     <div class="dash-form-group">
         <label for="story-program">Program</label>
-        <input id="story-program" name="program" value="{{ old('program', $story->program) }}" required>
+        <input type="text" id="story-program" name="program" value="{{ old('program', $story->program) }}" required>
         @error('program') <p class="dash-form-error">{{ $message }}</p> @enderror
     </div>
 </div>
@@ -16,19 +16,19 @@
 <div class="dash-form-row">
     <div class="dash-form-group">
         <label for="story-location">Location</label>
-        <input id="story-location" name="location" value="{{ old('location', $story->location) }}" placeholder="e.g. Faisalabad, Pakistan" required>
+        <input type="text" id="story-location" name="location" value="{{ old('location', $story->location) }}" placeholder="e.g. Faisalabad, Pakistan" required>
         @error('location') <p class="dash-form-error">{{ $message }}</p> @enderror
     </div>
     <div class="dash-form-group">
         <label for="story-role">Current Role</label>
-        <input id="story-role" name="role" value="{{ old('role', $story->role) }}" placeholder="e.g. Frontend Developer" required>
+        <input type="text" id="story-role" name="role" value="{{ old('role', $story->role) }}" placeholder="e.g. Frontend Developer" required>
         @error('role') <p class="dash-form-error">{{ $message }}</p> @enderror
     </div>
 </div>
 
 <div class="dash-form-group">
     <label for="story-company">Company or Platform</label>
-    <input id="story-company" name="company" value="{{ old('company', $story->company) }}" placeholder="e.g. Upwork">
+    <input type="text" id="story-company" name="company" value="{{ old('company', $story->company) }}" placeholder="e.g. Upwork">
     @error('company') <p class="dash-form-error">{{ $message }}</p> @enderror
 </div>
 
@@ -48,9 +48,11 @@
 <div class="dash-form-group">
     <label>Journey Steps</label>
     <p class="dash-form-hint">Add up to five milestones. Empty entries are ignored.</p>
-    @for ($index = 0; $index < 5; $index++)
-        <input name="journey_steps[]" value="{{ old('journey_steps.'.$index, $story->journey_steps[$index] ?? '') }}" placeholder="Journey step {{ $index + 1 }}" style="margin-bottom:8px;">
-    @endfor
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:10px;">
+        @for ($index = 0; $index < 5; $index++)
+            <input type="text" name="journey_steps[]" value="{{ old('journey_steps.'.$index, $story->journey_steps[$index] ?? '') }}" placeholder="Journey step {{ $index + 1 }}" style="margin:0;">
+        @endfor
+    </div>
     @error('journey_steps') <p class="dash-form-error">{{ $message }}</p> @enderror
     @error('journey_steps.*') <p class="dash-form-error">{{ $message }}</p> @enderror
 </div>

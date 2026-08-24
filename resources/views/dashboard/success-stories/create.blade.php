@@ -9,7 +9,7 @@
 @section('content')
     <div class="dash-page">
         <div class="dash-page-header"><h2>Add Success Story</h2></div>
-        <div class="dash-form-box">
+        <div class="dash-form-box" style="max-width:980px;">
             <form action="{{ route('dashboard.success-stories.store') }}" method="POST" enctype="multipart/form-data">
                 @include('dashboard.success-stories._form', ['story' => $story])
                 <button type="submit" class="dash-btn">Publish Story</button>
