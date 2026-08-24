@@ -10,7 +10,7 @@
                 <h1>Coworking Space for Success</h1>
                 <div class="btn-block">
                     <a href="#chose-bar" class="btn aq-btn">Get Quote</a>
-                    <a href="https://www.youtube.com/watch?v=LTXWRabnr9k" class="btn wa-btn">Watch Now</a>
+                    <button type="button" class="btn wa-btn" data-bs-toggle="modal" data-bs-target="#cospace-modal">Watch Now</button>
                 </div>
             </div>
         </div>
@@ -61,19 +61,19 @@
                         <h5>Private <br>Office</h5>
                     </div>
                     <div class="workspace-item large">
-                        <img src="{{ asset('assets/images/img22.png') }}" alt="Coworking dedicated desk">
+                        <img src="{{ asset('assets/images/img94.webp') }}" alt="Coworking dedicated desk">
                         <h5>Dedicated Desk</h5>
                     </div>
                     <div class="workspace-item mid">
-                        <img src="{{ asset('assets/images/img23.png') }}" alt="Coworking event space">
+                        <img src="{{ asset('assets/images/img91.webp') }}" alt="Coworking event space">
                         <h5>Event Space</h5>
                     </div>
                     <div class="workspace-item small">
-                        <img src="{{ asset('assets/images/img24.png') }}" alt="Coworking meeting room">
+                        <img src="{{ asset('assets/images/img93.webp') }}" alt="Coworking meeting room">
                         <h5>Meeting Room</h5>
                     </div>
                     <div class="workspace-item end">
-                        <img src="{{ asset('assets/images/img25.png') }}" alt="Coworking virtual office">
+                        <img src="{{ asset('assets/images/img92.webp') }}" alt="Coworking virtual office">
                         <h5>Virtual Office</h5>
                     </div>
                 </div>
