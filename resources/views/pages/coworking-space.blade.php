@@ -34,7 +34,7 @@
             </div>
             <div class="col-lg-7">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img19.png') }}" alt="Career Institute coworking space">
+                    <img src="{{ asset('assets/images/img101.png') }}" alt="Career Institute coworking space">
                 </div>
             </div>
         </div>
@@ -288,7 +288,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <a href="#" class="btn ep-btn">Testimonial Video</a>
+                <a href="https://www.youtube.com/@CareerInstitutepk" class="btn ep-btn">Testimonial Video</a>
             </div>
         </div>
     </div>

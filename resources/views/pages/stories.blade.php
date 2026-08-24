@@ -100,7 +100,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="img-hold">
-                    <img src="{{ asset('assets/images/img53.png') }}" alt="Career Institute student success story">
+                    <img src="{{ asset('assets/images/img102.png') }}" alt="Career Institute student success story">
                 </div>
             </div>
         </div>
@@ -156,7 +156,7 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img96.jpeg" alt="Career Institute student success video">
                                 <a class="play-btn" href="https://www.youtube.com/shorts/lvrB2hzsLcg" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 1 on YouTube">
                                     <img src="assets/images/ply-btn.png" alt="Play video">
                                 </a>
@@ -165,7 +165,7 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img97.jpeg" alt="Career Institute student success video">
                                 <a class="play-btn" href="https://www.youtube.com/shorts/uUGPHFbceoE" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 2 on YouTube">
                                     <img src="assets/images/ply-btn.png" alt="Play video">
                                 </a>
@@ -174,7 +174,7 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img98.jpeg" alt="Career Institute student success video">
                                 <a class="play-btn" href="https://www.youtube.com/shorts/xOJzCDvdh_4" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 3 on YouTube">
                                     <img src="assets/images/ply-btn.png" alt="Play video">
                                 </a>
@@ -182,7 +182,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img99.jpeg" alt="Career Institute student success video">
                                 <a class="play-btn" href="https://www.youtube.com/shorts/j7X_zTbBhPI" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 4 on YouTube">
                                     <img src="assets/images/ply-btn.png" alt="Play video">
                                 </a>
@@ -190,7 +190,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="assets/images/img04.png" alt="Career Institute student success video">
+                                <img src="assets/images/img100.jpeg" alt="Career Institute student success video">
                                 <a class="play-btn" href="https://www.youtube.com/shorts/Hc3C-Bfutjc" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 5 on YouTube">
                                     <img src="assets/images/ply-btn.png" alt="Play video">
                                 </a>
@@ -202,7 +202,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <a href="#" class="btn ep-btn">Testimonial Video</a>
+                <a href="https://www.youtube.com/@CareerInstitutepk" class="btn ep-btn">Testimonial Video</a>
             </div>
         </div>
     </div>
