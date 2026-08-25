@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('title', ($blog->meta_title ?: $blog->title).' | Career Website')
-@section('meta_description', $blog->meta_description ?: ($blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 160)))
+@section('meta_description', $blog->meta_description ?: ($blog->excerpt ?: \Illuminate\Support\Str::limit(strip_tags($blog->content), 150, '')))
 @section('meta_keywords', $blog->meta_keywords ?? '')
+@section('og_image', $blog->image_url ?: asset('assets/images/img69.png'))
 @section('body_class', 'blog-detail news-page')
 @push('styles')
 <style>

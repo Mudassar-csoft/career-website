@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('title', ($course->meta_title ?: $course->title).' | Career Website')
-@section('meta_description', $course->meta_description ?: \Illuminate\Support\Str::limit(strip_tags($course->about), 160))
+@section('meta_description', $course->meta_description ?: \Illuminate\Support\Str::limit(strip_tags($course->about), 150, ''))
 @section('meta_keywords', $course->meta_keywords ?? '')
+@section('og_image', $course->image_url ?: asset('assets/images/img03.png'))
 @section('body_class', 'course-detail')
 @section('content')
 <section class="cou-detail">
