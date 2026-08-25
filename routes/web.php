@@ -56,7 +56,6 @@ $pages = [
     ['uri' => '/verifications', 'view' => 'pages.verifications', 'name' => 'verifications'],
     ['uri' => '/category', 'view' => 'pages.category', 'name' => 'category'],
     ['uri' => '/event-detail', 'view' => 'pages.event-detail', 'name' => 'event-detail'],
-    ['uri' => '/404', 'view' => 'pages.404', 'name' => '404'],
     ['uri' => '/privacy-policy', 'view' => 'pages.privacy-policy', 'name' => 'privacy-policy'],
     ['uri' => '/term-conditions', 'view' => 'pages.term-conditions', 'name' => 'term-conditions'],
 ];
@@ -64,6 +63,8 @@ $pages = [
 foreach ($pages as $page) {
     Route::view($page['uri'], $page['view'])->name($page['name']);
 }
+
+Route::get('/404', fn () => response()->view('errors.404', [], 404))->name('404');
 
 Route::get('/study-abroad', [PublicCourseController::class, 'studyAbroad'])->name('study-abroad');
 Route::get('/stories', [PublicSuccessStoryController::class, 'index'])->name('stories');

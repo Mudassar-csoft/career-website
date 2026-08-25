@@ -92,7 +92,7 @@
 <body class="@yield('body_class')">
     <div id="wrapper">
         @include('partials.header')
-        @unless (request()->routeIs('home'))
+        @unless (request()->routeIs('home') || trim($__env->yieldContent('hide_breadcrumb')) === 'true')
             @include('components.seo-breadcrumb')
         @endunless
         <main role="main">
