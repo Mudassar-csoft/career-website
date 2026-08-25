@@ -433,7 +433,7 @@ body {
 }
 @media (max-width: 1400px) {
   .news-area .event-bar ul {
-    margin: 0 0 34px;
+    margin: 0 0 32px;
   }
 }
 @media (max-width: 1200px) {
@@ -14220,7 +14220,7 @@ body {
 }
 @media (max-width: 1280px) {
   .feature-slider .slick-next {
-    left: -30px;
+    right: -30px;
   }
 }
 .feature-slider .slick-next:hover {
@@ -14264,7 +14264,7 @@ body {
 }
 @media (max-width: 1400px) {
   .logo-slider .slick-prev {
-    left: 20px;
+    left: -25px;
   }
 }
 .logo-slider .slick-prev:hover {
@@ -14285,7 +14285,7 @@ body {
 }
 @media (max-width: 1400px) {
   .logo-slider .slick-next {
-    right: 20px;
+    right: -25px;
   }
 }
 .logo-slider .slick-next:hover {
