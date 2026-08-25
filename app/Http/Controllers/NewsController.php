@@ -9,6 +9,7 @@ use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 
 class NewsController extends Controller
 {
@@ -38,7 +39,7 @@ class NewsController extends Controller
         $validated = $this->validateNews($request);
 
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('news', 'public');
+            $validated['image'] = $this->storeImage($request);
         }
 
         News::create($validated);
@@ -59,18 +60,23 @@ class NewsController extends Controller
     public function update(Request $request, News $news)
     {
         $validated = $this->validateNews($request, $news);
+        $previousImage = $news->image;
+        $hasNewImage = $request->hasFile('image');
 
-        if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('news', 'public');
-
-            if ($news->image) {
-                Storage::disk('public')->delete($news->image);
-            }
+        if ($hasNewImage) {
+            $validated['image'] = $this->storeImage($request);
         }
 
         $news->update($validated);
 
-        return redirect()->route('dashboard.news.index')->with('status', 'News article updated.');
+        if (isset($validated['image']) && $previousImage && $previousImage !== $validated['image']) {
+            Storage::disk('public')->delete($previousImage);
+        }
+
+        return redirect()->route('dashboard.news.index')->with(
+            'status',
+            $hasNewImage ? 'News article and image updated.' : 'News article updated. No new image file was received.'
+        );
     }
 
     protected function validateNews(Request $request, ?News $news = null): array
@@ -86,6 +92,19 @@ class NewsController extends Controller
             'meta_description' => ['nullable', 'string', 'max:500'],
             'meta_keywords' => ['nullable', 'string', 'max:255'],
         ]);
+    }
+
+    protected function storeImage(Request $request): string
+    {
+        $path = $request->file('image')->storePublicly('news', 'public');
+
+        if (! is_string($path) || ! Storage::disk('public')->exists($path)) {
+            throw ValidationException::withMessages([
+                'image' => 'The image could not be saved. Verify write access to storage/app/public/news and try again.',
+            ]);
+        }
+
+        return $path;
     }
 
     public function destroy(News $news)
