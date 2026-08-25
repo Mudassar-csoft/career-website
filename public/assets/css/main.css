@@ -1052,6 +1052,9 @@ body {
     margin-left: 5px;
   }
 }
+.video-block .video-card .play-btn img {
+  display: none;
+}
 .video-block .video-card button img {
   width: 30px;
   border-radius: 0;
