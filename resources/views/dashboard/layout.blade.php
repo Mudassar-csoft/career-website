@@ -1056,7 +1056,9 @@
                     }
 
                     if (allowedExtensions.length && allowedExtensions.indexOf(extension) === -1) {
-                        message = file.name + ' must use a .webp or .svg extension.';
+                        message = file.name + ' must use one of these extensions: ' + allowedExtensions.map(function (item) {
+                            return '.' + item;
+                        }).join(', ') + '.';
                     } else if (maxSizeKb > 0 && file.size > maxSizeKb * 1024) {
                         message = file.name + ' must be ' + maxSizeKb + ' KB or smaller.';
                     }

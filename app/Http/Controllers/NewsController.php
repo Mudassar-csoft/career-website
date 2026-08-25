@@ -7,6 +7,7 @@ use App\Models\News;
 use App\Models\NewsType;
 use App\Support\DashboardImageUpload;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
@@ -70,7 +71,7 @@ class NewsController extends Controller
         $news->update($validated);
 
         if (isset($validated['image']) && $previousImage && $previousImage !== $validated['image']) {
-            Storage::disk('public')->delete($previousImage);
+            $this->deleteImage($previousImage);
         }
 
         return redirect()->route('dashboard.news.index')->with(
@@ -96,15 +97,41 @@ class NewsController extends Controller
 
     protected function storeImage(Request $request): string
     {
-        $path = $request->file('image')->storePublicly('news', 'public');
+        $file = $request->file('image');
+        $directory = public_path('uploads/news');
+        $filename = Str::uuid().'.'.$file->extension();
 
-        if (! is_string($path) || ! Storage::disk('public')->exists($path)) {
+        File::ensureDirectoryExists($directory);
+        $file->move($directory, $filename);
+
+        $path = 'uploads/news/'.$filename;
+
+        if (! is_file(public_path($path))) {
             throw ValidationException::withMessages([
-                'image' => 'The image could not be saved. Verify write access to storage/app/public/news and try again.',
+                'image' => 'The image could not be saved. Verify write access to public/uploads/news and try again.',
             ]);
         }
 
         return $path;
+    }
+
+    protected function deleteImage(string $path): void
+    {
+        if (filter_var($path, FILTER_VALIDATE_URL)) {
+            return;
+        }
+
+        $publicPath = ltrim($path, '/');
+        $storagePath = preg_replace('#^/?storage/#', '', $publicPath);
+
+        if (Storage::disk('public')->exists($storagePath)) {
+            Storage::disk('public')->delete($storagePath);
+            return;
+        }
+
+        if (is_file(public_path($publicPath))) {
+            File::delete(public_path($publicPath));
+        }
     }
 
     public function destroy(News $news)

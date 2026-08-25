@@ -72,6 +72,7 @@
                         data-dashboard-image-upload
                         data-allowed-extensions="{{ implode(',', \App\Support\DashboardImageUpload::ALLOWED_EXTENSIONS) }}"
                         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
+                        onchange="window.previewNewsImage && window.previewNewsImage(this)"
                     >
                     <p class="dash-form-hint">{{ $news->image ? 'Upload a new file only to replace the current image. ' : '' }}{{ \App\Support\DashboardImageUpload::HINT }}</p>
                     <img id="news-image-preview" class="dash-image-preview" src="{{ $news->image ? $news->image_url : '' }}" alt="Preview" onerror="this.onerror=null;this.src='{{ asset('assets/images/img61.png') }}';" @if ($news->image) style="display:block;" @endif>
@@ -169,14 +170,18 @@
     var imageInput = document.getElementById('news-image');
     var imagePreview = document.getElementById('news-image-preview');
 
-    imageInput.addEventListener('change', function () {
-        var file = imageInput.files[0];
+    window.previewNewsImage = function (input) {
+        var file = input.files[0];
         if (!file) {
             imagePreview.style.display = 'none';
             return;
         }
         imagePreview.src = URL.createObjectURL(file);
         imagePreview.style.display = 'block';
+    };
+
+    imageInput.addEventListener('change', function () {
+        window.previewNewsImage(imageInput);
     });
 
     var typeModal = document.getElementById('news-type-modal');
