@@ -37,4 +37,11 @@ class HomeController extends Controller
             'featuredCourses' => $featuredCourses,
         ]);
     }
+
+    public function about()
+    {
+        return view('pages.about-us', [
+            'latestNews' => News::with('type')->latest()->take(6)->get(),
+        ]);
+    }
 }

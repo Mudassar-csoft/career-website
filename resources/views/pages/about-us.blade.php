@@ -211,58 +211,30 @@
             </div>
             <div class="col-lg-6">
                 <div class="news-bar aos-init aos-animate" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="1200">
-                    <h2>Latest News <a href="#">View All News</a></h2>
+                    <h2>Latest News <a href="{{ route('news') }}">View All News</a></h2>
                     <div class="news-slider">
-                        <div>
-                            <div class="box s-blue">
-                                <p>
-                                    Career Institute Signs Franchise MOU for
-                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
-                                </p>
-                                <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
-                                    <span>09-12-2024</span>
+                        @forelse ($latestNews as $index => $newsItem)
+                            <div>
+                                <div class="box {{ ['s-blue', 's-black', 's-green'][$index % 3] }}">
+                                    <p>
+                                        {{ $newsItem->title }}
+                                        <a href="{{ route('news-detail', $newsItem->slug) }}">Read more...</a>
+                                    </p>
+                                    <div class="d-bar">
+                                        <img src="{{ asset('assets/images/icon05.svg') }}" alt="Publication date">
+                                        <span>{{ $newsItem->created_at->format('d-m-Y') }}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="box s-black">
-                                <p>
-                                    Career Institute Signs Franchise MOU for
-                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
-                                </p>
-                                <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
-                                    <span>09-12-2024</span>
+                        @empty
+                            <div>
+                                <div class="box s-blue">
+                                    <p>No news articles are available at the moment.</p>
                                 </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="box s-green">
-                                <p>
-                                    Career Institute Signs Franchise MOU for
-                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
-                                </p>
-                                <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
-                                    <span>09-12-2024</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="box s-black">
-                                <p>
-                                    Career Institute Signs Franchise MOU for
-                                    Kohinoor FSD  Branch<a href="#">Read more...</a>
-                                </p>
-                                <div class="d-bar">
-                                    <img src="{{ asset('assets/images/icon05.svg') }}" alt="Career Institute feature icon">
-                                    <span>09-12-2024</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforelse
                     </div>
-                    <a href="#" class="btn r-btn">Read More</a>
+                    <a href="{{ route('news') }}" class="btn r-btn">Read More</a>
                 </div>
             </div>
         </div>

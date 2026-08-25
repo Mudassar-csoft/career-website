@@ -44,7 +44,6 @@ Route::get('/blog-detail/{blog:slug}', [PublicBlogController::class, 'show'])->n
 Route::get('/faqs', [PublicFaqController::class, 'index'])->name('faqs');
 
 $pages = [
-    ['uri' => '/about-us', 'view' => 'pages.about-us', 'name' => 'about'],
     ['uri' => '/ambassador-program', 'view' => 'pages.ambassador-program', 'name' => 'ambassador-program'],
     ['uri' => '/contact-us', 'view' => 'pages.contact-us', 'name' => 'contact-us'],
     ['uri' => '/coworking-space', 'view' => 'pages.coworking-space', 'name' => 'coworking-space'],
@@ -64,6 +63,7 @@ foreach ($pages as $page) {
     Route::view($page['uri'], $page['view'])->name($page['name']);
 }
 
+Route::get('/about-us', [HomeController::class, 'about'])->name('about');
 Route::get('/404', fn () => response()->view('errors.404', [], 404))->name('404');
 
 Route::get('/study-abroad', [PublicCourseController::class, 'studyAbroad'])->name('study-abroad');
