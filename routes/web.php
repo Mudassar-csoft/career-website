@@ -58,6 +58,7 @@ $pages = [
     ['uri' => '/event-detail', 'view' => 'pages.event-detail', 'name' => 'event-detail'],
     ['uri' => '/404', 'view' => 'pages.404', 'name' => '404'],
     ['uri' => '/privacy-policy', 'view' => 'pages.privacy-policy', 'name' => 'privacy-policy'],
+    ['uri' => '/term-conditions', 'view' => 'pages.term-conditions', 'name' => 'term-conditions'],
 ];
 
 foreach ($pages as $page) {
