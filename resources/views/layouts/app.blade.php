@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Career Website')</title>
+    @php
+        $routeName = request()->route()?->getName();
+        $pageTitle = trim($__env->yieldContent('title')) ?: 'Career Institute';
+        $providedDescription = trim(strip_tags($__env->yieldContent('meta_description')));
+        $routeDescription = config('seo.descriptions.'.$routeName, config('seo.default_description'));
+        $descriptionSource = $providedDescription ?: $routeDescription;
+        if (\Illuminate\Support\Str::length($descriptionSource) < 140) {
+            $descriptionSource = trim($descriptionSource.' '.$routeDescription);
+        }
+        $metaDescription = \Illuminate\Support\Str::limit($descriptionSource, 150, '');
+        $metaKeywords = trim(strip_tags($__env->yieldContent('meta_keywords')));
+        $ogImage = trim($__env->yieldContent('og_image')) ?: asset(config('seo.default_image'));
+        if (! \Illuminate\Support\Str::startsWith($ogImage, ['http://', 'https://'])) {
+            $ogImage = url($ogImage);
+        }
+        $canonicalUrl = url()->current();
+    @endphp
+    <title>{{ $pageTitle }}</title>
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.svg') }}">
-    @php $metaDescription = trim($__env->yieldContent('meta_description')); @endphp
-    @if ($metaDescription)
-        <meta name="description" content="{!! $metaDescription !!}">
+    <meta name="description" content="{{ $metaDescription }}">
+    @if ($metaKeywords !== '')
+        <meta name="keywords" content="{{ $metaKeywords }}">
     @endif
-    @php $metaKeywords = trim($__env->yieldContent('meta_keywords')); @endphp
-    @if ($metaKeywords)
-        <meta name="keywords" content="{!! $metaKeywords !!}">
-    @endif
+    <link rel="canonical" href="{{ $canonicalUrl }}">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:site_name" content="Career Institute">
+    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
+    <meta property="og:url" content="{{ $canonicalUrl }}">
+    <meta property="og:image" content="{{ $ogImage }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:description" content="{{ $metaDescription }}">
+    <meta name="twitter:image" content="{{ $ogImage }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

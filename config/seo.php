@@ -1,0 +1,33 @@
+<?php
+
+return [
+    'default_description' => 'Career Institute offers courses, certifications, testing services, career guidance, and flexible learning opportunities for students across Pakistan.',
+    'default_image' => 'assets/images/img39.png',
+    'descriptions' => [
+        'home' => 'Career Institute helps students build in-demand skills through expert-led courses, certifications, career guidance, and flexible learning paths.',
+        'about' => 'Learn about Career Institute, our industry-focused teaching approach, skilled trainers, campuses, and commitment to building successful careers.',
+        'courses-certifications' => 'Explore practical courses and certifications in technology, design, business, language, and freelancing, with flexible online and on-campus learning.',
+        'course-detail' => 'Discover course details, practical learning outcomes, duration, and certification opportunities designed to help you build professional skills.',
+        'category' => 'Browse Career Institute course categories and find practical learning paths in technology, design, business, language, and professional development.',
+        'study-abroad' => 'Prepare for international study with language test preparation, expert counseling, practical guidance, and support for your study abroad goals.',
+        'stories' => 'Read real Career Institute student success stories and discover how practical training, projects, and guidance helped them build rewarding careers.',
+        'events' => 'Explore upcoming Career Institute workshops, career fairs, training sessions, and campus events designed to connect learners with new opportunities.',
+        'events.show' => 'View complete event details, including date, venue, registration information, and practical opportunities available through Career Institute.',
+        'news' => 'Stay informed with the latest Career Institute news, announcements, student achievements, industry updates, and opportunities for professional growth.',
+        'news-detail' => 'Read Career Institute news, announcements, achievements, and industry updates that help students make informed decisions about their future careers.',
+        'blogs' => 'Explore practical articles, career advice, technology insights, and learning resources from Career Institute to support your professional growth.',
+        'blog-detail' => 'Read practical Career Institute insights, career advice, and learning resources that help students develop in-demand, real-world professional skills.',
+        'faqs' => 'Find answers to common questions about Career Institute courses, admissions, certifications, learning options, campus facilities, and career guidance.',
+        'contact-us' => 'Contact Career Institute for course admissions, career counseling, testing services, campus information, and expert support for your learning goals.',
+        'ambassador-program' => 'Join the Career Institute Ambassador Program to develop leadership skills, represent your campus, and help students discover learning opportunities.',
+        'coworking-space' => 'Discover Career Institute coworking spaces with productive facilities, flexible options, and a collaborative environment for freelancers and teams.',
+        'gallery' => 'Explore Career Institute campus life, workshops, student activities, events, and learning spaces through our latest photos and visual highlights.',
+        'how-to-pay' => 'Review Career Institute payment options and complete your course fee process with clear guidance, secure steps, and helpful support when needed.',
+        'kryterion' => 'Book trusted Kryterion testing services at Career Institute, with a professional environment and helpful support for your certification exam.',
+        'pearson-vue' => 'Take Pearson VUE certification exams at Career Institute in a secure, professional testing environment with clear guidance, support, and confidence.',
+        'psi-exam' => 'Schedule PSI exams at Career Institute and access a reliable testing environment designed for a smooth, secure certification experience for learners.',
+        'verifications' => 'Verify Career Institute certificates and credentials through our secure verification service for employers, students, and professional organizations.',
+        'job-placement' => 'Explore Career Institute job placement support, employer connections, career preparation, and guidance for launching your professional journey.',
+        'privacy-policy' => 'Review Career Institute privacy practices and understand how we collect, use, protect, and manage personal information across services for visitors.',
+    ],
+];

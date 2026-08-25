@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('title', ($news->meta_title ?: $news->title).' | Career Website')
-@section('meta_description', $news->meta_description ?: \Illuminate\Support\Str::limit(strip_tags($news->content), 160))
+@section('meta_description', $news->meta_description ?: \Illuminate\Support\Str::limit(strip_tags($news->content), 150, ''))
 @section('meta_keywords', $news->meta_keywords ?? '')
+@section('og_image', $news->image_url)
 @section('body_class', 'news-page')
 @section('content')
 <section class="news-bar">

@@ -5,7 +5,7 @@ return [
         'name' => 'Jinnah Colony Branch',
         'address' => '2nd Floor, Fazal Heights, P-176, near GCU Road, Jinnah Colony, Faisalabad, Pakistan',
         'phone' => '0314-4444010',
-        'map' => 'https://www.google.com/maps?q=Career+Institute+Jinnah+Colony+Branch,+2nd+Floor,+Fazal+Heights,+P-176,+Faisalabad,+Pakistan&output=embed',
+        'map' => 'https://maps.google.com/maps?q=Career+Institute+-+Jinnah+Colony+Branch+Faisalabad&t=&z=17&ie=UTF8&iwloc=&output=embed',
     ],
     [
         'name' => 'Millat Chowk Branch',
