@@ -5,7 +5,7 @@
 .news-slider {
   margin: 0 0 45px;
   @include max(1400px) {
-    margin: 0 0 35px;
+    margin: 0 0 34px;
   }
   @include max(1280px) {
     margin: 0 0 45px;
@@ -14,7 +14,7 @@
     margin: 0 0 66px;
   }
   @include max(993px) {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
   }
   @include max(767px) {
     margin: 0 0 20px;
