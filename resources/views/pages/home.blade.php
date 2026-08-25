@@ -284,7 +284,7 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img104.png" alt="">
+                            <img src="assets/images/img104.png" alt="Samreen Rafiq, Director of Career Institute">
                         </div>
                         <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</h6>
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">

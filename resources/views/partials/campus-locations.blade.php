@@ -23,7 +23,7 @@
                                 aria-pressed="{{ $loop->first ? 'true' : 'false' }}"
                             >
                                 <div class="location-icon">
-                                    <img src="{{ asset('assets/images/icon24.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/icon24.svg') }}" alt="Campus location pin">
                                 </div>
                                 <div class="location-info">
                                     <h5>Career Institute - {{ $campus['name'] }}</h5>
