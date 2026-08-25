@@ -156,34 +156,44 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="{{ asset('assets/images/img96.jpeg') }}" alt="Career Institute student success video">
-                                <button type="button" class="play-btn" data-video="https://www.youtube.com/shorts/lvrB2hzsLcg" aria-label="Play student experience video 1"></button>
+                                <img src="assets/images/img96.jpeg" alt="Career Institute student success video">
+                                <a class="play-btn" href="https://www.youtube.com/shorts/lvrB2hzsLcg" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 1 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="{{ asset('assets/images/img97.jpeg') }}" alt="Career Institute student success video">
-                                <button type="button" class="play-btn" data-video="https://www.youtube.com/shorts/uUGPHFbceoE" aria-label="Play student experience video 2"></button>
+                                <img src="assets/images/img97.jpeg" alt="Career Institute student success video">
+                                <a class="play-btn" href="https://www.youtube.com/shorts/uUGPHFbceoE" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 2 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="{{ asset('assets/images/img98.jpeg') }}" alt="Career Institute student success video">
-                                <button type="button" class="play-btn" data-video="https://www.youtube.com/shorts/xOJzCDvdh_4" aria-label="Play student experience video 3"></button>
+                                <img src="assets/images/img98.jpeg" alt="Career Institute student success video">
+                                <a class="play-btn" href="https://www.youtube.com/shorts/xOJzCDvdh_4" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 3 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="{{ asset('assets/images/img99.jpeg') }}" alt="Career Institute student success video">
-                                <button type="button" class="play-btn" data-video="https://www.youtube.com/shorts/j7X_zTbBhPI" aria-label="Play student experience video 4"></button>
+                                <img src="assets/images/img99.jpeg" alt="Career Institute student success video">
+                                <a class="play-btn" href="https://www.youtube.com/shorts/j7X_zTbBhPI" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 4 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
-                                <img src="{{ asset('assets/images/img100.jpeg') }}" alt="Career Institute student success video">
-                                <button type="button" class="play-btn" data-video="https://www.youtube.com/shorts/Hc3C-Bfutjc" aria-label="Play student experience video 5"></button>
+                                <img src="assets/images/img100.jpeg" alt="Career Institute student success video">
+                                <a class="play-btn" href="https://www.youtube.com/shorts/Hc3C-Bfutjc" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 5 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                     </div>
