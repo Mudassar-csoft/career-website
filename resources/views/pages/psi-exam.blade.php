@@ -18,15 +18,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <h2>
-                    Discover an easy to use,<br>
-                    paperless, and Interactive<br>
-                    approach to expedite your<br>
-                    examination process.
+                    Take your certification exams at a secure, professional, and internationally recognized testing center.
                 </h2>
                 <p>
-                    We offer a variety of services for Real Estate, Insurance,<br>
-                    Construction, Barber, Cosmetology and other<br>
-                    professionallicenses and certifications.
+                    Career Institute offers PSI testing services for international certifications and professional examinations, helping candidates achieve their academic and career goals with confidence.
                 </p>
             </div>
             <div class="col-lg-6">
@@ -45,7 +40,7 @@
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/icon25.svg') }}" alt="Career Institute feature icon">
                     </div>
-                    <p>Real Estate</p>
+                    <p>IT & Technology</p>
                 </div>
             </div>
             <div class="col-lg-4 col-6">
@@ -53,7 +48,7 @@
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/icon26.svg') }}" alt="Career Institute feature icon">
                     </div>
-                    <p>Real Estate</p>
+                    <p> Professional Licensing</p>
                 </div>
             </div>
             <div class="col-lg-4 col-6">
@@ -85,7 +80,7 @@
                     <div class="img-hold">
                         <img src="{{ asset('assets/images/icon30.svg') }}" alt="Career Institute feature icon">
                     </div>
-                    <p>Information Technology</p>
+                    <p> Finance & Insurance</p>
                 </div>
             </div>
         </div>

@@ -15,11 +15,11 @@
                     <p>
                         Career Institute, founded in 2010, has emerged as a leading<br>
                         IT education institution in Pakistan. Our commitment to<br>
-                        excellence has led to a network of over 150,000 proud alumni.<br>
-                        With more than 50 globally recognized affiliations and a<br>
-                        portfolio of over 100 meticulously crafted courses, we're<br>
-                        dedicated to meeting the ever-growing global demand<br>
-                        for skilled professionals
+                        excellence has built a network of over 150,000 proud alumni.<br>
+                        With more than 50 globally recognized affiliations and over<br>
+                        100 meticulously crafted courses, we deliver B2C learning,<br>
+                        B2B corporate training, and B2G public-sector solutions to<br>
+                        meet the growing global demand for skilled professionals.
                     </p>
                 </div>
             </div>
@@ -195,7 +195,17 @@
                                 innovate in their chosen fields.
                             </p>
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                            <h2>
+                                Purpose
+                            </h2>
+                            <p>
+                                Our purpose is to bridge the gap between education, industry, and employment.
+                                We deliver practical training that meets the evolving needs of learners and employers.
+                                Our B2C, B2B, and B2G services create value for individuals, organizations, and public-sector institutions.
+                                We are committed to building skilled professionals, stronger organizations, and sustainable economic growth.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

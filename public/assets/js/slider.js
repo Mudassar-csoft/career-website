@@ -132,6 +132,7 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
 					settings: {
 						slidesToShow: 2,
                         slidesToScroll: 1,
+                        arrows: false,
 					}
 				}
     		]
