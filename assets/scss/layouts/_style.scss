@@ -124,11 +124,12 @@
       }
     }
     p {
-      font-weight: 400;
+      font-weight: 500;
       font-size: 16px;
       line-height: 22px;
       margin: 0 0 18px;
       color: #595959;
+      font-weight: 500;
       @include max(1400px) {
         font-size: 13px;
         line-height: 18px;
