@@ -37,7 +37,7 @@
                             @foreach ($newsItems as $item)
                                 <tr>
                                     <td>
-                                        <img class="dash-thumb" src="{{ $item->image_url }}" alt="{{ $item->title }}">
+                                        <img class="dash-thumb" src="{{ $item->image_url }}" alt="{{ $item->title }}" onerror="this.onerror=null;this.src='{{ asset('assets/images/img61.png') }}';">
                                     </td>
                                     <td>
                                         <strong>{{ $item->title }}</strong>
