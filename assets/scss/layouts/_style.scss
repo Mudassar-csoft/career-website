@@ -8240,6 +8240,76 @@
 
 // policy page start here
 
-// .policy-page {
-  
-// }
+.policy-page {
+  .top-banner {
+    @include top-banner;
+    padding: 12rem 0;
+    background: url(../images/banner26.png) no-repeat bottom center;
+    background-size: cover;
+    @include max(1400px) {
+      background-size: cover;
+      padding: 10rem 0;
+    }
+    @include max(1200px) {
+      padding: 8rem 0;
+    }
+    @include max(767px) {
+      padding: 5rem 0;
+    }
+    p {
+      @include max(992px) {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+  .pp-text {
+    padding: 3rem 0;
+    @include max(575px) {
+      padding: 2rem 0;
+    }
+    span {
+      font-size: 20px;
+      line-height: 22px;
+      color: #575757;
+      font-style: italic;
+      font-weight: 500;
+      margin: 0 0 7px;
+      display: block;
+    }
+    h4 {
+      font-size: 20px;
+      line-height: 22px;
+      color: #575757;
+      font-weight: 500;
+      margin: 0 0 25px;
+      @include max(575px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+    h3 {
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: 500;
+      color: #575757;
+      margin: 0 0 25px;
+      @include max(575px) {
+        font-size: 25px;
+        line-height: 27px;
+      }
+    }
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 400;
+      color: #575757;
+      margin: 0 0 25px;
+      @include max(575px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
