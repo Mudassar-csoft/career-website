@@ -58,7 +58,7 @@
                                     <div class="row">
                                         <div class="col-lg-7">
                                             <div class="img-hold">
-                                                <img src="{{ $featuredNews->image ? asset('storage/'.$featuredNews->image) : asset('assets/images/img62.png') }}" alt="{{ $featuredNews->title }}">
+                                                <img src="{{ $featuredNews->image_url }}" alt="{{ $featuredNews->title }}">
                                                 <h4>Featured</h4>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@
                                             <div class="workshop-card">
                                                 <!-- Image -->
                                                 <div class="workshop-card__image">
-                                                    <img src="{{ $item->image ? asset('storage/'.$item->image) : asset('assets/images/img64.png') }}" alt="{{ $item->title }}">
+                                                    <img src="{{ $item->image_url }}" alt="{{ $item->title }}">
                                                     <span class="workshop-card__badge">{{ $item->type->name }}</span>
                                                 </div>
                                                 <!-- Content -->
@@ -141,7 +141,7 @@
                                     <li>
                                         <a href="{{ route('news-detail', $post->slug) }}">
                                             <div class="img-hold">
-                                                <img src="{{ $post->image ? asset('storage/'.$post->image) : asset('assets/images/img61.png') }}" alt="{{ $post->title }}">
+                                                <img src="{{ $post->image_url }}" alt="{{ $post->title }}">
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $post->title }}</h3>

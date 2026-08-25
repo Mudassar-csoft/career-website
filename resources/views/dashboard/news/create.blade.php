@@ -74,7 +74,7 @@
                         data-max-size-kb="{{ \App\Support\DashboardImageUpload::MAX_FILE_SIZE_KB }}"
                     >
                     <p class="dash-form-hint">{{ $news->image ? 'Upload a new file only to replace the current image. ' : '' }}{{ \App\Support\DashboardImageUpload::HINT }}</p>
-                    <img id="news-image-preview" class="dash-image-preview" src="{{ $news->image ? asset('storage/'.$news->image) : '' }}" alt="Preview" @if ($news->image) style="display:block;" @endif>
+                    <img id="news-image-preview" class="dash-image-preview" src="{{ $news->image ? $news->image_url : '' }}" alt="Preview" @if ($news->image) style="display:block;" @endif>
                     @error('image')
                         <p class="dash-form-error">{{ $message }}</p>
                     @enderror
