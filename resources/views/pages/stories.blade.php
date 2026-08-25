@@ -157,43 +157,43 @@
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img96.jpeg" alt="Career Institute student success video">
-                                <button class="play-btn" data-video="../assets/video/Web_Header.mp4">
+                                <a class="play-btn" href="https://www.youtube.com/shorts/lvrB2hzsLcg" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 1 on YouTube">
                                     <img src="assets/images/ply-btn.png" alt="Play video">
-                                </button>
+                                </a>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img97.jpeg" alt="Career Institute student success video">
-                                <button class="play-btn" data-video="video2.mp4">
-                                <img src="assets/images/ply-btn.png" alt="Play video">
-                                </button>
+                                <a class="play-btn" href="https://www.youtube.com/shorts/uUGPHFbceoE" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 2 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img98.jpeg" alt="Career Institute student success video">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="Play video">
-                                </button>
+                                <a class="play-btn" href="https://www.youtube.com/shorts/xOJzCDvdh_4" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 3 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img99.jpeg" alt="Career Institute student success video">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="Play video">
-                                </button>
+                                <a class="play-btn" href="https://www.youtube.com/shorts/j7X_zTbBhPI" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 4 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="video-card">
                                 <img src="assets/images/img100.jpeg" alt="Career Institute student success video">
-                                <button class="play-btn" data-video="video3.mp4">
-                                <img src="assets/images/ply-btn.png" alt="Play video">
-                                </button>
+                                <a class="play-btn" href="https://www.youtube.com/shorts/Hc3C-Bfutjc" target="_blank" rel="noopener noreferrer" aria-label="Watch student experience video 5 on YouTube">
+                                    <img src="assets/images/ply-btn.png" alt="Play video">
+                                </a>
                             </div>
                         </div>
                     </div>
