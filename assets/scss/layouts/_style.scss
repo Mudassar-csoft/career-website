@@ -5669,48 +5669,46 @@
       padding: 3rem 0 1rem
     }
   }
-  .ss-page {
-    .feature-slider {
-      .slick-slide {
-        .box {
-          .img-hold {
+  .feature-slider {
+    .slick-slide {
+      .box {
+        .img-hold {
+            min-height: 240px;
+            max-height: 240px;
+            @include max(1400px) {
+              min-height: 220px;
+              max-height: 220px;
+            }
+            @include max(1280px) {
               min-height: 240px;
               max-height: 240px;
-              @include max(1400px) {
-                min-height: 220px;
-                max-height: 220px;
-              }
-              @include max(1280px) {
-                min-height: 240px;
-                max-height: 240px;
-              }
-              @include max(1200px) {
-                min-height: 220px;
-                max-height: 220px;
-              }
-              @include max(992px) {
-                min-height: 250px;
-                max-height: 250px;
-              }
-              @include max(767px) {
-                min-height: 220px;
-                max-height: 220px;
-              }
-              @include max(575px) {
-                min-height: 240px;
-                max-height: 240px;
-              }
+            }
+            @include max(1200px) {
+              min-height: 220px;
+              max-height: 220px;
+            }
+            @include max(992px) {
+              min-height: 250px;
+              max-height: 250px;
+            }
+            @include max(767px) {
+              min-height: 220px;
+              max-height: 220px;
+            }
+            @include max(575px) {
+              min-height: 240px;
+              max-height: 240px;
+            }
+        }
+        .text-hold {
+          h3 {
+            min-height: inherit;
+            max-height: inherit;
           }
-          .text-hold {
-            h3 {
-              min-height: inherit;
-              max-height: inherit;
-            }
-            h4 {
-              text-overflow: ellipsis;
-              overflow: hidden;
-              text-wrap: nowrap;
-            }
+          h4 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-wrap: nowrap;
           }
         }
       }
