@@ -11,7 +11,7 @@
             <div class="col-lg-8">
                 <div class="news-info">
                     <div class="img-hold">
-                        <img src="{{ $news->image ? asset('storage/'.$news->image) : asset('assets/images/img61.png') }}" alt="{{ $news->title }}">
+                        <img src="{{ $news->image_url }}" alt="{{ $news->title }}" onerror="this.onerror=null;this.src='{{ asset('assets/images/img61.png') }}';">
                     </div>
                     <div class="head-text">
                         <h2>
@@ -45,7 +45,7 @@
                                     <li>
                                         <a href="{{ route('news-detail', $post->slug) }}">
                                             <div class="img-hold">
-                                                <img src="{{ $post->image ? asset('storage/'.$post->image) : asset('assets/images/img61.png') }}" alt="{{ $post->title }}">
+                                                <img src="{{ $post->image_url }}" alt="{{ $post->title }}" onerror="this.onerror=null;this.src='{{ asset('assets/images/img61.png') }}';">
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $post->title }}</h3>

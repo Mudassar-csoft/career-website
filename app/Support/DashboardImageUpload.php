@@ -6,13 +6,13 @@ use Closure;
 
 class DashboardImageUpload
 {
-    public const MAX_FILE_SIZE_KB = 500;
+    public const MAX_FILE_SIZE_KB = 2048;
 
-    public const ALLOWED_EXTENSIONS = ['webp', 'svg'];
+    public const ALLOWED_EXTENSIONS = ['webp', 'jpg', 'jpeg', 'png', 'svg'];
 
-    public const ACCEPT_ATTRIBUTE = '.webp,.svg';
+    public const ACCEPT_ATTRIBUTE = '.webp,.jpg,.jpeg,.png,.svg';
 
-    public const HINT = 'Only WEBP or SVG files up to 500 KB are allowed.';
+    public const HINT = 'Upload a WEBP, JPG, JPEG, PNG, or SVG file up to 2 MB.';
 
     public static function rules(bool $required = false): array
     {

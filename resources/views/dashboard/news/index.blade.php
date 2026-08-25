@@ -37,11 +37,7 @@
                             @foreach ($newsItems as $item)
                                 <tr>
                                     <td>
-                                        @if ($item->image)
-                                            <img class="dash-thumb" src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}">
-                                        @else
-                                            <div class="dash-thumb"></div>
-                                        @endif
+                                        <img class="dash-thumb" src="{{ $item->image_url }}" alt="{{ $item->title }}" onerror="this.onerror=null;this.src='{{ asset('assets/images/img61.png') }}';">
                                     </td>
                                     <td>
                                         <strong>{{ $item->title }}</strong>
