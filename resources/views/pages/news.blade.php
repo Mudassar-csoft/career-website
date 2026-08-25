@@ -24,35 +24,22 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="news-tabs">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+                    <ul class="nav nav-pills mb-3" role="list">
+                        <li class="nav-item">
+                            <a class="nav-link @if (! $selectedNewsType) active @endif" href="{{ route('news') }}">All</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Admissions</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Training & Certifications </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-four" aria-selected="false">Career Opportunities</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-five-tab" data-bs-toggle="pill" data-bs-target="#pills-five" type="button" role="tab" aria-controls="pills-five" aria-selected="false">Job Placements</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-six-tab" data-bs-toggle="pill" data-bs-target="#pills-six" type="button" role="tab" aria-controls="pills-six" aria-selected="false">Industry Insights</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-seven-tab" data-bs-toggle="pill" data-bs-target="#pills-seven" type="button" role="tab" aria-controls="pills-seven" aria-selected="false">Tech Trends</button>
-                        </li>
+                        @foreach ($newsTypes as $type)
+                            <li class="nav-item">
+                                <a class="nav-link @if ($selectedNewsType?->id === $type->id) active @endif" href="{{ route('news', ['type' => $type->slug]) }}">{{ $type->name }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="col-lg-8">
                 <div class="news-tabs">
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active">
                             @if ($featuredNews)
                                 <div class="main-box">
                                     <div class="row">
@@ -81,6 +68,8 @@
                                         </div>
                                     </div>
                                 </div>
+                            @else
+                                <p>No news articles are available for this type yet.</p>
                             @endif
                             <div class="more-bar">
                                 <div class="row g-3">
@@ -118,12 +107,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="pills-five" role="tabpanel" aria-labelledby="pills-five-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="pills-six" role="tabpanel" aria-labelledby="pills-six-tab" tabindex="0">...</div>
-                        <div class="tab-pane fade" id="pills-seven" role="tabpanel" aria-labelledby="pills-seven-tab" tabindex="0">...</div>
                     </div>
                 </div>
             </div>
@@ -159,11 +142,11 @@
                         <ul>
                             <li>
                                 <a href="{{ route('news') }}">All News</a>
-                                <span>{{ $newsItems->count() }}</span>
+                                <span>{{ $newsTypes->sum('news_count') }}</span>
                             </li>
                             @forelse ($newsTypes as $type)
                                 <li>
-                                    <a href="{{ route('news') }}">{{ $type->name }}</a>
+                                    <a href="{{ route('news', ['type' => $type->slug]) }}">{{ $type->name }}</a>
                                     <span>{{ $type->news_count }}</span>
                                 </li>
                             @empty
@@ -175,47 +158,34 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <nav class="pagination-wrap mt-5">
+                @if ($newsItems->hasPages())
+                    @php
+                        $startPage = max(1, $newsItems->currentPage() - 2);
+                        $endPage = min($newsItems->lastPage(), $startPage + 4);
+                        $startPage = max(1, $endPage - 4);
+                    @endphp
+                <nav class="pagination-wrap mt-5" aria-label="News pagination">
                     <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="#">
+                        <li class="page-item @if ($newsItems->onFirstPage()) disabled @endif">
+                            <a class="page-link" href="{{ $newsItems->previousPageUrl() ?: '#' }}" @if ($newsItems->onFirstPage()) aria-disabled="true" @endif>
                                 <i class="fas fa-chevron-left"></i>
                                 Previous
                             </a>
                         </li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">
-                                1
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                2
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                3
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                4
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
-                                5
-                            </a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">
+                        @for ($page = $startPage; $page <= $endPage; $page++)
+                            <li class="page-item @if ($page === $newsItems->currentPage()) active @endif">
+                                <a class="page-link" href="{{ $newsItems->url($page) }}">{{ $page }}</a>
+                            </li>
+                        @endfor
+                        <li class="page-item @if (! $newsItems->hasMorePages()) disabled @endif">
+                            <a class="page-link" href="{{ $newsItems->nextPageUrl() ?: '#' }}" @if (! $newsItems->hasMorePages()) aria-disabled="true" @endif>
                                 Next
                                 <i class="fas fa-chevron-right"></i>
                             </a>
                         </li>
                     </ul>
                 </nav>
+                @endif
             </div>
         </div>
     </div>
