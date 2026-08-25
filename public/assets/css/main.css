@@ -14267,6 +14267,11 @@ body {
     left: -25px;
   }
 }
+@media (max-width: 575px) {
+  .logo-slider .slick-prev {
+    left: -15px;
+  }
+}
 .logo-slider .slick-prev:hover {
   background: url(../images/icon13.png) no-repeat center center;
 }
@@ -14286,6 +14291,11 @@ body {
 @media (max-width: 1400px) {
   .logo-slider .slick-next {
     right: -25px;
+  }
+}
+@media (max-width: 575px) {
+  .logo-slider .slick-next {
+    right: -15px;
   }
 }
 .logo-slider .slick-next:hover {
