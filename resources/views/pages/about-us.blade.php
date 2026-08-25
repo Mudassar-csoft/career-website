@@ -15,11 +15,11 @@
                     <p>
                         Career Institute, founded in 2010, has emerged as a leading<br>
                         IT education institution in Pakistan. Our commitment to<br>
-                        excellence has led to a network of over 150,000 proud alumni.<br>
-                        With more than 50 globally recognized affiliations and a<br>
-                        portfolio of over 100 meticulously crafted courses, we're<br>
-                        dedicated to meeting the ever-growing global demand<br>
-                        for skilled professionals
+                        excellence has built a network of over 150,000 proud alumni.<br>
+                        With more than 50 globally recognized affiliations and over<br>
+                        100 meticulously crafted courses, we deliver B2C learning,<br>
+                        B2B corporate training, and B2G public-sector solutions to<br>
+                        meet the growing global demand for skilled professionals.
                     </p>
                 </div>
             </div>
