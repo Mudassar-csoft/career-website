@@ -46,19 +46,19 @@
             <div class="col-lg-4">
                 <div class="box">
                     <img src="{{ asset('assets/images/icon31.svg') }}" alt="Career Institute feature icon">
-                    <h3>Online Proctoring</h3>
+                    <h3>Secure Testing Environment</h3>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="box">
                     <img src="{{ asset('assets/images/icon31.svg') }}" alt="Career Institute feature icon">
-                    <h3>Onsite Proctoring</h3>
+                    <h3>Modern Testing Facilities</h3>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="box">
                     <img src="{{ asset('assets/images/icon31.svg') }}" alt="Career Institute feature icon">
-                    <h3>Account & Scheduling</h3>
+                    <h3>Easy Exam Scheduling</h3>
                 </div>
             </div>
         </div>

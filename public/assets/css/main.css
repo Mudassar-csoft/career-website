@@ -4188,13 +4188,8 @@ body {
 .PSI-page .top-banner {
   padding: 8rem 0 0;
   background: url(../images/banner07.png) no-repeat center center;
-  background-size: 100%;
+  background-size: cover;
   text-align: left;
-}
-@media (max-width: 1600px) {
-  .PSI-page .top-banner {
-    background-size: cover;
-  }
 }
 .PSI-page .top-banner .sm-box {
   background: linear-gradient(90deg, rgba(3, 197, 135, 0.7) 0%, rgba(0, 157, 184, 0.7) 100%);
@@ -4676,14 +4671,14 @@ body {
 .kry-page .feature-box .box {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1019607843);
   background: linear-gradient(107.69deg, #009db8 1.33%, #03c587 100%);
-  padding: 50px 50px;
+  padding: 50px 25px;
   border-radius: 10px 10px;
   text-align: center;
   transition: transform 0.3s ease;
 }
 @media (max-width: 1400px) {
   .kry-page .feature-box .box {
-    padding: 50px 35px;
+    padding: 50px 15px;
   }
 }
 .kry-page .feature-box .box:hover {

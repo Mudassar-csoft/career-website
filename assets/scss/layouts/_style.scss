@@ -2667,11 +2667,8 @@
     @include top-banner;
     padding: 8rem 0 0;
     background: url(../images/banner07.png) no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     text-align: left;
-    @include max(1600px) {
-      background-size: cover;
-    }
     .sm-box {
       @include sm-box;
     }
@@ -2867,12 +2864,12 @@
     .box {
       box-shadow: 0px 0px 10px 0px #0000001a;
       background: linear-gradient(107.69deg, #009db8 1.33%, #03c587 100%);
-      padding: 50px 50px;
+      padding: 50px 25px;
       border-radius: 10px 10px;
       text-align: center;
       transition: transform 0.3s ease;
       @include max(1400px) {
-        padding: 50px 35px;
+        padding: 50px 15px;
       }
       &:hover {
         transform: translateY(-7px);
