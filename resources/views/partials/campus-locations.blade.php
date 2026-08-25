@@ -15,6 +15,9 @@
                             <div
                                 class="location-card @if ($loop->first) active @endif"
                                 data-map="{{ $campus['map'] }}"
+                                data-name="Career Institute - {{ $campus['name'] }}"
+                                data-address="{{ $campus['address'] }}"
+                                data-map-link="{{ str_replace('&output=embed', '', $campus['map']) }}"
                                 role="button"
                                 tabindex="0"
                                 aria-pressed="{{ $loop->first ? 'true' : 'false' }}"
@@ -33,6 +36,11 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="map-wrapper">
+                        <div class="map-info-card">
+                            <strong id="locationMapName">Career Institute - {{ $campuses[0]['name'] }}</strong>
+                            <span id="locationMapAddress">{{ $campuses[0]['address'] }}</span>
+                            <a id="locationMapLink" href="{{ str_replace('&output=embed', '', $campuses[0]['map']) }}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+                        </div>
                         <iframe id="locationMap" src="{{ $campuses[0]['map'] }}" title="Career Institute campus map" loading="lazy"></iframe>
                     </div>
                 </div>
@@ -59,6 +67,9 @@
                 card.classList.add('active');
                 card.setAttribute('aria-pressed', 'true');
                 document.getElementById('locationMap').src = card.dataset.map;
+                document.getElementById('locationMapName').textContent = card.dataset.name;
+                document.getElementById('locationMapAddress').textContent = card.dataset.address;
+                document.getElementById('locationMapLink').href = card.dataset.mapLink;
             });
         </script>
     @endpush
