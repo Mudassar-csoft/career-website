@@ -296,7 +296,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="img-hold aos-init aos-animate" data-aos="zoom-in-up" data-aos-anchor-placement="top-center" data-aos-duration="1000">
-                    <img src="{{ asset('assets/images/img40.png') }}" alt="Career Institute learning environment">
+                    <img src="{{ asset('assets/images/img103.png') }}" alt="Career Institute learning environment">
                 </div>
             </div>
         </div>
@@ -383,7 +383,7 @@
                 <div class="col-lg-6">
                     <div class="t-detail">
                         <div class="img-hold aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1000">
-                            <img src="assets/images/img74.png" alt="Career Institute campus">
+                            <img src="assets/images/img104.png" alt="Career Institute campus">
                         </div>
                         <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</h6>
                         <div class="s-link">
