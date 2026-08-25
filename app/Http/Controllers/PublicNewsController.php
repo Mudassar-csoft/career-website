@@ -9,14 +9,26 @@ class PublicNewsController extends Controller
 {
     public function index()
     {
-        $newsItems = News::with('type')->latest()->get();
+        $selectedNewsType = NewsType::query()
+            ->where('slug', request('type'))
+            ->first();
+
+        $newsItems = News::query()
+            ->with('type')
+            ->when($selectedNewsType, fn ($query) => $query->where('news_type_id', $selectedNewsType->id))
+            ->latest()
+            ->paginate(7)
+            ->withQueryString();
+
+        $pageItems = $newsItems->getCollection();
 
         return view('pages.news', [
             'newsItems' => $newsItems,
-            'featuredNews' => $newsItems->first(),
-            'otherNews' => $newsItems->skip(1)->take(6),
-            'recentPosts' => $newsItems->take(5),
+            'featuredNews' => $pageItems->first(),
+            'otherNews' => $pageItems->skip(1)->values(),
+            'recentPosts' => News::with('type')->latest()->take(5)->get(),
             'newsTypes' => NewsType::withCount('news')->orderBy('name')->get(),
+            'selectedNewsType' => $selectedNewsType,
         ]);
     }
 
