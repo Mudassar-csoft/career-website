@@ -37,10 +37,10 @@
                             @foreach ($newsItems as $item)
                                 <tr>
                                     <td>
-                                        @if ($item->image)
+                                        @if ($item->image && \Illuminate\Support\Facades\Storage::disk('public')->exists($item->image))
                                             <img class="dash-thumb" src="{{ asset('storage/'.$item->image) }}" alt="{{ $item->title }}">
                                         @else
-                                            <div class="dash-thumb"></div>
+                                            <div class="dash-thumb" role="img" aria-label="No image uploaded"></div>
                                         @endif
                                     </td>
                                     <td>
