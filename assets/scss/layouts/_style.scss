@@ -2322,6 +2322,9 @@
     cursor: pointer;
     margin-bottom: 18px;
     transition: 0.3s;
+    border: 0;
+    width: 100%;
+    text-align: left;
     &.active {
       border: 2px solid #00b8a9;
     }
