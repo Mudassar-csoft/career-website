@@ -767,11 +767,14 @@
       width: 60px;
       object-fit: cover;
       border-radius: 5px;
+      height: 60px;
       @include max(575px) {
         width: 40px;
+        height: 40px;
       }
       @include max(450px) {
         width: 60px;
+        height: 60px;
       }
     }
     h4 {

@@ -14716,6 +14716,7 @@ body {
   width: 60px;
   object-fit: cover;
   border-radius: 5px;
+  height: 60px;
 }
 @media (max-width: 575px) {
   .success-story-wrapper .success-nav-item img {
