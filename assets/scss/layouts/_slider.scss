@@ -3,7 +3,7 @@
 // news slider start here
 
 .news-slider {
-  margin: 0 0 44px;
+  margin: 0 0 45px;
   @include max(1400px) {
     margin: 0 0 35px;
   }
@@ -248,31 +248,39 @@
     }
   }
   .slick-prev {
-    left: 50px;
-    background: #ffffffb2 url(../images/icon13.png) no-repeat center center;
+    left: -60px;
+    background:rgba(255, 255, 255, 0.8) url(../images/icon13.png) no-repeat center center;
     width: 50px;
     height: 50px;
     border-radius: 100% 100%;
     z-index: 9;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.0705882353);
+    @include max(1280px) {
+      left: -30px;
+    }
     &:hover {
-      background: #ffffffb2 url(../images/icon13.png) no-repeat center center;
+      background: rgba(255, 255, 255, 0.8) url(../images/icon13.png) no-repeat center center;
     }
     &:focus {
-      background: #ffffffb2 url(../images/icon13.png) no-repeat center center;
+      background: rgba(255, 255, 255, 0.8) url(../images/icon13.png) no-repeat center center;
     }
   }
   .slick-next {
-    right: 50px;
-    background: #ffffffb2 url(../images/icon14.png) no-repeat center center;
+    right: -60px;
+    background: rgba(255, 255, 255, 0.8) url(../images/icon14.png) no-repeat center center;
     width: 50px;
     height: 50px;
     border-radius: 100% 100%;
     z-index: 9;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.0705882353);
+    @include max(1280px) {
+      left: -30px;
+    }
     &:hover {
-      background: #ffffffb2 url(../images/icon14.png) no-repeat center center;
+      background:rgba(255, 255, 255, 0.8) url(../images/icon14.png) no-repeat center center;
     }
     &:focus {
-      background: #ffffffb2 url(../images/icon14.png) no-repeat center center;
+      background: rgba(255, 255, 255, 0.8) url(../images/icon14.png) no-repeat center center;
     }
   }
 }
@@ -304,9 +312,13 @@
     }
   }
   .slick-prev {
-    left: 50px;
-    background: url(../images/icon13.png) no-repeat center center;
+    left: -60px;
+    background: rgba(255, 255, 255, 0.8) url(../images/icon13.png) no-repeat center center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100% 100%;
     z-index: 9;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.0705882353);
     @include max(1400px) {
       left: 20px;
     }
@@ -318,9 +330,14 @@
     }
   }
   .slick-next {
-    right: 50px;
-    background: url(../images/icon14.png) no-repeat center center;
+    right: -60px;
     z-index: 9;
+    background: rgba(255, 255, 255, 0.8) url(../images/icon14.png) no-repeat center center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100% 100%;
+    z-index: 9;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.0705882353);
     @include max(1400px) {
       right: 20px;
     }
