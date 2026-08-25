@@ -783,7 +783,7 @@
       font-size: 14px;
       font-weight: 700;
       line-height: 16px;
-      @include max(575px) {
+      @include max(767px) {
         font-size: 12px;
         line-height: 14px;
       }
@@ -795,7 +795,7 @@
       line-height: 14px;
       font-weight: 400;
       margin: 0 0 2px;
-      @include max(575px) {
+      @include max(767px) {
         font-size: 10px;
         line-height: 12px;
       }
@@ -894,7 +894,7 @@
       gap: 15px;
     }
     .success-image {
-      height: auto;
+      height: 400px;
       border-radius: 25px 25px;
     }
     .success-content {
