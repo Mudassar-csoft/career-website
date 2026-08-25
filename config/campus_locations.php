@@ -2,27 +2,39 @@
 
 return [
     [
-        'name' => 'Madina Town Branch',
-        'address' => 'P-49, Chenab Market, Susan Road, Block Z, Madina Town, Faisalabad, Pakistan',
-        'phone' => '041-8542950 / 0300-7662050',
-        'map' => 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3808.2315463269783!2d73.117695!3d31.41968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922686eab09f4f1%3A0x679e30a285de4fb1!2sCareer%20Institute%20-%20Madina%20Town%20Branch!5e1!3m2!1sen!2s!4v1782547783345!5m2!1sen!2s',
-    ],
-    [
         'name' => 'Jinnah Colony Branch',
-        'address' => 'Jinnah Colony, Faisalabad, Pakistan',
+        'address' => '2nd Floor, Fazal Heights, P-176, near GCU Road, Jinnah Colony, Faisalabad, Pakistan',
         'phone' => '0314-4444010',
-        'map' => 'https://www.google.com/maps?q=Career+Institute+Jinnah+Colony+Faisalabad&output=embed',
+        'map' => 'https://www.google.com/maps?q=Career+Institute+Jinnah+Colony+Branch,+2nd+Floor,+Fazal+Heights,+P-176,+Faisalabad,+Pakistan&output=embed',
     ],
     [
         'name' => 'Millat Chowk Branch',
-        'address' => 'Millat Chowk, Faisalabad, Pakistan',
+        'address' => 'B, P-165, 262 Millat Road, Millat Chowk, Faisalabad, 38000, Pakistan',
         'phone' => '0314-4444010',
-        'map' => 'https://www.google.com/maps?q=Career+Institute+Millat+Chowk+Faisalabad&output=embed',
+        'map' => 'https://www.google.com/maps?q=Career+Institute+Millat+Chowk+Branch,+P-165,+262+Millat+Road,+Faisalabad,+Pakistan&output=embed',
     ],
     [
-        'name' => 'Satyana Road Branch',
-        'address' => 'Satyana Road, Faisalabad, Pakistan',
+        'name' => 'Kohinoor Branch',
+        'address' => 'P-35, Ground Floor, Kohinoor City Road, Kohinoor City Madina Town Extension, Faisalabad, 38000, Pakistan',
         'phone' => '0314-4444010',
-        'map' => 'https://www.google.com/maps?q=Career+Institute+Satyana+Road+Faisalabad&output=embed',
+        'map' => 'https://www.google.com/maps?q=Career+Institute+Kohinoor+Branch,+P-35,+Kohinoor+City+Road,+Faisalabad,+Pakistan&output=embed',
+    ],
+    [
+        'name' => 'Satiana Road Branch',
+        'address' => 'P-703, Second Floor, Sethi Plaza, Satayana Road, Batala Colony Muhammadabad, Faisalabad, 38000, Pakistan',
+        'phone' => '0314-4444010',
+        'map' => 'https://www.google.com/maps?q=Career+Institute+Satiana+Road+Branch,+P-703,+Sethi+Plaza,+Faisalabad,+Pakistan&output=embed',
+    ],
+    [
+        'name' => 'Sahiwal Branch',
+        'address' => '1st Floor, Career Institute, P-4 College Chowk, Farid Town, Sahiwal, 57000, Pakistan',
+        'phone' => '0314-4444010',
+        'map' => 'https://www.google.com/maps?q=Career+Institute+Sahiwal+Branch,+P-4+College+Chowk,+Farid+Town,+Sahiwal,+Pakistan&output=embed',
+    ],
+    [
+        'name' => 'Sargodha Branch',
+        'address' => '1st Floor, Career Institute, Sherazi Tower, 108-A Zafar Ullah Chowk, Satellite Town, Sargodha, 40100, Pakistan',
+        'phone' => '0314-4444010',
+        'map' => 'https://www.google.com/maps?q=Career+Institute+Sargodha+Branch,+Sherazi+Tower,+108-A+Zafar+Ullah+Chowk,+Sargodha,+Pakistan&output=embed',
     ],
 ];
