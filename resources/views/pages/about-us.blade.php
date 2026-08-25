@@ -496,6 +496,7 @@
 	</div>
 </section>
 @endif
+@include('partials.campus-locations')
 @endsection
 @push('scripts')
 @endpush
