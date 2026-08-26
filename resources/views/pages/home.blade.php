@@ -16,16 +16,16 @@
                     <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
                         @csrf
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" name="name" placeholder="Full Name">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Course">
+                            <input type="text" class="form-control" name="course" placeholder="Course">
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" name="phone" placeholder="Contact">
+                            <input type="tel" class="form-control" name="phone" placeholder="Contact" required>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control" name="email" placeholder="example@gmail.com">
+                            <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
                         </div>
                         <div class="col-12 col-sm-6">
                             <select class="form-select">
@@ -47,6 +47,7 @@
                             <button type="submit" class="btn apply-btn">Apply Now</button>
                         </div>
                         <input type="hidden" name="source" value="Homepage Hero">
+                        <input type="hidden" name="lead_type" value="quick_lead">
                     </form>
                 </div>
             </div>

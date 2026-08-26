@@ -631,6 +631,7 @@
                             <button type="submit" class="btn sm-btn">Send Message</button>
                         </div>
                         <input type="hidden" name="source" value="Courses Enroll">
+                        <input type="hidden" name="lead_type" value="quick_lead">
                     </form>
                 </div>
             </div>

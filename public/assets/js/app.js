@@ -70,6 +70,56 @@ document.querySelectorAll(".dropdown").forEach(function (dropdown) {
 });
 
 
+function showLeadFeedback(form, isSuccess, message) {
+    var modalEl = document.getElementById('leadFeedbackModal');
+    var titleEl = document.getElementById('leadFeedbackTitle');
+    var messageEl = document.getElementById('leadFeedbackMessage');
+    var iconEl = document.getElementById('leadFeedbackIcon');
+
+    if (!modalEl || !titleEl || !messageEl || typeof bootstrap === 'undefined') {
+        return;
+    }
+
+    titleEl.textContent = isSuccess ? 'Request Submitted' : 'Unable to Submit Request';
+    messageEl.textContent = message;
+    modalEl.classList.toggle('is-error', !isSuccess);
+    if (iconEl) {
+        iconEl.classList.toggle('is-error', !isSuccess);
+        iconEl.innerHTML = isSuccess
+            ? '<i class="fas fa-check"></i>'
+            : '<i class="fas fa-exclamation"></i>';
+    }
+
+    var showFeedback = function () {
+        new bootstrap.Modal(modalEl).show();
+    };
+    var parentModal = form.closest('.modal');
+
+    if (parentModal && parentModal.classList.contains('show')) {
+        parentModal.addEventListener('hidden.bs.modal', showFeedback, { once: true });
+        bootstrap.Modal.getOrCreateInstance(parentModal).hide();
+        return;
+    }
+
+    showFeedback();
+}
+
+document.addEventListener('show.bs.modal', function (event) {
+    var modal = event.target;
+    var trigger = event.relatedTarget;
+
+    if (!trigger || (modal.id !== 'enroll-modal' && modal.id !== 'brochure-modal')) {
+        return;
+    }
+
+    var course = trigger.getAttribute('data-course');
+    var courseInput = modal.querySelector('input[name="course"]');
+
+    if (course && courseInput) {
+        courseInput.value = course;
+    }
+});
+
 document.addEventListener('submit', function (e) {
     var form = e.target;
     if (!form.classList || !form.classList.contains('lead-form')) {
@@ -79,15 +129,6 @@ document.addEventListener('submit', function (e) {
 
     var tokenMeta = document.querySelector('meta[name="csrf-token"]');
     var submitBtn = form.querySelector('[type="submit"]');
-
-    var msgEl = form.querySelector('.lead-form-message');
-    if (!msgEl) {
-        msgEl = document.createElement('div');
-        msgEl.className = 'lead-form-message';
-        msgEl.style.marginTop = '10px';
-        msgEl.style.fontSize = '14px';
-        form.appendChild(msgEl);
-    }
 
     if (submitBtn) {
         submitBtn.disabled = true;
@@ -107,15 +148,14 @@ document.addEventListener('submit', function (e) {
             });
         })
         .then(function (result) {
-            msgEl.textContent = result.data.message || (result.ok ? 'Thank you!' : 'Something went wrong.');
-            msgEl.style.color = result.ok ? '#03917a' : '#c53030';
+            var message = result.data.message || (result.ok ? 'Thank you!' : 'Something went wrong.');
             if (result.ok) {
                 form.reset();
             }
+            showLeadFeedback(form, result.ok, message);
         })
         .catch(function () {
-            msgEl.textContent = 'Something went wrong. Please try again.';
-            msgEl.style.color = '#c53030';
+            showLeadFeedback(form, false, 'Something went wrong. Please try again.');
         })
         .finally(function () {
             if (submitBtn) {

@@ -75,8 +75,8 @@
             <div class="col-lg-4">
                 <div class="rig-bar">
                     <div class="btn-bar">
-                        <a href="#" class="btn en-btn" data-bs-toggle="modal" data-bs-target="#enroll-modal">Enroll Now</a>
-                        <a href="#" class="btn db-btn" data-bs-toggle="modal" data-bs-target="#brochure-modal">Download Brochure</a>
+                        <a href="#" class="btn en-btn" data-bs-toggle="modal" data-bs-target="#enroll-modal" data-course="{{ $course->title }}">Enroll Now</a>
+                        <a href="#" class="btn db-btn" data-bs-toggle="modal" data-bs-target="#brochure-modal" data-course="{{ $course->title }}">Download Brochure</a>
                     </div>
                     <div class="s-link">
                         <h2>Share this Course</h2>
@@ -318,6 +318,7 @@
                             <button type="submit" class="btn sm-btn">Send Message</button>
                         </div>
                         <input type="hidden" name="source" value="Course Detail Enroll">
+                        <input type="hidden" name="lead_type" value="quick_lead">
                     </form>
                 </div>
             </div>

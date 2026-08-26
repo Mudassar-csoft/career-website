@@ -56,19 +56,19 @@
                         @csrf
                         <div class="col-md-12">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Your  Full Name ">
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Contact Number</label>
-                            <input type="text" class="form-control" name="phone" placeholder="Enter Your  Contact Number ">
+                            <input type="tel" class="form-control" name="phone" placeholder="Enter Your Contact Number" required>
                         </div>
                         <div class="col-md-12">
-                            <label class="form-label">Email Address (Optional)</label>
-                            <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter Your Email Address" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Interested Course or Certification</label>
-                            <input type="text" class="form-control" placeholder="Enter a Course or Certification of Your Interest">
+                            <input type="text" class="form-control" name="course" placeholder="Enter a Course or Certification of Your Interest">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">City of Residence</label>
@@ -79,9 +79,10 @@
                             <input type="text" class="form-control" placeholder="Enter Any Additional Information or Questions">
                         </div>
                         <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
+                            <button type="submit" class="btn sm-btn">Submit</button>
                         </div>
                         <input type="hidden" name="source" value="Online Admission Modal">
+                        <input type="hidden" name="lead_type" value="admission">
                     </form>
                 </div>
             </div>
@@ -104,24 +105,25 @@
                         @csrf
                         <div class="col-md-12">
                             <label class="form-label">Enter Interested Course</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Interested Course">
+                            <input type="text" class="form-control" name="course" placeholder="Enter Interested Course">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Your  Full Name ">
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Contact Number</label>
-                            <input type="text" class="form-control" name="phone" placeholder="Enter Your  Contact Number ">
+                            <input type="tel" class="form-control" name="phone" placeholder="Enter Your Contact Number" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Email Address</label>
-                            <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address">
+                            <input type="email" class="form-control" name="email" placeholder="Enter Your Email Address" required>
                         </div>
                         <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
+                            <button type="submit" class="btn sm-btn">Submit</button>
                         </div>
-                        <input type="hidden" name="source" value="Online Admission Modal">
+                        <input type="hidden" name="source" value="Course Enrollment Modal">
+                        <input type="hidden" name="lead_type" value="website_enrollment">
                     </form>
                 </div>
             </div>
@@ -135,7 +137,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Request Broucher</h5>
+                <h5 class="modal-title">Request Brochure</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -144,26 +146,45 @@
                         @csrf
                         <div class="col-md-12">
                             <label class="form-label">Enter Interested Course</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Interested Course">
+                            <input type="text" class="form-control" name="course" placeholder="Enter Interested Course">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="Enter Your  Full Name ">
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Contact Number</label>
-                            <input type="text" class="form-control" name="phone" placeholder="Enter Your  Contact Number ">
+                            <input type="tel" class="form-control" name="phone" placeholder="Enter Your Contact Number" required>
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Email Address</label>
-                            <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address">
+                            <input type="email" class="form-control" name="email" placeholder="Enter Your Email Address" required>
                         </div>
                         <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn sm-btn" data-bs-dismiss="modal">Submit</button>
+                            <button type="submit" class="btn sm-btn">Submit</button>
                         </div>
-                        <input type="hidden" name="source" value="Online Admission Modal">
+                        <input type="hidden" name="source" value="Course Brochure Modal">
+                        <input type="hidden" name="lead_type" value="brochure_lead">
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade career-model lead-feedback-modal" id="leadFeedbackModal" tabindex="-1" aria-labelledby="leadFeedbackTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="leadFeedbackTitle">Request Submitted</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="lead-feedback-icon" id="leadFeedbackIcon" aria-hidden="true">
+                    <i class="fas fa-check"></i>
+                </div>
+                <p id="leadFeedbackMessage"></p>
+                <button type="button" class="btn sm-btn" data-bs-dismiss="modal">Continue</button>
             </div>
         </div>
     </div>
@@ -215,4 +236,3 @@
         </div>
     </div>
 </div>
-

@@ -5004,6 +5004,55 @@
     }
   }
 }
+
+.lead-feedback-modal {
+  .modal-dialog {
+    max-width: 440px;
+  }
+
+  .modal-body {
+    padding: 34px 30px 32px !important;
+    text-align: center;
+  }
+
+  .lead-feedback-icon {
+    align-items: center;
+    background: rgba(3, 197, 135, 0.12);
+    border: 1px solid rgba(3, 197, 135, 0.32);
+    border-radius: 50%;
+    color: #03a980;
+    display: flex;
+    font-size: 24px;
+    height: 64px;
+    justify-content: center;
+    margin: 0 auto 20px;
+    width: 64px;
+
+    &.is-error {
+      background: rgba(198, 48, 48, 0.1);
+      border-color: rgba(198, 48, 48, 0.3);
+      color: #c53030;
+    }
+  }
+
+  #leadFeedbackMessage {
+    color: #03917a;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 auto 25px;
+    max-width: 340px;
+  }
+
+  .sm-btn {
+    min-width: 132px;
+  }
+
+  &.is-error #leadFeedbackMessage {
+    color: #c53030;
+  }
+}
+
 #Verification-modal {
   .modal-dialog {
     max-width: 600px;

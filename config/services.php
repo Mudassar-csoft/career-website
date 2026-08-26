@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'ims' => [
+        'web_leads_url' => env('IMS_WEB_LEADS_URL', 'https://ims.career.edu.pk/api/web-leads'),
+    ],
+
 ];
