@@ -94,36 +94,39 @@
                     <h2>Schedule your exam</h2>
                 </div>
             </div>
-            <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+            <form class="row g-3 lead-form" method="POST" action="{{ route('exam-inquiries.store') }}">
                 @csrf
                 <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Enter Exam Title">
+                    <input type="text" class="form-control" name="exam_title" placeholder="Enter Exam Title" required>
                 </div>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" placeholder="Exam Code">
+                    <input type="text" class="form-control" name="exam_code" placeholder="Exam Code">
                 </div>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" name="name" placeholder="Full Name">
+                    <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                 </div>
                 <div class="col-md-4">
-                    <input type="email" class="form-control" name="email" placeholder="Email">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
                 </div>
                 <div class="col-md-4">
-                    <select id="inputcity" class="form-select">
-                        <option selected>Select City</option>
-                        <option>...</option>
+                    <select id="inputcity" class="form-select" name="city" required>
+                        <option value="" selected disabled>Select City</option>
+                        <option value="Faisalabad">Faisalabad</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Sahiwal">Sahiwal</option>
+                        <option value="Sargodha">Sargodha</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <input type="date" class="form-control" placeholder="mm/dd/yy">
+                    <input type="date" class="form-control" name="preferred_date" required>
                 </div>
                 <div class="col-md-12">
-                    <textarea rows="7" class="form-control" placeholder="Message"></textarea>
+                    <textarea rows="7" class="form-control" name="message" placeholder="Message"></textarea>
                 </div>
                 <div class="col-12 text-center">
                     <button type="submit" class="btn sr-btn">Submit Request</button>
                 </div>
-                <input type="hidden" name="source" value="PSI Exam Booking">
+                <input type="hidden" name="exam_provider" value="PSI">
             </form>
         </div>
     </div>

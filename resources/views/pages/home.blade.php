@@ -506,27 +506,26 @@
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
-                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                    <form class="row g-3 lead-form" method="POST" action="{{ route('partner-inquiries.store') }}">
                         @csrf
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="800">
-                            <input type="text" class="form-control" name="name" placeholder="Full Name">
+                            <input type="text" class="form-control" name="name" placeholder="Full Name" required>
                         </div>
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="900">
-                            <input type="text" class="form-control" name="phone" placeholder="Contact no">
+                            <input type="text" class="form-control" name="phone" placeholder="Contact no" required>
                         </div>
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                            <input type="email" class="form-control" name="email" placeholder="Email Address">
+                            <input type="email" class="form-control" name="email" placeholder="Email Address" required>
                         </div>
                         <div class="col-sm-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100">
-                            <input type="text" class="form-control" placeholder="Business Interest">
+                            <input type="text" class="form-control" name="business_interest" placeholder="Business Interest" required>
                         </div>
                         <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1200">
-                            <textarea rows="7" class="form-control" placeholder="Describe Partnership opportunity"></textarea>
+                            <textarea rows="7" class="form-control" name="partnership_opportunity" placeholder="Describe Partnership opportunity" required></textarea>
                         </div>
                         <div class="col-12 text-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1300">
                             <button type="submit" class="btn apply-btn mt-4">Apply Now</button>
                         </div>
-                        <input type="hidden" name="source" value="Partner Inquiry - Home">
                     </form>
                 </div>
             </div>

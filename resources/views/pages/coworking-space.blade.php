@@ -194,33 +194,36 @@
                         shared spaces, our solutions offer the flexibility and value you need to succeed.<br>
                         We’re Here to Help You Achieve Your Goals!.
                     </p>
-                    <form class="row g-2 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                    <form class="row g-2 lead-form" method="POST" action="{{ route('coworking-inquiries.store') }}">
                         @csrf
                         <div class="col-md-6">
-                            <input type="text" class="form-control" name="name" placeholder="Name">
+                            <input type="text" class="form-control" name="name" placeholder="Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" name="phone" placeholder="Contact">
+                            <input type="text" class="form-control" name="phone" placeholder="Contact" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="City">
+                            <input type="text" class="form-control" name="city" placeholder="City" required>
                         </div>
                         <div class="col-md-6">
-                            <select class="form-select">
-                                <option selected>I’m Intrested in</option>
-                                <option>...</option>
+                            <select class="form-select" name="interested_in" required>
+                                <option value="" selected disabled>I'm Interested in</option>
+                                <option value="Shared Workspace">Shared Workspace</option>
+                                <option value="Dedicated Desk">Dedicated Desk</option>
+                                <option value="Private Office">Private Office</option>
+                                <option value="Meeting Room">Meeting Room</option>
+                                <option value="Event Space">Event Space</option>
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="No of Persons">
+                            <input type="number" min="1" class="form-control" name="number_of_persons" placeholder="No of Persons" required>
                         </div>
                         <div class="col-12 text-center">
                             <button type="submit" class="btn sr-btn">Submit Request</button>
                         </div>
-                        <input type="hidden" name="source" value="Coworking Space">
                     </form>
                 </div>
             </div>

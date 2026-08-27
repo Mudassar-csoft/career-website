@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdmissionConfirmationMail;
+use App\Mail\CareerCounselingConfirmationMail;
 use App\Mail\LeadNotificationMail;
+use App\Mail\NewsletterSubscriptionConfirmationMail;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -79,6 +82,8 @@ class SubscriberController extends Controller
             $subscriber = Subscriber::where('phone', $validated['phone'])->first();
         }
 
+        $wasNewsletterSubscriber = $subscriber && $this->isNewsletterSubscription($subscriber);
+
         if ($subscriber) {
             $subscriber->fill(array_filter($subscriberData))->save();
         } else {
@@ -92,6 +97,33 @@ class SubscriberController extends Controller
             Mail::to($recipient)->send(new LeadNotificationMail($subscriber));
         } catch (\Throwable $exception) {
             report($exception);
+        }
+
+        if ($isImsLead && $validated['lead_type'] === 'quick_lead') {
+            try {
+                Mail::to($subscriber->email)->send(new CareerCounselingConfirmationMail($subscriber));
+            } catch (\Throwable $exception) {
+                report($exception);
+            }
+        }
+
+        if ($isImsLead && in_array($validated['lead_type'], ['admission', 'brochure_lead', 'website_enrollment'], true)) {
+            try {
+                Mail::to($subscriber->email)->send(new AdmissionConfirmationMail(
+                    $subscriber,
+                    $validated['course'] ?? null,
+                ));
+            } catch (\Throwable $exception) {
+                report($exception);
+            }
+        }
+
+        if ($this->isNewsletterSubscription($subscriber) && ! $wasNewsletterSubscriber) {
+            try {
+                Mail::to($subscriber->email)->send(new NewsletterSubscriptionConfirmationMail($subscriber));
+            } catch (\Throwable $exception) {
+                report($exception);
+            }
         }
 
         $message = $isImsLead
@@ -142,6 +174,11 @@ class SubscriberController extends Controller
 
         return data_get($response->json(), 'message')
             ?: 'We could not submit your request. Please check your details and try again.';
+    }
+
+    private function isNewsletterSubscription(Subscriber $subscriber): bool
+    {
+        return str_starts_with(strtolower((string) $subscriber->source), 'newsletter -');
     }
 
     private function successMessage(string $leadType): string

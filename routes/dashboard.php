@@ -5,17 +5,20 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CollaboratorController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CoworkingInquiryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EventGalleryController;
 use App\Http\Controllers\EventRegistrantController;
+use App\Http\Controllers\ExamInquiryController;
 use App\Http\Controllers\FaqCategoryController;
 use App\Http\Controllers\FaqController;
-use App\Http\Controllers\JobOfferController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\GalleryImageController;
+use App\Http\Controllers\JobOfferController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PartnerInquiryController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SuccessStoryController;
 use App\Http\Controllers\UserController;
@@ -159,6 +162,18 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::get('/messages', [NewsletterController::class, 'messages'])->name('messages')->middleware('can:newsletter.view');
         Route::post('/send', [NewsletterController::class, 'send'])->name('send')->middleware('can:newsletter.send');
     });
+
+    Route::get('/partner-inquiries', [PartnerInquiryController::class, 'index'])
+        ->name('partner-inquiries.index')
+        ->middleware('can:partners.view');
+
+    Route::get('/coworking-inquiries', [CoworkingInquiryController::class, 'index'])
+        ->name('coworking-inquiries.index')
+        ->middleware('can:coworking.view');
+
+    Route::get('/exam-inquiries', [ExamInquiryController::class, 'index'])
+        ->name('exam-inquiries.index')
+        ->middleware('can:exams.view');
 
     Route::prefix('roles')->name('roles.')->group(function () {
         Route::get('/', [RoleController::class, 'index'])->name('index')->middleware('can:roles.view');

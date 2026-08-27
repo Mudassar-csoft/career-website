@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\EventFeeVoucherMail;
+use App\Mail\EventOperationsNotificationMail;
 use App\Mail\EventPassMail;
 use App\Models\Event;
 use App\Models\EventCategory;
@@ -111,6 +112,8 @@ class EventRegistrationController extends Controller
             'token' => Str::random(40),
         ]);
 
+        $this->notifyOperations('events', 'registration', $registration);
+
         if ($event->is_paid) {
             Mail::to($registration->email)->send(new EventFeeVoucherMail($registration));
 
@@ -149,6 +152,23 @@ class EventRegistrationController extends Controller
             'fee_proof' => $validated['fee_proof']->store('event-fee-proofs', 'public'),
         ]);
 
+        $this->notifyOperations('payments', 'payment receipt', $registration);
+
         return back()->with('status', 'Thanks! Your payment receipt was submitted and is awaiting review. You will receive your pass by email once it is confirmed.');
+    }
+
+    private function notifyOperations(string $recipientKey, string $notificationType, EventRegistration $registration): void
+    {
+        $recipient = config("lead-recipients.addresses.{$recipientKey}");
+
+        if (! $recipient) {
+            return;
+        }
+
+        try {
+            Mail::to($recipient)->send(new EventOperationsNotificationMail($registration, $notificationType));
+        } catch (\Throwable $exception) {
+            report($exception);
+        }
     }
 }

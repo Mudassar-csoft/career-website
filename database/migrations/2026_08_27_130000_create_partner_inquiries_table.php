@@ -1,0 +1,26 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('partner_inquiries', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('phone', 30);
+            $table->string('email');
+            $table->string('business_interest');
+            $table->text('partnership_opportunity');
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('partner_inquiries');
+    }
+};

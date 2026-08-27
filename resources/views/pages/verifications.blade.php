@@ -3,6 +3,8 @@
 @section('title', 'Verifications | Career Website')
 @section('body_class', 'veri-page')
 
+@php($verificationEmail = config('lead-recipients.addresses.verifications'))
+
 @section('content')
 <section class="top-banner">
     <div class="container">
@@ -98,7 +100,7 @@
         const modal = new bootstrap.Modal(document.getElementById('verificationResultModal'));
         const supportDetails = [
             'Please contact the administration of Career Institute for assistance.',
-            'Email: verifications@career.edu.pk',
+            @json('Email: '.$verificationEmail),
             'Call: +92-314-4444010',
             'We are here to help you resolve the issue as soon as possible.',
         ];

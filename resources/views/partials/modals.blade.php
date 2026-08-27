@@ -211,7 +211,7 @@
 
                 </p>
                 <ul>
-                    <li>Email:<a href="mailto:verifications@career.edu.pk">verifications@career.edu.pk</a></li>
+                    <li>Email:<a href="mailto:{{ config('lead-recipients.addresses.verifications') }}">{{ config('lead-recipients.addresses.verifications') }}</a></li>
                     <li>Email:<a href="tel:+923144444010">+92-314-4444010</a></li>
                 </ul>
                 <p>

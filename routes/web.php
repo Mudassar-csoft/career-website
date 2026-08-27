@@ -1,16 +1,19 @@
 <?php
 
-use App\Http\Controllers\BlogMediaController;
 use App\Http\Controllers\BlogImageMediaController;
+use App\Http\Controllers\BlogMediaController;
 use App\Http\Controllers\CourseMediaController;
-use App\Http\Controllers\EventRegistrationController;
+use App\Http\Controllers\CoworkingInquiryController;
 use App\Http\Controllers\EventMediaController;
+use App\Http\Controllers\EventRegistrationController;
+use App\Http\Controllers\ExamInquiryController;
 use App\Http\Controllers\GalleryMediaController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PublicJobPlacementController;
+use App\Http\Controllers\PartnerInquiryController;
 use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
 use App\Http\Controllers\PublicFaqController;
+use App\Http\Controllers\PublicJobPlacementController;
 use App\Http\Controllers\PublicNewsController;
 use App\Http\Controllers\PublicSuccessStoryController;
 use App\Http\Controllers\SubscriberController;
@@ -20,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
+Route::post('/partner-inquiries', [PartnerInquiryController::class, 'store'])->name('partner-inquiries.store');
+Route::post('/coworking-inquiries', [CoworkingInquiryController::class, 'store'])->name('coworking-inquiries.store');
+Route::post('/exam-inquiries', [ExamInquiryController::class, 'store'])->name('exam-inquiries.store');
 
 Route::get('/events', [EventRegistrationController::class, 'index'])->name('events');
 Route::get('/event-image/{image}', [EventMediaController::class, 'show'])->name('events.image');

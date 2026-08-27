@@ -46,6 +46,15 @@ trait BuildsDashboardMenu
                 ['label' => 'All Subscribers', 'route' => 'dashboard.newsletter.index', 'permission' => 'newsletter.view'],
                 ['label' => 'Messages', 'route' => 'dashboard.newsletter.messages', 'permission' => 'newsletter.view'],
             ]],
+            ['key' => 'partners', 'label' => 'Partners', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Partner Inquiries', 'route' => 'dashboard.partner-inquiries.index', 'permission' => 'partners.view'],
+            ]],
+            ['key' => 'coworking', 'label' => 'Coworking', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Coworking Inquiries', 'route' => 'dashboard.coworking-inquiries.index', 'permission' => 'coworking.view'],
+            ]],
+            ['key' => 'exams', 'label' => 'Exams', 'type' => 'dropdown', 'children' => [
+                ['label' => 'Exam Inquiries', 'route' => 'dashboard.exam-inquiries.index', 'permission' => 'exams.view'],
+            ]],
             ['key' => 'events', 'label' => 'Events', 'type' => 'dropdown', 'children' => [
                 ['label' => 'Create Event', 'route' => 'dashboard.events.create', 'permission' => 'events.create'],
                 ['label' => 'All Events', 'route' => 'dashboard.events.index', 'permission' => 'events.view'],

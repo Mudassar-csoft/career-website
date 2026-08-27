@@ -224,7 +224,7 @@
                     <h3><img src="{{ asset('assets/images/icon67.svg') }}" alt="Career Institute feature icon"> Note</h3>
                     <p>
                         Make payments to specified bank accounts through online banking, ATM, or internet banking for your course at <b>Career.edu.pk.</b> After payment, send deposit slip image
-                        with Course Name or invoice reference to <b>accounts@career.edu.pk</b> or <b>WhatsApp at 0314-5000083.</b>
+                        with Course Name or invoice reference to <a href="mailto:{{ config('lead-recipients.addresses.payments') }}"><b>{{ config('lead-recipients.addresses.payments') }}</b></a> or <b>WhatsApp at 0314-5000083.</b>
                     </p>
                 </div>
             </div>

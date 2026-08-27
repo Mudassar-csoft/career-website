@@ -122,6 +122,27 @@ return [
         ],
     ],
 
+    'partners' => [
+        'label' => 'Partners',
+        'actions' => [
+            'view' => 'View Partner Inquiries',
+        ],
+    ],
+
+    'coworking' => [
+        'label' => 'Coworking',
+        'actions' => [
+            'view' => 'View Coworking Inquiries',
+        ],
+    ],
+
+    'exams' => [
+        'label' => 'Exams',
+        'actions' => [
+            'view' => 'View Exam Inquiries',
+        ],
+    ],
+
     'users' => [
         'label' => 'Users',
         'actions' => [
