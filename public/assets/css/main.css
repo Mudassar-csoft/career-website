@@ -9221,10 +9221,45 @@ body {
 }
 #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide {
   border: 0;
+  height: 600px;
+  padding: 0 5rem;
+}
+@media (max-width: 992px) {
+  #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide {
+    height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide {
+    height: 350px;
+  }
+}
+@media (max-width: 575px) {
+  #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide {
+    height: 100%;
+    padding: 0;
+  }
 }
 #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide img {
   width: 100%;
-  padding: 0 5rem;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 15px 15px;
+}
+@media (max-width: 992px) {
+  #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide img {
+    height: 400px;
+  }
+}
+@media (max-width: 767px) {
+  #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide img {
+    height: 350px;
+  }
+}
+@media (max-width: 575px) {
+  #galleryModal .modal-dialog .modal-content .modal-body .swiper-slide img {
+    height: 100%;
+  }
 }
 #galleryModal .modal-dialog .modal-content .modal-body .swiper-button-next {
   background: rgba(255, 255, 255, 0.6980392157);
@@ -9256,6 +9291,11 @@ body {
   left: auto;
   right: 6.5rem;
   top: 1.5rem;
+}
+@media (max-width: 575px) {
+  #galleryModal .modal-dialog .modal-content .modal-header .btn-close {
+    right: 2rem;
+  }
 }
 #galleryModal .modal-dialog .modal-content .modal-header .btn-close:focus {
   box-shadow: none;
