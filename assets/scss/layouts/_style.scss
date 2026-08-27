@@ -5579,6 +5579,9 @@
           left: auto;
           right: 6.5rem;
           top: 1.5rem;
+          @include max(575px) {
+            right: 2rem;
+          }
           &:focus {
             box-shadow: none;
             border: 0;
