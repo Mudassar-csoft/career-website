@@ -5517,9 +5517,32 @@
         padding: 0;
         .swiper-slide {
           border: 0;
+          height: 600px;
+          padding: 0 5rem;
+          @include max(992px) {
+            height: 400px;
+          }
+          @include max(767px) {
+            height: 350px;
+          }
+          @include max(575px) {
+            height: 100%;
+            padding: 0;
+          }
           img {
             width: 100%;
-            padding: 0 5rem;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 15px 15px;
+            @include max(992px) {
+              height: 400px;
+            }
+            @include max(767px) {
+              height: 350px;
+            }
+            @include max(575px) {
+              height: 100%;
+            }
           }
         }
         .swiper-button-next {
