@@ -18,7 +18,7 @@
   .form-block {
     margin: 0 0 4rem;
     .form-control,
-    select {
+    select { 
       @include inputbar;
     }
     .form-check {

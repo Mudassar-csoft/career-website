@@ -58,7 +58,7 @@
                                                 >
                                             </div>
                                             <div class="col-12 text-center mt-4 mt-xxl-5">
-                                                <button type="submit" class="btn sm-btn" id="submit_Button">Verify Now</button>
+                                                <a href="#"  class="btn sm-btn" id="submit_Button" data-bs-toggle="modal" data-bs-target="#verified-modal">Verify Now</a>
                                             </div>
                                         </form>
                                     </div>
@@ -80,17 +80,144 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title h5" id="verificationResultTitle"></h2>
+                <h5 class="modal-title" id="verificationResultTitle"> <img src="assets/images/icon149.svg" alt=""> Enter Your Verification ID</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="verificationResultBody"></div>
+            <div class="modal-body" id="verificationResultBody">
+                <p>
+                    Please enter your Verification ID to proceed with the verification.
+                </p>
+                <p>
+                    Please contact the administration of Career Institute for assistance.
+                </p>
+                <div class="box">
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mailto:verifications@career.edu.pk">Email: verifications@career.edu.pk</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="mailto:tel:+923144444010">Call: +92-314-4444010</a>
+                        </li>
+                    </ul>
+                </div>
+                <h4>
+                    <i class="fas fa-info-circle"></i>
+                    We are here to help you resolve the issue as soon as possible.
+                </h4>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade career-model" id="not-verified-modal" tabindex="-1" aria-labelledby="verificationResultTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="verificationResultTitle"> <img src="assets/images/icon150.svg" alt="">Certificate Not Verified</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="verificationResultBody">
+                <p>
+                    <i class="fas fa-times-circle"></i> No matching records found for the provided Verification ID.
+                </p>
+                <p>
+                    Please contact the administration of Career Institute for assistance.
+                </p>
+                <div class="box">
+                    <ul>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mailto:verifications@career.edu.pk">Email: verifications@career.edu.pk</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="mailto:tel:+923144444010">Call: +92-314-4444010</a>
+                        </li>
+                    </ul>
+                </div>
+                <h4>
+                    <i class="fas fa-info-circle"></i>
+                    We are here to help you resolve the issue as soon as possible.
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade career-model" id="verified-modal" tabindex="-1" aria-labelledby="verificationResultTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="verificationResultTitle"> <img src="assets/images/icon151.svg" alt="">Certificate Verified Successfully!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="verificationResultBody">
+                <ul>
+                    <li>
+                        <p>
+                            <i class="fas fa-user"></i> Name
+                        </p>
+                        <p>
+                            Iqra ata Muhammad
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-users"></i> Guardian Name
+                        </p>
+                        <p>
+                            Atta Muhammad
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="far fa-credit-card"></i> Roll Number
+                        </p>
+                        <p>
+                            CIFSD04-GRD010-26-03
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-book-open"></i> Course Completed
+                        </p>
+                        <p>
+                            Graphics Designing
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-calendar-minus"></i> Course Duration
+                        </p>
+                        <p>
+                            2-Months
+                        </p>
+                    </li>
+                </ul>
+                <div class="b-box">
+                    <h4>
+                        <i class="fas fa-heart"></i>
+                        Congratulations, Iqra ata Muhammad!
+                    </h4>
+                    <p>
+                        Your certificate has been successfully verified.
+                    </p>
+                    <p>
+                        For further information call us at :+92-314-4444010
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @push('scripts')
-<script>
+{{-- <script>
     (() => {
         const form = document.getElementById('certificate-verification-form');
         const input = document.getElementById('roll_number');
@@ -178,5 +305,5 @@
             }
         });
     })();
-</script>
+</script> --}}
 @endpush
