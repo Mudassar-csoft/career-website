@@ -322,7 +322,7 @@
                             <img src="assets/images/img02.png" alt="Career Institute campus">
                         </div>
                         <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Adeel Javaid - Director</h6>
-                        <div class="s-link" >
+                        {{-- <div class="s-link" >
                             <ul>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt="Career Institute feature icon"></a></li>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100"><a href="#"><img src="assets/images/icon76.svg" alt="Career Institute feature icon"></a></li>
@@ -330,7 +330,7 @@
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1300"><a href="#"><img src="assets/images/icon78.svg" alt="Career Institute feature icon"></a></li>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1400"><a href="#"><img src="assets/images/icon79.svg" alt="Career Institute feature icon"></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
                             <span class=" coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span><b>
                             Our vision</b>  is to transform education into meaningful<br>
@@ -340,7 +340,7 @@
                             to succeed in a rapidly evolving global workforce.
                             <span class="round coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon">
                         </p>
-                        <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
+                        {{-- <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
                             Inspired by rapid technological advancement and the changing global landscape,
                             I founded this initiative to guide talent toward the right career path and build future
                             IT leaders. As an IT professional and businessman, I believe education is the key to
@@ -349,7 +349,7 @@
                             Our goal is to transform students into IT specialists, encourage innovation, and
                             prepare them for successful careers while promoting Pakistan’s technological
                             growth on an international level.
-                        </h4>
+                        </h4> --}}
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -358,7 +358,7 @@
                             <img src="assets/images/img104.png" alt="Samreen Rafiq, Director of Career Institute">
                         </div>
                         <h6 class="aos-init aos-animate" data-aos="zoom-out-up" data-aos-duration="800">Samreen Rafiq - Director</h6>
-                        <div class="s-link">
+                        {{-- <div class="s-link">
                             <ul>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1000"><a href="#"><img src="assets/images/icon75.svg" alt="Career Institute feature icon"></a></li>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1100"><a href="#"><img src="assets/images/icon76.svg" alt="Career Institute feature icon"></a></li>
@@ -366,7 +366,7 @@
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1300"><a href="#"><img src="assets/images/icon78.svg" alt="Career Institute feature icon"></a></li>
                                 <li class="aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1400"><a href="#"><img src="assets/images/icon79.svg" alt="Career Institute feature icon"></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                         <p class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1100">
                             <span class="coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
                             <b>At Career</b> Institute  we believe every learner has unique<br>
@@ -376,7 +376,7 @@
                             and achieve lifelong professional growth.
                             <span class="round coma"><img src="assets/images/icon08.png" alt="Career Institute feature icon"></span>
                         </p>
-                        <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
+                        {{-- <h4 class="aos-init aos-animate" data-aos="zoom-out-down" data-aos-duration="1200">
                             Inspired by rapid technological advancement and the changing global landscape,
                             I founded this initiative to guide talent toward the right career path and build future
                             IT leaders. As an IT professional and businessman, I believe education is the key to
@@ -385,7 +385,7 @@
                             Our goal is to transform students into IT specialists, encourage innovation, and
                             prepare them for successful careers while promoting Pakistan’s technological
                             growth on an international level.
-                        </h4>
+                        </h4> --}}
                     </div>
                 </div>
             </div>
