@@ -452,6 +452,8 @@
                         ['image' => 'img83.png', 'name' => 'Kryterion'],
                         ['image' => 'img84.png', 'name' => 'Kryterion'],
                         ['image' => 'img85.png', 'name' => 'Kryterion'],
+                        ['image' => 'img105.png', 'name' => 'Kryterion'],
+                        ['image' => 'img106.png', 'name' => 'Kryterion'],
                     ] as $collaborator)
                         <div>
                             <div class="img-hold">

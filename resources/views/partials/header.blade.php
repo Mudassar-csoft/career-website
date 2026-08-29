@@ -4,7 +4,7 @@
         <div class="container">
             <div class="d-flex justify-content-md-between justify-content-center align-items-center">
                 <div class="top-contact d-flex align-items-center">
-                    <a href="tel:03414444101">
+                    <a href="tel:03414444010">
                     <i class="fas fa-phone-alt"></i>
                         0341-4444010
                     </a>

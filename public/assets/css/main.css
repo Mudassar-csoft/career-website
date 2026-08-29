@@ -14992,6 +14992,7 @@ body {
 }
 .logo-slider .slick-slide .img-hold img {
   width: auto;
+  object-fit: contain;
 }
 .logo-slider .slick-prev:before,
 .logo-slider .slick-next:before {
