@@ -16,6 +16,7 @@ class PublicNewsController extends Controller
         $newsItems = News::query()
             ->with('type')
             ->when($selectedNewsType, fn ($query) => $query->where('news_type_id', $selectedNewsType->id))
+            ->orderByDesc('published_at')
             ->latest()
             ->paginate(7)
             ->withQueryString();
@@ -26,7 +27,7 @@ class PublicNewsController extends Controller
             'newsItems' => $newsItems,
             'featuredNews' => $pageItems->first(),
             'otherNews' => $pageItems->skip(1)->values(),
-            'recentPosts' => News::with('type')->latest()->take(5)->get(),
+            'recentPosts' => News::with('type')->orderByDesc('published_at')->latest()->take(5)->get(),
             'newsTypes' => NewsType::withCount('news')->orderBy('name')->get(),
             'selectedNewsType' => $selectedNewsType,
         ]);
@@ -36,7 +37,7 @@ class PublicNewsController extends Controller
     {
         return view('pages.news-detail', [
             'news' => $news->load('type'),
-            'relatedNews' => News::where('id', '!=', $news->id)->latest()->take(5)->get(),
+            'relatedNews' => News::where('id', '!=', $news->id)->orderByDesc('published_at')->latest()->take(5)->get(),
             'newsTypes' => NewsType::withCount('news')->orderBy('name')->get(),
         ]);
     }

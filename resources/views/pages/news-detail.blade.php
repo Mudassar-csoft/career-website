@@ -24,7 +24,7 @@
                         </p>
                         <span>
                             <img src="{{ asset('assets/images/icon127.png') }}" alt="Publication date">
-                            {{ $news->created_at->format('d-m-Y') }}
+                            {{ $news->publication_date->format('d-m-Y') }}
                         </span>
                     </div>
                     <div class="mid-area">
@@ -50,7 +50,7 @@
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $post->title }}</h3>
-                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt="Publication date"> {{ $post->created_at->format('d-m-Y') }}</span>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt="Publication date"> {{ $post->publication_date->format('d-m-Y') }}</span>
                                             </div>
                                         </a>
                                     </li>

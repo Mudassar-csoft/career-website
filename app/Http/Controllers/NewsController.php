@@ -21,7 +21,7 @@ class NewsController extends Controller
         return view('dashboard.news.index', [
             'screens' => $this->screens(),
             'active' => 'news',
-            'newsItems' => News::with('type')->latest()->get(),
+            'newsItems' => News::with('type')->orderByDesc('published_at')->latest()->get(),
         ]);
     }
 
@@ -87,6 +87,7 @@ class NewsController extends Controller
             'subtitle' => ['nullable', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'unique:news,slug,'.($news->id ?? 'NULL').',id', 'alpha_dash'],
             'news_type_id' => ['required', 'exists:news_types,id'],
+            'published_at' => ['required', 'date'],
             'image' => DashboardImageUpload::rules(),
             'content' => ['nullable', 'string'],
             'meta_title' => ['nullable', 'string', 'max:255'],
@@ -126,6 +127,7 @@ class NewsController extends Controller
 
         if (Storage::disk('public')->exists($storagePath)) {
             Storage::disk('public')->delete($storagePath);
+
             return;
         }
 

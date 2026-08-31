@@ -8,7 +8,16 @@ use Illuminate\Support\Facades\Storage;
 
 class News extends Model
 {
-    protected $fillable = ['news_type_id', 'title', 'subtitle', 'slug', 'image', 'content', 'meta_title', 'meta_description', 'meta_keywords'];
+    protected $fillable = ['news_type_id', 'title', 'subtitle', 'slug', 'image', 'content', 'published_at', 'meta_title', 'meta_description', 'meta_keywords'];
+
+    protected $casts = [
+        'published_at' => 'date',
+    ];
+
+    public function getPublicationDateAttribute()
+    {
+        return $this->published_at ?? $this->created_at;
+    }
 
     public function getImageUrlAttribute(): string
     {

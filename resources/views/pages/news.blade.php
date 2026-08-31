@@ -60,7 +60,7 @@
                                                 <div class="last-box">
                                                     <span>
                                                         <img src="{{ asset('assets/images/icon127.png') }}" alt="Publication date">
-                                                        {{ $featuredNews->created_at->format('d-m-Y') }}
+                                                        {{ $featuredNews->publication_date->format('d-m-Y') }}
                                                     </span>
                                                     <a href="{{ route('news-detail', $featuredNews->slug) }}" class="btn ra-btn">Read full Article</a>
                                                 </div>
@@ -93,7 +93,7 @@
                                                     <div class="workshop-card__footer">
                                                         <div class="workshop-card__date">
                                                             <img src="{{ asset('assets/images/icon127.png') }}" alt="Workshop">
-                                                            <span>{{ $item->created_at->format('d-m-Y') }}</span>
+                                                            <span>{{ $item->publication_date->format('d-m-Y') }}</span>
                                                         </div>
                                                         <a href="{{ route('news-detail', $item->slug) }}" class="workshop-card__btn">
                                                             Read More
@@ -128,7 +128,7 @@
                                             </div>
                                             <div class="text-hold">
                                                 <h3>{{ $post->title }}</h3>
-                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt="Publication date"> {{ $post->created_at->format('d-m-Y') }}</span>
+                                                <span><img src="{{ asset('assets/images/icon126.png') }}" alt="Publication date"> {{ $post->publication_date->format('d-m-Y') }}</span>
                                             </div>
                                         </a>
                                     </li>

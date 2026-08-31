@@ -60,6 +60,19 @@
                             <p class="dash-form-error">{{ $message }}</p>
                         @enderror
                     </div>
+                    <div class="dash-form-group">
+                        <label for="news-published-at">News Date</label>
+                        <input
+                            type="date"
+                            id="news-published-at"
+                            name="published_at"
+                            value="{{ old('published_at', $news->publication_date?->format('Y-m-d') ?? now()->format('Y-m-d')) }}"
+                            required
+                        >
+                        @error('published_at')
+                            <p class="dash-form-error">{{ $message }}</p>
+                        @enderror
+                    </div>
                 </div>
 
                 <div class="dash-form-group">
