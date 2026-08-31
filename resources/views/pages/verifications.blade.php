@@ -224,10 +224,6 @@
             body.classList.add('is-verified');
 
             const fields = buildFields(response);
-            const summary = document.createElement('div');
-            summary.className = 'verification-success-summary';
-            summary.innerHTML = '<span class="verification-success-mark" aria-hidden="true">✓</span><div><p class="verification-success-eyebrow">Authenticity confirmed</p><p class="verification-success-copy">This credential is recorded and verified by Career Institute.</p></div>';
-
             const details = document.createElement('dl');
             details.className = 'verification-details';
 
@@ -242,11 +238,12 @@
                 details.appendChild(row);
             });
 
-            const note = document.createElement('p');
+            const note = document.createElement('div');
             note.className = 'verification-success-note';
-            note.textContent = `Well done, ${response.name || 'student'}. Keep this verification ID for your records.`;
+            note.innerHTML = '<span class="verification-note-mark" aria-hidden="true"></span><div class="verification-note-content"><p class="verification-note-title"></p><p class="verification-note-copy">Please keep this verification ID safe for your records.</p><p class="verification-note-contact">For further verification, call <a href="tel:+923144444010">0314-4444010</a> or visit <a href="https://www.career.edu.pk" target="_blank" rel="noopener noreferrer">www.career.edu.pk</a>.</p></div>';
+            note.querySelector('.verification-note-title').textContent = `Congratulations, ${response.name || 'student'}!`;
 
-            body.append(summary, details, note);
+            body.append(details, note);
             modal.show();
         }
 

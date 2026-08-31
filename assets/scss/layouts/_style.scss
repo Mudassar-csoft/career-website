@@ -5107,45 +5107,6 @@
     padding: 26px 30px 30px;
   }
 
-  .verification-success-summary {
-    align-items: flex-start;
-    border-bottom: 1px solid #d9eee6;
-    display: flex;
-    gap: 13px;
-    margin-bottom: 20px;
-    padding-bottom: 19px;
-  }
-
-  .verification-success-mark {
-    align-items: center;
-    background: #e1f8ed;
-    border-radius: 12px;
-    color: #087e5d;
-    display: flex;
-    flex: 0 0 42px;
-    font-size: 24px;
-    font-weight: 700;
-    height: 42px;
-    justify-content: center;
-  }
-
-  .verification-success-eyebrow {
-    color: #05755a;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
-    margin: 2px 0 6px;
-    text-transform: uppercase;
-  }
-
-  .verification-success-copy {
-    color: #435c54;
-    font-size: 15px;
-    line-height: 1.45;
-    margin: 0;
-  }
-
   .verification-details {
     display: grid;
     gap: 0;
@@ -5178,11 +5139,82 @@
   }
 
   .verification-success-note {
-    color: #527067;
-    font-size: 14px;
-    font-style: italic;
+    align-items: flex-start;
+    background: linear-gradient(100deg, #effbf4 0%, #f8fcf9 100%);
+    border: 1px solid #d8ede0;
+    border-radius: 10px;
+    display: flex;
+    gap: 13px;
+    margin: 21px 0 0;
+    padding: 14px 16px;
+  }
+
+  .verification-note-mark {
+    background: #07895e;
+    border: 4px solid #e7f8ed;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #07895e;
+    display: block;
+    flex: 0 0 24px;
+    height: 24px;
+    margin: 3px 0 0 2px;
+    position: relative;
+    width: 24px;
+
+    &::before,
+    &::after {
+      background: #07895e;
+      content: '';
+      height: 12px;
+      position: absolute;
+      top: 17px;
+      transform: skew(-18deg);
+      width: 7px;
+      z-index: 0;
+    }
+
+    &::before {
+      left: 1px;
+    }
+
+    &::after {
+      right: 1px;
+      transform: skew(18deg);
+    }
+  }
+
+  .verification-note-content {
+    min-width: 0;
+  }
+
+  .verification-note-title {
+    color: #076b4c;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 4px;
+  }
+
+  .verification-note-copy,
+  .verification-note-contact {
+    color: #326454;
+    font-size: 13px;
     line-height: 1.45;
-    margin: 20px 0 0;
+    margin: 0;
+  }
+
+  .verification-note-contact {
+    margin-top: 5px;
+
+    a {
+      color: #05785a;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   @include max(575px) {
