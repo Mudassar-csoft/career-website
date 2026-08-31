@@ -186,7 +186,14 @@
             });
 
             Object.entries(response).forEach(([key, value]) => {
-                if (handledKeys.has(key) || ['status', 'message', 'M'].includes(key)) {
+                if (handledKeys.has(key) || [
+                    'status',
+                    'message',
+                    'M',
+                    'source',
+                    'student_status',
+                    'student_status_label',
+                ].includes(key)) {
                     return;
                 }
 
@@ -214,14 +221,14 @@
         function showSuccess(response) {
             const documentType = response.document_type || response.certificate_type || 'Document';
 
-            title.textContent = `${documentType} Verified Successfully!`;
+            title.textContent = `✅ ${documentType} Verified Successfully!`;
             body.replaceChildren();
 
             const fields = buildFields(response);
 
             fields.forEach(([label, value]) => addParagraph(body, value, label));
-            addParagraph(body, `Congratulations, ${response.name || 'student'}! Your verification has been completed successfully.`);
-            addParagraph(body, 'Thank you for being a part of Career Institute. We wish you the best in your future endeavors!');
+            addParagraph(body, `🎉 Congratulations, ${response.name || 'student'}! Your document has been verified successfully.`);
+            addParagraph(body, '✨ Thank you for choosing Career Institute. We wish you every success in your future journey!');
             modal.show();
         }
 
