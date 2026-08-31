@@ -4,6 +4,12 @@
 @section('body_class', 'veri-page')
 
 @php($verificationEmail = config('lead-recipients.addresses.verifications'))
+@php($verificationTabs = [
+    ['id' => 'pills-home', 'button_id' => 'pills-home-tab', 'label' => 'Certification'],
+    ['id' => 'pills-profile', 'button_id' => 'pills-profile-tab', 'label' => 'Diploma'],
+    ['id' => 'pills-contact', 'button_id' => 'pills-contact-tab', 'label' => 'Internship Letter'],
+    ['id' => 'pills-four', 'button_id' => 'pills-four-tab', 'label' => 'Experience Letter'],
+])
 
 @section('content')
 <section class="top-banner">
@@ -24,51 +30,64 @@
         <div class="row mb-5 justify-content-center">
             <div class="col-lg-10">
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Certification</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Diploma</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Internship Letter</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-four-tab" data-bs-toggle="pill" data-bs-target="#pills-four" type="button" role="tab" aria-controls="pills-four" aria-selected="false">Experience Letter</button>
-                    </li>
+                    @foreach ($verificationTabs as $tab)
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link {{ $loop->first ? 'active' : '' }}"
+                                id="{{ $tab['button_id'] }}"
+                                data-bs-toggle="pill"
+                                data-bs-target="#{{ $tab['id'] }}"
+                                type="button"
+                                role="tab"
+                                aria-controls="{{ $tab['id'] }}"
+                                aria-selected="{{ $loop->first ? 'true' : 'false' }}"
+                            >
+                                {{ $tab['label'] }}
+                            </button>
+                        </li>
+                    @endforeach
                 </ul>
                 <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="text-info">
-                                    <h2>Verification ID</h2>
-                                    <div class="form-block">
-                                        <form class="row g-3" id="certificate-verification-form" novalidate>
-                                            <div class="col-12">
-                                                <label class="visually-hidden" for="roll_number">Verification ID</label>
-                                                <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    id="roll_number"
-                                                    name="verification_id"
-                                                    placeholder="Enter your verification ID"
-                                                    autocomplete="off"
-                                                    required
-                                                >
-                                            </div>
-                                            <div class="col-12 text-center mt-4 mt-xxl-5">
-                                                <button type="submit" class="btn sm-btn" id="submit_Button">Verify Now</button>
-                                            </div>
-                                        </form>
+                    @foreach ($verificationTabs as $tab)
+                        @php($inputId = 'verification_id_'.$loop->index)
+                        <div
+                            class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
+                            id="{{ $tab['id'] }}"
+                            role="tabpanel"
+                            aria-labelledby="{{ $tab['button_id'] }}"
+                            tabindex="0"
+                        >
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="text-info">
+                                        <h2>{{ $tab['label'] }} Verification ID</h2>
+                                        <p class="mb-4">
+                                            Enter the Verification ID printed on your {{ strtolower($tab['label']) }} to verify it online.
+                                        </p>
+                                        <div class="form-block">
+                                            <form class="row g-3 js-verification-form" novalidate>
+                                                <div class="col-12">
+                                                    <label class="visually-hidden" for="{{ $inputId }}">Verification ID</label>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control js-verification-id"
+                                                        id="{{ $inputId }}"
+                                                        name="verification_id"
+                                                        placeholder="Enter your verification ID"
+                                                        autocomplete="off"
+                                                        required
+                                                    >
+                                                </div>
+                                                <div class="col-12 text-center mt-4 mt-xxl-5">
+                                                    <button type="submit" class="btn sm-btn js-submit-button">Verify Now</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="pills-four" role="tabpanel" aria-labelledby="pills-four-tab" tabindex="0">...</div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -90,14 +109,13 @@
 @endsection
 
 @push('scripts')
-<script>
+    <script>
     (() => {
-        const form = document.getElementById('certificate-verification-form');
-        const input = document.getElementById('roll_number');
-        const submitButton = document.getElementById('submit_Button');
+        const forms = document.querySelectorAll('.js-verification-form');
         const title = document.getElementById('verificationResultTitle');
         const body = document.getElementById('verificationResultBody');
         const modal = new bootstrap.Modal(document.getElementById('verificationResultModal'));
+        const verificationLookupUrlTemplate = @json(route('verifications.lookup', ['verificationId' => '__VERIFICATION_ID__'], false));
         const supportDetails = [
             'Please contact the administration of Career Institute for assistance.',
             @json('Email: '.$verificationEmail),
@@ -119,7 +137,72 @@
             container.appendChild(paragraph);
         }
 
-        function showFailure(message, heading = 'Certificate Not Verified') {
+        function humanizeKey(key) {
+            return key
+                .replace(/_/g, ' ')
+                .replace(/\b\w/g, (character) => character.toUpperCase());
+        }
+
+        function formatValue(value) {
+            if (value === null || value === undefined) {
+                return '';
+            }
+
+            if (Array.isArray(value)) {
+                return value.join(', ').trim();
+            }
+
+            if (typeof value === 'object') {
+                return '';
+            }
+
+            return `${value}`.trim();
+        }
+
+        function buildFields(response) {
+            const fields = [];
+            const handledKeys = new Set();
+            const preferredFields = [
+                ['verification_id', 'Verification ID:'],
+                ['roll_number', 'Roll Number:'],
+                ['name', 'Name:'],
+                ['guardian_name', 'Guardian Name:'],
+                ['course_completed', 'Course Completed:'],
+                ['course_duration', 'Course Duration:'],
+                ['document_type', 'Document Type:'],
+                ['certificate_type', 'Certificate Type:'],
+                ['issue_date', 'Issue Date:'],
+            ];
+
+            preferredFields.forEach(([key, label]) => {
+                const value = formatValue(response[key]);
+
+                if (!value) {
+                    return;
+                }
+
+                fields.push([label, value]);
+                handledKeys.add(key);
+            });
+
+            Object.entries(response).forEach(([key, value]) => {
+                if (handledKeys.has(key) || ['status', 'message', 'M'].includes(key)) {
+                    return;
+                }
+
+                const formattedValue = formatValue(value);
+
+                if (!formattedValue) {
+                    return;
+                }
+
+                fields.push([`${humanizeKey(key)}:`, formattedValue]);
+            });
+
+            return fields;
+        }
+
+        function showFailure(message, heading = 'Verification Not Found') {
             title.textContent = heading;
             body.replaceChildren();
             addParagraph(body, message);
@@ -129,53 +212,54 @@
         }
 
         function showSuccess(response) {
-            title.textContent = 'Certificate Verified Successfully!';
+            const documentType = response.document_type || response.certificate_type || 'Document';
+
+            title.textContent = `${documentType} Verified Successfully!`;
             body.replaceChildren();
 
-            const fields = [
-                ['Name:', response.name],
-                ...(Number(response.M) === 2 ? [['Guardian Name:', response.guardian_name]] : []),
-                ['Roll Number:', response.roll_number],
-                ['Course Completed:', response.course_completed],
-                ['Course Duration:', response.course_duration],
-            ];
+            const fields = buildFields(response);
 
-            fields.forEach(([label, value]) => addParagraph(body, value || 'Not available', label));
-            addParagraph(body, `Congratulations, ${response.name || 'student'}! Your certificate has been successfully verified.`);
+            fields.forEach(([label, value]) => addParagraph(body, value, label));
+            addParagraph(body, `Congratulations, ${response.name || 'student'}! Your verification has been completed successfully.`);
             addParagraph(body, 'Thank you for being a part of Career Institute. We wish you the best in your future endeavors!');
             modal.show();
         }
 
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            const verificationId = input.value.trim();
+        forms.forEach((form) => {
+            const input = form.querySelector('.js-verification-id');
+            const submitButton = form.querySelector('.js-submit-button');
 
-            if (!verificationId) {
-                showFailure('Please enter your Verification ID to proceed with the verification.', 'Enter Your Verification ID');
-                input.focus();
-                return;
-            }
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const verificationId = input.value.trim();
 
-            submitButton.disabled = true;
-            submitButton.textContent = 'Verifying...';
-
-            try {
-                const response = await fetch(`https://ims.career.edu.pk/api/verify-certificate/${encodeURIComponent(verificationId)}`, {
-                    headers: { Accept: 'application/json' },
-                });
-                const data = await response.json().catch(() => ({}));
-
-                if (response.ok && data.status === 'success') {
-                    showSuccess(data);
-                } else {
-                    showFailure(data.message || 'Unfortunately, your certificate could not be verified.');
+                if (!verificationId) {
+                    showFailure('Please enter your Verification ID to proceed with the verification.', 'Enter Your Verification ID');
+                    input.focus();
+                    return;
                 }
-            } catch (error) {
-                showFailure('Unfortunately, your certificate could not be verified. Please try again later.');
-            } finally {
-                submitButton.disabled = false;
-                submitButton.textContent = 'Verify Now';
-            }
+
+                submitButton.disabled = true;
+                submitButton.textContent = 'Verifying...';
+
+                try {
+                    const response = await fetch(verificationLookupUrlTemplate.replace('__VERIFICATION_ID__', encodeURIComponent(verificationId)), {
+                        headers: { Accept: 'application/json' },
+                    });
+                    const data = await response.json().catch(() => ({}));
+
+                    if (response.ok && data.status === 'success') {
+                        showSuccess(data);
+                    } else {
+                        showFailure(data.message || 'Unfortunately, your certificate could not be verified.');
+                    }
+                } catch (error) {
+                    showFailure('Unfortunately, your certificate could not be verified. Please try again later.');
+                } finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Verify Now';
+                }
+            });
         });
     })();
 </script>

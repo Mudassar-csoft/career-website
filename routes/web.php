@@ -18,6 +18,7 @@ use App\Http\Controllers\PublicNewsController;
 use App\Http\Controllers\PublicSuccessStoryController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\SuccessStoryMediaController;
+use App\Http\Controllers\VerificationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -34,6 +35,7 @@ Route::get('/blog-gallery-image/{image}', [BlogImageMediaController::class, 'sho
 Route::get('/course-image/{course}', [CourseMediaController::class, 'show'])->name('courses.image');
 Route::get('/gallery-image/{image}', [GalleryMediaController::class, 'show'])->name('gallery.image');
 Route::get('/success-story-image/{successStory}', [SuccessStoryMediaController::class, 'show'])->name('success-stories.image');
+Route::get('/api/verifications/{verificationId}', [VerificationController::class, 'show'])->name('verifications.lookup');
 Route::get('/events/register/{token}/upload-fee', [EventRegistrationController::class, 'showUploadFee'])->name('events.upload-fee');
 Route::post('/events/register/{token}/upload-fee', [EventRegistrationController::class, 'uploadFee'])->name('events.upload-fee');
 Route::get('/events/{event:slug}', [EventRegistrationController::class, 'show'])->name('events.show');
