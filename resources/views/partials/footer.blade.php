@@ -45,7 +45,7 @@
                     <ul class="last-bar">
                         <li><a href="tel:0418724010"><img src="{{ asset('assets/images/tel.svg') }}" alt="Telephone">041-8724010</a></li>
                         <li><a href="tel:03144444010"><img src="{{ asset('assets/images/wp.svg') }}" alt="WhatsApp">0314-4444010</a></li>
-                        <li><a href="tel:03414444010"><img src="{{ asset('assets/images/cell.svg') }}" alt="Phone">0341-4444010</a></li>
+                        <li><a href="tel:03404444010"><img src="{{ asset('assets/images/cell.svg') }}" alt="Phone">0340-4444010</a></li>
                         <li><a href="mailto:info@career.edu.pk"><img src="{{ asset('assets/images/mail.svg') }}" alt="Email">info@career.edu.pk</a></li>
                     </ul>
                 </div>

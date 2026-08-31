@@ -5130,6 +5130,156 @@
     }
   }
 }
+#verificationResultModal,#not-verified-modal {
+  .modal-dialog {
+    max-width: 550px;
+    .modal-content {
+      .modal-header {
+        justify-content: flex-start;
+        h5 {
+          img {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+      .modal-body {
+        p {
+          font-size: 14px;
+          line-height: 16px;
+          color: #595959;
+          font-weight: 400;
+          margin: 0 0 10px;
+          @include max(575px) {
+            font-size: 12px;
+            line-height: 14px;
+          }
+          i {
+            margin: 0 5px 0 0;
+            color: #595959;
+          }
+        }
+        h4 {
+          font-size: 14px;
+          line-height: 16px;
+          color: #595959;
+          font-weight: 400;
+          margin: 0 0 10px;
+          background: #F1F5F9;
+          border-radius: 10px 10px;
+          padding: 15px 15px;
+          margin: 0 0 20px;
+          i {
+            margin: 0 5px 0 0;
+            color: #595959;
+          }
+        }
+        .box {
+          background: #F8FAFC;
+          border: 1px solid #E2E8F0;
+          border-radius: 10px 10px;
+          padding: 15px 15px;
+          margin: 0 0 20px;
+          ul {
+            li {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              margin: 0 0 5px;
+              &:last-child {
+                margin: 0;
+              }
+              i {
+                margin: 0 10px 0 0;
+                color: #595959;
+              }
+              a {
+                color: #595959;
+                font-weight: 400;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
+#verified-modal {
+  .modal-dialog {
+    max-width: 550px;
+    .modal-content {
+      .modal-header {
+        justify-content: flex-start;
+        h5 {
+          img {
+            margin: 0 10px 0 0;
+          }
+        }
+      }
+      .modal-body {
+        padding: 0;
+        ul {
+          padding: 20px 20px 0;
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 0 12px;
+            padding: 0 0 12px;
+            border-bottom: 1px solid #E2E8F0;
+            &:last-child {
+              margin: 0;
+              border: 0;
+            }
+            p {
+              font-size: 12px;
+              line-height: 14px;
+              color: #595959;
+              font-weight: 600;
+              margin: 0;
+              i {
+                margin: 0 10px 0 0;
+                color: #595959;
+              }
+            }
+          }
+        }
+        .b-box {
+          padding: 15px 20px;
+          background: #F8FAFC;
+          border-top: 1px solid #E2E8F0;
+          border-radius: 0 0 20px 20px;
+          text-align: center;
+          h4 {
+            font-size: 14px;
+            line-height: 16px;
+            color: #00A884;
+            font-weight: 400;
+            margin: 0 0 7px;
+            i {
+              margin: 0 5px 0 0;
+              color: #00A884;
+            }
+          }
+          p {
+            font-size: 14px;
+            line-height: 16px;
+            color: #00A884;
+            font-weight: 400;
+            margin: 0 0 7px;
+            @include max(575px) {
+              font-size: 12px;
+              line-height: 14px;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
 
 // About us page start here
 
