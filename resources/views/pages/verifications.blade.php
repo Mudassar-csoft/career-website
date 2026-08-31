@@ -61,9 +61,6 @@
                                 <div class="col-lg-6">
                                     <div class="text-info">
                                         <h2>{{ $tab['label'] }} Verification ID</h2>
-                                        <p class="mb-4">
-                                            Enter the Verification ID printed on your {{ strtolower($tab['label']) }} to verify it online.
-                                        </p>
                                         <div class="form-block">
                                             <form class="row g-3 js-verification-form" novalidate>
                                                 <div class="col-12">
@@ -98,11 +95,11 @@
 <div class="modal fade career-model" id="verificationResultModal" tabindex="-1" aria-labelledby="verificationResultTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header verification-result-header">
                 <h2 class="modal-title h5" id="verificationResultTitle"></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="verificationResultBody"></div>
+            <div class="modal-body verification-result-body" id="verificationResultBody"></div>
         </div>
     </div>
 </div>
@@ -212,6 +209,7 @@
         function showFailure(message, heading = 'Verification Not Found') {
             title.textContent = heading;
             body.replaceChildren();
+            body.classList.remove('is-verified');
             addParagraph(body, message);
 
             supportDetails.forEach((detail) => addParagraph(body, detail));
@@ -221,14 +219,34 @@
         function showSuccess(response) {
             const documentType = response.document_type || response.certificate_type || 'Document';
 
-            title.textContent = `✅ ${documentType} Verified Successfully!`;
+            title.textContent = `${documentType} verified`;
             body.replaceChildren();
+            body.classList.add('is-verified');
 
             const fields = buildFields(response);
+            const summary = document.createElement('div');
+            summary.className = 'verification-success-summary';
+            summary.innerHTML = '<span class="verification-success-mark" aria-hidden="true">✓</span><div><p class="verification-success-eyebrow">Authenticity confirmed</p><p class="verification-success-copy">This credential is recorded and verified by Career Institute.</p></div>';
 
-            fields.forEach(([label, value]) => addParagraph(body, value, label));
-            addParagraph(body, `🎉 Congratulations, ${response.name || 'student'}! Your document has been verified successfully.`);
-            addParagraph(body, '✨ Thank you for choosing Career Institute. We wish you every success in your future journey!');
+            const details = document.createElement('dl');
+            details.className = 'verification-details';
+
+            fields.forEach(([label, value]) => {
+                const row = document.createElement('div');
+                const fieldLabel = document.createElement('dt');
+                const fieldValue = document.createElement('dd');
+
+                fieldLabel.textContent = label.replace(':', '');
+                fieldValue.textContent = value;
+                row.append(fieldLabel, fieldValue);
+                details.appendChild(row);
+            });
+
+            const note = document.createElement('p');
+            note.className = 'verification-success-note';
+            note.textContent = `Well done, ${response.name || 'student'}. Keep this verification ID for your records.`;
+
+            body.append(summary, details, note);
             modal.show();
         }
 
