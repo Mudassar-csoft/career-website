@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Contact Us | Career Website')
+@section('title', 'Contact Career Institute - Get in Touch Today')
 @section('body_class', 'contact-page')
 @section('content')
 <section class="top-banner">

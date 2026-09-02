@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Ambassador Program | Career Website')
+@section('title', 'Career Institute Ambassador Program - Join Us')
 @section('body_class', 'ambassador-page')
 @section('content')
 <section class="top-banner">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'How to Pay | Career Website')
+@section('title', 'How to Pay Course Fees - Career Institute')
 @section('body_class', 'pay-page')
 @section('content')
 <section class="top-banner">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'PSI Exam | Career Website')
+@section('title', 'PSI Exam Testing Center - Career Institute')
 @section('body_class', 'PSI-page')
 @section('content')
 <section class="top-banner">

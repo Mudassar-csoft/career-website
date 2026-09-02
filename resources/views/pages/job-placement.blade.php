@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Job Placement | Career Website')
+@section('title', 'Job Placement Services - Career Institute Pakistan')
 @section('body_class', 'job-page')
 @section('content')
 <section class="top-banner">

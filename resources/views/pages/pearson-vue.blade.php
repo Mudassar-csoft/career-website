@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Pearson VUE | Career Website')
+@section('title', 'Pearson VUE Testing Center - Career Institute')
 @section('body_class', 'vue-page')
 
 @section('content')

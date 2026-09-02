@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Study Abroad | Career Website')
+@section('title', 'Study Abroad Programs - Career Institute Pakistan')
 @section('body_class', 'sa-page')
 
 @section('content')

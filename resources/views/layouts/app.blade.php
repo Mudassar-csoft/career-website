@@ -10,11 +10,9 @@
         $providedDescription = trim(strip_tags($__env->yieldContent('meta_description')));
         $routeDescription = config('seo.descriptions.'.$routeName, config('seo.default_description'));
         $descriptionSource = $providedDescription ?: $routeDescription;
-        if (\Illuminate\Support\Str::length($descriptionSource) < 140) {
-            $descriptionSource = trim($descriptionSource.' '.$routeDescription);
-        }
-        $metaDescription = \Illuminate\Support\Str::limit($descriptionSource, 150, '');
+        $metaDescription = \Illuminate\Support\Str::limit($descriptionSource, 160, '');
         $metaKeywords = trim(strip_tags($__env->yieldContent('meta_keywords')));
+        $ogTitle = trim(strip_tags($__env->yieldContent('og_title'))) ?: $pageTitle;
         $ogImage = trim($__env->yieldContent('og_image')) ?: asset(config('seo.default_image'));
         if (! \Illuminate\Support\Str::startsWith($ogImage, ['http://', 'https://'])) {
             $ogImage = url($ogImage);
@@ -30,14 +28,21 @@
     <link rel="canonical" href="{{ $canonicalUrl }}">
     <meta property="og:type" content="@yield('og_type', 'website')">
     <meta property="og:site_name" content="Career Institute">
-    <meta property="og:title" content="{{ $pageTitle }}">
+    <meta property="og:title" content="{{ $ogTitle }}">
     <meta property="og:description" content="{{ $metaDescription }}">
     <meta property="og:url" content="{{ $canonicalUrl }}">
     <meta property="og:image" content="{{ $ogImage }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:title" content="{{ $ogTitle }}">
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
+    <meta name="twitter:url" content="{{ $canonicalUrl }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Career Institute">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.svg') }}">
+    <meta name="p:domain_verify" content="ffae53f24730c5937a515bd6cb07a4fb">
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Kryterion | Career Website')
+@section('title', 'Kryterion Testing Center - Career Institute')
 @section('body_class', 'kry-page')
 
 @section('content')

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Success Stories | Career Website')
+@section('title', 'Student Success Stories - Career Institute')
 @section('body_class', 'ss-page')
 @section('content')
 <section class="particle-section">

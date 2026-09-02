@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Courses & Certifications | Career Website')
+@section('title', 'Courses & Certifications - Career Institute')
 @section('body_class', 'courses-page')
 @push('styles')
 <style>

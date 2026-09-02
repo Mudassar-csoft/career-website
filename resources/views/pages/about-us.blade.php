@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'About Us | Career Website')
+@section('title', 'About Career Institute - Our Mission & Vision')
 @section('body_class', 'about-page')
 @section('content')
 <section class="hero-section">

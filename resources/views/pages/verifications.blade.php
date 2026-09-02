@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Verifications | Career Website')
+@section('title', 'Certificate Verification - Career Institute')
 @section('body_class', 'veri-page')
 
 @php($verificationEmail = config('lead-recipients.addresses.verifications'))

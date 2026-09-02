@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Coworking Space | Career Website')
+@section('title', 'Coworking Space in Pakistan - Career Institute')
 @section('body_class', 'cws-page')
 @section('content')
 <section class="top-banner">
