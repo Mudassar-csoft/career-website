@@ -18,10 +18,12 @@ use App\Http\Controllers\PublicNewsController;
 use App\Http\Controllers\PublicSuccessStoryController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\SuccessStoryMediaController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\VerificationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
 Route::post('/partner-inquiries', [PartnerInquiryController::class, 'store'])->name('partner-inquiries.store');
@@ -77,6 +79,24 @@ Route::get('/404', fn () => response()->view('errors.404', [], 404))->name('404'
 Route::get('/study-abroad', [PublicCourseController::class, 'studyAbroad'])->name('study-abroad');
 Route::get('/stories', [PublicSuccessStoryController::class, 'index'])->name('stories');
 Route::get('/job-placement', [PublicJobPlacementController::class, 'index'])->name('job-placement');
+
+// Consolidate legacy public-directory and service URLs into one canonical route.
+Route::redirect('/verification', '/verifications', 301);
+Route::redirect('/Workspace', '/coworking-space', 301);
+Route::redirect('/workspace', '/coworking-space', 301);
+Route::redirect('/public/verifications', '/verifications', 301);
+Route::redirect('/public/verification', '/verifications', 301);
+Route::redirect('/public/Workspace', '/coworking-space', 301);
+Route::redirect('/public/workspace', '/coworking-space', 301);
+Route::get('/public/index.php/{path?}', function (?string $path) {
+    return redirect('/'.ltrim($path ?? '', '/'), 301);
+})->where('path', '.*');
+Route::get('/index.php/{path?}', function (?string $path) {
+    return redirect('/'.ltrim($path ?? '', '/'), 301);
+})->where('path', '.*');
+Route::get('/public/{path?}', function (?string $path) {
+    return redirect('/'.ltrim($path ?? '', '/'), 301);
+})->where('path', '.*');
 
 Route::redirect('/index.html', '/', 301);
 Route::redirect('/about-us.html', '/about-us', 301);

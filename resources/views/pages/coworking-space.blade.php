@@ -98,7 +98,7 @@
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon34.svg') }}" alt="Career Institute feature icon">
                             </div>
-                            <h3>Free Wifi Access</h3>
+                            <h3>24/7 Access</h3>
                             <p>
                                 High-speed internet for
                                 seamless connectivity.

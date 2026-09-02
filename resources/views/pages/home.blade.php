@@ -90,28 +90,28 @@
                         <div class="icon">
                             <img src="assets/images/icon01.svg" alt="Career Institute feature icon">
                         </div>
-                        <h2 class="counter" data-target="150000">0</h2>
+                        <h2 class="counter" data-target="150000">150,000+</h2>
                         <p>Alumni</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
                             <img src="assets/images/icon02.svg" alt="Career Institute feature icon">
                         </div>
-                        <h2 class="counter" data-target="50">0</h2>
+                        <h2 class="counter" data-target="50">50+</h2>
                         <p>Affiliations</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
                             <img src="assets/images/icon03.svg" alt="Career Institute feature icon">
                         </div>
-                        <h2 class="counter" data-target="100">0</h2>
+                        <h2 class="counter" data-target="100">100+</h2>
                         <p>Programs</p>
                     </div>
                     <div class="counter-item">
                         <div class="icon">
                             <img src="assets/images/icon04.svg" alt="Career Institute feature icon">
                         </div>
-                        <h2 class="counter" data-target="15">0</h2>
+                        <h2 class="counter" data-target="15">15+</h2>
                         <p>Campuses</p>
                     </div>
                 </div>

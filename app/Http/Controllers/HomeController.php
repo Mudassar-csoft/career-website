@@ -17,15 +17,6 @@ class HomeController extends Controller
             ->take(3)
             ->get();
 
-        if ($eventsWidget->count() < 3) {
-            $eventsWidget = $eventsWidget->concat(
-                Event::where('event_date', '<', now()->toDateString())
-                    ->orderByDesc('event_date')
-                    ->take(3 - $eventsWidget->count())
-                    ->get()
-            )->values();
-        }
-
         if ($featuredCourses->isEmpty()) {
             $featuredCourses = Course::with(['category', 'mode'])->latest()->take(6)->get();
         }

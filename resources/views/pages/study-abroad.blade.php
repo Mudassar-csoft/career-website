@@ -34,19 +34,19 @@
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
                     <img src="{{ asset('assets/images/img70.png') }}" alt="Study abroad destination">
-                    <h3>Study in USA</h3>
+                    <h3>Study in Canada</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
                     <img src="{{ asset('assets/images/img71.png') }}" alt="Study abroad destination">
-                    <h3>Study in USA</h3>
+                    <h3>Study in Australia</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img-hold">
                     <img src="{{ asset('assets/images/img72.png') }}" alt="Study abroad destination">
-                    <h3>Study in USA</h3>
+                    <h3>Study in UK</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -62,19 +62,19 @@
                     <li>
                         <div class="img-hold">
                             <img src="{{ asset('assets/images/img70.png') }}" alt="Study abroad destination">
-                            <h3>Study in USA</h3>
+                            <h3>Study in Canada</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
                             <img src="{{ asset('assets/images/img71.png') }}" alt="Study abroad destination">
-                            <h3>Study in USA</h3>
+                            <h3>Study in Australia</h3>
                         </div>
                     </li>
                     <li>
                         <div class="img-hold">
                             <img src="{{ asset('assets/images/img72.png') }}" alt="Study abroad destination">
-                            <h3>Study in USA</h3>
+                            <h3>Study in UK</h3>
                         </div>
                     </li>
                     <li>
