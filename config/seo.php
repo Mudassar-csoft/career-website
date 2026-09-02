@@ -4,7 +4,7 @@ return [
     'default_description' => 'Career Institute offers courses, certifications, testing services, career guidance, and flexible learning opportunities for students across Pakistan.',
     'default_image' => 'assets/images/img39.png',
     'descriptions' => [
-        'home' => 'Career Institute helps students build in-demand skills through expert-led courses, certifications, career guidance, and flexible learning paths.',
+        'home' => 'Elevate your skills and take your career to the next level with Career Institute, Pakistan\'s premier short courses provider. Master in-demand IT skills.',
         'about' => 'Learn about Career Institute, our industry-focused teaching approach, skilled trainers, campuses, and commitment to building successful careers.',
         'courses-certifications' => 'Explore practical courses and certifications in technology, design, business, language, and freelancing, with flexible online and on-campus learning.',
         'course-detail' => 'Discover course details, practical learning outcomes, duration, and certification opportunities designed to help you build professional skills.',

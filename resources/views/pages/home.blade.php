@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Home | Career Website')
+@section('title', "Pakistan Leading Computer Short Course \u{2013} Career Institute")
+@section('meta_description', "Elevate your skills and take your career to the next level with Career Institute, Pakistan's premier short courses provider. Master in-demand IT skills.")
 @section('body_class', '')
 @section('content')
 <section class="hero-section">
