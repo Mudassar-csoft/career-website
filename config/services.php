@@ -36,8 +36,6 @@ return [
     ],
 
     'ims' => [
-        'programs_url' => env('IMS_PROGRAMS_URL', 'https://ims.career.edu.pk/api/programs'),
-        'campuses_url' => env('IMS_CAMPUSES_URL', 'https://ims.career.edu.pk/api/campuses'),
         'web_leads_url' => env('IMS_WEB_LEADS_URL', 'https://ims.career.edu.pk/api/web-leads'),
         'certificate_verification_url' => env('IMS_CERTIFICATE_VERIFICATION_URL', 'https://ims.career.edu.pk/api/verify-certificate'),
     ],
