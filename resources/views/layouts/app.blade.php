@@ -93,6 +93,9 @@
         }
     </style>
     @stack('styles')
+    @if (config('chatbot.enabled'))
+        <link rel="stylesheet" href="{{ asset('assets/css/chatbot.css') }}?v={{ filemtime(public_path('assets/css/chatbot.css')) }}">
+    @endif
 </head>
 <body class="@yield('body_class')">
     <div id="wrapper">
@@ -107,6 +110,10 @@
     </div>
 
     @include('partials.modals')
+    @if (config('chatbot.enabled'))
+        @include('partials.chatbot')
+        <script src="{{ asset('assets/js/chatbot.js') }}?v={{ filemtime(public_path('assets/js/chatbot.js')) }}" defer></script>
+    @endif
 
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}?v={{ filemtime(public_path('assets/js/bootstrap.bundle.min.js')) }}"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

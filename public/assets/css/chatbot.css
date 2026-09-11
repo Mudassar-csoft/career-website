@@ -1,0 +1,98 @@
+.career-chat {
+    --chat-teal: #017e8f;
+    position: fixed;
+    left: 24px;
+    bottom: max(24px, env(safe-area-inset-bottom));
+    z-index: 1040;
+    font: 14px/1.55 "Inter", sans-serif;
+    color: #173f52;
+}
+.career-chat [hidden], .career-chat[hidden] { display: none !important; }
+.career-chat *, .career-chat *::before, .career-chat *::after { box-sizing: border-box; }
+.career-chat button, .career-chat input { font: inherit; }
+.career-chat button { cursor: pointer; }
+.career-chat button:disabled { cursor: wait; opacity: .55; }
+.career-chat :focus-visible { outline: 3px solid #e4a934; outline-offset: 3px; }
+.career-chat__launcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 58px;
+    padding: 0 22px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 30px;
+    background: linear-gradient(120deg, #017e8f, #039b79);
+    color: #fff;
+    font-weight: 650 !important;
+    box-shadow: 0 5px 22px #173f5230;
+    transition: box-shadow .2s, transform .2s;
+}
+.career-chat__launcher:hover { transform: translateY(-2px); box-shadow: 0 8px 26px #173f5245; }
+.career-chat__launcher i { font-size: 23px; }
+.career-chat__panel {
+    position: absolute;
+    bottom: 74px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    max-width: calc(100vw - 48px);
+    height: 600px;
+    max-height: calc(100dvh - 130px);
+    overflow: hidden;
+    border: 1px solid #dcece7;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 16px 65px #173f5230;
+}
+.career-chat__header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 10px;
+    padding: 19px 15px;
+    background: linear-gradient(115deg, #017e8f, #05947a);
+    color: #fff;
+}
+.career-chat__avatar { display: grid; place-items: center; width: 42px; height: 42px; flex-shrink: 0; border-radius: 14px; background: #ffffff26; font-size: 22px; }
+.career-chat__header > div { flex: 1; }
+.career-chat__header h2 { color: inherit; margin: 0 0 2px; font: 650 17px/1.3 "Inter", sans-serif; }
+.career-chat__header p { color: #e0f8ef; margin: 0; font-size: 11px; }
+.career-chat__icon { display: grid; place-items: center; padding: 0; width: 32px; height: 36px; border: 0; border-radius: 8px; background: transparent; color: #fff; }
+.career-chat__icon:hover { background: #ffffff25; }
+.career-chat__messages { flex: 1; min-height: 0; padding: 20px 16px; overflow-y: auto; overscroll-behavior: contain; background: #f5f9f8; scrollbar-width: thin; }
+.career-chat__message { width: fit-content; max-width: 100%; margin: 0 0 16px; padding: 13px 15px; border: 1px solid #e1ebe8; border-radius: 3px 16px 16px; background: #fff; overflow-wrap: anywhere; }
+.career-chat__message p { color: inherit; font: inherit; margin: 0; white-space: pre-wrap; }
+.career-chat__message p + p { margin-top: 10px; }
+.career-chat__sender { display: block; margin-bottom: 6px; color: var(--chat-teal); font-size: 10px; font-weight: 700; letter-spacing: .35px; }
+.career-chat__message--user { margin-left: auto; max-width: 90%; background: #017e8f; border-color: #017e8f; border-radius: 16px 3px 16px 16px; color: #fff; }
+.career-chat__message--user .career-chat__sender { color: #d2f3ee; }
+.career-chat__message--error { border-color: #e9cba9; background: #fffaf3; }
+.career-chat__card { margin-top: 12px; padding: 12px; border: 1px solid #d8e9e4; border-radius: 10px; background: #fafdfc; }
+.career-chat__card h3 { margin: 0 0 7px; font: 650 14px/1.5 "Inter", sans-serif; color: #173f52; }
+.career-chat__card p { font-size: 12px; margin-top: 5px !important; color: #4d6270; }
+.career-chat__action { display: inline-block; margin: 10px 6px 0 0; padding: 6px 10px; border: 1px solid #b7dcd4; border-radius: 7px; background: #edf8f4; color: #016471; font-size: 12px !important; text-decoration: none; }
+.career-chat__action:hover { background: #daf0e8; color: #014f59; }
+.career-chat__notice { margin-top: 12px !important; font-size: 12px !important; color: #76532c !important; }
+.career-chat__status { flex-shrink: 0; margin: 0; padding: 6px 18px; font-size: 12px; color: var(--chat-teal); background: #f5f9f8; }
+.career-chat__topics { display: flex; flex-shrink: 0; flex-wrap: wrap; gap: 6px; padding: 12px 14px 8px; border-top: 1px solid #e7efec; }
+.career-chat__topics button { display: flex; align-items: center; gap: 5px; padding: 7px 9px; border: 1px solid #d9e9e4; border-radius: 20px; background: #fff; color: #17616a; font-size: 11px; font-weight: 600; }
+.career-chat__topics button:hover { background: #edf8f4; }
+.career-chat__form { display: flex; flex-shrink: 0; align-items: center; gap: 8px; margin: 0 14px; padding: 5px; border: 1px solid #cee1da; border-radius: 12px; background: #fff; }
+.career-chat__form:focus-within { border-color: #017e8f; }
+.career-chat__form input { min-width: 0; width: 100%; height: 38px; padding: 8px; border: 0; border-radius: 6px; background: transparent; color: #173f52; font-size: 13px; }
+.career-chat__form input:focus { outline: none; }
+.career-chat__form input::placeholder { color: #6d858d; }
+.career-chat__form button { width: 38px; height: 38px; flex-shrink: 0; border: 0; border-radius: 9px; background: #017e8f; color: #fff; }
+.career-chat__footer { flex-shrink: 0; display: flex; flex-direction: column; gap: 4px; align-items: center; padding: 10px 14px 12px; font-size: 10px; text-align: center; color: #637d83; }
+.career-chat__footer a { color: #017e8f; font-size: 11px; text-decoration: none; }
+.career-chat__footer a:hover { text-decoration: underline; }
+.career-chat__footer i { margin-left: 4px; font-size: 9px; }
+.career-chat__sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 575px) {
+    .career-chat { left: 16px; bottom: max(24px, env(safe-area-inset-bottom)); }
+    .career-chat__launcher { height: 50px; padding: 0 17px; }
+    .career-chat__panel { bottom: 66px; width: calc(100vw - 32px); max-width: none; max-height: calc(100dvh - 114px); border-radius: 18px; }
+    .career-chat__form input { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .career-chat__launcher { transition: none; } }

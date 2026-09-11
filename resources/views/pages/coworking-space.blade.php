@@ -98,7 +98,7 @@
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon34.svg') }}" alt="Career Institute feature icon">
                             </div>
-                            <h3>24/7 Access</h3>
+                            <h3>Free Wi-Fi Access</h3>
                             <p>
                                 High-speed internet for
                                 seamless connectivity.
@@ -118,7 +118,7 @@
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon36.svg') }}" alt="Career Institute feature icon">
                             </div>
-                            <h3>Free Wifi Access</h3>
+                            <h3>Open 24 Hours</h3>
                             <p>
                                 Access available anytime,
                                 day or night.
@@ -150,7 +150,7 @@
                             <div class="img-hold">
                                 <img src="{{ asset('assets/images/icon39.svg') }}" alt="Career Institute feature icon">
                             </div>
-                            <h3>Business community</h3>
+                            <h3>Business Community</h3>
                             <p>
                                 Connect with a network
                                 of professionals.
@@ -187,7 +187,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-block">
-                    <h3>Why you choose us</h3>
+                    <h3>Why Choose Us?</h3>
                     <h2>Flexible Coworking for Every Need</h2>
                     <p>
                         Enjoy a perfect workspace designed around you. From dedicated offices to dynamic<br>

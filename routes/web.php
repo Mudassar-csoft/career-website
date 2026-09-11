@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogImageMediaController;
 use App\Http\Controllers\BlogMediaController;
+use App\Http\Controllers\ChatbotController;
 use App\Http\Controllers\CourseMediaController;
 use App\Http\Controllers\CoworkingInquiryController;
 use App\Http\Controllers\EventMediaController;
@@ -24,6 +25,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::post('/chatbot/message', ChatbotController::class)->middleware('throttle:20,1')->name('chatbot.message');
 
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
 Route::post('/partner-inquiries', [PartnerInquiryController::class, 'store'])->name('partner-inquiries.store');

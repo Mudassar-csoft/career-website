@@ -53,7 +53,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>Why You should you Join</h3>
+                                <h3>Why Should You Join?</h3>
                                 <h2>Perks & Amenities</h2>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                         <img src="{{ asset('assets/images/icon56.svg') }}" alt="">
                                     </div>
                                     <div class="t-hold">
-                                        <h5>Networking Oppurtunities</h5>
+                                        <h5>Networking Opportunities</h5>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                                     Become Ambassador
                                 </h2>
                                 <h5>
-                                    Joining an Institute Ambassadors Program offers numerous benefits that can significantly<br>
+                                    Joining the Institute's Ambassador Program offers numerous benefits that can significantly<br>
                                     enhance personal and professional growth.
                                 </h5>
                             </div>
@@ -266,7 +266,7 @@
                                             <input type="text" class="form-control" placeholder="Contact No">
                                         </div>
                                         <div class="col-md-6">
-                                            <input type="text" class="form-control" placeholder="Your Linkedin Profile URL">
+                                            <input type="text" class="form-control" placeholder="Your LinkedIn Profile URL">
                                         </div>
                                         <div class="col-md-6">
                                             <input type="text" class="form-control" placeholder="College/University">

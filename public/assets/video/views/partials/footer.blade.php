@@ -13,7 +13,7 @@
                         operate as a platform for<br>
                         testing services and are<br>
                         partners with relevant<br>
-                        authorities..
+                        authorities.
                     </p>
                 </div>
             </div>

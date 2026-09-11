@@ -77,7 +77,7 @@
                             </li>
                             <li>
                                 <span>Venue</span>
-                                <span>Career Institute Satyana Road Branch</span>
+                                <span>Career Institute Satiana Road Branch</span>
                             </li>
                             <li>
                                 <span>Organizer</span>
@@ -301,7 +301,7 @@
                 <section class="newsletter aos-init aos-animate" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-anchor-placement="top-bottom">
                     <div class="newsletter__content">
                         <div class="newsletter__text">
-                            <h2>Join Our News Letter</h2>
+                            <h2>Join Our Newsletter</h2>
                             <p>
                                 Never miss important updates, events, and 
                                 career opportunities.

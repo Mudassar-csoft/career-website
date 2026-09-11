@@ -46,7 +46,7 @@
                     <h2>Please Complete The Following Admission Form</h2>
                     <form class="row g-2">
                         <div class="col-md-4">
-                            <label class="form-label">Course Intersted</label>
+                            <label class="form-label">Course Interested</label>
                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-4">

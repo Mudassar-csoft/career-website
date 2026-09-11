@@ -21,7 +21,7 @@ return [
     ],
     [
         'name' => 'Satiana Road Branch',
-        'address' => 'P-703, Second Floor, Sethi Plaza, Satayana Road, Batala Colony Muhammadabad, Faisalabad, 38000, Pakistan',
+        'address' => 'P-703, Second Floor, Sethi Plaza, Satiana Road, Batala Colony Muhammadabad, Faisalabad, 38000, Pakistan',
         'phone' => '0314-4444010',
         'map' => 'https://www.google.com/maps?q=Career+Institute+Satiana+Road+Branch,+P-703,+Sethi+Plaza,+Faisalabad,+Pakistan&output=embed',
     ],

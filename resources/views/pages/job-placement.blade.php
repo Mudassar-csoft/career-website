@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <p class="mb-3">Transform Your Future</p>
-                <h1 class="mb-4">Discover Opportunities That Inspire !</h1>
+                <h1 class="mb-4">Discover Opportunities That Inspire!</h1>
                 <div class="btn-block">
                     <a href="#" class="btn aq-btn">Submit Resume</a>
                     {{-- <a href="#" class="btn wa-btn">Post a Job</a> --}}
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2>Transform Your Future</h2>
-                <h1>Discover Opportunities That Inspire !</h1>
+                <h1>Discover Opportunities That Inspire!</h1>
                 <div class="btn-bar">
                     <a href="#" class="btn sr-btn">Submit Resume</a>
                     <a href="#" class="btn pj-btn">Post a Job</a>
@@ -291,7 +291,7 @@
                             <input type="text" class="form-control" name="phone" placeholder="Contact No">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Your Linkedin Profile URL">
+                            <input type="text" class="form-control" placeholder="Your LinkedIn Profile URL">
                         </div>
                         <div class="col-md-6">
                             <input type="text" class="form-control" placeholder="College/University">

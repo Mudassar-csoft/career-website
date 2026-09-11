@@ -295,7 +295,7 @@ class DemoContentSeeder extends Seeder
                 'title' => 'Web Development Bootcamp Seminar',
                 'category' => 'Seminar',
                 'event_date' => now()->addDays(20)->toDateString(),
-                'campus' => 'Satyana Road, Faisalabad',
+                'campus' => 'Satiana Road, Faisalabad',
                 'venue' => 'Seminar Hall, Block B',
                 'organizer' => 'Career Institute',
                 'description' => "<p>A full-day seminar introducing our Full Stack Web Development curriculum, with live coding demos and a Q&amp;A session with current program mentors.</p><p>Attendees will get a roadmap for breaking into web development, regardless of their current background.</p>",

@@ -11,8 +11,8 @@
                                 <div class="sm-box">
                                     <h1 class="mb-3">Study Abroad</h1>
                                     <h5>
-                                        We Ensure You Take the Right Decision at the Threshold<br>
-                                        of your career
+                                        We Ensure You Make the Right Decision at the Start<br>
+                                        of Your Career
                                     </h5>
                                 </div>
                             </div>
@@ -289,7 +289,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-block">
-                                    <h2>FREE STUDY ABROAD EXPERT ADVISE</h2>
+                                    <h2>FREE STUDY ABROAD EXPERT ADVICE</h2>
                                     <form class="row g-3">
                                         <div class="col-md-6">
                                             <input type="text" class="form-control" placeholder="Enter Exam Title">
@@ -326,7 +326,7 @@
                                         <img src="{{ asset('assets/images/icon44.svg') }}" alt="">
                                     </div>
                                     <h3>
-                                        ONE ON ONE<br>COUNSELING
+                                        ONE-ON-ONE<br>COUNSELING
                                     </h3>
                                 </div>
                             </div>
@@ -336,7 +336,7 @@
                                         <img src="{{ asset('assets/images/icon45.svg') }}" alt="">
                                     </div>
                                     <h3>
-                                        ADMISSION<br>ASSESMENT
+                                        ADMISSION<br>ASSESSMENT
                                     </h3>
                                 </div>
                             </div>
