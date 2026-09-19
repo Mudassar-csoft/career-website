@@ -26,12 +26,16 @@ class PermissionServiceProvider extends ServiceProvider
             return;
         }
 
-        Gate::before(function (?\App\Models\User $user, string $ability) {
-            return $user?->isSuperAdmin() ? true : null;
-        });
+        try {
+            Gate::before(function (?\App\Models\User $user, string $ability) {
+                return $user?->isSuperAdmin() ? true : null;
+            });
 
-        foreach (Permission::pluck('slug') as $slug) {
-            Gate::define($slug, fn (?\App\Models\User $user) => $user?->hasPermission($slug) ?? false);
+            foreach (Permission::pluck('slug') as $slug) {
+                Gate::define($slug, fn (?\App\Models\User $user) => $user?->hasPermission($slug) ?? false);
+            }
+        } catch (\Throwable) {
+            return;
         }
     }
 }
