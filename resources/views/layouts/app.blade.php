@@ -42,6 +42,7 @@
     <meta name="apple-mobile-web-app-title" content="Career Institute">
     <link rel="apple-touch-icon" href="{{ asset('assets/images/favicon.svg') }}">
     <meta name="p:domain_verify" content="ffae53f24730c5937a515bd6cb07a4fb">
+    
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -93,6 +94,16 @@
         }
     </style>
     @stack('styles')
+
+<script async src="[https://www.googletagmanager.com/gtag/js?id=G-Z8H699EEXJ](https://www.googletagmanager.com/gtag/js?id=G-Z8H699EEXJ)">\</script>
+<script>
+&#x20; window\.dataLayer = window\.dataLayer || [];
+&#x20; function gtag(){dataLayer.push(arguments);}
+&#x20; gtag('js', new Date());
+
+&#x20; gtag('config', 'G-Z8H699EEXJ');
+</script>
+
 </head>
 <body class="@yield('body_class')">
     <div id="wrapper">
