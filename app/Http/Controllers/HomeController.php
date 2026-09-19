@@ -12,8 +12,7 @@ class HomeController extends Controller
     public function index()
     {
         $featuredCourses = Course::with(['category', 'mode'])->where('is_featured', true)->latest()->take(6)->get();
-        $eventsWidget = Event::where('event_date', '>=', now()->toDateString())
-            ->orderBy('event_date')
+        $eventsWidget = Event::latest('event_date')
             ->take(3)
             ->get();
 
