@@ -319,7 +319,7 @@
                 <div class="feature-slider">
                     @forelse ($featuredCourses as $course)
                         <div>
-                            <a href="{{ route('course-detail', $course->slug) }}">
+                            <a href="{{ route('course-detail', $course->slug) }}" style="display: inline-block;">
                                 <div class="box">
                                     <div class="img-hold">
                                         <img src="{{ $course->image_url ?: asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
