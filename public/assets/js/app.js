@@ -182,61 +182,43 @@ document.addEventListener('submit', function (e) {
 
 $(document).ready(function () {
     const $backToTop = $("#backToTop");
-    let animationId = null;
-    let isScrolling = false;
-    let scrollInterval = null;
-    // Show / Hide Button
+    let scrollAnimationId = null;
     $(window).on("scroll", function () {
-        if ($(this).scrollTop() > 300) {
-            $backToTop.addClass("show");
-        } else {
-            $backToTop.removeClass("show");
-        }
+        $backToTop.toggleClass("show", $(this).scrollTop() > 300);
     });
-    // Stop Animation Function
-    function stopScroll() {
-        if (scrollInterval) {
-            clearInterval(scrollInterval);
-            scrollInterval = null;
+    function stopScrollAnimation() {
+        if (scrollAnimationId) {
+            cancelAnimationFrame(scrollAnimationId);
+            scrollAnimationId = null;
         }
-        isScrolling = false;
     }
-    // Mouse Wheel Stop
-    $(window).on("wheel", function () {
-        stopScroll();
-    });
-    // Touch Stop (Mobile)
-    $(window).on("touchmove", function () {
-        stopScroll();
-    });
-    // Keyboard Stop
-    $(window).on("keydown", function () {
-        stopScroll();
-    });
-    // Click Anywhere Stop
-    $(document).on("click", function (e) {
-        // Ignore Back To Top button click
-        if ($(e.target).closest("#backToTop").length) {
-            return;
-        }
-        stopScroll();
-    });
-    // Back To Top Click
+    function easeInOutCubic(progress) {
+        return progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+    }
+    $(window).on("wheel keydown", stopScrollAnimation);
     $backToTop.on("click", function (e) {
         e.preventDefault();
-        if (isScrolling) return;
-        isScrolling = true;
-        const speed = 30; // Pixels per step
-        const delay = 5; // Milliseconds
-        scrollInterval = setInterval(function () {
-            let current = $(window).scrollTop();
-            if (current <= 0) {
-                clearInterval(scrollInterval);
-                scrollInterval = null;
-                isScrolling = false;
-                return;
+        stopScrollAnimation();
+        const start = window.pageYOffset || document.documentElement.scrollTop;
+        if (start <= 0) {
+            return;
+        }
+        const duration = 600;
+        let startTime = null;
+        function animateScroll(currentTime) {
+            if (startTime === null) {
+                startTime = currentTime;
             }
-            $(window).scrollTop(current - speed);
-        }, delay);
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            window.scrollTo(0, start * (1 - easeInOutCubic(progress)));
+            if (progress < 1) {
+                scrollAnimationId = requestAnimationFrame(animateScroll);
+            } else {
+                scrollAnimationId = null;
+            }
+        }
+        scrollAnimationId = requestAnimationFrame(animateScroll);
     });
 });
