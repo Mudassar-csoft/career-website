@@ -6,6 +6,7 @@ use App\Models\Subscriber;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -14,7 +15,7 @@ class LeadNotificationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public Subscriber $subscriber) {}
+    public function __construct(public Subscriber $subscriber, public array $details = []) {}
 
     public function envelope(): Envelope
     {
@@ -29,5 +30,17 @@ class LeadNotificationMail extends Mailable
     public function content(): Content
     {
         return new Content(view: 'emails.lead-notification');
+    }
+
+    public function attachments(): array
+    {
+        if (empty($this->details['document_path'])) {
+            return [];
+        }
+
+        return [
+            Attachment::fromStorageDisk('local', $this->details['document_path'])
+                ->as($this->details['document_name']),
+        ];
     }
 }

@@ -4,9 +4,9 @@
         <div class="container">
             <div class="d-flex justify-content-md-between justify-content-center align-items-center">
                 <div class="top-contact d-flex align-items-center">
-                    <a href="tel:03414444010">
+                    <a href="tel:+923414444010">
                     <i class="fas fa-phone-alt"></i>
-                        0341-4444010
+                        +92-341-4444010
                     </a>
                     <a href="mailto:info@career.edu.pk">
                     <i class="fas fa-envelope"></i>

@@ -8,8 +8,10 @@ use App\Mail\LeadNotificationMail;
 use App\Mail\NewsletterSubscriptionConfirmationMail;
 use App\Models\Subscriber;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\ValidationException;
 
 class SubscriberController extends Controller
 {
@@ -22,6 +24,12 @@ class SubscriberController extends Controller
             'email' => ['nullable', 'email', 'max:255'],
             'phone' => ['nullable', 'string', 'max:30'],
             'source' => ['nullable', 'string', 'max:255'],
+            'city' => ['nullable', 'string', 'max:255'],
+            'message' => ['nullable', 'string', 'max:5000'],
+            'linkedin_url' => ['nullable', 'url:http,https', 'max:2048'],
+            'institution' => ['nullable', 'string', 'max:255'],
+            'qualification' => ['nullable', 'string', 'max:255'],
+            'document' => ['nullable', 'file', 'mimes:pdf,doc,docx', 'extensions:pdf,doc,docx', 'max:5120'],
         ];
 
         if ($isImsLead) {
@@ -60,12 +68,29 @@ class SubscriberController extends Controller
             }
         }
 
+        $details = Arr::only($validated, ['city', 'message', 'linkedin_url', 'institution', 'qualification']);
+
+        if ($request->hasFile('document')) {
+            $document = $request->file('document');
+            $documentPath = $document->store('job-placement-documents', 'local');
+
+            if ($documentPath === false) {
+                throw ValidationException::withMessages([
+                    'document' => 'We could not save your document. Please try again.',
+                ]);
+            }
+
+            $details['document_path'] = $documentPath;
+            $details['document_name'] = $document->getClientOriginalName();
+        }
+
         // Keep contactable Quick Leads available to the dashboard newsletter module.
         $subscriberData = [
             'name' => $validated['name'] ?? null,
             'email' => $validated['email'] ?? null,
             'phone' => $validated['phone'] ?? null,
             'source' => $validated['source'] ?? null,
+            ...$details,
         ];
 
         if ($isImsLead && $validated['lead_type'] === 'quick_lead') {
@@ -94,7 +119,7 @@ class SubscriberController extends Controller
             ?: config('lead-recipients.default');
 
         try {
-            Mail::to($recipient)->send(new LeadNotificationMail($subscriber));
+            Mail::to($recipient)->send(new LeadNotificationMail($subscriber, $details));
         } catch (\Throwable $exception) {
             report($exception);
         }
@@ -156,7 +181,7 @@ class SubscriberController extends Controller
                     'campus_id' => $data['campus_id'] ?? 9,
                     'gender' => $data['gender'] ?? 'Male',
                     'email' => $data['email'],
-                    'city' => 'Faisalabad',
+                    'city' => $data['city'] ?? 'Faisalabad',
                     'status' => 'Pending',
                     'type' => $leadTypes[$data['lead_type']],
                 ]);

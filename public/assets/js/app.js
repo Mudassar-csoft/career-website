@@ -120,6 +120,20 @@ document.addEventListener('show.bs.modal', function (event) {
     }
 });
 
+document.querySelectorAll('.custom-file-upload input[type="file"]').forEach(function (input) {
+    var fileName = input.closest('.custom-file-upload').querySelector('[data-file-name]');
+    if (!fileName) return;
+
+    input.addEventListener('change', function () {
+        fileName.textContent = input.files.length ? input.files[0].name : fileName.dataset.placeholder;
+    });
+    if (input.form) {
+        input.form.addEventListener('reset', function () {
+            fileName.textContent = fileName.dataset.placeholder;
+        });
+    }
+});
+
 document.addEventListener('submit', function (e) {
     var form = e.target;
     if (!form.classList || !form.classList.contains('lead-form')) {

@@ -6,5 +6,10 @@
     <p><strong>Name:</strong> {{ $subscriber->name ?: 'Not provided' }}</p>
     <p><strong>Email:</strong> {{ $subscriber->email ?: 'Not provided' }}</p>
     <p><strong>Phone:</strong> {{ $subscriber->phone ?: 'Not provided' }}</p>
+    @foreach (['city' => 'City', 'linkedin_url' => 'LinkedIn Profile', 'institution' => 'College/University', 'qualification' => 'Qualification', 'message' => 'Additional Information'] as $field => $label)
+        @if (filled($details[$field] ?? null))
+            <p><strong>{{ $label }}:</strong> {{ $details[$field] }}</p>
+        @endif
+    @endforeach
 </body>
 </html>

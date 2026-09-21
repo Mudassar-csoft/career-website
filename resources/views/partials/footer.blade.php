@@ -23,6 +23,7 @@
                         <li><a href="{{ route('coworking-space') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Coworking Space</a></li>
                         <li><a href="{{ route('study-abroad') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Study Abroad</a></li>
                         <li><a href="{{ route('contact-us') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Contact Us</a></li>
+                        <li><a href="{{ route('blogs') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,6 +37,7 @@
                         <li><a href="{{ route('job-placement') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Job Placement</a></li>
                         <li><a href="{{ route('ambassador-program') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Ambassador Program</a></li>
                         <li><a href="{{ route('stories') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">Success Stories</a></li>
+                        <li><a href="{{ route('news') }}"><img src="{{ asset('assets/images/icon17.png') }}" alt="Career Institute feature icon">News</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,9 +45,9 @@
                 <div class="list-bar">
                     <h2>Contact Us</h2>
                     <ul class="last-bar">
-                        <li><a href="tel:0418724010"><img src="{{ asset('assets/images/tel.svg') }}" alt="Telephone">041-8724010</a></li>
-                        <li><a href="tel:03144444010"><img src="{{ asset('assets/images/wp.svg') }}" alt="WhatsApp">0314-4444010</a></li>
-                        <li><a href="tel:03404444010"><img src="{{ asset('assets/images/cell.svg') }}" alt="Phone">0340-4444010</a></li>
+                        <li><a href="tel:+92418724010"><img src="{{ asset('assets/images/tel.svg') }}" alt="Telephone">+92-41-8724010</a></li>
+                        <li><a href="tel:+923144444010"><img src="{{ asset('assets/images/wp.svg') }}" alt="WhatsApp">+92-314-4444010</a></li>
+                        <li><a href="tel:+923404444010"><img src="{{ asset('assets/images/cell.svg') }}" alt="Phone">+92-340-4444010</a></li>
                         <li><a href="mailto:info@career.edu.pk"><img src="{{ asset('assets/images/mail.svg') }}" alt="Email">info@career.edu.pk</a></li>
                     </ul>
                 </div>

@@ -71,12 +71,12 @@
                             <input type="text" class="form-control" name="course" placeholder="Enter a Course or Certification of Your Interest">
                         </div>
                         <div class="col-md-12">
-                            <label class="form-label">City of Residence</label>
-                            <input type="text" class="form-control" placeholder="Enter Your City of Residence">
+                            <label class="form-label" for="admission-city">City of Residence</label>
+                            <input type="text" class="form-control" id="admission-city" name="city" maxlength="255" autocomplete="address-level2" placeholder="Enter Your City of Residence">
                         </div>
                         <div class="col-md-12">
-                            <label class="form-label">Additional Information (Optional)</label>
-                            <input type="text" class="form-control" placeholder="Enter Any Additional Information or Questions">
+                            <label class="form-label" for="admission-message">Additional Information (Optional)</label>
+                            <input type="text" class="form-control" id="admission-message" name="message" maxlength="5000" placeholder="Enter Any Additional Information or Questions">
                         </div>
                         <div class="col-12 text-center mt-4">
                             <button type="submit" class="btn sm-btn">Submit</button>

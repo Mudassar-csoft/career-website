@@ -9,7 +9,7 @@
                 <p class="mb-3">Transform Your Future</p>
                 <h1 class="mb-4">Discover Opportunities That Inspire!</h1>
                 <div class="btn-block">
-                    <a href="#" class="btn aq-btn">Submit Resume</a>
+                    <a href="#job-placement-form" class="btn aq-btn">Submit Resume</a>
                     {{-- <a href="#" class="btn wa-btn">Post a Job</a> --}}
                 </div>
             </div>
@@ -279,7 +279,7 @@
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
-                    <form class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}">
+                    <form id="job-placement-form" class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="col-md-6">
                             <input type="text" class="form-control" name="name" placeholder="Name">
@@ -291,16 +291,16 @@
                             <input type="text" class="form-control" name="phone" placeholder="Contact No">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Your LinkedIn Profile URL">
+                            <input type="url" class="form-control" name="linkedin_url" maxlength="2048" placeholder="Your LinkedIn Profile URL">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="College/University">
+                            <input type="text" class="form-control" name="institution" maxlength="255" placeholder="College/University">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="City">
+                            <input type="text" class="form-control" name="city" maxlength="255" autocomplete="address-level2" placeholder="City">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Qulification">
+                            <input type="text" class="form-control" name="qualification" maxlength="255" placeholder="Qualification">
                         </div>
                         <div class="col-md-6">
                             <div class="file-upload-wrapper">
@@ -308,11 +308,12 @@
                                     <label class="input-group-text" for="fileUpload">
                                         Choose File
                                     </label>
-                                    <input type="file" class="form-control d-none" id="fileUpload">
+                                    <input type="file" class="form-control position-absolute top-0 start-0 w-100 h-100 opacity-0 m-0 p-0" id="fileUpload" name="document" accept=".pdf,.doc,.docx" aria-label="Upload your document" aria-describedby="document-help">
                                     <span class="form-control file-text">
-                                        Upload your Document
+                                        <span class="text-truncate" data-file-name data-placeholder="Upload your Document" aria-live="polite">Upload your Document</span>
                                     </span>
                                 </div>
+                                <small id="document-help" class="text-muted">PDF, DOC or DOCX. Maximum 5 MB.</small>
                             </div>
                         </div>
                         <div class="col-12 mt-4">
@@ -344,6 +345,20 @@
     </div>
 </section>
 @endsection
+
+@push('styles')
+<style>
+    #job-placement-form .custom-file-upload input[type="file"] {
+        cursor: pointer;
+        z-index: 3;
+    }
+    #job-placement-form .custom-file-upload:focus-within {
+        outline: 2px solid #017e8f;
+        outline-offset: 3px;
+        border-radius: 5px;
+    }
+</style>
+@endpush
 
 @push('scripts')
 <script>
