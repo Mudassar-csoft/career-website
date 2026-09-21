@@ -319,32 +319,34 @@
                 <div class="feature-slider">
                     @forelse ($featuredCourses as $course)
                         <div>
-                            <div class="box">
-                                <div class="img-hold">
-                                    <img src="{{ $course->image_url ?: asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
-                                </div>
-                                <div class="text-hold">
-                                    <h3>{{ $course->title }}</h3>
-                                    <ul>
-                                        <li>
-                                            Category:
-                                            <span>{{ $course->category->name }}</span>
-                                        </li>
-                                        <li>
-                                            Duration:
-                                            <span><img src="assets/images/icon12.svg" alt="Career Institute feature icon"> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
-                                        </li>
-                                        <li>
-                                            Mode:
-                                            <span><img src="assets/images/icon09.svg" alt="Career Institute feature icon">{{ $course->mode->name }}</span>
-                                        </li>
-                                    </ul>
-                                    <div class="btn-area">
-                                        <a href="#" class="btn an-btn" data-bs-toggle="modal" data-bs-target="#admission-modal">Apply Now</a>
-                                        <a href="{{ route('course-detail', $course->slug) }}" class="btn md-btn">More Details</a>
+                            <a href="{{ route('course-detail', $course->slug) }}">
+                                <div class="box">
+                                    <div class="img-hold">
+                                        <img src="{{ $course->image_url ?: asset('assets/images/img03.png') }}" alt="{{ $course->title }}" onerror="this.src='{{ asset('assets/images/img03.png') }}'; this.onerror=null;">
+                                    </div>
+                                    <div class="text-hold">
+                                        <h3>{{ $course->title }}</h3>
+                                        <ul>
+                                            <li>
+                                                Category:
+                                                <span>{{ $course->category->name }}</span>
+                                            </li>
+                                            <li>
+                                                Duration:
+                                                <span><img src="assets/images/icon12.svg" alt="Career Institute feature icon"> {{ $course->duration_weeks ? $course->duration_weeks.' Weeks' : 'Flexible' }}</span>
+                                            </li>
+                                            <li>
+                                                Mode:
+                                                <span><img src="assets/images/icon09.svg" alt="Career Institute feature icon">{{ $course->mode->name }}</span>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-area">
+                                            <a href="#" class="btn an-btn" data-bs-toggle="modal" data-bs-target="#admission-modal">Apply Now</a>
+                                            <a href="{{ route('course-detail', $course->slug) }}" class="btn md-btn">More Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     @empty
                     @endforelse
