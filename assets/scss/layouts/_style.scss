@@ -584,6 +584,16 @@
   }
   .swiper {
     width: 100%;
+    overflow: hidden;
+  }
+  .col-lg-12:has(> .swiper.mySwiper) {
+    overflow: hidden;
+  }
+  // Coverflow previous slide peeks as a thin left strip — hide it only
+  .swiper.mySwiper .swiper-slide-prev {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
   .swiper-slide img {
     object-fit: cover;

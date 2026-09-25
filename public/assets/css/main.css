@@ -999,6 +999,15 @@ body {
 }
 .video-block .swiper {
   width: 100%;
+  overflow: hidden;
+}
+.video-block .col-lg-12:has(> .swiper.mySwiper) {
+  overflow: hidden;
+}
+.video-block .swiper.mySwiper .swiper-slide-prev {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 .video-block .swiper-slide img {
   object-fit: cover;
