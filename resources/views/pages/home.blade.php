@@ -369,9 +369,16 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="swiper mySwiper">
+                <div class="swiper mySwiper video-swiper">
                     <div class="swiper-wrapper">
-                        @foreach (config('campus_videos', []) as $campusVideo)
+                        @php
+                            $campusVideos = config('campus_videos', []);
+                            // Duplicate slides so Swiper loop works with slidesPerView: 3
+                            $campusSliderVideos = count($campusVideos) > 0
+                                ? array_merge($campusVideos, $campusVideos)
+                                : [];
+                        @endphp
+                        @foreach ($campusSliderVideos as $campusVideo)
                             <div class="swiper-slide">
                                 <div class="video-card">
                                     <img src="{{ asset($campusVideo['thumbnail']) }}" alt="{{ $campusVideo['name'] }}">

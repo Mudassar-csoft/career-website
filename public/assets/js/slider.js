@@ -141,41 +141,68 @@ if (typeof window.jQuery !== "undefined" && typeof $.fn.slick === "function") {
 }
 
 // video slider start here
-if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper")) {
-    new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: false,
-        centeredSlides: false,
-        loop: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 30,
-            stretch: 0,
-            depth: 150,
-            modifier: 1,
-            slideShadows: false
-        },
-        speed: 1000,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView: 3,
-                coverflowEffect: {
-                    rotate: 30,
-                    depth: 150
-                }
+if (typeof window.Swiper !== "undefined") {
+    document.querySelectorAll(".video-block .mySwiper").forEach(function (swiperEl) {
+        swiperEl.querySelectorAll(".swiper-slide").forEach(function (slide) {
+            slide.style.removeProperty("opacity");
+            slide.style.removeProperty("visibility");
+            slide.style.removeProperty("pointer-events");
+        });
+
+        new Swiper(swiperEl, {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            speed: 1000,
+            watchOverflow: true,
+            watchSlidesProgress: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
             },
-            768: {
-                slidesPerView: 2,
-                coverflowEffect: {
-                    rotate: 25,
-                    depth: 100
+            coverflowEffect: {
+                rotate: 20,
+                stretch: -20,
+                depth: 120,
+                modifier: 1,
+                slideShadows: false
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    spaceBetween: 12,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 0
+                    }
+                },
+                768: {
+                    slidesPerView: 2,
+                    centeredSlides: false,
+                    spaceBetween: 16,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 0
+                    }
+                },
+                992: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    spaceBetween: 20,
+                    coverflowEffect: {
+                        rotate: 20,
+                        stretch: -20,
+                        depth: 120
+                    }
                 }
             }
-        }
+        });
     });
 }

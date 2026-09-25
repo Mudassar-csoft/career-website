@@ -589,11 +589,15 @@
   .col-lg-12:has(> .swiper.mySwiper) {
     overflow: hidden;
   }
-  // Coverflow previous slide peeks as a thin left strip — hide it only
-  .swiper.mySwiper .swiper-slide-prev {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
+  // Desktop coverflow peeks (left/right thin strips) — CSS clip only, no JS
+  @include min(992px) {
+    .swiper.mySwiper {
+      overflow: hidden;
+      clip-path: inset(-20px 21px -20px 21px);
+    }
+  }
+  .swiper.mySwiper .swiper-wrapper {
+    transition-timing-function: ease-in-out !important;
   }
   .swiper-slide img {
     object-fit: cover;
@@ -611,7 +615,7 @@
     position: relative;
     margin: 0 0 15px;
     img {
-      width: 90%;
+      width: 100%;
       border-radius: 25px;
       display: block;
       margin: 0 auto;
