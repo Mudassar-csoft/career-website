@@ -15,7 +15,7 @@ class JobOfferController extends Controller
         return view('dashboard.job-offers.index', [
             'screens' => $this->screens(),
             'active' => 'job-offers',
-            'jobOffers' => JobOffer::orderBy('deadline')->get(),
+            'jobOffers' => JobOffer::withCount('applications')->orderBy('deadline')->get(),
         ]);
     }
 

@@ -16,6 +16,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryCategoryController;
 use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\JobOfferController;
+use App\Http\Controllers\JobApplicationController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PartnerInquiryController;
@@ -137,6 +138,13 @@ Route::prefix('dashboard')->name('dashboard.')->middleware('auth')->group(functi
         Route::get('/{successStory}/edit', [SuccessStoryController::class, 'edit'])->name('edit')->middleware('can:success-stories.edit');
         Route::put('/{successStory}', [SuccessStoryController::class, 'update'])->name('update')->middleware('can:success-stories.edit');
         Route::delete('/{successStory}', [SuccessStoryController::class, 'destroy'])->name('destroy')->middleware('can:success-stories.delete');
+    });
+
+    Route::prefix('job-applications')->name('job-applications.')->middleware('can:job-offers.view')->group(function () {
+        Route::get('/', [JobApplicationController::class, 'index'])->name('index');
+        Route::get('/{jobApplication}', [JobApplicationController::class, 'show'])->name('show');
+        Route::get('/{jobApplication}/cv', [JobApplicationController::class, 'viewCv'])->name('cv');
+        Route::get('/{jobApplication}/cv/download', [JobApplicationController::class, 'downloadCv'])->name('download');
     });
 
     Route::prefix('job-offers')->name('job-offers.')->group(function () {

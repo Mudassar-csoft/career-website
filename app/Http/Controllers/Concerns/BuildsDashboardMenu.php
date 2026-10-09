@@ -78,6 +78,7 @@ trait BuildsDashboardMenu
             ['key' => 'job-offers', 'label' => 'Job Offers', 'type' => 'dropdown', 'children' => [
                 ['label' => 'Add Job Offer', 'route' => 'dashboard.job-offers.create', 'permission' => 'job-offers.create'],
                 ['label' => 'All Job Offers', 'route' => 'dashboard.job-offers.index', 'permission' => 'job-offers.view'],
+                ['label' => 'Applications & CVs', 'route' => 'dashboard.job-applications.index', 'permission' => 'job-offers.view'],
             ]],
             ['key' => 'collaborators', 'label' => 'Collaborators', 'type' => 'dropdown', 'children' => [
                 ['label' => 'Add Collaborator', 'route' => 'dashboard.collaborators.create', 'permission' => 'collaborators.create'],

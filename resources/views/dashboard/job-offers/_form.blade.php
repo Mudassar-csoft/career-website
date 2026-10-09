@@ -27,6 +27,6 @@
 <div class="dash-form-group">
     <label for="job-url">Application URL</label>
     <input type="url" id="job-url" name="application_url" value="{{ old('application_url', $jobOffer->application_url) }}" placeholder="https://example.com/apply">
-    <p class="dash-form-hint">Leave blank to show no application link.</p>
+    <p class="dash-form-hint">Applicants can apply through the website form. Add an optional external application link here.</p>
     @error('application_url') <p class="dash-form-error">{{ $message }}</p> @enderror
 </div>
