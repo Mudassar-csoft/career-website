@@ -315,44 +315,4 @@
         swipe: true,
     });
 </script>
-<script>
-    if (typeof window.Swiper !== "undefined" && document.querySelector(".mySwiper")) {
-    new Swiper(".mySwiper", {
-        effect: "coverflow",
-        grabCursor: false,
-        centeredSlides: false,
-        loop: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 30,
-            stretch: 0,
-            depth: 150,
-            modifier: 1,
-            slideShadows: false
-        },
-        speed: 1000,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-        },
-        breakpoints: {
-            1024: {
-                slidesPerView: 3,
-                coverflowEffect: {
-                    rotate: 30,
-                    depth: 150
-                }
-            },
-            768: {
-                slidesPerView: 2,
-                coverflowEffect: {
-                    rotate: 25,
-                    depth: 100
-                }
-            }
-        }
-    });
-}
-</script>
 @endpush
