@@ -308,7 +308,7 @@
                                     <label class="input-group-text" for="fileUpload">
                                         Choose File
                                     </label>
-                                    <input type="file" class="form-control position-absolute top-0 start-0 w-100 h-100 opacity-0 m-0 p-0" id="fileUpload" name="document" accept=".pdf,.doc,.docx" aria-label="Upload your document" aria-describedby="document-help">
+                                    <input type="file" id="fileUpload" name="document" accept=".pdf,.doc,.docx" aria-label="Upload your document" aria-describedby="document-help">
                                     <span class="form-control file-text">
                                         <span class="text-truncate" data-file-name data-placeholder="Upload your Document" aria-live="polite">Upload your Document</span>
                                     </span>
@@ -348,14 +348,60 @@
 
 @push('styles')
 <style>
+    #job-placement-form .custom-file-upload {
+        position: relative;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: none;
+        min-height: 48px;
+        background: #fff;
+        border: 1px solid #828282;
+        border-radius: 10px;
+    }
+    #job-placement-form .custom-file-upload .input-group-text {
+        flex-shrink: 0;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        padding: 15px 17px;
+        background: #f2f2f2;
+        border: 0;
+        border-right: 1px solid #828282;
+        border-radius: 9px 0 0 9px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    #job-placement-form .custom-file-upload .file-text {
+        flex: 1;
+        min-width: 0;
+        height: auto;
+        margin: 0;
+        padding: 15px 17px;
+        border: 0;
+        border-radius: 0 9px 9px 0;
+        color: #595959;
+        font-size: 14px;
+        line-height: 16px;
+    }
     #job-placement-form .custom-file-upload input[type="file"] {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        opacity: 0;
         cursor: pointer;
         z-index: 3;
     }
     #job-placement-form .custom-file-upload:focus-within {
         outline: 2px solid #017e8f;
         outline-offset: 3px;
-        border-radius: 5px;
+    }
+    #job-placement-form .file-upload-wrapper small {
+        display: block;
+        margin-top: 6px;
     }
 </style>
 @endpush

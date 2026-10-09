@@ -14,6 +14,7 @@ use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
 use App\Http\Controllers\PublicFaqController;
 use App\Http\Controllers\PublicJobPlacementController;
+use App\Http\Controllers\PublicJobApplicationController;
 use App\Http\Controllers\PublicNewsController;
 use App\Http\Controllers\PublicSuccessStoryController;
 use App\Http\Controllers\SubscriberController;
@@ -26,6 +27,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 Route::post('/subscribe', [SubscriberController::class, 'store'])->name('subscribers.store');
+Route::post('/job-applications', [PublicJobApplicationController::class, 'store'])
+    ->middleware('throttle:10,1')
+    ->name('job-applications.store');
 Route::post('/partner-inquiries', [PartnerInquiryController::class, 'store'])->name('partner-inquiries.store');
 Route::post('/coworking-inquiries', [CoworkingInquiryController::class, 'store'])->name('coworking-inquiries.store');
 Route::post('/exam-inquiries', [ExamInquiryController::class, 'store'])->name('exam-inquiries.store');

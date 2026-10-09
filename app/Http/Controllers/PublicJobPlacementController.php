@@ -13,6 +13,10 @@ class PublicJobPlacementController extends Controller
         $jobType = trim((string) $request->input('job_type'));
         $location = trim((string) $request->input('location'));
 
+        $request->validate(['job' => ['nullable', 'integer', 'exists:job_offers,id']]);
+        $selectedJobId = $request->integer('job') ?: null;
+        $applicationJobs = JobOffer::orderBy('title')->get();
+
         $jobOffers = JobOffer::query()
             ->when($search !== '', fn ($query) => $query->where('title', 'like', "%{$search}%"))
             ->when($jobType !== '', fn ($query) => $query->where('job_type', 'like', "%{$jobType}%"))
@@ -20,6 +24,6 @@ class PublicJobPlacementController extends Controller
             ->orderBy('deadline')
             ->get();
 
-        return view('pages.job-placement', compact('jobOffers', 'search', 'jobType', 'location'));
+        return view('pages.job-placement', compact('jobOffers', 'search', 'jobType', 'location', 'applicationJobs', 'selectedJobId'));
     }
 }
