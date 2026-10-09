@@ -9,7 +9,7 @@
                 <p class="mb-3">Transform Your Future</p>
                 <h1 class="mb-4">Discover Opportunities That Inspire!</h1>
                 <div class="btn-block">
-                    <a href="#job-placement-form" class="btn aq-btn">Submit Resume</a>
+                    <a href="{{ route('job-placement') }}#job-placement-form" class="btn aq-btn" data-apply-job="">Submit Resume</a>
                     {{-- <a href="#" class="btn wa-btn">Post a Job</a> --}}
                 </div>
             </div>
@@ -59,10 +59,9 @@
                                         <td>{{ $jobOffer->location }}</td>
                                         <td>{{ $jobOffer->deadline->format('d-m-Y') }}</td>
                                         <td>
+                                            <a href="{{ route('job-placement', ['job' => $jobOffer->id]) }}#job-placement-form" class="apply-btn" data-apply-job="{{ $jobOffer->id }}" aria-label="Apply for {{ $jobOffer->title }}">Apply Now</a>
                                             @if ($jobOffer->application_url)
-                                                <a href="{{ $jobOffer->application_url }}" class="apply-btn" target="_blank" rel="noopener noreferrer">Apply Now</a>
-                                            @else
-                                                <span class="apply-btn" style="opacity:.55;cursor:default;">Apply Unavailable</span>
+                                                <a href="{{ $jobOffer->application_url }}" class="d-block mt-2" target="_blank" rel="noopener noreferrer">Apply externally</a>
                                             @endif
                                         </td>
                                     </tr>
@@ -279,28 +278,47 @@
             </div>
             <div class="col-lg-12">
                 <div class="form-block">
-                    <form id="job-placement-form" class="row g-3 lead-form" method="POST" action="{{ route('subscribers.store') }}" enctype="multipart/form-data">
+                    <h3>Submit your application</h3>
+                    <p>Choose a job or submit your CV for future opportunities.</p>
+                    @if (session('status'))
+                        <div class="alert alert-success" role="status">{{ session('status') }}</div>
+                    @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger" role="alert">
+                            @foreach ($errors->all() as $error)<div>{{ $error }}</div>@endforeach
+                        </div>
+                    @endif
+                    <form id="job-placement-form" class="row g-3 lead-form" method="POST" action="{{ route('job-applications.store') }}" enctype="multipart/form-data">
                         @csrf
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" name="name" placeholder="Name">
+                        <div class="col-12">
+                            <label for="application-job-offer" class="visually-hidden">Applying for</label>
+                            <select id="application-job-offer" name="job_offer_id" class="form-select">
+                                <option value="">General CV submission / Future opportunities</option>
+                                @foreach ($applicationJobs as $job)
+                                    <option value="{{ $job->id }}" @selected((string) old('job_offer_id', $selectedJobId) === (string) $job->id)>{{ $job->title }} — {{ $job->location }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}" maxlength="255" autocomplete="name" placeholder="Name" aria-label="Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" name="phone" placeholder="Contact No">
+                            <input type="email" class="form-control" name="email" value="{{ old('email') }}" maxlength="255" autocomplete="email" placeholder="Email" aria-label="Email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="url" class="form-control" name="linkedin_url" maxlength="2048" placeholder="Your LinkedIn Profile URL">
+                            <input type="tel" class="form-control" name="phone" value="{{ old('phone') }}" maxlength="30" autocomplete="tel" placeholder="Contact No" aria-label="Contact number" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" name="institution" maxlength="255" placeholder="College/University">
+                            <input type="url" class="form-control" name="linkedin_url" value="{{ old('linkedin_url') }}" maxlength="2048" placeholder="Your LinkedIn Profile URL" aria-label="LinkedIn profile URL">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" name="city" maxlength="255" autocomplete="address-level2" placeholder="City">
+                            <input type="text" class="form-control" name="institution" value="{{ old('institution') }}" maxlength="255" placeholder="College/University" aria-label="College or university">
                         </div>
                         <div class="col-md-6">
-                            <input type="text" class="form-control" name="qualification" maxlength="255" placeholder="Qualification">
+                            <input type="text" class="form-control" name="city" value="{{ old('city') }}" maxlength="255" autocomplete="address-level2" placeholder="City" aria-label="City">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" name="qualification" value="{{ old('qualification') }}" maxlength="255" placeholder="Qualification" aria-label="Qualification">
                         </div>
                         <div class="col-md-6">
                             <div class="file-upload-wrapper">
@@ -308,18 +326,17 @@
                                     <label class="input-group-text" for="fileUpload">
                                         Choose File
                                     </label>
-                                    <input type="file" id="fileUpload" name="document" accept=".pdf,.doc,.docx" aria-label="Upload your document" aria-describedby="document-help">
+                                    <input type="file" id="fileUpload" name="document" accept=".pdf,.doc,.docx" aria-label="Upload your CV" aria-describedby="document-help" required>
                                     <span class="form-control file-text">
-                                        <span class="text-truncate" data-file-name data-placeholder="Upload your Document" aria-live="polite">Upload your Document</span>
+                                        <span class="text-truncate" data-file-name data-placeholder="Upload your CV" aria-live="polite">Upload your CV</span>
                                     </span>
                                 </div>
                                 <small id="document-help" class="text-muted">PDF, DOC or DOCX. Maximum 5 MB.</small>
                             </div>
                         </div>
                         <div class="col-12 mt-4">
-                            <button type="submit" class="btn sm-btn">Send Message</button>
+                            <button type="submit" class="btn sm-btn">Submit Application</button>
                         </div>
-                        <input type="hidden" name="source" value="Job Placement">
                     </form>
                 </div>
             </div>
@@ -348,6 +365,19 @@
 
 @push('styles')
 <style>
+    #job-placement-form {
+        scroll-margin-top: 24px;
+    }
+    #job-placement-form .form-select {
+        min-height: 48px;
+        padding: 15px 40px 15px 17px;
+        border: 1px solid #828282;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #595959;
+        font-size: 14px;
+        line-height: 16px;
+    }
     #job-placement-form .custom-file-upload {
         position: relative;
         flex-wrap: nowrap;
@@ -408,15 +438,25 @@
 
 @push('scripts')
 <script>
-$(".location-card").click(function () {
-    $(".location-card")
-        .removeClass("active");
-    $(this)
-        .addClass("active");
-    let map =
-        $(this).data("map");
-    $("#locationMap")
-        .attr("src", map);
-});
+(() => {
+    const form = document.getElementById('job-placement-form');
+    const jobSelect = document.getElementById('application-job-offer');
+
+    document.querySelectorAll('[data-apply-job]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+            if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+
+            event.preventDefault();
+            jobSelect.value = link.dataset.applyJob;
+            const url = new URL(window.location.href);
+            if (jobSelect.value) url.searchParams.set('job', jobSelect.value);
+            else url.searchParams.delete('job');
+            url.hash = 'job-placement-form';
+            window.history.replaceState(null, '', url);
+            form.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            jobSelect.focus({ preventScroll: true });
+        });
+    });
+})();
 </script>
 @endpush

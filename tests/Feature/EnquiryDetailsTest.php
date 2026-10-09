@@ -6,6 +6,7 @@ use App\Mail\LeadNotificationMail;
 use App\Models\Subscriber;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
@@ -78,7 +79,7 @@ class EnquiryDetailsTest extends TestCase
             $mail->assertSeeInHtml('Karachi');
             $mail->assertSeeInHtml('Test University');
             $mail->assertSeeInHtml('BS Computer Science');
-            $mail->assertHasAttachmentFromStorageDisk('local', $subscriber->document_path, 'resume.pdf');
+            $mail->assertHasAttachment(Attachment::fromStorageDisk('local', $subscriber->document_path)->as('resume.pdf'));
 
             return $mail->hasTo(config('lead-recipients.sources.job placement'));
         });

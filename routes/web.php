@@ -13,13 +13,13 @@ use App\Http\Controllers\PartnerInquiryController;
 use App\Http\Controllers\PublicBlogController;
 use App\Http\Controllers\PublicCourseController;
 use App\Http\Controllers\PublicFaqController;
-use App\Http\Controllers\PublicJobPlacementController;
 use App\Http\Controllers\PublicJobApplicationController;
+use App\Http\Controllers\PublicJobPlacementController;
 use App\Http\Controllers\PublicNewsController;
 use App\Http\Controllers\PublicSuccessStoryController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\SuccessStoryMediaController;
-use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\VerificationController;
 use Illuminate\Support\Facades\Route;
 
